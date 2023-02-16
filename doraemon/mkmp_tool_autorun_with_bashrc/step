@@ -1,0 +1,27 @@
+修改 bashrc
+`vim .bashrc`
+
+於最下方加入以下指令
+cd /home/ubuntu/mkmp_tool/sample/
+sudo ./dlmc.sh
+
+自動登入設定
+cd /etc/systemd/system/getty.target.wants/
+sudo vim getty\@tty1.service
+
+找到 Service, 將內容改為以下
+`ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear %I $TERM`
+
+[Service]
+# the VT is cleared by TTYVTDisallocate
+# The '-o' option value tells agetty to replace 'login' arguments with an
+# option to preserve environment (-p), followed by '--' for safety, and then
+# the entered username.
+`ExecStart=-/sbin/agetty --autologin ubuntu(使用者帳號) --noclear %I $TERM`
+
+sudo 免使用密碼
+執行 `sudo visudo`
+將 sudo 此行改為以下
+%sudo   ALL=(ALL:ALL) NOPASSWD:ALL
+
+完成後重開機, 即可自動執行.

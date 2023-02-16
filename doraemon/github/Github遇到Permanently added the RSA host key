@@ -1,0 +1,3 @@
+sudo vim /etc/hosts
+Add
+xxx.xxx.xxx.xxx github.com

@@ -1,0 +1,139 @@
+[
+    {
+        "id": "e83fdd2b.99e83",
+        "type": "subflow",
+        "name": "get light channel with latest data api",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "97e357eb.2981a8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "8fa8605.327a4a",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "IP",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "red_channel",
+                "type": "str",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "id": "6a79522b.c40cdc",
+        "type": "http request",
+        "z": "e83fdd2b.99e83",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": true,
+        "url": "http://{{IP}}/api/v1/devices/{{device_id}}/channels/latest-data",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "8fa8605.327a4a"
+            ]
+        ]
+    },
+    {
+        "id": "8fa8605.327a4a",
+        "type": "function",
+        "z": "e83fdd2b.99e83",
+        "name": "build chameleon reading payload",
+        "func": "var at = 0\nvar channel_list = msg.payload\nvar green = 0\nvar green_channel = msg.args[\"green_channel\"]\nvar red = 0\nvar red_channel = msg.args[\"red_channel\"]\n\n\nfor( i=0; i<channel_list.length; ++i ){\n    if(channel_list[i][\"channelId\"] == msg.args[\"green_channel\"] ){\n        at = Math.floor(new Date(channel_list[i][\"latestValue\"][\"at\"]).getTime()/ 1000)\n        green = parseInt(channel_list[i][\"latestValue\"][\"value\"][\"str\"])\n    }\n    if(channel_list[i][\"channelId\"] == msg.args[\"red_channel\"] ){\n        red = parseInt(channel_list[i][\"latestValue\"][\"value\"][\"str\"])\n    }\n}\n\nmsg.payload = {\n    \"deviceId\":\"test\",\n    \"at\": {},\n    \"channels\":{}\n}\nmsg.payload[\"at\"][\"sec\"] = at\nmsg.payload[\"at\"][\"us\"] = 0\nmsg.payload[\"channels\"][green_channel] = green\nmsg.payload[\"channels\"][red_channel] = red\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97e357eb.2981a8",
+        "type": "function",
+        "z": "e83fdd2b.99e83",
+        "name": "validate env",
+        "func": "const ENV = [\n    \"IP\",\n    \"device_id\",\n    \"green_channel\",\n    \"red_channel\"\n]\n\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\nmsg.args = {\n    \"green_channel\": env.get(\"green_channel\"),\n    \"red_channel\": env.get(\"red_channel\")\n}\n\nmsg.IP = env.get(\"IP\")\nmsg.device_id = env.get(\"device_id\")\nmsg.green_channel = env.get(\"green_channel\")\nmsg.red_channel = env.get(\"red_channel\")\nmsg.payload = null\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "6a79522b.c40cdc"
+            ]
+        ]
+    },
+    {
+        "id": "4c38ada6.f62f14",
+        "type": "subflow:e83fdd2b.99e83",
+        "z": "ab7533b7.1b96c",
+        "name": "",
+        "env": [
+            {
+                "name": "IP",
+                "type": "str",
+                "value": "192.168.11.127"
+            },
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "test"
+            },
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": "B253"
+            },
+            {
+                "name": "red_channel",
+                "type": "str",
+                "value": "B251"
+            }
+        ],
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [
+                "73311884.928c48"
+            ]
+        ]
+    }
+]

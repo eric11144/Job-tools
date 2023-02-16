@@ -1,0 +1,2978 @@
+[
+    {
+        "id": "4cb8c1b0.188b3",
+        "type": "tab",
+        "label": "Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "415eba71.d34774",
+        "type": "tab",
+        "label": "Source Info View",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fcdc0c89.ac73c",
+        "type": "tab",
+        "label": "Source Info Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "abf7f0b7.a1434",
+        "type": "tab",
+        "label": "Forward List View",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5331fae2.78b714",
+        "type": "tab",
+        "label": "Forward List Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4ad7964c.712058",
+        "type": "tab",
+        "label": "test",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c03a8492.364b98",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8b5f38b9.52cb98",
+        "type": "ui_group",
+        "name": "Forward List",
+        "tab": "b3f6bfb1.8ef77",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9a3aec30.5f866",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "4999cafe.702a14",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "bbc838a6.2c7078",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "5749dfff.2a222",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b3f6bfb1.8ef77",
+        "type": "ui_tab",
+        "name": "Demo",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1b77d288.dfa80d",
+        "type": "ui_group",
+        "name": "Source Info",
+        "tab": "b3f6bfb1.8ef77",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c713dff5.21ab3",
+        "type": "ui_group",
+        "name": "Arbeitszimmer",
+        "tab": "a2b4d00e.93a548",
+        "order": 1,
+        "disp": false,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "a2b4d00e.93a548",
+        "type": "ui_tab",
+        "name": "Arbeitszimmer",
+        "icon": "book",
+        "order": 1
+    },
+    {
+        "id": "6024dfd9.4717b",
+        "type": "ui_group",
+        "name": "test",
+        "tab": "b3f6bfb1.8ef77",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "76f0b418.b0920c",
+        "type": "inject",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 840,
+        "wires": [
+            [
+                "e4b08b6a.d57da8"
+            ]
+        ]
+    },
+    {
+        "id": "e4b08b6a.d57da8",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "d": true,
+        "name": "",
+        "func": "msg.label = 'cc'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "239e61c8.eb4e4e",
+        "type": "inject",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 900,
+        "wires": [
+            [
+                "45aeeb05.bb1584"
+            ]
+        ]
+    },
+    {
+        "id": "45aeeb05.bb1584",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "d": true,
+        "name": "",
+        "func": "msg.label = ''\nmsg.enabled = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb01d843.d511a8",
+        "type": "ui_dropdown",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "8b5f38b9.52cb98",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "Gateway1",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Gateway2",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "66e49b1b.703b74"
+            ]
+        ]
+    },
+    {
+        "id": "ebe0f186.1111c",
+        "type": "debug",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f9f037a0.343938",
+        "type": "ui_text_input",
+        "z": "415eba71.d34774",
+        "name": "",
+        "label": "host",
+        "tooltip": "",
+        "group": "1b77d288.dfa80d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "f69587ec.446f28"
+            ]
+        ]
+    },
+    {
+        "id": "db0dc207.76d89",
+        "type": "ui_button",
+        "z": "415eba71.d34774",
+        "name": "",
+        "group": "1b77d288.dfa80d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ok",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 460,
+        "wires": [
+            [
+                "d36bc153.33fa"
+            ]
+        ]
+    },
+    {
+        "id": "381fae07.398922",
+        "type": "inject",
+        "z": "4cb8c1b0.188b3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "cd214f8.a99feb"
+            ]
+        ]
+    },
+    {
+        "id": "cd214f8.a99feb",
+        "type": "function",
+        "z": "4cb8c1b0.188b3",
+        "name": "",
+        "func": "let model = {\n    isOperating: false,\n    state: 'SOURCE_INFO',\n    \n    statement: {\n        sourceInfo: {\n            host: null,\n            connectivity: null,\n            agents: null\n        },\n        forwardList: {\n            dropdownOption: null,\n            host: null,\n            username: null,\n            password: null,\n            selectedDevices: null,\n            prefix: null,\n            includeExtraCategories: null,\n            includeProperties: null,\n            putIndex: null,\n            accessToken: null\n        }\n    }\n}\n\nglobal.set('model', model)\n\nreturn [[\n    {\n        topic: 'initialize',\n        payload: {}\n    },\n    {\n        topic: 'model',\n        payload: model\n    }\n]]\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "47801925.bf1c88"
+            ]
+        ]
+    },
+    {
+        "id": "47801925.bf1c88",
+        "type": "link out",
+        "z": "4cb8c1b0.188b3",
+        "name": "To View",
+        "links": [
+            "a0661fa8.0494b",
+            "f0d81361.daa91"
+        ],
+        "x": 635,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a0661fa8.0494b",
+        "type": "link in",
+        "z": "415eba71.d34774",
+        "name": "To View",
+        "links": [
+            "2653974c.f87d48",
+            "47801925.bf1c88",
+            "134438a1.a40b97"
+        ],
+        "x": 75,
+        "y": 360,
+        "wires": [
+            [
+                "41bb690.f9a1a98",
+                "27ac9f23.9c9d5"
+            ]
+        ]
+    },
+    {
+        "id": "41bb690.f9a1a98",
+        "type": "function",
+        "z": "415eba71.d34774",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        payload: '192.168.11.66'\n    }   \n}\n\nconst model = global.get('model')\n\n// const enabled = !model.isOperating && model.state === 'SOURCE_INFO'\nconst enabled = !model.isOperating\n\nreturn {\n    enabled\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "f9f037a0.343938"
+            ]
+        ]
+    },
+    {
+        "id": "f69587ec.446f28",
+        "type": "change",
+        "z": "415eba71.d34774",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "host",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "27ac9f23.9c9d5"
+            ]
+        ]
+    },
+    {
+        "id": "27ac9f23.9c9d5",
+        "type": "function",
+        "z": "415eba71.d34774",
+        "name": "",
+        "func": "const model = global.get('model')\n\nconst host = flow.get('host')\n\n// const enabled = !model.isOperating\n//  && model.state === 'SOURCE_INFO'\n//  && host\nconst enabled = !model.isOperating\n && host\n\nreturn {enabled}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "db0dc207.76d89"
+            ]
+        ]
+    },
+    {
+        "id": "d36bc153.33fa",
+        "type": "function",
+        "z": "415eba71.d34774",
+        "name": "",
+        "func": "const host = flow.get('host')\n\nreturn {\n    topic: 'source_info',\n    payload: {\n        host: host\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 980,
+        "y": 460,
+        "wires": [
+            [
+                "e5707afe.b05718"
+            ]
+        ]
+    },
+    {
+        "id": "e5707afe.b05718",
+        "type": "link out",
+        "z": "415eba71.d34774",
+        "name": "To Control",
+        "links": [
+            "c29c28a5.04f648"
+        ],
+        "x": 1135,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c29c28a5.04f648",
+        "type": "link in",
+        "z": "fcdc0c89.ac73c",
+        "name": "To Control",
+        "links": [
+            "e5707afe.b05718"
+        ],
+        "x": 175,
+        "y": 260,
+        "wires": [
+            [
+                "e7b766ad.a4e908"
+            ]
+        ]
+    },
+    {
+        "id": "e7b766ad.a4e908",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "Handle source info",
+        "func": "// if (msg.topic !== 'source_info')\n// {\n//     return\n// }\n\nlet model = global.get('model')\n\n// if (model.state !== 'SOURCE_INFO')\n// {\n//     node.error('unexpected')\n//     return\n// }\n\nlet statement = model.statement\nstatement.sourceInfo.host = msg.payload.host\n\nconst changes = {\n    statement,\n    isOperating: true\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "1d553301.e3690d",
+                "2653974c.f87d48"
+            ]
+        ]
+    },
+    {
+        "id": "2653974c.f87d48",
+        "type": "link out",
+        "z": "fcdc0c89.ac73c",
+        "name": "To View",
+        "links": [
+            "f0d81361.daa91",
+            "a0661fa8.0494b"
+        ],
+        "x": 1275,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "554a6002.11c9",
+        "type": "function",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "func": "let l = [\n    {\n        a: 123\n    },\n    {\n        a: 456\n    }\n]\n\nx = JSON.parse(JSON.stringify(l))\n\nnode.error(x)\n\nx.forEach(\n    function(i)\n    {\n        // i = JSON.parse(JSON.stringify({\n        //     a: 999\n        // }))\n        i = {}\n        i = {\n            a: 999\n        }\n    }\n)\n\nnode.error(x)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2137c8d7.867a18",
+        "type": "inject",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "554a6002.11c9"
+            ]
+        ]
+    },
+    {
+        "id": "8be13a86.a3b0a8",
+        "type": "http request",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "c3f2c62a.989d88"
+            ]
+        ]
+    },
+    {
+        "id": "a639320.2c254d",
+        "type": "function",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "func": "let host = '192.168.11.66'\n\nmsg.url = `http://${host}/api/v1/system/network/ping`\nmsg.username = 'admin'\nmsg.password = 'p@55w0rd'\n// msg.headers = {};\n// msg.headers['Authorization'] = 'Basic YWRtaW46cEA1NXcwcmQ=';\nmsg.payload = {\n    host: \"www.google.com.tw\",\n    timeoutSec: 3\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "8be13a86.a3b0a8"
+            ]
+        ]
+    },
+    {
+        "id": "729b0d7a.b42a24",
+        "type": "inject",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "a639320.2c254d"
+            ]
+        ]
+    },
+    {
+        "id": "c3f2c62a.989d88",
+        "type": "debug",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "48e497cf.1ffe28",
+        "type": "ui_text_input",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "host",
+        "tooltip": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 21,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 580,
+        "wires": [
+            [
+                "8b3bdfd0.be77b"
+            ]
+        ]
+    },
+    {
+        "id": "e9e434f4.e5a7d8",
+        "type": "ui_text_input",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "username",
+        "tooltip": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "6a101c65.cca834"
+            ]
+        ]
+    },
+    {
+        "id": "8e0ca25e.8a971",
+        "type": "ui_text_input",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "password",
+        "tooltip": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 23,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "70261e7a.8a219"
+            ]
+        ]
+    },
+    {
+        "id": "b44ff9a7.9a69b8",
+        "type": "ui_button",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 24,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ok",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 800,
+        "wires": [
+            [
+                "e118ed3a.1e89"
+            ]
+        ]
+    },
+    {
+        "id": "4637706.e88489",
+        "type": "ui_text",
+        "z": "abf7f0b7.a1434",
+        "group": "8b5f38b9.52cb98",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Destination Info",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 460,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1d553301.e3690d",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "connectivity url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/system/connectivity`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [
+                "e040a6ef.77c748"
+            ]
+        ]
+    },
+    {
+        "id": "e040a6ef.77c748",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "bebf803c.4bc82"
+            ]
+        ]
+    },
+    {
+        "id": "bebf803c.4bc82",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet model = global.get('model')\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.connectivity = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "1fb75fdd.ee664"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "aedeae08.60529",
+        "type": "ui_toast",
+        "z": "fcdc0c89.ac73c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Error",
+        "name": "",
+        "x": 1110,
+        "y": 360,
+        "wires": [
+            [
+                "3b59db23.6d9c04"
+            ]
+        ]
+    },
+    {
+        "id": "f0d81361.daa91",
+        "type": "link in",
+        "z": "abf7f0b7.a1434",
+        "name": "To View",
+        "links": [
+            "2653974c.f87d48",
+            "47801925.bf1c88",
+            "134438a1.a40b97"
+        ],
+        "x": 75,
+        "y": 480,
+        "wires": [
+            [
+                "56322439.eb071c",
+                "67d38352.85bdcc",
+                "e1478399.b90a5",
+                "fac47098.df7b",
+                "f655730a.3c1a9"
+            ]
+        ]
+    },
+    {
+        "id": "66e49b1b.703b74",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dropdownOption",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 120,
+        "wires": [
+            [
+                "ebe0f186.1111c",
+                "fce765c6.81e018"
+            ]
+        ]
+    },
+    {
+        "id": "8b3bdfd0.be77b",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "host",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 580,
+        "wires": [
+            [
+                "1a92df3.2d0a721"
+            ]
+        ]
+    },
+    {
+        "id": "6a101c65.cca834",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "username",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 620,
+        "wires": [
+            [
+                "1a92df3.2d0a721"
+            ]
+        ]
+    },
+    {
+        "id": "70261e7a.8a219",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "password",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 660,
+        "wires": [
+            [
+                "1a92df3.2d0a721"
+            ]
+        ]
+    },
+    {
+        "id": "1a92df3.2d0a721",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "const model = global.get('model')\n\nconst host = flow.get('host')\nconst username = flow.get('username')\nconst password = flow.get('password')\n\nconst enabled = !model.isOperating\n && model.state === 'FORWARD_LIST'\n && host\n && username\n && password\n\n\nreturn {enabled};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1080,
+        "y": 620,
+        "wires": [
+            [
+                "b44ff9a7.9a69b8"
+            ]
+        ]
+    },
+    {
+        "id": "e118ed3a.1e89",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "const dropdown_option = flow.get('dropdownOption')\nconst host = flow.get('host')\nconst username = flow.get('username')\nconst password = flow.get('password')\nconst selected_devices = flow.get('selectedDevices')\nconst prefix = flow.get('prefix')\nconst include_extra_categories = flow.get('includeExtraCategories')\nconst include_properties = flow.get('includeProperties')\n\nreturn {\n    topic: 'forward_list',\n    payload: {\n        dropdownOption: dropdown_option,\n        host: host,\n        username: username,\n        password: password,\n        selectedDevices: selected_devices,\n        prefix: prefix,\n        includeExtraCategories: include_extra_categories,\n        includeProperties: include_properties\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 800,
+        "wires": [
+            [
+                "8eeff242.5e39"
+            ]
+        ]
+    },
+    {
+        "id": "3b59db23.6d9c04",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "func": "let model = global.get('model')\n\nlet changes = {\n    isOperating: false,\n    state: 'SOURCE_INFO'\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1120,
+        "y": 400,
+        "wires": [
+            [
+                "2653974c.f87d48"
+            ]
+        ]
+    },
+    {
+        "id": "8eeff242.5e39",
+        "type": "link out",
+        "z": "abf7f0b7.a1434",
+        "name": "To Control",
+        "links": [
+            "17d659a6.987256"
+        ],
+        "x": 1435,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "17d659a6.987256",
+        "type": "link in",
+        "z": "5331fae2.78b714",
+        "name": "To Control",
+        "links": [
+            "8eeff242.5e39"
+        ],
+        "x": 235,
+        "y": 120,
+        "wires": [
+            [
+                "f17290ff.3b684",
+                "ea71364b.3abd48"
+            ]
+        ]
+    },
+    {
+        "id": "f17290ff.3b684",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "Handle forward list",
+        "func": "if (msg.topic !== 'forward_list')\n{\n    return\n}\n\nconst payload = msg.payload\nlet model = global.get('model')\n\nif (model.state !== 'FORWARD_LIST')\n{\n    node.error('unexpected')\n    return\n}\n\nlet statement = model.statement\nstatement.forwardList = {\n    dropdownOption: payload.dropdown_option,\n    host: payload.host,\n    username: payload.username,\n    password: payload.password,\n    selectedDevices: payload.selectedDevices,\n    prefix: payload.prefix,\n    includeExtraCategories: payload.includeExtraCategories,\n    includeProperties: payload.includeProperties,\n    putIndex: 0\n}\n\nconst changes = {\n    statement,\n    isOperating: true\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "134438a1.a40b97",
+                "de3d3413.aaa518"
+            ]
+        ]
+    },
+    {
+        "id": "463452ab.aefc0c",
+        "type": "debug",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "3b2f8fa2.44f41",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "melsec templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/melsec/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 640,
+        "wires": [
+            [
+                "d6fb2fee.fc973"
+            ]
+        ]
+    },
+    {
+        "id": "6f0dc066.fbd5f",
+        "type": "debug",
+        "z": "5331fae2.78b714",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d6fb2fee.fc973",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            [
+                "b12d7fc3.eca4c"
+            ]
+        ]
+    },
+    {
+        "id": "b12d7fc3.eca4c",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.melsec_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 640,
+        "wires": [
+            [
+                "42098716.3015d8"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "4970f3df.89937c",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "mewtocol templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/mewtocol/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 780,
+        "wires": [
+            [
+                "db4fa2ce.1db7e"
+            ]
+        ]
+    },
+    {
+        "id": "db4fa2ce.1db7e",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 780,
+        "wires": [
+            [
+                "11122307.49644d"
+            ]
+        ]
+    },
+    {
+        "id": "11122307.49644d",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.mewtocol_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 780,
+        "wires": [
+            [
+                "e453597f.6dcf18"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "56c377d9.2013d8",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "fins templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/fins/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "8485f7d4.979fc8"
+            ]
+        ]
+    },
+    {
+        "id": "8485f7d4.979fc8",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "4bf02d34.219844"
+            ]
+        ]
+    },
+    {
+        "id": "4bf02d34.219844",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.fins_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "4e1f1dee.605a84"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "fce4fa84.dfc598",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "modbus templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/modbus/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 920,
+        "wires": [
+            [
+                "4bd40d9c.e3cf94"
+            ]
+        ]
+    },
+    {
+        "id": "4bd40d9c.e3cf94",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 920,
+        "wires": [
+            [
+                "2211cd2b.20b1a2"
+            ]
+        ]
+    },
+    {
+        "id": "2211cd2b.20b1a2",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.modbus_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 920,
+        "wires": [
+            [
+                "cdd85c9d.57e25"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "e3cd2b5b.e00db8",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "step7 templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/step7/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 1060,
+        "wires": [
+            [
+                "9028d3db.d3f14"
+            ]
+        ]
+    },
+    {
+        "id": "9028d3db.d3f14",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 1060,
+        "wires": [
+            [
+                "136e2ec2.0470f1"
+            ]
+        ]
+    },
+    {
+        "id": "136e2ec2.0470f1",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.step7_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 1060,
+        "wires": [
+            [
+                "9ec92d8a.f1dbf"
+            ],
+            [
+                "3b59db23.6d9c04"
+            ]
+        ]
+    },
+    {
+        "id": "b2a36acd.77f0e8",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "virtual templates url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/virtual/templates`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 1200,
+        "wires": [
+            [
+                "2ceeb483.f4dbfc"
+            ]
+        ]
+    },
+    {
+        "id": "2ceeb483.f4dbfc",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 1200,
+        "wires": [
+            [
+                "a26c7078.a155c"
+            ]
+        ]
+    },
+    {
+        "id": "a26c7078.a155c",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.virtual_templates = payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 1200,
+        "wires": [
+            [
+                "50729536.7dd8cc"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "50729536.7dd8cc",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "func": "const connectivity = msg.connectivity\n\nconst fins_equipments = msg.fins_equipments\nconst fins_templates = msg.fins_templates\n\nconst melsec_equipments = msg.melsec_equipments\nconst melsec_templates = msg.melsec_templates\n\nconst mewtocol_equipments = msg.mewtocol_equipments\nconst mewtocol_templates = msg.mewtocol_templates\n\nconst modbus_equipments = msg.modbus_equipments\nconst modbus_templates = msg.modbus_templates\n\nconst step7_equipments = msg.step7_equipments\nconst step7_templates = msg.step7_templates\n\nconst virtual_equipments = msg.virtual_equipments\nconst virtual_templates = msg.virtual_templates\n\nlet model = global.get('model')\n\nlet statement = model.statement\nstatement.sourceInfo.connectivity = connectivity\nstatement.sourceInfo.agents = {\n    fins: {\n        equipments: fins_equipments,\n        templates: fins_templates\n    },\n    melsec: {\n        equipments: melsec_equipments,\n        templates: melsec_templates\n    },\n    mewtocol: {\n        equipments: mewtocol_equipments,\n        templates: mewtocol_templates\n    },\n    modbus: {\n        equipments: modbus_equipments,\n        templates: modbus_templates\n    },\n    step7: {\n        equipments: step7_equipments,\n        templates: step7_templates\n    },\n    virtual: {\n        equipments: virtual_equipments,\n        templates: virtual_templates\n    }\n}\nstatement.forwardList.dropdownOption = ''\n\nlet changes = {\n    isOperating: false,\n    state: 'FORWARD_LIST',\n    statement\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 1320,
+        "wires": [
+            [
+                "2653974c.f87d48",
+                "463452ab.aefc0c"
+            ]
+        ]
+    },
+    {
+        "id": "134438a1.a40b97",
+        "type": "link out",
+        "z": "5331fae2.78b714",
+        "name": "To View",
+        "links": [
+            "a0661fa8.0494b",
+            "f0d81361.daa91"
+        ],
+        "x": 1495,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a4851f3c.01064",
+        "type": "http request",
+        "z": "5331fae2.78b714",
+        "name": "POST",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "25f0986e.8e7c18"
+            ]
+        ]
+    },
+    {
+        "id": "3294a649.de5a0a",
+        "type": "http request",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 520,
+        "wires": [
+            [
+                "1814f164.735fcf",
+                "72e22713.fa77e8"
+            ]
+        ]
+    },
+    {
+        "id": "46b65895.967528",
+        "type": "function",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "func": "let host = '192.168.11.66'\n\nmsg.url = `http://${host}/api/v1/auth`\nmsg.payload = {\n    username: 'admin',\n    password: 'p@55w0rd'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "3294a649.de5a0a"
+            ]
+        ]
+    },
+    {
+        "id": "7e349a14.ae88f4",
+        "type": "inject",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "46b65895.967528"
+            ]
+        ]
+    },
+    {
+        "id": "1814f164.735fcf",
+        "type": "debug",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "72e22713.fa77e8",
+        "type": "function",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "func": "let host = '192.168.11.66'\n\nmsg.url = `http://${host}/api/v1/system/network/ping`\n// msg.username = 'admin'\n// msg.password = 'p@55w0rd'\nmsg.headers = {};\nmsg.headers['Authorization'] = `JWT ${msg.payload.access_token}`\nmsg.payload = {\n    host: \"www.google.com.tw\",\n    timeoutSec: 3\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 620,
+        "wires": [
+            [
+                "d9d89c91.1c12a"
+            ]
+        ]
+    },
+    {
+        "id": "d9d89c91.1c12a",
+        "type": "http request",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 590,
+        "y": 620,
+        "wires": [
+            [
+                "be6295fb.c580c8"
+            ]
+        ]
+    },
+    {
+        "id": "be6295fb.c580c8",
+        "type": "debug",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "de3d3413.aaa518",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "auth url",
+        "func": "const model = global.get('model')\nconst host = model.statement.forwardList.host\nconst username = model.statement.forwardList.username\nconst password = model.statement.forwardList.password\n\nmsg.url = `http://${host}/api/v1/auth`\nmsg.payload = {\n    'username': username,\n    'password': password\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "a4851f3c.01064"
+            ]
+        ]
+    },
+    {
+        "id": "52dbe000.e3e8c",
+        "type": "ui_toast",
+        "z": "5331fae2.78b714",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Error",
+        "name": "show error",
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            [
+                "f18a2453.a46268"
+            ]
+        ]
+    },
+    {
+        "id": "f18a2453.a46268",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "",
+        "func": "let model = global.get('model')\nlet statement = model.statement\n\nstatement.forwardList.dropdownOption = ''\n\nlet changes = {\n    isOperating: false,\n    state: 'FORWARD_LIST',\n    statement\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1300,
+        "y": 260,
+        "wires": [
+            [
+                "134438a1.a40b97"
+            ]
+        ]
+    },
+    {
+        "id": "d7275f91.16336",
+        "type": "debug",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f182c266.16265",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "mapping template",
+        "func": "const model = global.get('model')\n\nconst agents = model.statement.sourceInfo.agents\nconst selected_devices = model.statement.forwardList.selectedDevices\n\nselected_devices.forEach(\n    function(device)\n    {\n        for (const [agent, eq_tp] of Object.entries(agents))\n        {\n            eq_tp.templates.forEach(\n                function(template)\n                {\n                    if (template.templateId === device)\n                    {\n                        msg.payload = {\n                            agent: agent,\n                            template: template\n                        }\n                        \n                        // node.send([msg])               \n                        node.send([msg, null])\n                    }\n                }\n            )            \n        }\n    }\n)\n\nreturn [null, msg]\n// return msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "9ba34e02.038de"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9ba34e02.038de",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "to virtual template",
+        "func": "const model = global.get('model')\nconst include_extra_categories = model.statement.forwardList.includeExtraCategories\nconst prefix = model.statement.forwardList.prefix\n\nconst agent = msg.payload.agent\nconst template = msg.payload.template\n\nlet template_id = template.templateId\nif (prefix)\n{\n    template_id = prefix + template_id\n}\n\nlet virtual_template = {}\n\nvirtual_template.templateId = template_id\nvirtual_template.channels = []\n    \nif (['fins', 'melsec', 'mewtocol', 'modbus', 'step7'].includes(agent))\n{\n    template.channels.forEach(\n        function(channel)\n        {\n            let c = {\n                channelId: channel.channelId,\n                valueType: _to_virtual_value_type(channel.conversion)\n            }\n            \n            if (channel.hasOwnProperty('channelName'))\n            {\n                c.channelName = channel.ChannelName\n            }\n            \n            if (channel.hasOwnProperty('category'))\n            {\n                if (include_extra_categories)\n                {\n                    c.category = channel.category\n                }\n                else\n                {\n                    c.category = []\n                    for (let i = 0; i < channel.category.length; ++i)\n                    {\n                        let item = channel.category[i]\n                        if (['alarm', 'data'].includes(item))\n                        {\n                            c.category.push(item)\n                        }\n                    }\n                }\n            }\n            \n            virtual_template.channels.push(c)\n        }\n    )\n}\nelse\n{\n    template.channels.forEach(\n        function(channel)\n        {\n            let c = JSON.parse(JSON.stringify(channel))\n            \n            delete c.category\n            \n            if (channel.hasOwnProperty('category'))\n            {\n                if (include_extra_categories)\n                {\n                    c.category = channel.category\n                }\n                else\n                {\n                    c.category = []\n                    for (let i = 0; i < channel.category.length; ++i)\n                    {\n                        let item = channel.category[i]\n                        if (['alarm', 'data'].includes(item))\n                        {\n                            c.category.push(item)\n                        }\n                    }\n                }\n            }\n            \n            virtual_template.channels.push(c)\n        }\n    )\n}\n\nmsg.virtual_template = virtual_template\n\nreturn msg\n\n\nfunction _to_virtual_value_type(conversion)\n{\n    const as_type = conversion.asType\n    \n    if (as_type === 'ascii')\n    {\n        return 'string'\n    }\n    \n    if (as_type === 'float32' ||\n            as_type === 'float64')\n    {\n        return 'float'\n    }\n    \n    if (conversion.hasOwnProperty('multiplier') ||\n            conversion.hasOwnProperty('offset') ||\n            conversion.hasOwnProperty('rounding'))\n    {\n        return 'float'\n    }\n    \n    return 'integer'\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 980,
+        "wires": [
+            [
+                "a28cfe54.913d2"
+            ]
+        ]
+    },
+    {
+        "id": "a28cfe54.913d2",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "virtual template url",
+        "func": "const model = global.get('model')\nconst host = model.statement.forwardList.host\nconst auth = msg.auth\nconst virtual_template = msg.virtual_template\nconst template_id = virtual_template.templateId\n\nmsg.url = `http://${host}/api/v1/config/virtual/templates/${template_id}`\n// msg.payload = {\n//     'username': username,\n//     'password': password\n// }\nmsg.headers = {};\n// msg.headers['Authorization'] = `JWT ${msg.payload.access_token}`\nmsg.headers.Authorization = `JWT ${auth.access_token}`\nmsg.payload = virtual_template\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 980,
+        "wires": [
+            [
+                "1f5b25be.c1f06a"
+            ]
+        ]
+    },
+    {
+        "id": "1f5b25be.c1f06a",
+        "type": "http request",
+        "z": "5331fae2.78b714",
+        "name": "PUT",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 870,
+        "y": 980,
+        "wires": [
+            [
+                "a754d1f4.0f3b"
+            ]
+        ]
+    },
+    {
+        "id": "25f0986e.8e7c18",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\nlet model = global.get('model')\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    let statement = model.statement\n    \n    statement.forwardList.accessToken = payload.access_token\n    \n    let changes = {\n        statement\n    }\n    \n    model = Object.assign(model, changes)\n    global.set('model', model)\n    \n    output = [\n        {\n            topic: 'model',\n            payload: changes\n        },\n        null\n    ]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [
+                "5ff3854a.df1bac",
+                "134438a1.a40b97"
+            ],
+            [
+                "52dbe000.e3e8c"
+            ]
+        ]
+    },
+    {
+        "id": "a754d1f4.0f3b",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "validate status",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1120,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f59e9ea3.c824e",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "",
+        "func": "let model = global.get('model')\nlet statement = model.statement\n\nstatement.forwardList.dropdownOption = ''\n\nlet changes = {\n    isOperating: false,\n    state: 'SOURCE_INFO',\n    statement\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "134438a1.a40b97"
+            ]
+        ]
+    },
+    {
+        "id": "1a4b7817.50d9e8",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "show success",
+        "func": "msg.payload = 'sync success'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "38ff351c.3b51fa"
+            ]
+        ]
+    },
+    {
+        "id": "38ff351c.3b51fa",
+        "type": "ui_toast",
+        "z": "5331fae2.78b714",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Success",
+        "name": "show success",
+        "x": 460,
+        "y": 640,
+        "wires": [
+            [
+                "f59e9ea3.c824e"
+            ]
+        ]
+    },
+    {
+        "id": "335394d3.b44b0c",
+        "type": "comment",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "info": "```\nagents: {\n    fins: {\n        equipments: [\n            {\n                equipmentId: ...,\n                equipmnetName: ...,\n                templateId: ...,\n                properties: [\n                    ....\n                ]\n            }\n        ],\n        templates: [\n            {\n                templateId: ...,\n                commands: [...],\n                channels: [...]\n            }\n        ]\n    },\n    melsec: {\n        equipments: [],\n        templates: []\n    }\n    ...\n    ...\n}\n```",
+        "x": 350,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1fb75fdd.ee664",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "fins equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/fins/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 440,
+        "wires": [
+            [
+                "babc6f19.565e4"
+            ]
+        ]
+    },
+    {
+        "id": "babc6f19.565e4",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "6947a9fc.1aea88"
+            ]
+        ]
+    },
+    {
+        "id": "6947a9fc.1aea88",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment = payload[i].equipment\n        \n        let equipment_info = {\n            equipmentId: equipment.equipmentId,\n            templateId: equipment.templateId\n        }\n        \n        if (equipment.hasOwnProperty('equipmentName'))\n        {\n            equipment_info.equipmentName = equipment.equipmentName\n        }\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            equipment_info.properties = equipment.properties\n        }\n        \n        equipments.push(equipment_info)\n        \n    }\n    \n    msg.fins_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "56c377d9.2013d8"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "4e1f1dee.605a84",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "melsec equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/melsec/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "9b951968.d8c188"
+            ]
+        ]
+    },
+    {
+        "id": "9b951968.d8c188",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "72f7034f.87e34c"
+            ]
+        ]
+    },
+    {
+        "id": "72f7034f.87e34c",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment_list = payload[i].equipmentList\n        \n        for (let i = 0; i < equipment_list.length; ++i)\n        {\n            let equipment = equipment_list[i]\n            \n            let equipment_info = {\n                equipmentId: equipment.equipmentId,\n                templateId: equipment.templateId\n            }\n            \n            if (equipment.hasOwnProperty('equipmentName'))\n            {\n                equipment_info.equipmentName = equipment.equipmentName\n            }\n            \n            if (equipment.hasOwnProperty('properties'))\n            {\n                equipment_info.properties = equipment.properties\n            }\n            \n            equipments.push(equipment_info)\n        }\n    }\n    \n    msg.melsec_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 580,
+        "wires": [
+            [
+                "3b2f8fa2.44f41"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "42098716.3015d8",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "mewtocol equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/mewtocol/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 720,
+        "wires": [
+            [
+                "1b4795e4.17934a"
+            ]
+        ]
+    },
+    {
+        "id": "1b4795e4.17934a",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 720,
+        "wires": [
+            [
+                "bc897bcb.d201b8"
+            ]
+        ]
+    },
+    {
+        "id": "bc897bcb.d201b8",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment = payload[i].equipment\n        \n        let equipment_info = {\n            equipmentId: equipment.equipmentId,\n            templateId: equipment.templateId\n        }\n        \n        if (equipment.hasOwnProperty('equipmentName'))\n        {\n            equipment_info.equipmentName = equipment.equipmentName\n        }\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            equipment_info.properties = equipment.properties\n        }\n        \n        equipments.push(equipment_info)\n        \n    }\n    \n    msg.mewtocol_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 720,
+        "wires": [
+            [
+                "4970f3df.89937c"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "e453597f.6dcf18",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "modbus equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/modbus/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 860,
+        "wires": [
+            [
+                "4df9ca40.da41e4"
+            ]
+        ]
+    },
+    {
+        "id": "4df9ca40.da41e4",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "acc9cc0b.194e1"
+            ]
+        ]
+    },
+    {
+        "id": "acc9cc0b.194e1",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment_list = payload[i].equipments\n        \n        for (let i = 0; i < equipment_list.length; ++i)\n        {\n            let equipment = equipment_list[i]\n            \n            let equipment_info = {\n                equipmentId: equipment.equipmentId,\n                templateId: equipment.templateId\n            }\n            \n            if (equipment.hasOwnProperty('equipmentName'))\n            {\n                equipment_info.equipmentName = equipment.equipmentName\n            }\n            \n            if (equipment.hasOwnProperty('properties'))\n            {\n                equipment_info.properties = equipment.properties\n            }\n            \n            equipments.push(equipment_info)\n        }\n    }\n    \n    msg.modbus_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 860,
+        "wires": [
+            [
+                "fce4fa84.dfc598"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "cdd85c9d.57e25",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "step7 equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/step7/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 1000,
+        "wires": [
+            [
+                "533634cf.89566c"
+            ]
+        ]
+    },
+    {
+        "id": "533634cf.89566c",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 1000,
+        "wires": [
+            [
+                "cb8af6aa.fe1838"
+            ]
+        ]
+    },
+    {
+        "id": "cb8af6aa.fe1838",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment = payload[i].equipment\n        \n        let equipment_info = {\n            equipmentId: equipment.equipmentId,\n            templateId: equipment.templateId\n        }\n        \n        if (equipment.hasOwnProperty('equipmentName'))\n        {\n            equipment_info.equipmentName = equipment.equipmentName\n        }\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            equipment_info.properties = equipment.properties\n        }\n        \n        equipments.push(equipment_info)\n        \n    }\n    \n    msg.step7_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 1000,
+        "wires": [
+            [
+                "e3cd2b5b.e00db8"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "9ec92d8a.f1dbf",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "virtual equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.sourceInfo.host\n\nmsg.url = `http://${host}/api/v1/config/virtual/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 1140,
+        "wires": [
+            [
+                "b094a9eb.368538"
+            ]
+        ]
+    },
+    {
+        "id": "b094a9eb.368538",
+        "type": "http request",
+        "z": "fcdc0c89.ac73c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 1140,
+        "wires": [
+            [
+                "6132809f.7cf57"
+            ]
+        ]
+    },
+    {
+        "id": "6132809f.7cf57",
+        "type": "function",
+        "z": "fcdc0c89.ac73c",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\nlet equipments = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    for (let i = 0; i < payload.length; ++i)\n    {\n        let equipment = payload[i]\n        \n        let equipment_info = {\n            equipmentId: equipment.equipmentId,\n            templateId: equipment.templateId\n        }\n        \n        if (equipment.hasOwnProperty('equipmentName'))\n        {\n            equipment_info.equipmentName = equipment.equipmentName\n        }\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            equipment_info.properties = equipment.properties\n        }\n        \n        equipments.push(equipment_info)\n        \n    }\n    \n    msg.virtual_equipments = equipments\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 1140,
+        "wires": [
+            [
+                "b2a36acd.77f0e8"
+            ],
+            [
+                "aedeae08.60529"
+            ]
+        ]
+    },
+    {
+        "id": "538eef8a.377a",
+        "type": "ui_switch",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "Include extra channel categories",
+        "tooltip": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "767ef5e9.791adc"
+            ]
+        ]
+    },
+    {
+        "id": "f34fb144.8487b",
+        "type": "ui_switch",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "label": "Include equipment properties",
+        "tooltip": "",
+        "group": "8b5f38b9.52cb98",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "fd167e9e.a5531"
+            ]
+        ]
+    },
+    {
+        "id": "767ef5e9.791adc",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "includeExtraCategories",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd167e9e.a5531",
+        "type": "change",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "includeProperties",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c77446ce.78d348",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "virtual equipment url",
+        "func": "const model = global.get('model')\nconst host = model.statement.forwardList.host\n\nmsg.url = `http://${host}/api/v1/config/virtual/equipments`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "88adb779.582c38"
+            ]
+        ]
+    },
+    {
+        "id": "88adb779.582c38",
+        "type": "http request",
+        "z": "5331fae2.78b714",
+        "name": "GET",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "a62aff8a.d531b"
+            ]
+        ]
+    },
+    {
+        "id": "a62aff8a.d531b",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "save result",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = []\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\nelse\n{\n    msg.virtual_equipments = msg.payload\n    \n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "b60c2cf2.91388"
+            ],
+            [
+                "52dbe000.e3e8c"
+            ]
+        ]
+    },
+    {
+        "id": "b60c2cf2.91388",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "update virtual equipment",
+        "func": "let virtual_equipments = JSON.parse(JSON.stringify(msg.virtual_equipments))\n\nconst model = global.get('model')\nconst agents = model.statement.sourceInfo.agents\nconst selected_devices = model.statement.forwardList.selectedDevices\nconst include_properties = model.statement.forwardList.includeProperties\nconst prefix = model.statement.forwardList.prefix\n\nselected_devices.forEach(\n    function(device)\n    {\n        for (const [agent, eq_tp] of Object.entries(agents))\n        {\n            eq_tp.equipments.forEach(\n                function(equipment)\n                {\n                    if (equipment.equipmentId === device)\n                    {\n                        _update_virtual_equipments(equipment)\n                    }\n                }\n            )            \n        }\n    }\n)\n\nmsg.virtual_equipments = virtual_equipments\n\nreturn msg\n\n\nfunction _update_virtual_equipments(config)\n{\n    let equipment = JSON.parse(JSON.stringify(config))\n    let equipment_id = equipment.equipmentId\n    \n    if (prefix)\n    {\n        equipment_id = prefix + equipment_id\n    }\n    \n    let update = false\n    virtual_equipments.forEach(\n        function(virtual_equipment)\n        {\n            if (virtual_equipment.equipmentId === equipment_id)\n            {\n                update = true\n                if (include_properties)\n                {\n                    virtual_equipment.equipmentId = equipment_id\n                    virtual_equipment.equipmentName = equipment.equipmentName\n                    virtual_equipment.templateId = equipment_id\n                    virtual_equipment.properties = equipment.properties\n                }\n                else\n                {\n                    virtual_equipment.equipmentId = equipment_id\n                    virtual_equipment.equipmentName = equipment.equipmentName\n                    virtual_equipment.templateId = equipment_id\n                    delete virtual_equipment.properties\n                }\n            }\n        }\n    )\n    \n    if (!update)\n    {\n        new_equipment = equipment\n        new_equipment.equipmentId = equipment_id\n        new_equipment.templateId = equipment_id\n        \n        if (!include_properties)\n        {\n            delete new_equipment.properties\n        }\n        \n        virtual_equipments.push(new_equipment)\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "1f8357ab.018268",
+                "402f2f6e.92904"
+            ]
+        ]
+    },
+    {
+        "id": "1f8357ab.018268",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "virtual equipments url",
+        "func": "const model = global.get('model')\nconst host = model.statement.forwardList.host\nconst access_token = model.statement.forwardList.accessToken\nconst virtual_equipments = msg.virtual_equipments\n\nmsg.url = `http://${host}/api/v1/config/virtual/equipments`\nmsg.headers = {};\nmsg.headers.Authorization = `JWT ${access_token}`\nmsg.payload = virtual_equipments\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "6f0dc066.fbd5f",
+                "a886eca3.e7652"
+            ]
+        ]
+    },
+    {
+        "id": "5ff3854a.df1bac",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "mapping template",
+        "func": "const model = global.get('model')\n\nconst agents = model.statement.sourceInfo.agents\nconst put_index = model.statement.forwardList.putIndex\nconst selected_device = model.statement.forwardList.selectedDevices[put_index]\n\nfor (const [agent, eq_tp] of Object.entries(agents))\n{\n    eq_tp.templates.forEach(\n        function(template)\n        {\n            if (template.templateId === selected_device)\n            {\n                msg.payload = {\n                    agent: agent,\n                    template: template\n                }\n            }\n        }\n    )            \n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "9b312ffe.54e02"
+            ]
+        ]
+    },
+    {
+        "id": "9b312ffe.54e02",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "to virtual template",
+        "func": "const model = global.get('model')\nconst include_extra_categories = model.statement.forwardList.includeExtraCategories\nconst prefix = model.statement.forwardList.prefix\n\nconst agent = msg.payload.agent\nconst template = msg.payload.template\n\nlet template_id = template.templateId\nif (prefix)\n{\n    template_id = prefix + template_id\n}\n\nlet virtual_template = {}\n\nvirtual_template.templateId = template_id\nvirtual_template.channels = []\n    \nif (['fins', 'melsec', 'mewtocol', 'modbus', 'step7'].includes(agent))\n{\n    template.channels.forEach(\n        function(channel)\n        {\n            let c = {\n                channelId: channel.channelId,\n                valueType: _to_virtual_value_type(channel.conversion)\n            }\n            \n            if (channel.hasOwnProperty('channelName'))\n            {\n                c.channelName = channel.ChannelName\n            }\n            \n            if (channel.hasOwnProperty('category'))\n            {\n                if (include_extra_categories)\n                {\n                    c.category = channel.category\n                }\n                else\n                {\n                    c.category = []\n                    for (let i = 0; i < channel.category.length; ++i)\n                    {\n                        let item = channel.category[i]\n                        if (['alarm', 'data'].includes(item))\n                        {\n                            c.category.push(item)\n                        }\n                    }\n                }\n            }\n            \n            virtual_template.channels.push(c)\n        }\n    )\n}\nelse\n{\n    template.channels.forEach(\n        function(channel)\n        {\n            let c = JSON.parse(JSON.stringify(channel))\n            \n            delete c.category\n            \n            if (channel.hasOwnProperty('category'))\n            {\n                if (include_extra_categories)\n                {\n                    c.category = channel.category\n                }\n                else\n                {\n                    c.category = []\n                    for (let i = 0; i < channel.category.length; ++i)\n                    {\n                        let item = channel.category[i]\n                        if (['alarm', 'data'].includes(item))\n                        {\n                            c.category.push(item)\n                        }\n                    }\n                }\n            }\n            \n            virtual_template.channels.push(c)\n        }\n    )\n}\n\nmsg.virtual_template = virtual_template\n\nreturn msg\n\n\nfunction _to_virtual_value_type(conversion)\n{\n    const as_type = conversion.asType\n    \n    if (as_type === 'ascii')\n    {\n        return 'string'\n    }\n    \n    if (as_type === 'float32' ||\n            as_type === 'float64')\n    {\n        return 'float'\n    }\n    \n    if (conversion.hasOwnProperty('multiplier') ||\n            conversion.hasOwnProperty('offset') ||\n            conversion.hasOwnProperty('rounding'))\n    {\n        return 'float'\n    }\n    \n    return 'integer'\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "2b0377eb.2f9ca8"
+            ]
+        ]
+    },
+    {
+        "id": "2b0377eb.2f9ca8",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "virtual template url",
+        "func": "const model = global.get('model')\nconst host = model.statement.forwardList.host\nconst access_token = model.statement.forwardList.accessToken\nconst virtual_template = msg.virtual_template\nconst template_id = virtual_template.templateId\n\nmsg.url = `http://${host}/api/v1/config/virtual/templates/${template_id}`\nmsg.headers = {};\nmsg.headers.Authorization = `JWT ${access_token}`\nmsg.payload = virtual_template\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "8d1fdb19.21c138"
+            ]
+        ]
+    },
+    {
+        "id": "8d1fdb19.21c138",
+        "type": "http request",
+        "z": "5331fae2.78b714",
+        "name": "PUT",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "ce3d8553.15b728"
+            ]
+        ]
+    },
+    {
+        "id": "ce3d8553.15b728",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "validate status",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [{}, null]\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\n\n\nreturn output",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "74d4eee2.9726f"
+            ],
+            [
+                "52dbe000.e3e8c"
+            ]
+        ]
+    },
+    {
+        "id": "74d4eee2.9726f",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "put index",
+        "func": "let model = global.get('model')\nlet statement = model.statement\nlet put_index = model.statement.forwardList.putIndex\n\nif (++put_index != statement.forwardList.selectedDevices.length)\n{\n    statement.forwardList.putIndex = put_index\n    \n    let changes = {\n        isOperating: true,\n        state: 'FORWARD_LIST',\n        statement\n    }\n    \n    model = Object.assign(model, changes)\n    global.set('model', model)\n    \n    // return {\n    //     topic: 'model',\n    //     payload: changes\n    // }\n    return [\n        {\n            topic: 'model',\n            payload: changes\n        },\n        null\n    ]\n}\n\nreturn [\n    null,\n    {}\n]\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1260,
+        "y": 400,
+        "wires": [
+            [
+                "134438a1.a40b97",
+                "5ff3854a.df1bac"
+            ],
+            [
+                "c77446ce.78d348"
+            ]
+        ]
+    },
+    {
+        "id": "a886eca3.e7652",
+        "type": "http request",
+        "z": "5331fae2.78b714",
+        "name": "PUT",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 670,
+        "y": 520,
+        "wires": [
+            [
+                "c52a43b4.b8735"
+            ]
+        ]
+    },
+    {
+        "id": "c52a43b4.b8735",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "validate status",
+        "func": "const payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [{}, null]\n\nif (status_code !== 200)\n{\n    if (typeof payload === \"object\")\n    {\n        msg.payload = JSON.stringify(payload)\n    }\n    \n    output = [null, msg]\n}\n\n\nreturn output",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 520,
+        "wires": [
+            [
+                "1a4b7817.50d9e8"
+            ],
+            [
+                "52dbe000.e3e8c"
+            ]
+        ]
+    },
+    {
+        "id": "95644070.34da9",
+        "type": "ui_table",
+        "z": "abf7f0b7.a1434",
+        "group": "8b5f38b9.52cb98",
+        "name": "",
+        "order": 4,
+        "width": "6",
+        "height": "5",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a3621727.19c1e8",
+        "type": "api",
+        "z": "4ad7964c.712058",
+        "name": "",
+        "method": "GET",
+        "path": "",
+        "x": 650,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fce765c6.81e018",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "const dropdown_option = flow.get('dropdownOption')\n\nreturn {\n    topic: 'dropdown_option',\n    payload: {\n        dropdownOption: dropdown_option\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1100,
+        "y": 120,
+        "wires": [
+            [
+                "8eeff242.5e39"
+            ]
+        ]
+    },
+    {
+        "id": "ea71364b.3abd48",
+        "type": "function",
+        "z": "5331fae2.78b714",
+        "name": "Handle dropdown option",
+        "func": "if (msg.topic !== 'dropdown_option')\n{\n    return\n}\n\nconst payload = msg.payload\nlet model = global.get('model')\n\nif (model.state !== 'FORWARD_LIST')\n{\n    node.error('unexpected')\n    return\n}\n\nlet statement = model.statement\nstatement.forwardList.dropdownOption = payload.dropdownOption\n\nconst changes = {\n    statement\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "134438a1.a40b97",
+                "46909a0c.91fe24"
+            ]
+        ]
+    },
+    {
+        "id": "56322439.eb071c",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        enabled: false,\n        payload: ''\n    }   \n}\n\nconst model = global.get('model')\n\nconst enabled = !model.isOperating && model.state === 'FORWARD_LIST'\nconst dropdown_option = model.statement.forwardList.dropdownOption\n\nreturn {\n    enabled,\n    payload: dropdown_option\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "fb01d843.d511a8"
+            ]
+        ]
+    },
+    {
+        "id": "46909a0c.91fe24",
+        "type": "debug",
+        "z": "5331fae2.78b714",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "67d38352.85bdcc",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        enabled: false,\n        payload: false\n    }   \n}\n\nconst model = global.get('model')\nconst is_operating = model.isOperating\nconst dropdown_option = model.statement.forwardList.dropdownOption\n\nif (is_operating)\n{\n    return {\n        enabled: false\n    }\n}\n\nconst enabled = !model.isOperating \n && model.state === 'FORWARD_LIST'\n && dropdown_option\n\nreturn {\n    enabled,\n    payload: false\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "538eef8a.377a",
+                "f34fb144.8487b"
+            ]
+        ]
+    },
+    {
+        "id": "e1478399.b90a5",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        enabled: false,\n        payload: []\n    }   \n}\n\nconst model = global.get('model')\nconst is_operating = model.isOperating\n\nif (is_operating)\n{\n    return {\n        enabled: false\n    }\n}\n\nconst dropdown_option = model.statement.forwardList.dropdownOption \nconst enabled = !model.isOperating \n && model.state === 'FORWARD_LIST'\n && dropdown_option\n\nlet output = []\n\nif (dropdown_option)\n{\n    const index_map = {\n        'Gateway1': 0,\n        'Gateway2': 1\n    }\n\n    const connectivity = model.statement.sourceInfo.connectivity\n    const gateway = connectivity.gateways[index_map[dropdown_option]]\n    let selected_devices = []\n    let prefix = ''\n    \n    if (gateway)\n    {\n        for (let i = 0; i < gateway.devices.length; ++i)\n        {\n            output[i] = {\n                index: i,\n                device_id: gateway.devices[i]\n            }\n            \n            selected_devices.push(gateway.devices[i])\n        }\n        prefix = gateway.prefix\n    }\n    \n    flow.set('selectedDevices', selected_devices)\n    flow.set('prefix', prefix)\n}\n\nreturn {\n    enabled,\n    payload: output\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "95644070.34da9"
+            ]
+        ]
+    },
+    {
+        "id": "fac47098.df7b",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        enabled: false,\n        payload: ''\n    }   \n}\n\nconst model = global.get('model')\nconst is_operating = model.isOperating\nconst dropdown_option = model.statement.forwardList.dropdownOption \n\nif (is_operating)\n{\n    return {\n        enabled: false\n    }\n}\n\nif (dropdown_option)\n{\n    const index_map = {\n        'Gateway1': 0,\n        'Gateway2': 1\n    }\n\n    const connectivity = model.statement.sourceInfo.connectivity\n    const gateway = connectivity.gateways[index_map[dropdown_option]]\n    let host = ''\n    \n    if (gateway)\n    {\n        host = gateway.endpoint.host\n        flow.set('host', host)\n    }\n    \n    return {\n        enabled: true,\n        payload: host\n    }\n}\nelse\n{\n    return {\n        enabled: false,\n        payload: ''\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "48e497cf.1ffe28"
+            ]
+        ]
+    },
+    {
+        "id": "f655730a.3c1a9",
+        "type": "function",
+        "z": "abf7f0b7.a1434",
+        "name": "",
+        "func": "if (msg.topic === 'initialize')\n{\n    return {\n        enabled: false,\n        payload: ''\n    }   \n}\n\nconst model = global.get('model')\nconst is_operating = model.isOperating\nconst dropdown_option = model.statement.forwardList.dropdownOption\n\nif (is_operating)\n{\n    return {\n        enabled: false\n    }\n}\n\nif (dropdown_option)\n{\n    return {\n        enabled: true,\n        payload: ''\n    }\n}\nelse\n{\n    return {\n        enabled: false,\n        payload: ''\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 660,
+        "wires": [
+            [
+                "e9e434f4.e5a7d8",
+                "8e0ca25e.8a971"
+            ]
+        ]
+    },
+    {
+        "id": "402f2f6e.92904",
+        "type": "debug",
+        "z": "5331fae2.78b714",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 800,
+        "wires": []
+    }
+]

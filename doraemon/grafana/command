@@ -1,0 +1,23 @@
+### Docker-compose
+開啟 html 功能
+GF_PANELS_DISABLE_SANITIZE_HTML: 'true'
+
+安裝套件
+GF_INSTALL_PLUGINS: natel-discrete-panel
+
+### Grafana query
+取得最新一筆
+ORDER BY time DESC LIMIT 1
+
+只取發生點位值
+AND M0 = 1 
+
+發生次數總和
+SELECT
+    COUNT("M0")  as M0
+FROM
+    "sample-device"
+WHERE
+    $timeFilter AND
+    M0 = 1
+GROUP BY time(60m) tz('Asia/Taipei')

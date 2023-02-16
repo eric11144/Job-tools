@@ -1,0 +1,7 @@
+查看對應 iso 檔案
+sha1sum chameleon-gateway.20210105-034518.iso
+
+結果 
+e2407d3d64b85493dd87433df6261f97cbe977f2  chameleon-gateway.20210105-034518.iso
+
+對照 artifactory 內的 SHA-1

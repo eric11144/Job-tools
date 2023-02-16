@@ -1,0 +1,2 @@
+ssh -i ~/Downloads/chameleon qi@192.168.11.66 sudo tar -c /chameleon/the-gateway/var/lib/qcsvgenpp > q.tar
+cat q.tar | ssh -i ~/Downloads/chameleon qi@192.168.11.66 sudo tar -x -C /

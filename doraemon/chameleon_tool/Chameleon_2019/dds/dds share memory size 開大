@@ -1,0 +1,4 @@
+sudo vim /the-server/docker-compose.yml
+
+environment:
+- QURRENT_OSPL_SHMEM_SIZE_MB=256

@@ -1,0 +1,58 @@
+---
+- name: Create temporary apt-repository - remove existing
+  file:
+    path: /tmp/apt-repo
+    state: absent
+
+- name: Create temporary apt-repository
+  synchronize:
+    src: "{{ item }}"
+    dest: /tmp/apt-repo/
+  with_fileglob:
+  - "{{ role_path }}/files/tmp/apt-repo/*"
+
+- name: Add temporary apt-repository to sources-list
+  apt_repository:
+    repo: "deb [trusted=yes] file:/tmp/apt-repo ./"
+    state: present
+    filename: private
+
+- name: Install deb packages
+  apt:
+    force_apt_get: yes
+    update_cache: yes
+    install_recommends: no
+    state: latest
+    name:
+    - atop
+    - byobu
+    - chameleon-datetime
+    - curl
+    - docker-ce
+    - docker-ce-cli
+    - htop
+    - iotop
+    - linux-headers-generic
+    - linux-image-generic
+    - ncdu
+    - ntpdate
+    - python3
+    - python3-venv
+    - smartmontools
+    - socat
+    - supervisor
+    - traceroute
+    - tree
+    - vim
+    - yq
+
+- name: Remove temporary apt-repository from sources-list
+  apt_repository:
+    repo: "deb [trusted=yes] file:/tmp/apt-repo ./"
+    state: absent
+    filename: private
+
+- name: Remove temporary apt-repository
+  file:
+    path: /tmp/apt-repo/
+    state: absent

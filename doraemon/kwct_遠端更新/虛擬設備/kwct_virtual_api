@@ -1,0 +1,142 @@
+Take Auth
+
+curl -i -H "Content-Type: application/json" POST -d '{"username":"admin","password":"p@55w0rd"}' "http://10.1.1.1/api/v1/auth"
+
+***** 裁斷機_1 *****
+
+Post virtual template
+
+--data-binary @- <<EOF
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["data"],"channelId":"total_utilization_hours","channelName":"當日總稼動(小時)","valueType":"number"}],"templateId":"FX3G_utilization"}' \
+    http://10.1.1.1/api/v1/config/virtual/templates
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X POST -d '{"channels":[{"category":["alarm"],"channelId":"changed","valueType":"number"}],"templateId":"changed"}' \
+    http://10.1.1.1/api/v1/config/virtual/templates
+
+Put equipments
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '[{"equipmentId":"detect_board","templateId":"changed"},{"equipmentId":"FX3G_utilization","equipmentName":"今日總稼動小時","templateId":"FX3G_utilization"}]' \
+    http://10.1.1.1/api/v1/config/virtual/equipments
+
+***** 熱處理爐 *****
+
+Post virtual template
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["data"],"channelId":"total_utilization_hours","channelName":"當日總稼動(小時)","valueType":"float"}],"templateId":"Q00_utilization"}' \
+    http://10.1.1.2/api/v1/config/virtual/templates
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["alarm"],"channelId":"changed","valueType":"integer"}],"templateId":"changed"}' \
+    http://10.1.1.2/api/v1/config/virtual/templates
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["data"],"channelId":"total_utilization_hours","channelName":"當日總稼動(小時)","valueType":"float"}],"templateId":"utilization"}' \
+    http://10.1.1.2/api/v1/config/virtual/templates
+
+Put equipments
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '[{"equipmentId":"detect_board","templateId":"changed"},{"equipmentId":"Q00_utilization","equipmentName":"熱處理機1_今日總稼動小時","templateId":"utilization"},{"equipmentId":"Q00U_utilization","equipmentName":"熱處理機2_今日總稼動小時","templateId":"utilization"}]' \
+    http://10.1.1.2/api/v1/config/virtual/equipments
+
+***** 銑齒機 *****
+
+Post virtual template
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["data"],"channelId":"G_ACTF","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_ACTS","valueType":"float"},\
+        {"category":["data"],"channelId":"G_CUTT","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_CYCT","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_ELCT","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_EXEP","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_FERP","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_FRUT","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_OPRT","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSA_0","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSA_1","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSA_2","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSA_3","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSA_4","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSD_0","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSD_1","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSD_2","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSD_3","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSD_4","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSR_0","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSR_1","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSR_2","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSR_3","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_POSR_4","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_PRGM","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_PRGR","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_PSCP","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_PSUT","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SEQN","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SPMS","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_SPSD","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_SRNE_0","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SRNE_1","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SRNE_2","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SRNE_3","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_SRNE_4","valueType":"string"}, \
+        {"category":["data"],"channelId":"G_TOCP","valueType":"float"}, \
+        {"category":["data"],"channelId":"G_USCP","valueType":"float"}, \
+        {"category":["data"],"channelId":"TodayOEE_12","valueType":"float"}, \
+        {"category":["data"],"channelId":"TodayOEE_16","valueType":"float"}, \
+        {"category":["data"],"channelId":"TodayOEE_8","valueType":"float"}, \
+        {"category":["data"],"channelId":"TodayOEE_1","valueType":"float"}, \
+        {"category":["data"],"channelId":"YesterdayOEE_12","valueType":"float"}, \
+        {"category":["data"],"channelId":"YesterdayOEE_16","valueType":"float"}, \
+        {"category":["data"],"channelId":"YesterdayOEE_8","valueType":"float"}, \
+        {"category":["data"],"channelId":"YesterdayOEE_1","valueType":"float"}], \
+        "templateId":"Siemens"}' \
+    http://10.1.1.3/api/v1/config/virtual/templates
+
+Put equipments
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '[{"equipmentId":"Siemens","templateId":"Siemens"}]' \
+    http://10.1.1.3/api/v1/config/virtual/equipments
+
+***** 裁斷機_2 *****
+
+Post virtual template
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["data"],"channelId":"total_utilization_hours","channelName":"當日總稼動(小時)","valueType":"float"}],"templateId":"utilization"}' \
+    http://10.1.1.6/api/v1/config/virtual/templates
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    POST -d '{"channels":[{"category":["alarm"],"channelId":"changed","valueType":"integer"}],"templateId":"changed"}' \
+    http://10.1.1.6/api/v1/config/virtual/templates
+
+Put equipments
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '[{"equipmentId":"detect_board","templateId":"changed"},{"equipmentId":"Cutter_Line_2_utilization","equipmentName":"今日總稼動小時","templateId":"utilization"}]' \
+    http://10.1.1.6/api/v1/config/virtual/equipments
+
+***** Barcode *****
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '{"enable": true,"channelId":"barcode","equipmentId":"cutter-barcode-scanner_1"}' \
+    http://10.1.1.1/api/v1/config/barcode/configuration
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '{"enable": true,"channelId":"barcode","equipmentId":"hot-process-barcode-scanner"}' \
+    http://10.1.1.2/api/v1/config/barcode/configuration
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '{"enable": true,"channelId":"barcode","equipmentId":"milling-cutter--barcode-scanner"}' \
+    http://10.1.1.3/api/v1/config/barcode/configuration
+
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' \
+    -X PUT -d '{"enable": true,"channelId":"barcode","equipmentId":"cutter-barcode-scanner_2"}' \
+    http://10.1.1.6/api/v1/config/barcode/configuration
+

@@ -1,0 +1,13 @@
+* direnv
+   * $ sudo apt-get install direnv
+   * add `eval "$(direnv hook bash)"` to end of ~/.bashrc
+   * add .envrc file to your folder
+       
+example
+export CONTAINER_REGISTRY=registry.qi
+export HTTP_PROXY=http://proxy.qi:3128 
+export PRIVATE_PYPI=pypi.qi
+export PRIVATE_APT=http://deb.qi
+export ARTIFACTORY_URL=http://artifactory.qi/artifactory
+* In your folder
+   * $ direnv allow .envrc

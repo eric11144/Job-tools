@@ -1,0 +1,3 @@
+sudo vim /etc/apt/sources.list
+
+deb [trusted=yes] file:/tmp/apt-repo ./

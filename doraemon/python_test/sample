@@ -1,0 +1,316 @@
+import datetime
+import dateutil.parser
+import requests
+import time
+
+from decimal import Decimal
+
+from libqurrent_py import (
+    ChannelId,
+    DeviceId,
+    DeviceInfo,
+    Reading,
+    Service,
+    Value)
+
+
+CHANNEL_ID = 'value'
+DEVICE_ID = 'mxe_test'
+INSERT_PERIOD_SEC = 0.02
+IPC_IP = 'localhost'
+
+VALUE_LIST = [
+    (-2147483648, -2147483637),
+    (2147483640, 2147483647)
+]
+
+def insert_data():
+    service = Service.instance()
+
+    now = str(datetime.datetime.now())
+    date_time = dateutil.parser.parse(now)
+
+    sensor = service.create_sensor(
+        DeviceInfo(
+            DeviceId(DEVICE_ID)
+        )
+    )
+    reading = Reading()
+    for element in VALUE_LIST:
+        for data in range(element[0], element[1]):
+            reading.set(
+                ChannelId('value'),
+                Value(data)
+            )
+
+            date_time += datetime.timedelta(seconds=0.5)
+
+            time.sleep(INSERT_PERIOD_SEC)
+
+            sensor.update(
+                reading,
+                date_time)
+
+def main():
+    while True:
+        insert_data()
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+import os
+import pytest
+import time
+
+from datetime import (
+    datetime,
+    timedelta)
+from dateutil.parser import parse as dateutil_parse
+from voluptuous import (
+    Required,
+    Schema
+)
+
+from snake_charmer.martini.martini import (
+    Martini,
+    Sort
+)
+
+from snake_charmer.qonfig.qonfig import Qonfig
+from snake_charmer.types import Sort
+
+from chameleon_api_test.env import (
+    THE_GATEWAY_WEB_URI,
+    THE_GATEWAY_WEB_USER_NAME,
+    THE_GATEWAY_WEB_USER_PWD)
+from chameleon_api_test.pytest import (
+    check_response)
+
+
+CHANNEL_ID = 'value'
+DEVICE_ID = 'mxe'
+TEMPLATE_ID = 'mxe'
+
+
+class TestInteger:
+    value_list = [(1, 10)]
+
+    @pytest.fixture
+    def qonfig(
+            self,
+            request):
+        qonfig = Qonfig(
+            THE_GATEWAY_WEB_URI,
+            THE_GATEWAY_WEB_USER_NAME,
+            THE_GATEWAY_WEB_USER_PWD,
+            3600,
+            request.config.getoption('--enable-cert-verify'))
+
+        qonfig.virtual.post_templates(
+            {
+                'templateId': TEMPLATE_ID,
+                'channels': [
+                    {
+                        'channelId': CHANNEL_ID,
+                        'category': ['data'],
+                        'valueType': 'integer'
+                    }
+                ]
+            }
+        )
+
+        qonfig.virtual.put_equipments(
+            [
+                {
+                    "equipmentId": DEVICE_ID,
+                    "templateId": TEMPLATE_ID
+                }
+            ])
+
+        time.sleep(2)
+
+        martini = Martini(
+            THE_GATEWAY_WEB_URI,
+            THE_GATEWAY_WEB_USER_NAME,
+            THE_GATEWAY_WEB_USER_PWD,
+            3600,
+            False)
+
+        def teardown():
+            qonfig.virtual.put_equipments([])
+            qonfig.virtual.delete_template(TEMPLATE_ID)
+            martini.delete_device(DEVICE_ID)
+
+        request.addfinalizer(teardown)
+        return qonfig
+
+    @pytest.fixture
+    def martini(
+            self):
+        return Martini(
+            THE_GATEWAY_WEB_URI,
+            THE_GATEWAY_WEB_USER_NAME,
+            THE_GATEWAY_WEB_USER_PWD,
+            3600,
+            False)
+
+    @pytest.fixture
+    def virtual_device(
+            self,
+            qonfig):
+        return qonfig.virtual_device
+
+    def test_get_latest_data(
+            self,
+            martini,
+            virtual_device):
+
+        # act & assert
+        # virtual_device.post_virtual_device_reading(
+        #     DEVICE_ID,
+        #     {
+        #         "at": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        #         "channels":
+        #         [
+        #             {
+        #                 "channelId": CHANNEL_ID,
+        #                 "value":{"num": 1}
+        #             }
+        #         ]
+        #     })
+        # time.sleep(1)
+        # print(martini.get_device_latest_data(DEVICE_ID))
+
+        for element in TestInteger.value_list:
+            for data in range(element[0], element[1]):
+                # start_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                virtual_device.post_virtual_device_reading(
+                    DEVICE_ID,
+                    {
+                        "at": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+                        "channels":
+                        [
+                            {
+                                "channelId": CHANNEL_ID,
+                                "value":{"num": data}
+                            }
+                        ]
+                    }
+                )
+
+                time.sleep(1)
+                assert data == martini.get_device_latest_data(DEVICE_ID)[0]['latestValue']['value']['num']
+
+    # def test_get_channel_history_data(self):
+    #     # arrange
+    #     row_data_list = []
+    #     start_time = datetime.utcnow().strftime('%Y-%m-%dT00:00:00Z')
+
+    #     # act
+    #     rsp, next_data = self.martini.get_device_channel_data(
+    #         DEVICE_ID,
+    #         CHANNEL_ID,
+    #         since=start_time,
+    #         sort=Sort.ASC
+    #     )
+
+    #     for element in self.value_list:
+    #         for data in range(element[0], element[1]):
+    #             row_data_list.append(data)
+
+    #     # assert
+    #     assert next_data
+
+    #     while next_data is not None:
+    #         data, next_data = next_data()
+    #         rsp.extend(data)
+
+    #     assert row_data_list == rsp
+
+
+
+    def test_insert_sundry_value_type(
+            self,
+            qonfig,
+            martini):
+        # arrange
+        data_list = []
+        start_time = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.%fZ')
+
+        qonfig.virtual.post_templates(
+            {
+                'templateId': TEMPLATE_ID,
+                'channels': [
+                    {
+                        'channelId': 'work-order',
+                        'category': ['data'],
+                        'valueType': 'string'
+                    },
+                    {
+                        'channelId': 'voltage',
+                        'category': ['data'],
+                        'valueType': 'integer'
+                    },
+                    {
+                        'channelId': 'temperature',
+                        'category': ['data'],
+                        'valueType': 'float'
+                    }
+                ]
+            }
+        )
+
+        qonfig.virtual.put_equipments(
+            [
+                {
+                    "equipmentId": DEVICE_ID,
+                    "templateId": TEMPLATE_ID
+                }
+            ]
+        )
+
+        time.sleep(2)
+
+        payload = {
+            "at": TestUpdateReading.date_time,
+            "channels":
+            [
+                {
+                    "channelId": 'work-order',
+                    "value":{"str": "W994#0201-1"}
+                },
+                {
+                    "channelId": 'voltage',
+                    "value":{"num": 24}
+                },
+                {
+                    "channelId": 'temperature',
+                    "value":{"num": 60}
+                }
+            ]
+        }
+
+        # act
+        qonfig.virtual_device.post_virtual_device_reading(
+            DEVICE_ID,
+            payload
+        )
+
+        time.sleep(2)
+
+        for channel_id in ['work-order', 'voltage', 'temperature']:
+            rsp, next_data = martini.get_device_channel_data(
+                DEVICE_ID,
+                channel_id,
+                since=TestUpdateReading.since,
+                until=TestUpdateReading.until,
+                sort=Sort.ASC)
+            data_list.append(rsp[0])
+
+        # assert
+        assert len(payload['channels']) == len(data_list)

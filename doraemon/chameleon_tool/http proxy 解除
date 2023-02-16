@@ -1,0 +1,2 @@
+proxy 指向內部 qi.proxy
+unset HTTP_PROXY

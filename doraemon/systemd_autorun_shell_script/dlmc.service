@@ -1,0 +1,10 @@
+[Unit]
+Description=DLMC
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/mkmp_tool/sample/
+ExecStart=/bin/bash dlmc.sh
+
+[Install]
+WantedBy=multi-user.target

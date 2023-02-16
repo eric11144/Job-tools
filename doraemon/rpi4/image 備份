@@ -1,0 +1,57 @@
+參考 : https://blog.cavedu.com/2018/03/22/raspberry-pi-sd-card/
+
+sudo apt-get install progress
+
+sudo dd bs=4M if=/dev/xxx status=progress | zip NCS-rpi4.zip -
+( xxx 為 sd卡 硬碟位置, ex sdd1 : boot sdd2:system, 則 xxx 為 sdd )
+
+unzip NCS-rpi4.zip
+mv - rpi4.img
+
+fdisk -l rpi4.img
+觀看 rpi4.img2 硬體起始位置 start
+
+df -h
+觀看哪個 loopx 是空的
+
+sudo losetup /dev/loop16 rpi4.img -o $((512*532480))
+
+sudo apt-get install gparted
+sudo gparted /dev/loop16
+右鍵選擇Resize
+調整空白空間
+
+並將使用到之容量做紀錄
+建議在Minimum size外再留一些空間會比較好
+按下上方的Apply按鈕， 開始進行重新劃分大小
+Details那邊找到shrink file system底下的resize2fs -p '/dev/loop16' 11345920K
+將此截圖下來
+sudo losetup --detach-all
+
+sudo losetup /dev/loop16 rpi4.img
+
+sudo fdisk /dev/loop16
+使用fdisk工具來對它做重新切割磁區
+
+Command : d
+Partition number : 2
+
+Command : n
+Partition type : p
+Partition number : 2
+First sector : start
+Last sector : +xxxxxxxxK
+remove the signature : N
+
+Command : w
+完成切割
+
+sudo losetup --detach-all
+
+fdisk -l rpi4.img
+檢查 image size 是否確實被切割
+
+使用truncate指令來去掉End Sector以後不要的部份
+truncate -s $((512*(23224319+1))) rpi4.img
+
+

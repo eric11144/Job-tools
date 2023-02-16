@@ -1,0 +1,32 @@
+需要將點位設定進 virtual-device
+
+產生中文 value, 送進 dds
+
+from time import sleep
+from decimal import Decimal
+
+from libqurrent_py import (
+    ChannelId,
+    DeviceId,
+    DeviceInfo,
+    Service,
+    Reading,
+    Value)
+
+# prepare reading schema
+sensor = Service.instance().create_sensor(
+    DeviceInfo(DeviceId("sample-device")))
+
+index = 0
+while True:
+    reading = Reading()
+    reading.set(
+        ChannelId("index"),
+        Value('中文')
+    )
+
+    sensor.update(reading)
+
+    sleep(1)
+
+    index += 1

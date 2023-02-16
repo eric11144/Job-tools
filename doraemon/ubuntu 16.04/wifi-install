@@ -1,0 +1,21 @@
+tar -xzf wpa_supplicant-0.7.3.tar.gz
+
+cd wpa_supplicant-0.7.3/wpa_supplicant/
+cp defconfig .config
+cp wpa_supplicant.conf /etc/wpa_supplicant.conf
+sudo make && sudo make install
+
+
+tar -xzf wireless_tools.29.tar.gz
+cd wireless_tools.29
+make 
+make PREFIX=/usr INSTALL_MAN=/usr/share/man install
+
+
+cd /usr/src
+wget https://www.openssl.org/source/openssl-1.0.2-latest.tar.gz
+tar -zxf openssl-1.0.2-latest.tar.gz 
+cd openssl-1.0.2
+./config
+make
+make install

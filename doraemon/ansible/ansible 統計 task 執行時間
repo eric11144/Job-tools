@@ -1,0 +1,10 @@
+https://www.jianshu.com/p/922a70edf48c
+
+cd /etc/ansible 
+mkdir callback_plugins 
+cd callback_plugins 
+wget https://raw.githubusercontent.com/jlafon/ansible-profile/master/callback_plugins/profile_tasks.py
+
+ansible.cfg 中加入
+
+callback_whitelist = profile_tasks

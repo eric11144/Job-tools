@@ -1,0 +1,12 @@
+modbus_tcp_server supervisorctl setting
+
+[program:modbus_tcp_server]
+command=/modbus-tcp-server/start.sh
+autostart = true
+autorestart = true
+stderr_logfile = /var/log/modbus_tcp_server.err.log
+stdout_logfile = /var/log/modbus_tcp_server.out.log
+stderr_logfile_maxbytes = 1MB
+stdout_logfile_maxbytes = 1MB
+stderr_logfile_backups = 1
+stdout_logfile_backups = 1

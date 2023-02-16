@@ -1,0 +1,2 @@
+將硬碟每一個位置清空
+sudo dd if=/dev/zero of=/dev/sda bs=1024k status=progress

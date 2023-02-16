@@ -1,0 +1,5 @@
+wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
+chmod +x pishrink.sh
+sudo mv pishrink.sh /usr/local/bin
+
+sudo pishrink.sh -s test_ubuntu.img test_ubuntu_1.img

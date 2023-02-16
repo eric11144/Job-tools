@@ -1,0 +1,2074 @@
+[
+    {
+        "id": "7c29b090.75d6e",
+        "type": "tab",
+        "label": "shihlin detect board",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e4986974.ff1428",
+        "type": "tab",
+        "label": "shihlin_Power ON_tag",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6ef42a4.7f9e2d4",
+        "type": "tab",
+        "label": "delta_detect board",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9bac51ae.ff382",
+        "type": "tab",
+        "label": "delta_Power ON_tag",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "586599db.9b9bf8",
+        "type": "tab",
+        "label": "Working Timestamp",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "813a5168.8097",
+        "type": "subflow",
+        "name": "query state changed",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "d17cc17c.bb7eb"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 420,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "ba9120ab.0a582",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "0"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "0"
+            }
+        ]
+    },
+    {
+        "id": "1ac3581f.6b4808",
+        "type": "subflow",
+        "name": "Clear Microseconds",
+        "info": "Clear msg.payload.at microseconds to `0`\n",
+        "category": "",
+        "in": [
+            {
+                "x": 240,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "a48cb7ca.3ff1b8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "a48cb7ca.3ff1b8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "c9db5d2b.acf31",
+        "type": "subflow",
+        "name": "Tag Power ON OFF",
+        "info": "Input:\n\n- `msg.params`\n    ```\n    {\n        DEVICE_ID: 'bender_event'\n    ]\n    ```\n- `msg.payload`\n\nOutput:\n\n- `msg.payload`",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "82bd96f7.61bdb8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1060,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "458452c4.b3fffc",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "c96c44b4.b7d9b8",
+        "type": "subflow",
+        "name": "Tag Power ON OFF (2)",
+        "info": "Input:\n\n- `msg.params`\n    ```\n    {\n        DEVICE_ID: 'bender_event'\n    ]\n    ```\n- `msg.payload`\n\nOutput:\n\n- `msg.payload`",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "fdb1e98c.a55b38"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1060,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "f7ad23ea.48582",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "c6b02a30.87eff8",
+        "type": "subflow",
+        "name": "operate detection",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "89919a64.0c8008"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 760,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "aba7b058.4a068",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "pre_processing_sec",
+                "type": "num",
+                "value": "0"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "0"
+            }
+        ]
+    },
+    {
+        "id": "858d50ec.fd988",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "query changed",
+        "func": "const begin_time = msg.args.utilization_begin_time\nconst end_time = msg.args.utilization_end_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "4dce3392.82d8fc"
+            ]
+        ]
+    },
+    {
+        "id": "4dce3392.82d8fc",
+        "type": "qi-query-history",
+        "z": "813a5168.8097",
+        "name": "",
+        "query": "",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "18e853a2.3dc17c"
+            ]
+        ]
+    },
+    {
+        "id": "18e853a2.3dc17c",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "save changed_list",
+        "func": "msg.args.changed_list = msg.payload\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "3615eec7.3132d2"
+            ]
+        ]
+    },
+    {
+        "id": "3615eec7.3132d2",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "query previous state",
+        "func": "const begin_time = msg.args.utilization_begin_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time < '${begin_time.toISOString()}'\n    ORDER BY time DESC\n    LIMIT 1\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "21ca25a.bff3eda"
+            ]
+        ]
+    },
+    {
+        "id": "21ca25a.bff3eda",
+        "type": "qi-query-history",
+        "z": "813a5168.8097",
+        "name": "",
+        "query": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "3a58881d.696478"
+            ]
+        ]
+    },
+    {
+        "id": "3a58881d.696478",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "append previous state",
+        "func": "const pre_state_list = msg.payload\nchanged_list = msg.args.changed_list\n\nif (pre_state_list.length !== 0)\n{\n    changed_list.unshift(pre_state_list[0])\n}\n\nmsg.payload = changed_list\nmsg.changed_list = undefined\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "d5ababdc.098fb8"
+            ]
+        ]
+    },
+    {
+        "id": "d5ababdc.098fb8",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "remove duplicated state",
+        "func": "const changed_list = msg.payload\nconst channel_id = env.get(\"channel_id\")\n\nlet rtn_changed = []\nlet now_state = undefined\n\nchanged_list.forEach(function(item){\n    if (item[channel_id] !== now_state)\n    {\n        rtn_changed.push(item)\n        now_state = item[channel_id]\n    }\n})\n\nmsg.payload = rtn_changed\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "ba9120ab.0a582"
+            ]
+        ]
+    },
+    {
+        "id": "ba9120ab.0a582",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "add lead/production time",
+        "func": "const channel_id = env.get(\"channel_id\")\nconst pretreatment_sec = env.get(\"pretreatment_sec\")\nconst post_processing_sec = env.get(\"post_processing_sec\")\n\nconst trigger_time = msg.args.trigger_time\nconst changed_list = msg.payload\n\nlet rtn_changed_list = []\nfor (let ax = 0; ax < changed_list.length; ++ax)\n{\n    let item = changed_list[ax]\n    if (item[channel_id] === 1)\n    {\n        let with_lead_time = new Date(item.time - pretreatment_sec * 1000)\n        let pre_stop_item = rtn_changed_list[ax - 1]\n\n        if (pre_stop_item !== undefined &&\n            pre_stop_item.time >= with_lead_time)\n        {\n            rtn_changed_list.pop()\n            continue;\n        }\n\n        rtn_changed_list.push({\n            \"time\": with_lead_time,\n            \"changed\": item[channel_id]\n        })\n    }\n    else if (item[channel_id] === 0)\n    {\n        let with_production_time = item.time\n        with_production_time.setSeconds(\n            with_production_time.getSeconds() + post_processing_sec)\n\n        rtn_changed_list.push({\n            \"time\": with_production_time,\n            \"changed\": item[channel_id]\n        })\n    }\n}\n\nif (rtn_changed_list.length !== 0 &&\n    rtn_changed_list.slice(-1)[0].time > trigger_time)\n{\n    let latest = rtn_changed_list.pop()\n\n    rtn_changed_list.push({\n        \"time\": new Date(trigger_time - 1),\n        \"changed\": latest['changed']\n    })\n}\n\nmsg.payload = rtn_changed_list\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d17cc17c.bb7eb",
+        "type": "function",
+        "z": "813a5168.8097",
+        "name": "variable validation",
+        "func": "const ENV = [\n    \"device_id\",\n    \"channel_id\",\n    \"pretreatment_sec\",\n    \"post_processing_sec\"\n]\n\nconst ARGS = [\n    \"utilization_begin_time\",\n    \"utilization_end_time\",\n    \"trigger_time\"\n]\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\nfor (let item in ARGS)\n{\n    const v = msg.args[ARGS[item]]\n    if (v === undefined)\n    {\n        node.error(ARGS[item] + \" not set in msg.args\")\n        return\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "858d50ec.fd988"
+            ]
+        ]
+    },
+    {
+        "id": "6266f646.b14438",
+        "type": "qi-state-duration",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "stateName": "shihlin_power_on",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "d38e7f91.e9277"
+            ]
+        ]
+    },
+    {
+        "id": "fa47cea.80b6e3",
+        "type": "qi-interval-boundary",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "97841fab.0704b"
+            ]
+        ]
+    },
+    {
+        "id": "e797a868.0800b8",
+        "type": "qi-query-history",
+        "z": "586599db.9b9bf8",
+        "name": "query_shihlin_power_on",
+        "query": "",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "6266f646.b14438"
+            ]
+        ]
+    },
+    {
+        "id": "ce1f4dc9.ef4c9",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "build query string",
+        "func": "const begin_time = msg.begin_time\nconst end_time = msg.end_time\n\nmsg.query = `\n    SELECT \"shihlin_power_on\"\n    FROM \"work_time\"\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "e797a868.0800b8"
+            ]
+        ]
+    },
+    {
+        "id": "8cd4374b.2cb7e8",
+        "type": "inject",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "84910850.d8ade8"
+            ]
+        ]
+    },
+    {
+        "id": "97841fab.0704b",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save begin/end time",
+        "func": "const begin = msg.payload.begin\nconst end = msg.payload.end\n\nmsg.begin_time = begin\nmsg.end_time = end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "ce1f4dc9.ef4c9"
+            ]
+        ]
+    },
+    {
+        "id": "d38e7f91.e9277",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "detect board",
+        "func": "// const second = Math.floor(new Date() / 1000)\n// const microsecond = (new Date().getTime() % 1000) * 1000\nvar power_on_time = 0\nvar power_off_time = 0\n\nif (msg.payload[0].duration !== null)\n{\n    power_on_time = msg.payload[0].duration\n}\nelse if (msg.payload[1].duration !== null)\n{\n    power_off_time = msg.payload[1].duration\n}\n\nmsg.payload = {\n    \"channels\": {\n        \"power_on_time\": power_on_time,\n        \"power_off_time\": power_off_time\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "bdd9e93d.b51f08"
+            ]
+        ]
+    },
+    {
+        "id": "9cd501c5.994c1",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "wait_time",
+        "func": "const at = Math.floor(new Date() / 1000)\nvar oddData = context.get('count_change');\nvar count_detect = msg.count\n\nif(msg.shihlin_power_on){\n    context.set('shihlin_power_on', msg.shihlin_power_on.channels['power_on']);\n}\n\nif(msg.shihlin_work_time){\n    context.set('shihlin_on_time_set', msg.shihlin_work_time.channels['power_on_time']);\n    context.set('shihlin_off_time_set', msg.shihlin_work_time.channels['power_off_time']);\n}\n\nif(msg.shihlin_utilization){\n    context.set('shihlin_utilization_set',msg.shihlin_utilization.channels['total_utilization_hours']);\n}\n\n\nif(msg.delta_power_on){\n    context.set('delta_power_on', msg.delta_power_on.channels['power_on']);\n}\n\nif(msg.delta_work_time){\n    context.set('delta_on_time_set', msg.delta_work_time.channels['power_on_time']);\n    context.set('delta_off_time_set', msg.delta_work_time.channels['power_off_time']);\n}\n\nif(msg.delta_utilization){\n    context.set('delta_utilization_set',msg.delta_utilization.channels['total_utilization_hours']);\n}\n\nif(oddData && count_detect === 1){\n    oddData = oddData + count_detect;\n    context.set('count_change', oddData);\n} \nelse if(count_detect === 1) {\n    oddData = 0;\n    context.set('count_change', oddData);\n}\n\nmsg.payload = {\n    \"deviceId\": \"work_time\",\n    \"at\": {\n        \"sec\" : at,\n        \"us\" : 0\n    },\n    \"channels\": {\n        \"shihlin_power_on\": context.get('shihlin_power_on') || null,\n        \"shihlin_power_on_time\": parseFloat((context.get('shihlin_on_time_set') / 3600000).toFixed(2)) || 0,\n        \"shihlin_power_off_time\" : parseFloat((context.get('shihlin_off_time_set') / 3600000).toFixed(2)) || 0,\n        \"shihlin_utilization\": context.get('shihlin_utilization_set') || 0,\n        \"delta_power_on\": context.get('delta_power_on') || null,\n        \"delta_power_on_time\": parseFloat((context.get('delta_on_time_set') / 3600000).toFixed(2)) || 0,\n        \"delta_power_off_time\" : parseFloat((context.get('delta_off_time_set') / 3600000).toFixed(2)) || 0,\n        \"delta_utilization\": context.get('delta_utilization_set') || 0,        \n        \"count\": context.get('count_change') || 0\n    },\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "6702ca98.c568b4"
+            ]
+        ]
+    },
+    {
+        "id": "bdd9e93d.b51f08",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "get_shihlin_work_payload",
+        "func": "msg.shihlin_work_time = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "84910850.d8ade8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "e893ba30.0203c8"
+            ]
+        ]
+    },
+    {
+        "id": "e893ba30.0203c8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "fa47cea.80b6e3"
+            ]
+        ]
+    },
+    {
+        "id": "a48cb7ca.3ff1b8",
+        "type": "function",
+        "z": "1ac3581f.6b4808",
+        "name": "clear us",
+        "func": "const us = msg.payload.at.us\n\nmsg.payload.at.us = Math.floor(us / 1000) * 1000\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdc57a63.b0cd28",
+        "type": "qi-chameleon-source",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "deviceId": "shihlin",
+        "x": 430,
+        "y": 40,
+        "wires": [
+            [
+                "72e8d87c.408658"
+            ]
+        ]
+    },
+    {
+        "id": "72e8d87c.408658",
+        "type": "subflow:1ac3581f.6b4808",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "env": [],
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "c48c3cf7.7ef68"
+            ]
+        ]
+    },
+    {
+        "id": "c48c3cf7.7ef68",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "parameters",
+        "func": "msg.params = {\n    DEVICE_ID: 'shihlin_event_detect'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "54bbff42.aeecd"
+            ]
+        ]
+    },
+    {
+        "id": "31366d0f.746e92",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "on",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.shihlin_power_on = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 1\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "54bbff42.aeecd",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "flow.params",
+        "func": "if (typeof msg.params.DEVICE_ID === 'undefined') {\n    node.error('illegal msg.params')\n    return\n}\n\nflow.set(\n    [\n        'DEVICE_ID'\n    ],\n    [\n        msg.params.DEVICE_ID\n    ]\n)\n\ndelete msg.params\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "31366d0f.746e92",
+                "40dc7e4b.62e12"
+            ]
+        ]
+    },
+    {
+        "id": "40dc7e4b.62e12",
+        "type": "trigger",
+        "z": "586599db.9b9bf8",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "20",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "5094448a.970afc"
+            ]
+        ]
+    },
+    {
+        "id": "5094448a.970afc",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "off",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.shihlin_power_on = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 0\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "1a196fc.fa2a99",
+        "type": "debug",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f8613339.71446",
+        "type": "trigger",
+        "z": "c9db5d2b.acf31",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "20",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "a6c51403.b6a8f8"
+            ]
+        ]
+    },
+    {
+        "id": "5f0ac395.11f21c",
+        "type": "function",
+        "z": "c9db5d2b.acf31",
+        "name": "on",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.power_on_tag = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on_tag\": 1\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "458452c4.b3fffc"
+            ]
+        ]
+    },
+    {
+        "id": "a6c51403.b6a8f8",
+        "type": "function",
+        "z": "c9db5d2b.acf31",
+        "name": "off",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.power_on_tag = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on_tag\": 0\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "458452c4.b3fffc"
+            ]
+        ]
+    },
+    {
+        "id": "82bd96f7.61bdb8",
+        "type": "function",
+        "z": "c9db5d2b.acf31",
+        "name": "flow.params",
+        "func": "if (typeof msg.params.DEVICE_ID === 'undefined') {\n    node.error('illegal msg.params')\n    return\n}\n\nflow.set(\n    [\n        'DEVICE_ID'\n    ],\n    [\n        msg.params.DEVICE_ID\n    ]\n)\n\ndelete msg.params\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "f8613339.71446",
+                "5f0ac395.11f21c"
+            ]
+        ]
+    },
+    {
+        "id": "458452c4.b3fffc",
+        "type": "qi-forward-on-change",
+        "z": "c9db5d2b.acf31",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 850,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e54bc928.3af5c8",
+        "type": "trigger",
+        "z": "c96c44b4.b7d9b8",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "20",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "ff3cc9bd.581938"
+            ]
+        ]
+    },
+    {
+        "id": "c4dcbb68.e50788",
+        "type": "function",
+        "z": "c96c44b4.b7d9b8",
+        "name": "on",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 1\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "f7ad23ea.48582"
+            ]
+        ]
+    },
+    {
+        "id": "ff3cc9bd.581938",
+        "type": "function",
+        "z": "c96c44b4.b7d9b8",
+        "name": "off",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 0\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "f7ad23ea.48582"
+            ]
+        ]
+    },
+    {
+        "id": "fdb1e98c.a55b38",
+        "type": "function",
+        "z": "c96c44b4.b7d9b8",
+        "name": "flow.params",
+        "func": "if (typeof msg.params.DEVICE_ID === 'undefined') {\n    node.error('illegal msg.params')\n    return\n}\n\nflow.set(\n    [\n        'DEVICE_ID'\n    ],\n    [\n        msg.params.DEVICE_ID\n    ]\n)\n\ndelete msg.params\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "e54bc928.3af5c8",
+                "c4dcbb68.e50788"
+            ]
+        ]
+    },
+    {
+        "id": "f7ad23ea.48582",
+        "type": "qi-forward-on-change",
+        "z": "c96c44b4.b7d9b8",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 850,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86f77ab2.362088",
+        "type": "qi-chameleon-sink",
+        "z": "e4986974.ff1428",
+        "name": "",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e4629a96.3db958",
+        "type": "function",
+        "z": "e4986974.ff1428",
+        "name": "parameters",
+        "func": "msg.params = {\n    DEVICE_ID: 'shihlin_event'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "31c8538a.66829c"
+            ]
+        ]
+    },
+    {
+        "id": "116696e8.d528c9",
+        "type": "subflow:1ac3581f.6b4808",
+        "z": "e4986974.ff1428",
+        "name": "",
+        "env": [],
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "e4629a96.3db958"
+            ]
+        ]
+    },
+    {
+        "id": "31c8538a.66829c",
+        "type": "subflow:c96c44b4.b7d9b8",
+        "z": "e4986974.ff1428",
+        "name": "",
+        "env": [],
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "86f77ab2.362088"
+            ]
+        ]
+    },
+    {
+        "id": "5bc57845.dc09c8",
+        "type": "qi-chameleon-source",
+        "z": "e4986974.ff1428",
+        "name": "",
+        "deviceId": "shihlin",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "116696e8.d528c9"
+            ]
+        ]
+    },
+    {
+        "id": "6702ca98.c568b4",
+        "type": "qi-chameleon-sink",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "x": 1460,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "45133f79.6dcd2",
+        "type": "qi-chameleon-source",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "deviceId": "shihlin",
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "58b0548e.21b87c"
+            ]
+        ]
+    },
+    {
+        "id": "58b0548e.21b87c",
+        "type": "qi-forward-on-match",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"X15\"],\"properties\":{\"X15\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": false,
+        "x": 120,
+        "y": 1000,
+        "wires": [
+            [
+                "6262c151.e95e1"
+            ]
+        ]
+    },
+    {
+        "id": "6262c151.e95e1",
+        "type": "qi-forward-on-change",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 130,
+        "y": 1060,
+        "wires": [
+            [
+                "b83a28e4.89e4d8"
+            ]
+        ]
+    },
+    {
+        "id": "7d45e5a5.0ff22c",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "shihlin_count",
+        "func": "var oddData = context.get('count_change');\n\nchange = msg.payload.channels['X15']\n\nif(oddData && change === 1){\n    oddData = oddData + change;\n    context.set('count_change', oddData);\n} \nelse if(change === 1) {\n    oddData = change;\n    context.set('count_change', oddData);\n}\n\nmsg.payload = {\n    \"channels\": {\n        \"count\": context.get('count_change') || 0\n    },\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 970,
+        "y": 40,
+        "wires": [
+            [
+                "1a196fc.fa2a99"
+            ]
+        ]
+    },
+    {
+        "id": "82e0250.a9360d8",
+        "type": "inject",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 790,
+        "y": 40,
+        "wires": [
+            [
+                "7d45e5a5.0ff22c"
+            ]
+        ]
+    },
+    {
+        "id": "b83a28e4.89e4d8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "count",
+        "func": "msg.count = msg.payload.channels['X15']\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 1060,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "fc1bca35.7fdfd8",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "omit count reset",
+        "func": "const is_init = msg.args.is_init\nconst count = msg.args.count\n\nif (is_init === false &&\n    count === 0)\n{\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "a998da9c.50d9b8",
+                "f5b227d3.cc1988"
+            ]
+        ]
+    },
+    {
+        "id": "f5b227d3.cc1988",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "punch begin",
+        "func": "const pre_state_name = msg.args.pre_state_name\nconst is_init = msg.args.is_init\nconst pre_state = flow.get(pre_state_name)\n\nif (is_init === true)\n{\n    flow.set(pre_state_name, 0)\n    return\n}\n\nif (pre_state === 1)\n{\n    return\n}\n\nflow.set(pre_state_name, 1)\n\nmsg.args = {\n    \"state\": 1\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "aba7b058.4a068"
+            ]
+        ]
+    },
+    {
+        "id": "11d7b631.eae6ba",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "punch end",
+        "func": "flow.set(msg.args.pre_state_name, 0)\n\nmsg.args = {\n    \"state\": 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "aba7b058.4a068"
+            ]
+        ]
+    },
+    {
+        "id": "a998da9c.50d9b8",
+        "type": "trigger",
+        "z": "c6b02a30.87eff8",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "12",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "11d7b631.eae6ba"
+            ]
+        ]
+    },
+    {
+        "id": "aba7b058.4a068",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "merge to output",
+        "func": "const device_id = msg.payload.deviceId\nconst at = msg.payload.at\nconst state = msg.args.state\n\nconst pre_processing_sec = env.get(\"pre_processing_sec\")\nconst post_processing_sec = env.get(\"post_processing_sec\")\n\nlet at_sec = null\nif (state === 1)\n{\n    at_sec = at.sec - pre_processing_sec\n}\nelse if (state === 0)\n{\n    at_sec = at.sec + post_processing_sec\n}\n\nmsg.payload = {\n    \"at\": {\n        \"sec\": at_sec,\n        \"us\": at.us\n    },\n    \"deviceId\": device_id,\n    \"state\": state\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89919a64.0c8008",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"channel_id\",\n    \"pre_processing_sec\",\n    \"post_processing_sec\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "475e54cb.89812c"
+            ]
+        ]
+    },
+    {
+        "id": "475e54cb.89812c",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "set args",
+        "func": "msg.args = {\n  \"pre_state_name\": \"pre_state\",\n  \"count\": msg.payload.channels[env.get(\"channel_id\")]\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "e71b382.6dc2fc8"
+            ]
+        ]
+    },
+    {
+        "id": "e71b382.6dc2fc8",
+        "type": "function",
+        "z": "c6b02a30.87eff8",
+        "name": "check init",
+        "func": "let is_init = context.get(\"nc_is_init\")\n\nif (is_init === undefined)\n{\n    is_init = true\n}\n\ncontext.set(\"nc_is_init\", false)\n\nmsg.args.is_init = is_init\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "fc1bca35.7fdfd8"
+            ]
+        ]
+    },
+    {
+        "id": "a80437c2.afe3f8",
+        "type": "qi-chameleon-source",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "",
+        "deviceId": "delta",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "b9cd7c77.59758"
+            ]
+        ]
+    },
+    {
+        "id": "2a40ab19.40b7e4",
+        "type": "qi-chameleon-sink",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b9cd7c77.59758",
+        "type": "qi-forward-on-match",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"46217\"],\"properties\":{\"46217\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "8970d37.2c9053"
+            ]
+        ]
+    },
+    {
+        "id": "8970d37.2c9053",
+        "type": "qi-forward-on-change",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 690,
+        "y": 60,
+        "wires": [
+            [
+                "c2d9910f.4a256"
+            ]
+        ]
+    },
+    {
+        "id": "4dc8c1f9.d8076",
+        "type": "function",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "build virtual device",
+        "func": "const at = msg.payload.at\nconst state = msg.payload.state\n\nmsg.payload = {\n    \"deviceId\": \"delta_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"changed\": state\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "2a40ab19.40b7e4"
+            ]
+        ]
+    },
+    {
+        "id": "c2d9910f.4a256",
+        "type": "subflow:c6b02a30.87eff8",
+        "z": "6ef42a4.7f9e2d4",
+        "name": "",
+        "env": [
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "46217"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "9"
+            }
+        ],
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "4dc8c1f9.d8076"
+            ]
+        ]
+    },
+    {
+        "id": "efb95c5a.049ea",
+        "type": "qi-chameleon-source",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "deviceId": "delta",
+        "x": 190,
+        "y": 1160,
+        "wires": [
+            [
+                "ad05ad31.5b3be"
+            ]
+        ]
+    },
+    {
+        "id": "ad05ad31.5b3be",
+        "type": "subflow:1ac3581f.6b4808",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "env": [],
+        "x": 200,
+        "y": 1220,
+        "wires": [
+            [
+                "4244ae02.aeb78"
+            ]
+        ]
+    },
+    {
+        "id": "4244ae02.aeb78",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "parameters",
+        "func": "msg.params = {\n    DEVICE_ID: 'delta_event_detect'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "a0f971b8.ad838"
+            ]
+        ]
+    },
+    {
+        "id": "3e9adfa4.78bb6",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "on",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.delta_power_on = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 1\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 1280,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "a0f971b8.ad838",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "flow.params",
+        "func": "if (typeof msg.params.DEVICE_ID === 'undefined') {\n    node.error('illegal msg.params')\n    return\n}\n\nflow.set(\n    [\n        'DEVICE_ID'\n    ],\n    [\n        msg.params.DEVICE_ID\n    ]\n)\n\ndelete msg.params\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 1300,
+        "wires": [
+            [
+                "3e9adfa4.78bb6",
+                "eef41ae1.4103a8"
+            ]
+        ]
+    },
+    {
+        "id": "eef41ae1.4103a8",
+        "type": "trigger",
+        "z": "586599db.9b9bf8",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "20",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 190,
+        "y": 1340,
+        "wires": [
+            [
+                "91bd53bf.ce826"
+            ]
+        ]
+    },
+    {
+        "id": "91bd53bf.ce826",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "off",
+        "func": "const DEVICE_ID = flow.get('DEVICE_ID')\n\nconst at = msg.payload.at\n\nmsg.delta_power_on = {\n    \"deviceId\": DEVICE_ID,\n    \"at\": at,\n    \"channels\": {\n        \"power_on\": 0\n    }\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 1340,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "d4d1f702.49f058",
+        "type": "qi-chameleon-sink",
+        "z": "9bac51ae.ff382",
+        "name": "",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cbe06509.6fe7e8",
+        "type": "function",
+        "z": "9bac51ae.ff382",
+        "name": "parameters",
+        "func": "msg.params = {\n    DEVICE_ID: 'delta_event'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "ba54869f.11f5f8"
+            ]
+        ]
+    },
+    {
+        "id": "3ed2bc44.877104",
+        "type": "subflow:1ac3581f.6b4808",
+        "z": "9bac51ae.ff382",
+        "name": "",
+        "env": [],
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "cbe06509.6fe7e8"
+            ]
+        ]
+    },
+    {
+        "id": "ba54869f.11f5f8",
+        "type": "subflow:c96c44b4.b7d9b8",
+        "z": "9bac51ae.ff382",
+        "name": "",
+        "env": [],
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "d4d1f702.49f058"
+            ]
+        ]
+    },
+    {
+        "id": "f15580eb.b69b3",
+        "type": "qi-chameleon-source",
+        "z": "9bac51ae.ff382",
+        "name": "",
+        "deviceId": "delta",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "3ed2bc44.877104"
+            ]
+        ]
+    },
+    {
+        "id": "7fef305d.1c3c3",
+        "type": "qi-state-duration",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "stateName": "power_on",
+        "x": 180,
+        "y": 1700,
+        "wires": [
+            [
+                "dc398bbc.9f7248"
+            ]
+        ]
+    },
+    {
+        "id": "da25be6e.d2dff",
+        "type": "qi-interval-boundary",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 190,
+        "y": 1540,
+        "wires": [
+            [
+                "15261344.f3e47d"
+            ]
+        ]
+    },
+    {
+        "id": "bf134435.f41e58",
+        "type": "qi-query-history",
+        "z": "586599db.9b9bf8",
+        "name": "query_delta_power_on",
+        "query": "",
+        "x": 200,
+        "y": 1660,
+        "wires": [
+            [
+                "7fef305d.1c3c3"
+            ]
+        ]
+    },
+    {
+        "id": "a000818a.cc924",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "build query string",
+        "func": "const begin_time = msg.begin_time\nconst end_time = msg.end_time\n\nmsg.query = `\n    SELECT \"delta_power_on\"\n    FROM \"work_time\"\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 1620,
+        "wires": [
+            [
+                "bf134435.f41e58"
+            ]
+        ]
+    },
+    {
+        "id": "17224c11.4be9c4",
+        "type": "inject",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 1420,
+        "wires": [
+            [
+                "1f28f9c.ec6c906"
+            ]
+        ]
+    },
+    {
+        "id": "15261344.f3e47d",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save begin/end time",
+        "func": "const begin = msg.payload.begin\nconst end = msg.payload.end\n\nmsg.begin_time = begin\nmsg.end_time = end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 1580,
+        "wires": [
+            [
+                "a000818a.cc924"
+            ]
+        ]
+    },
+    {
+        "id": "dc398bbc.9f7248",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "detect board",
+        "func": "var power_on_time = 0\nvar power_off_time = 0\n\nif (msg.payload[0].duration !== null)\n{\n    power_on_time = msg.payload[0].duration\n}\nelse if (msg.payload[1].duration !== null)\n{\n    power_off_time = msg.payload[1].duration\n}\n\nmsg.payload = {\n    \"channels\": {\n        \"power_on_time\": power_on_time,\n        \"power_off_time\": power_off_time\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 1740,
+        "wires": [
+            [
+                "103c4db3.372792"
+            ]
+        ]
+    },
+    {
+        "id": "103c4db3.372792",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "get_delta_work_payload",
+        "func": "msg.delta_work_time = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 1780,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "1f28f9c.ec6c906",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 1460,
+        "wires": [
+            [
+                "69d376f0.d1a4f8"
+            ]
+        ]
+    },
+    {
+        "id": "69d376f0.d1a4f8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 1500,
+        "wires": [
+            [
+                "da25be6e.d2dff"
+            ]
+        ]
+    },
+    {
+        "id": "e63cc1ac.5f17c",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "get_delta_utilization_payload",
+        "func": "msg.delta_utilization = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 1780,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "5339a323.11861c",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1460,
+        "wires": [
+            [
+                "55a5bfc1.eb69f"
+            ]
+        ]
+    },
+    {
+        "id": "55a5bfc1.eb69f",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1500,
+        "wires": [
+            [
+                "31aade6f.3bd8c2"
+            ]
+        ]
+    },
+    {
+        "id": "31aade6f.3bd8c2",
+        "type": "qi-interval-boundary",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 530,
+        "y": 1540,
+        "wires": [
+            [
+                "caed675d.f97c88"
+            ]
+        ]
+    },
+    {
+        "id": "caed675d.f97c88",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save untiliztion being/end time",
+        "func": "msg.args.utilization_begin_time = msg.payload.begin\nmsg.args.utilization_end_time = msg.payload.end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 1580,
+        "wires": [
+            [
+                "62ec2d7d.953734"
+            ]
+        ]
+    },
+    {
+        "id": "167d35db.5f65ba",
+        "type": "inject",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 510,
+        "y": 1420,
+        "wires": [
+            [
+                "5339a323.11861c"
+            ]
+        ]
+    },
+    {
+        "id": "62ec2d7d.953734",
+        "type": "subflow:813a5168.8097",
+        "z": "586599db.9b9bf8",
+        "name": "delta_state_change",
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "delta_detect_board"
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "changed"
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "10"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "10"
+            }
+        ],
+        "x": 530,
+        "y": 1620,
+        "wires": [
+            [
+                "6bddba3f.2d53d4"
+            ]
+        ]
+    },
+    {
+        "id": "6bddba3f.2d53d4",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "append since/until",
+        "func": "const changed_list = msg.payload\nconst utilization_begin_time = msg.args.utilization_begin_time\nconst trigger_time = msg.args.trigger_time\n\nif (changed_list.length === 0)\n{\n    return\n}\n\nmsg.since = utilization_begin_time\nmsg.until = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 1660,
+        "wires": [
+            [
+                "fe7f5dee.9f1cf"
+            ]
+        ]
+    },
+    {
+        "id": "fe7f5dee.9f1cf",
+        "type": "qi-state-duration",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "stateName": "changed",
+        "x": 520,
+        "y": 1700,
+        "wires": [
+            [
+                "7eef5fd7.1cf67"
+            ]
+        ]
+    },
+    {
+        "id": "7eef5fd7.1cf67",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "build reading",
+        "func": "const trigger_timestamp = msg.args.trigger_time.getTime()\nconst state_duration_list = msg.payload\n\nlet today_utilization_seconds = 0\nstate_duration_list.forEach(function (item){\n    if (item.state === 1)\n    {\n        today_utilization_seconds = Math.floor(item.duration / 1000);\n    }\n})\n\nmsg.payload = {\n    \"deviceId\": \"delta_utilization\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_timestamp / 1000),\n        \"us\": trigger_timestamp % 1000\n    },\n    \"channels\": {\n        \"total_utilization_hours\": parseFloat((today_utilization_seconds / 3600).toFixed(2))\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 1740,
+        "wires": [
+            [
+                "e63cc1ac.5f17c"
+            ]
+        ]
+    },
+    {
+        "id": "65edfbb9.068684",
+        "type": "debug",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 530,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4c207e89.d66a8",
+        "type": "qi-chameleon-source",
+        "z": "7c29b090.75d6e",
+        "name": "",
+        "deviceId": "work_time",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "87e9dd47.d61c9"
+            ]
+        ]
+    },
+    {
+        "id": "6866b2c9.88b6dc",
+        "type": "qi-chameleon-sink",
+        "z": "7c29b090.75d6e",
+        "name": "",
+        "x": 620,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "87e9dd47.d61c9",
+        "type": "qi-forward-on-match",
+        "z": "7c29b090.75d6e",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"count\"],\"properties\":{\"count\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "cdd53444.e68318"
+            ]
+        ]
+    },
+    {
+        "id": "cdd53444.e68318",
+        "type": "qi-forward-on-change",
+        "z": "7c29b090.75d6e",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 670,
+        "y": 80,
+        "wires": [
+            [
+                "330506.0dc8fafa"
+            ]
+        ]
+    },
+    {
+        "id": "4f608e0b.6923b",
+        "type": "function",
+        "z": "7c29b090.75d6e",
+        "name": "build virtual device",
+        "func": "const at = msg.payload.at\nconst state = msg.payload.state\n\nmsg.payload = {\n    \"deviceId\": \"shihlin_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"changed\": state\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "6866b2c9.88b6dc"
+            ]
+        ]
+    },
+    {
+        "id": "330506.0dc8fafa",
+        "type": "subflow:c6b02a30.87eff8",
+        "z": "7c29b090.75d6e",
+        "name": "",
+        "env": [
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "count"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "9"
+            }
+        ],
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "4f608e0b.6923b"
+            ]
+        ]
+    },
+    {
+        "id": "adad39ed.588cf8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "get_shihlin_utilization_payload",
+        "func": "msg.shihlin_utilization = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "9cd501c5.994c1"
+            ]
+        ]
+    },
+    {
+        "id": "37b81d38.c77022",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "8cb1542d.bbca88"
+            ]
+        ]
+    },
+    {
+        "id": "8cb1542d.bbca88",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "ec8d38af.1bcae8"
+            ]
+        ]
+    },
+    {
+        "id": "ec8d38af.1bcae8",
+        "type": "qi-interval-boundary",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "a1b4c383.6f898"
+            ]
+        ]
+    },
+    {
+        "id": "a1b4c383.6f898",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "save untiliztion being/end time",
+        "func": "msg.args.utilization_begin_time = msg.payload.begin\nmsg.args.utilization_end_time = msg.payload.end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 620,
+        "wires": [
+            [
+                "c3af8ea6.9afb9"
+            ]
+        ]
+    },
+    {
+        "id": "313450f8.e9e67",
+        "type": "inject",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "37b81d38.c77022"
+            ]
+        ]
+    },
+    {
+        "id": "c3af8ea6.9afb9",
+        "type": "subflow:813a5168.8097",
+        "z": "586599db.9b9bf8",
+        "name": "shihlin_state_change",
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "shihlin_detect_board"
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "changed"
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "10"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "10"
+            }
+        ],
+        "x": 180,
+        "y": 660,
+        "wires": [
+            [
+                "9e0206d9.9541e8"
+            ]
+        ]
+    },
+    {
+        "id": "9e0206d9.9541e8",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "append since/until",
+        "func": "const changed_list = msg.payload\nconst utilization_begin_time = msg.args.utilization_begin_time\nconst trigger_time = msg.args.trigger_time\n\nif (changed_list.length === 0)\n{\n    return\n}\n\nmsg.since = utilization_begin_time\nmsg.until = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "857931b2.23b54"
+            ]
+        ]
+    },
+    {
+        "id": "857931b2.23b54",
+        "type": "qi-state-duration",
+        "z": "586599db.9b9bf8",
+        "name": "",
+        "stateName": "changed",
+        "x": 160,
+        "y": 740,
+        "wires": [
+            [
+                "938a9712.4fd128"
+            ]
+        ]
+    },
+    {
+        "id": "938a9712.4fd128",
+        "type": "function",
+        "z": "586599db.9b9bf8",
+        "name": "build reading",
+        "func": "const trigger_timestamp = msg.args.trigger_time.getTime()\nconst state_duration_list = msg.payload\n\nlet today_utilization_seconds = 0\nstate_duration_list.forEach(function (item){\n    if (item.state === 1)\n    {\n        today_utilization_seconds = Math.floor(item.duration / 1000);\n    }\n})\n\nmsg.payload = {\n    \"deviceId\": \"shihlin_utilization\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_timestamp / 1000),\n        \"us\": trigger_timestamp % 1000\n    },\n    \"channels\": {\n        \"total_utilization_hours\": parseFloat((today_utilization_seconds / 3600).toFixed(2))\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "adad39ed.588cf8"
+            ]
+        ]
+    }
+]

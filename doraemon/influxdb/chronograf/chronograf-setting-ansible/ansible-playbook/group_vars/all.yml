@@ -1,0 +1,11 @@
+---
+ansible_user: ubuntu
+ansible_connection: ssh
+ansible_port: 22
+ansible_python_interpreter: /usr/bin/python3
+ansible_ssh_extra_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+ansible_ssh_private_key_file: "{{inventory_dir}}/ssh-key/chameleon"
+
+eth0_mac_output:
+  stdout: will be overriden
+eth0_mac: '{{ eth0_mac_output.stdout }}'

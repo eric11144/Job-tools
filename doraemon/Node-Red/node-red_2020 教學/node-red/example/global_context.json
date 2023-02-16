@@ -1,0 +1,100 @@
+[
+    {
+        "id": "cb5dd85f.3f3b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d3c70e91.e3735",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "583b75e8.386fec",
+        "type": "inject",
+        "z": "cb5dd85f.3f3b",
+        "name": "",
+        "topic": "",
+        "payload": "from flow 1",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "39f562a8.4e1c6e"
+            ]
+        ]
+    },
+    {
+        "id": "39f562a8.4e1c6e",
+        "type": "function",
+        "z": "cb5dd85f.3f3b",
+        "name": "set global context",
+        "func": "const message = msg.payload\n\nglobal.set(\"flow1_info\", message)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da467da3.be2838",
+        "type": "inject",
+        "z": "d3c70e91.e3735",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "74892f1b.d42ac"
+            ]
+        ]
+    },
+    {
+        "id": "74892f1b.d42ac",
+        "type": "function",
+        "z": "d3c70e91.e3735",
+        "name": "get global context",
+        "func": "const message = global.get(\"flow1_info\")\n\nif (message !== undefined)\n{\n    msg.payload = message    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "b4a4c608.7cf938"
+            ]
+        ]
+    },
+    {
+        "id": "b4a4c608.7cf938",
+        "type": "debug",
+        "z": "d3c70e91.e3735",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    }
+]

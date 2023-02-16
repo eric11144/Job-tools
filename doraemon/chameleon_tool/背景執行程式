@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/8220098/how-to-redirect-the-output-of-an-application-in-background-to-dev-null
+
+yourcommand > /dev/null 2>&1 &

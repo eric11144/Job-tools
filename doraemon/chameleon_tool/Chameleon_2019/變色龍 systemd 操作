@@ -1,0 +1,13 @@
+```sudo systemctl [status/enable/disable/start/stop] chameleon.service```
+```sudo systemctl status chameleon.service```
+
+看log
+```journalctl -a -e -u chameleon.service```
+
+journal to file(加時間區間)
+```journalctl -a --since "2018-10-22 1:2:3" -u chameleon.service > ~/chameleon.log
+journalctl -a --since "2018-10-22" -u chameleon.service > ~/chameleon.log
+journalctl -a --since "2018-10-22" --until "2018-10-25" -u chameleon.service > ~/chameleon.log```
+
+直接看log
+```journalctl -f -u chameleon.service```

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "42618652.22a1c",
+        "type": "qi-chameleon-source",
+        "z": "dd04539a.d3b68",
+        "name": "",
+        "deviceId": "FX5U",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "d419ca22.96aea8"
+            ]
+        ]
+    },
+    {
+        "id": "d419ca22.96aea8",
+        "type": "debug",
+        "z": "dd04539a.d3b68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    }
+]

@@ -1,0 +1,17 @@
+Server read data API
+curl -i "http://192.168.11.188/api/v1/devices/MITSUBISHI1_Condition/channels/Condition/data?pageSize=1000&since=2018-10-02T05%3A10%3A45.000000Z&until=2019-01-04T03%3A33%3A38.728256Z&sort=ASC"
+
+
+這是指定讀取某個時間區間資料的 API
+
+devices 後面接的就是要讀取的設備 id
+channels 後面接的就是要讀取哪一個 channel id
+pageSize default 是 100 筆資料, 最大可以到 1000
+since 讀取資料的起始時間
+until 讀取資料的結束時間
+
+sort default 是 DESC (由較晚的日期開始往前推 ex:1/4 -> 1/3 -> 1/2 ....)
+                ASC  (由較早的日期開始往後推 ex 12/31 -> 1/1 -> 1/2 ....)
+
+下完 API 後, 假設要讀取的時間區間資料超過 1000 筆的話, 會產生一個新的 link, 自動帶入下一千筆資料的時間, 只要複製 http 到 sort=ASC, 就能夠再往下讀 1000 筆資料
+ex Link: http://192.168.11.188/api/v1/devices/MITSUBISHI1_Condition/channels/Condition/data?pageSize=1000&since=2018-10-02T05%3A10%3A45.000000Z&until=2019-01-04T03%3A44%3A42.672628Z&sort=ASC; rel="next"

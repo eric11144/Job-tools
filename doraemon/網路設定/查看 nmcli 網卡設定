@@ -1,0 +1,1 @@
+nmcli connection show eth0 | egrep -i ipv?4

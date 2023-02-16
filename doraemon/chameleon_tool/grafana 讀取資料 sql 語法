@@ -1,0 +1,1 @@
+SELECT "current_A" FROM "reading"."rrp"."modbus" WHERE $timeFilter

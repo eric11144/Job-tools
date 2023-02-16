@@ -1,0 +1,116 @@
+<style>
+  
+  .a1 {
+    width: 500px;
+    height: 500px;
+    position:relative;
+  }
+  .img1 {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    opacity:0.6;
+  }
+  .a2 {
+    z-index: 1;
+  }
+  .aaa{
+    background-color:green;
+    z-index: 2;
+  }
+</style>
+<h2>Instance: {{ response[0].value.num }}</h2>
+
+<div ng-repeat="(key, value) in response">
+
+        <h5>{{key}}</h5>
+
+        <pre>{{ value | json }}</pre>
+        
+</div>
+
+<div class="a1">
+  <img class="img1" src="https://www.w3schools.com/cssref/paper.gif" alt="Italian Trulli" width="500" height="500">
+  <div class="a2">
+    <div ng-show="response[0].value.num <= 10" ng-model="response" style="border:3px double; width:150px;height:50px; position:relative;">
+
+  <p class="aaa">
+    {{ response[0].value.num }} <= 10
+  </p>
+  
+</div>
+<div ng-show="response[0].value.num > 10" ng-model="response" style="background-color:red;border:3px double; width:150px;height:50px background-image: url("http://www.w3schools.com/html/pic_trulli.jpg");">
+  {{ response[0].value.num }} > 10
+</div>
+  </div>
+  
+</div>
+*******************************************************************************************************************************************************
+<style>
+  
+  .a1 {
+    width: 500px;
+    height: 500px;
+    position:relative;
+  }
+  .img1 {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    opacity:0.6;
+  }
+  .a2 {
+    z-index: 1;
+  }
+  .aaa{
+    background-color:green;
+    border:3px double; 
+    width:150px;
+    height:50px; 
+    position:relative;
+  }
+  .bbb {
+    background-color:red;
+    border:3px double; 
+    width:150px;
+    height:50px; 
+    position:relative;
+  }
+</style>
+<h2>Instance: {{ response[0].value.num }}</h2>
+
+<div class="a1">
+  <img class="img1" src="https://www.w3schools.com/cssref/paper.gif" alt="Italian Trulli" width="150" height="150">
+  <div class="a2">
+    <div ng-show="response[0].value.num <= 10" ng-model="response" class="aaa">
+      <p >
+        {{ response[0].value.num }} <= 10
+      </p>
+    </div>
+    <div ng-show="response[0].value.num > 10" ng-model="response" class="bbb">
+      {{ response[0].value.num }} > 10
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

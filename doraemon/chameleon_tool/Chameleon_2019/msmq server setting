@@ -1,0 +1,33 @@
+{
+    "queue": {
+        "size-per-device": 4096
+    },
+    "qurrent": {
+        "get-properties-timeout-ms": 3000,
+        "subscriber-buffer-size": 10,
+        "pk-pairs": [
+            {
+                "qurrent-property": "machineNo",
+                "http-key": "machineNo"
+            },
+            {
+                "qurrent-property": "machineName",
+                "http-key": "machineName"
+            }
+        ]
+    },
+    "http": {
+        "post-frequency-ms": 10,
+        "max-consumption-per-queue": 50
+    },
+    "pipelines": [
+        {
+            "from-stream-id": "data",
+            "to-uri": "http://127.0.0.1:12345/mq-diverter/0.1/api/tx8100/Data"
+        },
+        {
+            "from-stream-id": "alarm_onchange",
+            "to-uri": "http://127.0.0.1:12345/mq-diverter/0.1/api/tx8100/Event"
+        }
+    ]
+}

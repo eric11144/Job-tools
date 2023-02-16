@@ -1,0 +1,14 @@
+1. 於 docker compose file 內修改 nginx environment 
+    environment:
+      EXPOSE_INFLUXDB: yes, please
+2. 至 grafana -> configuration -> data source
+    (1) 修改 name
+    (2) URL 
+        * http  -> http://xxx.xxx.xxx.xxx/_influxdb
+        * https -> https://xxx.xxx.xxx.xxx/_influxdb
+        如選擇 https, 需將 Skip TLS Verify 打勾
+3. InfluxDB Details
+    Database -> reading
+    User -> grafana
+    Password -> grafana
+4. Save & Test 即可完成.

@@ -1,0 +1,6 @@
+home 底下
+mkdir .config/pip/
+cat .config/pip/pip.conf 
+[global]
+extra-index-url = http://pypi.qi
+trusted-host = pypi.qi

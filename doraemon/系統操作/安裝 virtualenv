@@ -1,0 +1,9 @@
+sudo pip3 install virtualenv
+
+virtualenv venv --python=python3.6 --no-site-packages
+
+進入虛擬環境:
+source venv/bin/activate
+
+退出虛擬環境:
+deactivate

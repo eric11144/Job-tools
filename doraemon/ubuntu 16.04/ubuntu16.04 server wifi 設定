@@ -1,0 +1,13 @@
+sudo apt install wpasupplicant
+sudo apt install wireless-tools
+
+auto wlp3s0b1
+iface wlp3s0b1 inet dhcp
+        wpa-ssid <YOUR WIFI NETWORK NAME>
+        wpa-psk <YOUR WIFI NETWORK PASSWORD>
+
+sudo service networking restart
+
+參考網站:
+https://ubuntuforums.org/showthread.php?t=2325768&page=2
+https://askubuntu.com/questions/889495/ubuntu-server-16-04-no-wireless-internet-connection

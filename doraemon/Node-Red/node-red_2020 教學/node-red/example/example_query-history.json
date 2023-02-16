@@ -1,0 +1,113 @@
+[
+    {
+        "id": "1df963ff.d931ec",
+        "type": "qi-interval-boundary",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "1798a542.6dab9b",
+                "7aa762e4.87170c"
+            ]
+        ]
+    },
+    {
+        "id": "e05dc656.ab64a8",
+        "type": "qi-query-history",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "query": "",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "9fc5215a.da1d6"
+            ]
+        ]
+    },
+    {
+        "id": "b6ca94fa.e778f8",
+        "type": "function",
+        "z": "6ac440.848d8bc",
+        "name": "build query string",
+        "func": "const begin_time = msg.begin_time\nconst end_time = msg.end_time\n\nmsg.query = `\n    SELECT D612\n    FROM FX5U\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n    LIMIT 5\n`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "e05dc656.ab64a8"
+            ]
+        ]
+    },
+    {
+        "id": "9fc5215a.da1d6",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6df14db0.3b70fc",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "1df963ff.d931ec"
+            ]
+        ]
+    },
+    {
+        "id": "1798a542.6dab9b",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7aa762e4.87170c",
+        "type": "function",
+        "z": "6ac440.848d8bc",
+        "name": "save begin/end time",
+        "func": "const begin = msg.payload.begin\nconst end = msg.payload.end\n\nmsg.begin_time = begin\nmsg.end_time = end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "b6ca94fa.e778f8"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,5 @@
+cd /lib/systemd/system
+sudo vim xxx.service( 將 demo.service 內容貼入 )
+sudo systemctl daemon-reload
+sudo reboot
+sudo systemctl status demo.service

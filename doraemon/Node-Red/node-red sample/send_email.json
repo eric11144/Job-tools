@@ -1,0 +1,74 @@
+[
+    {
+        "id": "4c2563ad.902e8c",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ed7195d0.5f3438",
+        "type": "inject",
+        "z": "4c2563ad.902e8c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "f93761e8.20921"
+            ]
+        ]
+    },
+    {
+        "id": "b05c5422.618938",
+        "type": "debug",
+        "z": "4c2563ad.902e8c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bd67d7c0.d70938",
+        "type": "e-mail",
+        "z": "4c2563ad.902e8c",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "eric1114473@gmail.com",
+        "dname": "",
+        "x": 790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f93761e8.20921",
+        "type": "function",
+        "z": "4c2563ad.902e8c",
+        "name": "send to someone",
+        "func": "msg.to = 'eric1114473@gmail.com';\nmsg.topic = '(NodeRed) 這是信件主旨';\nmsg.payload = '這是信件內容'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "bd67d7c0.d70938",
+                "b05c5422.618938"
+            ]
+        ]
+    }
+]

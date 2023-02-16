@@ -1,0 +1,5 @@
+http://storage.qi.ssi.iii.org.tw/
+http://storage.qi.ssi.iii.org.tw/artifactory/webapp/#/artifacts/browse/tree/General/release/platform-prerequisite
+
+
+wget --user peter --password applepie  http://artifactory.qi/artifactory/release/docker_the-gateway/docker_the-gateway.20190626-083314.tgz

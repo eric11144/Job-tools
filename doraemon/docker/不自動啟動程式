@@ -1,0 +1,8 @@
+在 `docker-compose` 內, 將不需要自動啟動程式的 `image` 內, 加入以下指令
+
+```
+command:
+   - sh
+   - -c
+   - 'while true; do sleep 60; done' 
+```

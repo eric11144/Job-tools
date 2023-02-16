@@ -1,0 +1,514 @@
+[
+    {
+        "id": "26ab43c1.ffef4c",
+        "type": "tab",
+        "label": "Q00 detect board",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "94492eeb.1adda",
+        "type": "tab",
+        "label": "heat processing utilization",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fac29564.de7748",
+        "type": "tab",
+        "label": "heat process accumulated time",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "debc549.f7a4ba8",
+        "type": "subflow",
+        "name": "query state changed",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "5a1459a0.f06308"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 420,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "a80a2340.865b8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "0"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "0"
+            }
+        ]
+    },
+    {
+        "id": "ab4f80b9.72925",
+        "type": "qi-chameleon-source",
+        "z": "26ab43c1.ffef4c",
+        "name": "",
+        "deviceId": "Q00",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "98e6157b.821b38"
+            ]
+        ]
+    },
+    {
+        "id": "98e6157b.821b38",
+        "type": "qi-forward-on-match",
+        "z": "26ab43c1.ffef4c",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"PRO-COM-RUN\"],\"properties\":{\"PRO-COM-RUN\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "40f172e7.710c2c"
+            ]
+        ]
+    },
+    {
+        "id": "40f172e7.710c2c",
+        "type": "qi-forward-on-change",
+        "z": "26ab43c1.ffef4c",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "c898ba21.56ca88"
+            ]
+        ]
+    },
+    {
+        "id": "c898ba21.56ca88",
+        "type": "function",
+        "z": "26ab43c1.ffef4c",
+        "name": "detect board",
+        "func": "const at = msg.payload.at\nconst is_running = msg.payload.channels[\"PRO-COM-RUN\"]\n\nmsg.payload = {\n    \"deviceId\": \"Q00_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"changed\": is_running\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "dba764a7.c22958"
+            ]
+        ]
+    },
+    {
+        "id": "dba764a7.c22958",
+        "type": "qi-chameleon-sink",
+        "z": "26ab43c1.ffef4c",
+        "name": "",
+        "x": 370,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "de76699a.b506f8",
+        "type": "function",
+        "z": "94492eeb.1adda",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "460aec88.71bbd4"
+            ]
+        ]
+    },
+    {
+        "id": "460aec88.71bbd4",
+        "type": "function",
+        "z": "94492eeb.1adda",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "796d85c2.a92c5c"
+            ]
+        ]
+    },
+    {
+        "id": "796d85c2.a92c5c",
+        "type": "qi-interval-boundary",
+        "z": "94492eeb.1adda",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "d37713d8.4d535"
+            ]
+        ]
+    },
+    {
+        "id": "d37713d8.4d535",
+        "type": "function",
+        "z": "94492eeb.1adda",
+        "name": "save untiliztion being/end time",
+        "func": "msg.args.utilization_begin_time = msg.payload.begin\nmsg.args.utilization_end_time = msg.payload.end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 890,
+        "y": 80,
+        "wires": [
+            [
+                "183b7fd5.32bcd"
+            ]
+        ]
+    },
+    {
+        "id": "91ddc077.fc28e",
+        "type": "inject",
+        "z": "94492eeb.1adda",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "20",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "de76699a.b506f8"
+            ]
+        ]
+    },
+    {
+        "id": "ccaadb1c.33a8a8",
+        "type": "qi-chameleon-sink",
+        "z": "94492eeb.1adda",
+        "name": "",
+        "x": 920,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "31a23cda.787034",
+        "type": "qi-chameleon-source",
+        "z": "fac29564.de7748",
+        "name": "",
+        "deviceId": "Q00",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "5b826d4d.ba6594"
+            ]
+        ]
+    },
+    {
+        "id": "5b826d4d.ba6594",
+        "type": "function",
+        "z": "fac29564.de7748",
+        "name": "accumulated",
+        "func": "RTN_DEVICE_ID = \"Q00_channels_working_time\";\n\n/*\n{\n    in_channel_id: [\n        out_channel_id,\n        flow_context_name\n    ]\n}\n*/\nELAPSED_TIME_CHANNELS = {\n    \"HEATER-POWER-ON\": [\n        \"heating_elapsed_time_sec\",\n        \"heater_off_timestamp\"\n    ],\n    \"MECHANICAL-BOOSTER-PUMP-OPERATION\": [\n        \"mechanical_booster_pump_elapsed_time_sec\",\n        \"mechanical_booster_off_timestame\"\n    ],\n    \"OIL-SEALED-ROTARY-PUMP-OPERATION\": [\n        \"oil_sealed_rotary_pump_elapsed_time_sec\",\n        \"oil_sealed_rotary_off_timestamp\"\n    ]\n}\n\n///////////////////////////////////////////////////////////////////////////////\n\n/*\nArgs:\n    ts (int): timestamp\n    value (int): channel's value\n    flow_context_name (str)\n\nReturns:\n    int: elapsed time\n*/\nfunction elapsed_time(\n    ts,\n    value,\n    flow_context_name)\n{\n    let rv = 0;\n    if (value === 0)\n    {\n        flow.set(flow_context_name, ts);\n    }\n    else if (value === 1)\n    {\n        let latest_off_timestamp = flow.get(flow_context_name);\n\n        if (latest_off_timestamp === undefined)\n        {\n            latest_off_timestamp = ts;\n            flow.set(flow_context_name, ts);\n        }\n\n        rv = ts - latest_off_timestamp;\n    }\n\n    return rv;\n}\n\nconst at = msg.payload.at;\nconst timestamp = (at.sec * 1000000) + at.us;\n\nvar rtn_channels = {};\nfor (const key in ELAPSED_TIME_CHANNELS)\n{\n    let value = msg.payload.channels[key];\n    if (value === undefined)\n    {\n        continue;  // error?\n    }\n\n    working_us = elapsed_time(\n        timestamp,\n        value,\n        ELAPSED_TIME_CHANNELS[key][1]);\n\n    rtn_channels[ELAPSED_TIME_CHANNELS[key][0]] = working_us / 1000000;\n}\n\nmsg.payload = {\n    \"deviceId\": RTN_DEVICE_ID,\n    \"at\": at,\n    \"channels\": rtn_channels\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "faeab503.4c6ec8",
+                "fcaf540c.1f2378"
+            ]
+        ]
+    },
+    {
+        "id": "fcaf540c.1f2378",
+        "type": "function",
+        "z": "fac29564.de7748",
+        "name": "max elapsed time",
+        "func": "// flow context\nFC_PREVIOUS_MSG_PAYLOAD = \"previous_msg_payload\";\n\n///////////////////////////////////////////////////////////////////////////////\n\n/*\nflow: {\n    \"at\": {\n        \"sec\": 321\n        \"us\": 123\n    },\n    \"channels\": {\n        \"channel_id\": num_value,\n    }\n}\n*/\nfunction save_elapsed_time(payload)\n{\n    _p = {\n        \"at\": payload.at,\n        \"channels\": payload.channels\n    };\n\n    flow.set(FC_PREVIOUS_MSG_PAYLOAD, _p);\n}\n\nprevious_msg_payload = flow.get(FC_PREVIOUS_MSG_PAYLOAD);\nsave_elapsed_time(msg.payload);\n\nif (previous_msg_payload === undefined)\n{\n    return;\n}\n\nrtn_channels = {};\nfor (const channel_id in msg.payload.channels)\n{\n    let value = msg.payload.channels[channel_id];\n    let pre_value = previous_msg_payload.channels[channel_id];\n\n    if (pre_value > value)\n    {\n        rtn_channels[\"max_\" + channel_id] = pre_value;\n    }\n}\n\nif (Object.keys(rtn_channels).length > 0)\n{\n    msg.payload = {\n        \"deviceId\": msg.payload.deviceId,\n        \"at\": previous_msg_payload.at,\n        \"channels\": rtn_channels\n    };\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "faeab503.4c6ec8"
+            ]
+        ]
+    },
+    {
+        "id": "faeab503.4c6ec8",
+        "type": "qi-chameleon-sink",
+        "z": "fac29564.de7748",
+        "name": "",
+        "x": 640,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4d83ac40.60f744",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "query changed",
+        "func": "const begin_time = msg.args.utilization_begin_time\nconst end_time = msg.args.utilization_end_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "743f41a2.34bc2"
+            ]
+        ]
+    },
+    {
+        "id": "743f41a2.34bc2",
+        "type": "qi-query-history",
+        "z": "debc549.f7a4ba8",
+        "name": "",
+        "query": "",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "46108f00.12eeb"
+            ]
+        ]
+    },
+    {
+        "id": "46108f00.12eeb",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "save changed_list",
+        "func": "msg.args.changed_list = msg.payload\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "e84993b4.e4424"
+            ]
+        ]
+    },
+    {
+        "id": "e84993b4.e4424",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "query previous state",
+        "func": "const begin_time = msg.args.utilization_begin_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time < '${begin_time.toISOString()}'\n    ORDER BY time DESC\n    LIMIT 1\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "38de952d.d6e04a"
+            ]
+        ]
+    },
+    {
+        "id": "38de952d.d6e04a",
+        "type": "qi-query-history",
+        "z": "debc549.f7a4ba8",
+        "name": "",
+        "query": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "2a2611f6.38d83e"
+            ]
+        ]
+    },
+    {
+        "id": "2a2611f6.38d83e",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "append previous state",
+        "func": "const pre_state_list = msg.payload\nchanged_list = msg.args.changed_list\n\nif (pre_state_list.length !== 0)\n{\n    changed_list.unshift(pre_state_list[0])\n}\n\nmsg.payload = changed_list\nmsg.changed_list = undefined\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "223b0462.64d88c"
+            ]
+        ]
+    },
+    {
+        "id": "223b0462.64d88c",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "remove duplicated state",
+        "func": "const changed_list = msg.payload\nconst channel_id = env.get(\"channel_id\")\n\nlet rtn_changed = []\nlet now_state = undefined\n\nchanged_list.forEach(function(item){\n    if (item[channel_id] !== now_state)\n    {\n        rtn_changed.push(item)\n        now_state = item[channel_id]\n    }\n})\n\nmsg.payload = rtn_changed\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "a80a2340.865b8"
+            ]
+        ]
+    },
+    {
+        "id": "a80a2340.865b8",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "add lead/production time",
+        "func": "const channel_id = env.get(\"channel_id\")\nconst pretreatment_sec = env.get(\"pretreatment_sec\")\nconst post_processing_sec = env.get(\"post_processing_sec\")\n\nconst trigger_time = msg.args.trigger_time\nconst changed_list = msg.payload\n\nlet rtn_changed_list = []\nfor (let ax = 0; ax < changed_list.length; ++ax)\n{\n    let item = changed_list[ax]\n    if (item[channel_id] === 1)\n    {\n        let with_lead_time = new Date(item.time - pretreatment_sec * 1000)\n        let pre_stop_item = rtn_changed_list[ax - 1]\n\n        if (pre_stop_item !== undefined &&\n            pre_stop_item.time >= with_lead_time)\n        {\n            rtn_changed_list.pop()\n            continue;\n        }\n\n        rtn_changed_list.push({\n            \"time\": with_lead_time,\n            \"changed\": item[channel_id]\n        })\n    }\n    else if (item[channel_id] === 0)\n    {\n        let with_production_time = item.time\n        with_production_time.setSeconds(\n            with_production_time.getSeconds() + post_processing_sec)\n\n        rtn_changed_list.push({\n            \"time\": with_production_time,\n            \"changed\": item[channel_id]\n        })\n    }\n}\n\nif (rtn_changed_list.length !== 0 &&\n    rtn_changed_list.slice(-1)[0].time > trigger_time)\n{\n    let latest = rtn_changed_list.pop()\n\n    rtn_changed_list.push({\n        \"time\": new Date(trigger_time - 1),\n        \"changed\": latest['changed']\n    })\n}\n\nmsg.payload = rtn_changed_list\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a1459a0.f06308",
+        "type": "function",
+        "z": "debc549.f7a4ba8",
+        "name": "variable validation",
+        "func": "const ENV = [\n    \"device_id\",\n    \"channel_id\",\n    \"pretreatment_sec\",\n    \"post_processing_sec\"\n]\n\nconst ARGS = [\n    \"utilization_begin_time\",\n    \"utilization_end_time\",\n    \"trigger_time\"\n]\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\nfor (let item in ARGS)\n{\n    const v = msg.args[ARGS[item]]\n    if (v === undefined)\n    {\n        node.error(ARGS[item] + \" not set in msg.args\")\n        return\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "4d83ac40.60f744"
+            ]
+        ]
+    },
+    {
+        "id": "183b7fd5.32bcd",
+        "type": "subflow:debc549.f7a4ba8",
+        "z": "94492eeb.1adda",
+        "name": "",
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "Q00_detect_board"
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "changed"
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "900"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "900"
+            }
+        ],
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "736c7663.137588"
+            ]
+        ]
+    },
+    {
+        "id": "736c7663.137588",
+        "type": "function",
+        "z": "94492eeb.1adda",
+        "name": "append since/until",
+        "func": "const changed_list = msg.payload\nconst utilization_begin_time = msg.args.utilization_begin_time\nconst trigger_time = msg.args.trigger_time\n\nif (changed_list.length === 0)\n{\n    return\n}\n\nmsg.since = utilization_begin_time\nmsg.until = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "a9cbbf85.8f3b4"
+            ]
+        ]
+    },
+    {
+        "id": "a9cbbf85.8f3b4",
+        "type": "qi-state-duration",
+        "z": "94492eeb.1adda",
+        "name": "",
+        "stateName": "changed",
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "efce866a.e27758"
+            ]
+        ]
+    },
+    {
+        "id": "efce866a.e27758",
+        "type": "function",
+        "z": "94492eeb.1adda",
+        "name": "build reading",
+        "func": "const trigger_timestamp = msg.args.trigger_time.getTime()\nconst state_duration_list = msg.payload\n\nlet today_utilization_seconds = 0\nstate_duration_list.forEach(function (item){\n    if (item.state === 1)\n    {\n        today_utilization_seconds = Math.floor(item.duration / 1000);\n    }\n})\n\nmsg.payload = {\n    \"deviceId\": \"Q00_utilization\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_timestamp / 1000),\n        \"us\": trigger_timestamp % 1000\n    },\n    \"channels\": {\n        \"total_utilization_hours\": parseFloat((today_utilization_seconds / 3600).toFixed(2))\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 750,
+        "y": 120,
+        "wires": [
+            [
+                "ccaadb1c.33a8a8"
+            ]
+        ]
+    }
+]

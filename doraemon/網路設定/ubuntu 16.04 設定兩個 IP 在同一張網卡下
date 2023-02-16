@@ -1,0 +1,19 @@
+https://askubuntu.com/questions/313877/how-do-i-add-an-additional-ip-address-to-etc-network-interfaces
+
+sudo vim /etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+  address aaa.aaa.aaa.aaa
+  netmask 255.255.254.0
+  gateway bbb.bbb.bbb.bbb
+  dns-nameservers ccc.ccc.ccc.ccc ddd.ddd.ddd.ddd eee.eee.eee.eee
+  dns-search vps-number.com
+
+auto eth0:0
+iface eth0:0 inet static
+  address fff.fff.fff.fff
+  netmask 255.255.254.0

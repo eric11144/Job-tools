@@ -1,0 +1,1826 @@
+[
+    {
+        "id": "ff5ba145.cf065",
+        "type": "tab",
+        "label": "Pareto",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "bf66763f.b1bc88",
+        "type": "tab",
+        "label": "Alarm",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6c43dcd8.3afee4",
+        "type": "tab",
+        "label": "dashboard_table",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4cac8788.9f56e8",
+        "type": "tab",
+        "label": "bar_chart",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2b9d7588.8455fa",
+        "type": "tab",
+        "label": "gauge",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c4314dd8.df2f8",
+        "type": "tab",
+        "label": "stats",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "591f6dc8.52f254",
+        "type": "http in",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "url": "/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "6fb4b32d.3858cc"
+            ]
+        ]
+    },
+    {
+        "id": "6067e78c.e68888",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "get device id",
+        "func": "msg.payload = msg.payload[0]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "ad70e128.637ea"
+            ]
+        ]
+    },
+    {
+        "id": "ad70e128.637ea",
+        "type": "http response",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 150,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3d795e49.4b08e2",
+        "type": "http in",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "url": "/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "5403f870.19c5f8",
+                "21dfa8c9.e610c8"
+            ]
+        ]
+    },
+    {
+        "id": "10a136be.880719",
+        "type": "http response",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 190,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5403f870.19c5f8",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 430,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6fb4b32d.3858cc",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "method": "GET",
+        "path": "/api/v1/devices",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "6067e78c.e68888",
+                "be6de1ef.f9ea3"
+            ]
+        ]
+    },
+    {
+        "id": "2694934d.bbb6cc",
+        "type": "inject",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 570,
+        "y": 160,
+        "wires": [
+            [
+                "b064b5b3.5c14d8",
+                "8a88c611.21f478",
+                "b74a6a1c.960488",
+                "7ab3b095.6d8ac",
+                "7fa09e80.2ca5b",
+                "c24d777f.879978"
+            ]
+        ]
+    },
+    {
+        "id": "b064b5b3.5c14d8",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "melsec",
+        "method": "GET",
+        "path": "/api/v1/config/melsec/equipments",
+        "x": 720,
+        "y": 80,
+        "wires": [
+            [
+                "5418eb04.bc3c34"
+            ]
+        ]
+    },
+    {
+        "id": "5418eb04.bc3c34",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "melsec",
+        "func": "var equipmentlist = []\nconst equipment = \"melsec\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].equipmentList.length;j++) {\n        equipmentlist.push(msg.payload[i].equipmentList[j].equipmentId)\n    }\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 80,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "f5f53141.ab105",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "equipment",
+        "func": "let coco = false\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    if(msg.payload[i] === \"coco\") {\n        coco = true\n    }\n}\n// /api/v1/config/melsec/templates\nif(coco) {\n   return {\n    config: {\n        method: \"GET\",\n        path: \"/api/v1/config/\" + msg.equipment + \"/templates\"\n    }\n}\n}\nelse {\n    return\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1050,
+        "y": 160,
+        "wires": [
+            [
+                "caa53909.515a78"
+            ]
+        ]
+    },
+    {
+        "id": "caa53909.515a78",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "method": "GET",
+        "path": "",
+        "x": 1210,
+        "y": 160,
+        "wires": [
+            [
+                "6d631a24.ac62b4",
+                "e3062ffd.fddc"
+            ]
+        ]
+    },
+    {
+        "id": "6d631a24.ac62b4",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "func": "var paretolist = []\nvar channelList = []\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].channels.length;j++) {\n        for(k = 0;k < msg.payload[i].channels[j].category.length;k++) {\n            if(msg.payload[i].channels[j].category[k] === 'pareto') {\n                paretolist.push(msg.payload[i].channels[j])\n                channelList.push(msg.payload[i].channels[j].channelId)\n            }\n        }\n    }\n}\n\nfor(let i = 0;i < paretolist.length;i++) {\n    delete paretolist[i].conversion\n    delete paretolist[i].raw\n    paretolist[i].valueType = 'integer'\n}\n\nreturn {\n    payload: {\n        channels: paretolist,\n        templateId: 'coco_event'\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1190,
+        "y": 200,
+        "wires": [
+            [
+                "159accae.b2d243",
+                "ca3738a8.10e4d8"
+            ]
+        ]
+    },
+    {
+        "id": "ca3738a8.10e4d8",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "PUT",
+        "method": "PUT",
+        "path": "/api/v1/config/virtual/templates/coco_event",
+        "x": 1190,
+        "y": 260,
+        "wires": [
+            [
+                "66a540d4.fb768"
+            ]
+        ]
+    },
+    {
+        "id": "8a88c611.21f478",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "fins",
+        "method": "GET",
+        "path": "/api/v1/config/fins/equipments",
+        "x": 710,
+        "y": 120,
+        "wires": [
+            [
+                "ba4f71f2.5bf94"
+            ]
+        ]
+    },
+    {
+        "id": "ba4f71f2.5bf94",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "fins",
+        "func": "var equipmentlist = []\nconst equipment = \"fins\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].equipment.length;j++) {\n        equipmentlist.push(msg.payload[i].equipment[j].equipmentId)\n    }\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 120,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "7ab3b095.6d8ac",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "mewtocol",
+        "method": "GET",
+        "path": "/api/v1/config/mewtocol/equipments",
+        "x": 720,
+        "y": 160,
+        "wires": [
+            [
+                "3ac52df5.3854b2"
+            ]
+        ]
+    },
+    {
+        "id": "3ac52df5.3854b2",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "mewtocol",
+        "func": "var equipmentlist = []\nconst equipment = \"mewtocol\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].equipment.length;j++) {\n        equipmentlist.push(msg.payload[i].equipment[j].equipmentId)\n    }\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 160,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "7fa09e80.2ca5b",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "modbus",
+        "method": "GET",
+        "path": "/api/v1/config/modbus/equipments",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "249248f.57222b8"
+            ]
+        ]
+    },
+    {
+        "id": "249248f.57222b8",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "modbus",
+        "func": "var equipmentlist = []\nconst equipment = \"modbus\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].equipments.length;j++) {\n        equipmentlist.push(msg.payload[i].equipments[j].equipmentId)\n    }\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 200,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "c24d777f.879978",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "step7",
+        "method": "GET",
+        "path": "/api/v1/config/step7/equipments",
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "4c5eab19.68d304"
+            ]
+        ]
+    },
+    {
+        "id": "4c5eab19.68d304",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "step7",
+        "func": "var equipmentlist = []\nconst equipment = \"step7\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].equipment.length;j++) {\n        equipmentlist.push(msg.payload[i].equipment[j].equipmentId)\n    }\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 240,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "b74a6a1c.960488",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "virtual",
+        "method": "GET",
+        "path": "/api/v1/config/virtual/equipments",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "1bb984b4.68310b"
+            ]
+        ]
+    },
+    {
+        "id": "1bb984b4.68310b",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "virtual",
+        "func": "var equipmentlist = []\nconst equipment = \"virtual\"\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    equipmentlist.push(msg.payload[i].equipmentId)\n}\n\nreturn {\n    payload: equipmentlist,\n    equipment: equipment\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "f5f53141.ab105"
+            ]
+        ]
+    },
+    {
+        "id": "be6de1ef.f9ea3",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "21dfa8c9.e610c8",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "func": "msg.query = {\n    equipmentId: msg.payload.targets[0].target,\n    since: msg.payload.range.from,\n    until: msg.payload.range.to\n}\n\nmsg.payload = {}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "fcb4ed12.c5b66"
+            ]
+        ]
+    },
+    {
+        "id": "66a540d4.fb768",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c7f0b43d.2af668",
+        "type": "query-history",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "842d6cee.03f03",
+                "ed2524ae.8e02d8"
+            ]
+        ]
+    },
+    {
+        "id": "842d6cee.03f03",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fcb4ed12.c5b66",
+        "type": "api",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "method": "GET",
+        "path": "/api/v1/config/melsec/templates",
+        "x": 220,
+        "y": 460,
+        "wires": [
+            [
+                "9bb30562.681248",
+                "603cc260.9a775c"
+            ]
+        ]
+    },
+    {
+        "id": "e3062ffd.fddc",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9bb30562.681248",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "603cc260.9a775c",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "func": "var paretoList = []\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    for(let j = 0;j < msg.payload[i].channels.length;j++) {\n        for(let k = 0;k < msg.payload[i].channels[j].category.length;k++) {\n            if(msg.payload[i].channels[j].category[k] === 'pareto') {\n                paretoList.push(msg.payload[i].channels[j].channelId)\n            }\n        }\n    }\n}\n\nmsg.config = {\n    equipmentId: msg.query.equipmentId,\n    since: msg.query.since,\n    until: msg.query.until\n}\n\nmsg.pareto = paretoList\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "c7f0b43d.2af668"
+            ]
+        ]
+    },
+    {
+        "id": "159accae.b2d243",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ed2524ae.8e02d8",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "func": "var array = msg.payload\nvar result = []\nlet booking = {}\n\nfor(let i = 0;i < array.length;i++) {\n    for(let channel in array[i].reading) {\n        if(booking[channel] === undefined) {\n            booking[channel] = {\n                latest: 0,\n                acc: 0\n            }\n        }\n        else {\n            if(booking[channel].latest < array[i].reading[channel]) {\n                booking[channel].acc++\n                booking[channel].latest = array[i].reading[channel]  \n            }    \n            else {\n                booking[channel].latest = array[i].reading[channel]  \n            }   \n        }\n    }\n}\nfor(let channel in booking) {\n    for(let i = 0;i < msg.pareto.length;i++) {\n        if(channel === msg.pareto[i]) {\n            result.push([channel,booking[channel].acc])\n        }\n    }\n    \n}\nmsg.payload = [result]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "9356c285.998cd",
+                "10a136be.880719"
+            ]
+        ]
+    },
+    {
+        "id": "9356c285.998cd",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "70f40e5b.d4c0a",
+        "type": "reading-in",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "equipmentId": "coco",
+        "categorizedReadingRequired": true,
+        "channelNamesRequired": false,
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "6f8bff91.12dcb",
+                "188aae7b.1f64c2"
+            ]
+        ]
+    },
+    {
+        "id": "6f8bff91.12dcb",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "188aae7b.1f64c2",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "func": "if(msg.stop === true) {\n    return\n}\nelse{\n    msg.payload.reading = msg.categorizedReading.pareto\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 730,
+        "y": 500,
+        "wires": [
+            [
+                "ecee4af5.030b68",
+                "af97f492.c4f748"
+            ]
+        ]
+    },
+    {
+        "id": "ecee4af5.030b68",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "374999ed.cd26a6",
+        "type": "reading-out",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "equipmentId": "coco_event",
+        "x": 770,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "af97f492.c4f748",
+        "type": "forward-on-change",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "dropReadingUndefined": false,
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "374999ed.cd26a6",
+                "ca3de998.94d878"
+            ]
+        ]
+    },
+    {
+        "id": "ca3de998.94d878",
+        "type": "debug",
+        "z": "ff5ba145.cf065",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "abcc2a40.5a9068",
+        "type": "function",
+        "z": "ff5ba145.cf065",
+        "name": "set query data",
+        "func": "const now = new Date()\nvar target = msg.payload.targets[0][\"target\"]\nvar time = now.getTime()\n\n\nmsg.payload = [\n    [\n        [time,target,123],\n        [time,target,231],\n        [time,target,321]\n    ]\n]\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64b46ec3.4d95e",
+        "type": "http in",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "url": "/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "35676506.c25a8a"
+            ]
+        ]
+    },
+    {
+        "id": "d34a018e.8415e",
+        "type": "function",
+        "z": "bf66763f.b1bc88",
+        "name": "get device id",
+        "func": "var deviceList = []\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    deviceList.push(msg.payload[i].deviceId)\n}\n\nmsg.payload = deviceList\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "64d6dfa6.ecff6",
+                "a41f43c4.4a06"
+            ]
+        ]
+    },
+    {
+        "id": "64d6dfa6.ecff6",
+        "type": "http response",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 190,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "35676506.c25a8a",
+        "type": "api",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "method": "GET",
+        "path": "/api/v1/devices",
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "d34a018e.8415e",
+                "11d62881.bd9fb7"
+            ]
+        ]
+    },
+    {
+        "id": "11d62881.bd9fb7",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "bf4b21a9.a949c",
+        "type": "http in",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "url": "/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "d7aaf552.1acbd8",
+                "93eec309.25ecb"
+            ]
+        ]
+    },
+    {
+        "id": "c018d00b.35b23",
+        "type": "http response",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d7aaf552.1acbd8",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 950,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "93eec309.25ecb",
+        "type": "function",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "func": "msg.query = {\n    equipmentId: msg.payload.targets[0].target,\n    since: msg.payload.range.from,\n    until: msg.payload.range.to\n}\n\nmsg.config = {\n    method: 'GET',\n    path: '/api/v1/config/virtual/templates/' + msg.payload.targets[0].target\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "ed107180.318e2"
+            ]
+        ]
+    },
+    {
+        "id": "c6320d05.2600a",
+        "type": "query-history",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 740,
+        "y": 320,
+        "wires": [
+            [
+                "eb2d257d.f85628",
+                "41d64218.1bfc6c"
+            ]
+        ]
+    },
+    {
+        "id": "eb2d257d.f85628",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ed107180.318e2",
+        "type": "api",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "method": "GET",
+        "path": "/api/v1/config/virtual/templates",
+        "x": 760,
+        "y": 220,
+        "wires": [
+            [
+                "816ea10f.267f",
+                "cb162f4f.067d8"
+            ]
+        ]
+    },
+    {
+        "id": "816ea10f.267f",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "cb162f4f.067d8",
+        "type": "function",
+        "z": "bf66763f.b1bc88",
+        "name": "alarm",
+        "func": "var alarmList = []\n\nfor(let i = 0;i < msg.payload.channels.length;i++) {\n    for(let j = 0;j < msg.payload.channels[i].category.length;j++) {\n        if(msg.payload.channels[i].category[j] === 'alarm') {\n            alarmList.push(msg.payload.channels[i].channelId)\n        }\n    }\n}\n\nmsg.config = {\n    equipmentId: msg.query.equipmentId,\n    since: msg.query.since,\n    until: msg.query.until\n}\n\nmsg.alarm = alarmList\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 260,
+        "wires": [
+            [
+                "c6320d05.2600a",
+                "720545ce.895d9c"
+            ]
+        ]
+    },
+    {
+        "id": "41d64218.1bfc6c",
+        "type": "function",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "func": "var array = msg.payload\nvar result = []\nlet booking = {}\n\nfor(let i = 0;i < array.length;i++) {\n    for(let channel in array[i].reading) {\n        if(booking[channel] === undefined) {\n            booking[channel] = {\n                latest: 0,\n                acc: 0\n            }\n        }\n        else {\n            if(booking[channel].latest < array[i].reading[channel]) {\n                booking[channel].acc++\n                booking[channel].latest = array[i].reading[channel]  \n            }    \n            else {\n                booking[channel].latest = array[i].reading[channel]  \n            }   \n        }\n    }\n}\nfor(let channel in booking) {\n    for(let i = 0;i < msg.alarm.length;i++) {\n        if(channel === msg.alarm[i] && booking[channel].acc > 0) {\n            result.push([channel,booking[channel].acc])\n        }\n    }\n    \n}\nmsg.payload = [result]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "c1864a96.cb3f28",
+                "c018d00b.35b23"
+            ]
+        ]
+    },
+    {
+        "id": "c1864a96.cb3f28",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a41f43c4.4a06",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "720545ce.895d9c",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "33472e7d.7f05f2",
+        "type": "http in",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "url": "/dashboard/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "67687671.71ee28"
+            ]
+        ]
+    },
+    {
+        "id": "67687671.71ee28",
+        "type": "function",
+        "z": "6c43dcd8.3afee4",
+        "name": "get device id",
+        "func": "// device_list = []\n// list_lebgth = msg.payload.length\n\n// for ( i=0; i < list_lebgth; i++){\n//     device_list.push(msg.payload[i][\"deviceId\"])\n// }\n\nmsg.payload = [\n    \"upper_75\",\n    \"upper_90\"\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "9062b189.0b246",
+                "8c7b54f7.5755f8"
+            ]
+        ]
+    },
+    {
+        "id": "9062b189.0b246",
+        "type": "http response",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 210,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8c7b54f7.5755f8",
+        "type": "debug",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 450,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5b613e8f.964a7",
+        "type": "http in",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "url": "/dashboard/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "f0a63b1.11ba3c8",
+                "c0432ea5.c6f62"
+            ]
+        ]
+    },
+    {
+        "id": "f0a63b1.11ba3c8",
+        "type": "function",
+        "z": "6c43dcd8.3afee4",
+        "name": "set query data",
+        "func": "const now = new Date()\nvar target = msg.payload.targets[0][\"target\"]\nvar time = now.getTime()\n\nmsg.payload = [\n  {\n    \"columns\":[\n      {\"text\":\"機台編號\",\"type\":\"string\"},\n      {\"text\":\"工單數量\",\"type\":\"number\"},\n      {\"text\":\"生產數量\",\"type\":\"number\"},\n      {\"text\":\"不良品數\",\"type\":\"number\"},\n      {\"text\":\"運轉時數\",\"type\":\"number\"},\n      {\"text\":\"良率\",\"type\":\"number\"},\n      {\"text\":\"稼動率\",\"type\":\"number\"},\n      {\"text\":\"OEE\",\"type\":\"number\"},\n      {\"text\":\"上期稼動率\",\"type\":\"number\"},\n      {\"text\":\"上期良率\",\"type\":\"number\"}\n    ],\n    \"rows\":[\n      [\"FP1\",31000,31000,155,242.00,99.24,98,97,97.00,99.00],\n      [\"FP2\",31000,31000,165,244.00,99.19,98,97,98.00,99.10],\n      [\"FP3\",31000,28270,3940,241.00,87.49,98,86,98.50,90.49]\n    ],\n    \"type\":\"table\"\n  },\n//   {\n//     \"target\":\"upper_75\", // The field being queried for\n//     \"datapoints\":[\n//       [622,1450754160000,622,1],  // Metric value as a float , unixtimestamp in milliseconds\n//       [365,1450754220000,365,2]\n//     ]\n//   },\n//   {\n//     \"target\":\"upper_90\",\n//     \"datapoints\":[\n//       [861,1450754160000,861,3],\n//       [767,1450754220000,767,4]\n//     ]\n//   }\n  \n]\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "65ec3477.2be9dc",
+                "ee9cff8c.ff16e"
+            ]
+        ]
+    },
+    {
+        "id": "65ec3477.2be9dc",
+        "type": "http response",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c0432ea5.c6f62",
+        "type": "debug",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4f51a7b4.7e7d18",
+        "type": "query-history",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "equipmentId": "VCP3_fx3u_ht_Loader_event",
+        "since": "2021-04-19 00:00:00",
+        "until": "2021-04-21 23:59:59",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "77c9b35a.aff46c"
+            ]
+        ]
+    },
+    {
+        "id": "2115a037.533c9",
+        "type": "inject",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "4f51a7b4.7e7d18"
+            ]
+        ]
+    },
+    {
+        "id": "77c9b35a.aff46c",
+        "type": "debug",
+        "z": "bf66763f.b1bc88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ee9cff8c.ff16e",
+        "type": "debug",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8c04cb43.286c18",
+        "type": "http in",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "url": "/dashboard/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "adc9e658.5afe08"
+            ]
+        ]
+    },
+    {
+        "id": "adc9e658.5afe08",
+        "type": "http response",
+        "z": "6c43dcd8.3afee4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 210,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4e3aa997.9ce868",
+        "type": "http in",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "url": "/barchart/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "b557873.4d44d78"
+            ]
+        ]
+    },
+    {
+        "id": "b557873.4d44d78",
+        "type": "function",
+        "z": "4cac8788.9f56e8",
+        "name": "get device id",
+        "func": "// device_list = []\n// list_lebgth = msg.payload.length\n\n// for ( i=0; i < list_lebgth; i++){\n//     device_list.push(msg.payload[i][\"deviceId\"])\n// }\n\nmsg.payload = [\n    \"upper_75\",\n    \"upper_90\"\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "a55149f.6b7a7b8",
+                "df9effbd.5d88a"
+            ]
+        ]
+    },
+    {
+        "id": "a55149f.6b7a7b8",
+        "type": "http response",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 230,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "df9effbd.5d88a",
+        "type": "debug",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f5769641.84b8c8",
+        "type": "http in",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "url": "/barchart/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "81200758.0fd7b8",
+                "cbc950a5.426dc"
+            ]
+        ]
+    },
+    {
+        "id": "81200758.0fd7b8",
+        "type": "function",
+        "z": "4cac8788.9f56e8",
+        "name": "set query data",
+        "func": "const now = new Date()\nvar target = msg.payload.targets[0][\"target\"]\nvar time = now.getTime()\n\nmsg.payload = [\n//   {\n//     \"columns\":[\n//       {\"text\":\"機台編號\",\"type\":\"string\"},\n//       {\"text\":\"工單數量\",\"type\":\"number\"},\n//       {\"text\":\"生產數量\",\"type\":\"number\"},\n//       {\"text\":\"不良品數\",\"type\":\"number\"},\n//       {\"text\":\"運轉時數\",\"type\":\"number\"},\n//       {\"text\":\"良率\",\"type\":\"number\"},\n//       {\"text\":\"稼動率\",\"type\":\"number\"},\n//       {\"text\":\"OEE\",\"type\":\"number\"},\n//       {\"text\":\"上期稼動率\",\"type\":\"number\"},\n//       {\"text\":\"上期良率\",\"type\":\"number\"}\n//     ],\n//     \"rows\":[\n//       [\"FP1\",31000,31000,155,242.00,99.24,98,97,97.00,99.00],\n//       [\"FP2\",31000,31000,165,244.00,99.19,98,97,98.00,99.10],\n//       [\"FP3\",31000,28270,3940,241.00,87.49,98,86,98.50,90.49]\n//     ],\n//     \"type\":\"table\"\n//   },\n  {\n    \"target\":\"FP1\", // The field being queried for\n    \"datapoints\":[\n      [31000],  // Metric value as a float , unixtimestamp in milliseconds\n      [31000]\n    ]\n  },\n  {\n    \"target\":\"FP2\",\n    \"datapoints\":[\n      [31000],  // Metric value as a float , unixtimestamp in milliseconds\n      [31000]\n    ]\n  },\n  {\n    \"target\":\"SP1\",\n    \"datapoints\":[\n      [31000],  // Metric value as a float , unixtimestamp in milliseconds\n      [28270]\n    ]\n  }\n  \n]\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "186e00d9.58e97f",
+                "b2eb84c2.e68f28"
+            ]
+        ]
+    },
+    {
+        "id": "186e00d9.58e97f",
+        "type": "http response",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cbc950a5.426dc",
+        "type": "debug",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 990,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b2eb84c2.e68f28",
+        "type": "debug",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "79b30801.aa0ea8",
+        "type": "http in",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "url": "/barchart/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "53ac99d.bf07068"
+            ]
+        ]
+    },
+    {
+        "id": "53ac99d.bf07068",
+        "type": "http response",
+        "z": "4cac8788.9f56e8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 230,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c776577d.f29428",
+        "type": "http in",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "url": "/gauge/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "aff05a83.879598"
+            ]
+        ]
+    },
+    {
+        "id": "aff05a83.879598",
+        "type": "function",
+        "z": "2b9d7588.8455fa",
+        "name": "get device id",
+        "func": "// device_list = []\n// list_lebgth = msg.payload.length\n\n// for ( i=0; i < list_lebgth; i++){\n//     device_list.push(msg.payload[i][\"deviceId\"])\n// }\n\nmsg.payload = [\n    \"upper_75\",\n    \"upper_90\"\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "180ad0e2.01c80f",
+                "9b2b465a.080438"
+            ]
+        ]
+    },
+    {
+        "id": "180ad0e2.01c80f",
+        "type": "http response",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 250,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9b2b465a.080438",
+        "type": "debug",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 490,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e94a82d4.ed613",
+        "type": "http in",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "url": "/gauge/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 750,
+        "y": 140,
+        "wires": [
+            [
+                "6aa98e32.263dd",
+                "1897ced6.5429b1"
+            ]
+        ]
+    },
+    {
+        "id": "6aa98e32.263dd",
+        "type": "function",
+        "z": "2b9d7588.8455fa",
+        "name": "set query data",
+        "func": "const now = new Date()\nvar target = msg.payload.targets[0][\"target\"]\nvar time = now.getTime()\n\nmsg.payload = [\n  {\n    \"target\":\"FP1\", // The field being queried for\n    \"datapoints\":[  // Metric value as a float , unixtimestamp in milliseconds\n      [99.24]\n    ]\n  },\n  {\n    \"target\":\"FP2\",\n    \"datapoints\":[  // Metric value as a float , unixtimestamp in milliseconds\n      [98]\n    ]\n  },\n  {\n    \"target\":\"SP1\",\n    \"datapoints\":[// Metric value as a float , unixtimestamp in milliseconds\n      [97]\n    ]\n  }\n  \n]\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "18881937.be2057",
+                "28df2052.59105"
+            ]
+        ]
+    },
+    {
+        "id": "18881937.be2057",
+        "type": "http response",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1897ced6.5429b1",
+        "type": "debug",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "28df2052.59105",
+        "type": "debug",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8ba36f78.4b904",
+        "type": "http in",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "url": "/gauge/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 400,
+        "wires": [
+            [
+                "6c33339f.32270c"
+            ]
+        ]
+    },
+    {
+        "id": "6c33339f.32270c",
+        "type": "http response",
+        "z": "2b9d7588.8455fa",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 250,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e60bf6e8.e24ff8",
+        "type": "http in",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "url": "/stats/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "c90292cb.3a421"
+            ]
+        ]
+    },
+    {
+        "id": "c90292cb.3a421",
+        "type": "function",
+        "z": "c4314dd8.df2f8",
+        "name": "get device id",
+        "func": "// device_list = []\n// list_lebgth = msg.payload.length\n\n// for ( i=0; i < list_lebgth; i++){\n//     device_list.push(msg.payload[i][\"deviceId\"])\n// }\n\nmsg.payload = [\n    \"upper_75\",\n    \"upper_90\"\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "b8294b2e.884828",
+                "cce5457b.d062f8"
+            ]
+        ]
+    },
+    {
+        "id": "b8294b2e.884828",
+        "type": "http response",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 330,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cce5457b.d062f8",
+        "type": "debug",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "73ec800e.cd7b9",
+        "type": "http in",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "url": "/stats/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 820,
+        "y": 120,
+        "wires": [
+            [
+                "619ba1bd.c2db",
+                "de72a287.b3016"
+            ]
+        ]
+    },
+    {
+        "id": "619ba1bd.c2db",
+        "type": "function",
+        "z": "c4314dd8.df2f8",
+        "name": "set query data",
+        "func": "const now = new Date()\nvar target = msg.payload.targets[0][\"target\"]\nvar time = now.getTime()\n\nmsg.payload = [\n  {\n    \"columns\":[\n      {\"text\":\"機台編號: \",\"type\":\"string\"},\n      {\"text\":\"目標數量: \",\"type\":\"number\"},\n      {\"text\":\"生產數量: \",\"type\":\"number\"},\n      {\"text\":\"達成率: \",\"type\":\"number\"},\n      {\"text\":\"良率: \",\"type\":\"number\"}\n    ],\n    \"rows\":[\n      [\"FP1\",30761,31284,100.20,99.19],\n      [\"SP2\",30940,31587,100.25,98.20],\n      [\"TP2\",30850,31924,100.53,97.18]\n    ],\n    \"type\":\"table\"\n  },\n  \n]\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "fc21f7dc.b19c98",
+                "2cf0241e.19d08c"
+            ]
+        ]
+    },
+    {
+        "id": "fc21f7dc.b19c98",
+        "type": "http response",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "de72a287.b3016",
+        "type": "debug",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2cf0241e.19d08c",
+        "type": "debug",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "67ba152b.0a1bdc",
+        "type": "http in",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "url": "/stats/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "772efe79.52a6e"
+            ]
+        ]
+    },
+    {
+        "id": "772efe79.52a6e",
+        "type": "http response",
+        "z": "c4314dd8.df2f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 330,
+        "y": 440,
+        "wires": []
+    }
+]

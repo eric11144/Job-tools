@@ -1,0 +1,5 @@
+如需要將遠端機器轉入本機端可以觀看, 可以輸入以下指令
+
+ssh -N -L 18787:localhost:8787 ubuntu@xxx.xxx.xxx.xxx -p 8888
+
+完成後, 可在本機端, 輸入 localhost:18787

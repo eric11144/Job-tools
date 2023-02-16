@@ -1,0 +1,5 @@
+sudo apt install nginx
+
+sudo vim /etc/nginx/conf.d/ironman.conf
+
+sudo vim /etc/grafana/grafana.ini

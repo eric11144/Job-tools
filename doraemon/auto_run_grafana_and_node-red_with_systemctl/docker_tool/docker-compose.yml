@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    network_mode: host
+    volumes:
+    - ./grafana/var/lib/grafana:/var/lib/grafana
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    network_mode: host
+    volumes:
+    - ./mssql/var/opt/mssql/data:/var/opt/mssql/data
+
+
+  node-red:
+    image: nodered/node-red:latest
+    network_mode: host
+    environment:
+    - TZ=Asia/Taipei
+    volumes:
+    - ./node-red/data/:/data/

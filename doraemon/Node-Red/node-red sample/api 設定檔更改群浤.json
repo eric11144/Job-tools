@@ -1,0 +1,351 @@
+[
+    {
+        "id": "cac8a52f.506a38",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "f0addc7.4e2d52"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "776d7c51.2c1854",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "6ee2c5ea.fc19dc",
+        "type": "http request",
+        "z": "cac8a52f.506a38",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "9b494bbc.593788"
+            ]
+        ]
+    },
+    {
+        "id": "31de54c8.4c557c",
+        "type": "function",
+        "z": "cac8a52f.506a38",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":env.get(\"username\"),\n    \"password\":env.get(\"password\")\n};\n\nmsg.ip_address = {};\nmsg.ip_address = env.get(\"ip_address\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "af870c77.da194"
+            ]
+        ]
+    },
+    {
+        "id": "776d7c51.2c1854",
+        "type": "function",
+        "z": "cac8a52f.506a38",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b494bbc.593788",
+        "type": "function",
+        "z": "cac8a52f.506a38",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "776d7c51.2c1854"
+            ]
+        ]
+    },
+    {
+        "id": "f0addc7.4e2d52",
+        "type": "function",
+        "z": "cac8a52f.506a38",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"username\",\n    \"password\",\n    \"ip_address\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "31de54c8.4c557c"
+            ]
+        ]
+    },
+    {
+        "id": "af870c77.da194",
+        "type": "change",
+        "z": "cac8a52f.506a38",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "6ee2c5ea.fc19dc"
+            ]
+        ]
+    },
+    {
+        "id": "29b56909.768396",
+        "type": "tab",
+        "label": "PUT Connectivity / Qold config Request",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4df90426.7df25c",
+        "type": "inject",
+        "z": "29b56909.768396",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "5e5aec97.2aceb4"
+            ]
+        ]
+    },
+    {
+        "id": "58e776fd.5c57c8",
+        "type": "debug",
+        "z": "29b56909.768396",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1010,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5e5aec97.2aceb4",
+        "type": "subflow:cac8a52f.506a38",
+        "z": "29b56909.768396",
+        "name": "parameter",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.20.241"
+            }
+        ],
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "22138ded.528512"
+            ]
+        ]
+    },
+    {
+        "id": "8a73471a.134928",
+        "type": "http request",
+        "z": "29b56909.768396",
+        "name": "put connectivity request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/system/connectivity",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "58e776fd.5c57c8"
+            ]
+        ]
+    },
+    {
+        "id": "22138ded.528512",
+        "type": "function",
+        "z": "29b56909.768396",
+        "name": "改 gateway 送到 伺服設定檔",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.connectivity ={\n  \"enableRTPS\": false,\n  \"servers\": [\n    {\n      \"mqtt\": {\n        \"host\": \"10.15.44.1\",\n        \"port\": 1885\n      }\n    }\n  ]\n}\n\nmsg.payload = msg.connectivity;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "8a73471a.134928"
+            ]
+        ]
+    },
+    {
+        "id": "e8ce1fa5.80769",
+        "type": "inject",
+        "z": "29b56909.768396",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "542d96f1.426218"
+            ]
+        ]
+    },
+    {
+        "id": "c4a8d88b.96c238",
+        "type": "debug",
+        "z": "29b56909.768396",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1010,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "542d96f1.426218",
+        "type": "subflow:cac8a52f.506a38",
+        "z": "29b56909.768396",
+        "name": "parameter",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.20.241"
+            }
+        ],
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "5192789c.96c978"
+            ]
+        ]
+    },
+    {
+        "id": "484bcdb2.554b64",
+        "type": "http request",
+        "z": "29b56909.768396",
+        "name": "put qold config request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/qold/config",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "c4a8d88b.96c238"
+            ]
+        ]
+    },
+    {
+        "id": "5192789c.96c978",
+        "type": "function",
+        "z": "29b56909.768396",
+        "name": "payload of qold setting",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.qold ={\n    \"flushPeriodMin\":60,\n    \"timezone\":\"+08:00\"\n}\n\nmsg.payload = msg.qold;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "484bcdb2.554b64"
+            ]
+        ]
+    }
+]

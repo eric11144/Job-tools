@@ -1,0 +1,66 @@
+[
+    {
+        "id": "24add64f.99a22a",
+        "type": "qi-state-duration",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "stateName": "operation",
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "39834e25.7bfdba"
+            ]
+        ]
+    },
+    {
+        "id": "39834e25.7bfdba",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6dd89c66.b2efc4",
+        "type": "function",
+        "z": "6ac440.848d8bc",
+        "name": "state list",
+        "func": "msg.payload = [\n   {\n      \"time\":new Date(\"2019-10-02T02:50:35.000Z\"),\n      \"operation\":0\n   },  // 0:46 -> since: 2019-10-02T02:50:54.000Z -> 0:27\n   {\n      \"time\":new Date(\"2019-10-02T02:51:21.000Z\"),\n      \"operation\":1\n   },  // 0:26\n   {\n      \"time\":new Date(\"2019-10-02T02:51:47.000Z\"),\n      \"operation\":0\n   },  // 0:42\n   {\n      \"time\":new Date(\"2019-10-02T02:52:29.000Z\"),\n      \"operation\":1\n   },  // 0:9\n   {\n      \"time\":new Date(\"2019-10-02T02:52:38.000Z\"),\n      \"operation\":0\n   },  // 0:6\n   {\n      \"time\":new Date(\"2019-10-02T02:52:44.000Z\"),\n      \"operation\":1\n   },  // 0:9\n   {\n      \"time\":new Date(\"2019-10-02T02:52:53.000Z\"),\n      \"operation\":0\n   }  // 3:0\n]\n\nmsg.since = new Date(\"2019-10-02T02:50:54.000Z\")\nmsg.until = new Date(\"2019-10-02T02:55:53.000Z\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "24add64f.99a22a"
+            ]
+        ]
+    },
+    {
+        "id": "412e23be.f74c54",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "6dd89c66.b2efc4"
+            ]
+        ]
+    }
+]

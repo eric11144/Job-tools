@@ -1,0 +1,1 @@
+/venv/bin/docker-compose exec node-red sh

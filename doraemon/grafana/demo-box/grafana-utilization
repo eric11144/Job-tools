@@ -1,0 +1,14 @@
+SELECT
+    daily_last_total_utilization_hours AS total_utilization_hours,
+    24 - daily_last_total_utilization_hours AS untotal_utilization_hours,
+    daily_last_total_utilization_hours / 8 AS utilization_8_hours_percent,
+    daily_last_total_utilization_hours / 12 AS utilization_12_hours_percent,
+    daily_last_total_utilization_hours / 24 AS utilization_24_hours_percent
+FROM (
+    SELECT
+        LAST(total_utilization_hours) AS daily_last_total_utilization_hours
+    FROM Cutter_Line_2_utilization
+    GROUP BY time(1d, -8h)
+)
+
+SELECT last("total_utilization_hours") FROM "reading"."rrp"."Cutter_Line_2_utilization" where $timeFilter

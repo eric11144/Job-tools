@@ -1,0 +1,9 @@
+1. 需將倒回資料 Gateway 之 docker-compose 內的 qfeeder, 加上 
+    ports:
+      - 6080:80
+2. docker run -it --rm -v /home/hunt/:/home/hunt/  registry.qi/ubuntu20.amd64/qcsv bash
+3. /venv/bin/qcsv.qfeeder.inject --readings-per-request 200 --host 10.12.14.9 --port 6080
+
+sh convert-all.sh > log.txt 2>&1 & (背景執行程式, 並將輸出 log 存放於 log.txt)
+
+173544

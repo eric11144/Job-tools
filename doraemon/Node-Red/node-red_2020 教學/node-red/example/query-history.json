@@ -1,0 +1,66 @@
+[
+    {
+        "id": "604e3df1.282fbc",
+        "type": "qi-query-history",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "query": "",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "80b6e92c.449b68"
+            ]
+        ]
+    },
+    {
+        "id": "36ec26b1.b5528a",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "cdce8e86.93c3a8"
+            ]
+        ]
+    },
+    {
+        "id": "cdce8e86.93c3a8",
+        "type": "function",
+        "z": "6ac440.848d8bc",
+        "name": "query button_count",
+        "func": "msg.query = `\n    SELECT *\n    FROM FX5U\n    LIMIT 2\n`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "604e3df1.282fbc"
+            ]
+        ]
+    },
+    {
+        "id": "80b6e92c.449b68",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 150,
+        "y": 160,
+        "wires": []
+    }
+]

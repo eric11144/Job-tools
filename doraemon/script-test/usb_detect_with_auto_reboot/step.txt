@@ -1,0 +1,14 @@
+sudo chmod 755 
+
+sudo vim /lib/systemd/system/usb_reboot.service
+
+[Unit]
+Description=Demo
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/
+ExecStart=/bin/bash /home/ubuntu/reboot_count.sh
+
+[Install]
+WantedBy=multi-user.target

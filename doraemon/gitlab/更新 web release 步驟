@@ -1,0 +1,22 @@
+cat .ssh/id_rsa.pub
+git clone git@bitbucket.org:terry_sun/machinemonitoring-flask.git
+git clone https://shaoyuni@bitbucket.org/terry_sun/machinemonitoring-flask.git
+cd machinemonitoring-flask/
+git remote remove origin
+git remote add external https://shaoyuni@bitbucket.org/terry_sun/machinemonitoring-flask.git
+git remote add upstream git@140.92.63.109:qi/machinemonitoring-flask.git
+git push upstream master
+git fetch external
+git checkout master
+git merge external/master
+git branch -l
+git branch
+tig
+git log -3
+git push upstream master
+
+cat .git/config
+git fetch upstream
+git checkout release
+git merge master
+git push upstream release

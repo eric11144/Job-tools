@@ -1,0 +1,58 @@
+sudo apt-get install unixodbc-dev
+sudo pip3 install pyodbc
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+sudo apt-get update 
+sudo apt-get install mssql-tools unixodbc-dev
+
+提取 mssql docker container
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+執行 mssql docker container
+sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=p@55w0rd" -p 1433:1433 --name sql1 -h sql1 -d mcr.microsoft.com/mssql/server:2019-latest
+
+變更密碼
+sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U admin -P "p@55w0rd" -Q 'ALTER LOGIN SA WITH PASSWORD="p@55w0rd"'
+
+連接至 SQL Server
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "p@55w0rd"
+
+建立新資料庫
+CREATE DATABASE Test
+
+查詢並傳回伺服器上所有資料庫名稱
+SELECT Name from sys.Databases
+GO
+
+查詢並傳回 table 欄位名稱
+SELECT COLUMN_NAME,ORDINAL_POSITION,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Test'
+
+插入資料
+USE TestDB
+CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
+INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
+GO
+
+選取資料
+SELECT * FROM Test WHERE Data > 1;
+
+從容器外部連線
+sqlcmd -S <ip_address>,1433 -U SA -P "p@55w0rd"
+
+
+參考網站 https://community.grafana.com/t/sql-server-time-series-graphing/15896
+Sample
+CREATE TABLE metric_values (time datetime,measurement nvarchar(100),valueOne int,valueTwo int,)
+INSERT metric_values (time, measurement, valueOne, valueTwo) VALUES('2021-09-15 13:30:00', 'Metric A', 62, 6)
+INSERT metric_values (time, measurement, valueOne, valueTwo) VALUES('2021-09-15 13:30:00', 'Metric B', 49, 11)
+INSERT metric_values (time, measurement, valueOne, valueTwo) VALUES('2021-09-15 13:55:00', 'Metric A', 14, 25)
+INSERT metric_values (time, measurement, valueOne, valueTwo) VALUES('2021-09-15 13:55:00', 'Metric B', 48, 10)
+
+Grafana 語法
+SELECT
+  $__time(time),
+  Holding_40001
+FROM
+  Modbus
+WHERE
+  $__timeFilter(time)

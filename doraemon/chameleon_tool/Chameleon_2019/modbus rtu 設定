@@ -1,0 +1,55 @@
+sudo vim the-gateway/etc/modbusgd/configuration
+
+MXE -> dev = ttyS4
+MVP -> dev = ttyS0
+
+gateway-list:
+- tcp:
+    endpoint:
+      host: 127.0.0.1
+      port: 502
+    idle-timeout-sec: 60
+  rtu:
+    endpoint:
+      dev: /dev/ttyS4 
+      config:
+        baud: 9600
+        parity: n
+        stopbit: 1
+    interframe-delay-ms: 0
+    interchar-timeout-ms: 100
+    request-timeout-ms: 500
+
+多組設定
+gateway-list:
+- tcp:
+    endpoint:
+      host: 127.0.0.1
+      port: 12345
+    idle-timeout-sec: 60
+  rtu:
+    endpoint:
+      dev: /dev/ttyS0
+      config:
+        baud: 9600
+        parity: n
+        stopbit: 1
+    interframe-delay-ms: 0
+    interchar-timeout-ms: 100
+    request-timeout-ms: 500
+
+- tcp:
+    endpoint:
+      host: 127.0.0.1
+      port: 502
+    idle-timeout-sec: 60
+  rtu:
+    endpoint:
+      dev: /dev/ttyS1
+      config:
+        baud: 9600
+        parity: n
+        stopbit: 1
+    interframe-delay-ms: 0
+    interchar-timeout-ms: 100
+    request-timeout-ms: 500

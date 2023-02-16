@@ -1,0 +1,7 @@
+---
+- name: Add {{ ansible_user }} to docker group
+  user:
+    name: '{{ ansible_user }}'
+    groups: docker
+    append: yes
+  ignore_errors: yes

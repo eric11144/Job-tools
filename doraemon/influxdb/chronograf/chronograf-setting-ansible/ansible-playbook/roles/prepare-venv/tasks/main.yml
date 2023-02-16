@@ -1,0 +1,40 @@
+---
+- name: Create temporary pip repository - remove existing
+  file:
+    path: /tmp/pip
+    state: absent
+
+- name: Create temporary pip repository
+  synchronize:
+    src: "{{ item }}"
+    dest: /tmp/pip/
+  with_fileglob:
+  - "{{ role_path }}/files/tmp/pip/*"
+
+- name: Create /venv - remove existing
+  file:
+    path: /venv
+    state: absent
+
+- name: Create /venv - Upgrade pip
+  pip:
+    virtualenv: /venv/
+    virtualenv_command: pyvenv
+    state: latest
+    name: pip
+    extra_args: --no-index --find-links /tmp/pip
+
+- name: Create /venv - Install packages
+  pip:
+    virtualenv: /venv/
+    state: latest
+    name:
+    - docker-compose
+    - pyudev
+    - sh
+    extra_args: --no-index --find-links /tmp/pip
+
+- name: Remove temporary pip repository
+  file:
+    path: /tmp/pip
+    state: absent

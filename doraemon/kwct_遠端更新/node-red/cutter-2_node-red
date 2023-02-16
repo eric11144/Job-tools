@@ -1,0 +1,506 @@
+[
+    {
+        "id": "6a57cd60.ffd7b4",
+        "type": "tab",
+        "label": "detect_board",
+        "info": ""
+    },
+    {
+        "id": "7f47e8e9.cc3758",
+        "type": "tab",
+        "label": "board_utilization",
+        "info": ""
+    },
+    {
+        "id": "87ee29a.4f36bd8",
+        "type": "tab",
+        "label": "GYR",
+        "info": ""
+    },
+    {
+        "id": "28840e1f.172b42",
+        "type": "mqtt-broker",
+        "z": "6a57cd60.ffd7b4",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "4fc25253.e8ce0c",
+        "type": "influxdb",
+        "z": "7f47e8e9.cc3758",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "database": "reading",
+        "name": "",
+        "usetls": false,
+        "tls": ""
+    },
+    {
+        "id": "b92d1509.8baac8",
+        "type": "mqtt-broker",
+        "z": "7f47e8e9.cc3758",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e054759f.1bafb8",
+        "type": "mqtt-broker",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d46c832b.17d61",
+        "type": "modbus-client",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.7",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "64002243.2be98c",
+        "type": "mqtt in",
+        "z": "6a57cd60.ffd7b4",
+        "name": "",
+        "topic": "/out/devices/Cutter_Line_2/readings",
+        "qos": "1",
+        "broker": "28840e1f.172b42",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "c0eb8dc0.53a32"
+            ]
+        ]
+    },
+    {
+        "id": "c0eb8dc0.53a32",
+        "type": "json",
+        "z": "6a57cd60.ffd7b4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "413a6247.a9acfc"
+            ]
+        ]
+    },
+    {
+        "id": "413a6247.a9acfc",
+        "type": "function",
+        "z": "6a57cd60.ffd7b4",
+        "name": "detect_board",
+        "func": "// get current data\nfor (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"D580\")\n    {\n        var current_at = msg.payload.at\n        var current_board_count = msg.payload.channels[i].value.num\n\n        break\n    }\n}\n\nif (current_at == null ||\n    current_board_count == null)\n{\n    return\n}\n\nvar previous_board_count = context.get(\"previous_board_count\")\ncontext.set(\n    \"previous_board_count\",\n    current_board_count)\n\n// detect\nif (previous_board_count == null ||\n    previous_board_count >= current_board_count)\n{\n    return\n}\n\nmsg.payload = {\n    \"deviceId\": \"detect_board\",\n    \"at\": current_at,\n    \"channels\":[\n        {\n            \"channelId\": \"changed\",\n            \"value\":{\n                \"num\": 1\n            }\n        }\n    ]\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "6f128020.43baf"
+            ]
+        ]
+    },
+    {
+        "id": "6f128020.43baf",
+        "type": "mqtt out",
+        "z": "6a57cd60.ffd7b4",
+        "name": "",
+        "topic": "/in/devices/detect_board/readings",
+        "qos": "1",
+        "retain": "",
+        "broker": "28840e1f.172b42",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c6b36ee3.6c8eb",
+        "type": "inject",
+        "z": "7f47e8e9.cc3758",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "ed15f389.9e43"
+            ]
+        ]
+    },
+    {
+        "id": "ed15f389.9e43",
+        "type": "function",
+        "z": "7f47e8e9.cc3758",
+        "name": "query",
+        "func": "var local_time_zone = 8\n\n// get local time\nvar local = new Date()\nlocal.setHours(local.getHours() + local_time_zone)\n\n// determine local since and until\nvar local_since = new Date(\n    local.getFullYear(),\n    local.getMonth(),\n    local.getDate(),\n    0,\n    0,\n    0)\n\nvar local_until = new Date(local_since)\nlocal_until.setDate(local_until.getDate() + 1)\n\n// convert to utc\nvar since = _to_utc_time(local_since).toISOString()\nvar until = _to_utc_time(local_until).toISOString()\n\nmsg.query = `\n    SELECT changed\n    FROM detect_board\n    WHERE time >= '${since}'\n    AND time < '${until}'\n`\n\nnode.log(msg.query)\n\nreturn msg;\n\n\nfunction _to_utc_time(local_time)\n{\n    var utc_time = new Date(local_time)\n    utc_time.setHours(utc_time.getHours() - local_time_zone)\n\n    return utc_time\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "359fb79b.9df708"
+            ]
+        ]
+    },
+    {
+        "id": "359fb79b.9df708",
+        "type": "influxdb in",
+        "z": "7f47e8e9.cc3758",
+        "influxdb": "4fc25253.e8ce0c",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "642162b7.53857c"
+            ]
+        ]
+    },
+    {
+        "id": "642162b7.53857c",
+        "type": "function",
+        "z": "7f47e8e9.cc3758",
+        "name": "utilization",
+        "func": "var LEAD_TIME_SECONDS = 0\nvar PRODUCTION_TIME_SECONDS = 9\n\n// create timestamp and sort\nvar timestamp_list = []\nvar tag = 1\nmsg.payload.forEach(\n    function(item)\n    {\n        timestamp_list.push(\n            {\n                tag: tag,\n                time: _convert_to_seconds(Date.parse(item.time)) - LEAD_TIME_SECONDS\n            },\n            {\n                tag: tag,\n                time: _convert_to_seconds(Date.parse(item.time)) + PRODUCTION_TIME_SECONDS\n            });\n\n        ++tag\n    }\n)\n\ntimestamp_list.sort(\n    function(a, b)\n    {\n        return a.time - b.time\n    }\n)\n\n// calculate utilization\nvar queue_ = []\nvar start_time = 0\nvar end_time = 0\nvar today_utilization_seconds = 0\n\ntimestamp_list.forEach(\n    function(item)\n    {\n        if (queue_.length == 0)\n        {\n            start_time = item.time\n            queue_.push(item)\n        }\n        else if (queue_[0].tag == item.tag)\n        {\n            end_time = item.time\n            queue_.shift()\n        }\n        else\n        {\n            queue_.push(item)\n        }\n\n        if (queue_.length == 0)\n        {\n            today_utilization_seconds += end_time - start_time\n        }\n    }\n)\n\nnode.log(today_utilization_seconds / 3600)\n\nmsg.payload = {\n    \"deviceId\": \"Cutter_Line_2_utilization\",\n    \"channels\":[\n        {\n            \"channelId\": \"total_utilization_hours\",\n            \"value\":{\n                \"num\": Math.floor(today_utilization_seconds / 3600 * 100) / 100\n            }\n        }\n    ]\n}\n\nreturn msg\n\n\n// function\nfunction _convert_to_seconds(epoch_milliseconds)\n{\n    return Math.floor(epoch_milliseconds / 1000)\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "b5988cf2.97196"
+            ]
+        ]
+    },
+    {
+        "id": "b5988cf2.97196",
+        "type": "mqtt out",
+        "z": "7f47e8e9.cc3758",
+        "name": "",
+        "topic": "/in/devices/Cutter_Line_2_utilization/readings",
+        "qos": "1",
+        "retain": "",
+        "broker": "b92d1509.8baac8",
+        "x": 450,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f003e007.89ba7",
+        "type": "function",
+        "z": "87ee29a.4f36bd8",
+        "name": "G",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 0)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "21e34426.67eefc"
+            ]
+        ]
+    },
+    {
+        "id": "92058e1.7591a7",
+        "type": "mqtt in",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "topic": "/out/devices/GYR_light_2/readings",
+        "qos": "1",
+        "broker": "e054759f.1bafb8",
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "52703791.fd3408"
+            ]
+        ]
+    },
+    {
+        "id": "52703791.fd3408",
+        "type": "json",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "f003e007.89ba7",
+                "f4477324.20b04",
+                "d084e39a.a7654",
+                "6c39107e.dca38"
+            ]
+        ]
+    },
+    {
+        "id": "f4477324.20b04",
+        "type": "function",
+        "z": "87ee29a.4f36bd8",
+        "name": "Y",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 1)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "14535c6a.713274"
+            ]
+        ]
+    },
+    {
+        "id": "d084e39a.a7654",
+        "type": "function",
+        "z": "87ee29a.4f36bd8",
+        "name": "R and buzzer",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 2)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "9309133e.7a51",
+                "c94a83c9.b2e3d",
+                "7fed7295.a72b1c"
+            ]
+        ]
+    },
+    {
+        "id": "21e34426.67eefc",
+        "type": "modbus-write",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "43",
+        "quantity": "1",
+        "server": "d46c832b.17d61",
+        "x": 920,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "14535c6a.713274",
+        "type": "modbus-write",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "44",
+        "quantity": "1",
+        "server": "d46c832b.17d61",
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9309133e.7a51",
+        "type": "modbus-write",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "45",
+        "quantity": "1",
+        "server": "d46c832b.17d61",
+        "x": 920,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c94a83c9.b2e3d",
+        "type": "modbus-write",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "42",
+        "quantity": "1",
+        "server": "d46c832b.17d61",
+        "x": 960,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7fed7295.a72b1c",
+        "type": "delay",
+        "z": "87ee29a.4f36bd8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "23badf21.8e124"
+            ]
+        ],
+        "outputLabels": [
+            "0"
+        ]
+    },
+    {
+        "id": "23badf21.8e124",
+        "type": "function",
+        "z": "87ee29a.4f36bd8",
+        "name": "turn off buzzer",
+        "func": "msg.payload = 0\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "c94a83c9.b2e3d"
+            ]
+        ]
+    },
+    {
+        "id": "6c39107e.dca38",
+        "type": "trigger",
+        "z": "87ee29a.4f36bd8",
+        "op1": "",
+        "op2": "1",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "7",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "8004a694.80c688"
+            ]
+        ]
+    },
+    {
+        "id": "8004a694.80c688",
+        "type": "function",
+        "z": "87ee29a.4f36bd8",
+        "name": "turn off GYR",
+        "func": "msg.payload = 0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "21e34426.67eefc",
+                "14535c6a.713274",
+                "9309133e.7a51"
+            ]
+        ]
+    }
+]

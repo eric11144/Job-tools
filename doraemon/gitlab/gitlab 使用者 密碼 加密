@@ -1,0 +1,4 @@
+echo -n "username:pwd" | base64
+
+username: gitlab 帳號
+pwd: gitlab 密碼

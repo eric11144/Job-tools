@@ -1,0 +1,278 @@
+[
+    {
+        "id": "9b7f0242.183d4",
+        "type": "tab",
+        "label": "流程1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "10f30b51.bc5a35",
+        "type": "control-out",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "equipmentId": "modbus",
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "b7393660.6d50a8"
+            ]
+        ]
+    },
+    {
+        "id": "ce4dc22c.19528",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "程式一",
+        "func": "msg.payload = {\n    \"write_coils_196\": 0x1,\n    \"write_coils_197\": 0x0,\n    \"write_coils_198\": 0x0,\n    \"write_coils_199\": 0x0,\n    \"write_coils_200\": 0x0,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "10f30b51.bc5a35"
+            ]
+        ]
+    },
+    {
+        "id": "799ed37b.5178fc",
+        "type": "debug",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "144ec5a7.c1e80a",
+        "type": "http in",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "url": "/function1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "ce4dc22c.19528"
+            ]
+        ]
+    },
+    {
+        "id": "83905256.b533a",
+        "type": "http response",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6b5f2ec6.ef381",
+        "type": "change",
+        "z": "9b7f0242.183d4",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 320,
+        "wires": [
+            [
+                "799ed37b.5178fc",
+                "83905256.b533a"
+            ]
+        ]
+    },
+    {
+        "id": "b7393660.6d50a8",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "func": "var write_status = msg.payload.code\n\nif (write_status == 0){\n    msg.payload = \"ok \\n\"\n    return msg;\n}\n\nelse{\n    msg.payload = \"failed\"\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 320,
+        "wires": [
+            [
+                "6b5f2ec6.ef381"
+            ]
+        ]
+    },
+    {
+        "id": "715546a4.39a8c8",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "程式二",
+        "func": "msg.payload = {\n    \"write_coils_196\": 0x0,\n    \"write_coils_197\": 0x1,\n    \"write_coils_198\": 0x0,\n    \"write_coils_199\": 0x0,\n    \"write_coils_200\": 0x0,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "10f30b51.bc5a35"
+            ]
+        ]
+    },
+    {
+        "id": "76c27f79.d696e",
+        "type": "http in",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "url": "/function2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "715546a4.39a8c8"
+            ]
+        ]
+    },
+    {
+        "id": "35a77eaa.5d2352",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "程式三",
+        "func": "msg.payload = {\n    \"write_coils_196\": 0x0,\n    \"write_coils_197\": 0x0,\n    \"write_coils_198\": 0x1,\n    \"write_coils_199\": 0x0,\n    \"write_coils_200\": 0x0,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "10f30b51.bc5a35"
+            ]
+        ]
+    },
+    {
+        "id": "fab93be4.ef13a8",
+        "type": "http in",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "url": "/function3",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "35a77eaa.5d2352"
+            ]
+        ]
+    },
+    {
+        "id": "1923b9ad.6212e6",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "程式四",
+        "func": "msg.payload = {\n    \"write_coils_196\": 0x0,\n    \"write_coils_197\": 0x0,\n    \"write_coils_198\": 0x0,\n    \"write_coils_199\": 0x1,\n    \"write_coils_200\": 0x0,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "10f30b51.bc5a35"
+            ]
+        ]
+    },
+    {
+        "id": "5eaf197b.0d26d8",
+        "type": "http in",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "url": "/function4",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "1923b9ad.6212e6"
+            ]
+        ]
+    },
+    {
+        "id": "7838107f.f0eee",
+        "type": "function",
+        "z": "9b7f0242.183d4",
+        "name": "程式五",
+        "func": "msg.payload = {\n    \"write_coils_196\": 0x0,\n    \"write_coils_197\": 0x0,\n    \"write_coils_198\": 0x0,\n    \"write_coils_199\": 0x0,\n    \"write_coils_200\": 0x1,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "10f30b51.bc5a35"
+            ]
+        ]
+    },
+    {
+        "id": "d9b775fe.6727d8",
+        "type": "http in",
+        "z": "9b7f0242.183d4",
+        "name": "",
+        "url": "/function5",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "7838107f.f0eee"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+sudo vim /etc/netplan/50-network.yaml
+
+dhcp:
+
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      addresses: []
+      dhcp4: true
+
+
+static ip:
+
+network:
+ version: 2
+ renderer: networkd
+ ethernets:
+   eth0:
+     dhcp4: no
+     dhcp6: no
+     addresses: [192.168.11.175/24]
+     gateway4: 192.168.11.1
+     nameservers:
+       addresses: [140.92.61.81]
+   eth1:
+     dhcp4: no
+     dhcp6: no
+     addresses: [192.168.20.175/24]
+
+sudo netplan apply

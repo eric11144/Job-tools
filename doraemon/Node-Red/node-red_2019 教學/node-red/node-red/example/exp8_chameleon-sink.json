@@ -1,0 +1,46 @@
+[
+    {
+        "id": "a9cf8563.f345f8",
+        "type": "qi-chameleon-sink",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "aefe532d.81078",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "topic": "",
+        "payload": "{\"deviceId\":\"test_chameleon_sink\",\"at\":{\"sec\":1570074060,\"us\":1000},\"channels\":{\"float_channel\":94.87,\"integer_channel\":200,\"string_channel\":\"chameleon_no1\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "a9cf8563.f345f8",
+                "b5f2da6f.201b18"
+            ]
+        ]
+    },
+    {
+        "id": "b5f2da6f.201b18",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    }
+]

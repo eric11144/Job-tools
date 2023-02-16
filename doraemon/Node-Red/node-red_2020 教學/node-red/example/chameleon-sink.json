@@ -1,0 +1,62 @@
+[
+    {
+        "id": "947ea1d8.a0f73",
+        "type": "qi-chameleon-sink",
+        "z": "29efa47a.f7fc6c",
+        "name": "",
+        "x": 1180,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ac6ab9b0.3daa48",
+        "type": "inject",
+        "z": "29efa47a.f7fc6c",
+        "name": "",
+        "topic": "",
+        "payload": "{\"deviceId\":\"test_chameleon_sink\",\"at\":{\"sec\":1570074060,\"us\":1000},\"channels\":{\"float_channel\":94.87,\"integer_channel\":200,\"string_channel\":\"chameleon_no1\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "cc23ee74.1502d"
+            ]
+        ]
+    },
+    {
+        "id": "663bf6bc.f9a9d8",
+        "type": "debug",
+        "z": "29efa47a.f7fc6c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cc23ee74.1502d",
+        "type": "function",
+        "z": "29efa47a.f7fc6c",
+        "name": "touch time",
+        "func": "const timestamp = new Date()\n\nmsg.payload.at.sec = Math.floor(timestamp / 1000)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 180,
+        "wires": [
+            [
+                "947ea1d8.a0f73",
+                "663bf6bc.f9a9d8"
+            ]
+        ]
+    }
+]

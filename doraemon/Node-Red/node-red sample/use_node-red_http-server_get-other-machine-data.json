@@ -1,0 +1,57 @@
+[
+    {
+        "id": "b956bf6f.64f3a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1b64b6f2.d795a9",
+        "type": "http in",
+        "z": "b956bf6f.64f3a",
+        "name": "",
+        "url": "/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 307.1931610107422,
+        "y": 832.0795364379883,
+        "wires": [
+            [
+                "fe5f26fb.1bbcd8"
+            ]
+        ]
+    },
+    {
+        "id": "fe5f26fb.1bbcd8",
+        "type": "http request",
+        "z": "b956bf6f.64f3a",
+        "name": "Get other machine data",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://xxx.xxx.xxx.xxx/api/v1/devices/xxx/channels/latest-data",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 524.1960296630859,
+        "y": 832.2500076293945,
+        "wires": [
+            [
+                "b1ca78a7.baead8"
+            ]
+        ]
+    },
+    {
+        "id": "b1ca78a7.baead8",
+        "type": "http response",
+        "z": "b956bf6f.64f3a",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 743.1932487487793,
+        "y": 831.6874809265137,
+        "wires": []
+    }
+]

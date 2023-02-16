@@ -1,0 +1,163 @@
+[
+    {
+        "id": "235d38929ef1f15e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3a272016e6fb3b29",
+        "type": "ui_table",
+        "z": "235d38929ef1f15e",
+        "group": "b014ccf9507a497b",
+        "name": "Alarm",
+        "order": 1,
+        "width": "12",
+        "height": "8",
+        "columns": [
+            {
+                "field": "Time",
+                "title": "<center>Time</>",
+                "width": "25%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Register",
+                "title": "<center>Channel</>",
+                "width": "10%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Notes",
+                "title": "<center>Alarm Message</>",
+                "width": "50%",
+                "align": "center",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Alarm",
+                "title": "<center>Status</>",
+                "width": "15%",
+                "align": "center",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "466c24d108fd6e69",
+        "type": "modbus-read",
+        "z": "235d38929ef1f15e",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "5",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "c6527b9f.17c448",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "322869bb94f7bdd6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "322869bb94f7bdd6",
+        "type": "function",
+        "z": "235d38929ef1f15e",
+        "name": "1-5 test alarms code",
+        "func": "\nvar t = new Date();\nt = (('00' + t.getHours()).slice(-2) + ':' + ('00' + t.getMinutes()).slice(-2) + ':' + ('00' + t.getSeconds()).slice(-2) + ' / ' + ('00' + (t.getMonth()+1)).slice(-2) + '.' + ('00' + t.getDate()).slice(-2) + '.' + t.getFullYear());\n\n//var i=0;\nfor (var i=0; i < msg.payload.length ; i++) {\n\nif (msg.payload[i]!==0) {\n    if (i<5) {\n        if (msg.payload[i]===true) {\n            msg.payload.push(\n                {\n                    \"Time\": t,\n                    \"Register\":\"0000\" + (i+1),\n                    \"Alarm\": \"<div style='background-color: red; width:100%; color:white'>\" + \"ALARM\" + \"</div>\",\n                    \"Notes\": \"<div style='background-color: red; width:100%; color:white'>\" + \"coils_\" + (i+1) +\"</div>\"\n                })\n        }\n   }\n}\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "3a272016e6fb3b29"
+            ]
+        ]
+    },
+    {
+        "id": "b014ccf9507a497b",
+        "type": "ui_group",
+        "name": "Active Alarms",
+        "tab": "11fccd479ad71c1b",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c6527b9f.17c448",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": false,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "11fccd479ad71c1b",
+        "type": "ui_tab",
+        "name": "Alarms Monitiring",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

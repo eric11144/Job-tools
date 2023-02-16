@@ -1,0 +1,524 @@
+[
+    {
+        "id": "acff4822.b86288",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "86578da1.2b867",
+        "type": "subflow",
+        "name": "Detect Alarm",
+        "info": "Input:\n\n- `msg.params.CHANNEL_ID`\n- `msg.params.TOPIC`\n- `msg.params.OVER_UPPER_MSG`\n- `msg.params.IN_UPPER_THRESHOLD_MSG`\n- `msg.params.OVER_LOWER_MSG`\n- `msg.params.IN_LOWER_THRESHOLD_MSG`\n- `msg.params.UPPER_LIMIT`\n- `msg.params.UPPER_LIMIT_UPPER_THRESHOLD`\n- `msg.params.UPPER_LIMIT_LOWER_THRESHOLD`\n- `msg.params.LOWER_LIMIT`\n- `msg.params.LOWER_LIMIT_UPPER_THRESHOLD`\n- `msg.params.LOWER_LIMIT_LOWER_THRESHOLD`\n\n- `msg.payload`\n\nOutput:\n\n- `msg.topic`\n- `msg.payload`\n",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "fb4aa5b7.02b908"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1360,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "9767ead8.01f568",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "d6479439.49e218",
+        "type": "change",
+        "z": "acff4822.b86288",
+        "name": "params (only upper)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params.CHANNEL_ID",
+                "pt": "msg",
+                "to": "voltage_V",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.TOPIC",
+                "pt": "msg",
+                "to": "溫度告警",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.OVER_UPPER_MSG",
+                "pt": "msg",
+                "to": "溫度過高",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.IN_UPPER_THRESHOLD_MSG",
+                "pt": "msg",
+                "to": "溫度達上限警報範圍",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT",
+                "pt": "msg",
+                "to": "20",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT_UPPER_THRESHOLD",
+                "pt": "msg",
+                "to": "18.5",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT_LOWER_THRESHOLD",
+                "pt": "msg",
+                "to": "18.5",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d411c493.ce2718",
+        "type": "subflow:86578da1.2b867",
+        "z": "acff4822.b86288",
+        "name": "",
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "c5b89147.045ae"
+            ]
+        ]
+    },
+    {
+        "id": "704c94fd.56bb3c",
+        "type": "change",
+        "z": "acff4822.b86288",
+        "name": "params",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params.CHANNEL_ID",
+                "pt": "msg",
+                "to": "voltage_V",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.TOPIC",
+                "pt": "msg",
+                "to": "溫度告警",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.OVER_UPPER_MSG",
+                "pt": "msg",
+                "to": "溫度過高",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.IN_UPPER_THRESHOLD_MSG",
+                "pt": "msg",
+                "to": "溫度達上限警報範圍",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.OVER_LOWER_MSG",
+                "pt": "msg",
+                "to": "溫度過低",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.IN_LOWER_THRESHOLD_MSG",
+                "pt": "msg",
+                "to": "溫度達下限警報範圍",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT",
+                "pt": "msg",
+                "to": "20",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT_UPPER_THRESHOLD",
+                "pt": "msg",
+                "to": "20",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.UPPER_LIMIT_LOWER_THRESHOLD",
+                "pt": "msg",
+                "to": "18.51",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT_UPPER_THRESHOLD",
+                "pt": "msg",
+                "to": "7",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT_LOWER_THRESHOLD",
+                "pt": "msg",
+                "to": "5.01",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT",
+                "pt": "msg",
+                "to": "5",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "d411c493.ce2718"
+            ]
+        ]
+    },
+    {
+        "id": "e567a2b2.b8465",
+        "type": "change",
+        "z": "acff4822.b86288",
+        "name": "params (only lower)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params.CHANNEL_ID",
+                "pt": "msg",
+                "to": "voltage_V",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.TOPIC",
+                "pt": "msg",
+                "to": "溫度告警",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.OVER_LOWER_MSG",
+                "pt": "msg",
+                "to": "溫度過低",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.IN_LOWER_THRESHOLD_MSG",
+                "pt": "msg",
+                "to": "溫度達下限警報範圍",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT_UPPER_THRESHOLD",
+                "pt": "msg",
+                "to": "7",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT_LOWER_THRESHOLD",
+                "pt": "msg",
+                "to": "5.01",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "params.LOWER_LIMIT",
+                "pt": "msg",
+                "to": "5",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1246a50f.c96d2b",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "validate upper params",
+        "func": "const CHANNEL_ID = flow.get('CHANNEL_ID')\nconst UPPER_LIMIT = flow.get('UPPER_LIMIT')\nconst UPPER_LIMIT_UPPER_THRESHOLD = flow.get('UPPER_LIMIT_UPPER_THRESHOLD')\nconst UPPER_LIMIT_LOWER_THRESHOLD = flow.get('UPPER_LIMIT_LOWER_THRESHOLD')\n\nif (typeof UPPER_LIMIT === 'undefined' ||\n        typeof UPPER_LIMIT_UPPER_THRESHOLD === 'undefined' ||\n        typeof UPPER_LIMIT_LOWER_THRESHOLD === 'undefined') \n{\n    return\n}\n\nconst value = msg.payload.channels[CHANNEL_ID]\nconst at = msg.payload.at\n\nflow.set(\n    'VALUE',\n    value)\n\nflow.set(\n    'AT',\n    at)\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "361d6d83.4205e2",
+                "10109469.868cec"
+            ]
+        ]
+    },
+    {
+        "id": "361d6d83.4205e2",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is in upper range",
+        "func": "const UPPER_LIMIT_UPPER_THRESHOLD = flow.get('UPPER_LIMIT_UPPER_THRESHOLD')\nconst UPPER_LIMIT_LOWER_THRESHOLD = flow.get('UPPER_LIMIT_LOWER_THRESHOLD')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (UPPER_LIMIT_UPPER_THRESHOLD == UPPER_LIMIT_LOWER_THRESHOLD)\n{\n    return\n}\n\nif (value >= UPPER_LIMIT_LOWER_THRESHOLD &&\n    value <= UPPER_LIMIT_UPPER_THRESHOLD)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": 1\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 100,
+        "wires": [
+            [
+                "a051dd0d.181de"
+            ]
+        ]
+    },
+    {
+        "id": "10109469.868cec",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is over upper threshold",
+        "func": "const UPPER_LIMIT_UPPER_THRESHOLD = flow.get('UPPER_LIMIT_UPPER_THRESHOLD')\nconst UPPER_LIMIT_LOWER_THRESHOLD = flow.get('UPPER_LIMIT_LOWER_THRESHOLD')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (UPPER_LIMIT_UPPER_THRESHOLD != UPPER_LIMIT_LOWER_THRESHOLD)\n{\n    return\n}\n\nif (value >= UPPER_LIMIT_UPPER_THRESHOLD)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": 1\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 160,
+        "wires": [
+            [
+                "a051dd0d.181de"
+            ]
+        ]
+    },
+    {
+        "id": "a051dd0d.181de",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is over upper limit",
+        "func": "const UPPER_LIMIT = flow.get('UPPER_LIMIT')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (value > UPPER_LIMIT)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": 2\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 970,
+        "y": 140,
+        "wires": [
+            [
+                "9d390cc.f3ff6f"
+            ]
+        ]
+    },
+    {
+        "id": "d0e988c1.8049c8",
+        "type": "qi-forward-on-change",
+        "z": "86578da1.2b867",
+        "name": "",
+        "initialValue": "{\"alarm\":0}",
+        "initialValueType": "json",
+        "useInitialValue": true,
+        "x": 1210,
+        "y": 240,
+        "wires": [
+            [
+                "9767ead8.01f568"
+            ]
+        ]
+    },
+    {
+        "id": "b6405b8e.3a2bf8",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "validate lower params",
+        "func": "const CHANNEL_ID = flow.get('CHANNEL_ID')\nconst LOWER_LIMIT = flow.get('LOWER_LIMIT')\nconst LOWER_LIMIT_UPPER_THRESHOLD = flow.get('LOWER_LIMIT_UPPER_THRESHOLD')\nconst LOWER_LIMIT_LOWER_THRESHOLD = flow.get('LOWER_LIMIT_LOWER_THRESHOLD')\n\nif (typeof LOWER_LIMIT === 'undefined' ||\n        typeof LOWER_LIMIT_UPPER_THRESHOLD === 'undefined' ||\n        typeof LOWER_LIMIT_LOWER_THRESHOLD === 'undefined') \n{\n    return\n}\n\nconst value = msg.payload.channels[CHANNEL_ID]\nconst at = msg.payload.at\n\nflow.set(\n    'VALUE',\n    value)\n\nflow.set(\n    'AT',\n    at)\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 280,
+        "wires": [
+            [
+                "be4749b2.1f0bb8",
+                "4bf96488.b0ebbc"
+            ]
+        ]
+    },
+    {
+        "id": "be4749b2.1f0bb8",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is in lower range",
+        "func": "const LOWER_LIMIT_UPPER_THRESHOLD = flow.get('LOWER_LIMIT_UPPER_THRESHOLD')\nconst LOWER_LIMIT_LOWER_THRESHOLD = flow.get('LOWER_LIMIT_LOWER_THRESHOLD')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (LOWER_LIMIT_UPPER_THRESHOLD == LOWER_LIMIT_LOWER_THRESHOLD)\n{\n    return\n}\n\nif (value >= LOWER_LIMIT_LOWER_THRESHOLD &&\n    value <= LOWER_LIMIT_UPPER_THRESHOLD)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": -1\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 260,
+        "wires": [
+            [
+                "b7525e86.20c09"
+            ]
+        ]
+    },
+    {
+        "id": "4bf96488.b0ebbc",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is over lower threshold",
+        "func": "const LOWER_LIMIT_UPPER_THRESHOLD = flow.get('LOWER_LIMIT_UPPER_THRESHOLD')\nconst LOWER_LIMIT_LOWER_THRESHOLD = flow.get('LOWER_LIMIT_LOWER_THRESHOLD')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (LOWER_LIMIT_UPPER_THRESHOLD != LOWER_LIMIT_LOWER_THRESHOLD)\n{\n    return\n}\n\nif (value <= LOWER_LIMIT_UPPER_THRESHOLD)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": -1\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 320,
+        "wires": [
+            [
+                "b7525e86.20c09"
+            ]
+        ]
+    },
+    {
+        "id": "b7525e86.20c09",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "is over lower limit",
+        "func": "const LOWER_LIMIT = flow.get('LOWER_LIMIT')\n\nconst value = flow.get('VALUE')\nconst at = flow.get('AT')\n\nif (value < LOWER_LIMIT)\n{\n    payload = {\n        \"deviceId\": \"alarm\",\n        \"at\": at,\n        \"channels\": {\n            \"alarm\": -2\n        }    \n    }\n    \n    msg.payload = payload\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 970,
+        "y": 300,
+        "wires": [
+            [
+                "9d390cc.f3ff6f"
+            ]
+        ]
+    },
+    {
+        "id": "9767ead8.01f568",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "email msg",
+        "func": "const VALUE = flow.get('VALUE')\nconst TOPIC = flow.get('TOPIC')\nconst OVER_UPPER_MSG = flow.get('OVER_UPPER_MSG')\nconst IN_UPPER_THRESHOLD_MSG = flow.get('IN_UPPER_THRESHOLD_MSG')\nconst OVER_LOWER_MSG = flow.get('OVER_LOWER_MSG')\nconst IN_LOWER_THRESHOLD_MSG = flow.get('IN_LOWER_THRESHOLD_MSG')\n\nconst alarm = msg.payload.channels.alarm\n\nswitch(alarm)\n{\n    \ncase 2:\n    payload = OVER_UPPER_MSG\n    break\n\ncase 1:\n    payload = IN_UPPER_THRESHOLD_MSG\n    break\n\ncase -1:\n    payload = IN_LOWER_THRESHOLD_MSG\n    break\n\ncase -2:\n    payload = OVER_LOWER_MSG\n    break\n\ndefault:\n    node.error('unexpected alarm code')\n    return\n\n}\n\nmsg.topic = TOPIC\nmsg.payload = payload + ', value: ' + VALUE.toString()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1230,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb4aa5b7.02b908",
+        "type": "function",
+        "z": "86578da1.2b867",
+        "name": "flow.params",
+        "func": "if (typeof msg.params.CHANNEL_ID === 'undefined' ||\n        typeof msg.params.TOPIC === 'undefined') {\n    node.error('illegal msg.params')\n    return\n}\n\nflow.set(\n    [\n        'CHANNEL_ID',\n        'TOPIC',\n        'OVER_UPPER_MSG',\n        'IN_UPPER_THRESHOLD_MSG',\n        'OVER_LOWER_MSG',\n        'IN_LOWER_THRESHOLD_MSG',\n        'UPPER_LIMIT',\n        'UPPER_LIMIT_UPPER_THRESHOLD',\n        'UPPER_LIMIT_LOWER_THRESHOLD',\n        'LOWER_LIMIT',\n        'LOWER_LIMIT_UPPER_THRESHOLD',\n        'LOWER_LIMIT_LOWER_THRESHOLD'\n        \n    ],\n    [\n        msg.params.CHANNEL_ID,\n        msg.params.TOPIC,\n        msg.params.OVER_UPPER_MSG,\n        msg.params.IN_UPPER_THRESHOLD_MSG,\n        msg.params.OVER_LOWER_MSG,\n        msg.params.IN_LOWER_THRESHOLD_MSG,\n        msg.params.UPPER_LIMIT,\n        msg.params.UPPER_LIMIT_UPPER_THRESHOLD,\n        msg.params.UPPER_LIMIT_LOWER_THRESHOLD,\n        msg.params.LOWER_LIMIT,\n        msg.params.LOWER_LIMIT_UPPER_THRESHOLD,\n        msg.params.LOWER_LIMIT_LOWER_THRESHOLD,\n    ]\n)\n\ndelete msg.params\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "1246a50f.c96d2b",
+                "b6405b8e.3a2bf8"
+            ]
+        ]
+    },
+    {
+        "id": "9d390cc.f3ff6f",
+        "type": "qi-forward-on-match",
+        "z": "86578da1.2b867",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"alarm\"],\"properties\":{\"alarm\":{\"type\":\"number\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 1200,
+        "y": 200,
+        "wires": [
+            [
+                "d0e988c1.8049c8"
+            ]
+        ]
+    },
+    {
+        "id": "19831143.1d0bbf",
+        "type": "qi-chameleon-source",
+        "z": "acff4822.b86288",
+        "name": "",
+        "deviceId": "sample-device",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7192c5b3.42a15c",
+        "type": "e-mail",
+        "z": "acff4822.b86288",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "eric1114473@gmail.com",
+        "dname": "",
+        "x": 870,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c5b89147.045ae",
+        "type": "debug",
+        "z": "acff4822.b86288",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 860,
+        "y": 260,
+        "wires": []
+    }
+]

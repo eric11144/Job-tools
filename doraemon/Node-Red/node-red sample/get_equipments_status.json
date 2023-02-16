@@ -1,0 +1,64 @@
+[
+    {
+        "id": "cd581ce8.7e9ab",
+        "type": "api",
+        "z": "15c9075.5d187f9",
+        "name": "status api",
+        "method": "GET",
+        "path": "/api/v1/status/equipments",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "6f6b83dc.bda29c"
+            ]
+        ]
+    },
+    {
+        "id": "835d8181.fcc16",
+        "type": "inject",
+        "z": "15c9075.5d187f9",
+        "name": "",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "cd581ce8.7e9ab"
+            ]
+        ]
+    },
+    {
+        "id": "6f6b83dc.bda29c",
+        "type": "function",
+        "z": "15c9075.5d187f9",
+        "name": "get equipments status",
+        "func": "var equipments_status_list = msg.payload\nvar equipments_status = {}\n\nfor (var i = 0; i < equipments_status_list.length; ++i){\n    channel_id = equipments_status_list[i][\"equipmentId\"]\n    equipments_status[channel_id] = equipments_status_list[i][\"status\"][\"code\"]\n}\n\n\nmsg.payload = {\n    \"reading\" : equipments_status\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "a2cdbcea.7ad39"
+            ]
+        ]
+    },
+    {
+        "id": "a2cdbcea.7ad39",
+        "type": "reading-out",
+        "z": "15c9075.5d187f9",
+        "name": "",
+        "equipmentId": "equipments_status",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    }
+]

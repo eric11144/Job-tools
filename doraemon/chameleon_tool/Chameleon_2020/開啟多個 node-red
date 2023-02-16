@@ -1,0 +1,7 @@
+cd /usr/share/chameleon-gateway-installer/
+
+此指令會自動往下加
+sudo /venv/bin/python3 install.py --extra-node-red-count 7
+
+注意  執行此動作  會將設備內容全部清空  記得先備份
+

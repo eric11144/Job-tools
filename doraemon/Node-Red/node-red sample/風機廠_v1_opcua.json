@@ -1,0 +1,7193 @@
+[
+    {
+        "id": "2e2d4ea1bb88e88b",
+        "type": "tab",
+        "label": "空氣品質監控",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0dd1394941b0c117",
+        "type": "tab",
+        "label": "風機",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "32d6a80254b8106d",
+        "type": "tab",
+        "label": "A 區 設定＆當前值",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2d7c98840bb5749d",
+        "type": "tab",
+        "label": "B 區 設定＆當前值",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d68afe890ad7ac49",
+        "type": "tab",
+        "label": "轉速",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6e10530be61ede81",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.0.62",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "0a4ceaff78166d88",
+        "type": "ui_tab",
+        "name": "風機",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2503f402599f8e0b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f30d226fdcf64756",
+        "type": "ui_group",
+        "name": "空氣品質監控系統 A 區",
+        "tab": "24d4c59bd115e92b",
+        "order": 1,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6a61fac97bf6f7d1",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.15.2:4840/",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "24d4c59bd115e92b",
+        "type": "ui_tab",
+        "name": "空氣品質監控",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8c9a13c8189e5432",
+        "type": "ui_group",
+        "name": "空氣品質監控系統 B 區",
+        "tab": "24d4c59bd115e92b",
+        "order": 2,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3d51997139f721aa",
+        "type": "ui_group",
+        "name": "負壓風機",
+        "tab": "0a4ceaff78166d88",
+        "order": 3,
+        "disp": true,
+        "width": "15",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9a4f12f2b7c75557",
+        "type": "ui_group",
+        "name": "風機",
+        "tab": "0a4ceaff78166d88",
+        "order": 4,
+        "disp": true,
+        "width": "20",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9e5b90037e0b5e6b",
+        "type": "ui_group",
+        "name": "風門",
+        "tab": "0a4ceaff78166d88",
+        "order": 5,
+        "disp": true,
+        "width": "20",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "56a98671c5bb5441",
+        "type": "ui_tab",
+        "name": "設定值＆當前值",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ccc96279ba4d6245",
+        "type": "ui_group",
+        "name": "A 區",
+        "tab": "56a98671c5bb5441",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e53497707776ce9e",
+        "type": "ui_group",
+        "name": "B區",
+        "tab": "56a98671c5bb5441",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c6527b9f.17c448",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": false,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.1.120",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "78e8577fc1b1c7ca",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "812e9019c65b9cdc",
+        "type": "ui_tab",
+        "name": "轉速",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c876e9ba6396a489",
+        "type": "ui_group",
+        "name": "轉速",
+        "tab": "812e9019c65b9cdc",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f2a3a86c6c5687ae",
+        "type": "ui_group",
+        "name": "狀態",
+        "tab": "812e9019c65b9cdc",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f7bfc34747425558",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "f30d226fdcf64756",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CO2",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d3d32bf4d3f97940",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "f30d226fdcf64756",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CO",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4d52186e703b84b3",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "f30d226fdcf64756",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "PM 2.5",
+        "label": " μg/m3 ",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 780,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0a445ce1c4d89782",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "f30d226fdcf64756",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "PM 10",
+        "label": " μg/m3 ",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "da5882e48de73981",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_CO2",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO2 當前值",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "b73302caea5e6d27"
+            ]
+        ]
+    },
+    {
+        "id": "b73302caea5e6d27",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 540,
+        "wires": [
+            [
+                "a9cb36749d94b50e"
+            ]
+        ]
+    },
+    {
+        "id": "9eb091dabd71f28c",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_CO",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO 當前值",
+        "x": 330,
+        "y": 600,
+        "wires": [
+            [
+                "cba47d0e2d73578e"
+            ]
+        ]
+    },
+    {
+        "id": "cba47d0e2d73578e",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "7bf672a96e283b30"
+            ]
+        ]
+    },
+    {
+        "id": "c2ab35afaa754d28",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_PM10",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 10 當前值",
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "8cccde0898dc76b0"
+            ]
+        ]
+    },
+    {
+        "id": "8cccde0898dc76b0",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 660,
+        "wires": [
+            [
+                "0ca7f1cd56464ddd"
+            ]
+        ]
+    },
+    {
+        "id": "bc76c08878b980b2",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_PM2.5",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 2.5 當前值",
+        "x": 340,
+        "y": 720,
+        "wires": [
+            [
+                "3f1c323cc389dc7f"
+            ]
+        ]
+    },
+    {
+        "id": "3f1c323cc389dc7f",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 720,
+        "wires": [
+            [
+                "83294c437be0ed0e"
+            ]
+        ]
+    },
+    {
+        "id": "df59f3e7c37a3e74",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_temperature",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 溫度 當前值",
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "378ec11ddd1c6ffc"
+            ]
+        ]
+    },
+    {
+        "id": "378ec11ddd1c6ffc",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "dea9d1d84403669d"
+            ]
+        ]
+    },
+    {
+        "id": "946a97f41f7f6ced",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=White_humidity",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 濕度 當前值",
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "59f286090cf57349"
+            ]
+        ]
+    },
+    {
+        "id": "59f286090cf57349",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "7d96b736705a93cb"
+            ]
+        ]
+    },
+    {
+        "id": "a9cb36749d94b50e",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CO2",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "7bf672a96e283b30",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "CO",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "0ca7f1cd56464ddd",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "PM 2.5",
+        "label": " μg/m3 ",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 800,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "83294c437be0ed0e",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "PM 10",
+        "label": " μg/m3 ",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "dea9d1d84403669d",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "溫度",
+        "label": "˚C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7d96b736705a93cb",
+        "type": "ui_gauge",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "group": "8c9a13c8189e5432",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "濕度",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d76d689394fa4893",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=CO2",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO2 當前值",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "157905458fe39f26"
+            ]
+        ]
+    },
+    {
+        "id": "157905458fe39f26",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "f7bfc34747425558"
+            ]
+        ]
+    },
+    {
+        "id": "ebe3551560d4ca89",
+        "type": "inject",
+        "z": "2e2d4ea1bb88e88b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "d76d689394fa4893",
+                "c9cbdef78d3f52b1",
+                "9782455289d84d70",
+                "560c70368c77d61c",
+                "df59f3e7c37a3e74",
+                "946a97f41f7f6ced",
+                "da5882e48de73981",
+                "9eb091dabd71f28c",
+                "c2ab35afaa754d28",
+                "bc76c08878b980b2"
+            ]
+        ]
+    },
+    {
+        "id": "c9cbdef78d3f52b1",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=CO",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO 當前值",
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "4bf79200a9c01e53"
+            ]
+        ]
+    },
+    {
+        "id": "4bf79200a9c01e53",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "d3d32bf4d3f97940"
+            ]
+        ]
+    },
+    {
+        "id": "9782455289d84d70",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=PM10",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 10 當前值",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "cba0e362b4158338"
+            ]
+        ]
+    },
+    {
+        "id": "cba0e362b4158338",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "4d52186e703b84b3"
+            ]
+        ]
+    },
+    {
+        "id": "560c70368c77d61c",
+        "type": "OpcUa-Item",
+        "z": "2e2d4ea1bb88e88b",
+        "item": "ns=2;s=PM2.5",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 2.5 當前值",
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "26480569ea5234d2"
+            ]
+        ]
+    },
+    {
+        "id": "26480569ea5234d2",
+        "type": "OpcUa-Client",
+        "z": "2e2d4ea1bb88e88b",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "0a445ce1c4d89782"
+            ]
+        ]
+    },
+    {
+        "id": "05517e1a20586d45",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "3d51997139f721aa",
+        "width": "7",
+        "height": "2",
+        "label": "負壓風機 A",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "負壓風機 A",
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e41776404a1b7fdb",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "3d51997139f721aa",
+        "width": "7",
+        "height": "2",
+        "label": "負壓風機 B",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "負壓風機 B",
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ef920d63b0737b81",
+        "type": "ui_text",
+        "z": "0dd1394941b0c117",
+        "group": "3d51997139f721aa",
+        "order": 4,
+        "width": "5",
+        "height": "2",
+        "name": "",
+        "label": "負壓風機 A",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "84074d4881bd6fd0",
+        "type": "ui_text",
+        "z": "0dd1394941b0c117",
+        "group": "3d51997139f721aa",
+        "order": 4,
+        "width": "5",
+        "height": "2",
+        "name": "",
+        "label": "負壓風機 B",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "09f6696c6bf1b0d2",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "負壓風機 A 開關",
+        "tooltip": "",
+        "group": "3d51997139f721aa",
+        "order": 4,
+        "width": "15",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "6dfb74098ef48412"
+            ]
+        ]
+    },
+    {
+        "id": "c99d265ad6798cc2",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "負壓風機 B 開關",
+        "tooltip": "",
+        "group": "3d51997139f721aa",
+        "order": 4,
+        "width": "15",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 300,
+        "y": 920,
+        "wires": [
+            [
+                "45a16dc10a63d9be"
+            ]
+        ]
+    },
+    {
+        "id": "3509478d099cfc6f",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "9a4f12f2b7c75557",
+        "width": "6",
+        "height": "2",
+        "label": "風機 A",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 A",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d1ccb13c5c6e66b1",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "9a4f12f2b7c75557",
+        "width": "6",
+        "height": "2",
+        "label": "風機 B",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 B",
+        "x": 790,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "119498e2b32efc28",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "9a4f12f2b7c75557",
+        "width": "6",
+        "height": "2",
+        "label": "風機 C",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 C",
+        "x": 790,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3b24bd5ef2a6c49b",
+        "type": "inject",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "5aaf54ba61094003",
+                "4d2e016abaec90bc",
+                "2bd29d99e3819a63",
+                "2f38c553e5c1d95b",
+                "565d3e6482ec722a",
+                "fadaf82513ba425e"
+            ]
+        ]
+    },
+    {
+        "id": "3cfa065969771a9b",
+        "type": "ui_text",
+        "z": "0dd1394941b0c117",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "5",
+        "height": "2",
+        "name": "",
+        "label": "風機 A",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 790,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4dbd3c88ab6eeca1",
+        "type": "ui_text",
+        "z": "0dd1394941b0c117",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "5",
+        "height": "2",
+        "name": "",
+        "label": "風機 B",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 790,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6c92e6f78be57c20",
+        "type": "ui_text",
+        "z": "0dd1394941b0c117",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "5",
+        "height": "2",
+        "name": "",
+        "label": "風機 C",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "264c9e2c74e0d189",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "風機 A 開關",
+        "tooltip": "",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "20",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 1000,
+        "wires": [
+            [
+                "b3aba3c08db0b40d"
+            ]
+        ]
+    },
+    {
+        "id": "18defad105d06a81",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "風機 B 開關",
+        "tooltip": "",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "20",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 1080,
+        "wires": [
+            [
+                "aea419976f9ce44e"
+            ]
+        ]
+    },
+    {
+        "id": "b35ed49e918f0116",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "風機 C 開關",
+        "tooltip": "",
+        "group": "9a4f12f2b7c75557",
+        "order": 4,
+        "width": "20",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 1180,
+        "wires": [
+            [
+                "78005d79739fa948"
+            ]
+        ]
+    },
+    {
+        "id": "151c4571ad7f3c42",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "風門 A 開關",
+        "tooltip": "",
+        "group": "9e5b90037e0b5e6b",
+        "order": 4,
+        "width": "20",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 270,
+        "y": 1280,
+        "wires": [
+            [
+                "64ed4f7fa375ee15"
+            ]
+        ]
+    },
+    {
+        "id": "28551964551369dc",
+        "type": "ui_switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "label": "風門 B 開關",
+        "tooltip": "",
+        "group": "9e5b90037e0b5e6b",
+        "order": 4,
+        "width": "20",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 270,
+        "y": 1360,
+        "wires": [
+            [
+                "8a10e879b9f00573"
+            ]
+        ]
+    },
+    {
+        "id": "25efd3bd1917d7de",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Fan2_W04",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 A",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "39b9800337600eca"
+            ]
+        ]
+    },
+    {
+        "id": "f57e6124aa3ce867",
+        "type": "inject",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "25efd3bd1917d7de",
+                "b181f457cf5a12d0",
+                "4db93113cb93d527",
+                "a05dd1c1c4eeb5ba"
+            ]
+        ]
+    },
+    {
+        "id": "b181f457cf5a12d0",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Fan1_W04",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 B",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "13a0b64050ec3aed"
+            ]
+        ]
+    },
+    {
+        "id": "39b9800337600eca",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "ef920d63b0737b81"
+            ]
+        ]
+    },
+    {
+        "id": "13a0b64050ec3aed",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "84074d4881bd6fd0"
+            ]
+        ]
+    },
+    {
+        "id": "a05dd1c1c4eeb5ba",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Fan2_S06",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 A",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "30da1f9dfc467d79"
+            ]
+        ]
+    },
+    {
+        "id": "4db93113cb93d527",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Fan1_S06",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 B",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "31a7fce5b2444b2d"
+            ]
+        ]
+    },
+    {
+        "id": "30da1f9dfc467d79",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 100,
+        "wires": [
+            [
+                "05517e1a20586d45"
+            ]
+        ]
+    },
+    {
+        "id": "31a7fce5b2444b2d",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            [
+                "e41776404a1b7fdb"
+            ]
+        ]
+    },
+    {
+        "id": "6dfb74098ef48412",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "76c4623f25ace05a"
+            ],
+            [
+                "960f2d775756c6b8"
+            ]
+        ]
+    },
+    {
+        "id": "45a16dc10a63d9be",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 920,
+        "wires": [
+            [
+                "cf2762dad8a33856"
+            ],
+            [
+                "4a90edf1ae0a2354"
+            ]
+        ]
+    },
+    {
+        "id": "76c4623f25ace05a",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40080",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 A ON",
+        "x": 730,
+        "y": 820,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "960f2d775756c6b8",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40080_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 A OFF",
+        "x": 730,
+        "y": 860,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "d958541eb4ca8b84",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 1020,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf2762dad8a33856",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40060",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 B ON",
+        "x": 730,
+        "y": 900,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "4a90edf1ae0a2354",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40060_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 B OFF",
+        "x": 730,
+        "y": 940,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "5aaf54ba61094003",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=NO1_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 A",
+        "x": 300,
+        "y": 520,
+        "wires": [
+            [
+                "ed714c5ee164249b"
+            ]
+        ]
+    },
+    {
+        "id": "4d2e016abaec90bc",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=NO2_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 B",
+        "x": 300,
+        "y": 560,
+        "wires": [
+            [
+                "db01bdfa26b3b508"
+            ]
+        ]
+    },
+    {
+        "id": "ed714c5ee164249b",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 520,
+        "wires": [
+            [
+                "3cfa065969771a9b"
+            ]
+        ]
+    },
+    {
+        "id": "db01bdfa26b3b508",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "4dbd3c88ab6eeca1"
+            ]
+        ]
+    },
+    {
+        "id": "2bd29d99e3819a63",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=NO3_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 C",
+        "x": 300,
+        "y": 600,
+        "wires": [
+            [
+                "0c8eb497692b59f3"
+            ]
+        ]
+    },
+    {
+        "id": "0c8eb497692b59f3",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "6c92e6f78be57c20"
+            ]
+        ]
+    },
+    {
+        "id": "2f38c553e5c1d95b",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_Qualities_FAN3_RUN_STOP",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 C",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "fbd3ab4a6299cd9c"
+            ]
+        ]
+    },
+    {
+        "id": "fbd3ab4a6299cd9c",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "119498e2b32efc28"
+            ]
+        ]
+    },
+    {
+        "id": "fadaf82513ba425e",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_Qualities_FAN1_RUN_STOP",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 A",
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "0d176452b0fbf869"
+            ]
+        ]
+    },
+    {
+        "id": "565d3e6482ec722a",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_Qualities_FAN2_RUN_STOP",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_負壓風機 B",
+        "x": 320,
+        "y": 420,
+        "wires": [
+            [
+                "92c556f25bf2a886"
+            ]
+        ]
+    },
+    {
+        "id": "0d176452b0fbf869",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "3509478d099cfc6f"
+            ]
+        ]
+    },
+    {
+        "id": "92c556f25bf2a886",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "d1ccb13c5c6e66b1"
+            ]
+        ]
+    },
+    {
+        "id": "b3aba3c08db0b40d",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1000,
+        "wires": [
+            [
+                "0a86b336d155ea79"
+            ],
+            [
+                "0d029fad2994c4ed"
+            ]
+        ]
+    },
+    {
+        "id": "aea419976f9ce44e",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "2927528e9a5de89f"
+            ],
+            [
+                "ddf28974a58c867f"
+            ]
+        ]
+    },
+    {
+        "id": "0a86b336d155ea79",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40030",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 A ON",
+        "x": 710,
+        "y": 980,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "0d029fad2994c4ed",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40030_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 A OFF",
+        "x": 720,
+        "y": 1020,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "2927528e9a5de89f",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40040",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 B ON",
+        "x": 720,
+        "y": 1060,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "ddf28974a58c867f",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40040_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 B OFF",
+        "x": 720,
+        "y": 1100,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "78005d79739fa948",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1180,
+        "wires": [
+            [
+                "fb0d2fd61efb0cb1"
+            ],
+            [
+                "76a639b0ac14a154"
+            ]
+        ]
+    },
+    {
+        "id": "fb0d2fd61efb0cb1",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40050",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 C ON",
+        "x": 720,
+        "y": 1160,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "76a639b0ac14a154",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40050_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風機 C OFF",
+        "x": 720,
+        "y": 1200,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "099408780d25dd65",
+        "type": "inject",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "a1d91442fbc48310",
+                "d6f0b3b593651648"
+            ]
+        ]
+    },
+    {
+        "id": "d6f0b3b593651648",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_IntegratedIO_I00",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風門 A",
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "cc925527f5c08e48"
+            ]
+        ]
+    },
+    {
+        "id": "a1d91442fbc48310",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_IntegratedIO_I01",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風門 B",
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "6fedb134c12e4a5f"
+            ]
+        ]
+    },
+    {
+        "id": "cc925527f5c08e48",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 660,
+        "wires": [
+            [
+                "5938d6a9aed9df4f"
+            ]
+        ]
+    },
+    {
+        "id": "6fedb134c12e4a5f",
+        "type": "OpcUa-Client",
+        "z": "0dd1394941b0c117",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "9113f07c36afb011"
+            ]
+        ]
+    },
+    {
+        "id": "5938d6a9aed9df4f",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "9e5b90037e0b5e6b",
+        "width": "9",
+        "height": "2",
+        "label": "風門 A",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風門 A",
+        "x": 790,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9113f07c36afb011",
+        "type": "ui_led",
+        "z": "0dd1394941b0c117",
+        "order": 0,
+        "group": "9e5b90037e0b5e6b",
+        "width": "9",
+        "height": "2",
+        "label": "風門 B",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風門 B",
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "64ed4f7fa375ee15",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1280,
+        "wires": [
+            [
+                "32a681d94e14d830"
+            ],
+            [
+                "ed4f6b4328ef930c"
+            ]
+        ]
+    },
+    {
+        "id": "8a10e879b9f00573",
+        "type": "switch",
+        "z": "0dd1394941b0c117",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1360,
+        "wires": [
+            [
+                "11310c98a3be5c56"
+            ],
+            [
+                "18a5efbebbbf3ec8"
+            ]
+        ]
+    },
+    {
+        "id": "32a681d94e14d830",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40030",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風門 A ON",
+        "x": 710,
+        "y": 1260,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "ed4f6b4328ef930c",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40030_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風門 A OFF",
+        "x": 720,
+        "y": 1300,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "11310c98a3be5c56",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40040",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風門 B ON",
+        "x": 720,
+        "y": 1340,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "18a5efbebbbf3ec8",
+        "type": "OpcUa-Item",
+        "z": "0dd1394941b0c117",
+        "item": "ns=2;s=Application_UserPrg_M40040_C",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_風門 B OFF",
+        "x": 720,
+        "y": 1380,
+        "wires": [
+            [
+                "d958541eb4ca8b84"
+            ]
+        ]
+    },
+    {
+        "id": "409820f89dc45ea0",
+        "type": "ui_text_input",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 CO2 設定值",
+        "label": "A 區 CO2 設定值",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "1000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "edadfaf82c6bc5df"
+            ]
+        ]
+    },
+    {
+        "id": "c50e35a63c6021de",
+        "type": "ui_text",
+        "z": "32d6a80254b8106d",
+        "group": "ccc96279ba4d6245",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "A 區 CO2 當前值",
+        "label": "A 區 CO2 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 810,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "43600bec72b8a060",
+        "type": "ui_text_input",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 CO 設定值",
+        "label": "A 區 CO 設定值",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "54462865149ee8db"
+            ]
+        ]
+    },
+    {
+        "id": "314f120637a52b60",
+        "type": "ui_text",
+        "z": "32d6a80254b8106d",
+        "group": "ccc96279ba4d6245",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "A 區 CO 當前值",
+        "label": "A 區 CO 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 800,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d72a1bef77414514",
+        "type": "ui_text_input",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 PM 10 設定值",
+        "label": "A 區 PM 10 設定值",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "3d06d18fc4415f27"
+            ]
+        ]
+    },
+    {
+        "id": "4a1d2f9f9597b663",
+        "type": "ui_text",
+        "z": "32d6a80254b8106d",
+        "group": "ccc96279ba4d6245",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "A 區 PM 10 當前值",
+        "label": "A 區 PM 10 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 810,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4ceed4262211cd2a",
+        "type": "ui_text_input",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 PM 2.5 設定值",
+        "label": "A 區 PM 2.5 設定值",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1030,
+        "y": 120,
+        "wires": [
+            [
+                "423ed6cdf87d0abb"
+            ]
+        ]
+    },
+    {
+        "id": "1035590ba5022258",
+        "type": "ui_text",
+        "z": "32d6a80254b8106d",
+        "group": "ccc96279ba4d6245",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "A 區 PM 2.5 當前值",
+        "label": "A 區 PM 2.5 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 810,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "d2760845a9adc725",
+        "type": "ui_switch",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 CO2 開關",
+        "label": "A 區 CO2 開關",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 520,
+        "wires": [
+            [
+                "82bb381991f31c02"
+            ]
+        ]
+    },
+    {
+        "id": "e6e713e8821e1523",
+        "type": "ui_switch",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 CO 開關",
+        "label": "A 區 CO 開關",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "c9a0c76b13d364d2"
+            ]
+        ]
+    },
+    {
+        "id": "02feab9053ef53cf",
+        "type": "ui_switch",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 PM 10 開關",
+        "label": "A 區 PM 10 開關",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 640,
+        "wires": [
+            [
+                "f4b2cb7c7f585747"
+            ]
+        ]
+    },
+    {
+        "id": "7fa5340b1eab1ebe",
+        "type": "ui_switch",
+        "z": "32d6a80254b8106d",
+        "name": "A 區 PM 2.5 開關",
+        "label": "A 區 PM 2.5 開關",
+        "tooltip": "",
+        "group": "ccc96279ba4d6245",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "e9826f91bd73d3e3"
+            ]
+        ]
+    },
+    {
+        "id": "edadfaf82c6bc5df",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "f4c504cc06338af9"
+            ]
+        ]
+    },
+    {
+        "id": "f4c504cc06338af9",
+        "type": "switch",
+        "z": "32d6a80254b8106d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "9da7bba47747da7b"
+            ],
+            [
+                "961c87f74b6401bf"
+            ]
+        ]
+    },
+    {
+        "id": "9da7bba47747da7b",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "23d8ace4c995fdcb"
+            ]
+        ]
+    },
+    {
+        "id": "961c87f74b6401bf",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "23d8ace4c995fdcb"
+            ]
+        ]
+    },
+    {
+        "id": "23d8ace4c995fdcb",
+        "type": "function",
+        "z": "32d6a80254b8106d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "641f9d4a357166a6"
+            ]
+        ]
+    },
+    {
+        "id": "641f9d4a357166a6",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40023_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO2 設定值",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "b634687610086503"
+            ]
+        ]
+    },
+    {
+        "id": "54462865149ee8db",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "ff65353405d21676"
+            ]
+        ]
+    },
+    {
+        "id": "ff65353405d21676",
+        "type": "switch",
+        "z": "32d6a80254b8106d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "29b076c28a5d1062"
+            ],
+            [
+                "bdada9ca1bc52b08"
+            ]
+        ]
+    },
+    {
+        "id": "29b076c28a5d1062",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "39779f3554d0cd6d"
+            ]
+        ]
+    },
+    {
+        "id": "bdada9ca1bc52b08",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "39779f3554d0cd6d"
+            ]
+        ]
+    },
+    {
+        "id": "39779f3554d0cd6d",
+        "type": "function",
+        "z": "32d6a80254b8106d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "22453c79f064ae02"
+            ]
+        ]
+    },
+    {
+        "id": "22453c79f064ae02",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40024_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO 設定值",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "b634687610086503"
+            ]
+        ]
+    },
+    {
+        "id": "2238fbb52efb95ab",
+        "type": "inject",
+        "z": "32d6a80254b8106d",
+        "name": "Init with empty string",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 520,
+        "y": 40,
+        "wires": [
+            [
+                "409820f89dc45ea0",
+                "43600bec72b8a060",
+                "d72a1bef77414514",
+                "4ceed4262211cd2a"
+            ]
+        ]
+    },
+    {
+        "id": "3d06d18fc4415f27",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "5aa12c0a579ced59"
+            ]
+        ]
+    },
+    {
+        "id": "5aa12c0a579ced59",
+        "type": "switch",
+        "z": "32d6a80254b8106d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "eb150b8fb5442913"
+            ],
+            [
+                "db1fc5d98354d363"
+            ]
+        ]
+    },
+    {
+        "id": "eb150b8fb5442913",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 240,
+        "wires": [
+            [
+                "a542c99da816fc53"
+            ]
+        ]
+    },
+    {
+        "id": "db1fc5d98354d363",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "a542c99da816fc53"
+            ]
+        ]
+    },
+    {
+        "id": "a542c99da816fc53",
+        "type": "function",
+        "z": "32d6a80254b8106d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "95b8424dd8cd4873"
+            ]
+        ]
+    },
+    {
+        "id": "95b8424dd8cd4873",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40025_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 10 設定值",
+        "x": 760,
+        "y": 360,
+        "wires": [
+            [
+                "b634687610086503"
+            ]
+        ]
+    },
+    {
+        "id": "423ed6cdf87d0abb",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 160,
+        "wires": [
+            [
+                "a61ff97c88c2723b"
+            ]
+        ]
+    },
+    {
+        "id": "a61ff97c88c2723b",
+        "type": "switch",
+        "z": "32d6a80254b8106d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1020,
+        "y": 200,
+        "wires": [
+            [
+                "f7681d526ca22998"
+            ],
+            [
+                "4acbb7dd574f9121"
+            ]
+        ]
+    },
+    {
+        "id": "f7681d526ca22998",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 240,
+        "wires": [
+            [
+                "4ec693cbe2326361"
+            ]
+        ]
+    },
+    {
+        "id": "4acbb7dd574f9121",
+        "type": "change",
+        "z": "32d6a80254b8106d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 280,
+        "wires": [
+            [
+                "4ec693cbe2326361"
+            ]
+        ]
+    },
+    {
+        "id": "4ec693cbe2326361",
+        "type": "function",
+        "z": "32d6a80254b8106d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 320,
+        "wires": [
+            [
+                "d006a4841040f694"
+            ]
+        ]
+    },
+    {
+        "id": "d006a4841040f694",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40027_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 2.5 設定值",
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            [
+                "b634687610086503"
+            ]
+        ]
+    },
+    {
+        "id": "b634687610086503",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38c888e9d70548dc",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=CO2",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO2 當前值",
+        "x": 330,
+        "y": 840,
+        "wires": [
+            [
+                "f1b2ca25bacdf99e"
+            ]
+        ]
+    },
+    {
+        "id": "f1b2ca25bacdf99e",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "c50e35a63c6021de"
+            ]
+        ]
+    },
+    {
+        "id": "b51e8bd452ce9318",
+        "type": "inject",
+        "z": "32d6a80254b8106d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 940,
+        "wires": [
+            [
+                "38c888e9d70548dc",
+                "0ab129519a3e181a",
+                "060a860eb3230d4a",
+                "9bbb97d30d36a86f"
+            ]
+        ]
+    },
+    {
+        "id": "0ab129519a3e181a",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=CO",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 CO 當前值",
+        "x": 330,
+        "y": 900,
+        "wires": [
+            [
+                "d9a4bf8018b55e70"
+            ]
+        ]
+    },
+    {
+        "id": "d9a4bf8018b55e70",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 900,
+        "wires": [
+            [
+                "314f120637a52b60"
+            ]
+        ]
+    },
+    {
+        "id": "060a860eb3230d4a",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=PM10",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 10 當前值",
+        "x": 340,
+        "y": 960,
+        "wires": [
+            [
+                "75e6bf7c343a624d"
+            ]
+        ]
+    },
+    {
+        "id": "75e6bf7c343a624d",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 960,
+        "wires": [
+            [
+                "4a1d2f9f9597b663"
+            ]
+        ]
+    },
+    {
+        "id": "9bbb97d30d36a86f",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=PM2_5",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_A 區 PM 2.5 當前值",
+        "x": 340,
+        "y": 1020,
+        "wires": [
+            [
+                "5e2371ce0f4acbba"
+            ]
+        ]
+    },
+    {
+        "id": "5e2371ce0f4acbba",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 560,
+        "y": 1020,
+        "wires": [
+            [
+                "1035590ba5022258"
+            ]
+        ]
+    },
+    {
+        "id": "82bb381991f31c02",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40023",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_A 區 CO2 開關",
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "4e5d0be1d207125b"
+            ]
+        ]
+    },
+    {
+        "id": "c9a0c76b13d364d2",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40024",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_A 區 CO 開關",
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "4e5d0be1d207125b"
+            ]
+        ]
+    },
+    {
+        "id": "f4b2cb7c7f585747",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40025",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_A 區 PM 10 開關",
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "4e5d0be1d207125b"
+            ]
+        ]
+    },
+    {
+        "id": "e9826f91bd73d3e3",
+        "type": "OpcUa-Item",
+        "z": "32d6a80254b8106d",
+        "item": "ns=2;s=Application_UserPrg_D40027",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_A 區 PM 2.5 開關",
+        "x": 480,
+        "y": 700,
+        "wires": [
+            [
+                "4e5d0be1d207125b"
+            ]
+        ]
+    },
+    {
+        "id": "4e5d0be1d207125b",
+        "type": "OpcUa-Client",
+        "z": "32d6a80254b8106d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 800,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ac3de58b5efa058",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 CO2 設定值",
+        "label": "B 區 CO2 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "f633639238054ec3"
+            ]
+        ]
+    },
+    {
+        "id": "340b1df3ca3ab6d8",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 CO2 當前值",
+        "label": "B 區 CO2 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "401cbad62125d88e",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 CO 設定值",
+        "label": "B 區 CO 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1140,
+        "y": 100,
+        "wires": [
+            [
+                "8a7fae4275cf3de7"
+            ]
+        ]
+    },
+    {
+        "id": "3365c0d50159c41d",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 CO 當前值",
+        "label": "B 區 CO 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "7d430da2e7ffd9ea",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 PM 10 設定值",
+        "label": "B 區 PM 10 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1430,
+        "y": 100,
+        "wires": [
+            [
+                "3bb671a389c0db43"
+            ]
+        ]
+    },
+    {
+        "id": "d80cbeed749d5c42",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 PM 10 當前值",
+        "label": "B 區 PM 10 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b5466a76ce1aaa7f",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 PM 2.5 設定值",
+        "label": "B 區 PM 2.5 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1730,
+        "y": 100,
+        "wires": [
+            [
+                "0be318ba5db03e7f"
+            ]
+        ]
+    },
+    {
+        "id": "7b889fc2d7918355",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 PM 2.5 當前值",
+        "label": "B 區 PM 2.5 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "29d7fd31d7f35871",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 CO2 開關",
+        "label": "B 區 CO2 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "ca344746ceb149b7"
+            ]
+        ]
+    },
+    {
+        "id": "41adae4b28a7e28f",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 CO 開關",
+        "label": "B 區 CO 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "d104a692f22945dc"
+            ]
+        ]
+    },
+    {
+        "id": "028994395b982532",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 PM 10 開關",
+        "label": "B 區 PM 10 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 680,
+        "wires": [
+            [
+                "e00c434d6b192e91"
+            ]
+        ]
+    },
+    {
+        "id": "3b47a2d3688cc9b7",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 PM 2.5 開關",
+        "label": "B 區 PM 2.5 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "7cb915af84d76f02"
+            ]
+        ]
+    },
+    {
+        "id": "f633639238054ec3",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 140,
+        "wires": [
+            [
+                "37f0867ec2a45738"
+            ]
+        ]
+    },
+    {
+        "id": "37f0867ec2a45738",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 840,
+        "y": 180,
+        "wires": [
+            [
+                "0b79c349670bb2be"
+            ],
+            [
+                "784d4d84fcc8bca1"
+            ]
+        ]
+    },
+    {
+        "id": "0b79c349670bb2be",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [
+                "0757f9438ba92092"
+            ]
+        ]
+    },
+    {
+        "id": "784d4d84fcc8bca1",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 260,
+        "wires": [
+            [
+                "0757f9438ba92092"
+            ]
+        ]
+    },
+    {
+        "id": "0757f9438ba92092",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 300,
+        "wires": [
+            [
+                "89f0baf24aeed9f6"
+            ]
+        ]
+    },
+    {
+        "id": "89f0baf24aeed9f6",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40013_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO2 設定值",
+        "x": 880,
+        "y": 340,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "8a7fae4275cf3de7",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 140,
+        "wires": [
+            [
+                "da31cb33d55fee8e"
+            ]
+        ]
+    },
+    {
+        "id": "da31cb33d55fee8e",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1140,
+        "y": 180,
+        "wires": [
+            [
+                "075c9c062c685ea4"
+            ],
+            [
+                "1940b6ffc79b18ba"
+            ]
+        ]
+    },
+    {
+        "id": "075c9c062c685ea4",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "dce08a71619cc5e5"
+            ]
+        ]
+    },
+    {
+        "id": "1940b6ffc79b18ba",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            [
+                "dce08a71619cc5e5"
+            ]
+        ]
+    },
+    {
+        "id": "dce08a71619cc5e5",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 300,
+        "wires": [
+            [
+                "4db2d4652f046a0e"
+            ]
+        ]
+    },
+    {
+        "id": "4db2d4652f046a0e",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40016_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO 設定值",
+        "x": 1170,
+        "y": 340,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "53d9e7c6406e8aa3",
+        "type": "inject",
+        "z": "2d7c98840bb5749d",
+        "name": "Init with empty string",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 620,
+        "y": 40,
+        "wires": [
+            [
+                "3dc13e0ec9e64fd0",
+                "8319aa4486f0577c",
+                "1ac3de58b5efa058",
+                "401cbad62125d88e",
+                "7d430da2e7ffd9ea",
+                "b5466a76ce1aaa7f"
+            ]
+        ]
+    },
+    {
+        "id": "3bb671a389c0db43",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 140,
+        "wires": [
+            [
+                "925ad1ca552f6051"
+            ]
+        ]
+    },
+    {
+        "id": "925ad1ca552f6051",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1420,
+        "y": 180,
+        "wires": [
+            [
+                "476ef47d821f413c"
+            ],
+            [
+                "4ec656d0cbf9c044"
+            ]
+        ]
+    },
+    {
+        "id": "476ef47d821f413c",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 220,
+        "wires": [
+            [
+                "f140c0af0bcfacd6"
+            ]
+        ]
+    },
+    {
+        "id": "4ec656d0cbf9c044",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 260,
+        "wires": [
+            [
+                "f140c0af0bcfacd6"
+            ]
+        ]
+    },
+    {
+        "id": "f140c0af0bcfacd6",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 300,
+        "wires": [
+            [
+                "f525aa7af241c527"
+            ]
+        ]
+    },
+    {
+        "id": "f525aa7af241c527",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40018_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 10 設定值",
+        "x": 1460,
+        "y": 340,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "d30770c9ffe759f6",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 980,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0be318ba5db03e7f",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 140,
+        "wires": [
+            [
+                "34b16c0321400fde"
+            ]
+        ]
+    },
+    {
+        "id": "34b16c0321400fde",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1720,
+        "y": 180,
+        "wires": [
+            [
+                "4cf000781ad4202a"
+            ],
+            [
+                "bb011033c01a5220"
+            ]
+        ]
+    },
+    {
+        "id": "4cf000781ad4202a",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 220,
+        "wires": [
+            [
+                "eafe21923805eff2"
+            ]
+        ]
+    },
+    {
+        "id": "bb011033c01a5220",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 260,
+        "wires": [
+            [
+                "eafe21923805eff2"
+            ]
+        ]
+    },
+    {
+        "id": "eafe21923805eff2",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 300,
+        "wires": [
+            [
+                "f2b7ec802ee6dcda"
+            ]
+        ]
+    },
+    {
+        "id": "f2b7ec802ee6dcda",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40010_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 2.5 設定值",
+        "x": 1760,
+        "y": 340,
+        "wires": [
+            [
+                "1d592cf652a27055"
+            ]
+        ]
+    },
+    {
+        "id": "1d592cf652a27055",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 1720,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac933dc2a01e292f",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_CO2",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO2 當前值",
+        "x": 380,
+        "y": 940,
+        "wires": [
+            [
+                "d667b04cd70ec91a"
+            ]
+        ]
+    },
+    {
+        "id": "d667b04cd70ec91a",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 940,
+        "wires": [
+            [
+                "340b1df3ca3ab6d8"
+            ]
+        ]
+    },
+    {
+        "id": "fef407fe62c7ef78",
+        "type": "inject",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "ac933dc2a01e292f",
+                "cbb9e7f326d46593",
+                "23540d5f47ead026",
+                "8f2e79c0aa928da1",
+                "997b3a6ed82f4fd4",
+                "e33257f3bccfc663"
+            ]
+        ]
+    },
+    {
+        "id": "cbb9e7f326d46593",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_CO",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 CO 當前值",
+        "x": 370,
+        "y": 1000,
+        "wires": [
+            [
+                "5872dd701a929286"
+            ]
+        ]
+    },
+    {
+        "id": "5872dd701a929286",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [
+                "3365c0d50159c41d"
+            ]
+        ]
+    },
+    {
+        "id": "23540d5f47ead026",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_PM10",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 10 當前值",
+        "x": 380,
+        "y": 1060,
+        "wires": [
+            [
+                "a0f3c41b8c7c93cb"
+            ]
+        ]
+    },
+    {
+        "id": "a0f3c41b8c7c93cb",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1060,
+        "wires": [
+            [
+                "d80cbeed749d5c42"
+            ]
+        ]
+    },
+    {
+        "id": "8f2e79c0aa928da1",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_PM2_5",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 PM 2.5 當前值",
+        "x": 380,
+        "y": 1120,
+        "wires": [
+            [
+                "cc03864b5df8b99a"
+            ]
+        ]
+    },
+    {
+        "id": "cc03864b5df8b99a",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1120,
+        "wires": [
+            [
+                "7b889fc2d7918355"
+            ]
+        ]
+    },
+    {
+        "id": "ca344746ceb149b7",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40013",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 CO2 開關",
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "d104a692f22945dc",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40016",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 CO 開關",
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "e00c434d6b192e91",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40018",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 PM 10 開關",
+        "x": 490,
+        "y": 680,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "7cb915af84d76f02",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40010",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 PM 2.5 開關",
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "3dc13e0ec9e64fd0",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 溫度 設定值",
+        "label": "B 區 溫度 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "7cb7fa9b523f52da"
+            ]
+        ]
+    },
+    {
+        "id": "8319aa4486f0577c",
+        "type": "ui_text_input",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 濕度 設定值",
+        "label": "B 區 濕度 設定值",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "0da0659f6a1d3f3e"
+            ]
+        ]
+    },
+    {
+        "id": "7cb7fa9b523f52da",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "2094954ef9af5290"
+            ]
+        ]
+    },
+    {
+        "id": "2094954ef9af5290",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "f1b4c025cdd27159"
+            ],
+            [
+                "ef5ce15e7483f4f7"
+            ]
+        ]
+    },
+    {
+        "id": "f1b4c025cdd27159",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "e0a859db27532460"
+            ]
+        ]
+    },
+    {
+        "id": "ef5ce15e7483f4f7",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "e0a859db27532460"
+            ]
+        ]
+    },
+    {
+        "id": "e0a859db27532460",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "07ac43aa0d83bd80"
+            ]
+        ]
+    },
+    {
+        "id": "07ac43aa0d83bd80",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40011_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 溫度 設定值",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "0da0659f6a1d3f3e",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "0da9e6cb1e256bdb"
+            ]
+        ]
+    },
+    {
+        "id": "0da9e6cb1e256bdb",
+        "type": "switch",
+        "z": "2d7c98840bb5749d",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "e5d30a356add35ea"
+            ],
+            [
+                "b317a146e43b095b"
+            ]
+        ]
+    },
+    {
+        "id": "e5d30a356add35ea",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "3d8a7217b0793da2"
+            ]
+        ]
+    },
+    {
+        "id": "b317a146e43b095b",
+        "type": "change",
+        "z": "2d7c98840bb5749d",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "3d8a7217b0793da2"
+            ]
+        ]
+    },
+    {
+        "id": "3d8a7217b0793da2",
+        "type": "function",
+        "z": "2d7c98840bb5749d",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "8f96a3d4a150feb5"
+            ]
+        ]
+    },
+    {
+        "id": "8f96a3d4a150feb5",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40012_BIG",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 濕度 設定值",
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "d252b2543d333777",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 溫度 開關",
+        "label": "B 區 溫度 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "a129ad8d40876bbc"
+            ]
+        ]
+    },
+    {
+        "id": "322b93946493f157",
+        "type": "ui_switch",
+        "z": "2d7c98840bb5749d",
+        "name": "B 區 濕度 開關",
+        "label": "B 區 濕度 開關",
+        "tooltip": "",
+        "group": "e53497707776ce9e",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "b304ca3c5158d4da"
+            ]
+        ]
+    },
+    {
+        "id": "a129ad8d40876bbc",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40011",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 溫度 開關",
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "b304ca3c5158d4da",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=Application_UserPrg_D40012",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OPCUA_B 區 濕度 開關",
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "d30770c9ffe759f6"
+            ]
+        ]
+    },
+    {
+        "id": "43adeb04f3cce7d5",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 溫度  當前值",
+        "label": "B 區 溫度 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "04c20ab591eb1fc1",
+        "type": "ui_text",
+        "z": "2d7c98840bb5749d",
+        "group": "e53497707776ce9e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "B 區 濕度 當前值",
+        "label": "B 區 濕度 當前值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "e33257f3bccfc663",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_temperature",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 溫度 當前值",
+        "x": 370,
+        "y": 820,
+        "wires": [
+            [
+                "65419a5b3dcd1464"
+            ]
+        ]
+    },
+    {
+        "id": "65419a5b3dcd1464",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 820,
+        "wires": [
+            [
+                "43adeb04f3cce7d5"
+            ]
+        ]
+    },
+    {
+        "id": "997b3a6ed82f4fd4",
+        "type": "OpcUa-Item",
+        "z": "2d7c98840bb5749d",
+        "item": "ns=2;s=White_humidity",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_B 區 濕度 當前值",
+        "x": 370,
+        "y": 880,
+        "wires": [
+            [
+                "e14e36584826a3b3"
+            ]
+        ]
+    },
+    {
+        "id": "e14e36584826a3b3",
+        "type": "OpcUa-Client",
+        "z": "2d7c98840bb5749d",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 880,
+        "wires": [
+            [
+                "04c20ab591eb1fc1"
+            ]
+        ]
+    },
+    {
+        "id": "161c5b89f7e49c40",
+        "type": "ui_text_input",
+        "z": "d68afe890ad7ac49",
+        "name": "風機 C 設定轉速",
+        "label": "風機 C 設定轉速",
+        "tooltip": "",
+        "group": "c876e9ba6396a489",
+        "order": 0,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1440,
+        "y": 140,
+        "wires": [
+            [
+                "0fb419e30249ebf5"
+            ]
+        ]
+    },
+    {
+        "id": "0fb419e30249ebf5",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1450,
+        "y": 180,
+        "wires": [
+            [
+                "1f1d0eb73742ec70"
+            ]
+        ]
+    },
+    {
+        "id": "1f1d0eb73742ec70",
+        "type": "switch",
+        "z": "d68afe890ad7ac49",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1440,
+        "y": 220,
+        "wires": [
+            [
+                "c4a7837b12595393"
+            ],
+            [
+                "28e9482c99bcbd3c"
+            ]
+        ]
+    },
+    {
+        "id": "c4a7837b12595393",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 260,
+        "wires": [
+            [
+                "aa3b823fd1d3e4ab"
+            ]
+        ]
+    },
+    {
+        "id": "28e9482c99bcbd3c",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 300,
+        "wires": [
+            [
+                "aa3b823fd1d3e4ab"
+            ]
+        ]
+    },
+    {
+        "id": "aa3b823fd1d3e4ab",
+        "type": "function",
+        "z": "d68afe890ad7ac49",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 340,
+        "wires": [
+            [
+                "61e6cb135cc7824a"
+            ]
+        ]
+    },
+    {
+        "id": "61e6cb135cc7824a",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO3_Set_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 C 設定轉速",
+        "x": 1470,
+        "y": 380,
+        "wires": [
+            [
+                "1accfc7ab998e710"
+            ]
+        ]
+    },
+    {
+        "id": "78b1b6c4d307d636",
+        "type": "inject",
+        "z": "d68afe890ad7ac49",
+        "name": "Init with empty string",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "cad7460cea549d95",
+                "d2f884205d93a4dd",
+                "161c5b89f7e49c40",
+                "f5f799547698b59d",
+                "5e6bb2e1a32c99d6"
+            ]
+        ]
+    },
+    {
+        "id": "cad7460cea549d95",
+        "type": "ui_text_input",
+        "z": "d68afe890ad7ac49",
+        "name": "風機 A 設定轉速",
+        "label": "風機 A 設定轉速",
+        "tooltip": "",
+        "group": "c876e9ba6396a489",
+        "order": 0,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "b38c76cbdc4ca225"
+            ]
+        ]
+    },
+    {
+        "id": "d2f884205d93a4dd",
+        "type": "ui_text_input",
+        "z": "d68afe890ad7ac49",
+        "name": "風機 B 設定轉速",
+        "label": "風機 B 設定轉速",
+        "tooltip": "",
+        "group": "c876e9ba6396a489",
+        "order": 0,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1140,
+        "y": 140,
+        "wires": [
+            [
+                "21f191b9705813ba"
+            ]
+        ]
+    },
+    {
+        "id": "b38c76cbdc4ca225",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "1126543144e687e3"
+            ]
+        ]
+    },
+    {
+        "id": "1126543144e687e3",
+        "type": "switch",
+        "z": "d68afe890ad7ac49",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [
+                "d809973870fc618e"
+            ],
+            [
+                "df7fa5eac7ce2461"
+            ]
+        ]
+    },
+    {
+        "id": "d809973870fc618e",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "d0d20c0f91346d84"
+            ]
+        ]
+    },
+    {
+        "id": "df7fa5eac7ce2461",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "d0d20c0f91346d84"
+            ]
+        ]
+    },
+    {
+        "id": "d0d20c0f91346d84",
+        "type": "function",
+        "z": "d68afe890ad7ac49",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "57f09e207b45048c"
+            ]
+        ]
+    },
+    {
+        "id": "57f09e207b45048c",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO1_Set_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 A 設定轉速",
+        "x": 870,
+        "y": 380,
+        "wires": [
+            [
+                "1accfc7ab998e710"
+            ]
+        ]
+    },
+    {
+        "id": "21f191b9705813ba",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 180,
+        "wires": [
+            [
+                "74bb4adfc2544b78"
+            ]
+        ]
+    },
+    {
+        "id": "74bb4adfc2544b78",
+        "type": "switch",
+        "z": "d68afe890ad7ac49",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "80815979ee6f9543"
+            ],
+            [
+                "f76141f60b368941"
+            ]
+        ]
+    },
+    {
+        "id": "80815979ee6f9543",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 260,
+        "wires": [
+            [
+                "776e92859bfa7fbe"
+            ]
+        ]
+    },
+    {
+        "id": "f76141f60b368941",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 300,
+        "wires": [
+            [
+                "776e92859bfa7fbe"
+            ]
+        ]
+    },
+    {
+        "id": "776e92859bfa7fbe",
+        "type": "function",
+        "z": "d68afe890ad7ac49",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 340,
+        "wires": [
+            [
+                "21c64dd4e8ceec5a"
+            ]
+        ]
+    },
+    {
+        "id": "21c64dd4e8ceec5a",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO2_Set_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 B 設定轉速",
+        "x": 1170,
+        "y": 380,
+        "wires": [
+            [
+                "1accfc7ab998e710"
+            ]
+        ]
+    },
+    {
+        "id": "7f2fdfbacf7d88b5",
+        "type": "ui_text",
+        "z": "d68afe890ad7ac49",
+        "group": "c876e9ba6396a489",
+        "order": 7,
+        "width": "10",
+        "height": "1",
+        "name": "風機 C 目前轉速",
+        "label": "風機 C 目前轉速",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ca56d8b71f86e2b0",
+        "type": "ui_text",
+        "z": "d68afe890ad7ac49",
+        "group": "c876e9ba6396a489",
+        "order": 7,
+        "width": "10",
+        "height": "1",
+        "name": "負壓風機 A 目前轉速",
+        "label": "負壓風機 A 目前轉速",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 860,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7430047e86b0d626",
+        "type": "ui_text",
+        "z": "d68afe890ad7ac49",
+        "group": "c876e9ba6396a489",
+        "order": 7,
+        "width": "10",
+        "height": "1",
+        "name": "負壓風機 B 目前轉速",
+        "label": "負壓風機 B 目前轉速",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 860,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "842f631c29965d27",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO3_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 C 目前轉速",
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "62730e4cb81d7995"
+            ]
+        ]
+    },
+    {
+        "id": "62730e4cb81d7995",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "7f2fdfbacf7d88b5"
+            ]
+        ]
+    },
+    {
+        "id": "8410d2b8a187f341",
+        "type": "inject",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "842f631c29965d27",
+                "28a7ae4d06a0dbad",
+                "5e95d387be22c4ee",
+                "c28e73f4aba84864",
+                "06f8f8b63f7e69b5"
+            ]
+        ]
+    },
+    {
+        "id": "28a7ae4d06a0dbad",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fan1_W04",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 A 目前轉速",
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "2caf61bc08a0ec5d"
+            ]
+        ]
+    },
+    {
+        "id": "2caf61bc08a0ec5d",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 640,
+        "y": 760,
+        "wires": [
+            [
+                "ca56d8b71f86e2b0"
+            ]
+        ]
+    },
+    {
+        "id": "5e95d387be22c4ee",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fan2_W04",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 B 目前轉速",
+        "x": 390,
+        "y": 820,
+        "wires": [
+            [
+                "1c7d5d66fe2ef26c"
+            ]
+        ]
+    },
+    {
+        "id": "1c7d5d66fe2ef26c",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "7430047e86b0d626"
+            ]
+        ]
+    },
+    {
+        "id": "429e2b688f4d982d",
+        "type": "ui_text",
+        "z": "d68afe890ad7ac49",
+        "group": "c876e9ba6396a489",
+        "order": 7,
+        "width": "10",
+        "height": "1",
+        "name": "風機 A 目前轉速",
+        "label": "風機 A 目前轉速",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "16c78b02e2ce29fb",
+        "type": "ui_text",
+        "z": "d68afe890ad7ac49",
+        "group": "c876e9ba6396a489",
+        "order": 7,
+        "width": "10",
+        "height": "1",
+        "name": "風機 B 目前轉速",
+        "label": "風機 B 目前轉速",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "06f8f8b63f7e69b5",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO1_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 A 目前轉速",
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "b6e823db346a5c46"
+            ]
+        ]
+    },
+    {
+        "id": "b6e823db346a5c46",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "429e2b688f4d982d"
+            ]
+        ]
+    },
+    {
+        "id": "c28e73f4aba84864",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO2_Current_speed",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 B 目前轉速",
+        "x": 370,
+        "y": 700,
+        "wires": [
+            [
+                "079a517af725d24c"
+            ]
+        ]
+    },
+    {
+        "id": "079a517af725d24c",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "16c78b02e2ce29fb"
+            ]
+        ]
+    },
+    {
+        "id": "1accfc7ab998e710",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 860,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "282893875caba3aa",
+        "type": "ui_led",
+        "z": "d68afe890ad7ac49",
+        "order": 0,
+        "group": "f2a3a86c6c5687ae",
+        "width": "10",
+        "height": "2",
+        "label": "風機 A 狀態",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 A 狀態",
+        "x": 850,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "2c83c4361b0a0723",
+        "type": "ui_led",
+        "z": "d68afe890ad7ac49",
+        "order": 0,
+        "group": "f2a3a86c6c5687ae",
+        "width": "10",
+        "height": "2",
+        "label": "風機 B 狀態",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 B 狀態",
+        "x": 850,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "f70a1db220c0fa96",
+        "type": "ui_led",
+        "z": "d68afe890ad7ac49",
+        "order": 0,
+        "group": "f2a3a86c6c5687ae",
+        "width": "10",
+        "height": "2",
+        "label": "風機 C 狀態",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "風機 C 狀態",
+        "x": 850,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "514c041b6965c5cd",
+        "type": "inject",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "2967036e4a0cf59f",
+                "da4f7e62cd809a8c",
+                "2734ce63d1be58d6",
+                "18afbb3aa79c62e9",
+                "c4d93a2fc9733722"
+            ]
+        ]
+    },
+    {
+        "id": "2967036e4a0cf59f",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO3_RUN_STOP",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 C  狀態",
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            [
+                "a83c2cc5c6fe56af"
+            ]
+        ]
+    },
+    {
+        "id": "a83c2cc5c6fe56af",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [
+                "f70a1db220c0fa96"
+            ]
+        ]
+    },
+    {
+        "id": "2734ce63d1be58d6",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO1_RUN_STOP",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 A  狀態",
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "e04622a0302cb338"
+            ]
+        ]
+    },
+    {
+        "id": "da4f7e62cd809a8c",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=NO2_RUN_STOP",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_風機 B  狀態",
+        "x": 360,
+        "y": 960,
+        "wires": [
+            [
+                "3cf37643b21a6d36"
+            ]
+        ]
+    },
+    {
+        "id": "e04622a0302cb338",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 920,
+        "wires": [
+            [
+                "282893875caba3aa"
+            ]
+        ]
+    },
+    {
+        "id": "3cf37643b21a6d36",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 960,
+        "wires": [
+            [
+                "2c83c4361b0a0723"
+            ]
+        ]
+    },
+    {
+        "id": "0c2f7ab3bd8bb545",
+        "type": "ui_led",
+        "z": "d68afe890ad7ac49",
+        "order": 0,
+        "group": "f2a3a86c6c5687ae",
+        "width": "10",
+        "height": "2",
+        "label": "負壓風機 A 狀態",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "負壓風機 A 狀態",
+        "x": 860,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "e08869a0b59c8848",
+        "type": "ui_led",
+        "z": "d68afe890ad7ac49",
+        "order": 0,
+        "group": "f2a3a86c6c5687ae",
+        "width": "10",
+        "height": "2",
+        "label": "負壓風機 B 狀態",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#9e9e9e",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "負壓風機 B 狀態",
+        "x": 860,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "c4d93a2fc9733722",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fan2_S06",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 B  狀態",
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            [
+                "4a4ccadd0011a129"
+            ]
+        ]
+    },
+    {
+        "id": "4a4ccadd0011a129",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1080,
+        "wires": [
+            [
+                "e08869a0b59c8848"
+            ]
+        ]
+    },
+    {
+        "id": "18afbb3aa79c62e9",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fa1_S06",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 A  狀態",
+        "x": 370,
+        "y": 1040,
+        "wires": [
+            [
+                "a53099e155224a69"
+            ]
+        ]
+    },
+    {
+        "id": "a53099e155224a69",
+        "type": "OpcUa-Client",
+        "z": "d68afe890ad7ac49",
+        "endpoint": "6a61fac97bf6f7d1",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 1040,
+        "wires": [
+            [
+                "0c2f7ab3bd8bb545"
+            ]
+        ]
+    },
+    {
+        "id": "f5f799547698b59d",
+        "type": "ui_text_input",
+        "z": "d68afe890ad7ac49",
+        "name": "負壓風機 A 設定轉速",
+        "label": "負壓風機 A 設定轉速",
+        "tooltip": "",
+        "group": "c876e9ba6396a489",
+        "order": 0,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "4f4e03eafe943f58"
+            ]
+        ]
+    },
+    {
+        "id": "5e6bb2e1a32c99d6",
+        "type": "ui_text_input",
+        "z": "d68afe890ad7ac49",
+        "name": "負壓風機 B 設定轉速",
+        "label": "負壓風機 B 設定轉速",
+        "tooltip": "",
+        "group": "c876e9ba6396a489",
+        "order": 0,
+        "width": "10",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "52aed0bfc2425290"
+            ]
+        ]
+    },
+    {
+        "id": "4f4e03eafe943f58",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "f9bbf02ea05fc2d0"
+            ]
+        ]
+    },
+    {
+        "id": "f9bbf02ea05fc2d0",
+        "type": "switch",
+        "z": "d68afe890ad7ac49",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "99cbaa1bf9d26af1"
+            ],
+            [
+                "6a86513f9804708e"
+            ]
+        ]
+    },
+    {
+        "id": "99cbaa1bf9d26af1",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "003b803605d0e19b"
+            ]
+        ]
+    },
+    {
+        "id": "6a86513f9804708e",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "003b803605d0e19b"
+            ]
+        ]
+    },
+    {
+        "id": "003b803605d0e19b",
+        "type": "function",
+        "z": "d68afe890ad7ac49",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "4d7fd4577db149a7"
+            ]
+        ]
+    },
+    {
+        "id": "4d7fd4577db149a7",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fan1_S05",
+        "datatype": "Int16",
+        "value": "",
+        "name": "OPCUA_負壓風機 A 設定轉速",
+        "x": 250,
+        "y": 380,
+        "wires": [
+            [
+                "1accfc7ab998e710"
+            ]
+        ]
+    },
+    {
+        "id": "52aed0bfc2425290",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "textInput",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "b9778f53c385019c"
+            ]
+        ]
+    },
+    {
+        "id": "b9778f53c385019c",
+        "type": "switch",
+        "z": "d68afe890ad7ac49",
+        "name": "is text empty?",
+        "property": "textInput",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "47f85d07256497da"
+            ],
+            [
+                "6e900bab969d122e"
+            ]
+        ]
+    },
+    {
+        "id": "47f85d07256497da",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "6290c1ad84935b0a"
+            ]
+        ]
+    },
+    {
+        "id": "6e900bab969d122e",
+        "type": "change",
+        "z": "d68afe890ad7ac49",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "6290c1ad84935b0a"
+            ]
+        ]
+    },
+    {
+        "id": "6290c1ad84935b0a",
+        "type": "function",
+        "z": "d68afe890ad7ac49",
+        "name": "Get data",
+        "func": "status = msg.enabled\ndata = msg.payload\n\nif (status == true){\n    msg.data = data\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "78b41202cd6f4eb4"
+            ]
+        ]
+    },
+    {
+        "id": "78b41202cd6f4eb4",
+        "type": "OpcUa-Item",
+        "z": "d68afe890ad7ac49",
+        "item": "ns=2;s=Fan2_S05",
+        "datatype": "Int16",
+        "value": "",
+        "name": "負壓風機 B 設定轉速",
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "1accfc7ab998e710"
+            ]
+        ]
+    }
+]

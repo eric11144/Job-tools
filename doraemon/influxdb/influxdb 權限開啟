@@ -1,0 +1,5 @@
+如果是將舊的 influxdb 複製回新的機器
+
+需要開啟 influxdb 權限
+
+sudo chown -R 999 influxdb/var/lib/influxdb

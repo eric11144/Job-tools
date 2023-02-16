@@ -1,0 +1,84 @@
+[
+    {
+        "id": "8a0f0d86.42c14",
+        "type": "tab",
+        "label": "send barcode to virtaul equipment",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1a2b5069.149d1",
+        "type": "qi-chameleon-source",
+        "z": "8a0f0d86.42c14",
+        "name": "",
+        "deviceId": "barcode-scanner",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "b0f35411.0fa968"
+            ]
+        ]
+    },
+    {
+        "id": "b0f35411.0fa968",
+        "type": "function",
+        "z": "8a0f0d86.42c14",
+        "name": "send to virtual device test_1",
+        "func": "var a = msg.payload.channels[\"barcode\"]\nvar at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": \"test_1\",\n    \"at\": at,\n    \"channels\": {\n        \"barcode\": a\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "a06190f8.a1044"
+            ]
+        ]
+    },
+    {
+        "id": "a06190f8.a1044",
+        "type": "qi-chameleon-sink",
+        "z": "8a0f0d86.42c14",
+        "name": "",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b5013673.6130b8",
+        "type": "inject",
+        "z": "8a0f0d86.42c14",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "1e218130.7bfd6f"
+            ]
+        ]
+    },
+    {
+        "id": "1e218130.7bfd6f",
+        "type": "function",
+        "z": "8a0f0d86.42c14",
+        "name": "send to virtual device test_1",
+        "func": "const now = new Date()  \nconst at = Math.round(now.getTime() / 1000)  \nvar barcode = ['111111', '211112', '311113', '411114', '511115', '611116']\nvar item = barcode[Math.floor(Math.random() * barcode.length)];\n\nmsg.payload = {\n    \"deviceId\": \"test_1\",\n    \"at\": {\n        \"sec\": at,\n        \"us\": 0\n    },\n    \"channels\": {\n        \"barcode\": item\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "a06190f8.a1044"
+            ]
+        ]
+    }
+]

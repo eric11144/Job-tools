@@ -1,0 +1,15 @@
+https://hub.docker.com/r/t0rx/rpi-docker-compose/
+
+Short Description
+Image of docker/fig (Docker Compose) built for Raspberry Pi
+Full Description
+Built as per https://gist.github.com/oysteinjakobsen/e59cdd38a688ee8a418a, but changing the FROM line of the DockerFile to be FROM resin/rpi-raspbian:jessie.
+
+After building/pulling this docker image, to use it as a normal command do:
+$ curl -L https://github.com/docker/compose/releases/download/1.7.1/run.sh > /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+Edit the file to change the IMAGE line to be:
+IMAGE=”t0rx/rpi-docker-compose:latest”
+
+Now try it:
+$ docker-compose --version

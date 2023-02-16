@@ -1,0 +1,6715 @@
+openapi: 3.0.0
+servers:
+- url: 'http://hostname/api/v1'
+
+info:
+  title: Chameleon API
+  description: |
+    Chameleon Application Interface
+  version: 2.50.1
+
+tags:
+- name: Gateway
+- name: Server
+- name: BARCODE
+- name: FINS
+- name: MELSEC
+- name: MEWTOCOL
+- name: MODBUS
+- name: STEP7
+- name: VIRTUAL
+- name: MODBUS GATEWAY
+- name: History Data
+- name: CSV
+- name: Equipment Status
+- name: Safebox
+
+paths:
+  /config/barcode/configuration:
+    get:
+      summary: Get Barcode Scanner Configuration.
+      description: Get barcode scanner configuration.
+      tags:
+      - BARCODE
+      - Gateway
+      responses:
+        '200':
+          description: The content of barcode scanner configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BarcodeScannerConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update Barcode Scanner Configuration.
+      description: Update barcode scanner configuration.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - BARCODE
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BarcodeScannerConfiguration'
+        required: true
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BarcodeScannerConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /config/fins/equipments:
+    get:
+      summary: Get FINS Equipment Configuration
+      description: |
+        Get Equipments that are under polling.
+      tags:
+      - FINS
+      - Gateway
+      responses:
+        '200':
+          description: An array of FinsPollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinsPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update FINS Equipment Configuration
+      description: |
+        Update Equipments that are under polling.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinsPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/FinsPolling'
+        description: An array of FinsPollings
+        required: true
+
+  /config/fins/templates:
+    get:
+      summary: Get FINS Equipment Template List
+      description: |
+        Get FINS Equipment Template List.
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of FinsTemplates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinsTemplate'
+    post:
+      summary: Create FINS Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      responses:
+        '201':
+          description: Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/FinsTemplate'
+
+  '/config/fins/templates/{templateId}':
+    get:
+      summary: Get FINS Equipment Template
+      description: |
+        Get FINS Equipment Template.
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A FinsTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinsTemplate'
+    put:
+      summary: Update FINS Equipment Template
+      description: |
+        Update FINS Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A FinsTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinsTemplate'
+      requestBody:
+        $ref: '#/components/requestBodies/FinsTemplate'
+    delete:
+      summary: Delete FINS Equipment Template
+      description: |
+        Delete FINS Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/fins/templates/{templateId}/xlsx':
+    get:
+      summary: Download FINS Equipment Template
+      description: |
+        Download FINS Equipment Template in `*.xlsx` format.
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload FINS Equipment Template
+      description: |
+        Upload FINS Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+
+  '/config/fins/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty FINS Equipment Template
+      description: |
+        Download Empty FINS Equipment Template in `*.xlsx` format.
+      tags:
+      - FINS
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+
+  /config/melsec/equipments:
+    get:
+      summary: Get MELSEC Equipment Configuration
+      description: |
+        Get Equipments that are under polling.
+      tags:
+      - MELSEC
+      - Gateway
+      responses:
+        '200':
+          description: An array of MelsecPollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MelsecPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update MELSEC Equipment Configuration
+      description: |
+        Update Equipments that are under polling.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MelsecPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MelsecPolling'
+        description: An array of MelsecPollings
+        required: true
+
+  /config/melsec/templates:
+    get:
+      summary: Get MELSEC Equipment Template List
+      description: |
+        Get MELSEC Equipment Template List.
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of MelsecTemplates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MelsecTemplate'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create MELSEC Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      responses:
+        '201':
+          description: Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/MelsecTemplate'
+
+  '/config/melsec/templates/{templateId}':
+    get:
+      summary: Get MELSEC Equipment Template
+      description: |
+        Get MELSEC Equipment Template.
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A MelsecTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MelsecTemplate'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update MELSEC Equipment Template
+      description: |
+        Update MELSEC Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MelsecTemplate'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/MelsecTemplate'
+    delete:
+      summary: Delete MELSEC Equipment Template
+      description: |
+        Delete MELSEC Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/melsec/templates/{templateId}/xlsx':
+    get:
+      summary: Download MELSEC Equipment Template
+      description: |
+        Download MELSEC Equipment Template in `*.xlsx` format.
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload MELSEC Equipment Template
+      description: |
+        Upload MELSEC Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+
+  '/config/melsec/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty MELSEC Equipment Template
+      description: |
+        Download Empty MELSEC Equipment Template in `*.xlsx` format.
+      tags:
+      - MELSEC
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+
+  /config/mewtocol/equipments:
+    get:
+      summary: Get MEWTOCOL Equipment Configuration
+      description: |
+        Get Equipments that are under polling.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      responses:
+        '200':
+          description: An array of MewtocolPollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MewtocolPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update MEWTOCOL Equipment Configuration
+      description: |
+        Update Equipments that are under polling.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MewtocolPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MewtocolPolling'
+        description: An array of MewtocolPollings.
+        required: true
+
+  /config/mewtocol/templates:
+    get:
+      summary: Get MEWTOCOL Equipment Template List
+      description: |
+        Get MEWTOCOL Equipment Template List.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of MewtocolTemplates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MewtocolTemplate'
+    post:
+      summary: Create MEWTOCOL Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      responses:
+        '201':
+          description: Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/MewtocolTemplate'
+
+  '/config/mewtocol/templates/{templateId}':
+    get:
+      summary: Get MEWTOCOL Equipment Template
+      description: |
+        Get MEWTOCOL Equipment Template.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A MewtocolTemplate
+          content:
+            application:json:
+              schema:
+                $ref: '#/components/schemas/MewtocolTemplate'
+    put:
+      summary: Update MEWTOCOL Equipment Template
+      description: |
+        Update MEWTOCOL Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A MewtocolTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MewtocolTemplate'
+      requestBody:
+        $ref: '#/components/requestBodies/MewtocolTemplate'
+    delete:
+      summary: Delete MEWTOCOL Equipment Template
+      description: |
+        Delete MEWTOCOL Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  '/config/mewtocol/templates/{templateId}/xlsx':
+    get:
+      summary: Download MEWTOCOL Equipment Template
+      description: |
+        Download MEWTOCOL Equipment Template in `*.xlsx` format.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload MEWTOCOL Equipment Template
+      description: |
+        Upload MEWTOCOL Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+
+  '/config/mewtocol/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty MEWTOCOL Equipment Template
+      description: |
+        Download Empty MEWTOCOL Equipment Template in `*.xlsx` format.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+
+  /config/modbus/equipments:
+    get:
+      summary: Get Modbus Equipment Configuration
+      description: |
+        Get Equipments that are under polling.
+      tags:
+      - MODBUS
+      - Gateway
+      responses:
+        '200':
+          description: An array of ModbusPollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update Modbus Equipment Configuration
+      description: |
+        Update Equipments that are under polling.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      responses:
+        '200':
+          description: Update success.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusPolling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/ModbusPolling'
+        description: An array of ModbusPollings.
+        required: true
+
+  /config/modbus/templates:
+    get:
+      summary: Get Modbus Equipment Template List
+      description: |
+        Get Modbus Equipment Template List.
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of ModbusTemplates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusTemplate'
+    post:
+      summary: Create Modbus Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      responses:
+        '201':
+          description: Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/ModbusTemplate'
+
+  '/config/modbus/templates/{templateId}':
+    get:
+      summary: Get Modbus Equipment Template
+      description: |
+        Get Modbus Equipment Template.
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A ModbusTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModbusTemplate'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update Modbus Equipment Template
+      description: |
+        Update Modbus Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A ModbusTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModbusTemplate'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/ModbusTemplate'
+    delete:
+      summary: Delete Modbus Equipment Template
+      description: |
+        Delete Modbus Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/modbus/templates/{templateId}/xlsx':
+    get:
+      summary: Download MODBUS Equipment Template
+      description: |
+        Download MODBUS Equipment Template in `*.xlsx` format.
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload MODBUS Equipment Template
+      description: |
+        Upload MODBUS Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+
+  '/config/modbus/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty MODBUS Equipment Template
+      description: |
+        Download Empty MODBUS Equipment Template in `*.xlsx` format.
+      tags:
+      - MODBUS
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+
+  '/config/step7/equipments':
+    get:
+      summary: Get STEP7 Equipment Configuration
+      description: |
+        Get Equipments that are under polling.
+      tags:
+      - STEP7
+      - Gateway
+      responses:
+        '200':
+          description: An array of Step7Pollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Step7Polling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update STEP7 Equipment Configuration
+      description: |
+        Update Equipments that are under polling.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Step7Polling'
+        required: true
+      responses:
+        '200':
+          description: An array of Step7Pollings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Step7Polling'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/step7/templates':
+    get:
+      summary: Get STEP7 Equipment Template List
+      description: |
+        Get STEP7 Equipment Template List.
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of Step7Templates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Step7Template'
+    post:
+      summary: Create STEP7 Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/Step7Template'
+      responses:
+        '201':
+          description: |
+            Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/step7/templates/{templateId}':
+    get:
+      summary: Get STEP7 Equipment Template
+      description: |
+        Get STEP7 Equipment Template.
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            A Step7Template.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Step7Template'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update STEP7 Equipment Template
+      description: |
+        Update STEP7 Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      requestBody:
+        $ref: '#/components/requestBodies/Step7Template'
+      responses:
+        '200':
+          description: |
+            A Step7Template.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Step7Template'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete STEP7 Equipment Template
+      description: |
+        Delete STEP7 Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/step7/templates/{templateId}/xlsx':
+    get:
+      summary: Download STEP7 Equipment Template
+      description: |
+        Download STEP7 Equipment Template in `*.xlsx` format.
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload STEP7 Equipment Template
+      description: |
+        Upload STEP7 Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/step7/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty STEP7 Equipment Template
+      description: |
+        Download Empty STEP7 Equipment Template in `*.xlsx` format.
+      tags:
+      - STEP7
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+
+  /config/readings/filter:
+    get:
+      summary: Get Readings filter configuration
+      description: |
+        Get Readings filter configuration.
+      tags:
+      - Misc
+      - Server
+      responses:
+        '200':
+          description: |
+            Return Readings filter configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadingsFilterConfiguration'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+    put:
+      summary: Update Readings filter configuration
+      description: |
+        Update Readings filter configuration.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Server
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReadingsFilterConfiguration'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return Readings filter configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadingsFilterConfiguration'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+
+  '/diagnose/fins':
+    post:
+      summary: Check FINS connection parameters.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - FINS
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - connection
+              properties:
+                connection:
+                  $ref: '#/components/schemas/FinsConnection'
+                commands:
+                  type: array
+                  minItems: 1
+                  items:
+                    $ref: '#/components/schemas/FinsCommand'
+                  default:
+                  - command: 'read-word'
+                    wordAddress:
+                    - memoryArea: 'D'
+                      address: 0
+                      quantity: 1
+                requestTimeoutMS:
+                  type: integer
+                  default: 300
+        required: true
+      responses:
+        '200':
+          description: |
+            Check success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnoseFinsResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/diagnose/melsec':
+    post:
+      summary: Check MELSEC connection parameters.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MELSEC
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - connection
+              - protocol
+              properties:
+                connection:
+                  $ref: '#/components/schemas/MelsecConnection'
+                protocol:
+                  $ref: '#/components/schemas/MelsecProtocol'
+                stationNo:
+                  type: integer
+                  description: |
+                    Only take effect when using `1C`, `4C` protocol format.
+                  default: 0
+                  minimum: 0
+                  maximum: 31
+                commands:
+                  type: array
+                  minItems: 1
+                  items:
+                    $ref: '#/components/schemas/MelsecCommand'
+                  default:
+                  - command: 'read-word'
+                    registerType: 'D'
+                    address: 0
+                    quantity: 1
+                requestTimeoutMS:
+                  type: integer
+                  default: 300
+        required: true
+      responses:
+        '200':
+          description: |
+            Check success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnoseMelsecResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/diagnose/mewtocol':
+    post:
+      summary: Check MEWTOCOL connection parameters.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MEWTOCOL
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - connection
+              properties:
+                connection:
+                  $ref: '#/components/schemas/MewtocolConnection'
+                stationNo:
+                  type: integer
+                  default: 1
+                  minimum: 1
+                  maximum: 32
+                commands:
+                  type: array
+                  minItems: 1
+                  items:
+                    $ref: '#/components/schemas/MewtocolCommand'
+                  default:
+                  - command: 'read-word'
+                    wordArea:
+                      area: 'X0'
+                      length: 1
+                requestTimeoutMS:
+                  type: integer
+                  default: 300
+        required: true
+      responses:
+        '200':
+          description: |
+            Check success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnoseMewtocolResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/diagnose/modbus':
+    post:
+      summary: Check MODBUS connection parameters.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - connection
+              - slaveid
+              properties:
+                connection:
+                  $ref: '#/components/schemas/Endpoint'
+                slaveid:
+                  type: integer
+                  minimum: 0
+                  maximum: 247
+                commands:
+                  type: array
+                  minItems: 1
+                  items:
+                    $ref: '#/components/schemas/ModbusCommand'
+                  default:
+                  - command: 'read-coils'
+                    address: 0
+                    quantity: 1
+                requestTimeoutMS:
+                  type: integer
+                  default: 300
+        required: true
+      responses:
+        '200':
+          description: |
+            Check success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnoseModbusResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/diagnose/step7':
+    post:
+      summary: Check STEP7 connection parameters.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - STEP7
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - connection
+              properties:
+                connection:
+                  $ref: '#/components/schemas/Step7Connection'
+                commands:
+                  type: array
+                  minItems: 1
+                  items:
+                    $ref: '#/components/schemas/Step7Command'
+                  default:
+                  - command: 'read'
+                    address: 'DB1.DBW0'
+                    length: 1
+                requestTimeoutMS:
+                  type: integer
+                  default: 300
+        required: true
+      responses:
+        '200':
+          description: |
+            Check success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnoseStep7Response'
+
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /modbusgateways:
+    get:
+      summary: Get Modbus Gateway configurations
+      tags:
+      - MODBUS GATEWAY
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Return Modbus Gateway configuration list.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusGatewayConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update Modbus Gateway configurations
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - MODBUS GATEWAY
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/ModbusGatewayConfiguration'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return Modbus Gateway configuration list.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusGatewayConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /qold/config:
+    get:
+      summary: Get configuration
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Returns configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QoldConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update configuration
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/QoldConfiguration'
+      responses:
+        '200':
+          description: |
+            Returns configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QoldConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /qold/flush:
+    post:
+      summary: Flush history data files that are still open.
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      responses:
+        '204':
+          description: Flush success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /qold/devices:
+    get:
+      summary: Get devices list.
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: Return a list of devices.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/QoldDevice'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/qold/devices/{deviceId}/dates':
+    get:
+      summary: Get dates list of the device.
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: Return a list of dates.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Date'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/qold/devices/{deviceId}/dates/{datetime}.csv.gz':
+    get:
+      summary: 'Get history data.'
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: Return a file.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.csv.gz"`
+              schema:
+                type: string
+          content:
+            application/json: {}
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: 'Update history data. (maintainer only)'
+      description: |
+        Upload history data in `*.csv.gz` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/deviceId'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+      responses:
+        '204':
+          description: Upload success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: 'Delete history data. (maintainer only)'
+      description: |
+        Delete history data in `*.csv.gz` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - CSV
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /status/devices:
+    get:
+      summary: Get device status.
+      description: |
+        Provide latest status of all devices from gateway.
+      tags:
+      - Equipment Status
+      - Server
+      responses:
+        '200':
+          description: |
+            Return status of all devices.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DeviceStatus'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+
+  /status/equipments:
+    get:
+      summary: Get equipment status.
+      description: |
+        Provide latest equipment status.
+        Unlike `/status/devices`, only devices configured in
+          `/config/barcode/configuration` and `/config/*/equipments` APIs are
+          returned.
+      tags:
+      - Equipment Status
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return status of all equipments.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EquipmentStatus'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/status/equipments/{equipmentId}':
+    get:
+      summary: Get equipment status.
+      description: |
+        Provide latest equipment status.
+      tags:
+      - Equipment Status
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/equipmentId'
+      responses:
+        '200':
+          description: |
+            Return equipment status.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EquipmentStatus'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/safeboxes':
+    get:
+      summary: Get a list of all SafeBox IDs.
+      description: |
+        Get a list of all SafeBox IDs.
+      tags:
+      - Safebox
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of Box IDs.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SafeboxId'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/safeboxes/{safeboxId}':
+    get:
+      summary: Get specific Safe Box content.
+      description: |
+        Get specific Safe Box content.
+      tags:
+      - Safebox
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/safeboxId'
+      responses:
+        '200':
+          description: |
+            Safe Box content.
+          headers:
+            Last-Modified:
+              description: |
+                Last modification date of content.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          description: |
+            Safe Box not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update specific Safe Box content.
+      description: |
+        Update specific Safe box content.
+      tags:
+      - Safebox
+      - Gateway
+      - Server
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      parameters:
+      - $ref: '#/components/parameters/safeboxId'
+      responses:
+        '200':
+          description: |
+            Safe Box content.
+          headers:
+            Last-Modified:
+              description: |
+                Last modification date of content.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete specific Safe Box content.
+      description: |
+        Delete specific Safe box content.
+      tags:
+      - Safebox
+      - Gateway
+      - Server
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      parameters:
+      - $ref: '#/components/parameters/safeboxId'
+      responses:
+        '204':
+          description: |
+            Delete success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /environment:
+    get:
+      summary: Get runtime environment configuration.
+      description: |
+        Provide runtime environment configurations.
+      tags:
+      - Misc
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Return runtime environment configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Environment'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /server/environment:
+    get:
+      summary: Get server runtime environment configuration.
+      description: |
+        Provide runtime environment configurations.
+      tags:
+      - Misc
+      - Server
+      responses:
+        '200':
+          description: |
+            Return runtime environment configuration.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerEnvironment'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system:
+    get:
+      summary: Provide system status.
+      description: |
+        Provide system status.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return system status.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/System'
+
+  /auth:
+    post:
+      summary: Get JWT token.
+      description: |
+        Obtain JWT token.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Get token success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/AuthRequest'
+
+  /auth/refresh:
+    post:
+      summary: Refresh JWT token.
+      description: |
+        Refresh JWT token. Set valid refresh token to Authorization header.
+      security:
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Refresh token success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /password:
+    put:
+      summary: Update password.
+      description: |
+        Update password.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Change password success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PasswordRequest'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/PasswordRequest'
+
+  /config/system/connectivity:
+    get:
+      summary: Get system connectivity.
+      description: |
+        Show system connectivity.
+      tags:
+      - Misc
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Return system connectivity.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Connectivity'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update system connectivity.
+      description: |
+        Set system connectivity. (Should restart Chameleon after modified.)
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Connectivity'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return system connectivity.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Connectivity'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+
+  /config/system/ntp:
+    get:
+      summary: Get system NTP server.
+      description: |
+        Show system NTP server.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return system NTP server.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NtpConfiguration'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update system NTP server.
+      description: |
+        Set system NTP server.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NtpConfiguration'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return system NTP server.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NtpConfiguration'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+
+  /config/system/network/eth0:
+    get:
+      summary: Get system eth0 network info.
+      description: |
+        Get system eth0 network info.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return eth0 network info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EthernetConfig'
+    put:
+      summary: Set system eth0 network.
+      description: |
+        Updated configuration will take effect after next reboot.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/EthernetConfigRequest'
+      responses:
+        '200':
+          description: |
+            Change system eth0 network success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EthernetConfig'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /config/system/network/eth1:
+    get:
+      summary: Get system eth1 network info.
+      description: |
+        Get system eth1 network info.
+      tags:
+      - Misc
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Return eth1 network info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EthernetConfig'
+    put:
+      summary: Set system eth1 network.
+      description: |
+        Updated configuration will take effect after next reboot.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      requestBody:
+        $ref: '#/components/requestBodies/EthernetConfigRequest'
+      responses:
+        '200':
+          description: |
+            Change system eth1 network success.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EthernetConfig'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /config/system/serial:
+    get:
+      description: |
+        Get system serial setting.
+      tags:
+      - Misc
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Serial setting.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SerialConfiguration'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      description: |
+        Update system serial setting.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      responses:
+        '200':
+          description: |
+            Serial setting.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SerialConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SerialConfiguration'
+        required: true
+
+  /devices:
+    get:
+      description: |
+        Get device information list.
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Returns device list.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Device'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}':
+    get:
+      description: |
+        Get device information.
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: |
+            Return device information.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    delete:
+      description: |
+        Delete device.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '204':
+          description: |
+            Device deleted.
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}/channels':
+    get:
+      description: |
+        Get channel list under the device.
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: |
+            Return channel information list.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Channel'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}/channels/{channelId}':
+    get:
+      description: |
+        Get channel information.
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      - $ref: '#/components/parameters/channelId'
+      responses:
+        '200':
+          description: |
+            If successful, this method returns a Channel resource in the
+            response body.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Channel'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}/channels/{channelId}/data':
+    get:
+      description: list one or more data of channel
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      - $ref: '#/components/parameters/channelId'
+      - $ref: '#/components/parameters/since'
+      - $ref: '#/components/parameters/until'
+      - $ref: '#/components/parameters/pageSize'
+      - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          description: |
+            Return channel-data.
+          headers:
+            Link:
+              description: |
+                Link to next page.
+
+                `Link:
+                https://HOST/devices/DEVICE/channels/CHANNEL/data?since=SINCE&until=UNTIL&pageSize=100&sort=DESC;
+                rel="next"`.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: array
+                description: A list of resources.
+                items:
+                  $ref: '#/components/schemas/Data'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}/channels/latest-data':
+    get:
+      description: list latest data of channels
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: |
+            Returns a list data resource in the response body.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChannelData'
+        default:
+          description: |
+            Unexpecteed error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/devices/{deviceId}/query':
+    post:
+      description: |
+        Query one or more data by designated channels. Query one or more data by all channels without designated channels.
+      tags:
+      - History Data
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      responses:
+        '200':
+          description: |
+            A list of resources.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompoundDataResponse'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/CompoundDataRequest'
+
+  /config/virtual/equipments:
+    get:
+      summary: Get virtual equipment-list configuration
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return virtual equipment-list configuration.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VirtualEquipmentConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update virtual equipment-list configuration
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/VirtualEquipmentConfiguration'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return virtual equipment-list configuration.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VirtualEquipmentConfiguration'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /config/virtual/templates:
+    get:
+      summary: Get Virtual Equipment Template List
+      description: |
+        Get Virtual Equipment Template List.
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: An array of VirtualTemplates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VirtualTemplate'
+    post:
+      summary: Create Virtual Equipment Template
+      description: |
+        Create new Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      responses:
+        '201':
+          description: Equipment Template created successfully.
+          headers:
+            Location:
+              description: URL to the created resource.
+              schema:
+                type: string
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/VirtualTemplate'
+
+  '/config/virtual/templates/{templateId}':
+    get:
+      summary: Get Virtual Equipment Template
+      description: |
+        Get Virtual Equipment Template.
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A VirtualTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualTemplate'
+    put:
+      summary: Update Virtual Equipment Template
+      description: |
+        Update Virtual Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: A VirtualTemplate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualTemplate'
+      requestBody:
+        $ref: '#/components/requestBodies/VirtualTemplate'
+    delete:
+      summary: Delete Virtual Equipment Template
+      description: |
+        Delete Virtual Equipment Template.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: Delete success.
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  '/config/virtual/templates/{templateId}/xlsx':
+    get:
+      summary: Download Virtual Equipment Template
+      description: |
+        Download Virtual Equipment Template in `*.xlsx` format.
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="FILENAME.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Upload Virtual Equipment Template
+      description: |
+        Upload Virtual Equipment Template in `*.xlsx` format.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/templateId'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+
+  '/config/virtual/templates/_empty_/xlsx':
+    get:
+      summary: Download Empty Virtual Equipment Template
+      description: |
+        Download Empty Virtual Equipment Template in `*.xlsx` format.
+      tags:
+      - VIRTUAL
+      - Gateway
+      responses:
+        '200':
+          description: |
+            File in `*.xlsx` format.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="_EMPTY_.xlsx"`
+              schema:
+                type: string
+          content:
+            application/octet-stream: {}
+            application/json: {}
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /virtual/devices/{deviceId}/update-reading:
+    post:
+      summary: Update readings.
+      description: |
+        Update Virtual Device readings.
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVirtualReading'
+        required: true
+      responses:
+        '204':
+          description:
+            Update success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /virtual/devices/{deviceId}/update-readings:
+    post:
+      summary: Update readings.
+      description: |
+        Update multiple Virtual Device readings one time.
+      tags:
+      - VIRTUAL
+      - Gateway
+      - Server
+      parameters:
+      - $ref: '#/components/parameters/deviceId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/UpdateVirtualReading'
+        required: true
+      responses:
+        '204':
+          description:
+            Update success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system/shutdown/schedule:
+    get:
+      summary: Get shutdown schedule.
+      description: |
+        Get shutdown schedule.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Shutdown schedule.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShutdownSchedule'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update shutdown schedule.
+      description: |
+        Update shutdown schedule.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Shutdown schedule.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShutdownSchedule'
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ShutdownSchedule'
+        required: true
+
+  /system/shutdown/now:
+    post:
+      summary: Shutdown IPC
+      description: |
+        Shutdown IPC.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '202':
+          description: A Shutdown Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShutdownResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        $ref: '#/components/requestBodies/ShutdownRequest'
+
+  /system/factory-reset:
+    post:
+      summary: Factory reset.
+      description: |
+        Reset IPC to factory default.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/FactoryResetRequest'
+      responses:
+        '202':
+          description: |
+            Factory reset response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FactoryResetResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system/network/ping:
+    post:
+      summary: Ping remote host.
+      description: |
+        Ping remote host.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/NetworkPingRequest'
+      responses:
+        '200':
+          description: |
+            Ping complete.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkPingResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system/time:
+    get:
+      summary: Get time of system.
+      description: |
+        Get time of system.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Get system time response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemTime'
+    post:
+      summary: Modify time of system.
+      description: |
+        Modify time of system.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/SystemTimeRequest'
+      responses:
+        '202':
+          description: |
+            Modify time of system response.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system/licensing/host-info.qalic2h:
+    get:
+      summary: |
+        Download host info file.
+      description: |
+        Download host info file.
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      responses:
+        '200':
+          description: |
+            Return a host info file.
+          headers:
+            Content-Disposition:
+              description: |
+                `attachment; filename="HOST-INFO.qalic2h"`
+              schema:
+                type: string
+          content:
+            application/json: {}
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /system/licensing/license.qalic2:
+    put:
+      summary: |
+        Upload license file.
+      description: |
+        Upload license file.
+      security:
+      - basicAuth: []
+      - bearerAuth: []
+      tags:
+      - Misc
+      - Gateway
+      - Server
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+      responses:
+        '204':
+          description: |
+            Upload success.
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert-raw-values:
+    post:
+      summary: Channel raw value conversion.
+      description: |
+        Convert PLC channel raw value with conversion setting.
+      tags:
+      - Misc
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertRawValuesRequest'
+        required: true
+      responses:
+        '200':
+          description: |
+            Convert channel raw value response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertRawValuesResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert/fins:
+    post:
+      summary: Convert raw-value to channel-value.
+      description:
+        Convert raw-value to channel-value.
+      tags:
+      - FINS
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertFinsRequest'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return channel-value.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertFinsResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert/melsec:
+    post:
+      summary: Convert raw-value to channel-value.
+      description:
+        Convert raw-value to channel-value.
+      tags:
+      - MELSEC
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertMelsecRequest'
+        required: true
+      responses:
+        '200':
+          description: |
+            Returns channel-value.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertMelsecResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert/mewtocol:
+    post:
+      summary: Convert raw-value to channel-value.
+      description:
+        Convert raw-value to channel-value.
+      tags:
+      - MEWTOCOL
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertMewtocolRequest'
+        required: true
+      responses:
+        '200':
+          description: |
+            Returns channel-value.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertMewtocolResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert/modbus:
+    post:
+      summary: Convert raw-value to channel-value.
+      description:
+        Convert raw-value to channel-value.
+      tags:
+      - MODBUS
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertModbusRequest'
+        required: true
+      responses:
+        '200':
+          description: |
+            Returns channel-value.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertModbusResponse'
+        default:
+          description: |
+            Unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /convert/step7:
+    post:
+      summary: Convert raw-value to channel-value
+      description:
+        Convert raw-value to channel-value.
+      tags:
+      - STEP7
+      - Gateway
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConvertStep7Request'
+        required: true
+      responses:
+        '200':
+          description: |
+            Return channel-value.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertStep7Response'
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    AsType:
+      type: string
+      enum:
+      - int16
+      - int32
+      - uint16
+      - uint32
+      - float32
+      - float64
+      - ascii
+      - bcd
+    AuthRequest:
+      type: object
+      required:
+      - username
+      - password
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      example:
+        username: 'admin'
+        password: 'p@55w0rd'
+    AuthToken:
+      type: object
+      required:
+      - access_token
+      - refresh_token
+      properties:
+        access_token:
+          type: string
+        refresh_token:
+          type: string
+      example:
+        access_token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MDY2NDc2NTcsIm5iZiI6MTUwNjY0NzY1NywiZXhwIjoxNTA2NjUxMjU3LCJpZGVudGl0eSI6MX0.qgxf-4X4GxT4vc-JuRrEx1dFmbQM2vXEfBUP4IH7u4A'
+        refresh_token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE1MzA4NDk0NjYsImV4cCI6MTUzMDg1MzA2NiwianRpIjoiNWNjMWQ1ZDgtZWQyYy00MTJlLTg0ZTktYWI2N2I2OTcxYmY3IiwidHlwZSI6InJlZnJlc2giLCJpZGVudGl0eSI6ImFkbWluIiwiaWF0IjoxNTMwODQ5NDY2fQ.ztDcL6tiyF_1aFzPCJCm81VcjFEFhgt7ZokKxqWBQ-4'
+    BarcodeScannerConfiguration:
+      type: object
+      description: |
+        `equipmentId` and `channelId` are required if `enable` is true.
+      required:
+      - enable
+      properties:
+        enable:
+          type: boolean
+        equipmentId:
+          description: |
+            Required if enable is true.
+          type: string
+          minLength: 3
+          maxLength: 128
+          pattern: '^[A-Za-z][A-Za-z0-9_-]{2,127}$'
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+      example:
+        enable: true
+        equipmentId: 'barcode-scanner'
+        channelId: 'barcode'
+    ByteOrder:
+      type: string
+      enum:
+      - BA
+      - DCBA
+      - CDAB
+    Channel:
+      type: object
+      required:
+      - channelId
+      - valueType
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        valueType:
+          type: string
+          description: |
+            Data point value type.
+          enum:
+          - number
+          - string
+      example:
+        channelId: board-count
+        valueType: number
+    ChannelConversion:
+      type: object
+      required:
+      - asType
+      properties:
+        byteOrder:
+          $ref: '#/components/schemas/ByteOrder'
+        rotateLeft:
+          type: integer
+        andMask:
+          type: array
+          items:
+            type: integer
+        orMask:
+          type: array
+          items:
+            type: integer
+        asType:
+          $ref: '#/components/schemas/AsType'
+        multiplier:
+          type: number
+          format: float
+        offset:
+          type: number
+          format: float
+        rounding:
+          $ref: '#/components/schemas/Rounding'
+    ChannelCategory:
+      type: array
+      minItems: 1
+      items:
+        type: string
+        enum:
+        - alarm
+        - data
+    ChannelData:
+      type: object
+      required:
+      - channelId
+      - valueType
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        valueType:
+          type: string
+          description: |
+            Data point value type.
+          enum:
+          - string
+          - number
+        latestValue:
+          $ref: '#/components/schemas/Data'
+      example:
+        channelId: board-count
+        valueType: number
+        latestValue:
+          at: '2017-03-25T08:26:33.421Z'
+          value:
+            num: 30012
+    Connectivity:
+      type: object
+      required:
+      - enableRTPS
+      - servers
+      properties:
+        enableRTPS:
+          description: |
+            Should always be`false`.
+          type: boolean
+        servers:
+          description: |
+            A list of servers to forward readings to.
+          type: array
+          minItems: 0
+          maxItems: 2
+          items:
+            oneOf:
+            - type: object
+              properties:
+                mqtt:
+                  type: object
+                  required:
+                  - host
+                  - port
+                  properties:
+                    host:
+                      type: string
+                    port:
+                      type: integer
+      example:
+        enableRTPS: true
+        servers:
+        - mqtt:
+            host: 192.168.12.34
+            port: 1884
+        - mqtt:
+            host: 10.15.4.17
+            port: 1884
+    ChannelId:
+      description: |
+        Channel ID.
+      type: string
+      minLength: 2
+      maxLength: 255
+      pattern: '^[A-Za-z][A-Za-z0-9_-]{1,254}$'
+    ChannelName:
+      description: |
+        A user-friendly name.
+      type: string
+    ChannelReverseConversion:
+      type: object
+      required:
+      - asType
+      properties:
+        offset:
+          type: number
+          format: float
+        multiplier:
+          type: number
+          format: float
+        rounding:
+          $ref: '#/components/schemas/Rounding'
+        asType:
+          $ref: '#/components/schemas/AsType'
+        orMask:
+          type: array
+          items:
+            type: integer
+        andMask:
+          type: array
+          items:
+            type: integer
+        rotateLeft:
+          type: integer
+        byteOrder:
+          $ref: '#/components/schemas/ByteOrder'
+    CompoundDataRequest:
+      type: object
+      properties:
+        since:
+          type: string
+          description: |
+            Points to the start of the range of time-based data, in ISO 8601 format.
+        until:
+          type: string
+          description: |
+            Points to the end of the range of time-based data, in ISO 8601 format.
+        pageSize:
+          type: integer
+          description: |
+            Maximum number of results to return. Criteria '1 <= pageSize <= 1000'.
+          default: 100
+        sort:
+          type: string
+          description: |
+            To sort the records in a descending or ascending order by "at" time
+            column,
+
+            you can use the "DESC" or "ASC" keyword.
+
+            If the order is not specified, "DESC" is the default.
+        channelIds:
+          type: array
+          description: |
+            Designated channels.
+
+            Required to contain at least one element if exist.
+
+            All channels if not set.
+          items:
+            $ref: '#/components/schemas/ChannelId'
+      example:
+        since: '2018-01-01T00:00:00.000Z'
+        until: '2018-01-02T00:00:00.000Z'
+        pageSize: 100
+        sort: DESC
+        channelIds:
+        - channel-01
+        - channel-02
+    CompoundDataResponse:
+      type: object
+      description: |
+        'next' is the next page information field, and it not set if no next page.
+      required:
+      - result
+      properties:
+        result:
+          type: array
+          items:
+            required:
+            - at
+            - channelValues
+            properties:
+              at:
+                type: string
+                description: |
+                  Data point timestamp.
+                  In ISO-8601 format.
+              channelValues:
+                type: array
+                items:
+                  required:
+                  - id
+                  - value
+                  properties:
+                    id:
+                      type: string
+                      description: |
+                        Channel ID.
+                    value:
+                      type: object
+                      description: |
+                        Data point value. 'num' and 'str' will only exist in one.
+                      properties:
+                        num:
+                          type: number
+                        str:
+                          type: string
+        next:
+          $ref: '#/components/schemas/CompoundDataRequest'
+      example:
+        result:
+        - at: '2018-01-02T12:00:00.000Z'
+          channelValues:
+          - id: channel-a
+            value:
+              num: 3.14
+          - id: channel-b
+            value:
+              str: text
+        next:
+          since: '2018-01-01T00:00:00.000Z'
+          until: '2018-01-02T00:00:00.000Z'
+          pageSize: 1
+          sort: DESC
+    ConvertFinsRequest:
+      type: object
+      required:
+      - rawValues
+      - channels
+      properties:
+        rawValues:
+          $ref: '#/components/schemas/DiagnoseFinsResponse'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/FinsChannel'
+      example:
+        rawValues:
+        - command:
+            command: read-word
+            wordAddress:
+              memoryArea: 'DM'
+              address: 0
+              quantity: 1
+          raw:
+          - 2320
+        channels:
+        - channelId: humidity_percent
+          channelName: 濕度
+          category:
+          - data
+          raw:
+            wordAddress:
+              memoryArea: 'DM'
+              address: 0
+              quantity: 1
+          conversion:
+            byteOrder: BA
+            asType: int16
+            multiplier: 0.025
+    ConvertFinsResponse:
+      $ref: '#/components/schemas/ConvertResponse'
+    ConvertMelsecRequest:
+      type: object
+      required:
+      - rawValues
+      - channels
+      properties:
+        rawValues:
+          $ref: '#/components/schemas/DiagnoseMelsecResponse'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/MelsecTemplateChannel'
+      example:
+        rawValues:
+        - command:
+            command: read-word
+            registerType: 'D'
+            address: 0
+            quantity: 1
+          raw:
+          - 2320
+        channels:
+        - channelId: humidity_percent
+          channelName: 濕度
+          category:
+          - data
+          raw:
+            registerType: 'D'
+            address: 0
+            quantity: 1
+          conversion:
+            byteOrder: BA
+            asType: int16
+            multiplier: 0.025
+    ConvertMelsecResponse:
+      $ref: '#/components/schemas/ConvertResponse'
+    ConvertMewtocolRequest:
+      type: object
+      required:
+      - rawValues
+      - channels
+      properties:
+        rawValues:
+          $ref: '#/components/schemas/DiagnoseMewtocolResponse'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/MewtocolChannel'
+      example:
+        rawValues:
+        - command:
+            command: read-word
+            wordArea:
+              area: X5
+              length: 1
+          raw:
+          - 2320
+        channels:
+        - channelId: 'humidity_percent'
+          channelName: 溫度
+          category:
+          - data
+          raw:
+            wordArea:
+              area: X5
+              length: 1
+          conversion:
+            byteOrder: BA
+            asType: int16
+            multiplier: 0.025
+    ConvertMewtocolResponse:
+      $ref: '#/components/schemas/ConvertResponse'
+    ConvertModbusRequest:
+      type: object
+      required:
+      - rawValues
+      - channels
+      properties:
+        rawValues:
+          $ref: '#/components/schemas/DiagnoseModbusResponse'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModbusTemplateChannel'
+      example:
+        rawValues:
+        - command:
+            command: read-input-registers
+            address: 0
+            quantity: 1
+          raw:
+          - 1234
+        channels:
+        - channelId: current_A
+          channelName: 電流(A)
+          category:
+          - data
+          raw:
+            reference: 300001
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.1
+    ConvertModbusResponse:
+      $ref: '#/components/schemas/ConvertResponse'
+    ConvertStep7Request:
+      type: object
+      required:
+      - rawValues
+      - channels
+      properties:
+        rawValues:
+          $ref: '#/components/schemas/DiagnoseStep7Response'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/Step7Channel'
+      example:
+        rawValues:
+        - command:
+            command: read
+            address: DB2.DBW0
+            length: 1
+          raw:
+          - 2320
+        channels:
+        - channelId: humidity_percent
+          channelName: 濕度
+          category:
+          - data
+          raw:
+            address: 'DB2.DBW0'
+            length: 1
+          conversion:
+            asType: int16
+            byteOrder: BA
+            multiplier: 0.025
+    ConvertStep7Response:
+      $ref: '#/components/schemas/ConvertResponse'
+    ConvertRawValuesRequest:
+      type: array
+      items:
+        type: object
+        required:
+        - raw
+        - conversion
+        properties:
+          raw:
+            $ref: '#/components/schemas/RawValue'
+          conversion:
+            $ref: '#/components/schemas/ChannelConversion'
+      example:
+        - raw:
+          - 0x1234
+          conversion:
+            asType: uint16
+            byteOrder: BA
+            andMask: [0xFFFF]
+            multiplier: 0.1
+    ConvertRawValuesResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - value
+        - raw
+        - conversion
+        properties:
+          value:
+            type: object
+            description: |
+              Data point value.
+              The existence of 'num' or 'str' depends on conversion's 'asType'.
+            properties:
+              num:
+                type: number
+              str:
+                type: string
+          raw:
+            $ref: '#/components/schemas/RawValue'
+          conversion:
+            $ref: '#/components/schemas/ChannelConversion'
+      example:
+        - value:
+            num: 1333
+          raw:
+          - 0x1234
+          conversion:
+            asType: uint16
+            byteOrder: BA
+            andMask: [0xFFFF]
+            multiplier: 0.1
+    ConvertResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - channelId
+        - raw
+        - value
+        properties:
+          channelId:
+            $ref: '#/components/schemas/ChannelId'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+          value:
+            $ref: '#/components/schemas/Value'
+      example:
+      - channelId: humidity_percent
+        raw:
+        - 2320
+        value:
+          num: 58.0
+
+    Data:
+      type: object
+      required:
+      - at
+      - value
+      properties:
+        at:
+          type: string
+          description: |
+            Data point timestamp.
+            In ISO-8601 format.
+        value:
+          $ref: '#/components/schemas/Value'
+      example:
+        at: '2017-05-03T11:04:24.293Z'
+        value:
+          num: 3.14
+    Date:
+      type: string
+      example: '20180108-100534'
+    Device:
+      type: object
+      required:
+      - deviceId
+      properties:
+        deviceId:
+          type: string
+          description: |
+            User defined ID.
+      example:
+        deviceId: loader
+    DeviceId:
+      type: string
+    DeviceServer:
+      type: object
+      required:
+      - deviceServer
+      properties:
+        deviceServer:
+          type: object
+          required:
+          - tcp
+          - serial
+          properties:
+            tcp:
+              type: object
+              required:
+              - port
+              properties:
+                port:
+                  type: integer
+            serial:
+              $ref: '#/components/schemas/Serial'
+    DeviceStatus:
+      $ref: '#/components/schemas/EquipmentStatus'
+    DiagnoseFinsResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - command
+        - raw
+        properties:
+          command:
+            $ref: '#/components/schemas/FinsCommand'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+    DiagnoseMelsecResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - command
+        - raw
+        properties:
+          command:
+            $ref: '#/components/schemas/MelsecCommand'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+    DiagnoseMewtocolResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - command
+        - raw
+        properties:
+          command:
+            $ref: '#/components/schemas/MewtocolCommand'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+    DiagnoseModbusResponse:
+      type: array
+      items:
+        type: object
+        required:
+        - command
+        - raw
+        properties:
+          command:
+            $ref: '#/components/schemas/ModbusCommand'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+    DiagnoseStep7Response:
+      type: array
+      items:
+        type: object
+        required:
+        - command
+        - raw
+        properties:
+          command:
+            $ref: '#/components/schemas/Step7Command'
+          raw:
+            $ref: '#/components/schemas/RawValue'
+    Endpoint:
+      type: object
+      required:
+      - host
+      - port
+      properties:
+        host:
+          type: string
+        port:
+          type: integer
+          format: uint16
+    Environment:
+      type: object
+      required:
+      - dataRetentionDays
+      - gui
+      - maxEquipmentCount
+      - usedEquipmentCount
+      - requiredProperties
+      - guiRefreshPeriodSec
+      - factoryResetToken
+      properties:
+        dataRetentionDays:
+          description: |
+            Data retention days.
+          type: integer
+        gui:
+          description: |
+            GUI configurations.
+          type: object
+          required:
+          - latestDataRefreshPeriodSec
+          properties:
+            latestDataRefreshPeriodSec:
+              description: |
+                Latest data refresh period.
+              type: integer
+              minimum: 1
+        maxEquipmentCount:
+          description: |
+            Maximum number of equipments allowed.
+          type: integer
+        usedEquipmentCount:
+          description: |
+            Number of equipments used.
+          type: integer
+        requiredProperties:
+          description: |
+            required property list
+          type: array
+          items:
+            type: object
+            required:
+            - key
+            - defaultValue
+            - description
+            properties:
+              key:
+                type: string
+              defaultValue:
+                type: string
+              description:
+                type: string
+        guiRefreshPeriodSec:
+          description: |
+            GUI force refresh period.
+          type: integer
+        factoryResetToken:
+          description: |
+            Token for trigger factory reset.
+          type: string
+    Equipment:
+      type: object
+      required:
+      - equipmentId
+      - templateId
+      properties:
+        equipmentId:
+          $ref: '#/components/schemas/EquipmentId'
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        equipmentName:
+          description: |
+            A user-friendly name.
+          type: string
+        properties:
+          description: |
+            Equipment properties to be forwarded.
+          type: array
+          items:
+            type: object
+            required:
+            - key
+            - value
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+      example:
+        equipmentId: roof-01
+        equipmentName: 屋頂(一)
+        templateId: some-template-id
+        properties:
+        - key: 'machineNo'
+          value: '12345'
+        - key: 'machineName'
+          value: '一二三四五'
+    EquipmentId:
+      description: |
+        Equipment ID.
+      type: string
+      minLength: 3
+      maxLength: 128
+      pattern: '^[A-Za-z][A-Za-z0-9_-]{2,127}$'
+    EquipmentStatus:
+      type: object
+      required:
+      - equipmentId
+      - status
+      properties:
+        equipmentId:
+          type: string
+        status:
+          type: object
+          required:
+          - code
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+      example:
+        equipmentId: roof-01
+        status:
+          code: 2
+          message: 'unable to connect to tcp:192.168.11.150:9600'
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+      example:
+        code: 9487
+        message: Something wrong...
+    EthernetConfig:
+      type: object
+      required:
+      - addresses
+      - dhcp4
+      properties:
+        addresses:
+          description: |
+            Add static IPv4 address in CIDR notation `addr/prefixlen` to the interface in addition to the ones received through DHCP.
+            Only one element supported.
+          type: array
+          items:
+            type: string
+        dhcp4:
+          description: Enable DHCP for IPv4.
+          type: boolean
+        gateway4:
+          description: Default gateway's IPv4 address.
+          type: string
+        nameservers:
+          description: IPv4 addresses of available DNS servers.
+          type: array
+          items:
+            type: string
+      example:
+        addresses:
+        - 192.168.11.12/24
+        dhcp4: true
+        gateway4: '192.168.11.1'
+        nameservers:
+        - '8.8.8.8'
+    FactoryResetRequest:
+      type: object
+      properties:
+        token:
+          type: string
+      example:
+        token: db3tidt1
+    FactoryResetResponse:
+      type: object
+      properties:
+        message:
+          type: string
+      example:
+        message: Reset to factory default, system will reboot in 3 seconds.
+    FinsBitAddress:
+      type: object
+      required:
+      - memoryArea
+      - address
+      - bit
+      - quantity
+      properties:
+        memoryArea:
+          $ref: '#/components/schemas/FinsMemoryArea'
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        bit:
+          type: integer
+          minimum: 0
+          maximum: 15
+        quantity:
+          type: integer
+          minimum: 1
+    FinsCommand:
+      type: object
+      description: |
+        `wordAddress` shall exist if `command == "read-word"`.
+        `bitAddress` shall exist if `command == "read-bit"`
+      required:
+      - command
+      properties:
+        command:
+          type: string
+          enum:
+          - read-bit
+          - read-word
+        wordAddress:
+          $ref: '#/components/schemas/FinsWordAddress'
+        bitAddress:
+          $ref: '#/components/schemas/FinsBitAddress'
+    FinsConnection:
+      type: object
+      properties:
+        tcp:
+          $ref: '#/components/schemas/Endpoint'
+        udp:
+          type: object
+          required:
+          - host
+          - port
+          - node
+          properties:
+            host:
+              type: string
+            port:
+              type: integer
+              format: uint16
+            node:
+              type: integer
+              minimum: 1
+              maximum: 254
+    FinsControlBitAddress:
+      type: object
+      required:
+      - memoryArea
+      - address
+      - bit
+      - quantity
+      properties:
+        memoryArea:
+          $ref: '#/components/schemas/FinsControlMemoryArea'
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        bit:
+          type: integer
+          minimum: 0
+          maximum: 15
+        quantity:
+          type: integer
+          minimum: 1
+    FinsControlChannel:
+      type: object
+      required:
+      - channelId
+      - raw
+      - reverseConversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          properties:
+            bitAddress:
+              $ref: '#/components/schemas/FinsControlBitAddress'
+            wordAddress:
+              $ref: '#/components/schemas/FinsControlWordAddress'
+        reverseConversion:
+          $ref: '#/components/schemas/ChannelReverseConversion'
+    FinsControlCommand:
+      type: object
+      description: |
+        `wordAddress` shall exist if `command == "write-word"`.
+        `bitAddress` shall exist if `command == "write-bit"`
+      required:
+      - command
+      properties:
+        command:
+          type: string
+          enum:
+          - write-bit
+          - write-word
+        wordAddress:
+          $ref: '#/components/schemas/FinsControlWordAddress'
+        bitAddress:
+          $ref: '#/components/schemas/FinsControlBitAddress'
+    FinsControlMemoryArea:
+      type: string
+      enum:
+      - C
+      - CNT
+      - D
+      - DM
+      - E0
+      - E1
+      - E2
+      - E3
+      - E4
+      - E5
+      - E6
+      - E7
+      - E8
+      - E9
+      - EA
+      - EB
+      - EC
+      - ED
+      - EE
+      - EF
+      - E10
+      - E11
+      - E12
+      - E13
+      - E14
+      - E15
+      - E16
+      - E17
+      - E18
+      - H
+      - HR
+      - T
+      - TIM
+      - W
+      - WR
+    FinsControlWordAddress:
+      type: object
+      required:
+      - memoryArea
+      - address
+      - quantity
+      properties:
+        memoryArea:
+          $ref: '#/components/schemas/FinsControlMemoryArea'
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        quantity:
+          type: integer
+          minimum: 1
+    FinsMemoryArea:
+      type: string
+      enum:
+      - A
+      - AR
+      - C
+      - CIO
+      - CNT
+      - D
+      - DM
+      - E0
+      - E1
+      - E2
+      - E3
+      - E4
+      - E5
+      - E6
+      - E7
+      - E8
+      - E9
+      - EA
+      - EB
+      - EC
+      - ED
+      - EE
+      - EF
+      - E10
+      - E11
+      - E12
+      - E13
+      - E14
+      - E15
+      - E16
+      - E17
+      - E18
+      - H
+      - HR
+      - T
+      - TIM
+      - W
+      - WR
+    FinsPolling:
+      type: object
+      required:
+      - pollingPeriodMS
+      - requestTimeoutMS
+      - connection
+      - equipment
+      properties:
+        pollingPeriodMS:
+          type: integer
+          minimum: 100
+          maximum: 86400000
+        requestTimeoutMS:
+          type: integer
+          minimum: 100
+          maximum: 60000
+        connection:
+          $ref: '#/components/schemas/FinsConnection'
+        equipment:
+          $ref: '#/components/schemas/Equipment'
+      example:
+        connection:
+          tcp:
+            host: 192.168.1.1
+            port: 9600
+        equipment:
+          templateId: cs1g-45h
+          equipmentId: roof-01
+          equipmentName: 屋頂(1)
+          properties:
+          - key: MachineNo
+            value: mahaha
+          - key: MachineName
+            value: mohoho
+        pollingPeriodMS: 100
+        requestTimeoutMS: 100
+    FinsTemplate:
+      type: object
+      required:
+      - templateId
+      - commands
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/FinsCommand'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/FinsChannel'
+        controlSets:
+          type: array
+          items:
+            type: object
+            required:
+            - commands
+            - channels
+            properties:
+              commands:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinsControlCommand'
+              channels:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinsControlChannel'
+      example:
+        templateId: cs1g-45h
+        commands:
+        - command: read-word
+          wordAddress:
+            memoryArea: D
+            address: 0
+            quantity: 2
+        - command: read-bit
+          bitAddress:
+            memoryArea: W
+            address: 0
+            bit: 4
+            quantity: 1
+        channels:
+        - channelId: temp_C
+          channelName: 溫度
+          category:
+          - data
+          raw:
+            wordAddress:
+              memoryArea: D
+              address: 0
+              quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.02
+            rounding:
+              mode: 'up'
+              position: -2
+        - channelId: humidity_Percent
+          channelName: 濕度
+          category:
+          - data
+          raw:
+            wordAddress:
+              memoryArea: D
+              address: 1
+              quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.025
+        - channelId: alarm_temperature
+          channelName: 溫度告警
+          category:
+          - alarm
+          raw:
+            bitAddress:
+              memoryArea: W
+              address: 0
+              bit: 4
+              quantity: 1
+          conversion:
+            asType: uint16
+        controlSets:
+        - commands:
+          - command: write-word
+            wordAddress:
+              memoryArea: D
+              address: 10
+              quantity: 1
+          channels:
+          - channelId: channel_1
+            channelName: 點位_1
+            raw:
+              wordAddress:
+                memoryArea: D
+                address: 10
+                quantity: 1
+            reverseConversion:
+              asType: uint16
+        - commands:
+          - command: write-bit
+            bitAddress:
+              memoryArea: W
+              address: 10
+              bit: 0
+              quantity: 1
+          channels:
+          - channelId: channel_2
+            raw:
+              bitAddress:
+                memoryArea: W
+                address: 10
+                bit: 0
+                quantity: 1
+            reverseConversion:
+              asType: uint16
+    FinsChannel:
+      type: object
+      required:
+      - channelId
+      - category
+      - raw
+      - conversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        category:
+          $ref: '#/components/schemas/ChannelCategory'
+        raw:
+          type: object
+          properties:
+            bitAddress:
+              $ref: '#/components/schemas/FinsBitAddress'
+            wordAddress:
+              $ref: '#/components/schemas/FinsWordAddress'
+        conversion:
+          $ref: '#/components/schemas/ChannelConversion'
+    FinsWordAddress:
+      type: object
+      required:
+      - memoryArea
+      - address
+      - quantity
+      properties:
+        memoryArea:
+          $ref: '#/components/schemas/FinsMemoryArea'
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        quantity:
+          type: integer
+          minimum: 1
+    MelsecCommand:
+      type: object
+      required:
+      - command
+      - registerType
+      - address
+      - quantity
+      properties:
+        command:
+          $ref: '#/components/schemas/MelsecCommandType'
+        registerType:
+          $ref: '#/components/schemas/MelsecRegisterType'
+        address:
+          $ref: '#/components/schemas/MelsecRegisterAddress'
+        quantity:
+          $ref: '#/components/schemas/MelsecRegisterQuantity'
+    MelsecCommandType:
+      type: string
+      enum:
+      - read-bit
+      - read-word
+    MelsecConnection:
+      type: object
+      properties:
+        tcp:
+          $ref: '#/components/schemas/Endpoint'
+    MelsecControlCommandType:
+      type: string
+      enum:
+      - write-bit
+      - write-word
+    MelsecControlRegisterType:
+      type: string
+      enum:
+      - B
+      - CC
+      - CN
+      - CS
+      - D
+      - F
+      - L
+      - M
+      - R
+      - S
+      - SB
+      - SD
+      - SM
+      - STC
+      - STN
+      - STS
+      - SW
+      - TC
+      - TN
+      - TS
+      - V
+      - W
+      - Z
+      - ZR
+    MelsecControlCommand:
+      type: object
+      required:
+      - command
+      - registerType
+      - address
+      - quantity
+      properties:
+        command:
+          $ref: '#/components/schemas/MelsecControlCommandType'
+        registerType:
+          $ref: '#/components/schemas/MelsecControlRegisterType'
+        address:
+          $ref: '#/components/schemas/MelsecRegisterAddress'
+        quantity:
+          $ref: '#/components/schemas/MelsecRegisterQuantity'
+    MelsecPolling:
+      type: object
+      required:
+      - connection
+      - equipmentList
+      - pollingPeriodMS
+      - protocol
+      - requestTimeoutMS
+      properties:
+        connection:
+          $ref: '#/components/schemas/MelsecConnection'
+        equipmentList:
+          description: |
+            If `protocol` is `1E:*` or `3E:*`, there can be only one item in
+              the array.
+          type: array
+          items:
+            $ref: '#/components/schemas/MelsecPollingEquipment'
+        pollingPeriodMS:
+          type: integer
+          minimum: 100
+          maximum: 86400000
+        protocol:
+          $ref: '#/components/schemas/MelsecProtocol'
+        requestTimeoutMS:
+          type: integer
+          minimum: 100
+          maximum: 60000
+      example:
+        protocol: '1C:format1:sc'
+        connection:
+          tcp:
+            host: 192.168.11.129
+            port: 9600
+        equipmentList:
+        - stationNo: 13
+          templateId: fx3u-ht
+          equipmentId: roof-01
+          equipmentName: 屋頂(1)
+          properties:
+          - key: MachineNo
+            value: mahaha
+          - key: MachineName
+            value: mohoho
+        - stationNo: 12
+          templateId: fx3u-ht
+          equipmentId: roof-02
+          equipmentName: 屋頂(2)
+        pollingPeriodMS: 500
+        requestTimeoutMS: 300
+    MelsecPollingEquipment:
+      allOf:
+      - $ref: '#/components/schemas/Equipment'
+      - type: object
+        properties:
+          stationNo:
+            type: integer
+            description: |
+              Only take effect when using `1C`, `4C` protocol format.
+            default: 0
+            minimum: 0
+            maximum: 31
+    MelsecProtocol:
+      type: string
+      enum:
+      - '1C:format1:nosc'
+      - '1C:format1:sc'
+      - '1C:format4:nosc'
+      - '1C:format4:sc'
+      - '4C:format5:nosc'
+      - '4C:format5:sc'
+      - '1E:ascii'
+      - '1E:binary'
+      - '3E:ascii'
+      - '3E:binary'
+    MelsecRegisterAddress:
+      type: integer
+      minimum: 0
+      maximum: 1042431
+    MelsecRegisterQuantity:
+      type: integer
+      minimum: 1
+    MelsecRegisterType:
+      type: string
+      enum:
+      - B
+      - CC
+      - CN
+      - CS
+      - D
+      - DX
+      - DY
+      - F
+      - L
+      - M
+      - R
+      - S
+      - SB
+      - SD
+      - SM
+      - SW
+      - TC
+      - TN
+      - TS
+      - V
+      - W
+      - X
+      - 'Y'
+      - Z
+      - ZR
+    MelsecTemplate:
+      type: object
+      required:
+      - templateId
+      - commands
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/MelsecCommand'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/MelsecTemplateChannel'
+        controlSets:
+          type: array
+          items:
+            type: object
+            required:
+            - commands
+            - channels
+            properties:
+              commands:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MelsecControlCommand'
+              channels:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MelsecTemplateControlChannel'
+      example:
+        templateId: fx3u-ht
+        commands:
+        - command: read-word
+          registerType: X
+          address: 0
+          quantity: 2
+        channels:
+        - channelId: temperature_C
+          channelName: 溫度
+          category:
+          - data
+          raw:
+            registerType: X
+            address: 0
+            quantity: 1
+          conversion:
+            asType: int16
+            multiplier: 0.02
+            rounding:
+              mode: 'up'
+              position: -2
+        - channelId: humidity_percent
+          channelName: 濕度
+          category:
+          - data
+          raw:
+            registerType: X
+            address: 1
+            quantity: 1
+          conversion:
+            byteOrder: BA
+            andMask:
+            - 65535
+            orMask:
+            - 0
+            asType: int16
+            multiplier: 0.025
+    MelsecTemplateChannel:
+      type: object
+      required:
+      - channelId
+      - category
+      - raw
+      - conversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        category:
+          $ref: '#/components/schemas/ChannelCategory'
+        raw:
+          type: object
+          required:
+          - registerType
+          - address
+          - quantity
+          properties:
+            registerType:
+              $ref: '#/components/schemas/MelsecRegisterType'
+            address:
+              $ref: '#/components/schemas/MelsecRegisterAddress'
+            quantity:
+              $ref: '#/components/schemas/MelsecRegisterQuantity'
+        conversion:
+          $ref: '#/components/schemas/ChannelConversion'
+    MelsecTemplateControlChannel:
+      type: object
+      required:
+      - channelId
+      - raw
+      - reverseConversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          required:
+          - registerType
+          - address
+          - quantity
+          properties:
+            registerType:
+              $ref: '#/components/schemas/MelsecControlRegisterType'
+            address:
+              $ref: '#/components/schemas/MelsecRegisterAddress'
+            quantity:
+              $ref: '#/components/schemas/MelsecRegisterQuantity'
+        reverseConversion:
+          $ref: '#/components/schemas/ChannelReverseConversion'
+    MewtocolBitArea:
+      type: string
+      description: |
+        `Cb`
+        `Lb`
+        `Rb`
+        `Tb`
+        `Xb`
+        `Yb`
+        , `b` as bit address.
+    MewtocolChannel:
+      type: object
+      required:
+      - channelId
+      - channelName
+      - raw
+      - conversion
+      - category
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          properties:
+            bitArea:
+              required:
+              - area
+              - length
+              properties:
+                area:
+                  $ref: '#/components/schemas/MewtocolBitArea'
+                length:
+                  type: integer
+                  minimum: 1
+            wordArea:
+              required:
+              - area
+              - length
+              properties:
+                area:
+                  $ref: '#/components/schemas/MewtocolWordArea'
+                length:
+                  type: integer
+                  minimum: 1
+        conversion:
+          $ref: '#/components/schemas/ChannelConversion'
+        category:
+          $ref: '#/components/schemas/ChannelCategory'
+    MewtocolCommand:
+      type: object
+      required:
+      - command
+      properties:
+        command:
+          type: string
+          enum:
+          - read-bit
+          - read-word
+        bitArea:
+          type: object
+          required:
+          - area
+          properties:
+            area:
+              type: array
+              description: |
+                Up to 8 mixed bits.
+              items:
+                $ref: '#/components/schemas/MewtocolBitArea'
+        wordArea:
+          type: object
+          required:
+          - area
+          - length
+          properties:
+            area:
+              $ref: '#/components/schemas/MewtocolWordArea'
+            length:
+              type: integer
+              minimum: 1
+      example:
+        command: 'read-word'
+        wordArea:
+          area: 'X0'
+          length: 2
+    MewtocolConnection:
+      type: object
+      properties:
+        tcp:
+          $ref: '#/components/schemas/Endpoint'
+        udp:
+          $ref: '#/components/schemas/Endpoint'
+      example:
+        tcp:
+          host: 192.168.20.123
+          port: 12345
+    MewtocolControlBitArea:
+      type: string
+      description: |
+        `Lb`
+        `Rb`
+        , `b` as bit address.
+    MewtocolControlChannel:
+      type: object
+      required:
+      - channelId
+      - raw
+      - reverseConversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          properties:
+            bitArea:
+              required:
+              - area
+              - length
+              properties:
+                area:
+                  $ref: '#/components/schemas/MewtocolControlBitArea'
+                length:
+                  type: integer
+                  minimum: 1
+            wordArea:
+              required:
+              - area
+              - length
+              properties:
+                area:
+                  $ref: '#/components/schemas/MewtocolControlWordArea'
+                length:
+                  type: integer
+                  minimum: 1
+        reverseConversion:
+          $ref: '#/components/schemas/ChannelReverseConversion'
+    MewtocolControlCommand:
+      type: object
+      required:
+      - command
+      properties:
+        command:
+          type: string
+          enum:
+          - write-bit
+          - write-word
+        bitArea:
+          type: object
+          required:
+          - area
+          properties:
+            area:
+              type: array
+              description: |
+                Up to 8 mixed bits.
+              items:
+                $ref: '#/components/schemas/MewtocolControlBitArea'
+        wordArea:
+          type: object
+          required:
+          - area
+          - length
+          properties:
+            area:
+              $ref: '#/components/schemas/MewtocolControlWordArea'
+            length:
+              type: integer
+              minimum: 1
+    MewtocolControlWordArea:
+      type: string
+      description: |
+        `Lw`
+        `Rw`
+        `DTw`
+        `LDw`
+        `EVw`
+        `SVw`
+        , `w` as word address.
+    MewtocolPolling:
+      type: object
+      required:
+      - connection
+      - equipment
+      - pollingPeriodMS
+      - requestTimeoutMS
+      properties:
+        connection:
+          $ref: '#/components/schemas/MewtocolConnection'
+        equipment:
+          $ref: '#/components/schemas/MewtocolPollingEquipment'
+        pollingPeriodMS:
+          type: integer
+          minimum: 100
+          maximum: 86400000
+        requestTimeoutMS:
+          type: integer
+          minimum: 100
+          maximum: 60000
+      example:
+        connection:
+          tcp:
+            host: 192.168.20.123
+            port: 9094
+        equipment:
+          stationNo: 26
+          templateId: fp-x_c60t
+          equipmentId: roof-01
+          equipmentName: 屋頂(1)
+          properties:
+          - key: MachineNo
+            value: mahaha
+          - key: MachineName
+            value: mohoho
+        pollingPeriodMS: 500
+        requestTimeoutMS: 300
+    MewtocolPollingEquipment:
+      allOf:
+      - $ref: '#/components/schemas/Equipment'
+      - type: object
+        properties:
+          stationNo:
+            type: integer
+            default: 1
+            minimum: 1
+            maximum: 32
+    MewtocolTemplate:
+      type: object
+      required:
+      - templateId
+      - commands
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/MewtocolCommand'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/MewtocolChannel'
+        controlSets:
+          type: array
+          items:
+            type: object
+            required:
+            - commands
+            - channels
+            properties:
+              commands:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MewtocolControlCommand'
+              channels:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MewtocolControlChannel'
+      example:
+        templateId: fp-x_c60t
+        commands:
+        - command: read-word
+          wordArea:
+            area: X0
+            length: 2
+        - command: read-bit
+          bitArea:
+            area:
+            - YA
+            - YB
+            - YC
+        channels:
+        - channelId: temperature_C
+          channelName: 溫度
+          category:
+          - data
+          raw:
+            wordArea:
+              area: X0
+              length: 1
+          conversion:
+            asType: int16
+            multiplier: 0.02
+            rounding:
+              mode: 'up'
+              position: -2
+        - channelId: humidity_alarm
+          channelName: 濕度告警
+          category:
+          - alarm
+          raw:
+            bitArea:
+              area: YA
+              length: 3
+          conversion:
+            asType: uint16
+        controlSets:
+        - commands:
+          - command: write-word
+            wordArea:
+              area: DT123
+              length: 1
+          - command: write-bit
+            bitArea:
+              area:
+              - RA
+              - RC
+          channels:
+          - channelId: temperature
+            channelName: 溫度設定
+            raw:
+              wordArea:
+                area: DT123
+                length: 1
+            reverseConversion:
+              asType: uint16
+          - channelId: alarm-reset
+            raw:
+              bitArea:
+                area: RA
+                length: 5
+            reverseConversion:
+              asType: uint16
+    MewtocolWordArea:
+      type: string
+      description: |
+        `Cw`
+        `Lw`
+        `Rw`
+        `Tw`
+        `Xw`
+        `Yw`
+        `DTw`
+        `LDw`
+        `EVw`
+        `SVw`
+        , `w` as word address.
+    ModbusCommand:
+      type: object
+      required:
+      - command
+      - address
+      - quantity
+      properties:
+        command:
+          type: string
+          enum:
+          - read-coils
+          - read-discrete-inputs
+          - read-input-registers
+          - read-holding-registers
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        quantity:
+          type: integer
+          minimum: 1
+    ModbusControlCommand:
+      type: object
+      required:
+      - command
+      - address
+      - quantity
+      properties:
+        command:
+          type: string
+          enum:
+          - write-single-coil
+          - write-single-holding-register
+          - write-multiple-coils
+          - write-multiple-holding-registers
+        address:
+          type: integer
+          minimum: 0
+          maximum: 65535
+        quantity:
+          description: Should be `1` when `command` given `write-single-coil` or `write-single-holding-register`.
+          type: integer
+          minimum: 1
+    ModbusGateway:
+      type: object
+      required:
+      - modbusGateway
+      properties:
+        modbusGateway:
+          type: object
+          required:
+          - tcp
+          - rtu
+          properties:
+            tcp:
+              type: object
+              required:
+              - port
+              properties:
+                port:
+                  type: integer
+            rtu:
+              type: object
+              required:
+              - serial
+              - interframeDelayMS
+              - intercharTimeoutMS
+              - requestTimeoutMS
+              properties:
+                serial:
+                  $ref: '#/components/schemas/Serial'
+                interframeDelayMS:
+                  type: integer
+                  minimum: 0
+                  maximum: 5000
+                intercharTimeoutMS:
+                  type: integer
+                  minimum: 1
+                  maximum: 1000
+                requestTimeoutMS:
+                  type: integer
+                  minimum: 10
+                  maximum: 10000
+    ModbusGatewayConfiguration:
+      type: object
+      required:
+      - env
+      - config
+      properties:
+        env:
+          type: object
+          required:
+          - device
+          - modbusTcpPort
+          properties:
+            device:
+              type: string
+            modbusTcpPort:
+              type: integer
+        config:
+          type: object
+          required:
+          - baudrate
+          - parity
+          - stopbits
+          - interframeDelayMS
+          - intercharTimeoutMS
+          - requestTimeoutMS
+          properties:
+            baudrate:
+              type: string
+              enum:
+              - '1200'
+              - '2400'
+              - '4800'
+              - '9600'
+              - '19200'
+              - '38400'
+              - '57600'
+              - '115200'
+            parity:
+              type: string
+              enum:
+              - 'none'
+              - 'even'
+              - 'odd'
+            stopbits:
+              type: string
+              enum:
+              - 'one'
+              - 'two'
+            interframeDelayMS:
+              type: integer
+              minimum: 0
+              maximum: 5000
+            intercharTimeoutMS:
+              type: integer
+              minimum: 1
+              maximum: 1000
+            requestTimeoutMS:
+              type: integer
+              minimum: 10
+              maximum: 10000
+      example:
+        env:
+          device: '/dev/ttyS4'
+          modbusTcpPort: 502
+        config:
+          baudrate: '9600'
+          parity: 'none'
+          stopbits: 'one'
+          interframeDelayMS: 300
+          intercharTimeoutMS: 100
+          requestTimeoutMS: 2000
+    ModbusPolling:
+      type: object
+      required:
+      - endPoint
+      - equipments
+      - pollingPeriodMS
+      - requestTimeoutMS
+      properties:
+        endPoint:
+          $ref: '#/components/schemas/Endpoint'
+        equipments:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModbusPollingEquipment'
+        pollingPeriodMS:
+          type: integer
+          minimum: 1
+          maximum: 86400000
+        requestTimeoutMS:
+          type: integer
+          minimum: 100
+          maximum: 60000
+      example:
+        endPoint:
+          host: 192.168.11.123
+          port: 502
+        equipments:
+        - id: 48
+          templateId: agile-metech-baw
+          equipmentId: energy-meter-001
+          equipmentName: 電錶(一)
+          properties:
+          - key: 'machineNo'
+            value: '12345'
+          - key: 'machineName'
+            value: '一二三四五'
+        - id: 49
+          templateId: agile-metech-baw
+          equipmentId: energy-meter-002
+          equipmentName: 電錶(二)
+        pollingPeriodMS: 1000
+        requestTimeoutMS: 3000
+    ModbusPollingEquipment:
+      allOf:
+      - $ref: '#/components/schemas/Equipment'
+      - type: object
+        required:
+        - id
+        properties:
+          id:
+            type: integer
+            minimum: 0
+            maximum: 247
+            description: |
+              Modbus Slave ID.
+    ModbusTemplate:
+      type: object
+      required:
+      - templateId
+      - commands
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModbusCommand'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModbusTemplateChannel'
+        controlSets:
+          type: array
+          items:
+            type: object
+            required:
+            - commands
+            - channels
+            properties:
+              commands:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusControlCommand'
+              channels:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ModbusTemplateControlChannel'
+      example:
+        templateId: agile-metech-baw
+        commands:
+        - command: read-input-registers
+          address: 0
+          quantity: 9
+        channels:
+        - channelId: current_A
+          channelName: 電流(A)
+          category:
+          - data
+          raw:
+            reference: 300002
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.1
+        - channelId: frequency_Hz
+          channelName: 頻率
+          category:
+          - data
+          raw:
+            reference: 300003
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.01
+        - channelId: power_kW
+          channelName: 功率
+          category:
+          - data
+          raw:
+            reference: 300004
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.01
+        - channelId: apparent_power_kVA
+          channelName: 視在功率
+          category:
+          - data
+          raw:
+            reference: 300006
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.01
+        - channelId: power_factor
+          channelName: 功率因数
+          category:
+          - data
+          raw:
+            reference: 300007
+            quantity: 1
+          conversion:
+            asType: uint16
+            multiplier: 0.001
+            rounding:
+              mode: 'up'
+              position: -2
+        - channelId: usage_kWh
+          channelName: 用量
+          category:
+          - data
+          raw:
+            reference: 300008
+            quantity: 2
+          conversion:
+            asType: uint32
+            multiplier: 0.01
+        controlSets:
+        - commands:
+          - command: write-single-coil
+            address: 0x0100
+            quantity: 1
+          channels:
+          - channelId: demand-reset
+            raw:
+              reference: 257
+              quantity: 1
+            reverseConversion:
+              asType: uint16
+    ModbusTemplateChannel:
+      type: object
+      required:
+      - channelId
+      - category
+      - raw
+      - conversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        category:
+          $ref: '#/components/schemas/ChannelCategory'
+        raw:
+          type: object
+          required:
+          - reference
+          - quantity
+          properties:
+            reference:
+              type: integer
+            quantity:
+              type: integer
+              minimum: 1
+        conversion:
+          $ref: '#/components/schemas/ChannelConversion'
+    ModbusTemplateControlChannel:
+      type: object
+      required:
+      - channelId
+      - raw
+      - reverseConversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          required:
+          - reference
+          - quantity
+          properties:
+            reference:
+              type: integer
+            quantity:
+              type: integer
+              minimum: 1
+        reverseConversion:
+          $ref: '#/components/schemas/ChannelReverseConversion'
+    NetworkPingRequest:
+      type: object
+      required:
+      - host
+      properties:
+        host:
+          type: string
+        timeoutSec:
+          type: integer
+          minimum: 1
+          maximum: 10
+          default: 1
+      example:
+        host: www.google.com
+        timeoutSec: 3
+    NetworkPingResponse:
+      type: object
+      required:
+      - host
+      - timeMS
+      properties:
+        host:
+          type: string
+        timeMS:
+          type: number
+      example:
+        host: www.google.com
+        timeMS: 49.1
+    NtpConfiguration:
+      type: object
+      required:
+      - host
+      properties:
+        host:
+          description: |
+            Host name.
+          type: string
+      example:
+        host:
+          time.google.com
+    QoldConfiguration:
+      type: object
+      required:
+      - timezone
+      properties:
+        flushPeriodMin:
+          description: |
+            Flush period by minute.
+          type: integer
+          default: 1440
+          minimum: 1
+          maximum: 1440
+        timezone:
+          description: |
+            Should be in format `+hh:mm`.
+          type: string
+      example:
+        flushPeriodMin: 1
+        timezone: '+08:00'
+    QoldDevice:
+      type: string
+      format: device
+      example: 'q02h'
+    PasswordRequest:
+      type: object
+      required:
+      - password
+      properties:
+        password:
+          type: string
+      example:
+        password: 'p@ssw0rd'
+    RawValue:
+      type: array
+      items:
+        type: integer
+        minimum: 0
+        maximum: 65535
+    ReadingsFilterConfiguration:
+      type: object
+      description: |
+        If `mode` is given `deny-listed`, `devices` should be an empty array.
+      properties:
+        mode:
+          type: string
+          enum:
+          - allow-listed
+          - deny-listed
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeviceId'
+    Rounding:
+      type: object
+      required:
+      - position
+      properties:
+        mode:
+          type: string
+          enum:
+          - round
+          - up
+          - down
+          default: round
+        position:
+          type: integer
+      example:
+        mode: 'up'
+        position: -2
+    SafeboxId:
+      type: object
+      required:
+      - safeboxId
+      properties:
+        safeboxId:
+          type: string
+      example:
+        safeboxId: line_data
+    Serial:
+      type: object
+      required:
+      - baudrate
+      - parity
+      - stopbits
+      properties:
+        baudrate:
+          type: string
+          enum:
+          - '1200'
+          - '2400'
+          - '4800'
+          - '9600'
+          - '19200'
+          - '38400'
+          - '57600'
+          - '115200'
+        parity:
+          type: string
+          enum:
+          - 'none'
+          - 'even'
+          - 'odd'
+        stopbits:
+          type: string
+          enum:
+          - 'one'
+          - 'two'
+    SerialConfiguration:
+      type: object
+      additionalProperties:
+        type: object
+        description:
+          An empty object(`{}`) indicates system serial not set.
+        oneOf:
+        - {}
+        - $ref: '#/components/schemas/DeviceServer'
+        - $ref: '#/components/schemas/ModbusGateway'
+      example:
+        ttyS4: {}
+        ttyS5:
+          deviceServer:
+            tcp:
+              port: 9527
+            serial:
+              baudrate: '9600'
+              parity: 'none'
+              stopbits: 'one'
+        ttyS6:
+          modbusGateway:
+            tcp:
+              port: 502
+            rtu:
+              serial:
+                baudrate: '9600'
+                parity: 'none'
+                stopbits: 'one'
+              interframeDelayMS: 300
+              intercharTimeoutMS: 100
+              requestTimeoutMS: 2000
+    ServerEnvironment:
+      type: object
+      required:
+      - dataRetentionDays
+      - guiRefreshPeriodSec
+      - factoryResetToken
+      properties:
+        dataRetentionDays:
+          description: |
+            History data retention days.
+          type: integer
+        guiRefreshPeriodSec:
+          description: |
+            GUI force refresh period.
+          type: integer
+        factoryResetToken:
+          description: |
+            Token for trigger factory reset.
+          type: string
+    ShutdownRequest:
+      type: object
+      properties:
+        reboot:
+          type: boolean
+          default: false
+      example:
+        reboot: true
+    ShutdownResponse:
+      type: object
+      required:
+      - request
+      - message
+      properties:
+        request:
+          $ref: '#/components/schemas/ShutdownRequest'
+        message:
+          type: string
+      example:
+        request:
+          reboot: false
+        message: Shutdown procedure will be started in 3 seconds.
+    ShutdownSchedule:
+      type: object
+      description:
+        An empty object(`{}`) indicates schedule not set.
+        Both `reboot` and `at` are required if shutdown-schedule is set.
+      properties:
+        reboot:
+          type: boolean
+        at:
+          type: string
+          description: |
+            In ISO-8601 format.
+      example:
+        reboot: true
+        at: '2019-05-03T10:35:51Z'
+    Step7Address:
+      type: string
+      description: |
+        `Cn`
+        `DBm.DBXn.b`
+        `DBm.DBBn`
+        `DBm.DBWn`
+        `DBm.DBDn`
+        `In.b`
+        `IBn`
+        `IWn`
+        `IDn`
+        `Mn.b`
+        `MBn`
+        `MWn`
+        `MDn`
+        `Qn.b`
+        `QBn`
+        `QWn`
+        `QDn`
+        `Tn`
+        `m` as Data Block number.
+        `n` as byte address.
+        `b` as bit address.
+        `I` as same as `E`
+        `Q` as same as `A`
+    Step7Channel:
+      type: object
+      required:
+      - channelId
+      - category
+      - raw
+      - conversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        category:
+          $ref: '#/components/schemas/ChannelCategory'
+        raw:
+          type: object
+          required:
+          - address
+          - length
+          properties:
+            address:
+              $ref: '#/components/schemas/Step7Address'
+            length:
+              type: integer
+              minimum: 1
+        conversion:
+          $ref: '#/components/schemas/ChannelConversion'
+    Step7Command:
+      type: object
+      required:
+      - command
+      - address
+      - length
+      properties:
+        command:
+          type: string
+          enum:
+          - read
+        address:
+          $ref: '#/components/schemas/Step7Address'
+        length:
+          type: integer
+          minimum: 1
+    Step7Connection:
+      type: object
+      required:
+      - host
+      - rack
+      - slot
+      properties:
+        host:
+          type: string
+        rack:
+          type: integer
+          minimum: 0
+          maximum: 7
+        slot:
+          type: integer
+          minimum: 0
+          maximum: 31
+    Step7ControlAddress:
+      type: string
+      description: |
+        `Cn`
+        `DBm.DBXn.b`
+        `DBm.DBBn`
+        `DBm.DBWn`
+        `DBm.DBDn`
+        `Mn.b`
+        `MBn`
+        `MWn`
+        `MDn`
+        `Tn`
+        `m` as Data Block number.
+        `n` as byte address.
+        `b` as bit address.
+    Step7ControlChannel:
+      type: object
+      required:
+      - channelId
+      - raw
+      - reverseConversion
+      properties:
+        channelId:
+          $ref: '#/components/schemas/ChannelId'
+        channelName:
+          $ref: '#/components/schemas/ChannelName'
+        raw:
+          type: object
+          required:
+          - address
+          - length
+          properties:
+            address:
+              $ref: '#/components/schemas/Step7ControlAddress'
+            length:
+              type: integer
+              minimum: 1
+        reverseConversion:
+          $ref: '#/components/schemas/ChannelReverseConversion'
+    Step7ControlCommand:
+      type: object
+      required:
+      - command
+      - address
+      - length
+      properties:
+        command:
+          type: string
+          enum:
+          - write
+        address:
+          $ref: '#/components/schemas/Step7ControlAddress'
+        length:
+          type: integer
+          minimum: 1
+    Step7Polling:
+      type: object
+      required:
+      - pollingPeriodMS
+      - requestTimeoutMS
+      - connection
+      - equipment
+      properties:
+        pollingPeriodMS:
+          type: integer
+          minimum: 100
+          maximum: 86400000
+        requestTimeoutMS:
+          type: integer
+          minimum: 100
+          maximum: 60000
+        conection:
+          $ref: '#/components/schemas/Step7Connection'
+        equipment:
+          $ref: '#/components/schemas/Equipment'
+      example:
+        connection:
+          host: '192.168.20.88'
+          rack: 0
+          slot: 2
+        equipment:
+          equipmentId: 'device-01'
+          templateId: 's7-300'
+          equipmentName: '測試設備一'
+          properties:
+          - key: MachineNo
+            value: mahaha
+          - key: MachineName
+            value: mohoho
+        pollingPeriodMS: 100
+        requestTimeoutMS: 100
+    Step7Template:
+      type: object
+      required:
+      - templateId
+      - commands
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        commands:
+          type: array
+          items:
+            $ref: '#/components/schemas/Step7Command'
+        channels:
+          type: array
+          items:
+            $ref: '#/components/schemas/Step7Channel'
+        controlSets:
+          type: array
+          items:
+            type: object
+            required:
+            - commands
+            - channels
+            properties:
+              commands:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Step7ControlCommand'
+              channels:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Step7ControlChannel'
+      example:
+        templateId: 'S7-300'
+        commands:
+        - command: read
+          address: 'DB1.DBX0.15'
+          length: 2
+        - command: read
+          address: 'DB2.DBB3'
+          length: 2
+        - command: read
+          address: 'DB2.DBW5'
+          length: 1
+        - command: read
+          address: 'DB2.DBD65532'
+          length: 1
+        - command: read
+          address: 'C3'
+          length: 1
+        channels:
+        - channelId: 'temp_C'
+          category:
+          - data
+          raw:
+            address: 'DB2.DBB3'
+            length: 2
+          conversion:
+            asType: 'int16'
+            multiplier: 0.2
+        - channelId: 'humidity_Percent'
+          category:
+          - data
+          raw:
+            address: 'DB2.DBW5'
+            length: 1
+          conversion:
+            asType: 'int16'
+            multiplier: 0.025
+            rounding:
+              mode: 'up'
+              position: -2
+        - channelId: 'loader_abnormal'
+          category:
+          - alarm
+          raw:
+            address: 'DB1.DBX0.15'
+            length: 1
+          conversion:
+            asType: 'uint16'
+        - channelId: 'motor_overload'
+          category:
+          - alarm
+          raw:
+            address: 'DB1.DBX2.0'
+            length: 1
+          conversion:
+            asType: 'uint16'
+        - channelId: 'area'
+          category:
+          - data
+          raw:
+            address: 'DB2.DBD65532'
+            length: 1
+          conversion:
+            asType: 'uint32'
+        - channelId: 'count'
+          category:
+          - data
+          raw:
+            address: 'C3'
+            length: 1
+          conversion:
+            asType: 'uint16'
+        controlSets:
+          - commands:
+            - command: write
+              address: 'DB2.DBW0'
+              length: 1
+            channels:
+            - channelId: channel_1
+              channelName: 點位_1
+              raw:
+                address: 'DB2.DBW0'
+                length: 1
+              reverseConversion:
+                asType: 'uint16'
+          - commands:
+            - command: write
+              address: 'C0'
+              length: 1
+            channels:
+            - channelId: channel_2
+              raw:
+                address: 'C0'
+                length: 1
+              reverseConversion:
+                asType: 'uint16'
+    System:
+      type: object
+      required:
+      - uptimeSec
+      - date
+      properties:
+        uptimeSec:
+          type: integer
+        date:
+          type: string
+      example:
+        uptimeSec: 298381
+        date: '2018-03-08T09:10:18.123Z'
+    SystemTime:
+      type: object
+      required:
+      - time
+      properties:
+        time:
+          description: |
+            format: %Y-%m-%dT%H:%M:%S.%fZ
+          type: string
+      example:
+        time: '2019-05-02T14:28:51.123Z'
+    TemplateId:
+      description: |
+        Template ID.
+      type: string
+      minLength: 3
+      maxLength: 128
+      pattern: '^[A-Za-z][A-Za-z0-9_-]{2,127}$'
+    UpdateVirtualReading:
+      type: object
+      required:
+      - at
+      - channels
+      properties:
+        at:
+          type: string
+          description: |
+            Reading timestamp.
+            In ISO-8601 format.
+        channels:
+          type: array
+          items:
+            type: object
+            required:
+            - channelId
+            - value
+            properties:
+              channelId:
+                $ref: '#/components/schemas/ChannelId'
+              value:
+                $ref: '#/components/schemas/Value'
+      example:
+        at: '2018-11-26T15:34:26.299Z'
+        channels:
+        - channelId: work-order
+          value:
+            str: 'W994#0201-1'
+        - channelId: lot-no
+          value:
+            str: '92981992312'
+        - channelId: part-no
+          value:
+            str: '188281jc00'
+    Value:
+      type: object
+      description: |
+        Data point value.
+      oneOf:
+      - type: object
+        required:
+        - num
+        properties:
+          num:
+            type: number
+      - type: object
+        required:
+        - str
+        properties:
+          str:
+            type: string
+    VirtualEquipmentConfiguration:
+      type: object
+      required:
+      - equipmentId
+      - templateId
+      properties:
+        equipmentId:
+          $ref: '#/components/schemas/EquipmentId'
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        equipmentName:
+          description: |
+            A user-friendly name.
+          type: string
+      example:
+        equipmentId: device-01
+        equipmentName: '虛擬設備一'
+        templateId: template-01
+    VirtualTemplate:
+      type: object
+      required:
+      - templateId
+      - channels
+      properties:
+        templateId:
+          $ref: '#/components/schemas/TemplateId'
+        channels:
+          type: array
+          items:
+            required:
+            - channelId
+            - category
+            - valueType
+            properties:
+              channelId:
+                $ref: '#/components/schemas/ChannelId'
+              channelName:
+                $ref: '#/components/schemas/ChannelName'
+              category:
+                $ref: '#/components/schemas/ChannelCategory'
+              valueType:
+                type: string
+                description: |
+                  Channel's value type.
+                enum:
+                - float
+                - integer
+                - string
+      example:
+        templateId: template-id
+        channels:
+        - channelId: power_factor
+          channelName: 功率因数
+          category:
+          - data
+          valueType: string
+        - channelId: board_count
+          category:
+          - data
+          valueType: integer
+        - channelId: temperature
+          category:
+          - data
+          valueType: float
+
+  parameters:
+    channelId:
+      name: channelId
+      in: path
+      description: |
+        Channel ID.
+      required: true
+      schema:
+        $ref: '#/components/schemas/ChannelId'
+    datetime:
+      name: datetime
+      in: path
+      required: true
+      schema:
+        type: string
+    deviceId:
+      name: deviceId
+      in: path
+      description: |
+        Device ID.
+      required: true
+      schema:
+        type: string
+    equipmentId:
+      name: equipmentId
+      in: path
+      description: |
+        Equipment ID.
+      required: true
+      schema:
+        type: string
+    pageSize:
+      name: pageSize
+      in: query
+      description: |
+        Maximum number of results to return. Criteria '1 <= pageSize <= 1000'.
+      required: false
+      schema:
+        type: integer
+        default: 100
+    pageToken:
+      name: pageToken
+      in: query
+      description: |
+        Page token, returned by a previous call, to request the next page of
+        results.
+      required: false
+      schema:
+        type: string
+    safeboxId:
+      name: safeboxId
+      in: path
+      description: |
+        Safe Box Identifier.
+      required: true
+      schema:
+        type: string
+    since:
+      name: since
+      in: query
+      description: |
+        Points to the start of the range of time-based data, in ISO 8601 format.
+      required: false
+      schema:
+        type: string
+    templateId:
+      name: templateId
+      in: path
+      required: true
+      description: Equipment Template ID
+      schema:
+        type: string
+    sort:
+      name: sort
+      in: query
+      description: |
+        To sort the records in a descending or ascending order by "at" time
+        column,
+
+        you can use the "DESC" or "ASC" keyword.
+
+        If the order is not specified, "DESC" is the default.
+      required: false
+      schema:
+        type: string
+    until:
+      name: until
+      in: query
+      description: |
+        Points to the end of the range of time-based data, in ISO 8601 format.
+      required: false
+      schema:
+        type: string
+  requestBodies:
+    AuthRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AuthRequest'
+      required: true
+    CompoundDataRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CompoundDataRequest'
+    FactoryResetRequest:
+      description: |
+        A Factory Reset Request.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FactoryResetRequest'
+    FinsTemplate:
+      description: |
+        A Fins Equipment Template
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FinsTemplate'
+    File:
+      content:
+        application/x-www-form-urlencoded:
+          schema:
+            type: string
+            format: binary
+    MelsecTemplate:
+      description: |
+        A MELSEC Equipment Template
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MelsecTemplate'
+    MewtocolTemplate:
+      description: |
+        A MEWTOCOL Equipment Template
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MewtocolTemplate'
+    ModbusTemplate:
+      description: |
+        A Modbus Equipment Template
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ModbusTemplate'
+    EthernetConfigRequest:
+      description: |
+        Ethernet Configuration Request.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EthernetConfig'
+    PasswordRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PasswordRequest'
+      required: true
+    NetworkPingRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NetworkPingRequest'
+      required: true
+    NetworkPingResponse:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NetworkPingResponse'
+    QoldConfiguration:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/QoldConfiguration'
+      required: true
+    Step7Template:
+      description: |
+        A STEP7 Equipment Template.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Step7Template'
+    ShutdownRequest:
+      description: |
+        A Shutdown Request.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ShutdownRequest'
+    SystemTimeRequest:
+      description: |
+        Modify time of IPC Request.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SystemTime'
+    VirtualTemplate:
+      description: |
+        A Virtual Equipment Template.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/VirtualTemplate'
+
+  responses:
+    UnexpectedError:
+      description: |
+        Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'

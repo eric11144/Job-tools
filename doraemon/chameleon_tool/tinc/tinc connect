@@ -1,0 +1,2 @@
+sudo systemctl start tinc@qqxd
+sshuttle --dns -r qi@10.2.0.2 192.168.11.0/24

@@ -1,0 +1,380 @@
+[
+    {
+        "id": "f21c0cc9.463bf",
+        "type": "tab",
+        "label": "三色燈",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5025042b.17d06c",
+        "type": "subflow",
+        "name": "green light utilization",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "441c1e8e.11a1f"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "fdd70fad.963f7",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "channels_should_be_zero",
+                "type": "json",
+                "value": "[]"
+            },
+            {
+                "name": "result_device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "result_channel_id",
+                "type": "str",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "id": "e83fdd2b.99e83",
+        "type": "subflow",
+        "name": "get light channel with latest data api",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "97e357eb.2981a8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "8fa8605.327a4a",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "IP",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "red_channel",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "ff61cf4f.f1c67",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "is green only",
+        "func": "const target_light = msg.args.target_light\nconst other_light = msg.args.other_light\n\nmsg.payload = false\nif (target_light === true && other_light === false)\n{\n    msg.payload = true\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "c2bedf4e.067df"
+            ]
+        ]
+    },
+    {
+        "id": "fdd70fad.963f7",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "build chameleon-sink payload",
+        "func": "const device_id = msg.args.result_device_id\nconst channel_id = msg.args.result_channel_id\n\nconst utilization_sec = msg.payload\n// const msg_at_sec = msg.args.at_sec * 1000\n\nmsg.payload = {\n    \"reading\": {\n        [channel_id]: utilization_sec\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "441c1e8e.11a1f",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "validate env and init",
+        "func": "const ENV = [\n    \"green_channel\",\n    \"channels_should_be_zero\",\n    \"result_device_id\",\n    \"result_channel_id\"\n]\n\nconst at_sec = msg.payload.at.sec\nconst channels = msg.payload.channels\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\ntarget_light = channels[env.get(\"green_channel\")]\n\nother_light = false\nenv.get(\"channels_should_be_zero\").forEach(\n    item =>\n    other_light |= Boolean(channels[item])\n)\n\nmsg.args = {\n    \"at_sec\": at_sec,\n    \"target_light\": Boolean(target_light),\n    \"other_light\": Boolean(other_light),\n    \"result_device_id\": env.get(\"result_device_id\"),\n    \"result_channel_id\": env.get(\"result_channel_id\")\n}\n\nmsg.payload = at_sec * 1000\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "85d55b9.00f27a8"
+            ]
+        ]
+    },
+    {
+        "id": "77cd9c41.14bf14",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "a new day",
+        "func": "const today_begin_sec = Math.floor(msg.payload.begin / 1000)\nconst msg_at_sec = msg.args.at_sec\n\nflow_today_begin = flow.get(\"today_begin_sec\")\npre_msg_at_sec = flow.get(\"pre_msg_at_sec\")\n\nif (flow_today_begin === undefined)\n{\n    flow_today_begin = today_begin_sec\n    flow.set(\"today_begin_sec\", today_begin_sec)\n}\n\nif (msg_at_sec < pre_msg_at_sec)\n{\n    node.warn(\"msg is out of date, ignore...\")\n    return;\n}\n\nif (msg_at_sec - flow_today_begin >= 86400)\n{\n    flow.set(\"utilization_sec\", 0)\n    flow.set(\"pre_msg_at_sec\", today_begin_sec)\n    flow.set(\"today_begin_sec\", today_begin_sec)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "ff61cf4f.f1c67"
+            ]
+        ]
+    },
+    {
+        "id": "c2bedf4e.067df",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "count green sec",
+        "func": "const is_green = msg.payload\nconst msg_at_sec = msg.args.at_sec\n\nutilization_sec = flow.get(\"utilization_sec\")\npre_msg_at_sec = flow.get(\"pre_msg_at_sec\")\n\n\nif (utilization_sec === undefined)\n{\n    utilization_sec = 0\n}\n\nif (pre_msg_at_sec === undefined)\n{\n    pre_msg_at_sec = msg_at_sec\n}\n\nif (is_green)\n{\n    increase_sec = msg_at_sec - pre_msg_at_sec\n    \n    utilization_sec += increase_sec\n}\n\nflow.set(\"utilization_sec\", utilization_sec)\nflow.set(\"pre_msg_at_sec\", msg_at_sec)\n\nmsg.payload = utilization_sec\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "fdd70fad.963f7"
+            ]
+        ]
+    },
+    {
+        "id": "85d55b9.00f27a8",
+        "type": "function",
+        "z": "5025042b.17d06c",
+        "name": "",
+        "func": "const timestamp = msg.payload\n\nconst offset = new Date().getTimezoneOffset() * 60 * 1000\nconst interval = 86400 * 1000\n\nconst begin = Math.floor((timestamp - offset) / interval) * interval + offset\nconst end = begin + interval\n\nmsg.payload = {\n    begin: new Date(begin),\n    end: new Date(end)\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "77cd9c41.14bf14"
+            ]
+        ]
+    },
+    {
+        "id": "12266134.b8585f",
+        "type": "subflow:5025042b.17d06c",
+        "z": "f21c0cc9.463bf",
+        "name": "",
+        "env": [
+            {
+                "name": "green_channel",
+                "value": "B253",
+                "type": "str"
+            },
+            {
+                "name": "channels_should_be_zero",
+                "value": "[\"B251\"]",
+                "type": "json"
+            },
+            {
+                "name": "result_device_id",
+                "value": "utilization",
+                "type": "str"
+            },
+            {
+                "name": "result_channel_id",
+                "value": "HJ10LAMLAM001_utilization_sec",
+                "type": "str"
+            }
+        ],
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "8c2bf146.0017b"
+            ]
+        ]
+    },
+    {
+        "id": "8c2bf146.0017b",
+        "type": "reading-out",
+        "z": "f21c0cc9.463bf",
+        "name": "",
+        "equipmentId": "utilization",
+        "x": 580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a3bf1812.1c3a48",
+        "type": "inject",
+        "z": "f21c0cc9.463bf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 20,
+        "wires": [
+            [
+                "4c38ada6.f62f14"
+            ]
+        ]
+    },
+    {
+        "id": "6a79522b.c40cdc",
+        "type": "http request",
+        "z": "e83fdd2b.99e83",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://{{IP}}/api/v1/devices/{{device_id}}/channels/latest-data",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "8fa8605.327a4a"
+            ]
+        ]
+    },
+    {
+        "id": "8fa8605.327a4a",
+        "type": "function",
+        "z": "e83fdd2b.99e83",
+        "name": "build chameleon reading payload",
+        "func": "var at = 0\nvar channel_list = msg.payload\nvar device_id = msg.device_id\nvar green = 0\nvar green_channel = msg.args[\"green_channel\"]\nvar red = 0\nvar red_channel = msg.args[\"red_channel\"]\n\n\nfor( i=0; i<channel_list.length; ++i ){\n    if(channel_list[i][\"channelId\"] == msg.args[\"green_channel\"] ){\n        at = Math.floor(new Date(channel_list[i][\"latestValue\"][\"at\"]).getTime() / 1000)\n        green = parseInt(channel_list[i][\"latestValue\"][\"value\"][\"num\"])\n    }\n    if(channel_list[i][\"channelId\"] == msg.args[\"red_channel\"] ){\n        red = parseInt(channel_list[i][\"latestValue\"][\"value\"][\"num\"])\n    }\n}\n\nmsg.payload = {\n    \"at\": {},\n    \"channels\":{}\n}\nmsg.payload[\"deviceId\"] = device_id\nmsg.payload[\"at\"][\"sec\"] = at\nmsg.payload[\"at\"][\"us\"] = 0\nmsg.payload[\"channels\"][green_channel] = green\nmsg.payload[\"channels\"][red_channel] = red\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97e357eb.2981a8",
+        "type": "function",
+        "z": "e83fdd2b.99e83",
+        "name": "validate env",
+        "func": "const ENV = [\n    \"IP\",\n    \"device_id\",\n    \"green_channel\",\n    \"red_channel\"\n]\n\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\nmsg.args = {\n    \"green_channel\": env.get(\"green_channel\"),\n    \"red_channel\": env.get(\"red_channel\")\n}\n\nmsg.IP = env.get(\"IP\")\nmsg.device_id = env.get(\"device_id\")\nmsg.green_channel = env.get(\"green_channel\")\nmsg.red_channel = env.get(\"red_channel\")\nmsg.payload = null\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "6a79522b.c40cdc"
+            ]
+        ]
+    },
+    {
+        "id": "4c38ada6.f62f14",
+        "type": "subflow:e83fdd2b.99e83",
+        "z": "f21c0cc9.463bf",
+        "name": "",
+        "env": [
+            {
+                "name": "IP",
+                "value": "10.17.75.60",
+                "type": "str"
+            },
+            {
+                "name": "device_id",
+                "value": "HJ10LAMLAM001",
+                "type": "str"
+            },
+            {
+                "name": "green_channel",
+                "value": "B253",
+                "type": "str"
+            },
+            {
+                "name": "red_channel",
+                "value": "B251",
+                "type": "str"
+            }
+        ],
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "12266134.b8585f"
+            ]
+        ]
+    }
+]

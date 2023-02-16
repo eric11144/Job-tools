@@ -1,0 +1,1803 @@
+[
+    {
+        "id": "cbf34f11.3db4",
+        "type": "tab",
+        "label": "Run",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e30aea47.352308",
+        "type": "subflow",
+        "name": "Load Equpment Info",
+        "info": "Input:\n- from subflow `Env`\n\nOutput:\n- `msg.env`\n- `msg.equipmentInfo`\n    ```\n    {\n        \"equipmentId\": \"dev\",\n        \"equipmentName\": \"機台\"\n        \"properties\": {\n            \"machineName\": \"機台\",\n            \"machineNo\": \"DEV123\"\n        },\n        \"tempalte\": {\n            \"templateId\": \"template\",\n            \"commands\": [],\n            \"channels\": [],\n            \"contronSets\": []\n        },\n        \"categorizedChannels\": {\n            \"data\": [\"data_00\", \"data_01\"],\n            \"event\": [\"alarm_00\", \"alarm_01\"],\n        }\n    }\n    ```\n",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "81931b8a.cffea8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1060,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "cc03619c.8b1ab",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1524802c.2eebb",
+        "type": "subflow",
+        "name": "Query History",
+        "info": "Input:\n- from subflow `Read Safebox`\n\nOutput:\n- msg.env\n- msg.equipmentInfo\n- msg.nextQuerySince\n- msg.forwardData\n    ```\n    {\n        \"at\": 1605856964946,\n        \"equipmentName\": \"設備\",\n        \"properties\": {\n            \"machineName\": \"machine\",\n            \"machineNo\": \"TA123\"\n        },\n        \"value\": [\n            \"name\": \"alarm_00\",\n            \"type\": \"num\",\n            \"value\": 0\n        ]\n    }\n    ```\n- msg.lastReading\n    ```\n    {\n        \"at\": 1605856964946,\n        \"reading\": {\n            \"alarm_00\": 0,\n            \"alarm_01\": 1,\n            \"data_00\": \"test-00\",\n            \"data_01\": 8\n        }\n    }\n    ```",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "8756c666.cf6e88"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1000,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "c7cb76fc.98cdb8",
+                        "port": 0
+                    },
+                    {
+                        "id": "5bcba760.4e2f98",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "cbbfcffb.86f5",
+        "type": "subflow",
+        "name": "Read Safebox",
+        "info": "Input:\n- from subflow `Load Equipment Info`\n\nOutput 1:\n- msg.env\n- msg.equipmentInfo\n- msg.nextQuerySince\n    ```\n    0\n    ```\n\nOutput 2 (previous post failure):\n- msg.env\n- msg.equipmentInfo\n- msg.forwardData\n- msg.lastReading",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "716708d1.d2dfa8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 780,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "1a9c626c.9f403e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 780,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "1a9c626c.9f403e",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "9f9d1bbb.2fa088",
+        "type": "subflow",
+        "name": "Wrtie Safebox",
+        "info": "Input:\n- from subflow `To MSMQ Server`",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "24fce996.fd5a66"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "2d572c71.a8d6a4",
+        "type": "subflow",
+        "name": "To MSMQ Server",
+        "info": "Input:\n- from subflow `Query History` or `Read Safebox`\n\nOutput:\n- msg.env\n- msg.equipmentInfo\n- msg.nextQuerySince\n- msg.forwardData\n- msg.lastReading\n- msg.statusCode\n    ```\n    200\n    ```",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "c7ff21f5.7796f"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 900,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "1ed08616.397a0a",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "99679bb5.c9aa78",
+        "type": "subflow",
+        "name": "Env",
+        "info": "Environment:\n- TRIGGER_PERIOD_SEC\n- EQUPMENT_ID\n- READINGS_PER_UPDATE\n- ENDPOINT_URL\n- EVENT_ONLY\n\nOutput:\n- `msg.env`\n    ```\n    {\n        \"equipmentId\": \"virtual\",\n        \"readingsPerUpdate\": 5,\n        \"endpointUrl\": \"192.168.11.149/virtual/event\",\n        \"eventOnly\": false\n    }\n    ```",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 700,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "c738b47.0587048",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "TRIGGER_PERIOD_SEC",
+                "type": "num",
+                "value": "5"
+            },
+            {
+                "name": "EQUPMENT_ID",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "type": "num",
+                "value": ""
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "EVENT_ONLY",
+                "type": "bool",
+                "value": "false"
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "e3942f62.df379",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7b0ac41c.49a9bc",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "fins equipments",
+        "method": "GET",
+        "path": "/api/v1/config/fins/equipments",
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "6947a9fc.1aea88"
+            ]
+        ]
+    },
+    {
+        "id": "6947a9fc.1aea88",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "fins",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        for(let i = 0; i < equipment['properties'].length; ++i)\n        {\n            let property = equipment['properties'][i]\n            \n            if (property['key'] === \"machineName\")\n            {\n                equipment_info.properties['machineName'] = property['value']\n            }\n            if (property['key'] === \"machineNo\")\n            {\n                equipment_info.properties['machineNo'] = property['value']\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/fins/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "d189d5d2.148418"
+            ],
+            [
+                "d96c6596.689628"
+            ]
+        ]
+    },
+    {
+        "id": "d96c6596.689628",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "modbus equipments",
+        "method": "GET",
+        "path": "/api/v1/config/modbus/equipments",
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "2fd19340.c43d4c"
+            ]
+        ]
+    },
+    {
+        "id": "2fd19340.c43d4c",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "modbus",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipments = payload[i]['equipments']\n    \n    for (let i = 0; i < equipments.length; ++i)\n    {\n        let equipment = equipments[i]\n        \n        if (equipment['equipmentId'] === equipment_id)\n        {\n            equipment_info['equipmentId'] = equipment_id\n            equipment_info['equipmentName'] = equipment['equipmentName']\n            equipment_info['properties'] = {}\n        \n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }    \n    }\n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/modbus/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "d189d5d2.148418"
+            ],
+            [
+                "bf6297c.f52a368"
+            ]
+        ]
+    },
+    {
+        "id": "b6334681.6763a8",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "mewtocol equipments",
+        "method": "GET",
+        "path": "/api/v1/config/mewtocol/equipments",
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "14108c09.4e17d4"
+            ]
+        ]
+    },
+    {
+        "id": "3c5a535.4ab2fac",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "step7 equipments",
+        "method": "GET",
+        "path": "/api/v1/config/step7/equipments",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "a06d72d1.1e691"
+            ]
+        ]
+    },
+    {
+        "id": "bf6297c.f52a368",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "melsec equipments",
+        "method": "GET",
+        "path": "/api/v1/config/melsec/equipments",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "eadbf5c5.e61f28"
+            ]
+        ]
+    },
+    {
+        "id": "eadbf5c5.e61f28",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "melsec",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipments = payload[i]['equipmentList']\n    \n    for (let i = 0; i < equipments.length; ++i)\n    {\n        let equipment = equipments[i]\n        \n        if (equipment['equipmentId'] === equipment_id)\n        {\n            equipment_info['equipmentId'] = equipment_id\n            equipment_info['equipmentName'] = equipment['equipmentName']\n            equipment_info['properties'] = {}\n        \n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }    \n    }\n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/melsec/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "d189d5d2.148418"
+            ],
+            [
+                "b6334681.6763a8"
+            ]
+        ]
+    },
+    {
+        "id": "d3a13a65.458ba8",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "unexpected",
+        "func": "node.error('unexpected')",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 430,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d189d5d2.148418",
+        "type": "api",
+        "z": "e30aea47.352308",
+        "name": "template",
+        "method": "GET",
+        "path": "",
+        "x": 920,
+        "y": 240,
+        "wires": [
+            [
+                "cc03619c.8b1ab"
+            ]
+        ]
+    },
+    {
+        "id": "cc03619c.8b1ab",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "template",
+        "func": "const template = msg.payload\nconst channels = msg.payload.channels\n\nlet data = []\nlet event = []\nfor(let i = 0; i < channels.length; ++i)\n{\n    let channel = channels[i]\n    \n    if (channel['category'].includes('msmq_data'))\n    {\n        data.push(channel['channelId'])\n    }\n    \n    if (channel['category'].includes('msmq_event'))\n    {\n        event.push(channel['channelId'])\n    }\n}\n\nmsg.equipmentInfo.template = template\nmsg.equipmentInfo.categorizedChannels = {\n    'data': data,\n    'event': event\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 940,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc22f183.74738",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "99be2005.c86a6"
+            ]
+        ]
+    },
+    {
+        "id": "14108c09.4e17d4",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "mewtocol",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        for(let i = 0; i < equipment['properties'].length; ++i)\n        {\n            let property = equipment['properties'][i]\n            \n            if (property['key'] === \"machineName\")\n            {\n                equipment_info.properties['machineName'] = property['value']\n            }\n            if (property['key'] === \"machineNo\")\n            {\n                equipment_info.properties['machineNo'] = property['value']\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/mewtocol/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "d189d5d2.148418"
+            ],
+            [
+                "3c5a535.4ab2fac"
+            ]
+        ]
+    },
+    {
+        "id": "a06d72d1.1e691",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "step7",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        for(let i = 0; i < equipment['properties'].length; ++i)\n        {\n            let property = equipment['properties'][i]\n            \n            if (property['key'] === \"machineName\")\n            {\n                equipment_info.properties['machineName'] = property['value']\n            }\n            if (property['key'] === \"machineNo\")\n            {\n                equipment_info.properties['machineNo'] = property['value']\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/step7/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "d189d5d2.148418"
+            ],
+            [
+                "d3a13a65.458ba8"
+            ]
+        ]
+    },
+    {
+        "id": "8756c666.cf6e88",
+        "type": "function",
+        "z": "1524802c.2eebb",
+        "name": "validate input",
+        "func": "if (!msg.hasOwnProperty('env') ||\n        !msg.hasOwnProperty('equipmentInfo') ||\n        !msg.hasOwnProperty('nextQuerySince'))\n{\n    node.error('input error')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "6a4cb906.bfb1c8"
+            ]
+        ]
+    },
+    {
+        "id": "6e0ef492.fc983c",
+        "type": "query-history",
+        "z": "1524802c.2eebb",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "6da100eb.aacda"
+            ]
+        ]
+    },
+    {
+        "id": "6a4cb906.bfb1c8",
+        "type": "function",
+        "z": "1524802c.2eebb",
+        "name": "build query",
+        "func": "const readings_per_update = msg.env.readingsPerUpdate\nconst event_only = msg.env.eventOnly\nconst equipment_id = msg.env.equipmentId\nconst next_query_since = msg.nextQuerySince\n\nmsg.config = {\n    'equipmentId': equipment_id,\n    'ascending': true,\n    'maxReadings': readings_per_update,\n    'since': event_only ? next_query_since : next_query_since + 1 \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "6e0ef492.fc983c"
+            ]
+        ]
+    },
+    {
+        "id": "d3b7dfb0.17682",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 120,
+        "wires": [
+            [
+                "38cae85b.bfe778"
+            ]
+        ]
+    },
+    {
+        "id": "c7cb76fc.98cdb8",
+        "type": "function",
+        "z": "1524802c.2eebb",
+        "name": "event",
+        "func": "const payload = msg.payload\nconst equipment_name = msg.equipmentInfo.equipmentName\nconst properties = msg.equipmentInfo.properties\nconst event_channels = msg.equipmentInfo.categorizedChannels.event\n\nconst last_reading = payload[payload.length - 1]\n\nlet events = _event_init(payload[0]['reading'])\nlet forward_data = []\n\nif (payload.length === 1)\n{\n    return\n}\n\nfor (let i = 1; i < payload.length; ++i)\n{\n    let reading = payload[i]['reading']\n    let change = {\n        'at': _to_iso_string(payload[i]['at']),\n        'equipmentName': equipment_name,\n        'properties': properties,\n        'values': []\n    }\n    \n    for (let [channel, value] of Object.entries(reading))\n    {\n        if (event_channels.includes(channel))\n        {\n            if(events[channel] !== value)\n            {\n                change['values'].push(\n                    {\n                        'name': channel,\n                        'type': isNaN(value) ? 'str' : 'num',\n                        'value': value\n                    }\n                )\n                \n                events[channel] = value\n            }\n        }\n    }\n    \n    if (change.values.length !== 0)\n    {\n        forward_data.push(change)\n    }\n}\n\nmsg.forwardData = forward_data\nmsg.lastReading = last_reading\n\nreturn msg;\n\n\nfunction _event_init(reading)\n{\n    let events = {}\n    for (let [channel, value] of Object.entries(reading))\n    {\n        if (event_channels.includes(channel))\n        {\n            events[channel] = value\n        }\n    }\n    \n    return events\n}\n\n\nfunction _to_iso_string(from)\n{\n    const d = new Date(from)\n    return d.toISOString()\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ed08616.397a0a",
+        "type": "http request",
+        "z": "2d572c71.a8d6a4",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 630,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b663da5.efdd428",
+        "type": "function",
+        "z": "2d572c71.a8d6a4",
+        "name": "build payload",
+        "func": "const endpoint_url = msg.env.endpointUrl\nconst evnet_only = msg.env.eventOnly\nconst forward_data = msg.forwardData\n\ndelete msg.headers\nmsg.url = evnet_only ? endpoint_url + '/event' : endpoint_url + '/data'\nmsg.payload = forward_data\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "1ed08616.397a0a"
+            ]
+        ]
+    },
+    {
+        "id": "38cae85b.bfe778",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 180,
+        "wires": [
+            [
+                "935ce74a.d95ac8"
+            ]
+        ]
+    },
+    {
+        "id": "1572604e.a7e67",
+        "type": "function",
+        "z": "99679bb5.c9aa78",
+        "name": "env",
+        "func": "const EQUPMENT_ID = env.get('EQUPMENT_ID')\nconst READINGS_PER_UPDATE = env.get('READINGS_PER_UPDATE')\nconst ENDPOINT_URL = env.get('ENDPOINT_URL')\nconst EVENT_ONLY = env.get('EVENT_ONLY')\n\nmsg.env = {\n    'equipmentId': EQUPMENT_ID,\n    'readingsPerUpdate': READINGS_PER_UPDATE,\n    'endpointUrl': ENDPOINT_URL,\n    'eventOnly': EVENT_ONLY\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "c738b47.0587048"
+            ]
+        ]
+    },
+    {
+        "id": "2812940c.2c02ec",
+        "type": "inject",
+        "z": "99679bb5.c9aa78",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "${TRIGGER_PERIOD_SEC}",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "1572604e.a7e67"
+            ]
+        ]
+    },
+    {
+        "id": "c7ff21f5.7796f",
+        "type": "function",
+        "z": "2d572c71.a8d6a4",
+        "name": "validate input",
+        "func": "if (!msg.hasOwnProperty('env') ||\n        !msg.hasOwnProperty('equipmentInfo') ||\n        !msg.hasOwnProperty('forwardData') ||\n        !msg.hasOwnProperty('lastReading'))\n{\n    node.error('input error')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "b663da5.efdd428"
+            ]
+        ]
+    },
+    {
+        "id": "24fce996.fd5a66",
+        "type": "function",
+        "z": "9f9d1bbb.2fa088",
+        "name": "validate input",
+        "func": "if (!msg.hasOwnProperty('env') ||\n        !msg.hasOwnProperty('equipmentInfo') ||\n        !msg.hasOwnProperty('forwardData') ||\n        !msg.hasOwnProperty('lastReading') ||\n        !msg.hasOwnProperty('statusCode'))\n{\n    node.error('input error')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "a3277e80.a6675"
+            ]
+        ]
+    },
+    {
+        "id": "a3277e80.a6675",
+        "type": "function",
+        "z": "9f9d1bbb.2fa088",
+        "name": "build payload",
+        "func": "const event_only = msg.env.eventOnly\nconst forward_data = msg.forwardData\nconst equipment_info = msg.equipmentInfo\nconst equipment_id = msg.env.equipmentId\nconst last_reading = msg.lastReading\nconst post_status_code = msg.statusCode\n\nlet code = 0\nlet message = `updated ${forward_data.length} readings`\n\nif (post_status_code !== 200)\n{\n    code = 1\n    message = `post failure, status code: ${post_status_code}`\n}\n\nmsg.config = {\n    'key': event_only ? `${equipment_id}.event` : `${equipment_id}.data`\n}\nmsg.payload = {\n    'code': code,\n    'message': message,\n    'equipmentInfo': equipment_info,\n    'postStatusCode': post_status_code,\n    'forwardData': forward_data,\n    'lastReading': last_reading\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "d06e316.ad689d"
+            ]
+        ]
+    },
+    {
+        "id": "d06e316.ad689d",
+        "type": "safebox-out",
+        "z": "9f9d1bbb.2fa088",
+        "name": "",
+        "key": "",
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "3b1de65c.bb017a"
+            ]
+        ]
+    },
+    {
+        "id": "3b1de65c.bb017a",
+        "type": "function",
+        "z": "9f9d1bbb.2fa088",
+        "name": "validate status code",
+        "func": "const payload = msg.payload\n\nif (payload.code !== 0)\n{\n    node.error(`unexpected code: ${payload.code}, message: ${payload.message}`)\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 720,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98a8f509.6fabc8",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM001",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            }
+        ],
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "dc22f183.74738"
+            ]
+        ]
+    },
+    {
+        "id": "816dd246.2fb4",
+        "type": "safebox-in",
+        "z": "cbbfcffb.86f5",
+        "name": "",
+        "key": "",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "1a9c626c.9f403e"
+            ]
+        ]
+    },
+    {
+        "id": "716708d1.d2dfa8",
+        "type": "function",
+        "z": "cbbfcffb.86f5",
+        "name": "validate input",
+        "func": "if (!msg.hasOwnProperty('env') ||\n        !msg.hasOwnProperty('equipmentInfo'))\n{\n    node.error('input error')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "5e27935c.fc3c0c"
+            ]
+        ]
+    },
+    {
+        "id": "5e27935c.fc3c0c",
+        "type": "function",
+        "z": "cbbfcffb.86f5",
+        "name": "build key",
+        "func": "const equipment_id = msg.env.equipmentId\nconst event_only = msg.env.eventOnly\n\nmsg.config = {\n    'key': event_only ? `${equipment_id}.event` : `${equipment_id}.data`\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "816dd246.2fb4"
+            ]
+        ]
+    },
+    {
+        "id": "1a9c626c.9f403e",
+        "type": "function",
+        "z": "cbbfcffb.86f5",
+        "name": "extract",
+        "func": "const payload = msg.payload\nlet next_query_since = 0\nlet output = [msg, null]\n\nif (typeof payload !== \"undefined\")\n{\n    if (payload.postStatusCode !== 200)\n    {\n        msg.forwardData = payload.forwardData\n        msg.lastReading = payload.lastReading\n        output = [null, msg]\n    }\n    else\n    {\n        next_query_since = payload.lastReading.at\n    }\n}\n\nmsg.nextQuerySince = next_query_since\n\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "81931b8a.cffea8",
+        "type": "function",
+        "z": "e30aea47.352308",
+        "name": "validate input",
+        "func": "if (!msg.hasOwnProperty('env'))\n{\n    node.error('input error')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "7b0ac41c.49a9bc"
+            ]
+        ]
+    },
+    {
+        "id": "99be2005.c86a6",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "d3b7dfb0.17682"
+            ],
+            [
+                "38cae85b.bfe778"
+            ]
+        ]
+    },
+    {
+        "id": "6da100eb.aacda",
+        "type": "function",
+        "z": "1524802c.2eebb",
+        "name": "switch",
+        "func": "const payload = msg.payload\nconst event_only = msg.env.eventOnly\nlet output = [null, msg]\n\nif (payload.length === 0)\n{\n    return\n}\n\nif (event_only)\n{\n    output = [msg, null]\n}\n\nreturn output",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "c7cb76fc.98cdb8"
+            ],
+            [
+                "5bcba760.4e2f98"
+            ]
+        ]
+    },
+    {
+        "id": "5bcba760.4e2f98",
+        "type": "function",
+        "z": "1524802c.2eebb",
+        "name": "data",
+        "func": "const payload = msg.payload\nconst equipment_name = msg.equipmentInfo.equipmentName\nconst properties = msg.equipmentInfo.properties\nconst data_channels = msg.equipmentInfo.categorizedChannels.data\n\nlet forward_data = []\n\nfor (let i = 0; i < payload.length; ++i)\n{\n    let reading = payload[i]['reading']\n    let data = {\n        'at': _to_iso_string(payload[i]['at']),\n        'equipmentName': equipment_name,\n        'properties': properties,\n        'values': []\n    }\n    \n    for (let [channel, value] of Object.entries(reading))\n    {\n        if (data_channels.includes(channel))\n        {\n            \n            data['values'].push(\n                {\n                    'name': channel,\n                    'type': isNaN(value) ? 'str' : 'num',\n                    'value': value\n                }\n            )\n        }\n    }\n    \n    forward_data.push(data)\n}\n\nif (forward_data.length === 0)\n{\n    return\n}\n\nmsg.forwardData = forward_data\nmsg.lastReading = payload[payload.length - 1]\n\nreturn msg;\n\n\nfunction _to_iso_string(from)\n{\n    const d = new Date(from)\n    return d.toISOString()\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "935ce74a.d95ac8",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c738b47.0587048",
+        "type": "function",
+        "z": "99679bb5.c9aa78",
+        "name": "validate",
+        "func": "const readings_per_update = msg.env.readingsPerUpdate\n\nif (readings_per_update < 2)\n{\n    node.error('readingsPerUpdate must > 2')\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45638110.323a",
+        "type": "comment",
+        "z": "cbf34f11.3db4",
+        "name": "A21DFPLAM001 (壓膜機#1)",
+        "info": "",
+        "x": 160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b2150046.a8a07",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "b79b86f0.e747b8"
+            ]
+        ]
+    },
+    {
+        "id": "37263209.a96d8e",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "3e359376.cf91bc"
+            ]
+        ]
+    },
+    {
+        "id": "3e359376.cf91bc",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "cc4d8514.a1f878"
+            ]
+        ]
+    },
+    {
+        "id": "f1e103f1.f36b1",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM001",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            },
+            {
+                "name": "EVENT_ONLY",
+                "value": "true",
+                "type": "bool"
+            }
+        ],
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "b2150046.a8a07"
+            ]
+        ]
+    },
+    {
+        "id": "b79b86f0.e747b8",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "37263209.a96d8e"
+            ],
+            [
+                "3e359376.cf91bc"
+            ]
+        ]
+    },
+    {
+        "id": "cc4d8514.a1f878",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1a7e6cfd.f83e33",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "d729ddf1.7f54b"
+            ]
+        ]
+    },
+    {
+        "id": "258b7e52.f441f2",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "9ea8cd43.1cd76"
+            ]
+        ]
+    },
+    {
+        "id": "9ea8cd43.1cd76",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 480,
+        "wires": [
+            [
+                "129f0cf.53223f3"
+            ]
+        ]
+    },
+    {
+        "id": "b12a3814.628328",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM002",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            }
+        ],
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "1a7e6cfd.f83e33"
+            ]
+        ]
+    },
+    {
+        "id": "d729ddf1.7f54b",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "258b7e52.f441f2"
+            ],
+            [
+                "9ea8cd43.1cd76"
+            ]
+        ]
+    },
+    {
+        "id": "129f0cf.53223f3",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "82c02ea9.fe10f",
+        "type": "comment",
+        "z": "cbf34f11.3db4",
+        "name": "A21DFPLAM002 (壓膜機#2)",
+        "info": "",
+        "x": 160,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "81207806.12aee8",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "9ccacf8d.83421"
+            ]
+        ]
+    },
+    {
+        "id": "23ff4841.1a3f28",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 540,
+        "wires": [
+            [
+                "aec0b818.90f1b8"
+            ]
+        ]
+    },
+    {
+        "id": "aec0b818.90f1b8",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "3dc60eab.ef8da2"
+            ]
+        ]
+    },
+    {
+        "id": "f49a5cf3.5739d",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM002",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            },
+            {
+                "name": "EVENT_ONLY",
+                "value": "true",
+                "type": "bool"
+            }
+        ],
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "81207806.12aee8"
+            ]
+        ]
+    },
+    {
+        "id": "9ccacf8d.83421",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 580,
+        "wires": [
+            [
+                "23ff4841.1a3f28"
+            ],
+            [
+                "aec0b818.90f1b8"
+            ]
+        ]
+    },
+    {
+        "id": "3dc60eab.ef8da2",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "5438685a.0a3cf8",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 760,
+        "wires": [
+            [
+                "ccdbed1a.9426"
+            ]
+        ]
+    },
+    {
+        "id": "2be31608.2ec9ba",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 720,
+        "wires": [
+            [
+                "8477e1f7.d4c8b"
+            ]
+        ]
+    },
+    {
+        "id": "8477e1f7.d4c8b",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 780,
+        "wires": [
+            [
+                "b269a376.ab62b"
+            ]
+        ]
+    },
+    {
+        "id": "c59cacd4.4a7ce",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM003",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            }
+        ],
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "5438685a.0a3cf8"
+            ]
+        ]
+    },
+    {
+        "id": "ccdbed1a.9426",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 760,
+        "wires": [
+            [
+                "2be31608.2ec9ba"
+            ],
+            [
+                "8477e1f7.d4c8b"
+            ]
+        ]
+    },
+    {
+        "id": "b269a376.ab62b",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "9c7d25c6.022c88",
+        "type": "comment",
+        "z": "cbf34f11.3db4",
+        "name": "A21DFPLAM003 (壓膜機#3)",
+        "info": "",
+        "x": 160,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "15c76078.921c7",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "61dd46f1.bb3dc8"
+            ]
+        ]
+    },
+    {
+        "id": "e87952c3.9e2e",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 840,
+        "wires": [
+            [
+                "fa53500f.dfe56"
+            ]
+        ]
+    },
+    {
+        "id": "fa53500f.dfe56",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 900,
+        "wires": [
+            [
+                "a5c8704e.85f7e"
+            ]
+        ]
+    },
+    {
+        "id": "e30097e2.723768",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM003",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            },
+            {
+                "name": "EVENT_ONLY",
+                "value": "true",
+                "type": "bool"
+            }
+        ],
+        "x": 170,
+        "y": 880,
+        "wires": [
+            [
+                "15c76078.921c7"
+            ]
+        ]
+    },
+    {
+        "id": "61dd46f1.bb3dc8",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 880,
+        "wires": [
+            [
+                "e87952c3.9e2e"
+            ],
+            [
+                "fa53500f.dfe56"
+            ]
+        ]
+    },
+    {
+        "id": "a5c8704e.85f7e",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "bead8ffe.3ab21",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 1060,
+        "wires": [
+            [
+                "93eaf900.9306d8"
+            ]
+        ]
+    },
+    {
+        "id": "b3ea908c.00282",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 1020,
+        "wires": [
+            [
+                "9af3932f.ce221"
+            ]
+        ]
+    },
+    {
+        "id": "9af3932f.ce221",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 1080,
+        "wires": [
+            [
+                "623ddb81.719e64"
+            ]
+        ]
+    },
+    {
+        "id": "868ae55f.a159b8",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            }
+        ],
+        "x": 170,
+        "y": 1060,
+        "wires": [
+            [
+                "bead8ffe.3ab21"
+            ]
+        ]
+    },
+    {
+        "id": "93eaf900.9306d8",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 1060,
+        "wires": [
+            [
+                "b3ea908c.00282"
+            ],
+            [
+                "9af3932f.ce221"
+            ]
+        ]
+    },
+    {
+        "id": "623ddb81.719e64",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6d002b3a.41e264",
+        "type": "comment",
+        "z": "cbf34f11.3db4",
+        "name": "A21DFPLAM (壓膜機外接PLC)",
+        "info": "",
+        "x": 170,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "dca6206.e1600e",
+        "type": "subflow:e30aea47.352308",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "step7",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 1180,
+        "wires": [
+            [
+                "31688e83.4de4b2"
+            ]
+        ]
+    },
+    {
+        "id": "95c4c7ea.87b898",
+        "type": "subflow:1524802c.2eebb",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 820,
+        "y": 1140,
+        "wires": [
+            [
+                "7a3969c4.f4c6a8"
+            ]
+        ]
+    },
+    {
+        "id": "7a3969c4.f4c6a8",
+        "type": "subflow:2d572c71.a8d6a4",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 830,
+        "y": 1200,
+        "wires": [
+            [
+                "2e748c2b.b65944"
+            ]
+        ]
+    },
+    {
+        "id": "a6e79cc.1cd186",
+        "type": "subflow:99679bb5.c9aa78",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [
+            {
+                "name": "EQUPMENT_ID",
+                "value": "A21DFPLAM",
+                "type": "str"
+            },
+            {
+                "name": "READINGS_PER_UPDATE",
+                "value": "200",
+                "type": "num"
+            },
+            {
+                "name": "ENDPOINT_URL",
+                "value": "http://10.12.65.36:12345/mq-diverter/0.1/api/tx8100",
+                "type": "str"
+            },
+            {
+                "name": "EVENT_ONLY",
+                "value": "true",
+                "type": "bool"
+            }
+        ],
+        "x": 170,
+        "y": 1180,
+        "wires": [
+            [
+                "dca6206.e1600e"
+            ]
+        ]
+    },
+    {
+        "id": "31688e83.4de4b2",
+        "type": "subflow:cbbfcffb.86f5",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 580,
+        "y": 1180,
+        "wires": [
+            [
+                "95c4c7ea.87b898"
+            ],
+            [
+                "7a3969c4.f4c6a8"
+            ]
+        ]
+    },
+    {
+        "id": "2e748c2b.b65944",
+        "type": "subflow:9f9d1bbb.2fa088",
+        "z": "cbf34f11.3db4",
+        "name": "",
+        "env": [],
+        "x": 1080,
+        "y": 1200,
+        "wires": []
+    }
+]

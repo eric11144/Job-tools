@@ -1,0 +1,11 @@
+本機端
+touch $HOME/.ssh/config
+vim ~/.ssh/config
+Host *
+ControlPersist yes
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+
+%r     是用户名，
+%h     是远程主机IP，
+%p     是端口

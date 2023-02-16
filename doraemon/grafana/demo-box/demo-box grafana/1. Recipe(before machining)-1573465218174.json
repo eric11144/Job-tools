@@ -1,0 +1,2383 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 3,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#FA6400",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "id": 18,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "設備狀態:",
+      "prefixFontSize": "100%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X1\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "0.5",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Status",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "Stand By",
+          "value": "1"
+        },
+        {
+          "op": "=",
+          "text": "Running",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 7,
+        "y": 0
+      },
+      "id": 20,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "機台程式:",
+      "prefixFontSize": "100%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X2\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Program",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "CN8764AC",
+          "value": "0"
+        },
+        {
+          "op": "=",
+          "text": "",
+          "value": ""
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 13,
+        "y": 0
+      },
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "下一批號程式:",
+      "prefixFontSize": "100%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X1\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Recipe",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "CN8764AC",
+          "value": "0"
+        },
+        {
+          "op": "=",
+          "text": "CN5566AC",
+          "value": "1"
+        },
+        {
+          "op": "=",
+          "text": "CN5544AC",
+          "value": "2"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#C4162A",
+        "#37872D",
+        "#C4162A"
+      ],
+      "datasource": "DDS",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 19,
+        "y": 0
+      },
+      "id": 24,
+      "interval": null,
+      "links": [],
+      "mappingType": 2,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "0",
+          "text": "設定完成",
+          "to": "0"
+        },
+        {
+          "from": "1",
+          "text": "配方不相同",
+          "to": "100"
+        },
+        {
+          "from": "-1",
+          "text": "新配方未寫入",
+          "to": "-100"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X1\"-\"X2\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "-0.5,0.5",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "配方檢驗",
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "設定完成",
+          "value": "0"
+        },
+        {
+          "op": "=",
+          "text": "",
+          "value": ""
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "decimals": 2,
+      "format": "celsius",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 3
+      },
+      "id": 12,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"D602\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "水溫即時值",
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "content": "<table border=\"1\">\n<tr>\n<td style=\"height:150px;width:300px;\" align='center' valign=\"middle\"><font size=\"200\">50°C</font></td>\n</tr>\n</table>\n",
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 3,
+        "y": 3
+      },
+      "id": 4,
+      "links": [],
+      "mode": "html",
+      "options": {},
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"D612\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "水溫配方值",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 6,
+        "y": 3
+      },
+      "id": 8,
+      "links": [],
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 2,
+            "max": 100,
+            "min": 0
+          },
+          "mappings": [],
+          "override": {},
+          "thresholds": [
+            {
+              "color": "green",
+              "index": 0,
+              "value": null
+            },
+            {
+              "color": "#EAB839",
+              "index": 1,
+              "value": 3
+            },
+            {
+              "color": "red",
+              "index": 2,
+              "value": 10
+            }
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "showThresholdLabels": true,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT 50 -\"D602\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "差值",
+      "type": "gauge"
+    },
+    {
+      "aliasColors": {
+        "fx5u-100m.D602": "dark-orange"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "DDS",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 15,
+        "x": 9,
+        "y": 3
+      },
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {},
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"D602\" FROM \"fx5u-100m\" WHERE $timeFilter",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "近一小時水溫數據",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "decimals": 2,
+      "format": "celsius",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 8
+      },
+      "id": 10,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"D602\" FROM \"fx5u-100m\" WHERE $timeFilter",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "氣溫即時值",
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "content": "<table border=\"1\">\n<tr>\n<td style=\"height:150px;width:300px;\" align='center' valign=\"middle\"><font size=\"200\">55°C</font></td>\n</tr>\n</table>\n",
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 3,
+        "y": 8
+      },
+      "id": 2,
+      "links": [],
+      "mode": "html",
+      "options": {},
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"humidity_percent\" FROM \"Q02U\" WHERE $timeFilter",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "氣溫配方值",
+      "type": "text"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 6,
+        "y": 8
+      },
+      "id": 14,
+      "links": [],
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": 2,
+            "max": 100,
+            "min": 0
+          },
+          "mappings": [],
+          "override": {},
+          "thresholds": [
+            {
+              "color": "green",
+              "index": 0,
+              "value": null
+            },
+            {
+              "color": "#EAB839",
+              "index": 1,
+              "value": 3
+            },
+            {
+              "color": "red",
+              "index": 2,
+              "value": 10
+            }
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "showThresholdLabels": true,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT 55-\"temperature_C\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "差值",
+      "type": "gauge"
+    },
+    {
+      "aliasColors": {
+        "Q02U.temperature_C": "dark-yellow"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "DDS",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 15,
+        "x": 9,
+        "y": 8
+      },
+      "id": 16,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {},
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"temperature_C\" FROM \"Q02U\" WHERE $timeFilter",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "近一小時氣溫數據",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "DDS",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 26,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X2\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "0.3,0.5",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Alarm",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "警戒異常值此列全綠才可生產",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 16
+      },
+      "id": 30,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "新液過熱",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X1\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "新液過熱",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 2,
+        "y": 16
+      },
+      "id": 34,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "熱水過熱",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"X2\" FROM \"Q02U\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "熱水過熱",
+      "trafficLightSettings": {
+        "digits": null,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 6,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 3,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 4,
+        "y": 16
+      },
+      "id": 36,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "水洗低位",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M5\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "水洗低位",
+      "trafficLightSettings": {
+        "digits": null,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 6,
+        "y": 16
+      },
+      "id": 38,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "劑量低位",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M4\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "劑量低位",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 1,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 2,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 8,
+        "y": 16
+      },
+      "id": 40,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "計量低位",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M3\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "計量低位",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 10,
+        "y": 16
+      },
+      "id": 42,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "變頻異常",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M2\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "變頻異常",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 12,
+        "y": 16
+      },
+      "id": 44,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "過載",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M1\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "過載",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#56A64B",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 14,
+        "y": 16
+      },
+      "id": 46,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "加熱器過熱",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M0\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "加熱器過熱",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 16,
+        "y": 16
+      },
+      "id": 50,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "補液異常",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M0\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "補液異常",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 18,
+        "y": 16
+      },
+      "id": 48,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "添加異常",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M0\" FROM \"sample-device\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "添加異常",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 20,
+        "y": 16
+      },
+      "id": 52,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "噴霧過濾筒未關",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M0\" FROM \"fx5u-100m\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "噴霧過濾筒未關",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": "DDS",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 22,
+        "y": 16
+      },
+      "id": 54,
+      "links": [],
+      "options": {},
+      "pluginVersion": "6.2.5",
+      "targets": [
+        {
+          "alias": "新液洗門窗未關",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"M0\" FROM \"sample-device\" WHERE $timeFilter ",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "新液洗門窗未關",
+      "trafficLightSettings": {
+        "digits": 1,
+        "fontColor": "#37872D",
+        "fontSize": "20px",
+        "greenThreshold": 0,
+        "invertScale": true,
+        "lightsPerLine": 5,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 100,
+        "redThreshold": 1,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": false,
+        "spreadControls": true,
+        "units": "",
+        "width": 30
+      },
+      "type": "snuids-trafficlights-panel"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 18,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "1. Recipe(before machining)",
+  "uid": "kiWPIK1Zz",
+  "version": 47
+}

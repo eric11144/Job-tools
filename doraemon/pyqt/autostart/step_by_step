@@ -1,0 +1,29 @@
+cd /home/pi/.config
+mkdir autostart
+
+vim xxxx.desktop( 文件名需以 .desktop 结尾，前面可以自定義 )
+
+[Desktop Entry]
+
+Name=example
+
+Comment=My Python Program
+
+Exec=python /home/pi/example.py
+
+Icon=/home/pi/example.png
+
+Terminal=false
+
+MultipleArgs=false
+
+Type=Application
+
+Categories=Application;Development;
+
+StartupNotify=true
+
+
+Name、Comment、Icon 可以自定
+修改完成
+sudo reboot

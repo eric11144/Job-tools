@@ -1,0 +1,481 @@
+[
+    {
+        "id": "5219ea0b.b827a4",
+        "type": "tab",
+        "label": "MOEA PMC",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2f82e24f.86a12e",
+        "type": "inject",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "f83b4512.392c68"
+            ]
+        ]
+    },
+    {
+        "id": "b7800409.b42488",
+        "type": "http request",
+        "z": "5219ea0b.b827a4",
+        "name": "POST",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "19951e02.467172",
+                "d89937e4.275b58"
+            ]
+        ]
+    },
+    {
+        "id": "b361ab9b.2681f8",
+        "type": "function",
+        "z": "5219ea0b.b827a4",
+        "name": "get token",
+        "func": "return {\n    url: 'https://user-api.staging9527.dotzero.tech/v2/auth/token?tenantID=SaaS-Demo-jmfcp',\n    payload: {\n        grant_type: 'password',\n        email: 'saas-demo@dotzero.tech',\n        password: 'K0tp`?#{679.-y-3~n47UQU4'\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "b7800409.b42488"
+            ]
+        ]
+    },
+    {
+        "id": "19951e02.467172",
+        "type": "debug",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d89937e4.275b58",
+        "type": "change",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "TOKEN",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "66780dfa.ad51a4"
+            ]
+        ]
+    },
+    {
+        "id": "66780dfa.ad51a4",
+        "type": "function",
+        "z": "5219ea0b.b827a4",
+        "name": "get alarmCode/history",
+        "func": "const DEVICE_UUID = flow.get('DEVICE_UUID')\nconst TOKEN = flow.get('TOKEN')\nconst FROM = global.get('MSG_REQ_RANGE_FROM')\nconst TO = global.get('MSG_REQ_RANGE_TO')\n\nreturn {\n    url: `https://oee-api.staging9527.dotzero.tech/alarmCode/history/device/${DEVICE_UUID}?from=${FROM}&to=${TO}`,\n    headers: {\n        Authorization: `Bearer ${TOKEN}`\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "977f3128.16c55"
+            ]
+        ]
+    },
+    {
+        "id": "177bd671.91852a",
+        "type": "change",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DEVICE_UUID",
+                "pt": "flow",
+                "to": "8772c4c9-655d-4658-bae0-8c87791114bd",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "b361ab9b.2681f8"
+            ]
+        ]
+    },
+    {
+        "id": "b23d74d3.d14ed8",
+        "type": "debug",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "977f3128.16c55",
+        "type": "http request",
+        "z": "5219ea0b.b827a4",
+        "name": "GET",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 630,
+        "y": 560,
+        "wires": [
+            [
+                "adb141fe.cc91a"
+            ]
+        ]
+    },
+    {
+        "id": "adb141fe.cc91a",
+        "type": "json",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 810,
+        "y": 560,
+        "wires": [
+            [
+                "b23d74d3.d14ed8",
+                "b4321cb4.fd094"
+            ]
+        ]
+    },
+    {
+        "id": "6467beef.8bc0c",
+        "type": "http in",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "url": "/dotzero/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 40,
+        "wires": [
+            [
+                "626fb862.1c7af8"
+            ]
+        ]
+    },
+    {
+        "id": "1a6cba02.b5a906",
+        "type": "http in",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "url": "/dotzero/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "1c8f1399.a00dcc",
+                "24f2c984.2c7446"
+            ]
+        ]
+    },
+    {
+        "id": "626fb862.1c7af8",
+        "type": "function",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "func": "msg.payload = [\n    'data1'\n]\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 40,
+        "wires": [
+            [
+                "2908ae50.7a5a92"
+            ]
+        ]
+    },
+    {
+        "id": "2908ae50.7a5a92",
+        "type": "http response",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 730,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7203420c.323c3c",
+        "type": "switch",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "property": "payload.targets[0].target",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "data1",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "a9e6da78.5f6f48",
+                "177bd671.91852a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1c8f1399.a00dcc",
+        "type": "debug",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a9e6da78.5f6f48",
+        "type": "debug",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.targets[0].target",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b4321cb4.fd094",
+        "type": "function",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "func": "let errElapsed = {}\nlet reqFrom = Date.parse(global.get('MSG_REQ_RANGE_FROM'))\nlet reqTo = Date.parse(global.get('MSG_REQ_RANGE_TO'))\nlet requiredType = '1'\n\nconst alarms = msg.payload\nfor (const alarm of alarms) {\n    let target = alarm.errCode.toString()\n    if (target !== requiredType) {\n        continue\n    }\n\n    let from = Date.parse(alarm.from)\n    let to = Date.parse(alarm.to)\n    if (to < from) {\n        node.error('Err: Alarm time To < From')\n        msg.res = global.get('MSG_RES')\n        msg.statusCode = 500\n        return msg\n    }\n    if (from >= reqFrom && to <= reqTo) {\n        diffTime = to - from\n    }\n    else if (from < reqFrom && to > reqTo) {\n        diffTime = reqTo - reqFrom\n    }\n    else if (from <= reqFrom) {\n        if (to <= reqFrom) {\n            continue\n        }\n        diffTime = to - reqFrom\n    }\n    else if (to >= reqTo) {\n        if (from >= reqTo) {\n            continue\n        }\n        diffTime = reqTo - from\n    }\n\n    let errMsg = alarm.messageTc.toString()\n    if (typeof errElapsed[errMsg] === 'undefined') {\n        errElapsed[errMsg] = 0\n    }\n\n    errElapsed[errMsg] += diffTime\n}\n\nmsg.payload = []\nfor (const [err, elapsed] of Object.entries(errElapsed)) {\n    msg.payload.push({\n        target: err,\n        datapoints: [[elapsed]]\n    })\n}\n\nlet sumTime = 0\nfor (const [_, elapsed] of Object.entries(errElapsed)) {\n    sumTime += elapsed\n}\n\nmsg.payload.push({\n    target: 'other',\n    datapoints: [[reqTo - reqFrom - sumTime]]\n})\n\nmsg.payload.forEach(errElapsed => {\n    errElapsed.datapoints[0][0] /= 1000\n})\n\nmsg.res = global.get('MSG_RES')\nmsg.statusCode = 200\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "fbfe06d0.d1d208",
+                "88472a2d.b13788"
+            ]
+        ]
+    },
+    {
+        "id": "24f2c984.2c7446",
+        "type": "change",
+        "z": "5219ea0b.b827a4",
+        "name": "set res,range",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MSG_RES",
+                "pt": "global",
+                "to": "res",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "MSG_REQ_RANGE_FROM",
+                "pt": "global",
+                "to": "payload.range.from",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "MSG_REQ_RANGE_TO",
+                "pt": "global",
+                "to": "payload.range.to",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "7203420c.323c3c"
+            ]
+        ]
+    },
+    {
+        "id": "fbfe06d0.d1d208",
+        "type": "debug",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "88472a2d.b13788",
+        "type": "http response",
+        "z": "5219ea0b.b827a4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f83b4512.392c68",
+        "type": "change",
+        "z": "5219ea0b.b827a4",
+        "name": "set res,range",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MSG_RES",
+                "pt": "global",
+                "to": "res",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "MSG_REQ_RANGE_FROM",
+                "pt": "global",
+                "to": "2021-08-26T00:00:00Z",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "MSG_REQ_RANGE_TO",
+                "pt": "global",
+                "to": "2021-08-30T00:00:00Z",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "177bd671.91852a"
+            ]
+        ]
+    }
+]

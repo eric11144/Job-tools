@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  gw:
+    image: gitlab.snsi.iii.org.tw:4567/qi/registry/ubuntu16.amd64/the-gateway:latest
+    container_name: the-gateway
+    network_mode: "host"
+    privileged: true
+    volumes:
+    - /the-gateway/files/etc/bsad/:/etc/bsad/
+    - /the-gateway/files/etc/finsad/:/etc/finsad/
+    - /the-gateway/files/etc/melsecad/:/etc/melsecad/
+    - /the-gateway/files/etc/modbusad/:/etc/modbusad/
+    - /the-gateway/files/etc/modbusgd/:/etc/modbusgd/
+    - /the-gateway/files/etc/qalic/:/etc/qalic/:ro
+    - /the-gateway/files/etc/qonfig/environment/:/etc/qonfig/environment/
+    - /the-gateway/files/etc/qurrent/license/:/etc/qurrent/license/:ro
+    - /the-gateway/files/etc/qurrentd/:/etc/qurrentd/
+    - /the-gateway/files/etc/qurrentxd/:/etc/qurrentxd/
+    - /the-gateway/files/etc/step7ad/:/etc/step7ad/
+    - /the-gateway/files/var/lib/honyaku/:/var/lib/honyaku/
+    - /the-gateway/files/var/lib/influxdb/:/var/lib/influxdb/
+    - /the-gateway/files/var/lib/node-red/:/var/lib/node-red/
+    - /the-gateway/files/var/lib/qonfig/:/var/lib/qonfig/
+    - /the-gateway/files/var/lib/qpile/:/var/lib/qpile/
+    - /the-gateway/files/var/lib/safebox/:/var/lib/safebox/
+    - /the-gateway/files/var/log/:/var/log/
+    - /dev/input:/dev/input:ro
+    - /the-gateway/supervisord.conf:/etc/supervisor/supervisord.conf:ro

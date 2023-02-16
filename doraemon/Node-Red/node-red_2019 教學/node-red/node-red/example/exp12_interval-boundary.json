@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1c8dae3f.91055a",
+        "type": "qi-interval-boundary",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "4c7c2468.7e26cc"
+            ]
+        ]
+    },
+    {
+        "id": "889c4224.fd3058",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "1c8dae3f.91055a"
+            ]
+        ]
+    },
+    {
+        "id": "4c7c2468.7e26cc",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    }
+]

@@ -1,0 +1,6 @@
+sudo vim /chameleon.docker-compose.yml
+
+the-gateway:
+  environment:
+  - THE_SERVER_USE_MQTT=yes
+  - THE_SERVER_MQTT_PORT=1884

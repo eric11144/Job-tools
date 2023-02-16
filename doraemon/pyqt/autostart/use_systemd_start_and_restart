@@ -1,0 +1,21 @@
+sudo vim /lib/systemd/system/temp_scan.service
+
+Copy Code
+
+[Unit]
+Description=Start Temp Scan
+
+[Service]
+Environment=DISPLAY=:0.0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/usr/bin/python3 /home/pi/pyqtgraph_temp.py
+Restart=always
+RestartSec=10s
+KillMode=process
+
+[Install]
+WantedBy=graphical.target
+
+
+sudo systemctl daemon-reload
+sudo systemctl enable clock.service

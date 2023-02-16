@@ -1,0 +1,33 @@
+cd /usr/share/chameleon-gateway-installer
+記得執行須先備份
+sudo /venv/bin/python3 install.py --with-rms
+
+跑完後, 重開機
+
+cd /chameleon/secret-sausage/etc/secret-sausage/category.d
+sudo vim.tiny pre_production.yml
+
+
+id: pre_production
+name: 首件配方
+ingredients:
+- id: etching_speed
+  name: 蝕刻速度
+  type: number
+- id: etching_1_up_spray_pressure
+  name: 蝕刻#1上噴
+  type: number
+- id: etching_1_down_spray_pressure
+  name: 蝕刻#1下噴
+  type: number
+- id: etching_2_switch
+  name: 蝕刻#2開&關
+  type: number
+- id: etching_3_switch
+  name: 蝕刻#3開&關
+  type: number
+- id: develop_speed
+  name: 顯影速度
+  type: number
+  
+  sudo reboot

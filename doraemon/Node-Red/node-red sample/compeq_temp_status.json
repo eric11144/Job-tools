@@ -1,0 +1,226 @@
+[
+    {
+        "id": "4f6c7773.68ee38",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2e8b5124.903d9e",
+        "type": "qi-chameleon-source",
+        "z": "4f6c7773.68ee38",
+        "name": "",
+        "deviceId": "fx5u",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "d2706b53.d41578"
+            ]
+        ]
+    },
+    {
+        "id": "d2706b53.d41578",
+        "type": "qi-forward-on-match",
+        "z": "4f6c7773.68ee38",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"D602\"],\"properties\":{\"D602\":{\"type\":\"number\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "83d98c9a.ffe15"
+            ]
+        ]
+    },
+    {
+        "id": "2172acdb.b101a4",
+        "type": "debug",
+        "z": "4f6c7773.68ee38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1010,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6d761e56.5a884",
+        "type": "switch",
+        "z": "4f6c7773.68ee38",
+        "name": "",
+        "property": "payload.channels[\"D602\"]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "25",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "24.9",
+                "vt": "num",
+                "v2": "24.5",
+                "v2t": "num"
+            },
+            {
+                "t": "lte",
+                "v": "24.4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "ad3296b0.730c28"
+            ],
+            [
+                "bf323da6.0055c"
+            ],
+            [
+                "357bf1f8.348aee"
+            ]
+        ]
+    },
+    {
+        "id": "83d98c9a.ffe15",
+        "type": "function",
+        "z": "4f6c7773.68ee38",
+        "name": "save plc data",
+        "func": "msg.data = msg.payload.channels[\"D602\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "6d761e56.5a884"
+            ]
+        ]
+    },
+    {
+        "id": "ad3296b0.730c28",
+        "type": "change",
+        "z": "4f6c7773.68ee38",
+        "name": "set status with 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "29d47d07.dee612"
+            ]
+        ]
+    },
+    {
+        "id": "bf323da6.0055c",
+        "type": "change",
+        "z": "4f6c7773.68ee38",
+        "name": "set status with 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 280,
+        "wires": [
+            [
+                "29d47d07.dee612"
+            ]
+        ]
+    },
+    {
+        "id": "357bf1f8.348aee",
+        "type": "change",
+        "z": "4f6c7773.68ee38",
+        "name": "set status with 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 320,
+        "wires": [
+            [
+                "29d47d07.dee612"
+            ]
+        ]
+    },
+    {
+        "id": "29d47d07.dee612",
+        "type": "qi-forward-on-change",
+        "z": "4f6c7773.68ee38",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 830,
+        "y": 280,
+        "wires": [
+            [
+                "8f70b786.9cdcf8"
+            ]
+        ]
+    },
+    {
+        "id": "8f70b786.9cdcf8",
+        "type": "function",
+        "z": "4f6c7773.68ee38",
+        "name": "temp status message",
+        "func": "var temp_status = msg.payload\nvar temp = msg.data\n\nif (temp_status == 1)\n{\n    msg.topic = \"temp status\"\n    msg.payload = \"Upper : \" + temp\n}\n\nelse if(temp_status == 2)\n{\n    msg.topic = \"temp status\"\n    msg.payload = \"normal : \" + temp\n}\n\nelse\n{\n    msg.topic = \"temp status\"\n    msg.payload = \"down : \" + temp\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1040,
+        "y": 280,
+        "wires": [
+            [
+                "2172acdb.b101a4"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "id": "4cc66058.7c3d2",
+        "type": "delay",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "c4077890.8e182"
+            ]
+        ]
+    },
+    {
+        "id": "b8723699.320be8",
+        "type": "inject",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 980,
+        "y": 100,
+        "wires": [
+            [
+                "4cc66058.7c3d2",
+                "8c8b0e96.d73e58"
+            ]
+        ]
+    },
+    {
+        "id": "c4077890.8e182",
+        "type": "debug",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1210,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8c8b0e96.d73e58",
+        "type": "debug",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1210,
+        "y": 100,
+        "wires": []
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "id": "c2c8b809.601348",
+        "type": "http request",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://localhost/api/v1/devices",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 1030,
+        "y": 160,
+        "wires": [
+            [
+                "1e605d57.7abd33"
+            ]
+        ]
+    },
+    {
+        "id": "27556e7c.3a479a",
+        "type": "inject",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "c2c8b809.601348"
+            ]
+        ]
+    },
+    {
+        "id": "1e605d57.7abd33",
+        "type": "debug",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1070,
+        "y": 220,
+        "wires": []
+    }
+]

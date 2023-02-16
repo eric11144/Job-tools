@@ -1,0 +1,237 @@
+[
+    {
+        "id": "97ad3d48.cfbec",
+        "type": "tab",
+        "label": "temp status send email",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "53ecca80.a43914",
+        "type": "switch",
+        "z": "97ad3d48.cfbec",
+        "name": "forward channel",
+        "property": "payload.channels.D612",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "63.1",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "59",
+                "vt": "num",
+                "v2": "63.1",
+                "v2t": "num"
+            },
+            {
+                "t": "lt",
+                "v": "59",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "af8dcb7f.00af88"
+            ],
+            [
+                "68e7a109.3d3"
+            ],
+            [
+                "a0765ece.9837c"
+            ]
+        ]
+    },
+    {
+        "id": "433917d7.8d7ba8",
+        "type": "qi-forward-on-change",
+        "z": "97ad3d48.cfbec",
+        "name": "",
+        "initialValue": "{\"alarm\":0}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "76baacb4.b261b4",
+                "63928a6.40ec274",
+                "8989a816.34a2a8"
+            ]
+        ]
+    },
+    {
+        "id": "af8dcb7f.00af88",
+        "type": "function",
+        "z": "97ad3d48.cfbec",
+        "name": "over upper",
+        "func": "const at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": \"alarm\",\n    \"at\": at,\n    \"channels\": {\n        \"alarm\": 1\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "433917d7.8d7ba8"
+            ]
+        ]
+    },
+    {
+        "id": "68e7a109.3d3",
+        "type": "function",
+        "z": "97ad3d48.cfbec",
+        "name": "normal",
+        "func": "const at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": \"alarm\",\n    \"at\": at,\n    \"channels\": {\n        \"alarm\": 0\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "433917d7.8d7ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a0765ece.9837c",
+        "type": "function",
+        "z": "97ad3d48.cfbec",
+        "name": "over lower",
+        "func": "const at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": \"alarm\",\n    \"at\": at,\n    \"channels\": {\n        \"alarm\": 2\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "433917d7.8d7ba8"
+            ]
+        ]
+    },
+    {
+        "id": "5dbb652a.f841ac",
+        "type": "function",
+        "z": "97ad3d48.cfbec",
+        "name": "msg",
+        "func": "msg.topic = msg.topic\n\nmsg.payload = msg.payload.channels.alarm\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1090,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9862b0f3.2de39",
+        "type": "e-mail",
+        "z": "97ad3d48.cfbec",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "eric1114473@gmail.com",
+        "dname": "",
+        "x": 1270,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e055ff15.ebb64",
+        "type": "qi-chameleon-source",
+        "z": "97ad3d48.cfbec",
+        "name": "",
+        "deviceId": "fx5u",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "53ecca80.a43914"
+            ]
+        ]
+    },
+    {
+        "id": "76baacb4.b261b4",
+        "type": "qi-chameleon-sink",
+        "z": "97ad3d48.cfbec",
+        "name": "",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "63928a6.40ec274",
+        "type": "change",
+        "z": "97ad3d48.cfbec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "溼度告警",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.channels.alarm",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "濕度正常",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.channels.alarm",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "濕度過高",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.channels.alarm",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "濕度過低",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 160,
+        "wires": [
+            [
+                "5dbb652a.f841ac"
+            ]
+        ]
+    },
+    {
+        "id": "8989a816.34a2a8",
+        "type": "debug",
+        "z": "97ad3d48.cfbec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 910,
+        "y": 100,
+        "wires": []
+    }
+]

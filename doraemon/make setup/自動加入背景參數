@@ -1,0 +1,17 @@
+* direnv
+   * $sudo apt-get install direnv
+   * add `eval "$(direnv hook bash)"` to end of ~/.bashrc
+   vim ~/.bashrc, 在最後一行加入 `eval "$(direnv hook bash)"`
+   * add .envrc file to your folder
+   在需要的資料夾內部產生 .envrc (vim), 內容輸入
+   export CONTAINER_REGISTRY=gitlab.qi:4567/qi/registry
+   export HTTP_PROXY=http://proxy.qi:3128 
+   export PRIVATE_PYPI=pypi.qi
+   export PRIVATE_APT=http://deb.qi
+
+* In your folder
+       * $direnv allow .envrc
+
+
+如果環境有變更, 需要輸入以下指令 ( ex : local -> container or container -> local )
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | sudo xargs rm -rf

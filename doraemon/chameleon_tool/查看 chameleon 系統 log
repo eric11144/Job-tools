@@ -1,0 +1,4 @@
+選擇要查看的系統 log
+ex. qurrentxd
+
+GLOG_v=1 GLOG_logtostderr=1 qurrentxd

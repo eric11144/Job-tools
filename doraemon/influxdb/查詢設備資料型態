@@ -1,0 +1,5 @@
+/venv/bin/docker-compose exec influxdb influx --username chameleonadmin --password chameleonadminpass
+SHOW DATABASES
+USE reading
+SHOW MEASUREMENTS
+SHOW FIELD KEYS FROM GYR_light_1

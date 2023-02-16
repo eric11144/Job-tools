@@ -1,0 +1,196 @@
+# auth
+curl -i -H "Content-Type: application/json" POST -d '{"username":"admin","password":"p@55w0rd"}' "http://192.168.10.199/api/v1/auth"
+
+# put /config/virtual/equipments
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' \
+  --request PUT "http://192.168.10.199/api/v1/config/virtual/equipments" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+[
+  {
+    "equipmentId": "FX3G_utilization",
+    "equipmentName": "裁斷機今日稼動",
+    "templateId": "FX3G_utilization"
+  },
+  {
+    "equipmentId": "FX3G_utilization_last",
+    "equipmentName": "裁斷機昨日稼動",
+    "templateId": "FX3G_utilization"
+  }
+]
+EOF
+
+
+# post /config/virtual/templates
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' \
+  --request POST "http://192.168.10.199/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "templateId": "changed",
+  "channels": [
+    {
+      "channelId": "changed",
+      "category": [
+        "alarm"
+      ]
+    }
+  ]
+}
+EOF
+
+# post /config/virtual/templates
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' \
+  --request POST "http://192.168.10.199/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "templateId": "utilization",
+  "channels": [
+    {
+      "channelId": "total_utilization_time_hours",
+      "channelName": "今日總稼動時間",
+      "category": [
+        "data"
+      ]
+    }
+  ]
+}
+EOF
+
+# put /config/virtual/equipments
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' \
+  --request PUT "http://192.168.10.199/api/v1/config/virtual/equipments" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+[
+  {
+    "equipmentId": "detect_board",
+    "templateId": "changed"
+  },
+  {
+    "equipmentId": "detect_barcode",
+    "templateId": "changed"
+  },
+  {
+    "equipmentId": "utilization_board",
+    "equipmentName": "今日總稼動小時(片數)",
+    "templateId": "utilization"
+  },
+  {
+    "equipmentId": "utilization_barcode",
+    "equipmentName": "今日總稼動小時(barcode)",
+    "templateId": "utilization"
+  }
+]
+EOF
+
+
+# delete step7 polling config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' -X PUT -d '[]' http://192.168.10.199/api/v1/config/step7/equipments
+
+# delete channel
+curl -i -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg' --request DELETE http://192.168.10.199/api/v1/config/step7/templates/s7-300
+
+# delete devices
+curl -i -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg'  --request DELETE http://192.168.10.199/api/v1/devices/sample-device
+
+# get modbusgd configuration
+curl -i -H 'Content-Type: application/json' http://192.168.10.199/api/v1/modbusgateways
+
+# put modbusgd configuration(機器本身要有這些設定)
+curl -H 'Content-Type: application/json' -H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg" -i -X PUT http://192.168.10.199/api/v1/config/modbus/equipments \
+--data-binary @- <<EOF
+[
+    {
+        "endPoint": {
+            "host": "192.168.20.64",
+            "port": 502
+        },
+        "equipments": [
+            {
+                "equipmentId": "modbus",
+                "id": 1,
+                "templateId": "iologik"
+            }
+        ],
+        "pollingPeriodMS": 2000,
+        "requestTimeoutMS": 1000
+    },
+    {
+        "endPoint": {
+            "host": "127.0.0.1",
+            "port": 502
+        },
+        "equipments": [
+            {
+                "equipmentId": "air_quality_sensor",
+                "id": 1,
+                "templateId": "tgp03_thp03"
+            }
+        ],
+        "pollingPeriodMS": 2000,
+        "requestTimeoutMS": 1000
+    }
+]
+EOF
+
+# put safebox meta-data
+curl -H 'Content-Type: application/json' -H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg" -i -X PUT http://192.168.10.199/api/v1/safeboxes/meta-data \
+--data-binary @- <<EOF
+[
+    {
+        "equipmentId": "Omron",
+        "equipmentType": 1
+    },
+    {
+        "equipmentId": "FX3U",
+        "equipmentType": 0
+    },
+    {
+        "equipmentId": "modbus",
+        "equipmentType": "4"
+    },
+    {
+        "equipmentId": "AQ_sensor",
+        "equipmentType": 1
+    },
+    {
+        "equipmentId": "cj2m",
+        "equipmentType": 1
+    },
+    {
+        "equipmentId": "air_quality_sensor",
+        "equipmentType": 1
+    },
+    {
+        "equipmentId": "fx3u",
+        "equipmentType": 0
+    }
+]
+EOF
+
+# put safebox line-data
+curl -H 'Content-Type: application/json' -H "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDEwNTkyMjIsInR5cGUiOiJhY2Nlc3MiLCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJuYmYiOjE1NDEwNTU2MjIsImlhdCI6MTU0MTA1NTYyMiwianRpIjoiYWQ5ZDM5NTAtN2M3MS00NGFiLTkyMDYtYzhkMjUyZDAyMTkwIn0.RtycN-lBdo5H7IB_2uhlFMdq5OYZ7b_ltndnrpN1RWg" -i -X PUT http://192.168.10.199/api/v1/safeboxes/line-data \
+--data-binary @- <<EOF
+[
+    {
+        "dequips": [
+            "modbus",
+            "fx3u"
+        ],
+        "title": "\u7522\u7dda 1"
+    },
+    {
+        "dequips": [
+            "cj2m",
+            "air_quality_sensor"
+        ],
+        "title": "\u7522\u7dda 2"
+    }
+]
+EOF

@@ -1,0 +1,151 @@
+[
+    {
+        "id": "b09dc032.541f7",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4b68b7b8.9407d8",
+        "type": "function",
+        "z": "b09dc032.541f7",
+        "name": "傳送訊息",
+        "func": "CHANNEL_ACCESS_TOKEN = 'lfgsvzmdA4qNqNZCZKLprII22CrZ2K4qtULTJwloXXFtTh9nqO6S0iMVonVCr0cG059tHwnQ7KmFd7CoKucxMz9QDOXnMYBzXvQ9SNHq7YIWon7fXD0UebwkrmMsMCunuEjs+FwTKbMI9b3TWBfJ/wdB04t89/1O/w1cDnyilFU=';\nUSER_ID = 'Uad3a988f2d0cef436cf1151e2f5fbcb8';\nmessage = {\n    type:'text',\n    text: '測試訊息傳送-iii'\n};\n\nheaders = {\n    'Content-Type': 'application/json; charset=UTF-8',\n    'Authorization': 'Bearer ' + CHANNEL_ACCESS_TOKEN,\n};\npayload = {\n    'to':  USER_ID,\n    'messages': [message]\n};\nmsg.headers = headers;\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "aa711366.dc2d"
+            ]
+        ]
+    },
+    {
+        "id": "aa711366.dc2d",
+        "type": "http request",
+        "z": "b09dc032.541f7",
+        "name": "Line bot Messaging API 傳送",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "https://api.line.me/v2/bot/message/push",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "fb93dbdf.bff908"
+            ]
+        ]
+    },
+    {
+        "id": "a8dd9c93.dfb42",
+        "type": "inject",
+        "z": "b09dc032.541f7",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "4b68b7b8.9407d8"
+            ]
+        ]
+    },
+    {
+        "id": "5576d8b0.5f3568",
+        "type": "inject",
+        "z": "b09dc032.541f7",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "f7864014.636f9"
+            ]
+        ]
+    },
+    {
+        "id": "f7864014.636f9",
+        "type": "function",
+        "z": "b09dc032.541f7",
+        "name": "line notify",
+        "func": "ACCESS_TOKEN = 'DbOZ7QQOOPJDjSpNInUNLV8X48Nuicm15aw5UWZYum4';\n\nmsg.headers = {\n    'Content-Type': 'application/x-www-form-urlencoded',\n    'Authorization': 'Bearer ' + ACCESS_TOKEN,\n};\n\npayload = {\n    message: '秉哥你好～～～'\n};\n\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "f6d052a8.4a665"
+            ]
+        ]
+    },
+    {
+        "id": "f6d052a8.4a665",
+        "type": "http request",
+        "z": "b09dc032.541f7",
+        "name": "Line notify Messaging API 傳送",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "b51f3368.dd235"
+            ]
+        ]
+    },
+    {
+        "id": "b51f3368.dd235",
+        "type": "debug",
+        "z": "b09dc032.541f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fb93dbdf.bff908",
+        "type": "debug",
+        "z": "b09dc032.541f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 930,
+        "y": 140,
+        "wires": []
+    }
+]

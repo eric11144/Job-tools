@@ -1,0 +1,3 @@
+cd /home/ubuntu
+
+./remove-db.sh

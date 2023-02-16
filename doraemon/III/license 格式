@@ -1,0 +1,4 @@
+licensee: Moxa
+machines:
+- connection-count: 3
+ machine-id: 00-90-e8-63-34-97

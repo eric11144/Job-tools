@@ -1,0 +1,15 @@
+sudo swapoff /swapfile
+
+sudo vim /etc/fstab
+
+將 /swapfile 前面加上 #
+
+```
+To turn off the swapfile. Run the following command:
+
+sudo swapoff /swapfile         
+Now disable the swap file in /etc/fstab. I'm using Vim.
+
+sudo vim /etc/fstab
+Your /etc/fstab file should have a '#' in front of '/swapfile'
+```

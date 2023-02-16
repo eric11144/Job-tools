@@ -1,0 +1,563 @@
+[
+    {
+        "id": "45fefee4.55682",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "2d6f49f7.de0a96"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "d1a539d5.da8118",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "3f1799c9.895196",
+        "type": "http request",
+        "z": "45fefee4.55682",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "74fa7a6.1564a84"
+            ]
+        ]
+    },
+    {
+        "id": "464ae89.7934218",
+        "type": "function",
+        "z": "45fefee4.55682",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":env.get(\"username\"),\n    \"password\":env.get(\"password\")\n};\n\nmsg.ip_address = {};\nmsg.ip_address = env.get(\"ip_address\")\n\nmsg.templateId = {};\nmsg.templateId = env.get(\"templateId\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "585be6e5.9ddf68"
+            ]
+        ]
+    },
+    {
+        "id": "d1a539d5.da8118",
+        "type": "function",
+        "z": "45fefee4.55682",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74fa7a6.1564a84",
+        "type": "function",
+        "z": "45fefee4.55682",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "d1a539d5.da8118"
+            ]
+        ]
+    },
+    {
+        "id": "2d6f49f7.de0a96",
+        "type": "function",
+        "z": "45fefee4.55682",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"username\",\n    \"password\",\n    \"ip_address\",\n    \"templateId\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "464ae89.7934218"
+            ]
+        ]
+    },
+    {
+        "id": "585be6e5.9ddf68",
+        "type": "change",
+        "z": "45fefee4.55682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "templateId",
+                "pt": "msg",
+                "to": "templateId",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "3f1799c9.895196"
+            ]
+        ]
+    },
+    {
+        "id": "a43e1bfe.db1328",
+        "type": "tab",
+        "label": "Virtual equipment template api use",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8fef6ff6.28056",
+        "type": "inject",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "23c523c8.7e7e1c"
+            ]
+        ]
+    },
+    {
+        "id": "a60e92e3.ced18",
+        "type": "http request",
+        "z": "a43e1bfe.db1328",
+        "name": "POST virtual templates",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/virtual/templates",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 910,
+        "y": 240,
+        "wires": [
+            [
+                "25dbce9.30e3032"
+            ]
+        ]
+    },
+    {
+        "id": "5016e5a1.45d40c",
+        "type": "function",
+        "z": "a43e1bfe.db1328",
+        "name": "upload template",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.template = {\n    \"templateId\": msg.templateId,\n    \"channels\": [\n      {\n        \"channelId\": \"power_factor\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      },\n      {\n        \"channelId\": \"board_count\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      },\n      {\n        \"channelId\": \"temperature\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      }\n    ]\n}\n\nmsg.payload = msg.template;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "a60e92e3.ced18"
+            ]
+        ]
+    },
+    {
+        "id": "25dbce9.30e3032",
+        "type": "debug",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1145,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "965a8988.8d9938",
+        "type": "inject",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 440,
+        "wires": [
+            [
+                "ee26f803.fa20d8"
+            ]
+        ]
+    },
+    {
+        "id": "43799300.354cec",
+        "type": "function",
+        "z": "a43e1bfe.db1328",
+        "name": "upload equipments",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.templates = [\n  {\n    \"equipmentId\": \"test_1\",\n    \"equipmentName\": \"虛擬設備一\",\n    \"templateId\": msg.templateId\n  }\n]\n\nmsg.payload = msg.templates;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 440,
+        "wires": [
+            [
+                "f0b09032.bb701"
+            ]
+        ]
+    },
+    {
+        "id": "f0b09032.bb701",
+        "type": "http request",
+        "z": "a43e1bfe.db1328",
+        "name": "POST virtual equipments",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/virtual/equipments",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "18477f58.040101"
+            ]
+        ]
+    },
+    {
+        "id": "18477f58.040101",
+        "type": "debug",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1148,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7521bd3c.6a9034",
+        "type": "inject",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "25b044c5.4dbbcc"
+            ]
+        ]
+    },
+    {
+        "id": "c3f5775a.e81408",
+        "type": "http request",
+        "z": "a43e1bfe.db1328",
+        "name": "PUT virtual templates",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/virtual/templates/{{templateId}}",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 920,
+        "y": 340,
+        "wires": [
+            [
+                "d38ebf7a.72223"
+            ]
+        ]
+    },
+    {
+        "id": "5577fd5b.5d3e04",
+        "type": "function",
+        "z": "a43e1bfe.db1328",
+        "name": "upload template",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.template = {\n    \"templateId\": msg.templateId,\n    \"channels\": [\n      {\n        \"channelId\": \"power_factor\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      },\n      {\n        \"channelId\": \"board_count\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      },\n      {\n        \"channelId\": \"temperature\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"integer\"\n      },\n      {\n        \"channelId\": \"barcode\",\n        \"category\": [\n          \"data\"\n        ],\n        \"valueType\": \"string\"\n      }\n    ]\n}\n\nmsg.payload = msg.template;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 340,
+        "wires": [
+            [
+                "c3f5775a.e81408"
+            ]
+        ]
+    },
+    {
+        "id": "d38ebf7a.72223",
+        "type": "debug",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1146,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ec34ada9.b0bd9",
+        "type": "inject",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 540,
+        "wires": [
+            [
+                "aa922590.177328"
+            ]
+        ]
+    },
+    {
+        "id": "8147bc12.1d413",
+        "type": "http request",
+        "z": "a43e1bfe.db1328",
+        "name": "Delete virtual templates",
+        "method": "DELETE",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/virtual/templates/{{templateId}}",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 750,
+        "y": 540,
+        "wires": [
+            [
+                "203fb0f8.13029"
+            ]
+        ]
+    },
+    {
+        "id": "aa922590.177328",
+        "type": "subflow:45fefee4.55682",
+        "z": "a43e1bfe.db1328",
+        "name": "get auth token",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.190"
+            },
+            {
+                "name": "templateId",
+                "type": "str",
+                "value": "test"
+            }
+        ],
+        "x": 480,
+        "y": 540,
+        "wires": [
+            [
+                "8147bc12.1d413"
+            ]
+        ]
+    },
+    {
+        "id": "203fb0f8.13029",
+        "type": "debug",
+        "z": "a43e1bfe.db1328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1149,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "23c523c8.7e7e1c",
+        "type": "subflow:45fefee4.55682",
+        "z": "a43e1bfe.db1328",
+        "name": "get auth token",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.190"
+            },
+            {
+                "name": "templateId",
+                "type": "str",
+                "value": "test_1"
+            }
+        ],
+        "x": 480,
+        "y": 240,
+        "wires": [
+            [
+                "5016e5a1.45d40c"
+            ]
+        ]
+    },
+    {
+        "id": "25b044c5.4dbbcc",
+        "type": "subflow:45fefee4.55682",
+        "z": "a43e1bfe.db1328",
+        "name": "get auth token",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.190"
+            },
+            {
+                "name": "templateId",
+                "type": "str",
+                "value": "test_1"
+            }
+        ],
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "5577fd5b.5d3e04"
+            ]
+        ]
+    },
+    {
+        "id": "ee26f803.fa20d8",
+        "type": "subflow:45fefee4.55682",
+        "z": "a43e1bfe.db1328",
+        "name": "get auth token",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.190"
+            },
+            {
+                "name": "templateId",
+                "type": "str",
+                "value": "test_1"
+            }
+        ],
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "43799300.354cec"
+            ]
+        ]
+    }
+]

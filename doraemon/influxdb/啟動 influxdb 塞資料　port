@@ -1,0 +1,10 @@
+docker exec the-gateway bash
+vim /etc/influxdb-feeder/influxdb-feeder.yml 
+在　qurrent 以及　influxdb 中間加入　grpc
+
+grpc:
+  host: localhost
+  port: 7890
+influxdb-buffer-size: 327680
+
+supervisorctl restart influxdb-feeder

@@ -1,0 +1,7 @@
+ssh pi@192.168.10.11
+password: raspberry
+
+UTC time format (台灣時間減八小時)
+sudo timedatectl set-time "2018-10-03 07:18"
+
+sudo reboot

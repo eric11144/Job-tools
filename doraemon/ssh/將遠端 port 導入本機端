@@ -1,0 +1,5 @@
+ssh -N -L 18787:localhost:8787 ubuntu@221.120.49.209 -p 8888
+
+完成後
+
+在本機端輸入 localhost:18787 即可

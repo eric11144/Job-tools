@@ -1,0 +1,4 @@
+1. 於 docker compose file 內修改 the-gateway environment 
+    environment:
+      QONFIG_ETCD3_INSTRUCTOR_APPLY_TIMEOUT_SEC: 10
+

@@ -1,0 +1,3 @@
+當從 local 端 切到 container 時, 需要做此動作才能正常運作
+
+`find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | sudo xargs rm -rf`

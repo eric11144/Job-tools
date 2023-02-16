@@ -1,0 +1,58 @@
+[
+    {
+        "id": "f587f340.996ea",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "941c3ed9.a391c8"
+            ]
+        ]
+    },
+    {
+        "id": "941c3ed9.a391c8",
+        "type": "trigger",
+        "z": "ba231e43.23ef08",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-5",
+        "extend": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "fd329838.19198"
+            ]
+        ]
+    },
+    {
+        "id": "fd329838.19198",
+        "type": "debug",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    }
+]

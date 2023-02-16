@@ -1,0 +1,14 @@
+1. 於 docker compose file 內修改 influxdb environment 
+    environment:
+      INFLUXDB_HTTP_BIND_ADDRESS=0.0.0.0:8086
+2. 至 grafana -> configuration -> data source
+    (1) 修改 name
+    (2) URL 
+        * http  -> http://xxx.xxx.xxx.xxx:8086
+        * https -> https://xxx.xxx.xxx.xxx:8086
+        如選擇 https, 需將 Skip TLS Verify 打勾
+3. InfluxDB Details
+    Database -> reading
+    User -> readuser
+    Password -> readuserpass
+4. Save & Test 即可完成.

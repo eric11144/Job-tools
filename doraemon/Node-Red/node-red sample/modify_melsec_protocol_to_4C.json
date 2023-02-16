@@ -1,0 +1,214 @@
+[
+    {
+        "id": "bca800d7.8c2af",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "21d6ec88.65ed14",
+        "type": "inject",
+        "z": "bca800d7.8c2af",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "e821c12e.76913"
+            ]
+        ]
+    },
+    {
+        "id": "5ed84b44.08f5d4",
+        "type": "http request",
+        "z": "bca800d7.8c2af",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://192.168.11.193/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "939fe038.ef82f"
+            ]
+        ]
+    },
+    {
+        "id": "e821c12e.76913",
+        "type": "function",
+        "z": "bca800d7.8c2af",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":\"admin\",\n    \"password\":\"p@55w0rd\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "5ed84b44.08f5d4"
+            ]
+        ]
+    },
+    {
+        "id": "7ea05d91.347914",
+        "type": "http request",
+        "z": "bca800d7.8c2af",
+        "name": "put melsec equipments request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://localhost/api/v1/config/melsec/equipments",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "6a0371f9.9b48c",
+                "55161a40.f96044"
+            ]
+        ]
+    },
+    {
+        "id": "6a0371f9.9b48c",
+        "type": "http response",
+        "z": "bca800d7.8c2af",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1f326a18.0365f6",
+        "type": "http request",
+        "z": "bca800d7.8c2af",
+        "name": "get melsec equipments",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://192.168.11.193/api/v1/config/melsec/equipments",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "a6b264fe.412478"
+            ]
+        ]
+    },
+    {
+        "id": "55161a40.f96044",
+        "type": "debug",
+        "z": "bca800d7.8c2af",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c400351c.84c058",
+        "type": "function",
+        "z": "bca800d7.8c2af",
+        "name": "payload 0f melsec equipments",
+        "func": "msg.equipments = [];\n\nmsg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nfor (let i = 0; i < msg.payload.length; ++i) {\n    for (let n = 0; n < msg.payload[i].equipmentList.length; ++n) {\n        if (msg.payload[i].equipmentList[n].equipmentId == msg.equipmentId){\n            msg.payload[i].protocol = msg.protocol\n            msg.equipments.push(msg.payload[i])\n        }\n    }\n}\nmsg.payload = msg.equipments;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 970,
+        "y": 280,
+        "wires": [
+            [
+                "7ea05d91.347914"
+            ]
+        ]
+    },
+    {
+        "id": "4bde03b6.44ea9c",
+        "type": "function",
+        "z": "bca800d7.8c2af",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "1f326a18.0365f6"
+            ]
+        ]
+    },
+    {
+        "id": "939fe038.ef82f",
+        "type": "function",
+        "z": "bca800d7.8c2af",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 160,
+        "wires": [
+            [
+                "4bde03b6.44ea9c"
+            ]
+        ]
+    },
+    {
+        "id": "a6b264fe.412478",
+        "type": "change",
+        "z": "bca800d7.8c2af",
+        "name": "parameter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "equipmentId",
+                "pt": "msg",
+                "to": "fx3u",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "protocol",
+                "pt": "msg",
+                "to": "3E:ascii",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 280,
+        "wires": [
+            [
+                "c400351c.84c058"
+            ]
+        ]
+    }
+]

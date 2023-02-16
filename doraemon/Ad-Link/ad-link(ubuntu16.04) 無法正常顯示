@@ -1,0 +1,7 @@
+sudo vim /etc/default/grub
+
+GRUB_TERMINAL=console
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo apt update-grub

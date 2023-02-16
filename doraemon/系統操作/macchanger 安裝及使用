@@ -1,0 +1,18 @@
+sudo apt install macchanger
+
+sudo macchanger -m 00:d0:70:00:20:69 eth0
+
+在 supervisor 自動更換
+
+sudo vim /etc/supervisor/conf.d/macchange.conf
+
+[program:macchanger]
+command = macchanger -m 00:0b:ab:c1:7e:2a eth0
+autostart = true
+autorestart = false
+stderr_logfile = /var/log/supervisor/%(program_name)s.err.log
+stdout_logfile = /var/log/supervisor/%(program_name)s.out.log
+stderr_logfile_maxbytes = 1MB
+stdout_logfile_maxbytes = 1MB
+stderr_logfile_backups = 1
+stdout_logfile_backups = 1

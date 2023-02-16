@@ -1,0 +1,3 @@
+sudo systemctl disable bonescript.service              
+sudo systemctl disable bonescript.socket
+sudo systemctl disable bonescript-autorun.service

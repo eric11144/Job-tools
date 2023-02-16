@@ -1,0 +1,1 @@
+scp -P 8888 -i ~/.ssh/id_rsa.pub xxxx   ubuntu@xxx.xxx.xxx.xxx:/home/ubuntu/

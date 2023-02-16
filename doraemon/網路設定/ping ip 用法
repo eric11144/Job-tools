@@ -1,0 +1,8 @@
+封包送出間隔時間
+ping -i 0.4 xxx.xxx.xxx.xxx
+
+指定 Ping 次數
+ping -c 4 xxx.xxx.xxx.xxx
+
+指定 ICMP 封包數
+ping -n 10 blog.gtwang.org

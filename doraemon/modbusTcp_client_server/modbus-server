@@ -1,0 +1,27 @@
+socket.error: [Errno 48] Address already in use
+https://stackoverflow.com/questions/19071512/socket-error-errno-48-address-already-in-use
+
+ASCII  CODE 對照表
+http://www.jtvb.tw/C/ASCII/ASCII.HTM
+
+debian 9 需要之套件
+sudo apt-get install -y libffi-dev python-dev libevent-dev
+
+A full modbus protocol written in python
+https://github.com/riptideio/pymodbus
+
+deb http://ftp.de.debian.org/debian stretch-backports main
+
+virtual env 安裝
+virtualenv -p python3 venv
+source venv/bin/activate
+sudo apt-get install build-essential
+sudo apt-get install python3-dev
+sudo apt-get install python-pymodbus
+pip3 install pymodbus
+
+modbus tcp port 佔用刪除
+ps -fA | grep python(find port use)
+sudo kill -9 number
+
+deactivate

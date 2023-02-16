@@ -1,0 +1,52 @@
+[
+    {
+        "id": "82c20c7c.a9295",
+        "type": "debug",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 330,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ad915243.378fb8",
+        "type": "function",
+        "z": "ba231e43.23ef08",
+        "name": "x 2",
+        "func": "const val = msg.payload\n\nmsg.payload = val * 2\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "82c20c7c.a9295"
+            ]
+        ]
+    },
+    {
+        "id": "77d42994.db8178",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "123",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "ad915243.378fb8"
+            ]
+        ]
+    }
+]

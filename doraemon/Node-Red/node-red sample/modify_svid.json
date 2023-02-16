@@ -1,0 +1,250 @@
+[
+    {
+        "id": "b4bafced.e7828",
+        "type": "subflow",
+        "name": "parameter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "f09fbbe8.4bce98"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "eb6f82d4.ab9ae",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "b03ce674.2214b8",
+        "type": "http request",
+        "z": "b4bafced.e7828",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "efee0c6b.42975"
+            ]
+        ]
+    },
+    {
+        "id": "3118a10e.2ceb3e",
+        "type": "function",
+        "z": "b4bafced.e7828",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":env.get(\"username\"),\n    \"password\":env.get(\"password\")\n};\n\nmsg.ip_address = {};\nmsg.ip_address = env.get(\"ip_address\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "9339bb18.fccc78"
+            ]
+        ]
+    },
+    {
+        "id": "eb6f82d4.ab9ae",
+        "type": "function",
+        "z": "b4bafced.e7828",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efee0c6b.42975",
+        "type": "function",
+        "z": "b4bafced.e7828",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "eb6f82d4.ab9ae"
+            ]
+        ]
+    },
+    {
+        "id": "f09fbbe8.4bce98",
+        "type": "function",
+        "z": "b4bafced.e7828",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"username\",\n    \"password\",\n    \"ip_address\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "3118a10e.2ceb3e"
+            ]
+        ]
+    },
+    {
+        "id": "9339bb18.fccc78",
+        "type": "change",
+        "z": "b4bafced.e7828",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "b03ce674.2214b8"
+            ]
+        ]
+    },
+    {
+        "id": "8e5e9736.84f308",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a7227389.6162a",
+        "type": "inject",
+        "z": "8e5e9736.84f308",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "9db7ce27.245e1"
+            ]
+        ]
+    },
+    {
+        "id": "29f4f03c.b4502",
+        "type": "debug",
+        "z": "8e5e9736.84f308",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9db7ce27.245e1",
+        "type": "subflow:b4bafced.e7828",
+        "z": "8e5e9736.84f308",
+        "name": "parameter",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.160"
+            }
+        ],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "2fecad59.7c3732"
+            ]
+        ]
+    },
+    {
+        "id": "1e0d3355.7ea15d",
+        "type": "http request",
+        "z": "8e5e9736.84f308",
+        "name": "put safebox ulum request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/safeboxes/etc-ulmu-config.json",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 750,
+        "y": 140,
+        "wires": [
+            [
+                "29f4f03c.b4502"
+            ]
+        ]
+    },
+    {
+        "id": "2fecad59.7c3732",
+        "type": "function",
+        "z": "8e5e9736.84f308",
+        "name": "payload of svid setting",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.svid = {\n    \"mssql\": {\n        \"connection-timeout-sec\": 10,\n        \"database\": \"database\",\n        \"execution-timeout-sec\": 60,\n        \"password\": \"password\",\n        \"retry-timeout-sec\": 30,\n        \"server\": \"127.0.0.1\\\\\\\\sqlserver2012\",\n        \"table\": \"dbo.table\",\n        \"timezone\": \"+08:00\",\n        \"username\": \"username\"\n    },\n    \"update-list\": [\n        {\n            \"channel-mapping-list\": [\n                {\n                    \"channel\": \"temperature\",\n                    \"sensor-field\": \"sensor1\"\n                },\n                {\n                    \"channel\": \"abc\",\n                    \"sensor-field\": \"sensor2\"\n                }\n            ],\n            \"device\": \"unknown\",\n            \"time-field\": \"time1\",\n            \"update-frequency-sec\": 60\n        }\n    ]\n}\n\n\nmsg.payload = msg.svid;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "1e0d3355.7ea15d"
+            ]
+        ]
+    }
+]

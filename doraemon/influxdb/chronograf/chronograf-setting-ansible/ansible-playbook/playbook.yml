@@ -1,0 +1,18 @@
+---
+- name: Chronograf for amd64 hosts
+  hosts: all
+  become: true
+  strategy: free
+  roles:
+  - role: disable-systemd-services
+  - role: remove-deb-packages
+  - role: replace-apt-sources-list
+  - role: install-deb-packages
+  - role: autoremove-deb-packages
+  - role: user-docker-group
+  - role: prepare-venv
+  - role: ntpdate-hwclock-writeback
+  - role: load-images
+  - role: setup-chronograf
+  - role: setup-systemd
+  - role: reboot

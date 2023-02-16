@@ -1,0 +1,19 @@
+新增 service 於 /lib/systemd/system/
+cd /lib/systemd/system/
+
+vim dlmc.service
+
+[Unit]
+Description=DLMC
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/mkmp_tool/sample/
+ExecStart=/bin/bash dlmc.sh
+
+[Install]
+WantedBy=multi-user.target
+
+新增完成後
+sudo systemctl daemon-reload
+sudo systemctl enable dlmc.service

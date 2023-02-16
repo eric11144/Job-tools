@@ -1,0 +1,163 @@
+# auth
+curl -i -H "Content-Type: application/json" POST -d '{"username":"admin","password":"p@55w0rd"}' "http://192.168.11.181/api/v1/auth"
+
+# post /config/virtual/templates
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE1NDgzODUxNzAsImlhdCI6MTU0ODM4NTE3MCwiZXhwIjoxNTQ4Mzg4NzcwLCJqdGkiOiJmYTFkZGU1ZS03ODU3LTRkNjktOTdlMy01NzQ5NDdkNmZjZWEiLCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlLCJpZGVudGl0eSI6ImFkbWluIn0.OlS5nYkgjBncV1YteTzDbpwQ09vhouVMRhVyC_ce0dg'\
+  --request POST "http://192.168.11.181/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "templateId": "changed",
+  "channels": [
+    {
+      "channelId": "changed",
+      "category": [
+        "alarm"
+      ],
+      "valueType": "integer"
+    }
+  ]
+}
+EOF
+
+# post /config/virtual/templates
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE1NDgzODQyNDQsImlhdCI6MTU0ODM4NDI0NCwiZXhwIjoxNTQ4Mzg3ODQ0LCJqdGkiOiIxMjY4N2JmZC1mMWViLTQ2OTMtYjZlYy1kNzU2Njg4NTIyMzQiLCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlLCJpZGVudGl0eSI6ImFkbWluIn0.ibJaA_7GRQqk31ytjRKdhOBkSm4EFdGDvLdQjKQsYM8' \
+  --request POST "http://192.168.11.181/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "templateId": "utilization",
+  "channels": [
+    {
+      "channelId": "total_utilization_time_hours",
+      "channelName": "今日總稼動時間",
+      "category": [
+        "data"
+      ]
+    }
+  ]
+}
+EOF
+
+# put /config/virtual/equipments
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE1NDgzODQyNDQsImlhdCI6MTU0ODM4NDI0NCwiZXhwIjoxNTQ4Mzg3ODQ0LCJqdGkiOiIxMjY4N2JmZC1mMWViLTQ2OTMtYjZlYy1kNzU2Njg4NTIyMzQiLCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlLCJpZGVudGl0eSI6ImFkbWluIn0.ibJaA_7GRQqk31ytjRKdhOBkSm4EFdGDvLdQjKQsYM8' \
+  --request PUT "http://192.168.11.181/api/v1/config/virtual/equipments" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+[
+  {
+    "equipmentId": "detect_board",
+    "templateId": "changed"
+  },
+  {
+    "equipmentId": "detect_barcode",
+    "templateId": "changed"
+  },
+  {
+    "equipmentId": "utilization_board",
+    "equipmentName": "今日總稼動小時(片數)",
+    "templateId": "utilization"
+  },
+  {
+    "equipmentId": "utilization_barcode",
+    "equipmentName": "今日總稼動小時(barcode)",
+    "templateId": "utilization"
+  }
+]
+EOF
+
+
+# post /config/virtual/templates
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOTg2NWI3ZC0wMjdiLTQ0ZGItYWUzYy00MjFiNGUwM2FmOTAiLCJmcmVzaCI6ZmFsc2UsImlhdCI6MTU0NzUzNzM2MywiaWRlbnRpdHkiOiJhZG1pbiIsImV4cCI6MTU0NzU0MDk2MywibmJmIjoxNTQ3NTM3MzYzLCJ0eXBlIjoiYWNjZXNzIn0.XzHFiard5Li9W_xWVLnUNZ4RfGlN1dDMDSm6M1w-Y8Q' \
+  --request POST "http://192.168.11.193/api/v1/virtual/devices/mxe/update-reading" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "at": "2021-05-19T17:41:26.299Z",
+  "channels": [
+    {
+      "channelId": "index",
+      "value": {
+        "num": 123456789
+      }
+    },
+    {
+      "channelId": "voltage_V",
+      "value": {
+        "num": 20.5
+      }
+    },
+    {
+      "channelId": "current_A",
+      "value": {
+        "str": "abced"
+      }
+    }
+  ]
+}
+EOF
+
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOTg2NWI3ZC0wMjdiLTQ0ZGItYWUzYy00MjFiNGUwM2FmOTAiLCJmcmVzaCI6ZmFsc2UsImlhdCI6MTU0NzUzNzM2MywiaWRlbnRpdHkiOiJhZG1pbiIsImV4cCI6MTU0NzU0MDk2MywibmJmIjoxNTQ3NTM3MzYzLCJ0eXBlIjoiYWNjZXNzIn0.XzHFiard5Li9W_xWVLnUNZ4RfGlN1dDMDSm6M1w-Y8Q' \
+  --request PUT "http://192.168.11.193/api/v1/config/virtual/equipments" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+[
+  {
+    "equipmentId": "mxe",
+    "templateId": "changed"
+  }
+]
+EOF
+
+curl -i \
+  -H 'Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOTg2NWI3ZC0wMjdiLTQ0ZGItYWUzYy00MjFiNGUwM2FmOTAiLCJmcmVzaCI6ZmFsc2UsImlhdCI6MTU0NzUzNzM2MywiaWRlbnRpdHkiOiJhZG1pbiIsImV4cCI6MTU0NzU0MDk2MywibmJmIjoxNTQ3NTM3MzYzLCJ0eXBlIjoiYWNjZXNzIn0.XzHFiard5Li9W_xWVLnUNZ4RfGlN1dDMDSm6M1w-Y8Q' \
+  --request POST "http://192.168.11.193/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "templateId": "changed",
+  "channels": [
+    {
+      "channelId": "value",
+      "category": [
+        "data"
+      ],
+      "valueType": "integer"
+    }
+  ]
+}
+EOF
+
+curl -i -u admin:p@55w0rd --request POST "http://xxx.xxx.xxx.xxx/api/v1/virtual/devices/xxxxxxx/update-reading" \
+-H 'Content-Type: application/json' \
+--data-binary @- <<EOF
+{
+   "at": "2021-05-19T17:41:26.299Z",
+   "channels": [
+     {
+       "channelId": "index",
+       "value": {
+         "num": 123456789
+       }
+     },
+     {
+       "channelId": "voltage_V",
+       "value": {
+         "num": 20.5
+       }
+     },
+     {
+       "channelId": "current_A",
+       "value": {
+         "str": "abced"
+       }
+     }
+   ]
+}
+EOF
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=resource-monitor
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/resource-monitor
+ExecStart=/venv/bin/docker-compose up --timeout 60
+ExecStop=/venv/bin/docker-compose stop --timeout 60
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,122 @@
+[
+    {
+        "id": "f0c6699f.349778",
+        "type": "function",
+        "z": "d2002106.1a444",
+        "name": "get channel with category",
+        "func": "var category = msg.categorizedReading[\"line\"]\nvar get_channel_id_list_with_category = []\nvar channel_id = \"\"\nvar get_category_with_line_dict = {};\n\nfor (var key in category){\n    channel_id = key;\n    if (category.hasOwnProperty(key)) {\n        get_category_with_line_dict[channel_id] = category[key]\n    }\n}\n\nmsg.payload = {\n    \"reading\": get_category_with_line_dict\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "719fe8b2.9aca68"
+            ]
+        ]
+    },
+    {
+        "id": "719fe8b2.9aca68",
+        "type": "forward-on-change",
+        "z": "d2002106.1a444",
+        "name": "",
+        "dropReadingUndefined": false,
+        "initialValue": "",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "42636cf5.2c83d4"
+            ]
+        ]
+    },
+    {
+        "id": "42636cf5.2c83d4",
+        "type": "function",
+        "z": "d2002106.1a444",
+        "name": "check alarm status",
+        "func": "var dict = msg.payload.reading\nvar channel_name = msg.channelNames\nvar channel_id_list = []\nvar arr = []\n\nfor (var key in dict) {\n    channel_id_list.push(key);\n}\n\nfor (i = 0; i < channel_id_list.length; ++i){\n    if (dict[channel_id_list[i]] == 1){\n        arr.push(channel_name[channel_id_list[i]])\n    }\n}\n\nif (arr !== 'undefined' && arr.length > 0){\n    msg.payload = arr\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 220,
+        "wires": [
+            [
+                "a4f99c9f.8fc41"
+            ]
+        ]
+    },
+    {
+        "id": "a4f99c9f.8fc41",
+        "type": "function",
+        "z": "d2002106.1a444",
+        "name": "line notify",
+        "func": "ACCESS_TOKEN = 'FE3CXAlfkmbyOWtTHKoVwp7MpoqKeu05cWvwU3KCrdm';\n\nmsg.headers = {\n    'Content-Type': 'application/x-www-form-urlencoded',\n    'Authorization': 'Bearer ' + ACCESS_TOKEN,\n};\n\npayload = {\n    message: \"q02u : \" + msg.payload\n};\n\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe481b59.44e8c8",
+        "type": "http request",
+        "z": "d2002106.1a444",
+        "name": "Line notify Messaging API 傳送",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://notify-api.line.me/api/notify",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            [
+                "31088661.d7620a"
+            ]
+        ]
+    },
+    {
+        "id": "ba59e4ad.a20128",
+        "type": "reading-in",
+        "z": "d2002106.1a444",
+        "name": "",
+        "equipmentId": "q02u",
+        "categorizedReadingRequired": true,
+        "channelNamesRequired": true,
+        "x": 180,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31088661.d7620a",
+        "type": "debug",
+        "z": "d2002106.1a444",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 320,
+        "wires": []
+    }
+]

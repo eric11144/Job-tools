@@ -1,0 +1,2 @@
+cd ~/node_modules/node-red-contrib-modbus
+cat package.json

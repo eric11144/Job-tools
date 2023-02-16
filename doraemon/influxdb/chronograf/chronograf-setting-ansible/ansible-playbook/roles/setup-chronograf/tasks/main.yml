@@ -1,0 +1,15 @@
+---
+- name: Remove /resource-monitor
+  file:
+    path: /resource-monitor
+    state: absent
+
+- name: Copy /resource-monitor
+  copy:
+    src: '{{ role_path }}/files/resource-monitor/'
+    dest: /resource-monitor/
+
+- name: Copy /resource-monitor - chmod
+  file:
+    path: /resource-monitor/start.sh
+    mode: 0755

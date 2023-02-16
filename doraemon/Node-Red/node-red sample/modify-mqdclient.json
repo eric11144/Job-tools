@@ -1,0 +1,254 @@
+[
+    {
+        "id": "195e7969.ac6a17",
+        "type": "subflow",
+        "name": "parameter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "8d19303b.7515d"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "9613e912.cb4ec8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "fef97a85.0a02d8",
+        "type": "http request",
+        "z": "195e7969.ac6a17",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "68b86e3.7e6719"
+            ]
+        ]
+    },
+    {
+        "id": "e1da2d60.a0596",
+        "type": "function",
+        "z": "195e7969.ac6a17",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":env.get(\"username\"),\n    \"password\":env.get(\"password\")\n};\n\nmsg.ip_address = {};\nmsg.ip_address = env.get(\"msmq_server_ip\")\n\nmsg.msmq_server_ip = {};\nmsg.msmq_server_ip = env.get(\"msmq_server_ip\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "d7a770e.c38df9"
+            ]
+        ]
+    },
+    {
+        "id": "9613e912.cb4ec8",
+        "type": "function",
+        "z": "195e7969.ac6a17",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68b86e3.7e6719",
+        "type": "function",
+        "z": "195e7969.ac6a17",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "9613e912.cb4ec8"
+            ]
+        ]
+    },
+    {
+        "id": "8d19303b.7515d",
+        "type": "function",
+        "z": "195e7969.ac6a17",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"username\",\n    \"password\",\n    \"ip_address\",\n    \"msmq_server_ip\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "e1da2d60.a0596"
+            ]
+        ]
+    },
+    {
+        "id": "d7a770e.c38df9",
+        "type": "change",
+        "z": "195e7969.ac6a17",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "fef97a85.0a02d8"
+            ]
+        ]
+    },
+    {
+        "id": "131f3c62.b25614",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2f615b5e.d55754",
+        "type": "inject",
+        "z": "131f3c62.b25614",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "bd6a1b3f.24e2b8"
+            ]
+        ]
+    },
+    {
+        "id": "bd6a1b3f.24e2b8",
+        "type": "subflow:195e7969.ac6a17",
+        "z": "131f3c62.b25614",
+        "name": "parameter",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.192"
+            },
+            {
+                "name": "msmq_server_ip",
+                "type": "str",
+                "value": "10.13.69.61"
+            }
+        ],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "c1fa2b4f.dac968"
+            ]
+        ]
+    },
+    {
+        "id": "db5e6292.cf795",
+        "type": "http request",
+        "z": "131f3c62.b25614",
+        "name": "put safebox mqdclient request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/safeboxes/etc-mqdclient-config.json",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 813,
+        "y": 140,
+        "wires": [
+            [
+                "176aa41c.86569c"
+            ]
+        ]
+    },
+    {
+        "id": "c1fa2b4f.dac968",
+        "type": "function",
+        "z": "131f3c62.b25614",
+        "name": "payload of mqdclient setting",
+        "func": "var msmq_server_ip = msg.msmq_server_ip\n\nmsg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.mqdclient = {\n    \"queue\": {\n        \"size-per-device\": 4096\n    },\n    \"qurrent\": {\n        \"get-properties-timeout-ms\": 3000,\n        \"subscriber-buffer-size\": 10,\n        \"pk-pairs\": [\n            {\n                \"qurrent-property\": \"machineNo\",\n                \"http-key\": \"machineNo\"\n            },\n            {\n                \"qurrent-property\": \"machineName\",\n                \"http-key\": \"machineName\"\n            }\n        ]\n    },\n    \"http\": {\n        \"post-frequency-ms\": 10,\n        \"max-consumption-per-queue\": 50\n    },\n    \"pipelines\": [\n        {\n            \"from-stream-id\": \"data\",\n            \"to-uri\": \"http://\" + msmq_server_ip + \":12345/mq-diverter/0.1/api/tx8100/Data\"\n        },\n        {\n            \"from-stream-id\": \"alarm_onchange\",\n            \"to-uri\": \"http://\" + msmq_server_ip + \"/mq-diverter/0.1/api/tx8100/Event\"\n        }\n    ]\n}\n\n\nmsg.payload = msg.mqdclient;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 525,
+        "y": 140,
+        "wires": [
+            [
+                "db5e6292.cf795"
+            ]
+        ]
+    },
+    {
+        "id": "176aa41c.86569c",
+        "type": "debug",
+        "z": "131f3c62.b25614",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1050,
+        "y": 140,
+        "wires": []
+    }
+]

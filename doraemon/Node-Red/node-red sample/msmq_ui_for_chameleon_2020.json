@@ -1,0 +1,603 @@
+[
+    {
+        "id": "197e9ec8.5806b1",
+        "type": "tab",
+        "label": "Configure MSMQ",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "215f16c2.caa3c2",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chameleon Gateway",
+        "tab": "e2f8c96f.6d12c8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "62ae58f7.d4dcc8",
+        "type": "ui_group",
+        "z": "",
+        "name": "MSMQ 設定",
+        "tab": "e2f8c96f.6d12c8",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "e2f8c96f.6d12c8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "MSMQ 設定",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "82abd250.b8c18",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "fb5e3c8a.2e3e28",
+        "type": "ui_text_input",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "label": "Chameleon IP",
+        "tooltip": "",
+        "group": "215f16c2.caa3c2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "4988d90d.7e8d48"
+            ]
+        ]
+    },
+    {
+        "id": "5e4d652d.0a3c3c",
+        "type": "ui_text_input",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "label": "Chameleon Password",
+        "tooltip": "",
+        "group": "215f16c2.caa3c2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "",
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "4cec735e.f63804"
+            ]
+        ]
+    },
+    {
+        "id": "215064d6.2444dc",
+        "type": "ui_text_input",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "label": "MSMQ Entry IP",
+        "tooltip": "",
+        "group": "62ae58f7.d4dcc8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "892adeaa.df93d"
+            ]
+        ]
+    },
+    {
+        "id": "6ebf421f.1c951c",
+        "type": "ui_button",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "group": "62ae58f7.d4dcc8",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "設定",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "ab69fff9.51872"
+            ]
+        ]
+    },
+    {
+        "id": "a6cf31d0.b1dc58",
+        "type": "ui_text",
+        "z": "197e9ec8.5806b1",
+        "group": "62ae58f7.d4dcc8",
+        "order": 5,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "設定狀態",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 1260,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4988d90d.7e8d48",
+        "type": "change",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chameleon_ip",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cec735e.f63804",
+        "type": "change",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "password",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "892adeaa.df93d",
+        "type": "change",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "msmq_entry_ip",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab69fff9.51872",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Prepare Request",
+        "func": "const CHAMELEON_IP = flow.get('chameleon_ip')\nconst PASSWORD = flow.get('password')\nconst MSMQ_ENTRY_IP = flow.get('msmq_entry_ip')\n\nif (!CHAMELEON_IP || !PASSWORD || !MSMQ_ENTRY_IP) {\n    return [\n        null,\n        {\n            payload: 'KO INPUT'\n        }\n    ]\n}\n\nlet url = 'http://' + CHAMELEON_IP + '/api/v1/safeboxes/etc-mqdclient-config.json'\n\nlet headers = {\n    'Content-Type': 'application/json',\n    'Authorization': 'Basic ' + Buffer.from('admin:' + PASSWORD).toString('base64')\n}\n\nlet payload = {\n    \"queue\": {\n        \"size-per-device\": 4096\n    },\n    \"qurrent\": {\n        \"get-properties-timeout-ms\": 3000,\n        \"subscriber-buffer-size\": 10,\n        \"pk-pairs\": [\n            {\n                \"qurrent-property\": \"machineNo\",\n                \"http-key\": \"machineNo\"\n            },\n            {\n                \"qurrent-property\": \"machineName\",\n                \"http-key\": \"machineName\"\n            }\n        ]\n    },\n    \"http\": {\n        \"post-frequency-ms\": 10,\n        \"max-consumption-per-queue\": 50\n    },\n    \"pipelines\": [\n        {\n            \"from-stream-id\": \"data\",\n            \"to-uri\": \"http://\" + MSMQ_ENTRY_IP + \":12345/mq-diverter/0.1/api/tx8100/Data\"\n        },\n        {\n            \"from-stream-id\": \"alarm_onchange\",\n            \"to-uri\": \"http://\" + MSMQ_ENTRY_IP + \":12345/mq-diverter/0.1/api/tx8100/Event\"\n        }\n    ]\n}\n\nreturn [\n    {\n        url: url,\n        headers: headers,\n        payload: payload\n    },\n    {\n        payload: 'Requesting'\n    }\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 650,
+        "y": 440,
+        "wires": [
+            [
+                "e9f2ce60.045758"
+            ],
+            [
+                "255b8a28.56ac16"
+            ]
+        ]
+    },
+    {
+        "id": "e9f2ce60.045758",
+        "type": "http request",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 870,
+        "y": 440,
+        "wires": [
+            [
+                "38cffb7f.f78014",
+                "9f8d0ada.f9cb28"
+            ]
+        ]
+    },
+    {
+        "id": "38cffb7f.f78014",
+        "type": "debug",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1090,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9f8d0ada.f9cb28",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Format Status",
+        "func": "if (msg.statusCode === 200) {\n    return {\n        payload: 'OK'\n    }\n}\nelse {\n    return {\n        payload: 'KO ' + msg.statusCode.toString()\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "255b8a28.56ac16"
+            ]
+        ]
+    },
+    {
+        "id": "255b8a28.56ac16",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Coloring",
+        "func": "if (msg.payload.startsWith('OK')) {\n    msg.color = 'green'\n}\nelse if (msg.payload.startsWith('KO')) {\n    msg.color = 'red'\n}\nelse\n{\n    msg.color = 'orange'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1100,
+        "y": 520,
+        "wires": [
+            [
+                "a6cf31d0.b1dc58"
+            ]
+        ]
+    },
+    {
+        "id": "d1d6c2c8.a145b",
+        "type": "ui_button",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "group": "62ae58f7.d4dcc8",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "讀取",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "bb89f952.fcd59"
+            ]
+        ]
+    },
+    {
+        "id": "bb89f952.fcd59",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Prepare Request",
+        "func": "const CHAMELEON_IP = flow.get('chameleon_ip')\n\nlet url = 'http://' + CHAMELEON_IP + '/api/v1/safeboxes/etc-mqdclient-config.json'\n\nreturn [\n    {\n        url: url\n    },\n    {\n        payload: 'Requesting'\n    }\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 650,
+        "y": 240,
+        "wires": [
+            [
+                "455aa12f.2449b8"
+            ],
+            [
+                "b3e3b578.0fac28"
+            ]
+        ]
+    },
+    {
+        "id": "171e7776.c83139",
+        "type": "ui_text",
+        "z": "197e9ec8.5806b1",
+        "group": "62ae58f7.d4dcc8",
+        "order": 3,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "讀取狀態",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 1260,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b3e3b578.0fac28",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Coloring",
+        "func": "if (msg.payload.startsWith('OK')) {\n    msg.color = 'green'\n}\nelse if (msg.payload.startsWith('KO')) {\n    msg.color = 'red'\n}\nelse\n{\n    msg.color = 'orange'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1100,
+        "y": 320,
+        "wires": [
+            [
+                "171e7776.c83139"
+            ]
+        ]
+    },
+    {
+        "id": "455aa12f.2449b8",
+        "type": "http request",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 870,
+        "y": 240,
+        "wires": [
+            [
+                "a0a3251.7bf58d8",
+                "38cffb7f.f78014"
+            ]
+        ]
+    },
+    {
+        "id": "a0a3251.7bf58d8",
+        "type": "function",
+        "z": "197e9ec8.5806b1",
+        "name": "Extract IP",
+        "func": "if (msg.statusCode != 200) {\n    return [\n        null,\n        {\n            payload: 'KO ' + msg.statusCode.toString()\n        }\n    ]\n}\n\nlet to_uri = JSON.parse(msg.payload)['pipelines'][0]['to-uri']\nlet regex = /http:\\/\\/([^:/]+):/\n\nlet groups = to_uri.match(regex)\n\nreturn [\n    {\n        payload: groups[1]\n    },\n    {\n        payload: 'OK'\n    }\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1100,
+        "y": 240,
+        "wires": [
+            [
+                "215064d6.2444dc"
+            ],
+            [
+                "b3e3b578.0fac28"
+            ]
+        ]
+    },
+    {
+        "id": "81f35ea2.b1c29",
+        "type": "ui_text_input",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "label": "Chameleon Username",
+        "tooltip": "",
+        "group": "215f16c2.caa3c2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 500,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a689f67.59e3b8",
+        "type": "inject",
+        "z": "197e9ec8.5806b1",
+        "name": "Initialize",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "5d9ae9d7.6ad11"
+            ]
+        ]
+    },
+    {
+        "id": "5d9ae9d7.6ad11",
+        "type": "change",
+        "z": "197e9ec8.5806b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "admin",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "81f35ea2.b1c29"
+            ]
+        ]
+    }
+]

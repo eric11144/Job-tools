@@ -1,0 +1,952 @@
+[
+    {
+        "id": "b7df6e80.7800f",
+        "type": "tab",
+        "label": "Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a3b0254b.eea148",
+        "type": "tab",
+        "label": "Load View",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "951a9778.f49008",
+        "type": "tab",
+        "label": "Load Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3f8a2e82.dfe2b2",
+        "type": "tab",
+        "label": "Recipe View",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fafab58a.ae80d8",
+        "type": "tab",
+        "label": "Recipe Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bad28976.e1e118",
+        "type": "tab",
+        "label": "Unload View",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3e73468d.a826ca",
+        "type": "tab",
+        "label": "Unload Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b9ec8163.3bd34",
+        "type": "ui_tab",
+        "name": "生產配方",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1ea0598.adbc8a7",
+        "type": "ui_group",
+        "name": "上料",
+        "tab": "b9ec8163.3bd34",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "86232393.ac7cf",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8fb81505.5d7128",
+        "type": "ui_group",
+        "name": "配方",
+        "tab": "b9ec8163.3bd34",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "70f192b2.7bd06c",
+        "type": "ui_group",
+        "name": "下料",
+        "tab": "b9ec8163.3bd34",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "805e8321.71a53",
+        "type": "ui_text_input",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "label": "工單碼",
+        "tooltip": "",
+        "group": "1ea0598.adbc8a7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "cab607bb.e60bf8"
+            ]
+        ]
+    },
+    {
+        "id": "f4e851d5.14f3f",
+        "type": "link in",
+        "z": "a3b0254b.eea148",
+        "name": "To View",
+        "links": [
+            "2bb03c5d.ed7964",
+            "646aef57.91d0e",
+            "85e06d6a.5727d",
+            "f661cba1.56f2c8"
+        ],
+        "x": 215,
+        "y": 140,
+        "wires": [
+            [
+                "30de2fbc.2b10c",
+                "1a67ce32.48f0a2"
+            ]
+        ]
+    },
+    {
+        "id": "30de2fbc.2b10c",
+        "type": "function",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "func": "if (msg.topic === 'initialize') {\n    return {\n        payload: ''\n    }\n}\n\nconst model = global.get('model')\n\nconst enabled = !model.isOperating && model.state === 'LOAD'\n\nreturn {\n    enabled\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "805e8321.71a53"
+            ]
+        ]
+    },
+    {
+        "id": "4109403a.eed69",
+        "type": "inject",
+        "z": "b7df6e80.7800f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "368d4f2.e9c4fb"
+            ]
+        ]
+    },
+    {
+        "id": "368d4f2.e9c4fb",
+        "type": "function",
+        "z": "b7df6e80.7800f",
+        "name": "",
+        "func": "let model = {\n    isOperating: false,\n    state: 'LOAD',\n\n    workOrder: '',\n    piecesCfg: undefined\n}\n\nglobal.set('model', model)\n\nreturn [[\n    {\n        topic: 'initialize',\n        payload: {}\n    },\n    {\n        topic: 'model',\n        payload: model\n    }\n]]",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "646aef57.91d0e"
+            ]
+        ]
+    },
+    {
+        "id": "646aef57.91d0e",
+        "type": "link out",
+        "z": "b7df6e80.7800f",
+        "name": "To View",
+        "links": [
+            "d0438a42.6a93a8",
+            "f4e851d5.14f3f",
+            "5d095b5c.bb86b4"
+        ],
+        "x": 645,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1a67ce32.48f0a2",
+        "type": "function",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "func": "if (msg.topic === 'initialize') {\n    return {\n        payload: ''\n    }\n}\n\nconst model = global.get('model')\nconst workOrder = flow.get('workOrder')\n\nconst enabled = !model.isOperating\n && model.state === 'LOAD'\n && !!workOrder\n\nreturn {\n    enabled\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "5831f03.15b721"
+            ]
+        ]
+    },
+    {
+        "id": "5831f03.15b721",
+        "type": "ui_button",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "group": "1ea0598.adbc8a7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "確定",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "240c9ffc.cec2"
+            ]
+        ]
+    },
+    {
+        "id": "cab607bb.e60bf8",
+        "type": "change",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "workOrder",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "1a67ce32.48f0a2"
+            ]
+        ]
+    },
+    {
+        "id": "240c9ffc.cec2",
+        "type": "function",
+        "z": "a3b0254b.eea148",
+        "name": "",
+        "func": "const workOrder = flow.get('workOrder')\n\nreturn {\n    topic: 'load',\n    payload: {\n        workOrder\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 220,
+        "wires": [
+            [
+                "b09c13e8.cb924"
+            ]
+        ]
+    },
+    {
+        "id": "b09c13e8.cb924",
+        "type": "link out",
+        "z": "a3b0254b.eea148",
+        "name": "To Control",
+        "links": [
+            "44b4fc52.0d1764",
+            "799ab8db.d4e488",
+            "f29e18ce.532fb8"
+        ],
+        "x": 995,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "44b4fc52.0d1764",
+        "type": "link in",
+        "z": "951a9778.f49008",
+        "name": "To Control",
+        "links": [
+            "b09c13e8.cb924",
+            "c4ed0fd8.632a5",
+            "568fbe1e.1c825"
+        ],
+        "x": 305,
+        "y": 160,
+        "wires": [
+            [
+                "7a22fff6.3fbce"
+            ]
+        ]
+    },
+    {
+        "id": "7a22fff6.3fbce",
+        "type": "function",
+        "z": "951a9778.f49008",
+        "name": "Handle load",
+        "func": "if (msg.topic !== 'load') {\n    return\n}\n\nconst workOrder = msg.payload.workOrder\n\nconst changes = {\n    isOperating: true,\n    workOrder: workOrder\n}\n\nlet model = global.get('model')\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn [\n    {\n        topic: 'model',\n        payload: changes\n    },\n    // recipe query\n    {\n        config: {\n            filter: [{\n                id: {\n                    eq: workOrder\n                }\n            }]\n        }\n    }\n]\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "2bb03c5d.ed7964"
+            ],
+            [
+                "7ff7a093.e5f1f"
+            ]
+        ]
+    },
+    {
+        "id": "7ff7a093.e5f1f",
+        "type": "recipe-query",
+        "z": "951a9778.f49008",
+        "name": "",
+        "category": "fx5u_100m",
+        "filter": "[]",
+        "filterType": "json",
+        "sortBy": "[]",
+        "sortByType": "json",
+        "maxResults": "",
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "24f9ddb7.c54982"
+            ]
+        ]
+    },
+    {
+        "id": "24f9ddb7.c54982",
+        "type": "function",
+        "z": "951a9778.f49008",
+        "name": "",
+        "func": "let state = 'LOAD'\nlet piecesCfg = undefined\nlet popup = null\n\nlet model = global.get('model')\n\nif (msg.payload.length === 0) {\n    node.error(\"query recipe failed: \" + JSON.stringify(msg.config))\n    popup = {\n        payload: \"recipe not found: \" + model.workOrder\n    }\n}\nelse {\n    state = 'RECIPE',\n    piecesCfg = msg.payload[0].ingredients.pieces_cfg\n}\n\nconst changes = {\n    isOperating: false,\n    piecesCfg,\n    state\n}\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn [\n    {\n        topic: 'model',\n        payload: changes\n    },\n    popup\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 900,
+        "y": 240,
+        "wires": [
+            [
+                "2bb03c5d.ed7964"
+            ],
+            [
+                "c8a16250.a7826"
+            ]
+        ]
+    },
+    {
+        "id": "2bb03c5d.ed7964",
+        "type": "link out",
+        "z": "951a9778.f49008",
+        "name": "To View",
+        "links": [
+            "5d095b5c.bb86b4",
+            "d0438a42.6a93a8",
+            "f4e851d5.14f3f"
+        ],
+        "x": 1015,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d0438a42.6a93a8",
+        "type": "link in",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "To View",
+        "links": [
+            "2bb03c5d.ed7964",
+            "646aef57.91d0e",
+            "85e06d6a.5727d",
+            "f661cba1.56f2c8"
+        ],
+        "x": 285,
+        "y": 180,
+        "wires": [
+            [
+                "12c95ec2.0d8241",
+                "ee793b63.468d28"
+            ]
+        ]
+    },
+    {
+        "id": "12c95ec2.0d8241",
+        "type": "function",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "",
+        "func": "if (msg.topic === 'initialize') {\n    return {\n        payload: ''\n    }\n}\n\nconst model = global.get('model')\n\nconst enabled = !model.isOperating && model.state === 'RECIPE'\nconst payload = model.piecesCfg || ''\n\nreturn {\n    enabled,\n    payload\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "2758f224.2c926e"
+            ]
+        ]
+    },
+    {
+        "id": "8cae008b.e2ced",
+        "type": "ui_button",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "",
+        "group": "8fb81505.5d7128",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "寫入",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "9662f54c.0abe18"
+            ]
+        ]
+    },
+    {
+        "id": "2758f224.2c926e",
+        "type": "ui_text",
+        "z": "3f8a2e82.dfe2b2",
+        "group": "8fb81505.5d7128",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "片數",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ee793b63.468d28",
+        "type": "function",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "",
+        "func": "const model = global.get('model')\n\nconst enabled = !model.isOperating && model.state === 'RECIPE'\n\nreturn {\n    enabled\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "8cae008b.e2ced"
+            ]
+        ]
+    },
+    {
+        "id": "9662f54c.0abe18",
+        "type": "function",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "",
+        "func": "return {\n    topic: 'recipe',\n    payload: {}\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 280,
+        "wires": [
+            [
+                "c4ed0fd8.632a5"
+            ]
+        ]
+    },
+    {
+        "id": "c4ed0fd8.632a5",
+        "type": "link out",
+        "z": "3f8a2e82.dfe2b2",
+        "name": "To Control",
+        "links": [
+            "44b4fc52.0d1764",
+            "f29e18ce.532fb8",
+            "799ab8db.d4e488"
+        ],
+        "x": 1095,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f29e18ce.532fb8",
+        "type": "link in",
+        "z": "fafab58a.ae80d8",
+        "name": "To Control",
+        "links": [
+            "b09c13e8.cb924",
+            "c4ed0fd8.632a5",
+            "568fbe1e.1c825"
+        ],
+        "x": 445,
+        "y": 180,
+        "wires": [
+            [
+                "d8932a68.666b38"
+            ]
+        ]
+    },
+    {
+        "id": "d8932a68.666b38",
+        "type": "function",
+        "z": "fafab58a.ae80d8",
+        "name": "",
+        "func": "if (msg.topic !== 'recipe') {\n    return\n}\n\nconst changes = {\n    isOperating: true\n}\n\nlet model = global.get('model')\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn [\n    {\n        topic: 'model',\n        payload: changes\n    },\n    // control-out\n    {\n        payload: {\n            D300: model.piecesCfg\n        }\n    }\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "85e06d6a.5727d"
+            ],
+            [
+                "726915db.b12d3c"
+            ]
+        ]
+    },
+    {
+        "id": "726915db.b12d3c",
+        "type": "control-out",
+        "z": "fafab58a.ae80d8",
+        "name": "",
+        "equipmentId": "fx5u_100m",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            [
+                "8570b866.5bf178"
+            ]
+        ]
+    },
+    {
+        "id": "8570b866.5bf178",
+        "type": "function",
+        "z": "fafab58a.ae80d8",
+        "name": "",
+        "func": "if (msg.payload.code !== 0) {\n    node.error(\"control failed: \" + JSON.stringify(msg.payload))\n    return\n}\n\nconst changes = {\n    isOperating: false,\n    state: 'UNLOAD'\n}\n\nlet model = global.get('model')\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1020,
+        "y": 240,
+        "wires": [
+            [
+                "85e06d6a.5727d"
+            ]
+        ]
+    },
+    {
+        "id": "85e06d6a.5727d",
+        "type": "link out",
+        "z": "fafab58a.ae80d8",
+        "name": "To View",
+        "links": [
+            "5d095b5c.bb86b4",
+            "d0438a42.6a93a8",
+            "f4e851d5.14f3f"
+        ],
+        "x": 1155,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5d095b5c.bb86b4",
+        "type": "link in",
+        "z": "bad28976.e1e118",
+        "name": "To View",
+        "links": [
+            "2bb03c5d.ed7964",
+            "646aef57.91d0e",
+            "85e06d6a.5727d",
+            "f661cba1.56f2c8"
+        ],
+        "x": 365,
+        "y": 200,
+        "wires": [
+            [
+                "14ce0b34.b89c65",
+                "18ed83cb.d7de0c"
+            ]
+        ]
+    },
+    {
+        "id": "14ce0b34.b89c65",
+        "type": "function",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "func": "if (msg.topic === 'initialize') {\n    return {\n        payload: ''\n    }\n}\n\nconst model = global.get('model')\n\nconst enabled = !model.isOperating && model.state === 'UNLOAD'\n\nif (model.state === 'UNLOAD') {\n    return {\n        enabled,\n        payload: ''\n    }\n}\nelse {\n    return {\n        enabled,\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "701c76ec.273ab8"
+            ]
+        ]
+    },
+    {
+        "id": "701c76ec.273ab8",
+        "type": "ui_text_input",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "label": "工單碼",
+        "tooltip": "",
+        "group": "70f192b2.7bd06c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "72ce58b6.b11a18"
+            ]
+        ]
+    },
+    {
+        "id": "ad291a36.601728",
+        "type": "ui_button",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "group": "70f192b2.7bd06c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "確定",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "234fdb66.5f1654"
+            ]
+        ]
+    },
+    {
+        "id": "72ce58b6.b11a18",
+        "type": "change",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "workOrder",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 200,
+        "wires": [
+            [
+                "18ed83cb.d7de0c"
+            ]
+        ]
+    },
+    {
+        "id": "18ed83cb.d7de0c",
+        "type": "function",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "func": "if (msg.topic === 'initialize') {\n    return {\n        payload: ''\n    }\n}\n\nconst model = global.get('model')\nconst workOrder = flow.get('workOrder')\n\nconst enabled = !model.isOperating\n && model.state === 'UNLOAD'\n && !!workOrder\n && workOrder === model.workOrder\n\nnode.log(\n    'model.state = ' + JSON.stringify(model.state)\n    + 'workOrder = ' + JSON.stringify(workOrder)\n    + 'model.workOrder = ' + JSON.stringify(model.workOrder)\n    + ', ' + 'enabled = ' + JSON.stringify(enabled)\n)\n\nreturn {\n    enabled\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "ad291a36.601728"
+            ]
+        ]
+    },
+    {
+        "id": "234fdb66.5f1654",
+        "type": "function",
+        "z": "bad28976.e1e118",
+        "name": "",
+        "func": "return {\n    topic: 'unload',\n    payload: {}\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 970,
+        "y": 300,
+        "wires": [
+            [
+                "568fbe1e.1c825"
+            ]
+        ]
+    },
+    {
+        "id": "568fbe1e.1c825",
+        "type": "link out",
+        "z": "bad28976.e1e118",
+        "name": "To Control",
+        "links": [
+            "44b4fc52.0d1764",
+            "f29e18ce.532fb8",
+            "799ab8db.d4e488"
+        ],
+        "x": 1185,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "799ab8db.d4e488",
+        "type": "link in",
+        "z": "3e73468d.a826ca",
+        "name": "To Control",
+        "links": [
+            "568fbe1e.1c825",
+            "b09c13e8.cb924",
+            "c4ed0fd8.632a5"
+        ],
+        "x": 225,
+        "y": 160,
+        "wires": [
+            [
+                "ad8b9536.584788"
+            ]
+        ]
+    },
+    {
+        "id": "ad8b9536.584788",
+        "type": "function",
+        "z": "3e73468d.a826ca",
+        "name": "Handle unload",
+        "func": "if (msg.topic !== 'unload') {\n    return\n}\n\nconst changes = {\n    isOperating: false,\n    state: 'LOAD',\n\n    workOrder: '',\n    piecesCfg: undefined\n}\n\nlet model = global.get('model')\n\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn [[\n    {\n        topic: 'initialize',\n        payload: {}\n    },\n    {\n        topic: 'model',\n        payload: changes\n    }\n]]",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "f661cba1.56f2c8"
+            ]
+        ]
+    },
+    {
+        "id": "f661cba1.56f2c8",
+        "type": "link out",
+        "z": "3e73468d.a826ca",
+        "name": "To View",
+        "links": [
+            "5d095b5c.bb86b4",
+            "d0438a42.6a93a8",
+            "f4e851d5.14f3f"
+        ],
+        "x": 595,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c8a16250.a7826",
+        "type": "ui_toast",
+        "z": "951a9778.f49008",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    }
+]

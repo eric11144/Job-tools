@@ -1,0 +1,1 @@
+`cat the-gateway_moxa-4b04d7b9868f.tbz2 | ssh moxa@192.168.11.181 docker load`

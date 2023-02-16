@@ -1,0 +1,52 @@
+[
+    {
+        "id": "37f51592.b72072",
+        "type": "inject",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "topic": "",
+        "payload": "{\"A\":123, \"B\":\"Chameleon\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 830,
+        "y": 80,
+        "wires": [
+            [
+                "9cdd0f1b.9d7cf"
+            ]
+        ]
+    },
+    {
+        "id": "1369875a.6ceac1",
+        "type": "debug",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1110,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9cdd0f1b.9d7cf",
+        "type": "json",
+        "z": "eb67361.f81a948",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 960,
+        "y": 80,
+        "wires": [
+            [
+                "1369875a.6ceac1"
+            ]
+        ]
+    }
+]

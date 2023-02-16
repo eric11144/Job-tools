@@ -1,0 +1,20 @@
+下載並安裝 python
+https://www.python.org/downloads/release/python-387/
+
+完成後, 右鍵點選 get-pip,  點選 Edit with IDLE -> Edit with IDLE 3.8
+開啟程式後, 點選上排 Run -> Run Module, 安裝 pip
+
+安裝完成後, 開啟 cmd 
+cd C:\Users\xxxxxxx\AppData\Local\Programs\Python\Python38\Scripts
+安裝相關套件
+easy_install beautifulsoup4
+easy_install selenium
+easy_install webdriver-manager
+
+下載 webchrome driver
+https://chromedriver.storage.googleapis.com/index.html?path=94.0.4606.61/
+
+注意, webchrome driver 需與程式放在同一個資料夾
+
+完成後, 右鍵點選 demo,  點選 Edit with IDLE -> Edit with IDLE 3.8
+開啟程式後, 點選上排 Run -> Run Module, 執行程式

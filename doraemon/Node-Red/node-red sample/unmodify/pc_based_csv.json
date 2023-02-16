@@ -1,0 +1,198 @@
+[
+    {
+        "id": "32a13a3b.ec6e06",
+        "type": "tab",
+        "label": "Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "216ba9d0.6608c6",
+        "type": "inject",
+        "z": "32a13a3b.ec6e06",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "3e122b7b.541f04",
+                "158051e3.4195ce"
+            ]
+        ]
+    },
+    {
+        "id": "c85ae944.998238",
+        "type": "link out",
+        "z": "32a13a3b.ec6e06",
+        "name": "Initialize",
+        "links": [
+            "20409784.ba57e8",
+            "5d2842a4.ad3adc"
+        ],
+        "x": 455,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3e122b7b.541f04",
+        "type": "link out",
+        "z": "32a13a3b.ec6e06",
+        "name": "Periodical",
+        "links": [
+            "14ac0c9.db3c1f3",
+            "75f84124.d3f94"
+        ],
+        "x": 455,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "381fae07.398922",
+        "type": "inject",
+        "z": "32a13a3b.ec6e06",
+        "name": "init",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 60,
+        "wires": [
+            [
+                "cd214f8.a99feb",
+                "c85ae944.998238"
+            ]
+        ]
+    },
+    {
+        "id": "cd214f8.a99feb",
+        "type": "function",
+        "z": "32a13a3b.ec6e06",
+        "name": "init",
+        "func": "let model = {\n    isOperating: false\n}\n\nglobal.set('model', model)\n\nreturn [[\n    {\n        topic: 'initialize',\n        payload: {}\n    },\n    {\n        topic: 'model',\n        payload: model\n    }\n]]\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 60,
+        "wires": [
+            [
+                "6bbfd125.e3f77"
+            ]
+        ]
+    },
+    {
+        "id": "6bbfd125.e3f77",
+        "type": "link out",
+        "z": "32a13a3b.ec6e06",
+        "name": "To View",
+        "links": [
+            "4ac02770.ec2468"
+        ],
+        "x": 695,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "158051e3.4195ce",
+        "type": "function",
+        "z": "32a13a3b.ec6e06",
+        "name": "op true",
+        "func": "const changes = {\n    isOperating: true\n}\n\nlet model = global.get('model')\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "6bbfd125.e3f77"
+            ]
+        ]
+    },
+    {
+        "id": "bb27ad03.e4b74",
+        "type": "link in",
+        "z": "32a13a3b.ec6e06",
+        "name": "Operating False",
+        "links": [
+            "dd5bc596.1ab2d8",
+            "47e32d37.7683f4",
+            "9f4461a9.a35c2",
+            "f425396a.091dd8",
+            "21c9a294.d4d13e"
+        ],
+        "x": 275,
+        "y": 400,
+        "wires": [
+            [
+                "11fd0ec3.1ebec1"
+            ]
+        ]
+    },
+    {
+        "id": "11fd0ec3.1ebec1",
+        "type": "function",
+        "z": "32a13a3b.ec6e06",
+        "name": "op false",
+        "func": "const changes = {\n    isOperating: false\n}\n\nlet model = global.get('model')\nmodel = Object.assign(model, changes)\nglobal.set('model', model)\n\nreturn {\n    topic: 'model',\n    payload: changes\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 400,
+        "wires": [
+            [
+                "6bbfd125.e3f77"
+            ]
+        ]
+    },
+    {
+        "id": "8b3a6e08.6e952",
+        "type": "link in",
+        "z": "32a13a3b.ec6e06",
+        "name": "To Control",
+        "links": [
+            "5eb95821.54eaa8"
+        ],
+        "x": 275,
+        "y": 300,
+        "wires": [
+            [
+                "158051e3.4195ce",
+                "3e122b7b.541f04"
+            ]
+        ]
+    }
+]

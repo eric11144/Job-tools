@@ -1,0 +1,10 @@
+network:
+  enp0s3:
+    addresses:
+    - 192.168.15.10/24
+    dhcp4: 'no'
+    gateway4: 192.168.15.1
+    nameservers:
+    - 8.8.8.8
+  renderer: NetworkManager
+  version: 2

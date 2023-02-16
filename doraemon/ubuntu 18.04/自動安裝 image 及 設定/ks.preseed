@@ -1,0 +1,65 @@
+### Partitioning removal of keys to prevent file sys error
+ubiquity partman-auto/disk string /dev/sda
+ubiquity partman-auto/method string regular
+ubiquity partman-lvm/device_remove_lvm boolean true
+ubiquity partman-md/device_remove_md boolean true
+ubiquity partman-auto/choose_recipe select atomic
+
+### automatically partition without confirmation
+d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman/choose_partition select finish
+d-i partman/confirm boolean true
+d-i partman/confirm_nooverwrite boolean true
+
+### Localization
+#d-i debian-installer/locale string en_US
+#d-i console-setup/ask_detect boolean false
+#d-i console-setup/layoutcode string us
+d-i debian-installer/locale string en_US.UTF-8
+d-i localechooser/supported-locales multiselect en_US.UTF-8
+d-i console-setup/ask_detect boolean false
+d-i keyboard-configuration/xkb-keymap select us
+
+# Network
+d-i netcfg/get_hostname string pimq
+d-i netcfg/get_domain string pimq
+d-i netcfg/choose_interface select auto
+
+# Clock
+d-i time/zone string US/Eastern
+d-i clock-setup/utc boolean true
+d-i clock-setup/ntp boolean true
+d-i clock-setup/ntp-server  string time.google.com
+
+# Packages, Mirrors, Image
+d-i apt-setup/multiverse boolean true
+d-i apt-setup/restricted boolean true
+d-i apt-setup/universe boolean true
+
+# Users
+d-i passwd/user-fullname string pimq
+d-i passwd/username string pimq
+d-i passwd/user-password-crypted password $1$/PWlEGP0$0Mi/K1pCv6NQYMJieOzEc0
+d-i passwd/user-default-groups string adm audio cdrom dip lpadmin sudo plugdev sambashare video
+d-i passwd/root-login boolean true
+d-i passwd/root-password-crypted password $1$/PWlEGP0$0Mi/K1pCv6NQYMJieOzEc0
+d-i user-setup/allow-password-weak boolean true
+d-i pkgsel/include string openssh-server
+d-i preseed/late_command string \
+  in-target sh -c 'sed -i "s/^#PermitRootLogin.*\$/PermitRootLogin yes/g" /etc/ssh/sshd_config';
+
+### Grub
+#d-i grub-installer/bootdev  string /dev/sda
+d-i grub-installer/only_debian boolean true
+d-i grub-installer/with_other_os boolean true
+#d-i debian-installer/add-kernel-opts string net.ifnames=0 biosdevname=0
+
+### Package selection
+d-i tasksel/first multiselect none
+d-i pkgsel/include string openssh-server
+d-i pkgsel/upgrade select none
+d-i pkgsel/update-policy select none
+
+### Shutdown machine
+d-i finish-install/reboot_in_progress note
+d-i debian-installer/exit/poweroff boolean true

@@ -1,0 +1,13 @@
+sudo ./iopal_cmd_64 --initialSetup 12345 /dev/nvme0
+sudo fdisk /dev/nvme0n1
+input n, p, enter, 2048, +10G, w
+
+sudo mkfs.ext4 /dev/nvme0n1p1
+sudo fdisk -l
+sudo ./iopal_cmd_64 --setupLockingRange 1 2048 20973567 12345 /dev/nvme0
+sudo ./iopal_cmd_64 --listLockingRanges 12345 /dev/nvme0
+cat LockRangeList.log
+sudo ./iopal_cmd_64 --enableLockingRange 1 12345 /dev/nvme0
+sudo ./iopal_cmd_64 --listLockingRanges 12345 /dev/nvme0
+cat LockRangeList.log 
+sudo ./iopal_cmd_64 --loadPBAimage 12345 ~/UEFI64-1.20.0.img /dev/nvme0

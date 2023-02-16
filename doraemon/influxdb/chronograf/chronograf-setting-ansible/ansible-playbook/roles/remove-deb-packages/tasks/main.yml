@@ -1,0 +1,13 @@
+---
+- name: Remove deb packages
+  apt:
+    state: absent
+    autoremove: yes
+    purge: yes
+    name:
+    - cloud-init
+    - popularity-contest
+    - snapd
+    - ubuntu-core-launcher
+    - unattended-upgrades
+    - update-manager-core

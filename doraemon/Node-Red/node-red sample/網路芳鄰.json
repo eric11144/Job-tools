@@ -1,0 +1,398 @@
+[
+    {
+        "id": "efc48ace.abf328",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "acbba359.b6bf8",
+        "type": "smb config",
+        "z": "",
+        "name": "",
+        "share": "\\\\192.168.11.135\\test",
+        "domain": ""
+    },
+    {
+        "id": "b7a065e9.f345c8",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "read-dir",
+        "path": "test.txt",
+        "path_new": "",
+        "format": "string",
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "ec8b3f95.0e7d2"
+            ]
+        ]
+    },
+    {
+        "id": "9156cd15.08b53",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "b7a065e9.f345c8"
+            ]
+        ]
+    },
+    {
+        "id": "ec8b3f95.0e7d2",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3b27cfd.dbaed3",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "read-dir",
+        "path": "",
+        "path_new": "",
+        "format": "string",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "9f50b2e1.33bb7"
+            ]
+        ]
+    },
+    {
+        "id": "9f50b2e1.33bb7",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9a52b20d.c611d",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "3b27cfd.dbaed3"
+            ]
+        ]
+    },
+    {
+        "id": "6da7b2d1.ddb97c",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "create",
+        "path": "test_write.csv",
+        "path_new": "",
+        "format": "string",
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [
+                "95ba40c5.08bdb"
+            ]
+        ]
+    },
+    {
+        "id": "95ba40c5.08bdb",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "95ff42dc.2f9a8",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "array",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "bb619b76.8dd138"
+            ]
+        ]
+    },
+    {
+        "id": "bb619b76.8dd138",
+        "type": "change",
+        "z": "efc48ace.abf328",
+        "name": "Generate array payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t    { \"a\":$floor(100*$random()),\"b\":$floor(100*$random()),\"c\":$floor(100*$random())},\t    { \"a\":$floor(100*$random()),\"b\":$floor(100*$random()),\"c\":$floor(100*$random())},\t    { \"a\":$floor(100*$random()),\"b\":$floor(100*$random()),\"c\":$floor(100*$random())},\t    { \"a\":$floor(100*$random()),\"b\":$floor(100*$random()),\"c\":$floor(100*$random())}\t]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "bc3c5b25.88ef78"
+            ]
+        ]
+    },
+    {
+        "id": "bc3c5b25.88ef78",
+        "type": "csv",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": true,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "a,b,c",
+        "skip": "0",
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "6da7b2d1.ddb97c"
+            ]
+        ]
+    },
+    {
+        "id": "43e9708a.257d4",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "read-file",
+        "path": "test_write.csv",
+        "path_new": "",
+        "format": "string",
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "f50843f8.d5753"
+            ]
+        ]
+    },
+    {
+        "id": "4a84096b.583668",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 640,
+        "wires": [
+            [
+                "43e9708a.257d4"
+            ]
+        ]
+    },
+    {
+        "id": "f50843f8.d5753",
+        "type": "csv",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": false,
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "x": 630,
+        "y": 640,
+        "wires": [
+            [
+                "d17ca4de.0fe6b8"
+            ]
+        ]
+    },
+    {
+        "id": "d17ca4de.0fe6b8",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "18166479.ad0c3c",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "exists",
+        "path": "test.txt",
+        "path_new": "",
+        "format": "string",
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "86ad634d.af882"
+            ]
+        ]
+    },
+    {
+        "id": "38200de3.5d33d2",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "18166479.ad0c3c"
+            ]
+        ]
+    },
+    {
+        "id": "86ad634d.af882",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e7575cb3.cd839",
+        "type": "SMB",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "config": "acbba359.b6bf8",
+        "operation": "unlink",
+        "path": "test_write.csv",
+        "path_new": "",
+        "format": "string",
+        "x": 400,
+        "y": 380,
+        "wires": [
+            [
+                "3e9e42f1.e1237e"
+            ]
+        ]
+    },
+    {
+        "id": "a146dd81.d85e9",
+        "type": "inject",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "e7575cb3.cd839"
+            ]
+        ]
+    },
+    {
+        "id": "3e9e42f1.e1237e",
+        "type": "debug",
+        "z": "efc48ace.abf328",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 380,
+        "wires": []
+    }
+]

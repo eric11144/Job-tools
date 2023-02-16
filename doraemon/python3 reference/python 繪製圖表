@@ -1,0 +1,267 @@
+http://python.jobbole.com/85106/
+http://blog.topspeedsnail.com/archives/724
+
+import matplotlib.pyplot as plt
+labels='frogs','hogs','dogs','logs'
+sizes=15,20,45,10
+colors='yellowgreen','gold','lightskyblue','lightcoral'
+explode=0,0.1,0,0
+plt.pie(sizes,explode=explode,labels=labels,colors=colors,autopct='%1.1f%%',shadow=True,startangle=50)
+plt.axis('equal')
+plt.show()
+
+條狀圖
+
+import matplotlib.pyplot as plt
+ 
+# 輸入數據
+mean_values = [1, 2, 3]
+variance = [0.2, 0.4, 0.5]
+bar_labels = ['bar 1', 'bar 2', 'bar 3']
+ 
+# 繪製圖形
+x_pos = list(range(len(bar_labels)))
+plt.bar(x_pos, mean_values, yerr=variance, align='center', alpha=0.5)
+ 
+plt.grid()
+ 
+# 設定 y 軸高度
+max_y = max(zip(mean_values, variance)) # returns a tuple, here: (3, 5)
+plt.ylim([0, (max_y[0] + max_y[1]) * 1.1])
+ 
+# 設定軸名稱和標題
+plt.ylabel('variable y')
+plt.xticks(x_pos, bar_labels)
+plt.title('Bar plot with error bars')
+ 
+plt.show()
+#plt.savefig('./my_plot.png')
+
+--------------------------------------------------------------------------------------------------
+
+帶入誤差線水平條狀圖
+
+from matplotlib import pyplot as plt
+import numpy as np
+ 
+# 輸入數據
+mean_values = [1, 2, 3]
+std_dev = [0.2, 0.4, 0.5]
+bar_labels = ['bar 1', 'bar 2', 'bar 3']
+ 
+fig = plt.figure(figsize=(8,6))
+ 
+# 繪製條狀圖
+y_pos = np.arange(len(mean_values))
+y_pos = [x for x in y_pos]
+plt.yticks(y_pos, bar_labels, fontsize=10)
+plt.barh(y_pos, mean_values, xerr=std_dev,
+         align='center', alpha=0.4, color='g')
+ 
+# 標籤
+plt.xlabel('measurement x')
+t = plt.title('Bar plot with standard deviation')
+plt.ylim([-1,len(mean_values)+0.5])
+plt.xlim([0, 4])
+plt.grid()
+ 
+plt.show()
+
+--------------------------------------------------------------------------------------------------
+
+背對背條狀圖繪製
+
+from matplotlib import pyplot as plt
+import numpy as np
+ 
+# 輸入數據
+X1 = np.array([1, 2, 3])
+X2 = np.array([2, 2, 3])
+ 
+ 
+bar_labels = ['bar 1', 'bar 2', 'bar 3']
+ 
+fig = plt.figure(figsize=(8,6))
+ 
+# 繪製
+y_pos = np.arange(len(X1))
+y_pos = [x for x in y_pos]
+plt.yticks(y_pos, bar_labels, fontsize=10)
+ 
+ 
+plt.barh(y_pos, X1,
+         align='center', alpha=0.4, color='g')
+ 
+# 簡單的取反，畫第二個條狀圖
+plt.barh(y_pos, -X2,
+         align='center', alpha=0.4, color='b')
+ 
+# 標籤
+plt.xlabel('measurement x')
+t = plt.title('Bar plot with standard deviation')
+plt.ylim([-1,len(X1)+0.1])
+plt.xlim([-max(X2)-1, max(X1)+1])
+plt.grid()
+ 
+plt.show()
+
+--------------------------------------------------------------------------------------------------
+
+多個條狀群組
+
+import matplotlib.pyplot as plt
+ 
+# 輸入數據
+green_data = [1, 2, 3]
+blue_data = [3, 2, 1]
+red_data = [2, 3, 3]
+labels = ['group 1', 'group 2', 'group 3']
+ 
+# 設定條狀圖位置和寬度
+pos = list(range(len(green_data)))
+width = 0.2
+ 
+# 繪製
+fig, ax = plt.subplots(figsize=(8,6))
+ 
+plt.bar(pos, green_data, width,
+                 alpha=0.5,
+                 color='g',
+                 label=labels[0])
+ 
+plt.bar([p + width for p in pos], blue_data, width,
+                 alpha=0.5,
+                 color='b',
+                 label=labels[1])
+ 
+plt.bar([p + width*2 for p in pos], red_data, width,
+                 alpha=0.5,
+                 color='r',
+                 label=labels[2])
+ 
+# 設定標籤和距離
+ax.set_ylabel('y-value')
+ax.set_title('Grouped bar plot')
+ax.set_xticks([p + 1.5 * width for p in pos])
+ax.set_xticklabels(labels)
+ 
+# 設定 x y軸限制
+plt.xlim(min(pos)-width, max(pos)+width*4)
+plt.ylim([0, max(green_data + blue_data + red_data) * 1.5])
+ 
+# 繪製
+plt.legend(['green', 'blue', 'red'], loc='upper left')
+plt.grid()
+plt.show()
+
+---------------------------------------------------------------------------
+
+疊加圖形
+
+import matplotlib.pyplot as plt
+ 
+blue_data = [100,120,140]
+red_data = [150,120,190]
+green_data = [80,70,90]
+ 
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(10,5))
+ 
+bar_width = 0.5
+ 
+# positions of the left bar-boundaries
+bar_l = [i+1 for i in range(len(blue_data))]
+ 
+# positions of the x-axis ticks (center of the bars as bar labels)
+tick_pos = [i+(bar_width/2) for i in bar_l]
+ 
+###################
+## Absolute count
+###################
+ 
+ax1.bar(bar_l, blue_data, width=bar_width,
+        label='blue data', alpha=0.5, color='b')
+ax1.bar(bar_l, red_data, width=bar_width,
+        bottom=blue_data, label='red data', alpha=0.5, color='r')
+ax1.bar(bar_l, green_data, width=bar_width,
+        bottom=[i+j for i,j in zip(blue_data,red_data)], label='green data', alpha=0.5, color='g')
+ 
+plt.sca(ax1)
+plt.xticks(tick_pos, ['category 1', 'category 2', 'category 3'])
+ 
+ax1.set_ylabel("Count")
+ax1.set_xlabel("")
+plt.legend(loc='upper left')
+plt.xlim([min(tick_pos)-bar_width, max(tick_pos)+bar_width])
+plt.grid()
+ 
+# rotate axis labels
+plt.setp(plt.gca().get_xticklabels(), rotation=45, horizontalalignment='right')
+ 
+############
+## Percent
+############
+ 
+totals = [i+j+k for i,j,k in zip(blue_data, red_data, green_data)]
+blue_rel = [i / j * 100 for  i,j in zip(blue_data, totals)]
+red_rel = [i / j * 100 for  i,j in zip(red_data, totals)]
+green_rel = [i / j * 100 for  i,j in zip(green_data, totals)]
+ 
+ax2.bar(bar_l, blue_rel,
+        label='blue data', alpha=0.5, color='b', width=bar_width
+        )
+ax2.bar(bar_l, red_rel,
+        bottom=blue_rel, label='red data', alpha=0.5, color='r', width=bar_width
+        )
+ax2.bar(bar_l, green_rel,
+        bottom=[i+j for i,j in zip(blue_rel, red_rel)],
+        label='green data', alpha=0.5, color='g', width=bar_width
+        )
+ 
+plt.sca(ax2)
+plt.xticks(tick_pos, ['category 1', 'category 2', 'category 3'])
+ax2.set_ylabel("Percentage")
+ax2.set_xlabel("")
+ 
+plt.xlim([min(tick_pos)-bar_width, max(tick_pos)+bar_width])
+plt.grid()
+ 
+# rotate axis labels
+plt.setp(plt.gca().get_xticklabels(), rotation=45, horizontalalignment='right')
+ 
+plt.show()
+
+-----------------------------------------------------------------------------------------------
+
+帶標籤條狀圖
+
+from matplotlib import pyplot as plt
+import numpy as np
+ 
+data = range(200, 225, 5)
+ 
+bar_labels = ['a', 'b', 'c', 'd', 'e']
+ 
+fig = plt.figure(figsize=(10,8))
+ 
+# 畫圖
+y_pos = np.arange(len(data))
+plt.yticks(y_pos, bar_labels, fontsize=16)
+bars = plt.barh(y_pos, data,
+         align='center', alpha=0.4, color='g')
+ 
+# 註解
+ 
+for b,d in zip(bars, data):
+    plt.text(b.get_width() + b.get_width()*0.08, b.get_y() + b.get_height()/2,
+        '{0:.2%}'.format(d/min(data)),
+        ha='center', va='bottom', fontsize=12)
+ 
+plt.xlabel('X axis label', fontsize=14)
+plt.ylabel('Y axis label', fontsize=14)
+t = plt.title('Bar plot with plot labels/text', fontsize=18)
+plt.ylim([-1,len(data)+0.5])
+plt.vlines(min(data), -1, len(data)+0.5, linestyles='dashed')
+plt.grid()
+ 
+plt.show()
+

@@ -1,0 +1,6 @@
+1. copy nginx 內的 start.sh.
+2. 在 start.sh 內, 加上 
+    rm /etc/nginx/location.d/node-red.location
+    rm /etc/nginx/location.d/grafana.location
+3. 於 docker compose file 內 mount local 端 start.sh.
+4. 重開機即可.

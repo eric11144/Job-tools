@@ -1,0 +1,250 @@
+[
+    {
+        "id": "1f5eb274.ac5d6e",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "ef04dad5.513bf8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "6d4afd97.e5d994",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": []
+    },
+    {
+        "id": "c189d5d3.bfb4d8",
+        "type": "http request",
+        "z": "1f5eb274.ac5d6e",
+        "name": "token_key request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/auth",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "e8ee45c5.b3ba28"
+            ]
+        ]
+    },
+    {
+        "id": "676ae966.bd63a8",
+        "type": "function",
+        "z": "1f5eb274.ac5d6e",
+        "name": "set header username password",
+        "func": "msg.headers = {};\nmsg.headers = { 'Content-Type': 'application/json'}\n\nmsg.payload = {};\nmsg.payload={ \n    \"username\":env.get(\"username\"),\n    \"password\":env.get(\"password\")\n};\n\nmsg.ip_address = {};\nmsg.ip_address = env.get(\"ip_address\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "27dd4441.47d3ec"
+            ]
+        ]
+    },
+    {
+        "id": "6d4afd97.e5d994",
+        "type": "function",
+        "z": "1f5eb274.ac5d6e",
+        "name": "prepare header",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8ee45c5.b3ba28",
+        "type": "function",
+        "z": "1f5eb274.ac5d6e",
+        "name": "save token",
+        "func": "msg.token = msg.payload.access_token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "6d4afd97.e5d994"
+            ]
+        ]
+    },
+    {
+        "id": "ef04dad5.513bf8",
+        "type": "function",
+        "z": "1f5eb274.ac5d6e",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"username\",\n    \"password\",\n    \"ip_address\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "676ae966.bd63a8"
+            ]
+        ]
+    },
+    {
+        "id": "27dd4441.47d3ec",
+        "type": "change",
+        "z": "1f5eb274.ac5d6e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "c189d5d3.bfb4d8"
+            ]
+        ]
+    },
+    {
+        "id": "9c7c4639.505c68",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3c1e0ce7.fb1ec4",
+        "type": "inject",
+        "z": "9c7c4639.505c68",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "66d3d1c0.56655"
+            ]
+        ]
+    },
+    {
+        "id": "85131d6b.72449",
+        "type": "debug",
+        "z": "9c7c4639.505c68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1110,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "66d3d1c0.56655",
+        "type": "subflow:1f5eb274.ac5d6e",
+        "z": "9c7c4639.505c68",
+        "name": "parameter",
+        "env": [
+            {
+                "name": "username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "password",
+                "type": "str",
+                "value": "p@55w0rd"
+            },
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.20.241"
+            }
+        ],
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "2555b14a.e708ae"
+            ]
+        ]
+    },
+    {
+        "id": "5dce7b7c.bfbe24",
+        "type": "http request",
+        "z": "9c7c4639.505c68",
+        "name": "put connectivity request",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/config/system/connectivity",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 890,
+        "y": 180,
+        "wires": [
+            [
+                "85131d6b.72449"
+            ]
+        ]
+    },
+    {
+        "id": "2555b14a.e708ae",
+        "type": "function",
+        "z": "9c7c4639.505c68",
+        "name": "connectivity request payload",
+        "func": "msg.headers = {\n    'Content-Type': 'application/json',\n    'Authorization': \"JWT \" + msg.token\n}\n\nmsg.connectivity ={\n  \"enableRTPS\": false,\n  \"servers\": [\n    {\n      \"mqtt\": {\n        \"host\": \"10.15.44.1\",\n        \"port\": 1885\n      }\n    }\n  ]\n}\n\nmsg.payload = msg.connectivity;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "5dce7b7c.bfbe24"
+            ]
+        ]
+    }
+]

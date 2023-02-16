@@ -1,0 +1,17 @@
+[
+    {
+        "endPoint": {
+            "host": "192.168.11.196",
+            "port": 1502
+        },
+        "equipments": [
+            {
+                "equipmentId": "modbus",
+                "id": 1,
+                "templateId": "agile-metech-baw"
+            }
+        ],
+        "pollingPeriodMS": 1000,
+        "requestTimeoutMS": 500
+    }
+]

@@ -1,0 +1,9 @@
+slack link problem
+vim $HOME/.local/share/applications/google-chrome.desktop
+
+Find the line:
+
+Exec=/opt/google/chrome/chrome
+Add a space and %U:
+
+Exec=/opt/google/chrome/chrome %U

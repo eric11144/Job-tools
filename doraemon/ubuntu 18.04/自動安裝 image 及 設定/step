@@ -1,0 +1,100 @@
+取得 kickstar 相關套件
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-glade2_2.24.0-6_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/s/system-config-kickstart/system-config-kickstart_2.5.20-0ubuntu25_all.deb
+
+sudo apt-get install ./*.deb
+
+sudo system-config-kickstart
+設定相關安裝內容, 儲存相關內容( File -> Save File )
+
+新增一個 pressed 檔案來自動應答其他選項
+vim ks.pressed
+
+密碼須以此產生
+printf "sunny" | mkpasswd -s -m md5
+
+
+ubuntu 安裝映像檔下載
+wget http://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
+
+建立映像檔 mount 資料夾
+mkdir -p /mnt/iso
+
+mount 映像檔於資料夾
+mount -o loop ubuntu-18.04.6-desktop-amd64.iso /mnt/iso
+
+複製映像檔內容於 /opt/ubuntu_iso
+mkdir -p /opt/ubuntu_iso
+cp -rT /mnt/iso /opt/ubuntu_iso
+
+##從 kickstart 設定好的 ks.cfg ks.pressed 複製到 /opt/ubuntu_iso
+##cp ks.cfg ks.pressed /opt/ubuntu_iso
+
+##ks.cfg, ks.pressed，所以需要設定 /opt/ubuntu_iso/isolinux/txt.cfg
+ks.pressed，所以需要設定 /opt/ubuntu_iso/isolinux/txt.cfg
+開啟寫入權限
+chmod +w isolinux/txt.cfg
+vim isolinux/txt.cfg
+
+最後面加入以下內容
+
+#default live#
+#label live
+#  menu label ^Try Ubuntu without installing
+#  kernel /casper/vmlinuz.efi
+#  append  file=/cdrom/preseed/ubuntu.seed boot=casper initrd=/casper/initrd.lz quiet splash ---
+#label live-install
+#  menu label ^Install Ubuntu
+#  kernel /casper/vmlinuz.efi
+#  append  file=/cdrom/preseed/ubuntu.seed boot=casper only-ubiquity initrd=/casper/initrd.lz quiet splash ---
+#label check
+#  menu label ^Check disc for defects
+#  kernel /casper/vmlinuz.efi
+#  append  boot=casper integrity-check initrd=/casper/initrd.lz quiet splash ---
+#label memtest
+#  menu label Test ^memory
+#  kernel /install/mt86plus
+#label hd 
+#  menu label ^Boot from first hard disk
+#  localboot 0x80
+
+default live-install
+label live-install
+  menu label ^Install Ubuntu
+  kernel /casper/vmlinuz
+  append  file=/cdrom/ks.preseed auto=true priority=critical debian-installer/locale=en_US keyboard-configuration/layoutcode=us ubiquity/reboot=true languagechooser/language-name=English countrychooser/shortlist=US localechooser/supported-locales=en_US.UTF-8 boot=casper automatic-ubiquity initrd=/casper/initrd quiet splash noprompt noshell ---
+
+復原檔案的存取權限
+chmod -w isolinux/txt.cfg
+
+修改開機選單
+/opt/ubuntu_iso/boot/grub/grub.cfg
+if loadfont /boot/grub/font.pf2 ; then
+	set gfxmode=auto
+	insmod efi_gop
+	insmod efi_uga
+	insmod gfxterm
+	terminal_output gfxterm
+fi
+
+set menu_color_normal=white/black
+set menu_color_highlight=black/light-gray
+
+set timeout=5
+menuentry "Install PIMQ Ubuntu Desktop" {
+        set gfxpayload=keep
+        linux   /casper/vmlinuz  file=/cdrom/ks.preseed auto=true priority=critical debian-installer/locale=en_US keyboard-configuration/layoutcode=us ubiquity/reboot=true languagechooser/language-name=English countrychooser/shortlist=US localechooser/supported-locales=en_US.UTF-8 boot=casper automatic-ubiquity noprompt noshell quiet splash ---
+        initrd  /casper/initrd
+}
+
+創造新的 iso 檔
+mkisofs -D -r -V "UNATTENDED_UBUNTU" -cache-inodes -J -l -b ubuntuiso/isolinux.bin -c ubuntuiso/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ubuntu-desktop-unattended-install.iso .
+
+isohybrid /opt/autoinstall.iso
+
+
+
+
+
+

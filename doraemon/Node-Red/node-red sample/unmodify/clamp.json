@@ -1,0 +1,608 @@
+[
+    {
+        "id": "9194176b.b112f8",
+        "type": "subflow",
+        "name": "CLAMP EVENT",
+        "info": "Environment:\n- FROM\n- NUMBER_CHANNEL\n- ALARM_CHANNEL\n- TO\n- INTERVAL_SEC\n- MAX_NUMBER",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [
+            {
+                "name": "FROM",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "NUMBER_CHANNEL",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "ALARM_CHANNEL",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "TO",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "INTERVAL_SEC",
+                "type": "num",
+                "value": ""
+            },
+            {
+                "name": "MAX_NUMBER",
+                "type": "num",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "fd41ee9b.dba3c",
+        "type": "reading-in",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "equipmentId": "${FROM}",
+        "categorizedReadingRequired": false,
+        "channelNamesRequired": false,
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "8795e8b0.82c6b8"
+            ]
+        ]
+    },
+    {
+        "id": "6668f296.4a3b3c",
+        "type": "forward-on-change",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "dropReadingUndefined": false,
+        "initialValue": "",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "c7d5fd5e.a28df"
+            ]
+        ]
+    },
+    {
+        "id": "5a33dece.151ab",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "alarm",
+        "func": "const alarmChannel = env.get('ALARM_CHANNEL')\n\nmsg.payload.reading = {\n    [alarmChannel]: msg.payload.reading[alarmChannel]\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "6668f296.4a3b3c"
+            ]
+        ]
+    },
+    {
+        "id": "c7d5fd5e.a28df",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "func": "const alarmValue = msg.payload.reading[env.get('ALARM_CHANNEL')]\nconst at = msg.payload.at\n\nif (alarmValue === 1)\n{\n    msg.payload = {\n        at: at,\n        reading: {\n            alarm: 1\n        }\n    }\n    \n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 280,
+        "wires": [
+            [
+                "7c07ec16.4f5274"
+            ]
+        ]
+    },
+    {
+        "id": "4888f89e.dc1cc8",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "number",
+        "func": "const numberChannel = env.get('NUMBER_CHANNEL')\n\nmsg.payload.reading = {\n    [numberChannel]: msg.payload.reading[numberChannel]\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [
+                "7ba4fcd0.8b77b4"
+            ]
+        ]
+    },
+    {
+        "id": "7ba4fcd0.8b77b4",
+        "type": "forward-on-change",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "dropReadingUndefined": false,
+        "initialValue": "",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "b43424f0.0a6ef8"
+            ]
+        ]
+    },
+    {
+        "id": "b43424f0.0a6ef8",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "func": "const numberValue = msg.payload.reading[env.get('NUMBER_CHANNEL')]\n\nconst previous = context.get('previous')\nif (previous === undefined)\n{\n    context.set('previous', numberValue)\n    return\n}\n\nconst at = msg.payload.at\n\nmsg.payload = {\n    at: at,\n    reading: {\n        number: numberValue\n    }\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 320,
+        "wires": [
+            [
+                "7c07ec16.4f5274"
+            ]
+        ]
+    },
+    {
+        "id": "7c07ec16.4f5274",
+        "type": "reading-out",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "equipmentId": "${TO}",
+        "x": 1060,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8795e8b0.82c6b8",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "func": "if (msg.payload.reading === undefined)\n{\n    return\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "5a33dece.151ab",
+                "4888f89e.dc1cc8"
+            ]
+        ]
+    },
+    {
+        "id": "827768e0.8abd58",
+        "type": "inject",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "edc72948.757828"
+            ]
+        ]
+    },
+    {
+        "id": "edc72948.757828",
+        "type": "function",
+        "z": "9194176b.b112f8",
+        "name": "",
+        "func": "let EVENT_META = global.get('EVENT_META')\n\nconst TO = env.get('TO')\nconst INTERVAL_SEC = env.get('INTERVAL_SEC')\nconst MAX_NUMBER = env.get('MAX_NUMBER')\n\nif (EVENT_META === undefined)\n{\n    EVENT_META = {}\n}\n\nEVENT_META[TO] = {\n    intervalSec: INTERVAL_SEC,\n    maxNumber: MAX_NUMBER\n}\n\nglobal.set('EVENT_META', EVENT_META)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ade134a.11955c",
+        "type": "tab",
+        "label": "CLAMP",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8bb622a6.b839a",
+        "type": "subflow:9194176b.b112f8",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "env": [
+            {
+                "name": "FROM",
+                "value": "HJ10PTHPNL003",
+                "type": "str"
+            },
+            {
+                "name": "NUMBER_CHANNEL",
+                "value": "D9537",
+                "type": "str"
+            },
+            {
+                "name": "ALARM_CHANNEL",
+                "value": "W260_07",
+                "type": "str"
+            },
+            {
+                "name": "TO",
+                "value": "HJ10PTHPNL003_clamp_event",
+                "type": "str"
+            },
+            {
+                "name": "INTERVAL_SEC",
+                "value": "15",
+                "type": "num"
+            },
+            {
+                "name": "MAX_NUMBER",
+                "value": "708",
+                "type": "num"
+            },
+            {
+                "name": "JIG_NUMBER_CHANNEL",
+                "value": "number",
+                "type": "str"
+            },
+            {
+                "name": "JIG_ALARM_CHANNEL",
+                "value": "alarm",
+                "type": "str"
+            }
+        ],
+        "x": 200,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "869eaafd.8b2178",
+        "type": "http in",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "url": "/clamp-alarm/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "5ad7693.423db98"
+            ]
+        ]
+    },
+    {
+        "id": "bf025f28.d996e",
+        "type": "http response",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1040,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f3a873ae.d582e",
+        "type": "http in",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "url": "/clamp-alarm/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "f1b438e5.0d9e98"
+            ]
+        ]
+    },
+    {
+        "id": "4a778f46.50388",
+        "type": "http response",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1040,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7b273f98.a512e",
+        "type": "query-history",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "e73a38b6.1289a8"
+            ]
+        ]
+    },
+    {
+        "id": "f1b438e5.0d9e98",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "func": "const equipmentId = msg.payload.targets[0].target\nconst range = msg.payload.range\n\nmsg.queryEquipmentId = equipmentId\nmsg.queryRange = range\n\nmsg.config = {\n    equipmentId,\n    since: range.from,\n    until: range.to\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "7b273f98.a512e"
+            ]
+        ]
+    },
+    {
+        "id": "a8b74b09.e4cce8",
+        "type": "query-history",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "equipmentId": "virtual_event",
+        "since": "",
+        "until": "2021-07-23T08:07:30Z",
+        "ascending": false,
+        "maxReadings": "1",
+        "x": 600,
+        "y": 1120,
+        "wires": [
+            [
+                "161593de.62f2ec"
+            ]
+        ]
+    },
+    {
+        "id": "501e20d1.75aa4",
+        "type": "inject",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 1120,
+        "wires": [
+            [
+                "a8b74b09.e4cce8"
+            ]
+        ]
+    },
+    {
+        "id": "161593de.62f2ec",
+        "type": "debug",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "41a596c1.df2978",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "alarm exist",
+        "func": "const queryHistory = msg.queryHistory\n\nfor (let i = 0; i < queryHistory.length; ++i)\n{\n    const reading = queryHistory[i].reading\n    if (reading.hasOwnProperty('alarm'))\n    {\n        return [\n            msg,\n            null\n        ]\n    }\n}\n\nreturn [\n    null,\n    msg\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "90de31ed.3d51c"
+            ],
+            [
+                "fe7b98a9.a15558"
+            ]
+        ]
+    },
+    {
+        "id": "90de31ed.3d51c",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "number exist",
+        "func": "const queryHistory = msg.queryHistory\n\nfor (let i = 0; i < queryHistory.length; ++i)\n{\n    const reading = queryHistory[i].reading\n    if (reading.hasOwnProperty('number'))\n    {\n        msg.numberEvent = queryHistory[i]\n        \n        return [\n            msg,\n            null\n        ]   \n    }\n}\n\nconst equipmentId = msg.queryEquipmentId\nconst range = msg.queryRange\n\nmsg.config = {\n    equipmentId,\n    until: range.from\n}\n\nreturn [\n    null,\n    msg\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "c3bda36f.37588"
+            ],
+            [
+                "770eaebf.dc74a"
+            ]
+        ]
+    },
+    {
+        "id": "e73a38b6.1289a8",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "func": "msg.queryHistory = msg.payload\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "41a596c1.df2978"
+            ]
+        ]
+    },
+    {
+        "id": "770eaebf.dc74a",
+        "type": "query-history",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "15decd3a.4176b3"
+            ]
+        ]
+    },
+    {
+        "id": "15decd3a.4176b3",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "number exist",
+        "func": "const payload = msg.payload\n\nfor (let i = 0; i < payload.length; ++i)\n{\n    const reading = payload[i].reading\n    if (reading.hasOwnProperty('number'))\n    {\n        msg.numberEvent = payload[i]\n        \n        return [\n            msg,\n            null\n        ]   \n    }\n}\n\nreturn [\n    null,\n    msg\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 540,
+        "wires": [
+            [
+                "c3bda36f.37588"
+            ],
+            [
+                "fe7b98a9.a15558"
+            ]
+        ]
+    },
+    {
+        "id": "c3bda36f.37588",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "calculate",
+        "func": "const eventMeta = global.get('EVENT_META')[msg.queryEquipmentId]\n\nconst queryHistory = msg.queryHistory\nconst numberEvent = msg.numberEvent\n\nconst numberAt = new Date(numberEvent.at)\n\nlet rows = []\nfor (let i = 0; i < queryHistory.length; ++i)\n{\n    const reading = queryHistory[i].reading\n    if (reading.hasOwnProperty('alarm'))\n    {\n        const alarmAt = new Date(queryHistory[i].at)\n        const interval = (alarmAt - numberAt) / 1000\n\n        let intervalNumber = 0\n        if (interval < 0)\n        {\n            intervalNumber = Math.ceil(\n                Math.abs(interval / eventMeta.intervalSec)) * -1\n        }\n        else\n        {\n            intervalNumber = Math.ceil(interval / eventMeta.intervalSec)\n        }\n        \n        const number = numberEvent.reading.number\n\n        let alarmNumber = (number + intervalNumber) % eventMeta.maxNumber\n        if (alarmNumber === 0)\n        {\n            alarmNumber = eventMeta.maxNumber\n        }\n        else if (alarmNumber < 0)\n        {\n            alarmNumber += eventMeta.maxNumber\n        }\n        \n        rows.push([alarmAt, alarmNumber])\n    }\n}\n\nmsg.payload = [\n  {\n    columns: [\n        {text: 'Time', type: 'number'},\n        {text: 'Number', type: 'number'}\n    ],\n    rows,\n    type: 'table'\n  }\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "4a778f46.50388"
+            ]
+        ]
+    },
+    {
+        "id": "fe7b98a9.a15558",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "empty",
+        "func": "msg.payload = [\n  {\n    columns: [\n        {text: 'Time', type: 'number'},\n        {text: 'Number', type: 'number'}\n    ],\n    rows: [],\n    type: 'table'\n  }\n]\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 870,
+        "y": 300,
+        "wires": [
+            [
+                "4a778f46.50388"
+            ]
+        ]
+    },
+    {
+        "id": "5ad7693.423db98",
+        "type": "function",
+        "z": "7ade134a.11955c",
+        "name": "",
+        "func": "const EVENT_META = global.get('EVENT_META')\n\nmsg.payload = Object.keys(EVENT_META)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "bf025f28.d996e"
+            ]
+        ]
+    }
+]

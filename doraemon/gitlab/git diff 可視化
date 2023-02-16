@@ -1,0 +1,13 @@
+sudo apt-get install meld
+git config --global diff.external meld
+
+vim ~/git-meld.sh
+
+新增以下內容
+#!/bin/sh
+meld $2 $5
+
+chmod 777 ~/git-meld.sh
+
+git config --global diff.external ~/git-meld.sh
+

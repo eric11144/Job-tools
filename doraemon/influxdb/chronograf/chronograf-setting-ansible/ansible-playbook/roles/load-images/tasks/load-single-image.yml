@@ -1,0 +1,24 @@
+# item.image_name
+# item.image_tag
+# item.image_tgz
+---
+- name: Check '{{ item.image_name }}:{{ item.image_tag }}' existence
+  shell: docker images '{{ item.image_name }}:{{ item.image_tag }}' | grep '{{ item.image_name }}'
+  register: result
+  ignore_errors: True
+
+- block:
+  - name: Upload '{{ item.image_tgz }}'
+    copy:
+      src: '{{ role_path }}/files/tmp/{{ item.image_tgz }}'
+      dest: '/tmp/{{ item.image_tgz }}'
+
+  - name: Load docker image
+    command: docker load --input '/tmp/{{ item.image_tgz }}'
+
+  always:
+    - name: Remove temporary files
+      file:
+        path: '/tmp/{{ item.image_tgz }}'
+        state: absent
+  when: result is failed

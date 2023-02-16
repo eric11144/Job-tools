@@ -1,0 +1,36 @@
+[
+    {
+        "id": "9b25b53d.e9a7f",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "this is from inject node",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "8650d7b8.01b348"
+            ]
+        ]
+    },
+    {
+        "id": "8650d7b8.01b348",
+        "type": "debug",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 410,
+        "y": 160,
+        "wires": []
+    }
+]

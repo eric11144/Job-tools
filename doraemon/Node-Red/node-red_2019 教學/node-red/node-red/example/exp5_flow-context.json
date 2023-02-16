@@ -1,0 +1,108 @@
+[
+    {
+        "id": "81c6feca.a83a9",
+        "type": "function",
+        "z": "ba231e43.23ef08",
+        "name": "set flow context",
+        "func": "const val = msg.payload\n\nflow.set(\"inject_num\", val)\n\nmsg.payload = \"no_inject_num_info\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "198c4e85.358691"
+            ]
+        ]
+    },
+    {
+        "id": "8584db6e.118e88",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "81c6feca.a83a9"
+            ]
+        ]
+    },
+    {
+        "id": "ea1940c8.154ef",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "81c6feca.a83a9"
+            ]
+        ]
+    },
+    {
+        "id": "db2b6c6c.aad988",
+        "type": "inject",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "81c6feca.a83a9"
+            ]
+        ]
+    },
+    {
+        "id": "f6a07212.a7166",
+        "type": "debug",
+        "z": "ba231e43.23ef08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "198c4e85.358691",
+        "type": "function",
+        "z": "ba231e43.23ef08",
+        "name": "get flow context",
+        "func": "const val = flow.get(\"inject_num\")\n\nmsg.payload = val\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "f6a07212.a7166"
+            ]
+        ]
+    }
+]

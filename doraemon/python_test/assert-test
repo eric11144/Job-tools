@@ -1,0 +1,4 @@
+assert any(coils_command == result['command'] for result in response)
+assert any(discrete_inputs_command == result['command'] for result in response)
+assert any(holding_registers_command == result['command'] for result in response)
+assert any(input_registers_command == result['command'] for result in response)

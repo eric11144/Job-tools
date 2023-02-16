@@ -1,0 +1,799 @@
+[
+    {
+        "id": "27992ba0.e2ded4",
+        "type": "subflow",
+        "name": "Alarm To Event",
+        "info": "Input\n- from chameleon reading in module\n\nOutput\n- for chameleon reading out module",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [
+            {
+                "name": "FROM",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "TO",
+                "type": "str",
+                "value": "_event"
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "a6623eed.e5cf3",
+        "type": "forward-on-change",
+        "z": "27992ba0.e2ded4",
+        "name": "",
+        "dropReadingUndefined": false,
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 790,
+        "y": 300,
+        "wires": [
+            [
+                "de590ee9.c941c"
+            ]
+        ]
+    },
+    {
+        "id": "855adaee.e11998",
+        "type": "function",
+        "z": "27992ba0.e2ded4",
+        "name": "extract",
+        "func": "const categorized_reading = msg.categorizedReading\n\nif (typeof categorized_reading === 'undefined') \n{\n    node.error('input error')\n    return\n}\n\nmsg.payload.reading = categorized_reading['stream_alarm']\nmsg.readingIn = msg.payload\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "970d2ef4.7647d"
+            ]
+        ]
+    },
+    {
+        "id": "e28cbe4d.d759a",
+        "type": "function",
+        "z": "27992ba0.e2ded4",
+        "name": "build",
+        "func": "const at = msg.payload.at\nconst changes = msg.changes\n\nmsg.payload = {\n    'at': at,\n    'reading': changes\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 790,
+        "y": 380,
+        "wires": [
+            [
+                "acfd8e10.9e1d7"
+            ]
+        ]
+    },
+    {
+        "id": "970d2ef4.7647d",
+        "type": "function",
+        "z": "27992ba0.e2ded4",
+        "name": "Init",
+        "func": "const INIT = context.get('INIT')\nconst reading = msg.readingIn.reading\nconst channel_names = msg.channelNames\n// const euqipment_id = 'virtual_event'\nconst equipment_id = env.get('TO')\n\nlet output = [msg, null]    \nlet template = {\n    'templateId': equipment_id,\n    'channels': []\n}\n\nif (typeof INIT === 'undefined')\n{\n    for (let channel in reading)\n    {\n        let c = {\n            'channelId': channel,\n            'valueType': 'integer'\n        }\n        \n        if (channel in channel_names)\n        {\n            c.channelName = channel_names[channel]\n        }\n        \n        template.channels.push(c)\n    }\n    \n    msg.payload = template\n    msg.config = {\n        'path': `/api/v1/config/virtual/templates/${equipment_id}`\n    }\n    output = [null, msg]    \n    \n    context.set(\n        'INIT',\n        true)\n    // node.error(template)\n    // console.log(template)\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "4374ba5a.cf50a4"
+            ],
+            [
+                "f970c119.e965c"
+            ]
+        ]
+    },
+    {
+        "id": "f970c119.e965c",
+        "type": "api",
+        "z": "27992ba0.e2ded4",
+        "name": "",
+        "method": "PUT",
+        "path": "",
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "4374ba5a.cf50a4"
+            ]
+        ]
+    },
+    {
+        "id": "4374ba5a.cf50a4",
+        "type": "function",
+        "z": "27992ba0.e2ded4",
+        "name": "put back reading",
+        "func": "const reading_in = msg.readingIn\n\nmsg.payload = reading_in\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "a6623eed.e5cf3"
+            ]
+        ]
+    },
+    {
+        "id": "de590ee9.c941c",
+        "type": "function",
+        "z": "27992ba0.e2ded4",
+        "name": "extract change",
+        "func": "const previous_alarms = context.get('PREVIOUS_ALARMS')\nconst reading = msg.payload.reading\n\nlet changes = {}\n\nif (previous_alarms !== undefined)\n{\n    for (let [channel, value] of Object.entries(reading))\n    {\n        if (value !== previous_alarms[channel])\n        {\n            changes[channel] = value\n            previous_alarms[channel] = value\n        }\n    }\n    \n    context.set('PREVIOUS_ALARMS', previous_alarms)\n}\nelse\n{\n    context.set('PREVIOUS_ALARMS', reading)\n    return\n}\n\nmsg.changes = changes\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "e28cbe4d.d759a"
+            ]
+        ]
+    },
+    {
+        "id": "d4a9c8a1.742d58",
+        "type": "reading-in",
+        "z": "27992ba0.e2ded4",
+        "name": "",
+        "equipmentId": "${FROM}",
+        "categorizedReadingRequired": true,
+        "channelNamesRequired": true,
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "855adaee.e11998"
+            ]
+        ]
+    },
+    {
+        "id": "acfd8e10.9e1d7",
+        "type": "reading-out",
+        "z": "27992ba0.e2ded4",
+        "name": "",
+        "equipmentId": "${TO}",
+        "x": 1020,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6f64a63d.3899a8",
+        "type": "subflow",
+        "name": "Load Equipment Info",
+        "info": "Input\nfrom simplejson query\n\nOutput\n- msg.env\n    ```\n    {\n        'equipmentId': ...\n    }\n    ```\n- msg.ragne\n    ```\n    {\n        'from': '2020-11-27T02:06:23.165Z',\n        'to': '2020-11-27T08:06:23.165Z'\n    ```\n- msg.equipmentInfo\n    ```\n    {\n        'equipmentId': ...,\n        'equipmentName': ...,\n        'properties': {\n            key: value\n        }\n        'template': {\n            'templateId': template,\n            'channels': [...],\n            'commands': [...]\n        },\n        categorizedChannels: {\n            'alarm': [...]\n        }\n    }\n    ```\n    ",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "1c4c3628.d285da"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1040,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "1e824c6d.d7a414",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 280,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "1c4c3628.d285da",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1a2dfa5b.8d41f6",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "fins equipments",
+        "method": "GET",
+        "path": "/api/v1/config/fins/equipments",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "711c3b83.3c55b4"
+            ]
+        ]
+    },
+    {
+        "id": "711c3b83.3c55b4",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "fins",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/fins/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "176ccd6d.82ce73"
+            ],
+            [
+                "ebfa2b01.abc488"
+            ]
+        ]
+    },
+    {
+        "id": "ebfa2b01.abc488",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "modbus equipments",
+        "method": "GET",
+        "path": "/api/v1/config/modbus/equipments",
+        "x": 480,
+        "y": 240,
+        "wires": [
+            [
+                "40f08db4.ecb064"
+            ]
+        ]
+    },
+    {
+        "id": "40f08db4.ecb064",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "modbus",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipments = payload[i]['equipments']\n    \n    for (let i = 0; i < equipments.length; ++i)\n    {\n        let equipment = equipments[i]\n        \n        if (equipment['equipmentId'] === equipment_id)\n        {\n            equipment_info['equipmentId'] = equipment_id\n            equipment_info['equipmentName'] = equipment['equipmentName']\n            equipment_info['properties'] = {}\n        \n            if (equipment.hasOwnProperty('properties'))\n            {\n                for(let i = 0; i < equipment['properties'].length; ++i)\n                {\n                    let property = equipment['properties'][i]\n                    \n                    if (property['key'] === \"machineName\")\n                    {\n                        equipment_info.properties['machineName'] = property['value']\n                    }\n                    if (property['key'] === \"machineNo\")\n                    {\n                        equipment_info.properties['machineNo'] = property['value']\n                    }\n                }\n            }\n        }    \n    }\n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/modbus/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "176ccd6d.82ce73"
+            ],
+            [
+                "878c8dfc.fa053"
+            ]
+        ]
+    },
+    {
+        "id": "6e31a58b.087bac",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "mewtocol equipments",
+        "method": "GET",
+        "path": "/api/v1/config/mewtocol/equipments",
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "6d2afeca.1bcb7"
+            ]
+        ]
+    },
+    {
+        "id": "17fddc73.61c884",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "step7 equipments",
+        "method": "GET",
+        "path": "/api/v1/config/step7/equipments",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "6291a623.0fc8e8"
+            ]
+        ]
+    },
+    {
+        "id": "878c8dfc.fa053",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "melsec equipments",
+        "method": "GET",
+        "path": "/api/v1/config/melsec/equipments",
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "9eb4061d.eb8b08"
+            ]
+        ]
+    },
+    {
+        "id": "9eb4061d.eb8b08",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "melsec",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipments = payload[i]['equipmentList']\n    \n    for (let i = 0; i < equipments.length; ++i)\n    {\n        let equipment = equipments[i]\n        \n        if (equipment['equipmentId'] === equipment_id)\n        {\n            equipment_info['equipmentId'] = equipment_id\n            equipment_info['equipmentName'] = equipment['equipmentName']\n            equipment_info['properties'] = {}\n            \n            if (equipment.hasOwnProperty('properties'))\n            {\n                for(let i = 0; i < equipment['properties'].length; ++i)\n                {\n                    let property = equipment['properties'][i]\n                    \n                    if (property['key'] === \"machineName\")\n                    {\n                        equipment_info.properties['machineName'] = property['value']\n                    }\n                    if (property['key'] === \"machineNo\")\n                    {\n                        equipment_info.properties['machineNo'] = property['value']\n                    }\n                }\n            }\n        }    \n    }\n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/melsec/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "176ccd6d.82ce73"
+            ],
+            [
+                "6e31a58b.087bac"
+            ]
+        ]
+    },
+    {
+        "id": "3f95864e.1a6c9a",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "unexpected",
+        "func": "node.error('unexpected')",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 470,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "176ccd6d.82ce73",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "template",
+        "method": "GET",
+        "path": "",
+        "x": 900,
+        "y": 300,
+        "wires": [
+            [
+                "1e824c6d.d7a414"
+            ]
+        ]
+    },
+    {
+        "id": "1e824c6d.d7a414",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "template",
+        "func": "const template = msg.payload\nconst channels = msg.payload.channels\n\nlet stream_alarm = []\nfor(let i = 0; i < channels.length; ++i)\n{\n    let channel = channels[i]\n    \n    if (channel['category'].includes('stream_alarm'))\n    {\n        stream_alarm.push(channel['channelId'])\n    }\n}\n\nmsg.equipmentInfo.template = template\nmsg.equipmentInfo.categorizedChannels = {\n    'stream_alarm': stream_alarm\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 920,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d2afeca.1bcb7",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "mewtocol",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/mewtocol/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "176ccd6d.82ce73"
+            ],
+            [
+                "17fddc73.61c884"
+            ]
+        ]
+    },
+    {
+        "id": "6291a623.0fc8e8",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "step7",
+        "func": "const equipment_id = msg.env.equipmentId\n// const equipment_id = 'step7'\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/step7/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "176ccd6d.82ce73"
+            ],
+            [
+                "3f95864e.1a6c9a"
+            ]
+        ]
+    },
+    {
+        "id": "1c4c3628.d285da",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "input",
+        "func": "const target = msg.payload.targets[0].target\nconst type = msg.payload.targets[0].type\nconst range = msg.payload.range\n\nlet output = [msg, null]\n\nlet return_status_code = 200\n\nif (type !== \"table\")\n{\n    return_status_code = 403\n    output = [null, msg]\n}\n\nmsg.env = {\n    'equipmentId': target\n}\nmsg.statusCode = return_status_code\nmsg.range = range\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "1a2dfa5b.8d41f6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "18f6539d.76e9cc",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "dev test",
+        "func": "// const equipment_id = msg.env.equipmentId\nconst equipment_id = 'step7'\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]['equipment']\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/step7/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "327b5e98.fada12",
+        "type": "function",
+        "z": "6f64a63d.3899a8",
+        "name": "virtual",
+        "func": "const equipment_id = msg.env.equipmentId\nconst payload = msg.payload\nconst status_code = msg.statusCode\n\nlet output = [null, msg]\nlet equipment_info = {}\n\nif (status_code !== 200)\n{\n    node.error(`unexpected status code: ${status_code}`)\n    return\n}\n\n// extract equipment info\nfor (let i = 0; i < payload.length; ++i)\n{\n    let equipment = payload[i]\n    \n    if (equipment['equipmentId'] === equipment_id)\n    {\n        equipment_info['equipmentId'] = equipment_id\n        equipment_info['equipmentName'] = equipment['equipmentName']\n        equipment_info['properties'] = {}\n        \n        if (equipment.hasOwnProperty('properties'))\n        {\n            for(let i = 0; i < equipment['properties'].length; ++i)\n            {\n                let property = equipment['properties'][i]\n                \n                if (property['key'] === \"machineName\")\n                {\n                    equipment_info.properties['machineName'] = property['value']\n                }\n                if (property['key'] === \"machineNo\")\n                {\n                    equipment_info.properties['machineNo'] = property['value']\n                }\n            }\n        }\n    }    \n}\n\nif (Object.entries(equipment_info).length !== 0)\n{\n    msg.config = {\n        'path': `/api/v1/config/virtual/templates/${equipment_id}`\n    }\n    msg.equipmentInfo = equipment_info\n    output = [msg, null]\n}\n\nreturn output;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "beaa4b4.4aa77b8",
+        "type": "api",
+        "z": "6f64a63d.3899a8",
+        "name": "virtual equipments",
+        "method": "GET",
+        "path": "/api/v1/config/virtual/equipments",
+        "x": 870,
+        "y": 700,
+        "wires": [
+            [
+                "327b5e98.fada12"
+            ]
+        ]
+    },
+    {
+        "id": "71c68ccf.971bb4",
+        "type": "tab",
+        "label": "Range Alarm",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a002621b.b101",
+        "type": "comment",
+        "z": "71c68ccf.971bb4",
+        "name": "on change",
+        "info": "",
+        "x": 120,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9d8179ae.2b9328",
+        "type": "comment",
+        "z": "71c68ccf.971bb4",
+        "name": "simplejson",
+        "info": "",
+        "x": 120,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "869eaafd.8b2178",
+        "type": "http in",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "url": "/range/alarm/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "9a15b557.2fcd58",
+                "266c5a64.ef6036"
+            ]
+        ]
+    },
+    {
+        "id": "bf025f28.d996e",
+        "type": "http response",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1060,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8e730370.5161b",
+        "type": "function",
+        "z": "71c68ccf.971bb4",
+        "name": "build",
+        "func": "const payload = msg.payload\n\nlet response = []\nlet re = new RegExp('^\\\\S+_event$')\n\nfor (let i = 0; i < payload.length; ++i)\n{\n    let device_id = payload[i].deviceId\n    \n    if (device_id.match(re) !== null)\n    {\n        response.push(device_id)\n    }\n}\n\nmsg.payload = response\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 340,
+        "wires": [
+            [
+                "bf025f28.d996e"
+            ]
+        ]
+    },
+    {
+        "id": "9a15b557.2fcd58",
+        "type": "debug",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 610,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "266c5a64.ef6036",
+        "type": "api",
+        "z": "71c68ccf.971bb4",
+        "name": "devices",
+        "method": "GET",
+        "path": "/api/v1/devices",
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "8e730370.5161b"
+            ]
+        ]
+    },
+    {
+        "id": "7c9bf061.313fd",
+        "type": "http in",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "url": "/range/alarm/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "4f0a340b.96004c",
+                "a46787db.cd2508"
+            ]
+        ]
+    },
+    {
+        "id": "f7ed9528.71f928",
+        "type": "subflow:6f64a63d.3899a8",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "env": [],
+        "x": 630,
+        "y": 440,
+        "wires": [
+            [
+                "4264c5c7.11efac"
+            ],
+            [
+                "4910404c.6418c"
+            ]
+        ]
+    },
+    {
+        "id": "4910404c.6418c",
+        "type": "http response",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1070,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "38dae558.875d1a",
+        "type": "query-history",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "equipmentId": "",
+        "since": "",
+        "until": "",
+        "ascending": false,
+        "maxReadings": "",
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "2b2a9ff6.37a89",
+                "fd92add2.0a96f"
+            ]
+        ]
+    },
+    {
+        "id": "4264c5c7.11efac",
+        "type": "function",
+        "z": "71c68ccf.971bb4",
+        "name": "build query",
+        "func": "const range = msg.range\nconst equipment_id = msg.env.equipmentId + '_event'\n\nmsg.config = {\n    'equipmentId': equipment_id,\n    'since': range.from,\n    'until': range.to\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "38dae558.875d1a"
+            ]
+        ]
+    },
+    {
+        "id": "2b2a9ff6.37a89",
+        "type": "function",
+        "z": "71c68ccf.971bb4",
+        "name": "build",
+        "func": "const payload = msg.payload\nconst channels = msg.equipmentInfo.template.channels\n\nlet response = [\n  {\n    \"columns\":[\n      {\"text\":\"at\",\"type\":\"string\"},\n      {\"text\":\"event\",\"type\":\"string\"},\n      {\"text\":\"value\",\"type\":\"number\"},\n    ],\n    \"rows\":[],\n    \"type\":\"table\"\n  }\n]\n\nfor (let i = 0; i < payload.length; ++i)\n{\n    let reading = payload[i]\n    \n    for(let [channel, value] of Object.entries(reading.reading))\n    {\n        let data = []\n    \n    // at\n        const d = new Date(reading.at)\n        data.push(d.toISOString())\n        // data.push(d.toLocaleString())\n    \n    // event and value\n        // data.push(channel)\n        for (let i = 0; i < channels.length; ++i)\n        {\n            if (channels[i].channelId === channel)\n            {\n                if ('channelName' in channels[i])\n                {\n                    data.push(channels[i].channelName)\n                }\n                else\n                {\n                    data.push(channel)\n                }\n            }\n        }\n        data.push(value)\n        \n        response[0].rows.push(data)\n    }\n}\n\nmsg.payload = response\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1150,
+        "y": 480,
+        "wires": [
+            [
+                "4910404c.6418c"
+            ]
+        ]
+    },
+    {
+        "id": "fd92add2.0a96f",
+        "type": "debug",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1190,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d3f14356.0dc69",
+        "type": "subflow:27992ba0.e2ded4",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "env": [
+            {
+                "name": "FROM",
+                "value": "q02u",
+                "type": "str"
+            },
+            {
+                "name": "TO",
+                "value": "q02u_event",
+                "type": "str"
+            },
+            {
+                "name": "EQUIPMENT_ID",
+                "value": "virtual",
+                "type": "str"
+            }
+        ],
+        "x": 240,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4f0a340b.96004c",
+        "type": "debug",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a46787db.cd2508",
+        "type": "function",
+        "z": "71c68ccf.971bb4",
+        "name": "replace target",
+        "func": "const target = msg.payload.targets[0].target\n\nconst device_id = target.split('_event')[0]\n\nmsg.payload.targets[0].target = device_id\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 660,
+        "wires": [
+            [
+                "1053e153.ad957f",
+                "f7ed9528.71f928"
+            ]
+        ]
+    },
+    {
+        "id": "1053e153.ad957f",
+        "type": "debug",
+        "z": "71c68ccf.971bb4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 660,
+        "wires": []
+    }
+]

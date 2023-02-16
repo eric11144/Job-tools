@@ -1,0 +1,272 @@
+{
+    "channels": [
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "Hold_31",
+            "conversion": {
+                "asType": "int16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400031
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "Hold_32",
+            "conversion": {
+                "asType": "int16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400032
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "Hold_33",
+            "conversion": {
+                "asType": "int16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400033
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int16_min",
+            "conversion": {
+                "asType": "int16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400001
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int16_max",
+            "conversion": {
+                "asType": "int16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400002
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_min",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400003
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_max",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400005
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "uint_min",
+            "conversion": {
+                "asType": "uint16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400007
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "uint16_max",
+            "conversion": {
+                "asType": "uint16"
+            },
+            "raw": {
+                "quantity": 1,
+                "reference": 400008
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "uint32_max",
+            "conversion": {
+                "asType": "uint32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400009
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "float32_positive_number_min",
+            "conversion": {
+                "asType": "float32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400011
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "float32_positive_number_max",
+            "conversion": {
+                "asType": "float32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400013
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "float32_negative_number_min",
+            "conversion": {
+                "asType": "float32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400015
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "float32_negative_number_max",
+            "conversion": {
+                "asType": "float32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400017
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_max-1",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400019
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_max-2",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400021
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_min-1",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400023
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "int32_min-2",
+            "conversion": {
+                "asType": "int32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400025
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "uint32_max-1",
+            "conversion": {
+                "asType": "uint32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400027
+            }
+        },
+        {
+            "category": [
+                "data"
+            ],
+            "channelId": "uint32_max-2",
+            "conversion": {
+                "asType": "uint32"
+            },
+            "raw": {
+                "quantity": 2,
+                "reference": 400029
+            }
+        }
+    ],
+    "commands": [
+        {
+            "address": 0,
+            "command": "read-holding-registers",
+            "quantity": 34
+        }
+    ],
+    "templateId": "agile-metech-baw"
+}

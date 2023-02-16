@@ -1,0 +1,14 @@
+[Unit]
+Description=Demo
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/home/ubuntu/docker_tool/
+ExecStart=docker-compose up --timeout 60 --force-recreate --no-color
+ExecStop=docker-compose stop --timeout 60
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

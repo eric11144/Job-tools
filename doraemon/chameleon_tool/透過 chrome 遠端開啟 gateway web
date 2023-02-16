@@ -1,0 +1,2 @@
+ssh -D 8080 -p xxxx ubuntu@xxx.xxx.xxx.xxx
+google-chrome --incognito --user-data-dir=/tmp  --proxy-server="socks5://localhost:8080"

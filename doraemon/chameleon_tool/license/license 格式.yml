@@ -1,0 +1,44 @@
+licensee: Unimicron - Shanying - PCB
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-54-3b-83
+
+licensee: Unimicron - Luzhu - ZONG_HUA_#1
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-53-da-89
+
+licensee: Unimicron - Luzhu - ZONG_HUA_#2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-54-3b-64 
+
+licensee: Unimicron - Luzhu - BA_JU
+machines:
+- connection-count: 5
+  machine-id: 00-30-64-54-3b-85  
+
+licensee: Unimicron - Shanying - S2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-54-3b-4b
+
+licensee: Unimicron - Shanying - S2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-54-3b-58
+
+licensee: Unimicron - Shanying - S2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-51-8c-58
+
+licensee: Unimicron - Shanying - S2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-54-3b-61
+
+licensee: Unimicron - Shanying - S2
+machines:
+- connection-count: 3
+  machine-id: 00-30-64-53-da-81

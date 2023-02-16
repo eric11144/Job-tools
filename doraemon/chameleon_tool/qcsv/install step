@@ -1,0 +1,16 @@
+cat .config/pip/pip.conf 
+
+vim .config/pip/pip.conf
+
+Add:
+[global]
+extra-index-url = http://pypi.qi
+trusted-host = pypi.qi
+
+
+python3 -m venv venv
+source venv/bin/activate
+pip3 install --upgrade pip
+sudo pip3 install qcsv
+
+sudo tar zcvf qcv.tar.gz /venv/

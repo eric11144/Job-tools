@@ -1,0 +1,382 @@
+[
+    {
+        "id": "94f8bcb0.a933f",
+        "type": "tab",
+        "label": "GYR",
+        "info": ""
+    },
+    {
+        "id": "f7b12a00.323798",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "77364f3e.acb22",
+        "type": "mqtt-broker",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "3dc066ab.84312a",
+        "type": "modbus-client",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.5",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "3b3774e4.47b88c",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "192.168.215.4",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "3045f06e.357cb",
+        "type": "function",
+        "z": "94f8bcb0.a933f",
+        "name": "G",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 0)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "d5311fce.65fb5"
+            ]
+        ]
+    },
+    {
+        "id": "4f9f688a.8c33f8",
+        "type": "mqtt in",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "topic": "/out/devices/GYR_light_3/readings",
+        "qos": "1",
+        "broker": "77364f3e.acb22",
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "4a8d846b.63b95c"
+            ]
+        ]
+    },
+    {
+        "id": "4a8d846b.63b95c",
+        "type": "json",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "3045f06e.357cb",
+                "ab54a20.449376",
+                "3899daf2.09cf56",
+                "def78ddc.d6348"
+            ]
+        ]
+    },
+    {
+        "id": "ab54a20.449376",
+        "type": "function",
+        "z": "94f8bcb0.a933f",
+        "name": "Y",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 1)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "62f6051f.5a777c"
+            ]
+        ]
+    },
+    {
+        "id": "3899daf2.09cf56",
+        "type": "function",
+        "z": "94f8bcb0.a933f",
+        "name": "R and buzzer",
+        "func": "for (var i = 0; i < msg.payload.channels.length; ++i)\n{\n    if (msg.payload.channels[i].channelId == \"healthiness\")\n    {\n        if (msg.payload.channels[i].value.num == 2)\n        {\n            msg.payload = 1\n        }\n        else\n        {\n            msg.payload = 0\n        }\n\n        return msg;\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "7cc92b96.a00c44",
+                "5d92ba87.fda354",
+                "f9c30db1.37552"
+            ]
+        ]
+    },
+    {
+        "id": "d5311fce.65fb5",
+        "type": "modbus-write",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "43",
+        "quantity": "1",
+        "server": "3dc066ab.84312a",
+        "x": 900,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "62f6051f.5a777c",
+        "type": "modbus-write",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "44",
+        "quantity": "1",
+        "server": "3dc066ab.84312a",
+        "x": 900,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7cc92b96.a00c44",
+        "type": "modbus-write",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "45",
+        "quantity": "1",
+        "server": "3dc066ab.84312a",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5d92ba87.fda354",
+        "type": "modbus-write",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "42",
+        "quantity": "1",
+        "server": "3dc066ab.84312a",
+        "x": 900,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f9c30db1.37552",
+        "type": "delay",
+        "z": "94f8bcb0.a933f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "78fc1bb9.e30114"
+            ]
+        ],
+        "outputLabels": [
+            "0"
+        ]
+    },
+    {
+        "id": "78fc1bb9.e30114",
+        "type": "function",
+        "z": "94f8bcb0.a933f",
+        "name": "turn off buzzer",
+        "func": "msg.payload = 0\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "5d92ba87.fda354"
+            ]
+        ]
+    },
+    {
+        "id": "31c503.1cf54afe",
+        "type": "mqtt in",
+        "z": "f7b12a00.323798",
+        "name": "",
+        "topic": "/out/devices/Modbus/readings",
+        "qos": "1",
+        "broker": "3b3774e4.47b88c",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78614001.e0e47",
+        "type": "json",
+        "z": "f7b12a00.323798",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "e950ed22.17573"
+            ]
+        ]
+    },
+    {
+        "id": "e950ed22.17573",
+        "type": "debug",
+        "z": "f7b12a00.323798",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 500,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d9fdee91.be183",
+        "type": "mqtt in",
+        "z": "f7b12a00.323798",
+        "name": "",
+        "topic": "/in/devices/Siemens/readings",
+        "qos": "1",
+        "broker": "3b3774e4.47b88c",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "def78ddc.d6348",
+        "type": "trigger",
+        "z": "94f8bcb0.a933f",
+        "op1": "",
+        "op2": "1",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "7",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "ded9b3b3.c8cce"
+            ]
+        ]
+    },
+    {
+        "id": "ded9b3b3.c8cce",
+        "type": "function",
+        "z": "94f8bcb0.a933f",
+        "name": "turn off GYR",
+        "func": "msg.payload = 0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "d5311fce.65fb5",
+                "62f6051f.5a777c",
+                "7cc92b96.a00c44"
+            ]
+        ]
+    }
+]

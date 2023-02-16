@@ -1,0 +1,645 @@
+[
+    {
+        "id": "6abe15b2eb55f449",
+        "type": "tab",
+        "label": "流程1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6e10530be61ede81",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.0.62",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "0a4ceaff78166d88",
+        "type": "ui_tab",
+        "name": "Gauge",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2503f402599f8e0b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f30d226fdcf64756",
+        "type": "ui_group",
+        "name": "ON/OFF",
+        "tab": "0a4ceaff78166d88",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bbc3b870e9fd6c85",
+        "type": "ui_group",
+        "name": "Stat",
+        "tab": "0a4ceaff78166d88",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "373d4e4b9115e2be",
+        "type": "ui_group",
+        "name": "Gauge",
+        "tab": "0a4ceaff78166d88",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5e66ecab2ed7f18f",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "hold_40001",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "40",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "2eac5f8209a3bec7",
+                "8670a3e79d15be91"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "14143d0daf52f7cc",
+        "type": "ui_led",
+        "z": "6abe15b2eb55f449",
+        "order": 0,
+        "group": "f30d226fdcf64756",
+        "width": "4",
+        "height": "3",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b924469259317497",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "coil_01",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "1455fbcb0e50733f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1455fbcb0e50733f",
+        "type": "function",
+        "z": "6abe15b2eb55f449",
+        "name": "status",
+        "func": "status = msg.payload[0]\n\nmsg.payload = status\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "14143d0daf52f7cc"
+            ]
+        ]
+    },
+    {
+        "id": "c6c34f4d2bf1c6bb",
+        "type": "ui_led",
+        "z": "6abe15b2eb55f449",
+        "order": 0,
+        "group": "f30d226fdcf64756",
+        "width": "4",
+        "height": "3",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d12cefea978a06cc",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "coil_02",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "8ef6c45074074732"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8ef6c45074074732",
+        "type": "function",
+        "z": "6abe15b2eb55f449",
+        "name": "status",
+        "func": "status = msg.payload[0]\n\nmsg.payload = status\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "c6c34f4d2bf1c6bb"
+            ]
+        ]
+    },
+    {
+        "id": "3aa3ef620d30cd23",
+        "type": "ui_led",
+        "z": "6abe15b2eb55f449",
+        "order": 0,
+        "group": "f30d226fdcf64756",
+        "width": "4",
+        "height": "3",
+        "label": "",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b98fc503e3b2e01c",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "coil_03",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "2",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "ac296d9f526cfa9c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ac296d9f526cfa9c",
+        "type": "function",
+        "z": "6abe15b2eb55f449",
+        "name": "status",
+        "func": "status = msg.payload[0]\n\nmsg.payload = status\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "3aa3ef620d30cd23"
+            ]
+        ]
+    },
+    {
+        "id": "2eac5f8209a3bec7",
+        "type": "ui_text",
+        "z": "6abe15b2eb55f449",
+        "group": "bbc3b870e9fd6c85",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 370,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fb823041109ec597",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "hold_40002",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "41",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "b7299f594fef46f4",
+                "4f2d4da9b4d2e7ce"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b7299f594fef46f4",
+        "type": "ui_text",
+        "z": "6abe15b2eb55f449",
+        "group": "bbc3b870e9fd6c85",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 370,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "99f9e23405a111bb",
+        "type": "modbus-read",
+        "z": "6abe15b2eb55f449",
+        "name": "hold_40003",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "42",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "6e10530be61ede81",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "861bd86f2b802fa3",
+                "4b7d215fda909d20"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "861bd86f2b802fa3",
+        "type": "ui_text",
+        "z": "6abe15b2eb55f449",
+        "group": "bbc3b870e9fd6c85",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 370,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8670a3e79d15be91",
+        "type": "ui_gauge",
+        "z": "6abe15b2eb55f449",
+        "name": "",
+        "group": "373d4e4b9115e2be",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "37",
+        "seg2": "38",
+        "className": "",
+        "x": 370,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4f2d4da9b4d2e7ce",
+        "type": "ui_gauge",
+        "z": "6abe15b2eb55f449",
+        "name": "",
+        "group": "373d4e4b9115e2be",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "37",
+        "seg2": "38",
+        "className": "",
+        "x": 370,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4b7d215fda909d20",
+        "type": "ui_gauge",
+        "z": "6abe15b2eb55f449",
+        "name": "",
+        "group": "373d4e4b9115e2be",
+        "order": 0,
+        "width": "4",
+        "height": "3",
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "37",
+        "seg2": "38",
+        "className": "",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    }
+]

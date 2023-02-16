@@ -1,0 +1,434 @@
+[
+    {
+        "id": "15894772.59cbe9",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "834281dc.7d224",
+        "type": "inject",
+        "z": "15894772.59cbe9",
+        "name": "array",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "84c92cc8.f5e19"
+            ]
+        ]
+    },
+    {
+        "id": "60c1c137.313d3",
+        "type": "debug",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1010,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8035c8c7.edbe18",
+        "type": "file",
+        "z": "15894772.59cbe9",
+        "name": "creat csv",
+        "filename": "/test/log.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "60c1c137.313d3"
+            ]
+        ]
+    },
+    {
+        "id": "84c92cc8.f5e19",
+        "type": "change",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t    {\t        \"at\": \"2019-04-24T07:34:12.605961Z\",\t        \"value\": {\t            \"num\": 2\t        }\t    },\t    {\t        \"at\": \"2019-04-24T07:34:12.506091Z\",\t        \"value\": {\t            \"num\": 2\t        }\t    },\t    {\t        \"at\": \"2019-04-24T07:34:12.408978Z\",\t        \"value\": {\t            \"num\": 2\t        }\t    },\t    {\t        \"at\": \"2019-04-24T07:34:12.307712Z\",\t        \"value\": {\t            \"num\": 2\t        }\t    },\t    {\t        \"at\": \"2019-04-24T07:34:12.211715Z\",\t        \"value\": {\t            \"num\": 2\t        }\t    }\t]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "a166fb4b.92d338"
+            ]
+        ]
+    },
+    {
+        "id": "a166fb4b.92d338",
+        "type": "json",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "8dbecd50.94518"
+            ]
+        ]
+    },
+    {
+        "id": "8dbecd50.94518",
+        "type": "function",
+        "z": "15894772.59cbe9",
+        "name": "set value",
+        "func": "return {payload:[Wert1, Time]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 60,
+        "wires": [
+            [
+                "8035c8c7.edbe18"
+            ]
+        ]
+    },
+    {
+        "id": "c50279d3.efb088",
+        "type": "http in",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "url": "/history.csv",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "e584f55a.8b4668"
+            ]
+        ]
+    },
+    {
+        "id": "e584f55a.8b4668",
+        "type": "http request",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://192.168.11.193/api/v1/devices/modbus/channels/CO2_Concentration/data",
+        "tls": "",
+        "proxy": "",
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "692a4293.f0927c"
+            ]
+        ]
+    },
+    {
+        "id": "692a4293.f0927c",
+        "type": "json",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 140,
+        "wires": [
+            [
+                "fdc6307.d5489d"
+            ]
+        ]
+    },
+    {
+        "id": "fdc6307.d5489d",
+        "type": "function",
+        "z": "15894772.59cbe9",
+        "name": "schema-convert",
+        "func": "var nmsg = [];\nfor (let i = 0; i < msg.payload.length; ++i) {\n    nmsg.push({\n        \"at\": msg.payload[i].at,\n        \"value\": msg.payload[i].value.num\n    });\n}\n\nmsg.payload = nmsg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 140,
+        "wires": [
+            [
+                "d0feb2c1.0d7b"
+            ]
+        ]
+    },
+    {
+        "id": "f941a93f.7635f8",
+        "type": "http response",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1210,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "49d07f7f.51cbe",
+        "type": "debug",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1210,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d0feb2c1.0d7b",
+        "type": "csv",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": true,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "at,value",
+        "skip": "0",
+        "x": 870,
+        "y": 140,
+        "wires": [
+            [
+                "eae6a2e7.a5615"
+            ]
+        ]
+    },
+    {
+        "id": "eae6a2e7.a5615",
+        "type": "change",
+        "z": "15894772.59cbe9",
+        "name": "set header",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-disposition",
+                "pt": "msg",
+                "to": "attachment; filename=history.csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "f941a93f.7635f8",
+                "49d07f7f.51cbe"
+            ]
+        ]
+    },
+    {
+        "id": "3223c211.457a3e",
+        "type": "http in",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "url": "/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "3b72a7e7.f61f68"
+            ]
+        ]
+    },
+    {
+        "id": "f58c7e5a.9d59",
+        "type": "function",
+        "z": "15894772.59cbe9",
+        "name": "schema-convert",
+        "func": "var nmsg = [];\nfor (let i = 0; i < msg.payload.length; ++i) {\n    nmsg.push({\n        \"at\": msg.payload[i].at,\n        \"value\": msg.payload[i].value.num\n    });\n}\n\nmsg.payload = nmsg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "665b631b.f47eac"
+            ]
+        ]
+    },
+    {
+        "id": "1e7a05b4.8d3a1a",
+        "type": "http response",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1170,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "665b631b.f47eac",
+        "type": "csv",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": true,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "at,value",
+        "skip": "0",
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "aeb169ad.71b4a8"
+            ]
+        ]
+    },
+    {
+        "id": "aeb169ad.71b4a8",
+        "type": "change",
+        "z": "15894772.59cbe9",
+        "name": "set header",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-disposition",
+                "pt": "msg",
+                "to": "attachment; filename=history.csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 280,
+        "wires": [
+            [
+                "1e7a05b4.8d3a1a"
+            ]
+        ]
+    },
+    {
+        "id": "3b72a7e7.f61f68",
+        "type": "change",
+        "z": "15894772.59cbe9",
+        "name": "parameter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device",
+                "pt": "msg",
+                "to": "modbus",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "channel",
+                "pt": "msg",
+                "to": "CO2_Concentration",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "194b8319.f6c3ed"
+            ]
+        ]
+    },
+    {
+        "id": "194b8319.f6c3ed",
+        "type": "http request",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://192.168.11.193/api/v1/devices/{{device}}/channels/{{channel}}/data",
+        "tls": "",
+        "proxy": "",
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "250ab20f.42051e"
+            ]
+        ]
+    },
+    {
+        "id": "250ab20f.42051e",
+        "type": "json",
+        "z": "15894772.59cbe9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "f58c7e5a.9d59"
+            ]
+        ]
+    }
+]

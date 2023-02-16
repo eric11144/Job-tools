@@ -1,0 +1,1 @@
+while true; do     timedatectl | head -n 3 >> time.txt | echo -e >> time.txt ; sleep 1 ; done &

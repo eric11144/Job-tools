@@ -1,0 +1,10 @@
+---
+- name: Setup resource-monitor service - copy /lib/systemd/system/resource-monitor.service
+  copy:
+    src: '{{ role_path }}/files/lib/systemd/system/resource-monitor.service'
+    dest: /lib/systemd/system/resource-monitor.service
+
+- name: Setup resource-monitor service - enable service
+  systemd:
+    name: resource-monitor
+    enabled: yes

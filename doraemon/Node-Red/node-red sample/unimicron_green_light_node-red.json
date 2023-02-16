@@ -1,0 +1,234 @@
+[
+    {
+        "id": "65392f4.f5010d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d0739598.6ad488",
+        "type": "tab",
+        "label": "unimicron-hejian2-stack-light",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "82f6f94b.f2b5f8",
+        "type": "subflow",
+        "name": "green light utilization",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "48050eef.129ce"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "119f1d68.726143",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "channels_should_be_zero",
+                "type": "json",
+                "value": "[]"
+            },
+            {
+                "name": "result_device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "result_channel_id",
+                "type": "str",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "id": "2eb75ce5.2f37a4",
+        "type": "function",
+        "z": "82f6f94b.f2b5f8",
+        "name": "is green only",
+        "func": "const target_light = msg.args.target_light\nconst other_light = msg.args.other_light\n\nmsg.payload = false\nif (target_light === true && other_light === false)\n{\n    msg.payload = true\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "c375431a.3d2e8"
+            ]
+        ]
+    },
+    {
+        "id": "119f1d68.726143",
+        "type": "function",
+        "z": "82f6f94b.f2b5f8",
+        "name": "build chameleon-sink payload",
+        "func": "const device_id = msg.args.result_device_id\nconst channel_id = msg.args.result_channel_id\n\nconst utilization_sec = msg.payload\nconst msg_at_sec = msg.args.at_sec\n\nmsg.payload = {\n    \"deviceId\": device_id,\n    \"at\": {\n        \"sec\": msg_at_sec,\n        \"us\": 0\n    },\n    \"channels\": {\n        [channel_id]: utilization_sec\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48050eef.129ce",
+        "type": "function",
+        "z": "82f6f94b.f2b5f8",
+        "name": "validate env and init",
+        "func": "const ENV = [\n    \"green_channel\",\n    \"channels_should_be_zero\",\n    \"result_device_id\",\n    \"result_channel_id\"\n]\n\nconst at_sec = msg.payload.at.sec\nconst channels = msg.payload.channels\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\ntarget_light = channels[env.get(\"green_channel\")]\n\nother_light = false\nenv.get(\"channels_should_be_zero\").forEach(\n    item =>\n    other_light |= Boolean(channels[item])\n)\n\nmsg.args = {\n    \"at_sec\": at_sec,\n    \"target_light\": Boolean(target_light),\n    \"other_light\": Boolean(other_light),\n    \"result_device_id\": env.get(\"result_device_id\"),\n    \"result_channel_id\": env.get(\"result_channel_id\")\n}\n\nmsg.payload = at_sec * 1000\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "a0af1bf2.c99a28"
+            ]
+        ]
+    },
+    {
+        "id": "a0af1bf2.c99a28",
+        "type": "qi-interval-boundary",
+        "z": "82f6f94b.f2b5f8",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "eeda2e0c.f1c4a"
+            ]
+        ]
+    },
+    {
+        "id": "eeda2e0c.f1c4a",
+        "type": "function",
+        "z": "82f6f94b.f2b5f8",
+        "name": "a new day",
+        "func": "const today_begin_sec = Math.floor(msg.payload.begin / 1000)\nconst msg_at_sec = msg.args.at_sec\n\nflow_today_begin = flow.get(\"today_begin_sec\")\npre_msg_at_sec = flow.get(\"pre_msg_at_sec\")\n\nif (flow_today_begin === undefined)\n{\n    flow_today_begin = today_begin_sec\n    flow.set(\"today_begin_sec\", today_begin_sec)\n}\n\nif (msg_at_sec < pre_msg_at_sec)\n{\n    node.warn(\"msg is out of date, ignore...\")\n    return;\n}\n\nif (msg_at_sec - flow_today_begin >= 86400)\n{\n    flow.set(\"utilization_sec\", 0)\n    flow.set(\"pre_msg_at_sec\", today_begin_sec)\n    flow.set(\"today_begin_sec\", today_begin_sec)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "2eb75ce5.2f37a4"
+            ]
+        ]
+    },
+    {
+        "id": "c375431a.3d2e8",
+        "type": "function",
+        "z": "82f6f94b.f2b5f8",
+        "name": "count green sec",
+        "func": "const is_green = msg.payload\nconst msg_at_sec = msg.args.at_sec\n\nutilization_sec = flow.get(\"utilization_sec\")\npre_msg_at_sec = flow.get(\"pre_msg_at_sec\")\n\nif (utilization_sec === undefined)\n{\n    utilization_sec = 0\n}\n\nif (pre_msg_at_sec === undefined)\n{\n    pre_msg_at_sec = msg_at_sec\n}\n\nif (is_green)\n{\n    increase_sec = msg_at_sec - pre_msg_at_sec\n    \n    utilization_sec += increase_sec\n}\n\nflow.set(\"utilization_sec\", utilization_sec)\nflow.set(\"pre_msg_at_sec\", msg_at_sec)\n\nmsg.payload = utilization_sec\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "119f1d68.726143"
+            ]
+        ]
+    },
+    {
+        "id": "90e2f17b.0a322",
+        "type": "qi-chameleon-source",
+        "z": "d0739598.6ad488",
+        "name": "",
+        "deviceId": "vvv",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "d907fd15.47c53"
+            ]
+        ]
+    },
+    {
+        "id": "d907fd15.47c53",
+        "type": "subflow:82f6f94b.f2b5f8",
+        "z": "d0739598.6ad488",
+        "name": "",
+        "env": [
+            {
+                "name": "green_channel",
+                "type": "str",
+                "value": "D10017"
+            },
+            {
+                "name": "channels_should_be_zero",
+                "type": "json",
+                "value": "[\"D10018\",\"D10019\"]"
+            },
+            {
+                "name": "result_device_id",
+                "type": "str",
+                "value": "utilization"
+            },
+            {
+                "name": "result_channel_id",
+                "type": "str",
+                "value": "utilization_sec"
+            }
+        ],
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "a86491c3.5b0e4"
+            ]
+        ]
+    },
+    {
+        "id": "a86491c3.5b0e4",
+        "type": "debug",
+        "z": "d0739598.6ad488",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9d0ae4.fc20452",
+        "type": "qi-chameleon-sink",
+        "z": "d0739598.6ad488",
+        "name": "",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    }
+]

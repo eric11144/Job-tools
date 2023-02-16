@@ -1,0 +1,3 @@
+- ./the-gateway/etc/vimonetx2-reading-publisher/:/etc/vimonetx2-reading-publisher/
+- ./tensorflow/:/tensorflow/
+- ./tensorflow/tensorflow.conf:/etc/supervisor/conf.d/tensorflow.conf:ro

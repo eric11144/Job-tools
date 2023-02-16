@@ -1,0 +1,1 @@
+venv/bin/python3 -m qreplay.app --chameleon-url=http://221.120.49.209:8787/api/v1 --csv=/home/sunny/201908-kwct-csv/csv0827/

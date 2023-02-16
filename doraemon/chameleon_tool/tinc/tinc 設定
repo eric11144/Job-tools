@@ -1,0 +1,26 @@
+cat .config/pip/pip.conf 
+[global]
+extra-index-url = http://pypi.qi
+trusted-host = pypi.qi
+
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
+sudo add-apt-repository ppa:rmescandon/yq
+sudo apt update
+sudo apt install yq -y
+
+
+sudo add-apt-repository ppa:rmescandon/yq
+sudo apt update
+sudo apt install yq -y
+
+sudo apt-get install tinc
+
+make build
+將 dist 產生出來對應的資料夾檔案
+複製到 /etc/tinc/
+將資料夾解壓縮
+sudo tar zxvf xxx.tar
+更新 10.1.0.1 內的 tinc 檔案
+
+sudo systemctl restart tinc@qixd

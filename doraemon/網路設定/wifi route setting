@@ -1,0 +1,8 @@
+https://askubuntu.com/questions/604695/how-to-route-transmission-traffic
+
+How to route transmission traffic
+
+sudo route add default gw xxx.xxx.xxx.xxx metric 200 
+xxx.xxx.xxx.xxx - in command represent ip address of wireless interface from router
+
+Output from command will show two gw

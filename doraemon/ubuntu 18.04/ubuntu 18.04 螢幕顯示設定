@@ -1,0 +1,2 @@
+sudo vim /etc/gdm3/custom.conf
+find WaylandEnable=false(take off #)

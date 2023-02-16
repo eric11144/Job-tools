@@ -1,0 +1,11 @@
+git checkout to old name
+git checkout shaoyuni-0423
+
+modify branch name to new name
+git branch -m shaoyuni-0514
+
+update branch name
+git push origin -u shaoyuni-0514
+
+delete old branch name
+git push origin --delete old name

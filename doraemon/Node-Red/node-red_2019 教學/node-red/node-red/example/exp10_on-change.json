@@ -1,0 +1,105 @@
+[
+    {
+        "id": "486a8e38.79c4d8",
+        "type": "qi-forward-on-change",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "1726e160.7a587f"
+            ]
+        ]
+    },
+    {
+        "id": "16502a29.535d86",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "+ 0",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "afdd6db3.d91e6"
+            ]
+        ]
+    },
+    {
+        "id": "a8143e1b.515d3",
+        "type": "inject",
+        "z": "6ac440.848d8bc",
+        "name": "+ 1",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "afdd6db3.d91e6"
+            ]
+        ]
+    },
+    {
+        "id": "afdd6db3.d91e6",
+        "type": "function",
+        "z": "6ac440.848d8bc",
+        "name": "gen data",
+        "func": "const timestamp = new Date()\nconst timestamp_sec =  Math.floor(timestamp / 1000)\nconst timestamp_us = timestamp % 1000\n\nconst new_val = msg.payload\n\nlet val = flow.get(\"val\")\nif (val === undefined)\n{\n    val = 0\n}\n\nval += new_val\nflow.set(\"val\", val)\n\nmsg.payload = {\n    \"deviceId\": \"dev\",\n    \"at\": {\n        \"sec\": timestamp_sec,\n        \"us\": timestamp_us\n    },\n    \"channels\": {\n        \"accumulate_value\": val\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "486a8e38.79c4d8",
+                "7a5461fd.0737e"
+            ]
+        ]
+    },
+    {
+        "id": "1726e160.7a587f",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 620,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7a5461fd.0737e",
+        "type": "debug",
+        "z": "6ac440.848d8bc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 430,
+        "y": 120,
+        "wires": []
+    }
+]

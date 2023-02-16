@@ -1,0 +1,16 @@
+---
+- name: Disable systemd services
+  systemd:
+    name: '{{ item }}'
+    enabled: false
+  with_items:
+  - apt-daily.timer
+  - apt-daily-upgrade.timer
+  - iscsid
+  - open-iscsi
+  - systemd-networkd-wait-online
+
+- name: mask systemd-networkd-wait-online
+  systemd:
+    name: systemd-networkd-wait-online
+    masked: yes

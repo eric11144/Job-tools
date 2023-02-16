@@ -1,0 +1,1318 @@
+license 數目
+gpg --decrypt 00-0b-ab-c9-09-34.qalic
+
+*************************************************************************************************************************************
+put system equipment
+curl -i -H 'Content-Type: application/json' -u admin:p@55w0rd -X PUT http://192.168.11.195/api/v1/config/system/equipment \
+--data-binary @- <<EOF
+{
+  "properties": [
+    "machineName",
+    "machineNo"
+  ]
+}
+EOF
+
+curl -i -H 'Content-Type: application/json' -u admin:p@55w0rd -X PUT http://192.168.11.195/api/v1/config/system/template \
+--data-binary @- <<EOF
+{
+  "categories": [
+    "alarm",
+    "data",
+    "email"
+  ]
+}
+EOF
+*************************************************************************************************************************************
+POST RMS category
+curl -H "Content-Type: application/json" -u admin:p@55w0rd -X  POST http://211.72.232.251:8888/rms/api/v1/config/categories \
+--data-binary @- <<EOF
+{
+  "id": "black_shadow",
+  "name": "black_shadow",
+  "ingredients": {
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formula"
+      ],
+      "properties": {
+        "formula": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5
+        }
+      }
+    },
+    "meta": {
+      "formula": {
+        "name": "程式"
+      }
+    }
+  }
+}
+EOF
+
+DELETE rms recipes
+curl -i -u admin:p@55w0rd --request DELETE http://211.72.232.251:8888/rms/api/v1/categories/string/recipes/1
+
+*************************************************************************************************************************************
+
+curl -i -H 'Content-Type: application/json' -u admin:p@55w0rd -X PUT http://192.168.20.134/api/v1/config/system/tsdb \
+--data-binary @- <<EOF
+{
+  "readingRetainDays": 30,
+  "resourceRetainDays": 7
+}
+EOF
+
+*************************************************************************************************************************************
+
+curl -i -H 'Content-Type: application/json' -u admin:p@55w0rd -X PUT http://192.168.20.134/api/v1/qold/config \
+--data-binary @- <<EOF
+{
+    "flushPeriodMin":1440,
+    "retainPeriodMin":518400,
+    "timezone":"+08:00"
+}
+EOF
+
+*************************************************************************************************************************************
+
+POST auth api
+curl -i -H "Content-Type: application/json" POST -d '{"username":"admin","password":"p@55w0rd"}' http://192.168.11.126/api/v1/auth
+
+POST refresh
+curl -X POST -i http://localhost:8888/api/v1/auth/refresh -H 'Content-Type: application/json' -H 'Authorization: JWT "refresh key"'
+
+*************************************************************************************************************************************
+
+GET connectivity
+curl -i http://192.168.11.126/api/v1/config/system/connectivity
+
+PUT connectivity online mode
+curl -i -H 'Content-Type: application/json' -u admin:p@55w0rd -X PUT http://192.168.11.170/api/v1/config/system/connectivity \
+--data-binary @- <<EOF
+{
+  "enableRTPS": false,
+  "servers": [
+    {
+      "mqtt": {
+        "host": "10.15.44.1",
+        "port": 1885
+      }
+    }
+  ]
+}
+EOF
+
+***************************************************************************************************************************************
+
+PUT safebox ulum-config mqdclient-config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.193/api/v1/safeboxes/etc-ulmu-config.json \
+--data-binary @- <<EOF
+{
+    "mssql": {
+        "connection-timeout-sec": 10,
+        "database": "database",
+        "execution-timeout-sec": 60,
+        "password": "password",
+        "retry-timeout-sec": 30,
+        "server": "127.0.0.1\\\sqlserver2012",
+        "table": "dbo.table",
+        "timezone": "+08:00",
+        "username": "username"
+    },
+    "update-list": [
+        {
+            "channel-mapping-list": [
+                {
+                    "channel": "temperature",
+                    "sensor-field": "sensor1"
+                }
+            ],
+            "device": "unknown",
+            "time-field": "time1",
+            "update-frequency-sec": 60
+        }
+    ]
+}
+EOF
+
+
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.193/api/v1/safeboxes/etc-mqdclient-config.json --data-binary @- <<EOF
+{
+    "http": {
+        "max-consumption-per-queue": 50,
+        "post-frequency-ms": 10
+    },
+    "pipelines": [
+        {
+            "from-stream-id": "data",
+            "to-uri": "http://10.13.69.61:12345/mq-diverter/0.1/api/tx8100/Data"
+        },
+        {
+            "from-stream-id": "alarm_onchange",
+            "to-uri": "http://10.13.68.61:12345/mq-diverter/0.1/api/tx8100/Event"
+        }
+    ],
+    "queue": {
+        "size-per-device": 4096
+    },
+    "qurrent": {
+        "get-properties-timeout-ms": 3000,
+        "pk-pairs": [
+            {
+                "http-key": "machineNo",
+                "qurrent-property": "machineNo"
+            },
+            {
+                "http-key": "machineName",
+                "qurrent-property": "machineName"
+            }
+        ],
+        "subscriber-buffer-size": 10
+    }
+}
+EOF
+
+*************************************************************************************************************************************
+
+GET network eth0 / eth1
+curl http://192.168.11.126/api/v1/config/system/network/eth0 | python3 -m json.tool
+
+PUT network eth0 / eth1
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.193/api/v1/config/system/network/eth0 \
+--data-binary @- <<EOF
+{
+    "addresses": [
+        "192.168.11.126/24"
+    ],
+    "dhcp4": false,
+    "gateway4": "192.168.11.1",
+    "nameservers": [
+    "8.8.8.8"
+  ]
+}
+EOF
+
+*************************************************************************************************************************************
+
+GET ntp
+curl -i http://192.168.11.126/api/v1/config/system/ntp
+
+PUT ntp
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT -d '{"host": "time.google.com"}' http://192.168.11.126/api/v1/config/system/ntp
+
+*************************************************************************************************************************************
+
+PUT barcode setting
+curl -H "Content-Type: application/json" -H 'Authorization: JWT ' -X  PUT -d '{"channelId":"barcode","enable":true,"equipmentId":"barcode-scanner"}' \
+  http://192.168.11.126/api/v1/config/barcode/configuration
+
+POST convert-raw-values
+curl -i -H "Content-Type: application/json" -H 'Authorization: JWT ' -X POST http://192.168.11.126/api/v1/convert-raw-values \
+--data-binary @- <<EOF
+[
+  {
+    "raw": [
+      4660
+    ],
+    "conversion": {
+      "asType": "uint16",
+      "byteOrder": "BA",
+      "andMask": [
+        65535
+      ],
+      "multiplier": 0.1
+    }
+  }
+]
+EOF
+
+GET environment
+curl -i http://192.168.11.126/api/v1/environment ( | grep maxEquipmentCount)
+
+GET system date uptimesec
+curl -i http://192.168.11.126/api/v1/system
+
+*************************************************************************************************************************************
+
+GET device status
+curl -i http://192.168.11.126/api/v1/status/devices
+
+GET equipments status
+curl -i http://192.168.11.126/api/v1/status/equipments
+
+*************************************************************************************************************************************
+
+GET devices
+curl http://192.168.11.126/api/v1/devices
+
+GET devices channels
+curl http://192.168.11.126/api/v1/devices/xxx/channels
+
+GET devices channels data
+curl http://192.168.11.126/api/v1/devices/xxx/channels/xxx/data?pageSize=10000&sort=ASC(since="2019-03-06T05:44:33.000295Z"&until="2019-03-06T05:44:33.000295Z")
+
+GET devices channels latest-data
+curl http://192.168.11.126/api/v1/devices/xxx/channels/latest-data
+
+DELETE devices
+curl -i -H 'Authorization: JWT '  --request DELETE http://192.168.11.126/api/v1/devices/xxx
+
+*************************************************************************************************************************************
+
+GET safebox meta-data
+curl -i http://192.168.11.126/api/v1/safeboxes/meta-data
+
+GET safebox line-data
+curl -i http://192.168.11.126/api/v1/safeboxes/line-data
+
+PUT safebox
+curl -H "Content-Type: application/json" -H 'Authorization: JWT ' -X  PUT http://192.168.11.126/api/v1/safeboxes/meta-data \
+--data-binary @- <<EOF
+[
+    {
+        "equipmentId": "omron",
+        "equipmentType": "3"
+    },
+    {
+        "equipmentId": "fx3u",
+        "equipmentType": 1
+    },
+    {
+        "equipmentId": "modbus",
+        "equipmentType": "4"
+    }
+]
+EOF
+
+DELETE safebox meta-data
+curl -i -H 'Authorization: JWT '  --request DELETE http://192.168.11.126/api/v1/safeboxes/meta-data
+
+*************************************************************************************************************************************
+
+GET fins templates
+curl http://192.168.11.126/api/v1/config/fins/templates | python3 -m json.tool
+
+GET melsec templates
+curl http://192.168.11.126/api/v1/config/melsec/templates | python3 -m json.tool
+
+GET modbus templates
+curl http://192.168.11.126/api/v1/config/modbus/templates | python3 -m json.tool
+
+GET step7 templates
+curl http://192.168.11.126/api/v1/config/step7/templates | python3 -m json.tool
+
+*************************************************************************************************************************************
+
+GET fins equipments
+curl http://192.168.11.126/api/v1/config/fins/equipments |  python3 -m json.tool
+
+GET melsec equipments
+curl http://192.168.11.126/api/v1/config/melsec/equipments |  python3 -m json.tool
+
+GET modbus equipments
+curl http://192.168.11.126/api/v1/config/modbus/equipments |  python3 -m json.tool
+
+GET step7 equipments
+curl http://192.168.11.126/api/v1/config/step7/equipments |  python3 -m json.tool
+
+************************************************************************************************************************************************************
+
+GET fins xlsx
+curl http://192.168.11.126/api/v1/config/fins/templates/fins02-ht/xlsx > /home/sunny/fins02-ht.xlsx
+
+GET melsec xlsx
+curl http://192.168.11.126/api/v1/config/melsec/templates/q02u-ht/xlsx > /home/sunny/q02u-ht.xlsx
+
+GET modbus xlsx
+curl http://192.168.11.126/api/v1/config/modbus/templates/agile-metech-baw/xlsx > /home/sunny/agile-metech-baw.xlsx
+
+GET step7 xlsx
+curl http://192.168.11.126/api/v1/config/step7/templates/s7-300/xlsx > /home/sunny/s7-300.xlsx
+
+************************************************************************************************************************************************************
+
+PUT fins xlsx
+curl -H 'Authorization: JWT ' -X PUT -F file=@/home/sunny/cj2m-cpu45 http://192.168.11.126/api/v1/config/fins/templates/cj2m-cpu45/xlsx
+
+PUT melsec xlsx
+curl -H 'Authorization: JWT ' -X PUT -F file=@/home/sunny/fx3u.xlsx http://192.168.11.126/api/v1/config/melsec/templates/fx3u-ht/xlsx
+
+PUT modbus xlsx
+curl -H 'Authorization: JWT ' -X PUT -F file=@/home/sunny/agile-metech-baw.xlsx http://192.168.11.126/api/v1/config/fins/templates/agile-metech-baw/xlsx
+
+PUT step7 xlsx
+curl -H 'Authorization: JWT ' -X PUT -F file=@/home/sunny/s7-300.xlsx http://192.168.11.126/api/v1/config/fins/templates/s7-300/xlsx
+
+PUT virtual xlsx
+
+curl -H 'Authorization: JWT ' -X PUT -F file=@/home/ubuntu/GYR_light_2.xlsx http://10.1.1.6/api/v1/config/virtual/templates/GYR_light_2/xlsx
+
+************************************************************************************************************************************************************
+
+GET melsec equipements to txt
+curl http://192.168.11.126/api/v1/config/melsec/equipments > melsec_polling.txt
+
+GET fins equipements to txt
+curl http://192.168.11.126/api/v1/config/fins/equipments > fins_polling.txt
+
+GET modbus equipements to txt
+curl http://192.168.11.126/api/v1/config/modbus/equipments > modbus_polling.txt
+
+GET step7 equipements to txt
+curl http://192.168.11.126/api/v1/config/step7/equipments > step7_polling.txt
+
+************************************************************************************************************************************************************
+
+PUT melsec equipements from txt
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d @melsec_polling.txt http://192.168.11.126/api/v1/config/melsec/equipments
+
+PUT fins equipements from txt
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d @fins_polling.txt http://192.168.11.126/api/v1/config/fins/equipments
+
+PUT modbus equipements from txt
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d @modbus_polling.txt http://192.168.11.126/api/v1/config/modbus/equipments
+
+PUT step7 equipements from txt
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d @step7_polling.txt http://192.168.11.126/api/v1/config/step7/equipments
+
+************************************************************************************************************************************************************
+
+PUT melsec equipements
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d '' http://192.168.11.126/api/v1/config/melsec/equipments
+
+PUT fins equipements
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d '' http://192.168.11.126/api/v1/config/fins/equipments
+
+PUT modbus equipements
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d '' http://192.168.11.126/api/v1/config/modbus/equipments
+
+PUT step7 equipements
+curl -H 'Content-Type: application/json'  -H 'Authorization: JWT ' -X PUT -d '' http://192.168.11.126/api/v1/config/step7/equipments
+
+************************************************************************************************************************************************************
+
+DELETE step7 polling config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT -d '[]' http://192.168.11.126/api/v1/config/step7/equipments
+
+DELETE melsec polling config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT -d '[]' http://192.168.11.126/api/v1/config/melsec/equipments
+
+DELETE fins polling config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT -d '[]' http://192.168.11.126/api/v1/config/fins/equipments
+
+DELETE modbus polling config
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT -d '[]' http://192.168.11.126/api/v1/config/modbus/equipments
+
+************************************************************************************************************************************************************
+
+DELETE templates
+curl -i -H 'Authorization: JWT ' --request DELETE http://192.168.11.126/api/v1/config/xxx/templates/xxx
+curl -i -u admin:p@55w0rd --request DELETE http://192.168.11.126/api/v1/config/xxx/templates/xxx
+
+************************************************************************************************************************************************************
+
+PUT melsec equipment api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT  http://192.168.11.126/api/v1/config/melsec/equipments \
+--data-binary @- <<EOF
+[
+    {
+        "connection": {
+            "tcp": {
+                "host": "192.168.20.51",
+                "port": 9600
+            }
+        },
+        "equipmentList": [
+            {
+                "equipmentId": "fx3u",
+                "properties": [
+                    {
+                        "key": "machineNo",
+                        "value": "123456789"
+                    },
+                    {
+                        "key": "machineName",
+                        "value": "abcdefghij"
+                    }
+                ],
+                "templateId": "fx3u-ht"
+            }
+        ],
+        "pollingPeriodMS": 1000,
+        "protocol": "1E:ascii",
+        "requestTimeoutMS": 2000
+    }
+]
+EOF
+
+PUT fins equipment api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT  http://192.168.11.126/api/v1/config/fins/equipments \
+--data-binary @- <<EOF
+[
+    {
+        "connection": {
+            "tcp": {
+                "host": "192.168.20.57",
+                "port": 9600
+            }
+        },
+        "equipment": {
+            "equipmentId": "omron",
+            "properties": [
+                {
+                    "key": "machineNo",
+                    "value": "123456"
+                },
+                {
+                    "key": "machineName",
+                    "value": "machine1"
+                }
+            ],
+            "templateId": "fins02-ht"
+        },
+        "pollingPeriodMS": 1000,
+        "requestTimeoutMS": 2000
+    }
+]
+EOF
+
+PUT modbus equipment api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.126/api/v1/config/modbus/equipments \
+--data-binary @- <<EOF
+[
+    {
+        "endPoint": {
+            "host": "192.168.11.196",
+            "port": 1502
+        },
+        "equipments": [
+            {
+                "equipmentId": "modbus",
+                "id": 1,
+                "properties": [
+                    {
+                        "key": "machineNo",
+                        "value": "123456"
+                    },
+                    {
+                        "key": "machineName",
+                        "value": "machine1"
+                    }
+                ],
+                "templateId": "agile-metech-baw-big"
+            }
+        ],
+        "pollingPeriodMS": 1000,
+        "requestTimeoutMS": 2000
+    }
+]
+EOF
+
+PUT mewtocol equipment api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT  http://192.168.11.193/api/v1/config/mewtocol/equipments --data-binary @- <<EOF
+[
+  {
+    "connection": {
+      "tcp": {
+        "host": "192.168.20.54",
+        "port": 9094
+      }
+    },
+    "equipment": {
+      "stationNo": 1,
+      "templateId": "spreader",
+      "equipmentId": "spreader",
+     ^CequipmentName": "拉布機"
+    },
+    "pollingPeriodMS": 500,
+    "requestTimeoutMS": 300
+  }
+]
+EOF
+
+************************************************************************************************************************************************************
+
+PUT modbus template api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.126/api/v1/config/modbus/templates/iologik \
+--data-binary @- <<EOF
+[
+    {
+        "channels": [
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "hold_83",
+                "conversion": {
+                    "asType": "int16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400083
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "hold_84",
+                "conversion": {
+                    "asType": "int16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400084
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "hold_85",
+                "conversion": {
+                    "asType": "int16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400085
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int16_min",
+                "conversion": {
+                    "asType": "int16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400001
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int16_max",
+                "conversion": {
+                    "asType": "int16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400002
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_min",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400003
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_max",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400005
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "uint_min",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400015
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "uint16_max",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 400016
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "uint32_max",
+                "conversion": {
+                    "asType": "uint32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400017
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "float32_positive_number_min",
+                "conversion": {
+                    "asType": "float32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400023
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "float32_positive_number_max",
+                "conversion": {
+                    "asType": "float32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400025
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "float32_negative_number_min",
+                "conversion": {
+                    "asType": "float32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400027
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "float32_negative_number_max",
+                "conversion": {
+                    "asType": "float32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400029
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_max-1",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400047
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_max-2",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400049
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_min-1",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400051
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "int32_min-2",
+                "conversion": {
+                    "asType": "int32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400053
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "uint32_max-1",
+                "conversion": {
+                    "asType": "uint32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400055
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "uint32_max-2",
+                "conversion": {
+                    "asType": "uint32"
+                },
+                "raw": {
+                    "quantity": 2,
+                    "reference": 400057
+                }
+            }
+        ],
+        "commands": [
+            {
+                "address": 0,
+                "command": "read-holding-registers",
+                "quantity": 85
+            }
+        ],
+        "templateId": "agile-metech-baw-big"
+    },
+    {
+        "channels": [
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "Temperature",
+                "channelName": "\u6eab\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0007,
+                    "rounding": {
+                        "mode": "round",
+                        "position": -2
+                    }
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300001
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "Humidity",
+                "channelName": "\u6fd5\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0015,
+                    "rounding": {
+                        "mode": "round",
+                        "position": -2
+                    }
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300002
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "CO_Concentration",
+                "channelName": "CO\u6fc3\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0015
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300003
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "CO2_Concentration",
+                "channelName": "CO2\u6fc3\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0305,
+                    "rounding": {
+                        "mode": "round",
+                        "position": -2
+                    }
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300004
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "Water_Depth",
+                "channelName": "\u6c34\u4f4d\u6df1\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.00305
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300005
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "Water_Pressure",
+                "channelName": "\u6c34\u58d3",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 3e-06
+                },
+                "raw": {
+                    "quantity": 1,
+                    "reference": 300005
+                }
+            }
+        ],
+        "commands": [
+            {
+                "address": 0,
+                "command": "read-input-registers",
+                "quantity": 8
+            }
+        ],
+        "templateId": "iologik"
+    }
+]
+EOF
+
+PUT fx3u-ht template api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.126/api/v1/config/melsec/templates/fx3u-ht \
+ --data-binary @- <<EOF
+[
+    {
+        "channels": [
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "temp_C",
+                "channelName": "\u6eab\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0375
+                },
+                "raw": {
+                    "address": 8260,
+                    "quantity": 1,
+                    "registerType": "D"
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "humidity_Percent",
+                "channelName": "\u6fd5\u5ea6",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.0675
+                },
+                "raw": {
+                    "address": 8261,
+                    "quantity": 1,
+                    "registerType": "D"
+                }
+            },
+            {
+                "category": [
+                    "data",
+                    "alarm"
+                ],
+                "channelId": "test-node",
+                "channelName": "alarm",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.1
+                },
+                "raw": {
+                    "address": 8262,
+                    "quantity": 1,
+                    "registerType": "D"
+                }
+            },
+            {
+                "category": [
+                    "data",
+                    "alarm"
+                ],
+                "channelId": "Alarm",
+                "channelName": "Alarm-test",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "address": 8013,
+                    "quantity": 1,
+                    "registerType": "M"
+                }
+            },
+            {
+                "category": [
+                    "data",
+                    "alarm"
+                ],
+                "channelId": "M801_4",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "address": 8014,
+                    "quantity": 1,
+                    "registerType": "M"
+                }
+            }
+        ],
+        "commands": [
+            {
+                "address": 8260,
+                "command": "read-word",
+                "quantity": 3,
+                "registerType": "D"
+            },
+            {
+                "address": 8013,
+                "command": "read-bit",
+                "quantity": 2,
+                "registerType": "M"
+            }
+        ],
+        "templateId": "fx3u-ht"
+    }
+]
+ EOF
+
+PUT cs1g-45h template api
+curl -i -H 'Content-Type: application/json' -H 'Authorization: JWT ' -X PUT http://192.168.11.126/api/v1/config/fins/templates/cs1g-45h \
+ --data-binary @- <<EOF
+[
+    {
+        "channels": [
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "temp_C",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.02
+                },
+                "raw": {
+                    "wordAddress": {
+                        "address": 0,
+                        "memoryArea": "D",
+                        "quantity": 1
+                    }
+                }
+            },
+            {
+                "category": [
+                    "data"
+                ],
+                "channelId": "humidity_Percent",
+                "conversion": {
+                    "asType": "uint16",
+                    "multiplier": 0.025
+                },
+                "raw": {
+                    "wordAddress": {
+                        "address": 1,
+                        "memoryArea": "D",
+                        "quantity": 1
+                    }
+                }
+            },
+            {
+                "category": [
+                    "alarm"
+                ],
+                "channelId": "loader_abnormal",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "bitAddress": {
+                        "address": 100,
+                        "bit": 7,
+                        "memoryArea": "W",
+                        "quantity": 1
+                    }
+                }
+            },
+            {
+                "category": [
+                    "alarm"
+                ],
+                "channelId": "motor_overload",
+                "conversion": {
+                    "asType": "uint16"
+                },
+                "raw": {
+                    "bitAddress": {
+                        "address": 100,
+                        "bit": 8,
+                        "memoryArea": "W",
+                        "quantity": 1
+                    }
+                }
+            }
+        ],
+        "commands": [
+            {
+                "command": "read-word",
+                "wordAddress": {
+                    "address": 0,
+                    "memoryArea": "D",
+                    "quantity": 3
+                }
+            },
+            {
+                "bitAddress": {
+                    "address": 100,
+                    "bit": 7,
+                    "memoryArea": "W",
+                    "quantity": 2
+                },
+                "command": "read-bit"
+            }
+        ],
+        "templateId": "cs1g-45h"
+    }
+]
+ EOF
+
+************************************************************************************************************************************************************
+
+GET Modbus rtu setting
+curl -i -H 'Content-Type: application/json' http://192.168.11.126/api/v1/modbusgateways
+
+PUT Modbus rtu setting
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT ' \
+ -i -X PUT  http://192.168.11.126/api/v1/modbusgateways \
+ --data-binary @- <<EOF
+ [
+  {
+    "config": {
+      "baudrate": "9600",
+      "intercharTimeoutMS": 500,
+      "interframeDelayMS": 0,
+      "parity": "none",
+      "requestTimeoutMS": 500,
+      "stopbits": "one"
+    },
+    "env": {
+      "device": "/dev/ttyS4",
+      "modbusTcpPort": 502
+    }
+  }
+]
+EOF
+
+PUT Modbus rtu setting from txt
+curl -H 'Content-Type: application/json' -H 'Authorization: JWT ' -i -X PUT -T "/home/sunny/modbus-rtu/rtu" http://192.168.11.126/api/v1/modbusgateways
+
+************************************************************************************************************************************************************
+
+PUT reading filter
+curl -i \
+  -H 'Authorization: JWT '\
+  --request PUT "http://192.168.11.126/api/v1/config/readings/filter" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+  "mode": "allow-listed",
+  "devices": [
+    "test"
+  ]
+}
+EOF
+
+************************************************************************************************************************************************************
+
+GET virtual xlsx
+curl http://192.168.11.126/api/v1/config/virtual/templates/_empty_/xlsx > /home/sunny/virtual.xlsx
+
+POST virtual templates
+curl -i \
+  -H 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNTY3MTM4NjA0LCJuYmYiOjE1NjcxMzUwMDQsImlhdCI6MTU2NzEzNTAwNCwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwianRpIjoiNGIwZDU1NjQtMjJhMi00MDIyLWI5NTEtNmZiNDQ1NmVkZWIwIn0.DNmEWWdqZSvqWqSdvWZEs9xoaXpXJXr4_ssq4e3jOkI'\
+  --request POST "http://192.168.11.127/api/v1/config/virtual/templates" \
+  -H 'Content-Type: application/json' \
+--data-binary @- <<EOF
+{
+    "templateId": "barcode",
+    "channels": [
+        {
+            "channelId": "barcode",
+            "category": ["data"],
+            "valueType": "string"
+        }
+    ]
+}
+EOF
+
+PUT virtual equipments
+curl -i \
+  -H 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE1Njc2ODIxOTgsImV4cCI6MTU2NzY4NTc5OCwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZSwianRpIjoiODg0OGVlZmYtYmQyNC00ODMyLTgxZjItMzJkZDI3NGYyMWRlIiwiaWF0IjoxNTY3NjgyMTk4LCJpZGVudGl0eSI6ImFkbWluIn0.0SyaQUu4QsLu1r_sx5PUuUHwV1qsDKZb6bbw7VhfjFs'\
+  --request PUT "http://192.168.11.80/api/v1/config/virtual/equipments" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+[
+    {
+      "equipmentId": "barcode-scanner",
+      "templateId": "barcode"
+    },
+    {
+      "equipmentId": "--A",
+      "equipmentName": "虛擬設備2",
+      "templateId": "template-02"
+    },
+    {
+      "equipmentId": "B--",
+      "equipmentName": "虛擬設備3",
+      "templateId": "template-03"
+    },
+    {
+      "equipmentId": "C--",
+      "equipmentName": "虛擬設備4",
+      "templateId": "template-04"
+    },
+    {
+      "equipmentId": "X--",
+      "equipmentName": "虛擬設備5",
+      "templateId": "template-05"
+    },
+    {
+      "equipmentId": "A--",
+      "equipmentName": "虛擬設備6",
+      "templateId": "template-06"
+    },
+    {
+      "equipmentId": "A----A",
+      "equipmentName": "虛擬設備7",
+      "templateId": "template-07"
+    },
+    {
+      "equipmentId": "A----AB--",
+      "equipmentName": "虛擬設備8",
+      "templateId": "template-08"
+    },
+    {
+      "equipmentId": "A----AB--C--",
+      "equipmentName": "虛擬設備9",
+      "templateId": "template-09"
+    },
+    {
+      "equipmentId": "A----AB--C--X--",
+      "equipmentName": "虛擬設備10",
+      "templateId": "template-10"
+    }
+]
+EOF
+
+PUT virtual templates
+curl -i \
+  -H 'Authorization: JWT '\
+  --request PUT "http://192.168.11.126/api/v1/config/virtual/templates/template-01" \
+  -H 'Content-Type: application/json' \
+--data-binary @- <<EOF
+{
+    "templateId": "template-01",
+    "channels": [
+        {
+            "channelId": "data",
+            "category": ["data"],
+            "valueType": "integer"
+        }
+    ]
+}
+EOF
+
+************************************************************************************************************************************************************
+
+POST update-reading
+curl -i \
+  -H 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NTIzNzQ3MjgsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsIm5iZiI6MTU1MjM3NDcyOCwiZXhwIjoxNTUyMzc4MzI4LCJpZGVudGl0eSI6ImFkbWluIiwianRpIjoiNWMyMjMwZWEtMzJiMS00N2U1LWIzZmQtNjVhZDk1NGU2YmUzIn0.0-A1WHpyLckupZbF1lG0Ktsbbd35SyRQe3ZAQDX1Yj4'\
+  --request POST "http://192.168.11.126/api/v1/virtual/devices/device-01/update-reading" \
+  -H 'Content-Type: application/json' \
+  --data-binary @- <<EOF
+{
+    "at": "2019-03-06T03:41:05.179127Z",
+    "channels":
+    [
+        {
+            "channelId": "data",
+            "value":{"num": 65}
+        }
+    ]
+}
+EOF
+
+************************************************************************************************************************************************************
+
+POST qold flush
+curl -i -X POST http://192.168.11.126/api/v1/qold/flush
+
+GET qold devices
+curl -i http://192.168.11.126/api/v1/qold/devices
+
+GET qold devices dates
+curl -i http://192.168.11.126/api/v1/qold/devices/xxx/dates
+
+GET qold csv gz
+curl -i http://192.168.11.126/api/v1/qold/devices/xxx/dates/2019xxxx-xxxxxx.csv.gz
+
+************************************************************************************************************************************************************

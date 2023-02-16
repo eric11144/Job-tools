@@ -1,0 +1,394 @@
+[
+    {
+        "id": "b79bae9d.3c5f2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8f31e44e.0bad48",
+        "type": "subflow",
+        "name": "set ip address",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "ff9927bc.8827a8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 400,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "be9eeaba.ce0958",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "ip_address",
+                "type": "str",
+                "value": "192.168.11.160"
+            }
+        ]
+    },
+    {
+        "id": "562a01a4.7296b",
+        "type": "template",
+        "z": "b79bae9d.3c5f2",
+        "name": "page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\"fx5u\",\"modbus\"]",
+        "output": "yaml",
+        "x": 850,
+        "y": 60,
+        "wires": [
+            [
+                "22fe28df.8063e8"
+            ]
+        ]
+    },
+    {
+        "id": "22fe28df.8063e8",
+        "type": "http response",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1010,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7a869bf9.4ec184",
+        "type": "template",
+        "z": "b79bae9d.3c5f2",
+        "name": "page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n  {\n      \"target\": \"a\", \n      \"datapoints\": [\n          [3.0, 1605838181976], \n          [2.0, 1605838182000]\n        ]\n  },\n  {\"target\": \"b\", \"datapoints\": [[130.0, 1605838181976], [24.0, 1605838182000]]},\n  {\"target\": \"c\", \"datapoints\": [[130.0, 1605838181976], [24.0, 1605838182000]]}\n]",
+        "output": "json",
+        "x": 850,
+        "y": 140,
+        "wires": [
+            [
+                "2dfc732f.bb88cc"
+            ]
+        ]
+    },
+    {
+        "id": "2dfc732f.bb88cc",
+        "type": "http response",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "x": 1010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "562acffb.f488",
+        "type": "function",
+        "z": "b79bae9d.3c5f2",
+        "name": "get device id",
+        "func": "device_list = []\nlist_lebgth = msg.payload.length\n\nfor ( i=0; i < list_lebgth; i++){\n    device_list.push(msg.payload[i][\"deviceId\"])\n}\n\nmsg.payload = device_list\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "96b8cda.381d93"
+            ]
+        ]
+    },
+    {
+        "id": "5e07684a.ee9ef8",
+        "type": "http request",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "http://{{ip_address}}/api/v1/devices",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "562acffb.f488"
+            ]
+        ]
+    },
+    {
+        "id": "5075bd6d.620554",
+        "type": "function",
+        "z": "b79bae9d.3c5f2",
+        "name": "get query device id",
+        "func": "device_id = msg.payload.targets[0][\"target\"]\n\nmsg.deivce_id = device_id\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [
+                "2421d96c.fe86e6"
+            ]
+        ]
+    },
+    {
+        "id": "81f0d06f.89d14",
+        "type": "http request",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "dd2e3059.9248d"
+            ]
+        ]
+    },
+    {
+        "id": "a632182a.1fdfe8",
+        "type": "subflow:8f31e44e.0bad48",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "env": [],
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "5e07684a.ee9ef8"
+            ]
+        ]
+    },
+    {
+        "id": "ff9927bc.8827a8",
+        "type": "function",
+        "z": "8f31e44e.0bad48",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"ip_address\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "d641896.48b9078"
+            ]
+        ]
+    },
+    {
+        "id": "d641896.48b9078",
+        "type": "function",
+        "z": "8f31e44e.0bad48",
+        "name": "set ip address",
+        "func": "msg.ip_address = {};\nmsg.ip_address = env.get(\"ip_address\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "be9eeaba.ce0958"
+            ]
+        ]
+    },
+    {
+        "id": "be9eeaba.ce0958",
+        "type": "change",
+        "z": "8f31e44e.0bad48",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip_address",
+                "pt": "msg",
+                "to": "ip_address",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96b8cda.381d93",
+        "type": "http response",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "x": 90,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d80ff811.2e9e98",
+        "type": "function",
+        "z": "b79bae9d.3c5f2",
+        "name": "test device id",
+        "func": "var a = [{\"target\": \"fx5u\"}]\n\nmsg.payload = {\n    \"targets\" : a\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6694cb14.995774",
+        "type": "inject",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 680,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc94f709.3f0ba8",
+        "type": "http response",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 330,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6b36ea6a.977ce4",
+        "type": "function",
+        "z": "b79bae9d.3c5f2",
+        "name": "set latest-data url",
+        "func": "var ip_address = msg.ip_address\nvar device_id = msg.payload.targets[0][\"target\"]\n\nmsg.device_id = device_id\nmsg.url = \"http://\" + ip_address + \"/api/v1/devices/\" + device_id + \"/channels/latest-data\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "81f0d06f.89d14"
+            ]
+        ]
+    },
+    {
+        "id": "2421d96c.fe86e6",
+        "type": "subflow:8f31e44e.0bad48",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "env": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "6b36ea6a.977ce4"
+            ]
+        ]
+    },
+    {
+        "id": "aa8eadf0.dd37b",
+        "type": "http in",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "url": "/search",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "a632182a.1fdfe8"
+            ]
+        ]
+    },
+    {
+        "id": "dd2e3059.9248d",
+        "type": "function",
+        "z": "b79bae9d.3c5f2",
+        "name": "set query data",
+        "func": "var datapoints = []\nvar date = 0\nvar list_lebgth = msg.payload.length\nvar target = msg.device_id\n\nfor ( i=0; i < list_lebgth; i++){\n    date = new Date(msg.payload[i].latestValue.at)\n    seconds_since_epoch = Math.floor( date / 1000 ) + i\n    datapoints.push(\n        [\n            parseFloat(msg.payload[i].latestValue.value[\"num\"]),\n            seconds_since_epoch\n        ]\n    )\n}\n\nmsg.payload = [\n    {\n        \"target\" : target,\n        \"datapoints\" : \n        [\n            datapoints\n        ]\n    }\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "bc94f709.3f0ba8",
+                "35f5692d.129876"
+            ]
+        ]
+    },
+    {
+        "id": "2ea8bece.b81a92",
+        "type": "http in",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "url": "/query",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 350,
+        "y": 40,
+        "wires": [
+            [
+                "5075bd6d.620554"
+            ]
+        ]
+    },
+    {
+        "id": "35f5692d.129876",
+        "type": "debug",
+        "z": "b79bae9d.3c5f2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 580,
+        "y": 240,
+        "wires": []
+    }
+]

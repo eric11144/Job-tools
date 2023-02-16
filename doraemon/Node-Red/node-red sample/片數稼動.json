@@ -1,0 +1,2083 @@
+[
+    {
+        "id": "b83ce8f8.e66c68",
+        "type": "tab",
+        "label": "GYR",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "49aff931.619c88",
+        "type": "tab",
+        "label": "detect board",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b37e15ca.f80908",
+        "type": "tab",
+        "label": "utilization",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "15838000.e2226",
+        "type": "tab",
+        "label": "counter",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ff2ede19.1f70a",
+        "type": "tab",
+        "label": "GYR new",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ac69d286.70a28",
+        "type": "tab",
+        "label": "gasket utilization",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "15bd661d.7e96aa",
+        "type": "subflow",
+        "name": "operate detection",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "7660921a.748eec"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 760,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "b9d3d98f.467d88",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "pre_processing_sec",
+                "type": "num",
+                "value": "0"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "0"
+            }
+        ]
+    },
+    {
+        "id": "26a5dd55.ea9662",
+        "type": "subflow",
+        "name": "query state changed",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "39b7fc53.864194"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 420,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "8c7e6a24.11d278",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "pretreatment_sec",
+                "type": "num",
+                "value": "0"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "0"
+            }
+        ]
+    },
+    {
+        "id": "792eb3d6.46966c",
+        "type": "modbus-client",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "ac022bd5.bce0b8",
+        "type": "modbus-client",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "73dd8b4e.6f1654",
+        "type": "modbus-client",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "edadec64.f6982",
+        "type": "modbus-client",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "20000"
+    },
+    {
+        "id": "fe375fd9.35557",
+        "type": "modbus-client",
+        "z": "",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "2000"
+    },
+    {
+        "id": "e6b8d4db.69fc48",
+        "type": "modbus-client",
+        "z": "",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "2000"
+    },
+    {
+        "id": "a3ceb4e2.1ae748",
+        "type": "modbus-client",
+        "z": "",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "192.168.60.6",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "2000"
+    },
+    {
+        "id": "55608b92.eb0e24",
+        "type": "modbus-client",
+        "z": "",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectTimeout": "2000"
+    },
+    {
+        "id": "d6631b38.3471f8",
+        "type": "qi-chameleon-source",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "deviceId": "GYR_light_1",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "3cb1a7ba.eb88a8"
+            ]
+        ]
+    },
+    {
+        "id": "3cb1a7ba.eb88a8",
+        "type": "trigger",
+        "z": "b83ce8f8.e66c68",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-30",
+        "extend": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "3c0933ae.7beb5c"
+            ]
+        ]
+    },
+    {
+        "id": "3c0933ae.7beb5c",
+        "type": "function",
+        "z": "b83ce8f8.e66c68",
+        "name": "dispatcher",
+        "func": "const now_epoch = Math.floor(Date.now() / 1000)\nconst at_sec = msg.payload.at.sec\n\nconst interval_min = (now_epoch - at_sec) / 60\n\nif (interval_min > 12)\n{\n    msg.payload.channels = {\n        'healthiness': -1\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "336a8468.70b5bc",
+                "a5ef9755.725ea8",
+                "62a88be8.f8fed4",
+                "3f26831b.bbbffc"
+            ]
+        ]
+    },
+    {
+        "id": "336a8468.70b5bc",
+        "type": "function",
+        "z": "b83ce8f8.e66c68",
+        "name": "G",
+        "func": "const healthiness = msg.payload.channels[\"healthiness\"]\n\nif (healthiness === 0)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "a492a452.c98dd8",
+                "dd7c3bf9.6a0718"
+            ]
+        ]
+    },
+    {
+        "id": "a5ef9755.725ea8",
+        "type": "function",
+        "z": "b83ce8f8.e66c68",
+        "name": "Y",
+        "func": "const healthiness = msg.payload.channels[\"healthiness\"]\n\nif (healthiness === 1)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "64a2ba1a.3b3394"
+            ]
+        ]
+    },
+    {
+        "id": "62a88be8.f8fed4",
+        "type": "function",
+        "z": "b83ce8f8.e66c68",
+        "name": "R and buzzer",
+        "func": "const healthiness = msg.payload.channels[\"healthiness\"]\n\nif (healthiness === 2)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 320,
+        "wires": [
+            [
+                "ccffc17d.e1482",
+                "aca2c0d9.78da6",
+                "1ef969ae.d3f516"
+            ]
+        ]
+    },
+    {
+        "id": "ccffc17d.e1482",
+        "type": "trigger",
+        "z": "b83ce8f8.e66c68",
+        "op1": "",
+        "op2": "0",
+        "op1type": "nul",
+        "op2type": "num",
+        "duration": "10",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "1ef969ae.d3f516"
+            ]
+        ]
+    },
+    {
+        "id": "a492a452.c98dd8",
+        "type": "modbus-write",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "43",
+        "quantity": "1",
+        "server": "792eb3d6.46966c",
+        "x": 980,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "64a2ba1a.3b3394",
+        "type": "modbus-write",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "44",
+        "quantity": "1",
+        "server": "ac022bd5.bce0b8",
+        "x": 980,
+        "y": 260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "aca2c0d9.78da6",
+        "type": "modbus-write",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "45",
+        "quantity": "1",
+        "server": "73dd8b4e.6f1654",
+        "x": 980,
+        "y": 320,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1ef969ae.d3f516",
+        "type": "modbus-write",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "42",
+        "quantity": "1",
+        "server": "edadec64.f6982",
+        "x": 980,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3f26831b.bbbffc",
+        "type": "debug",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dd7c3bf9.6a0718",
+        "type": "debug",
+        "z": "b83ce8f8.e66c68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 980,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "56d4f342.f6949c",
+        "type": "qi-chameleon-sink",
+        "z": "15838000.e2226",
+        "name": "",
+        "x": 900,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8e9d2a3.a1de3d8",
+        "type": "qi-chameleon-source",
+        "z": "15838000.e2226",
+        "name": "",
+        "deviceId": "FX3G",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "e147db7f.146328"
+            ]
+        ]
+    },
+    {
+        "id": "e147db7f.146328",
+        "type": "qi-forward-on-match",
+        "z": "15838000.e2226",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"D580\"],\"properties\":{\"D580\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "67a0bb1c.b5eb94"
+            ]
+        ]
+    },
+    {
+        "id": "67a0bb1c.b5eb94",
+        "type": "qi-forward-on-change",
+        "z": "15838000.e2226",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 490,
+        "y": 60,
+        "wires": [
+            [
+                "779ee5e3.7beeec"
+            ]
+        ]
+    },
+    {
+        "id": "779ee5e3.7beeec",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "production count diff",
+        "func": "const FC_PRE_COUNT = \"fc_pre_count\"\n\nconst at = msg.payload.at\nconst latest_count = msg.payload.channels[\"D580\"]\n\nlet pre_count = flow.get(FC_PRE_COUNT)\nif (pre_count === undefined)\n{\n    pre_count = latest_count\n}\n\nflow.set(FC_PRE_COUNT, latest_count)\n\nconst diff_count = latest_count - pre_count\n\nif (diff_count < 0)\n{\n    return\n}\n\nmsg.payload = {\n    \"deviceId\": \"cutter1_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"production_count_diff\": diff_count\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 60,
+        "wires": [
+            [
+                "56d4f342.f6949c"
+            ]
+        ]
+    },
+    {
+        "id": "1899aeef.4d3341",
+        "type": "inject",
+        "z": "ac69d286.70a28",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "2e14a56b.1a99da"
+            ]
+        ]
+    },
+    {
+        "id": "2e14a56b.1a99da",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "bd3f4717.a77068"
+            ]
+        ]
+    },
+    {
+        "id": "bd3f4717.a77068",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "d914ebfa.587d38"
+            ]
+        ]
+    },
+    {
+        "id": "d914ebfa.587d38",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "query latest button click",
+        "func": "const trigger_time = msg.args.trigger_time\n\nmsg.query = `\n    SELECT \"button_click_production_count\"\n    FROM cutter1_detect_board\n    WHERE time < '${trigger_time.toISOString()}'\n    ORDER BY time DESC\n    LIMIT 1\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "a91f0cbe.1f0d2"
+            ]
+        ]
+    },
+    {
+        "id": "a91f0cbe.1f0d2",
+        "type": "qi-query-history",
+        "z": "ac69d286.70a28",
+        "name": "",
+        "query": "",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "c577a9df.219f98"
+            ]
+        ]
+    },
+    {
+        "id": "c577a9df.219f98",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "get latest button click time",
+        "func": "const click_event_list = msg.payload\n\nif (click_event_list.length !== 0)\n{\n    msg.args.latest_button_click_time = click_event_list[0].time\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "e5353355.2aa56"
+            ]
+        ]
+    },
+    {
+        "id": "d1ac10d3.a560a",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "omit count reset",
+        "func": "const is_init = msg.args.is_init\nconst count = msg.args.count\n\nif (is_init === false &&\n    count === 0)\n{\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "c3460134.37deb",
+                "e7ae710b.a1dc9"
+            ]
+        ]
+    },
+    {
+        "id": "e7ae710b.a1dc9",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "punch begin",
+        "func": "const pre_state_name = msg.args.pre_state_name\nconst is_init = msg.args.is_init\nconst pre_state = flow.get(pre_state_name)\n\nif (is_init === true)\n{\n    flow.set(pre_state_name, 0)\n    return\n}\n\nif (pre_state === 1)\n{\n    return\n}\n\nflow.set(pre_state_name, 1)\n\nmsg.args = {\n    \"state\": 1\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "b9d3d98f.467d88"
+            ]
+        ]
+    },
+    {
+        "id": "bd15cf16.72561",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "punch end",
+        "func": "flow.set(msg.args.pre_state_name, 0)\n\nmsg.args = {\n    \"state\": 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "b9d3d98f.467d88"
+            ]
+        ]
+    },
+    {
+        "id": "c3460134.37deb",
+        "type": "trigger",
+        "z": "15bd661d.7e96aa",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "12",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "bd15cf16.72561"
+            ]
+        ]
+    },
+    {
+        "id": "b9d3d98f.467d88",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "merge to output",
+        "func": "const device_id = msg.payload.deviceId\nconst at = msg.payload.at\nconst state = msg.args.state\n\nconst pre_processing_sec = env.get(\"pre_processing_sec\")\nconst post_processing_sec = env.get(\"post_processing_sec\")\n\nlet at_sec = null\nif (state === 1)\n{\n    at_sec = at.sec - pre_processing_sec\n}\nelse if (state === 0)\n{\n    at_sec = at.sec + post_processing_sec\n}\n\nmsg.payload = {\n    \"at\": {\n        \"sec\": at_sec,\n        \"us\": at.us\n    },\n    \"deviceId\": device_id,\n    \"state\": state\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7660921a.748eec",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "validate env variable",
+        "func": "const ENV = [\n    \"channel_id\",\n    \"pre_processing_sec\",\n    \"post_processing_sec\"\n]\n\nfor (var item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "22fcf5db.7cb61a"
+            ]
+        ]
+    },
+    {
+        "id": "22fcf5db.7cb61a",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "set args",
+        "func": "msg.args = {\n  \"pre_state_name\": \"pre_state\",\n  \"count\": msg.payload.channels[env.get(\"channel_id\")]\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "52a1dc0d.288134"
+            ]
+        ]
+    },
+    {
+        "id": "52a1dc0d.288134",
+        "type": "function",
+        "z": "15bd661d.7e96aa",
+        "name": "check init",
+        "func": "let is_init = context.get(\"nc_is_init\")\n\nif (is_init === undefined)\n{\n    is_init = true\n}\n\ncontext.set(\"nc_is_init\", false)\n\nmsg.args.is_init = is_init\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "d1ac10d3.a560a"
+            ]
+        ]
+    },
+    {
+        "id": "c4234142.b71f",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "query changed",
+        "func": "const begin_time = msg.args.utilization_begin_time\nconst end_time = msg.args.utilization_end_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time >= '${begin_time.toISOString()}'\n    AND time < '${end_time.toISOString()}'\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "17e23ce0.98a423"
+            ]
+        ]
+    },
+    {
+        "id": "17e23ce0.98a423",
+        "type": "qi-query-history",
+        "z": "26a5dd55.ea9662",
+        "name": "",
+        "query": "",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "3d9e2fdd.80d91"
+            ]
+        ]
+    },
+    {
+        "id": "3d9e2fdd.80d91",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "save changed_list",
+        "func": "msg.args.changed_list = msg.payload\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "ca8837c2.1ddba8"
+            ]
+        ]
+    },
+    {
+        "id": "ca8837c2.1ddba8",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "query previous state",
+        "func": "const begin_time = msg.args.utilization_begin_time\n\nconst device_id = env.get(\"device_id\")\nconst channel_id = env.get(\"channel_id\")\n\nmsg.query = `\n    SELECT \"${channel_id}\"\n    FROM \"${device_id}\"\n    WHERE time < '${begin_time.toISOString()}'\n    ORDER BY time DESC\n    LIMIT 1\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "ea11c63a.253968"
+            ]
+        ]
+    },
+    {
+        "id": "ea11c63a.253968",
+        "type": "qi-query-history",
+        "z": "26a5dd55.ea9662",
+        "name": "",
+        "query": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "1276e44.7bf821c"
+            ]
+        ]
+    },
+    {
+        "id": "1276e44.7bf821c",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "append previous state",
+        "func": "const pre_state_list = msg.payload\nchanged_list = msg.args.changed_list\n\nif (pre_state_list.length !== 0)\n{\n    changed_list.unshift(pre_state_list[0])\n}\n\nmsg.payload = changed_list\nmsg.changed_list = undefined\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "9c9662ef.a4e7b"
+            ]
+        ]
+    },
+    {
+        "id": "9c9662ef.a4e7b",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "remove duplicated state",
+        "func": "const changed_list = msg.payload\nconst channel_id = env.get(\"channel_id\")\n\nlet rtn_changed = []\nlet now_state = undefined\n\nchanged_list.forEach(function(item){\n    if (item[channel_id] !== now_state)\n    {\n        rtn_changed.push(item)\n        now_state = item[channel_id]\n    }\n})\n\nmsg.payload = rtn_changed\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "8c7e6a24.11d278"
+            ]
+        ]
+    },
+    {
+        "id": "8c7e6a24.11d278",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "add lead/production time",
+        "func": "const channel_id = env.get(\"channel_id\")\nconst pretreatment_sec = env.get(\"pretreatment_sec\")\nconst post_processing_sec = env.get(\"post_processing_sec\")\n\nconst trigger_time = msg.args.trigger_time\nconst changed_list = msg.payload\n\nlet rtn_changed_list = []\nfor (let ax = 0; ax < changed_list.length; ++ax)\n{\n    let item = changed_list[ax]\n    if (item[channel_id] === 1)\n    {\n        let with_lead_time = new Date(item.time - pretreatment_sec * 1000)\n        let pre_stop_item = rtn_changed_list[ax - 1]\n\n        if (pre_stop_item !== undefined &&\n            pre_stop_item.time >= with_lead_time)\n        {\n            rtn_changed_list.pop()\n            continue;\n        }\n\n        rtn_changed_list.push({\n            \"time\": with_lead_time,\n            \"changed\": item[channel_id]\n        })\n    }\n    else if (item[channel_id] === 0)\n    {\n        let with_production_time = item.time\n        with_production_time.setSeconds(\n            with_production_time.getSeconds() + post_processing_sec)\n\n        rtn_changed_list.push({\n            \"time\": with_production_time,\n            \"changed\": item[channel_id]\n        })\n    }\n}\n\nif (rtn_changed_list.length !== 0 &&\n    rtn_changed_list.slice(-1)[0].time > trigger_time)\n{\n    let latest = rtn_changed_list.pop()\n\n    rtn_changed_list.push({\n        \"time\": new Date(trigger_time - 1),\n        \"changed\": latest['changed']\n    })\n}\n\nmsg.payload = rtn_changed_list\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39b7fc53.864194",
+        "type": "function",
+        "z": "26a5dd55.ea9662",
+        "name": "variable validation",
+        "func": "const ENV = [\n    \"device_id\",\n    \"channel_id\",\n    \"pretreatment_sec\",\n    \"post_processing_sec\"\n]\n\nconst ARGS = [\n    \"utilization_begin_time\",\n    \"utilization_end_time\",\n    \"trigger_time\"\n]\n\nfor (let item in ENV)\n{\n    const v = env.get(ENV[item])\n    if (v === '' || v === undefined)\n    {\n        node.error(ENV[item] + \" env variable not set\")\n        return\n    }\n}\n\nfor (let item in ARGS)\n{\n    const v = msg.args[ARGS[item]]\n    if (v === undefined)\n    {\n        node.error(ARGS[item] + \" not set in msg.args\")\n        return\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "c4234142.b71f"
+            ]
+        ]
+    },
+    {
+        "id": "23eba21d.e5a7ce",
+        "type": "qi-chameleon-source",
+        "z": "49aff931.619c88",
+        "name": "",
+        "deviceId": "FX3G",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "6e1e838e.2ffebc"
+            ]
+        ]
+    },
+    {
+        "id": "8b3a7b78.874ce8",
+        "type": "qi-chameleon-sink",
+        "z": "49aff931.619c88",
+        "name": "",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6e1e838e.2ffebc",
+        "type": "qi-forward-on-match",
+        "z": "49aff931.619c88",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"D580\"],\"properties\":{\"D580\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "e073c80a.ce1118"
+            ]
+        ]
+    },
+    {
+        "id": "e073c80a.ce1118",
+        "type": "qi-forward-on-change",
+        "z": "49aff931.619c88",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "a11f205a.04345"
+            ]
+        ]
+    },
+    {
+        "id": "46c9f20b.20fb4c",
+        "type": "function",
+        "z": "49aff931.619c88",
+        "name": "build virtual device",
+        "func": "const at = msg.payload.at\nconst state = msg.payload.state\n\nmsg.payload = {\n    \"deviceId\": \"cutter1_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"changed\": state\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "8b3a7b78.874ce8",
+                "fcd97c3.034c58"
+            ]
+        ]
+    },
+    {
+        "id": "fcd97c3.034c58",
+        "type": "debug",
+        "z": "49aff931.619c88",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a11f205a.04345",
+        "type": "subflow:15bd661d.7e96aa",
+        "z": "49aff931.619c88",
+        "name": "",
+        "env": [
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "D580"
+            },
+            {
+                "name": "post_processing_sec",
+                "type": "num",
+                "value": "9"
+            }
+        ],
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "46c9f20b.20fb4c"
+            ]
+        ]
+    },
+    {
+        "id": "8e4dc283.c668d",
+        "type": "inject",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "20",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "eb5cda49.eb2d28"
+            ]
+        ]
+    },
+    {
+        "id": "eb5cda49.eb2d28",
+        "type": "function",
+        "z": "b37e15ca.f80908",
+        "name": "init args",
+        "func": "msg.args = {}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "c012314a.46243"
+            ]
+        ]
+    },
+    {
+        "id": "c012314a.46243",
+        "type": "function",
+        "z": "b37e15ca.f80908",
+        "name": "save trigger time",
+        "func": "msg.args.trigger_time = new Date(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 60,
+        "wires": [
+            [
+                "f87843a6.75022"
+            ]
+        ]
+    },
+    {
+        "id": "f87843a6.75022",
+        "type": "qi-interval-boundary",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "timezone": "local",
+        "intervalDuration": "86400",
+        "shiftInterval": "0",
+        "x": 650,
+        "y": 60,
+        "wires": [
+            [
+                "99e87943.6a46c8"
+            ]
+        ]
+    },
+    {
+        "id": "99e87943.6a46c8",
+        "type": "function",
+        "z": "b37e15ca.f80908",
+        "name": "save being/end time",
+        "func": "msg.args.utilization_begin_time = msg.payload.begin\nmsg.args.utilization_end_time = msg.payload.end\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 860,
+        "y": 60,
+        "wires": [
+            [
+                "f54ea523.f06828"
+            ]
+        ]
+    },
+    {
+        "id": "d9a2ad70.8bac4",
+        "type": "function",
+        "z": "b37e15ca.f80908",
+        "name": "append since/until",
+        "func": "const changed_list = msg.payload\nconst utilization_begin_time = msg.args.utilization_begin_time\nconst trigger_time = msg.args.trigger_time\n\nif (changed_list.length === 0)\n{\n    return\n}\n\nmsg.since = utilization_begin_time\nmsg.until = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "e694994d.d64638"
+            ]
+        ]
+    },
+    {
+        "id": "e694994d.d64638",
+        "type": "qi-state-duration",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "stateName": "changed",
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "4c89f766.4a0178"
+            ]
+        ]
+    },
+    {
+        "id": "8228d57a.bbd4e8",
+        "type": "debug",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 990,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f54ea523.f06828",
+        "type": "subflow:26a5dd55.ea9662",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "cutter1_detect_board"
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "changed"
+            }
+        ],
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "d9a2ad70.8bac4"
+            ]
+        ]
+    },
+    {
+        "id": "fc8c8f17.d8fcf",
+        "type": "qi-chameleon-sink",
+        "z": "b37e15ca.f80908",
+        "name": "",
+        "x": 1000,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4c89f766.4a0178",
+        "type": "function",
+        "z": "b37e15ca.f80908",
+        "name": "build utilization reading",
+        "func": "const trigger_timestamp = msg.args.trigger_time.getTime()\nconst state_duration_list = msg.payload\n\nlet today_utilization_seconds = 0\nstate_duration_list.forEach(function (item){\n    if (item.state === 1)\n    {\n        today_utilization_seconds = Math.floor(item.duration / 1000);\n    }\n})\n\nmsg.payload = {\n    \"deviceId\": \"FX3G_utilization\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_timestamp / 1000),\n        \"us\": 0\n    },\n    \"channels\": {\n        \"total_utilization_hours\": parseFloat((today_utilization_seconds / 3600).toFixed(2))\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 100,
+        "wires": [
+            [
+                "fc8c8f17.d8fcf",
+                "8228d57a.bbd4e8"
+            ]
+        ]
+    },
+    {
+        "id": "dd3e4e38.318ef",
+        "type": "qi-chameleon-source",
+        "z": "15838000.e2226",
+        "name": "",
+        "deviceId": "cutter_1_iologik_2214",
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "8f21899f.4db758"
+            ]
+        ]
+    },
+    {
+        "id": "8f21899f.4db758",
+        "type": "qi-forward-on-match",
+        "z": "15838000.e2226",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"button_count\"],\"properties\":{\"button_count\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "ba2fb7d0.a682f8"
+            ]
+        ]
+    },
+    {
+        "id": "ba2fb7d0.a682f8",
+        "type": "qi-forward-on-change",
+        "z": "15838000.e2226",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "48269efb.094d9"
+            ]
+        ]
+    },
+    {
+        "id": "48269efb.094d9",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "filter button reset",
+        "func": "const pre_button_count = flow.get(\"pre_button_count\")\nconst button_count = msg.payload.channels.button_count\n\nflow.set(\"pre_button_count\", button_count)\n\nif (pre_button_count === undefined ||\n    button_count === 0 ||\n    button_count === pre_button_count)\n{\n    return\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "32172f81.0ae84"
+            ]
+        ]
+    },
+    {
+        "id": "32172f81.0ae84",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "build msg",
+        "func": "const production_count = flow.get(\"fc_accumulation_count\")\nconst at = msg.payload.at\n\nmsg.payload = {\n    \"deviceId\": \"cutter1_detect_board\",\n    \"at\": at,\n    \"channels\": {\n        \"button_click_production_count\": production_count\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 120,
+        "wires": [
+            [
+                "a007b7b4.cc6ff8"
+            ]
+        ]
+    },
+    {
+        "id": "a007b7b4.cc6ff8",
+        "type": "qi-chameleon-sink",
+        "z": "15838000.e2226",
+        "name": "",
+        "x": 1100,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "76bc0804.010908",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "save trigger time",
+        "func": "msg.args = {\n    \"trigger_time\": new Date(msg.payload)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "d2a238e6.696b18"
+            ]
+        ]
+    },
+    {
+        "id": "d2a238e6.696b18",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "query latest button click",
+        "func": "const trigger_time = msg.args.trigger_time\n\nmsg.query = `\n    SELECT \"button_click_production_count\"\n    FROM cutter1_detect_board\n    WHERE time < '${trigger_time.toISOString()}'\n    ORDER BY time DESC\n    LIMIT 1\n`\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "8cbb3651.bdedd8"
+            ]
+        ]
+    },
+    {
+        "id": "8cbb3651.bdedd8",
+        "type": "qi-query-history",
+        "z": "15838000.e2226",
+        "name": "",
+        "query": "",
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "f35dd300.82016"
+            ]
+        ]
+    },
+    {
+        "id": "ffdc7343.8ac94",
+        "type": "qi-query-history",
+        "z": "15838000.e2226",
+        "name": "",
+        "query": "",
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "8807560b.91d308"
+            ]
+        ]
+    },
+    {
+        "id": "f35dd300.82016",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "save latest button click time",
+        "func": "const click_event_list = msg.payload\n\nif (click_event_list.length !== 0)\n{\n    msg.args.latest_button_click_time = click_event_list[0].time\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "7ed62ee5.303b8"
+            ]
+        ]
+    },
+    {
+        "id": "7ed62ee5.303b8",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "query sum of production count",
+        "func": "const until_time = msg.args.trigger_time\nconst latest_button_click_time = msg.args.latest_button_click_time\n\nmsg.query = `\n    SELECT SUM(\"production_count_diff\")\n    FROM cutter1_detect_board\n    WHERE time < '${until_time.toISOString()}'\n`\n\nif (latest_button_click_time !== undefined)\n{\n    msg.query += \"AND time > '\" + latest_button_click_time.toISOString() + \"'\"\n}\n\nnode.log(msg.query)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "ffdc7343.8ac94"
+            ]
+        ]
+    },
+    {
+        "id": "8807560b.91d308",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "get sum of production count",
+        "func": "const query_data = msg.payload\n\nlet accumulation_count = 0\nif (query_data.length !== 0)\n{\n    accumulation_count = query_data[0].sum\n}\n\nflow.set(\"fc_accumulation_count\", accumulation_count)\n\nmsg.payload = accumulation_count\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "155de5c8.046eda",
+                "5dc65381.db976c",
+                "a878c2d5.d3e4b"
+            ]
+        ]
+    },
+    {
+        "id": "155de5c8.046eda",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "addr 0 value",
+        "func": "if (msg.payload > 65535)\n{\n    msg.payload -= 65536;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "54136706.495f48"
+            ]
+        ]
+    },
+    {
+        "id": "5dc65381.db976c",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "addr 1 value",
+        "func": "if (msg.payload > 65535)\n{\n    msg.payload = 1;\n}\nelse\n{\n    msg.payload = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "3024d588.95cdea"
+            ]
+        ]
+    },
+    {
+        "id": "b9f451f0.aa9d6",
+        "type": "inject",
+        "z": "15838000.e2226",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "76bc0804.010908"
+            ]
+        ]
+    },
+    {
+        "id": "e5353355.2aa56",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "set utilization begin/end time",
+        "func": "const button_click_time = msg.args.latest_button_click_time\nconst trigger_time = msg.args.trigger_time\n\nmsg.args.utilization_begin_time = button_click_time\nmsg.args.utilization_end_time = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "5505c0de.370db"
+            ]
+        ]
+    },
+    {
+        "id": "5505c0de.370db",
+        "type": "subflow:26a5dd55.ea9662",
+        "z": "ac69d286.70a28",
+        "name": "",
+        "env": [
+            {
+                "name": "device_id",
+                "type": "str",
+                "value": "cutter1_detect_board"
+            },
+            {
+                "name": "channel_id",
+                "type": "str",
+                "value": "changed"
+            }
+        ],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "ede688f6.ab0448"
+            ]
+        ]
+    },
+    {
+        "id": "ede688f6.ab0448",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "append since/until",
+        "func": "const changed_list = msg.payload\nconst utilization_begin_time = msg.args.utilization_begin_time\nconst trigger_time = msg.args.trigger_time\n\nif (changed_list.length === 0)\n{\n    return\n}\n\nmsg.since = utilization_begin_time\nmsg.until = trigger_time\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "4ffd7596.535a2c"
+            ]
+        ]
+    },
+    {
+        "id": "4ffd7596.535a2c",
+        "type": "qi-state-duration",
+        "z": "ac69d286.70a28",
+        "name": "",
+        "stateName": "changed",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "19dc1fe9.882fe"
+            ]
+        ]
+    },
+    {
+        "id": "800336df.3de7f8",
+        "type": "debug",
+        "z": "ac69d286.70a28",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "19dc1fe9.882fe",
+        "type": "function",
+        "z": "ac69d286.70a28",
+        "name": "build reading",
+        "func": "const trigger_timestamp = msg.args.trigger_time.getTime()\nconst state_duration_list = msg.payload\n\nlet today_utilization_seconds = 0\nstate_duration_list.forEach(function (item){\n    if (item.state === \"1\")\n    {\n        today_utilization_seconds = Math.floor(item.duration / 1000);\n    }\n})\n\nmsg.payload = {\n    \"deviceId\": \"FX3G_utilization\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_timestamp / 1000),\n        \"us\": trigger_timestamp % 1000\n    },\n    \"channels\": {\n        \"gasket_utilization_hours\": parseFloat((today_utilization_seconds / 3600).toFixed(2))\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "800336df.3de7f8"
+            ]
+        ]
+    },
+    {
+        "id": "dc8f2ded.4d061",
+        "type": "qi-chameleon-sink",
+        "z": "15838000.e2226",
+        "name": "",
+        "x": 620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a878c2d5.d3e4b",
+        "type": "function",
+        "z": "15838000.e2226",
+        "name": "build reading",
+        "func": "const trigger_time = msg.args.trigger_time\nconst count = msg.payload\n\nmsg.payload = {\n    \"deviceId\": \"cutter1_detect_board\",\n    \"at\": {\n        \"sec\": Math.floor(trigger_time / 1000),\n        \"us\": 0\n    },\n    \"channels\": {\n        \"accumulation_count\": count\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "dc8f2ded.4d061"
+            ]
+        ]
+    },
+    {
+        "id": "233eb94e.a56c56",
+        "type": "qi-chameleon-source",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "deviceId": "cutter_1_iologik_2214",
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "bc37db1e.8bdbe8"
+            ]
+        ]
+    },
+    {
+        "id": "f841d85e.a55ca8",
+        "type": "qi-forward-on-change",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "268309d8.a82df6"
+            ]
+        ]
+    },
+    {
+        "id": "bc37db1e.8bdbe8",
+        "type": "qi-forward-on-match",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"button_count\"],\"properties\":{\"button_count\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 440,
+        "y": 60,
+        "wires": [
+            [
+                "f841d85e.a55ca8"
+            ]
+        ]
+    },
+    {
+        "id": "268309d8.a82df6",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "clear ai healthiness",
+        "func": "const pre_button_count = flow.get(\"pre_button_count\")\nconst button_count = msg.payload.channels.button_count\n\nflow.set(\"pre_button_count\", button_count)\n\nif (pre_button_count === undefined ||\n    button_count === 0 ||\n    button_count === pre_button_count)\n{\n    return\n}\n\n// press button\nflow.set(\"AI_healthiness\", null)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "db88283e.438608"
+            ]
+        ]
+    },
+    {
+        "id": "249e2a04.dd0a86",
+        "type": "qi-chameleon-source",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "deviceId": "cutter1_detect_board",
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "9830db3a.a06098"
+            ]
+        ]
+    },
+    {
+        "id": "9830db3a.a06098",
+        "type": "qi-forward-on-match",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"accumulation_count\"],\"properties\":{\"accumulation_count\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "34abfb10.d5fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "34abfb10.d5fcb4",
+        "type": "qi-forward-on-change",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "488c6f2.8781e9"
+            ]
+        ]
+    },
+    {
+        "id": "f970f47.095b408",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "G",
+        "func": "const light = msg.payload\n\nif (light === 0)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "15418c50.3b8b04"
+            ]
+        ]
+    },
+    {
+        "id": "e31ad7b0.696218",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "Y",
+        "func": "const light = msg.payload\n\nif (light === 1)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "c6a9add1.17068"
+            ]
+        ]
+    },
+    {
+        "id": "70be1138.f6c15",
+        "type": "debug",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1070,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e915d3b.5d1393",
+        "type": "debug",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1070,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2a4f0fa.1462df",
+        "type": "qi-chameleon-source",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "deviceId": "GYR_light_1",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "634118cf.4d2f38"
+            ]
+        ]
+    },
+    {
+        "id": "6bdd216.0a35be",
+        "type": "qi-forward-on-change",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "initialValue": "{}",
+        "initialValueType": "json",
+        "useInitialValue": false,
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "a7c6d584.cc9498"
+            ]
+        ]
+    },
+    {
+        "id": "634118cf.4d2f38",
+        "type": "qi-forward-on-match",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "schema": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"required\":[\"deviceId\",\"at\",\"channels\"],\"properties\":{\"deviceId\":{\"type\":\"string\"},\"at\":{\"type\":\"object\",\"required\":[\"sec\",\"us\"],\"properties\":{\"sec\":{\"type\":\"integer\",\"minimum\":0},\"us\":{\"type\":\"integer\",\"minimum\":0,\"maximum\":999999}}},\"channels\":{\"type\":\"object\",\"required\":[\"healthiness\"],\"properties\":{\"healthiness\":{\"type\":\"integer\"}}}}}",
+        "schemaType": "json",
+        "removeAdditional": true,
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "6bdd216.0a35be"
+            ]
+        ]
+    },
+    {
+        "id": "a7c6d584.cc9498",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "save ai healthiness",
+        "func": "const ai_healthiness = msg.payload.channels.healthiness\n\nflow.set(\"AI_healthiness\", ai_healthiness)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "db88283e.438608"
+            ]
+        ]
+    },
+    {
+        "id": "db88283e.438608",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "judge",
+        "func": "ai_healthiness = flow.get(\"AI_healthiness\")\ncount_exceed = flow.get(\"count_exceed\")\n\nif (ai_healthiness === undefined)\n{\n    ai_healthiness = null\n}\n\nif (count_exceed === undefined)\n{\n    count_exceed = null\n}\n\nlight = Math.max(ai_healthiness, count_exceed)\nif (ai_healthiness === null && count_exceed === null)\n{\n    light = -1\n}\n\nmsg.payload = light\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "c9e3a04.169746"
+            ]
+        ]
+    },
+    {
+        "id": "488c6f2.8781e9",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "save result",
+        "func": "const count = msg.payload.channels.accumulation_count\n\nif (count === undefined)\n{\n    node.warn(\"get value error\")\n    return\n}\n\nresult = 0\nif (count > 9000)\n{\n    result = 1\n}\n\nflow.set(\"count_exceed\", result)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "db88283e.438608"
+            ]
+        ]
+    },
+    {
+        "id": "eb1e0868.51f438",
+        "type": "function",
+        "z": "ff2ede19.1f70a",
+        "name": "R",
+        "func": "const light = msg.payload\n\nif (light === 2)\n{\n    msg.payload = 1\n}\nelse\n{\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "2bff225b.1104be"
+            ]
+        ]
+    },
+    {
+        "id": "e611ae13.281d4",
+        "type": "debug",
+        "z": "ff2ede19.1f70a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1070,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c9e3a04.169746",
+        "type": "trigger",
+        "z": "ff2ede19.1f70a",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-30",
+        "extend": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "e31ad7b0.696218",
+                "f970f47.095b408",
+                "eb1e0868.51f438"
+            ]
+        ]
+    },
+    {
+        "id": "15418c50.3b8b04",
+        "type": "modbus-write",
+        "z": "ff2ede19.1f70a",
+        "name": "Green",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "43",
+        "quantity": "1",
+        "server": "fe375fd9.35557",
+        "x": 910,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "70be1138.f6c15"
+            ]
+        ]
+    },
+    {
+        "id": "c6a9add1.17068",
+        "type": "modbus-write",
+        "z": "ff2ede19.1f70a",
+        "name": "Yellow",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "44",
+        "quantity": "1",
+        "server": "e6b8d4db.69fc48",
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "e915d3b.5d1393"
+            ]
+        ]
+    },
+    {
+        "id": "2bff225b.1104be",
+        "type": "modbus-write",
+        "z": "ff2ede19.1f70a",
+        "name": "Red",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "45",
+        "quantity": "1",
+        "server": "a3ceb4e2.1ae748",
+        "x": 910,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "e611ae13.281d4"
+            ]
+        ]
+    },
+    {
+        "id": "54136706.495f48",
+        "type": "modbus-write",
+        "z": "15838000.e2226",
+        "name": "address 0",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "55608b92.eb0e24",
+        "x": 600,
+        "y": 480,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3024d588.95cdea",
+        "type": "modbus-write",
+        "z": "15838000.e2226",
+        "name": "address 1",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "server": "55608b92.eb0e24",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    }
+]

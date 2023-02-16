@@ -1,0 +1,10 @@
+[program:serial]
+command = socat tcp-listen:9527 /dev/ttyS4,echo=0,cs8,parenb=0,cstopb=0,b9600,raw
+autostart = true
+autorestart = false
+stderr_logfile = /var/log/supervisor/%(program_name)s.err.log
+stdout_logfile = /var/log/supervisor/%(program_name)s.out.log
+stderr_logfile_maxbytes = 1MB
+stdout_logfile_maxbytes = 1MB
+stderr_logfile_backups = 1
+stdout_logfile_backups = 1

@@ -1,0 +1,4 @@
+指定台灣時間
+`sudo timedatectl set-timezone Asia/Taipei`
+指定 UTC 時間
+`sudo timedatectl set-timezone UTC`

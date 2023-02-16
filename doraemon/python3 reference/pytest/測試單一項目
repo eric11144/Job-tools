@@ -1,0 +1,1 @@
+`venv/bin/python3 -m pytest -s -v chameleon_api_test/regression_test/virtual_device/test_gateway.py::TestValuePrecision::test_insert_channel_value_CheckWithHistoryData`

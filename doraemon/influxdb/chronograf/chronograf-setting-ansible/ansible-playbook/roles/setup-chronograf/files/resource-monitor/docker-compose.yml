@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+  influxdb:
+    image: influxdb:1.7.9
+    network_mode: host
+    environment:
+      INFLUXDB_DATA_CACHE_SNAPSHOT_MEMORY_SIZE: 64M
+    shm_size: 128M
+    volumes:
+    - .influxdb/:/var/lib/influxdb/
+  chronograf:
+    image: quay.io/influxdb/chronograf:1.8.7
+    network_mode: host
+    environment:
+      - INFLUXDB_URL=http://localhost:8086
+    volumes:
+    - .chronograf/:/var/lib/chronograf
