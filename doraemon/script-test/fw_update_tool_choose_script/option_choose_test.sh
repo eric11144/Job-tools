@@ -44,7 +44,7 @@ do
         ;;  
         2)
         nvme fw-download $2 -f $3
-        nvme fw-commit $2 -a 0
+        nvme fw-commit $2 -s 1 -a 1
         ;;  
         3)
         ./DLMicro_64  -d $2 -f $3
