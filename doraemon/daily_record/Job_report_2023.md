@@ -444,8 +444,51 @@
   * [x] 與 `Sam` & `Kiwi` 討論 `EU` `Siemens` 問題回覆 & `windows update tool` 狀況.
   * [x] 協助 `Sales-MJ` 回覆 `Delta` & `漢翔` 客訴相關進度以及問題.
   * [x] 協助 `FW-RD` 錄製 `Delta` 異常 SSD 相關 `log` & `Assert` 訊息.
-  * [x] 前往維修部測試 `Delta` 異常 `Flash`.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 前往維修部將 `Delta` 異常 `Flash` 更換至其他 `Device`, 觀看是否有相同異常現象.
+  * [x] 參與 `EU-FAE` 週會.
   * [x] 參與 `瑞傳` 問題回覆討論會議.
   * [x] 回覆 `瑞傳` 相關人員關於異常問題處理狀況.
 
+# 2023-02-17
+* 與 `Sam` & `Kiwi` 討論 `EU` `Siemens` 問題回覆 & `windows update tool` 狀況.
+* 協助 `Sales-MJ` 回覆 `Delta` & `漢翔` 客訴相關進度以及問題.
+* 協助 `FW-RD` 錄製 `Delta` 異常 SSD 相關 `log` & `Assert` 訊息.
+* 前往維修部取回並測試 `Delta` 異常 `Flash`.
+* 參與 `EU-FAE` 週會.
+* 參與 `瑞傳` 問題回覆討論會議.
+* 回覆 `瑞傳` 相關人員關於異常問題處理狀況.
+* TODO
+  * [x] 將 `Delta` 異常 `Flash` 更換至 `2.5 SATA SSD` 觀看是否有相同異常.
+  * [x] 與 `FW-RD Sid` 了解如何透過 `DLMC` 更新 `4TS2`.
+  * [x] 透過顯微鏡觀察 `mSATA mini 3SE` 異常之 `U14` IC 外觀狀況.
+  * [x] 協助 `SW-RD Allen` 驗證 `DLMC` tool.
+  * [x] 協助 `FAE-Rex` 設定 ＆ `ReMP` `S42 3TG6-P`.
+  * [x] 協助新人觀看客訴問題.
+  * [x] 協助新人準備教學筆電.
+  * [x] 協助 `EU-FAE YingXiang` 查詢 `3TE6` 更新相關 `bin file`.
+  * [x] 協助 `EU-FAE Jason` 同步 `mSATA mini 3SE` 客訴分析狀況.
+  * [x] 協助 `Kiwi` 處理 `3TE6` 相關測速 `ATT0`, `HDTune`, `CrystalDiskMark`.
+
+# 2023-02-18
+* 將 `Delta` 異常 `Flash` 更換至 `2.5 SATA SSD` 觀看是否有相同異常.
+* 與 `FW-RD Sid` 了解如何透過 `DLMC` 更新 `4TS2`.
+* 透過顯微鏡觀察 `mSATA mini 3SE` 異常之 `U14` IC 外觀狀況.
+* 協助 `SW-RD Allen` 驗證 `DLMC` tool.
+* 協助 `FAE-Rex` 設定 ＆ `ReMP` `S42 3TG6-P`.
+* 協助新人觀看客訴問題.
+* 協助新人準備教學筆電.
+* 協助 `EU-FAE YingXiang` 查詢 `3TE6` 更新相關 `bin file`.
+* 協助 `EU-FAE Jason` 同步 `mSATA mini 3SE` 客訴分析狀況.
+* 協助 `Kiwi` 處理 `3TE6` 相關測速 `ATT0`, `HDTune`, `CrystalDiskMark`.
+* TODO
+  * [x] 測試 `Delta` 異常 `Flash` 更換至 `2.5 SATA SSD` 是否有相同異常.
+  * [x] 前往廠區將 `Delta` 異常 `Flash` 照 `X-ray`.
+  * [x] 協助 `Kiwi` 撰寫 `3TE6` 測速結果.
+  * [x] 撰寫 `4TS2` 更新工具操作流程.
+  * [x] 與 `Sam` & `Miller` & `Kiwi` 討論 `Delta` 異常 `Flash` 問題.
+  * [x] 協助 `瑞傳`  提供新版 `128GB`, `256GB` `FW bin file` & `Update FW image`, 以及協助回答相關問題.
+  * [x] 協助 `Kiwi` 測試透過 `nvme-cli` 更新 `4TS2` FW.
+  * [x] 協助新人觀看相關操作問題.
+  * [x] 協助 `Sales-MJ` 回報 `Delta` 客訴測試進度.
+  * [x] 回報 `DLMC` tool `V3.6.0` 測試狀況, 並提供 `tool` 於 `EU-FAE YingXiang`.
+  * [x] 協助 `Sales-Amy` 回覆 `超恩` 相關技術問題, 並提供 `FW` update tool.
