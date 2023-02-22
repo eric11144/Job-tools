@@ -492,3 +492,82 @@
   * [x] 協助 `Sales-MJ` 回報 `Delta` 客訴測試進度.
   * [x] 回報 `DLMC` tool `V3.6.0` 測試狀況, 並提供 `tool` 於 `EU-FAE YingXiang`.
   * [x] 協助 `Sales-Amy` 回覆 `超恩` 相關技術問題, 並提供 `FW` update tool.
+
+# 2023-02-20
+* 測試 `Delta` 異常 `Flash` 更換至 `2.5 SATA SSD` 是否有相同異常.
+* 前往廠區將 `Delta` 異常 `Flash` 照 `X-ray`.
+* 協助 `Kiwi` 撰寫 `3TE6` 測速結果.
+* 撰寫 `4TS2` 更新工具操作流程.
+* 與 `Sam` & `Miller` & `Kiwi` 討論 `Delta` 異常 `Flash` 問題.
+* 協助 `瑞傳`  提供新版 `128GB`, `256GB` `FW bin file` & `Update FW image`, 以及協助回答相關問題.
+* 協助 `Kiwi` 測試透過 `nvme-cli` 更新 `4TS2` FW.
+* 協助新人觀看相關操作問題.
+* 協助 `Sales-MJ` 回報 `Delta` 客訴測試進度.
+* 回報 `DLMC` tool `V3.6.0` 測試狀況, 並提供 `tool` 於 `EU-FAE YingXiang`.
+* 協助 `Sales-Amy` 回覆 `超恩` 相關技術問題, 並提供 `FW` update tool.
+* TODO
+  * [x] 協助 `EU-FAE Jason` 提供相關 `DLMC` tool( `v3.6.0` ).
+  * [x] 協助新人整理平台與螢幕.
+  * [x] 撰寫 `4TS2` `DLMC` tool User Guide.
+  * [x] 協助 `Sales-MJ` 討論 `Delta` & `漢翔航空` 客訴案進度.
+  * [x] 協助新人操作 `TTS` 系統.
+  * [x] 參與 `FAE-team2` 進度會議.
+  * [x] 與 `Sam` & `Kiwi` & `Jack` 討論 `瑞傳` 8D report 撰寫方向, 以及 `Delta` 異常 Flash 下一步處理動作.
+  * [x] 前往廠區確認 `Delta` 異常 Flash 之 `ID`.
+
+
+
+# 2023-02-21
+* 協助 `EU-FAE Jason` 提供相關 `DLMC` tool( `v3.6.0` ).
+* 協助新人整理平台與螢幕.
+* 撰寫 `4TS2` `DLMC` tool User Guide.
+* 協助 `Sales-MJ` 討論 `Delta` & `漢翔航空` 客訴案進度.
+* 協助新人操作 `TTS` 系統.
+* 參與 `FAE-team2` 進度會議.
+* 與 `Sam` & `Kiwi` & `Jack` 討論 `瑞傳` 8D report 撰寫方向, 以及 `Delta` 異常 Flash 下一步處理動作.
+* 前往廠區確認 `Delta` 異常 Flash 之 `ID`.
+* TODO
+  * [x] 撰寫 `瑞傳` 8D report.
+  * [x] 協助新人觀看客訴問題, 以及 `3TE7` RAID card 客訴整理狀況.
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `FW-RD Sid` 討論 `4TS2` DLMC User Guide 內容以及相關操作.
+  * [x] 與 `PM-Shao` 討論 `Kontron` 客訴案處理過程, 以及提供相關資料.
+  * [x] 與 `PM-Jack` & `FW-RD Ray` 討論 `瑞傳` 8D report 方向, 以及相關 log 問題.
+  * [x] 協助 `EU-FAE` 分析 `Siemens` USB 狀況, 以及處理送往原廠分析相關資訊.
+  * [x] 回覆 `Sales-Amy` 關於 `dmesg` log 相關問題.
+  * [x] 協助 `Sales-MJ` 統整 `Delta` 相關處理狀況.
+  * [x] 參與 `AT&T` 產品介紹會議.
+  * [x] 協助 `EU-FAE YingXiang` 提供新版 `4TS2` DLMC User Guide 內容以及相關操作.
+
+# 2023-02-22
+* 撰寫 `瑞傳` 8D report.
+* 協助新人觀看客訴問題, 以及 `3TE7` RAID card 客訴整理狀況.
+* 參與 `FAE` 週會.
+* 與 `FW-RD Sid` 討論 `4TS2` DLMC User Guide 內容以及相關操作.
+* 與 `PM-Shao` 討論 `Kontron` 客訴案處理過程, 以及提供相關資料.
+* 與 `PM-Jack` & `FW-RD Ray` 討論 `瑞傳` 8D report 方向, 以及相關 log 問題.
+* 協助 `EU-FAE` 分析 `Siemens` USB 狀況, 以及處理送往原廠分析相關資訊, 但目前因帳務問題, 無法將 `device` 送回原廠做分析, 已請 `EU-FAE` 詢問客戶.
+* 回覆 `Sales-Amy` 關於 `dmesg` log 相關問題.
+* 協助 `Sales-MJ` 統整 `Delta` 相關處理狀況.
+* 參與 `AT&T` 產品介紹會議.
+* 協助 `EU-FAE YingXiang` 提供新版 `4TS2` DLMC User Guide 內容以及相關操作.
+* TODO
+  * [x] 與 `Kiwi` 討論 `瑞傳` `8D` report.
+  * [x] 協助 `Sales-MJ` 回覆 `Delta` 異常 `Flash` 分析進度.
+  * [x] 協助新人觀看 `3TE7` `RAID card` 客訴整理 & `百視美` 客訴狀況.
+  * [x] 提供 `瑞傳` `8D` report 於 `Sales-Stanley`.
+  * [x] 詢問 `Benson` 關於 `mSATA mini 3SE` `U14` IC 不良狀況, 以及後續保護措施.
+  * [x] 協助 `Kiwi` 查找 `Flash` sorting table 相關線路圖.
+  * [x] 詢問 `EU-FAE YingXiang` 關於 `3TG8-P` 客訴問題.
+
+# 2023-02-23
+* 與 `Kiwi` 討論 `瑞傳` `8D` report.
+* 協助 `Sales-MJ` 回覆 `Delta` 異常 `Flash` 分析進度.
+* 協助新人觀看 `3TE7` `RAID card` 客訴整理 & `百視美` 客訴狀況.
+* 提供 `瑞傳` `8D` report 於 `Sales-Stanley`.
+* 詢問 `Benson` 關於 `mSATA mini 3SE` `U14` IC 不良狀況, 以及後續保護措施.
+* 協助 `Kiwi` 查找 `Flash` sorting table 相關線路圖.
+* 詢問 `EU-FAE YingXiang` 關於 `3TG8-P` 客訴問題.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 追蹤 `Siemens` USB 帳務問題狀況.
