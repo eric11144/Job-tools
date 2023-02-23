@@ -559,6 +559,7 @@
   * [x] 詢問 `Benson` 關於 `mSATA mini 3SE` `U14` IC 不良狀況, 以及後續保護措施.
   * [x] 協助 `Kiwi` 查找 `Flash` sorting table 相關線路圖.
   * [x] 詢問 `EU-FAE YingXiang` 關於 `3TG8-P` 客訴問題.
+  * [x] 與 `EU-PM Alfie` 討論 `FED230214006` `3TE6` `Gen3 * 1` & `mSATA mini 3SE` `U14` IC 不良狀況相關問題. 
 
 # 2023-02-23
 * 與 `Kiwi` 討論 `瑞傳` `8D` report.
@@ -568,6 +569,9 @@
 * 詢問 `Benson` 關於 `mSATA mini 3SE` `U14` IC 不良狀況, 以及後續保護措施.
 * 協助 `Kiwi` 查找 `Flash` sorting table 相關線路圖.
 * 詢問 `EU-FAE YingXiang` 關於 `3TG8-P` 客訴問題.
+* 與 `EU-PM Alfie` 討論 `FED230214006` `3TE6` `Gen3 * 1` & `mSATA mini 3SE` `U14` IC 不良狀況相關問題.
 * TODO
   * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 與 `Kiwi` 量測 `Delta` 異常 `Flash` 訊號.
   * [ ] 追蹤 `Siemens` USB 帳務問題狀況.
+  * [ ] 回覆 `EU-Sales Sylvain` 關於 `mSATA mini 3SE` `U14` IC 不良狀況.
