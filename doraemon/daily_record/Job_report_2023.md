@@ -590,6 +590,9 @@
 * 協助 `FW-RD` 測試 `3TE6` `V22620R1` FW bin file.
 * 協助新人觀看客訴處理狀況.
 * TODO
-  * [ ] 協助 `Sales-Phan Huynh Lam` 處理 `iSAMRT` tool 閃退問題.
-  * [ ] 協助新人觀看 `3ME4` DLMC 問題.
-  * [ ] 架設 `Windows 11` 測試環境.
+  * [x] 協助 `Sales-Phan Huynh Lam` 處理 `iSAMRT` tool 閃退問題.
+  * [x] 協助新人觀看 `3ME4` DLMC 問題.
+  * [x] 架設 `Windows 11` 測試環境.
+  * [x] 協助新人觀看客訴報告.
+  * [x] 參加 `Kiwi` 講解 `SMI` 開卡以及更新相關流程.
+  * [x] 撰寫 `SMI` 開卡以及 `USB Boot driver` 相關 `SOP`.
