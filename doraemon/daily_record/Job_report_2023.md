@@ -571,7 +571,25 @@
 * 詢問 `EU-FAE YingXiang` 關於 `3TG8-P` 客訴問題.
 * 與 `EU-PM Alfie` 討論 `FED230214006` `3TE6` `Gen3 * 1` & `mSATA mini 3SE` `U14` IC 不良狀況相關問題.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 與 `Kiwi` 量測 `Delta` 異常 `Flash` 訊號.
-  * [ ] 追蹤 `Siemens` USB 帳務問題狀況.
-  * [ ] 回覆 `EU-Sales Sylvain` 關於 `mSATA mini 3SE` `U14` IC 不良狀況.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `Kiwi` 量測 `Delta` 異常 `Flash` 訊號.
+  * [x] 詢問 `TingYi` 關於 `Sorting borad` 測試程式操作.
+  * [x] 追蹤 `Siemens` USB 帳務問題狀況.
+  * [x] 回覆 `EU-Sales Sylvain` 關於 `mSATA mini 3SE` `U14` IC 不良狀況.
+  * [x] 協助 `Sales-MJ` 回報 `Delta` 異常 `Flash` 量測狀況.
+  * [x] 協助 `FW-RD` 測試 `3TE6` `V22620R1` FW bin file.
+  * [x] 協助新人觀看客訴處理狀況.
+
+# 2023-02-24
+* 參與 `EU-FAE` 週會.
+* 與 `Kiwi` 量測 `Delta` 異常 `Flash` 訊號.
+* 詢問 `TingYi` 關於 `Sorting borad` 測試程式操作.
+* 追蹤 `Siemens` USB 帳務問題狀況.
+* 回覆 `EU-Sales Sylvain` 關於 `mSATA mini 3SE` `U14` IC 不良狀況.
+* 協助 `Sales-MJ` 回報 `Delta` 異常 `Flash` 量測狀況.
+* 協助 `FW-RD` 測試 `3TE6` `V22620R1` FW bin file.
+* 協助新人觀看客訴處理狀況.
+* TODO
+  * [ ] 協助 `Sales-Phan Huynh Lam` 處理 `iSAMRT` tool 閃退問題.
+  * [ ] 協助新人觀看 `3ME4` DLMC 問題.
+  * [ ] 架設 `Windows 11` 測試環境.
