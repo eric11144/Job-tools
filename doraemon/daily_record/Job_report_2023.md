@@ -596,3 +596,28 @@
   * [x] 協助新人觀看客訴報告.
   * [x] 參加 `Kiwi` 講解 `SMI` 開卡以及更新相關流程.
   * [x] 撰寫 `SMI` 開卡以及 `USB Boot driver` 相關 `SOP`.
+
+# 2023-03-01
+* 協助 `Sales-Phan Huynh Lam` 處理 `iSAMRT` tool 閃退問題.
+* 協助新人觀看 `3ME4` DLMC 問題.
+* 架設 `Windows 11` 測試環境.
+* 協助新人觀看客訴報告.
+* 參加 `Kiwi` 講解 `SMI` 開卡以及更新相關流程.
+* 撰寫 `SMI` 開卡以及 `USB Boot driver` 相關 `SOP`.
+* TODO
+  * [x] 協助新人觀看 `fsck` 相關指令及原理.
+  * [x] 協助新人觀看 `3TG6-P` 客訴案錄製 `UART` log 相關操作.
+  * [x] 協助 `EU-FAE YingXiang` 查找 `DLMC` 失敗原因, 以及詢問 `FW-RD` 關於 `FW` bin file 相關問題.
+  * [x] 協助 `Sales-Amy` 回覆 `瑞傳` 人員關於 `DLMC` 失敗相關問題.
+  * [x] 協助 `EU-PM Alfie` 更新 `Siemens` `3TE6` 客訴案實驗狀況.
+
+# 2023-03-02
+* 協助新人觀看 `fsck` 相關指令及原理.
+* 協助新人觀看 `3TG6-P` 客訴案錄製 `UART` log 相關操作.
+* 協助 `EU-FAE YingXiang` 查找 `DLMC` 失敗原因, 以及詢問 `FW-RD` 關於 `FW` bin file 相關問題.
+  * 發現原提供工具 `Flash` `FW` bin file 為 `WD`, 客戶手上的為 `Kioxia`, 故 `FW` bin file 不同.
+* 協助 `Sales-Amy` 回覆 `瑞傳` 人員關於 `DLMC` 失敗相關問題, 後續發現為更新順序不對, 抓到 `device` 為 `/dev/sdb`, 重新開機後, 可正常更新.
+* 協助 `EU-PM Alfie` 更新 `Siemens` `3TE6` 客訴案實驗狀況.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+
