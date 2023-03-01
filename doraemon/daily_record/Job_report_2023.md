@@ -610,6 +610,8 @@
   * [x] 協助 `EU-FAE YingXiang` 查找 `DLMC` 失敗原因, 以及詢問 `FW-RD` 關於 `FW` bin file 相關問題.
   * [x] 協助 `Sales-Amy` 回覆 `瑞傳` 人員關於 `DLMC` 失敗相關問題.
   * [x] 協助 `EU-PM Alfie` 更新 `Siemens` `3TE6` 客訴案實驗狀況.
+  * [x] 協助 `Nick` 測試 `SmartCow` 客訴案, 執行 `3TE6` BurninTest `8hr`.
+  * [x] 協助 `Nick` 了解 `mkmp` tool 使用.
 
 # 2023-03-02
 * 協助新人觀看 `fsck` 相關指令及原理.
@@ -618,6 +620,8 @@
   * 發現原提供工具 `Flash` `FW` bin file 為 `WD`, 客戶手上的為 `Kioxia`, 故 `FW` bin file 不同.
 * 協助 `Sales-Amy` 回覆 `瑞傳` 人員關於 `DLMC` 失敗相關問題, 後續發現為更新順序不對, 抓到 `device` 為 `/dev/sdb`, 重新開機後, 可正常更新.
 * 協助 `EU-PM Alfie` 更新 `Siemens` `3TE6` 客訴案實驗狀況.
+* 協助 `Nick` 測試 `SmartCow` 客訴案, 執行 `3TE6` BurninTest `8hr`.
+* 協助 `Nick` 了解 `mkmp` tool 使用.
 * TODO
   * [ ] 參與 `EU-FAE` 週會.
 
