@@ -623,5 +623,19 @@
 * 協助 `Nick` 測試 `SmartCow` 客訴案, 執行 `3TE6` BurninTest `8hr`.
 * 協助 `Nick` 了解 `mkmp` tool 使用.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Sales-MJ` 處理 `漢翔` `1.8 SATA 3SE2-P` 認碟問題.
+  * [x] 協助 `Leo` 操作 `iSMART` 以及 `3TO7` 開卡相關操作.
+  * [x] 協助 `Rex` 處理 `3TG6-P` 開啟 `AES` 功能.
+  * [x] 協助新人處理 `3MV2-P` 錄製 `UART` & `BurninTest`.
+  * [x] 協助處理 `Siemens` `USB` 送原廠分析.
 
+# 2023-03-03
+* 參與 `EU-FAE` 週會.
+* 協助 `Sales-MJ` 處理 `漢翔` `1.8 SATA 3SE2-P` 認碟問題.
+* 協助 `Leo` 操作 `iSMART` 以及 `3TO7` 開卡相關操作.
+* 協助 `Rex` 處理 `3TG6-P` 開啟 `AES` 功能.
+* 協助新人處理 `3MV2-P` 錄製 `UART` & `BurninTest`.
+* 協助處理 `Siemens` `USB` 送原廠分析.
+* TODO
+  * [ ] 協助 `Kiwi` 處理 `Ericsson` USB 連接問題.
