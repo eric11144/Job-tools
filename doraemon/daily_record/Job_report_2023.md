@@ -638,4 +638,8 @@
 * 協助新人處理 `3MV2-P` 錄製 `UART` & `BurninTest`.
 * 協助處理 `Siemens` `USB` 送原廠分析.
 * TODO
-  * [ ] 協助 `Kiwi` 處理 `Ericsson` USB 連接問題.
+  * [x] 協助 `Kiwi` 處理 `Ericsson` USB 連接問題.
+  * [x] 協助新人 & `Sales-Jolie` 觀看 `百視美` 客訴問題回覆.
+  * [x] 協助 `Kiwi` 測試 `Gigabyte Z590` 平台.
+  * [x] 協助 `Danny` 觀看 `smart cow` `Linux` 測試程式
+  * [x] 協助 `Kerry` 提供 `4TG2-P` `DLMC` tool.
