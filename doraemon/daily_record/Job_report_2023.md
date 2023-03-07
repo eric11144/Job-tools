@@ -643,3 +643,55 @@
   * [x] 協助 `Kiwi` 測試 `Gigabyte Z590` 平台.
   * [x] 協助 `Danny` 觀看 `smart cow` `Linux` 測試程式
   * [x] 協助 `Kerry` 提供 `4TG2-P` `DLMC` tool.
+
+# 2023-03-06
+* 協助 `Kiwi` 處理 `Ericsson` USB 連接問題, 轉交於 `RMA` 更換 connector.
+* 協助新人 & `Sales-Jolie` 觀看 `百視美` 客訴問題回覆.
+* 協助 `Kiwi` 測試 `Gigabyte Z590` 平台.
+* 協助 `Danny` 觀看 `smart cow` `Linux` 測試程式
+* 協助 `Kerry` 提供 `4TG2-P` `DLMC` tool.
+* TODO
+  * [x] 協助 `Sales-MJ` 回覆 `台達` 相關客訴問題.
+  * [x] 選購 `漢翔` 客訴案使用之 `1.8吋` 轉接頭.
+  * [x] 協助 `Kiwi` 量測 `3ME4` & `3TE7` SMART 數值 (`C0` & `0C`), 分別針對 `power-off`, `warm-boot`, `abnormal power-off`.
+  * [x] 整理 `2` 月相關重大客訴案進度.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人處理 `百視美` 客訴案處理, 請 `DQE-Summer` 協助加測異常上斷電 `2000` 次.
+  * [x] 轉交 `EU` `3TG8-P` & `RAID` card 給 `FW-Mike Yuan`.
+  * [x] 於 `RMA` 領回 `Ericsson` USB, 協助 `Kiwi` 測試是否於高速可認碟.
+
+# 2023-03-07
+* 協助 `Sales-MJ` 回覆 `台達` 相關客訴問題.
+* 選購 `漢翔` 客訴案使用之 `1.8吋` 轉接頭.
+* 協助 `Kiwi` 量測 `3ME4` & `3TE7` SMART 數值 (`C0` & `0C`), 分別針對 `power-off`, `warm-boot`, `abnormal power-off`( `Windows 10`, `data device` ).
+     ## `3ME4 Table`
+    |       Test Item           |    0   |    1    |    2    |    3    |    4    |
+    |         :---:             | :----: | :----:  | :----:  | :----:  | :----:  |
+    | `Reboot(C0)`              |    3   |   +0    |   +0    |   +0    |   +0    |
+    | `Reboot(0C)`              |    1   |   +0    |   +0    |   +0    |   +0    |
+    | `Power off(C0)`           |    3   |   +1    |   +1    |   +1    |   +1    |
+    | `Power off(0C)`           |    1   |   +0    |   +0    |   +0    |   +0    |
+    | `Abnormal power off(C0)`  |    7   |   +1    |   +1    |   +1    |   +1    |
+    | `Abnormal power off(0C)`  |    1   |   +1    |   +1    |   +1    |   +1    |
+     ## `3TE7 Table`
+    |       Test Item           |    0   |    1    |    2    |    3    |    4    |
+    |         :---:             | :----: | :----:  | :----:  | :----:  | :----:  |
+    | `Reboot(C0)`              |    5   |   +0    |   +0    |   +0    |   +0    |
+    | `Reboot(0C)`              |    5   |   +0    |   +0    |   +0    |   +0    |
+    | `Power off(C0)`           |    5   |   +1    |   +1    |   +1    |   +1    |
+    | `Power off(0C)`           |    5   |   +0    |   +0    |   +0    |   +0    |
+    | `Abnormal power off(C0)`  |    9   |   +1    |   +1    |   +1    |   +1    |
+    | `Abnormal power off(0C)`  |    5   |   +1    |   +1    |   +1    |   +1    |
+
+* 整理 `2` 月相關重大客訴案進度.
+* 參與 `FAE-team2` 週會.
+* 協助新人處理 `百視美` 客訴案處理, 請 `DQE-Summer` 協助加測異常上斷電 `2000` 次.
+* 轉交 `EU` `3TG8-P` & `RAID` card 給 `FW-Mike Yuan`.
+* 於 `RMA` 領回 `Ericsson` USB, 協助 `Kiwi` 測試是否於高速可認碟, 經由測試, 可於 `USB 3.0` 狀態下被辨識.
+* TODO
+  * [x] 與新人共同量測相關 `Device`( `3TG6-P(SATA)`, `3TG6-P(M.2)`, `3TE4(M.2)`, `3ME2(M.2)`, `3TE6(M.2)`, `3MG2-P(SATA)`, `3TG3-P(M.2)`, `Samsung 970` ), 觀察是否與 `3ME4` & `3TE7` SMART 變化相同.
+  * [x] 協助新人回覆 `智邦` 人員相關問題.
+  * [x] 協助新人操作 `3TG6-P` 於 `MV Tool` 下 `sl & el` command.
+  * [x] 參與 `FAE` 週會.
+  * [x] 查找借出之 `Device`( `3TE7`, `3TE6` `BiSC5` ) & `Ericsson` USB 之 connector.
+  * [x] 與 `Sales-MJ` 討論 `漢翔` 後續分析狀況.
