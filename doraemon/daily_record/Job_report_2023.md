@@ -695,3 +695,17 @@
   * [x] 參與 `FAE` 週會.
   * [x] 查找借出之 `Device`( `3TE7`, `3TE6` `BiSC5` ) & `Ericsson` USB 之 connector.
   * [x] 與 `Sales-MJ` 討論 `漢翔` 後續分析狀況.
+
+# 2023-03-08
+* 協助新人回覆 `智邦` 人員相關問題.
+* 協助新人操作 `3TG6-P` 於 `MV Tool` 下 `sl & el` command.
+* 參與 `FAE` 週會.
+* 查找借出之 `Device`( `3TE7`, `3TE6` `BiSC5` ) & `Ericsson` USB 之 connector.
+* 與 `Sales-MJ` 討論 `漢翔` 後續分析狀況.
+* TODO
+  * [x] 測試 `1.8吋 SATA` 轉接頭於 `漢翔` 客訴案 device.
+  * [x] 撰寫 `copy 影片` script.
+  * [x] 協助新人依照客人測試手法, 將 `AVI` 影片檔 copy 於 `3MV2-P`. 
+  * [x] 修改 `瑞傳` `read-retry` report.
+  * [x] 回覆 `Sales-Jessica` 關於 `Ericsson` USB 狀況, 並將剩餘 `3`pcs 送往 `RMA` 維修.
+  * [x] 轉交 `Siemens` `2`pcs USB 於原廠分析.
