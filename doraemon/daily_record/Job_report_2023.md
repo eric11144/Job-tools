@@ -709,3 +709,34 @@
   * [x] 修改 `瑞傳` `read-retry` report.
   * [x] 回覆 `Sales-Jessica` 關於 `Ericsson` USB 狀況, 並將剩餘 `3`pcs 送往 `RMA` 維修.
   * [x] 轉交 `Siemens` `2`pcs USB 於原廠分析.
+
+# 2023-03-09
+* 測試 `1.8吋 SATA` 轉接頭於 `漢翔` 客訴案 device.
+* 撰寫 `copy 影片` script.
+* 協助新人依照客人測試手法, 將 `AVI` 影片檔 copy 於 `3MV2-P`. 
+* 修改 `瑞傳` `read-retry` report.
+* 回覆 `Sales-Jessica` 關於 `Ericsson` USB 狀況, 並將剩餘 `3`pcs 送往 `RMA` 維修.
+* 轉交 `Siemens` `2`pcs USB 於原廠分析.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 轉送 `3TG6-P` `3` pcs 至 `RMA`.
+  * [x] 詢問 `Sam` & `Pater` 是否能夠提供 `SMI` 原廠相關 `Siemens USB` 線路圖.
+  * [x] 協助 `CN-Rowand` 回答關於 `DLMC` 相關操作問題(`V3.6.0`).
+  * [x] 詢問 `SW-Allen` 關於 `iSMART` 閃退問題.
+  * [x] 測試 `Ericisson` `3` pcs 更換 `connector` 速度狀況.
+  * [x] 觀看 `百視美` `3ME4` 加測 `2000` power cycle 測試 log.
+
+# 2023-03-10
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 轉送 `3TG6-P` `3` pcs 至 `RMA`.
+* 詢問 `Sam` & `Pater` 是否能夠提供 `SMI` 原廠相關 `Siemens USB` 線路圖.
+* 協助 `CN-Rowand` 回答關於 `DLMC` 相關操作問題(`V3.6.0`).
+* 詢問 `SW-Allen` 關於 `iSMART` 閃退問題, 後續發現可能與平台有相關, 已將平台借出.
+* 測試 `Ericisson` `3` pcs 更換 `connector` 速度狀況, 發現不太穩定.
+* 觀看 `百視美` `3ME4` 加測 `2000` power cycle 測試 log.
+* TODO
+  * [x] 測試 `Ericisson` `3` pcs 更換 `connector` 速度狀況.
+  * [x] 測試 `EU` `Gen3x1` `3TE6 128GB BiSC5` 於 `Nexcom` 平台辨識狀況.
+  * [x] 操作 `PCIe` analyzer 錄製相關 log 於 `Nexcom` 平台( `3TG6-P`, `3TG3-P`, `4TG2-P`, `Samsung 970` ).
+  * [x] 協助新人觀看 `fsck` 相關操作.
+  * [x] 協助新人回覆 `智邦` 相關問題.
