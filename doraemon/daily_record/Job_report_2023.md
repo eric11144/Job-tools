@@ -740,3 +740,45 @@
   * [x] 操作 `PCIe` analyzer 錄製相關 log 於 `Nexcom` 平台( `3TG6-P`, `3TG3-P`, `4TG2-P`, `Samsung 970` ).
   * [x] 協助新人觀看 `fsck` 相關操作.
   * [x] 協助新人回覆 `智邦` 相關問題.
+  * [x] 協助新人觀看 `FA230301003` `FA` report.
+  * [x] 協助 `FAE-Danny` 測試 reboot `power cycling` script.
+
+# 2023-03-13
+* 測試 `Ericisson` `3` pcs 更換 `connector` 速度狀況.
+  * USB `3.1` -> 可辨識.
+  * USB `3.0` -> 時好時壞.
+  * USB `2.0` -> 可正常辨識.
+* 測試 `EU` `Gen3x1` `3TE6 128GB BiSC5` 於 `Nexcom` 平台辨識狀況, 皆無法辨識.
+* 操作 `PCIe` analyzer 錄製相關 log 於 `Nexcom` 平台( `3TG6-P`, `3TG3-P`, `4TG2-P`, `Samsung 970` ).
+* 協助新人觀看 `fsck` 相關操作.
+* 協助新人回覆 `智邦` 相關問題.
+* 協助新人觀看 `FA230301003` `FA` report.
+* 協助 `FAE-Danny` 測試 reboot `power cycling` script.
+* TODO
+  * [x] 測試 `EU` `Gen3x1` `3TE6 128GB BiSC5` 於 `Nexcom` 平台辨識狀況.
+    * [x] `V20B09` (BiSC3).
+    * [x] `V2111803`.
+    * [x] `V21118N1`.
+    * [x] `V22620X1`.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 詢問 `Sales-MJ` 關於 `Delta` Flash 客訴案後續狀況.
+  * [x] 測試 `Ericisson` `4` pcs 連線狀況.
+  * [x] 詢問 `Benson` 查找 `Siemens` USB housing 材質.
+  * [x] 查找 `Ericisson` 舊款 connector 料號, 並領出.
+
+# 2023-03-14
+* 測試 `EU` `Gen3x1` `3TE6 128GB BiSC5` 於 `Nexcom` 平台辨識狀況, 皆無法辨識.
+  * `V20B09` (BiSC3).
+  * `V2111803`.
+  * `V21118N1`.
+  * `V22620X1`.
+* 參與 `FAE-team2` 週會.
+* 詢問 `Sales-MJ` 關於 `Delta` Flash 客訴案後續狀況.
+* 測試 `Ericisson` `4` pcs 連線狀況.
+  * 透過 `USB` analyzer 可於 `USB 3.2`, `USB 3.0`, `USB 2.0` 辨識.
+  * 儲存 `USB` analyzer -> `USB 3.0` 相關資訊.
+  * 透過不同平台連線, 部份可辨識, 部份不可辨識.
+* 詢問 `Benson` 查找 `Siemens` USB housing 材質, 此材料材質為 `LCP`.
+* 查找 `Ericisson` 舊款 connector 料號, 並領出.
+* TODO
+  * [ ] 參與 `FAE` 週會.
