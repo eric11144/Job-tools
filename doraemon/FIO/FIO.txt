@@ -1,0 +1,14 @@
+Step1. Clean disk
+Step2. SEQW 128K
+fio -filename=/dev/sdx -direct=1 -iodepth=32 -thread -rw=write -ioengine=libaio -bs=128k -numjobs=1  -refill_buffers  -time_based  -runtime=6h -group_reporting -name=Performance
+
+Step3. SEQR 128K
+fio -filename=/dev/sdx -direct=1 -iodepth=32 -thread -rw=read -ioengine=libaio -bs=128k -numjobs=1  -refill_buffers  -time_based  -runtime=6h -group_reporting -name=Performance
+
+Step4. clean disk
+
+Step5. RNDW 4K
+fio -filename=/dev/sdx -direct=1 -iodepth=32 -thread -rw=randwrite -ioengine=libaio -bs=4k -numjobs=1  -refill_buffers  -time_based  -runtime=24h -group_reporting -name=Performance
+
+Step6. RNDR 4K
+fio -filename=/dev/sdx -direct=1 -iodepth=32 -thread -rw=randread -ioengine=libaio -bs=4k -numjobs=1  -refill_buffers  -time_based  -runtime=10h -group_reporting -name=Performance
