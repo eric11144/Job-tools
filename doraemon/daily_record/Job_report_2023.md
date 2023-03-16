@@ -781,4 +781,37 @@
 * 詢問 `Benson` 查找 `Siemens` USB housing 材質, 此材料材質為 `LCP`.
 * 查找 `Ericisson` 舊款 connector 料號, 並領出.
 * TODO
-  * [ ] 參與 `FAE` 週會.
+  * [x] 參與 `FAE` 週會.
+  * [x] 觀看 `C++` 程式.
+  * [x] 與 `Sales-Standly` & `FAE-Jay` 討論台達客訴案狀況.
+  * [x] 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118X1`, 測試開關機狀況, 是否認不到碟.
+
+# 2023-03-15
+* 參與 `FAE` 週會.
+* 觀看 `C++` 程式.
+* 與 `Sales-Standly` & `FAE-Jay` 討論台達客訴案狀況.
+* 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118X1`, 測試開關機狀況, 認碟狀況時好時壞, 後續有找到 `100%` 復現 `lane flip 1` 方式.
+* TODO
+  * [x] 查找 `3TE6 P42 BiSC5 128GB` 短路問題.
+  * [x] 借出 `3TE6 P42 BiSC5 128GB`( `DEM24-A28DD1KCCDF` ).
+  * [x] 與 `Sales-Standly` & `FAE-Jay` 討論台達客訴案狀況.
+  * [x] 協助 `Benson` 提供 `Kontron` 量測 `IR` 值結果.
+  * [x] 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118H2`, 測試開關機狀況, 是否認不到碟.
+  * [x] 協助 `FAE-Danny` 觀看 `smart cow` 測試狀況.
+  * [x] 協助新人觀看 `FA` report.
+
+# 2023-03-16
+* 查找 `3TE6 P42 BiSC5 128GB` 短路問題, 後續發現為 `Flash` 短路, 造成 device 問題.
+* 借出 `3TE6 P42 BiSC5 128GB`( `DEM24-A28DD1KCCDF` ).
+* 與 `Sales-Standly` & `FAE-Jay` 討論台達客訴案狀況.
+* 協助 `Benson` 提供 `Kontron` 量測 `IR` 值結果.
+* 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118H2`, 測試開關機狀況, 經由 `3` 種 `warm boot` 方式, 皆可認到碟.
+* 協助 `FAE-Danny` 觀看 `smart cow` 測試狀況.
+* 協助新人觀看 `FA` report, 並修改測試 `Shell script`.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118H2` 於 `AIOT-ABBI120` 主機板測試開關機狀況.
+  * [x] 協助 `FAE-Danny` 觀看 `smart cow` 測試狀況.
+  * [x] 測試 `Siemens` `3SE3` USB 連線速度狀況.
+  * [x] 協助新人轉送 device 於 `RMA`.
+  * [x] 更新手邊平台 `BIOS` 版本.
