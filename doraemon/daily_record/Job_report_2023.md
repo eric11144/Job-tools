@@ -812,6 +812,7 @@
   * [x] 參與 `EU-FAE` 週會.
   * [x] 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118H2` 於 `AIOT-ABBI120` 主機板測試開關機狀況.
   * [x] 協助 `FAE-Danny` 觀看 `smart cow` 測試狀況.
-  * [x] 測試 `Siemens` `3SE3` USB 連線速度狀況.
+  * [x] 測試 `Siemens` `3SE3` USB `4` pcs 連線速度狀況.
   * [x] 協助新人轉送 device 於 `RMA`.
   * [x] 更新手邊平台 `BIOS` 版本.
+  * [x] 測試 `Siemens` `3SE3` USB (已開卡) 執行 `AIDA64`.
