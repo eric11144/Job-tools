@@ -816,3 +816,40 @@
   * [x] 協助新人轉送 device 於 `RMA`.
   * [x] 更新手邊平台 `BIOS` 版本.
   * [x] 測試 `Siemens` `3SE3` USB (已開卡) 執行 `AIDA64`.
+
+# 2023-03-17
+* 參與 `EU-FAE` 週會.
+* 測試 `3TE6 P42 BiSC5 128GB` 使用 `FW-V21118H2` 於 `AIOT-ABBI120` 主機板測試開關機狀況.
+* 協助 `FAE-Danny` 觀看 `smart cow` 測試狀況.
+* 測試 `Siemens` `3SE3` USB `4` pcs 連線速度狀況.
+* 協助新人轉送 device 於 `RMA`.
+* 更新手邊平台 `BIOS` 版本.
+* 測試 `Siemens` `3SE3` USB (已開卡) 執行 `AIDA64`.
+* TODO
+  * [x] 與 `新竹-RD` 討論 `3TE6` 平台測試狀況.
+  * [x] 觀看 `FIO` 相關測試 `scipt`.
+  * [x] 測試 `CN` 寄回 `5`pcs `3SE3 USB` 客訴品狀況.
+  * [x] 協助新人了解 `3TE7` `FW` 進版過程.
+
+# 2023-03-20
+* 與 `新竹-RD` 討論 `3TE6` 平台測試狀況, 後續回報為電阻問題.
+* 觀看 `FIO` 相關測試 `scipt`.
+* 測試 `CN` 寄回 `5`pcs `3SE3 USB` 客訴品狀況, `3`pcs 可被辨識, `2`pcs 無過電.
+* 協助新人了解 `3TE7` `FW` 進版過程.
+* TODO
+  * [x] 協助 `EU-PM` `Alfie` 回報平台相容性問題.
+  * [x] 協助新人處理 `VN` 相關客訴問題.
+  * [x] 測試 `AIOT` 平台 `ASCI-120` 與 `3TE6` 相容性問題.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 量測 `Ericisson` `2`pcs `3SE3 USB` 無過電狀況.
+  * [x] 回報 `Ericisson` `5`pcs `3SE3 USB` 客訴品狀況.
+
+# 2023-03-21
+* 協助 `EU-PM` `Alfie` 回報平台相容性問題.
+* 協助新人處理 `VN` 相關客訴問題.
+* 測試 `AIOT` 平台 `ASCI-120` 與 `3TE6` 相容性問題, 通過 `3` 種手法, 各重開 `5` 次, 並無發生異常.
+* 參與 `FAE-team2` 週會.
+* 量測 `Ericisson` `2`pcs `3SE3 USB` 無過電狀況, 後續懷疑是 `Crystal` 異常, 已經領料準備更換.
+* 回報 `Ericisson` `5`pcs `3SE3 USB` 客訴品狀況.
+* TODO
+  * [x] 參與 `FAE` 週會.
