@@ -853,3 +853,71 @@
 * 回報 `Ericisson` `5`pcs `3SE3 USB` 客訴品狀況.
 * TODO
   * [x] 參與 `FAE` 週會.
+  * [x] 協助 `PM-Jack` 測試 `3TE7` (`S21606WE_NO_WP`) 於客戶平台黑頻問題.
+  * [x] 參與 `內部體檢`.
+  * [x] 協助新人觀看 `3TE6` 客訴案回覆 `智邦` 內容.
+  * [x] 撰寫 `Ericssion` FA report & 詢問 `Sales-Jessica` 客訴開案問題.
+
+# 2023-03-22
+* 參與 `FAE` 週會.
+* 協助 `PM-Jack` 測試 `3TE7` (`S21606WE_NO_WP`) 於客戶平台黑頻問題.
+* 參與 `內部體檢`.
+* 協助新人觀看 `3TE6` 客訴案回覆 `智邦` 內容.
+* 撰寫 `Ericssion` FA report & 詢問 `Sales-Jessica` 客訴開案問題.
+* TODO
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助新人觀看 `3TE7 BiCS5` 進版報告.
+  * [x] 準備 `FAE` 月會案例分享報告.
+  * [x] 錄製 `3TE7` (`S21606WE_NO_WP`) 於客戶平台黑頻問題 `UART` log.
+  * [x] 轉送 `Ericssion` `2`pcs 無過電 `USB` 於 `RMA` 更換 `Crystal` & 測試.
+  * [x] 協助 `FAE-Danny` 觀看 `smart cow` 相關測試 `Shell Script`.
+  * [x] 與 `EU-FAE Jason` 討論 `Ericssion` 客訴開案問題.
+  * [x] 撰寫 `Ericssion` FA report.
+  * [x] 協助 `FAE-Nick` 測試 `MKMP tool` update image.
+
+# 2023-03-23
+* 參與 `FAE` 月會.
+* 協助新人觀看 `3TE7 BiCS5` 進版報告.
+* 準備 `FAE` 月會案例分享報告.
+* 錄製 `3TE7` (`S21606WE_NO_WP`) 於客戶平台黑頻問題 `UART` log.
+* 轉送 `Ericssion` `2`pcs 無過電 `USB` 於 `RMA` 更換 `Crystal` & 測試.
+* 協助 `FAE-Danny` 觀看 `smart cow` 相關測試 `Shell Script`.
+* 與 `EU-FAE Jason` 討論 `Ericssion` 客訴開案問題.
+* 撰寫 `Ericssion` FA report.
+* 協助 `FAE-Nick` 測試 `MKMP tool` update image.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 錄製 `Winsystem` 客訴品 `3TE7` 黑屏狀況 `UART` log.
+  * [x] 與 `EU-PM Alfie` 討論 `Winsystem` 客訴案狀況.
+  * [x] 協助新人觀看客訴案相關回答.
+  * [x] 協助 `FAE-Nick` 重包 `MKMP tool` update image(更新 `SN.txt`).
+
+# 2023-03-24
+* 參與 `EU-FAE` 週會.
+* 錄製 `Winsystem` 客訴品 `3TE7` 黑屏狀況 `UART` log.
+* 與 `EU-PM Alfie` 討論 `Winsystem` 客訴案狀況.
+* 協助新人觀看客訴案相關回答.
+* 協助 `FAE-Nick` 重包 `MKMP tool` update image(更新 `SN.txt`).
+* TODO
+  * [x] 詢問 `Kiwi` 如何調整 `3TG6-P` 早期系列開卡過程, 如何透過 `UART` 進入 `loader mode`.
+  * [x] 透過調整電阻使 `3TG6-P` 切換為 `SATA mode`, 可透過 `UART` 進入 `loader mode` 開卡.
+  * [x] 處理 `EU` 送回之 `35 pcs` `CFast card`.
+  * [x] 協助新人回答 `3TE6` LED 燈號顯示相關問題, 以及 `DLMC` 相關操作.
+  * [x] 協助新人測試 `3MV2-P` `CDM` 量測.
+  * [x] 協助 `EU-FAE` 準備 `3TE7` `DLMC` 相關 device.
+  * [x] 協助 `EU-FAE` 詢問 `DLMC` `-v FW verify` 參數相關問題.
+  * [x] 與 `Sales-MJ` 討論 `漢翔` 串接 `1.8` SATA 相關問題.
+
+# 2023-03-25
+* 詢問 `Kiwi` 如何調整 `3TG6-P` 早期系列開卡過程, 如何透過 `UART` 進入 `loader mode`.
+* 透過調整電阻使 `3TG6-P` 切換為 `SATA mode`, 可透過 `UART` 進入 `loader mode` 開卡.
+* 處理 `EU` 送回之 `35 pcs` `CFast card`.
+* 協助新人回答 `3TE6` LED 燈號顯示相關問題, 以及 `DLMC` 相關操作.
+* 協助新人測試 `3MV2-P` `CDM` 量測.
+* 協助 `EU-FAE` 準備 `3TE7` `DLMC` 相關 `device`, 外顯部份未修改正確, 需借出相同 `device`, 並錄製影片證明沒有問題才可提供工具.
+* 協助 `EU-FAE` 詢問 `DLMC` `-v FW verify` 參數相關問題, 外顯的檢查符合才更新, 不符合就不執行, 比方說 device 外顯為 `S20615`,  -v 帶 `S22831`, 這樣就不會更新.
+* 與 `Sales-MJ` 討論 `漢翔` 串接 `1.8 SATA` 相關問題, 先請客戶透過主機板 `SATA` 直接做串接.
+* TODO
+  * [ ] 分析 `EU` 送回之 `35 pcs` `CFast card`.
+  * [ ] 分析 `EU` 送回之 `3TG6-P` 相關問題.
+  * [x] 提供 `Kiwi` 關於 `block 4` 相關 `FA` report.
