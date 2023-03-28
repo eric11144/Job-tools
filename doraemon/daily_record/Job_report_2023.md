@@ -955,5 +955,26 @@
 * 更新 `Ericssion` FA report 案號.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 於 `eFAE` 系統補充 `Ericssion` USB 客訴相關處理紀錄.
-  * [ ] 詢問 `Benson` 協助觀看 `18pcs` 異常 `CFast card` `X-ray` 照片
+  * [x] 參與 `研發部` 月會.
+  * [x] 於 `eFAE` 系統補充 `Ericssion` USB 客訴相關處理紀錄.
+  * [x] 填寫 `瑞傳` FA case, 並上傳相關分析資料.
+  * [x] 詢問 `Benson` 協助觀看 `18pcs` 異常 `CFast card` `X-ray` 照片
+  * [x] 協助 `EU-FAE` 回答 `3TE6` `WWN` 產生規則.
+  * [x] 詢問 `Jay` 關於 `3TG3-P` `SMI` 開卡方式.
+  * [x] 協助新人觀看 `SN` 產出之 `python` code.
+  * [x] 協助新人觀看 `智邦` 提問相關問題.
+  * [x] 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題.
+
+# 2023-03-29
+* 參與 `FAE` 週會.
+* 參與 `研發部` 月會.
+* 於 `eFAE` 系統補充 `Ericssion` USB 客訴相關處理紀錄.
+* 填寫 `瑞傳` FA case, 並上傳相關分析資料, 並結案.
+* 詢問 `Benson` 協助觀看 `18pcs` 異常 `CFast card` `X-ray` 照片
+* 協助 `EU-FAE` 回答 `3TE6` `WWN` 產生規則, 後續為如不手動輸入 `WWN`, 則會透過序號自動產生, 如手動輸入, 則會與輸入之 `WWN` 不相同.
+* 詢問 `Jay` 關於 `3TG3-P` `SMI` 開卡方式, 後續發現為缺少 `SMI` `Auth key`.
+* 協助新人觀看 `SN` 產出之 `python` code.
+* 協助新人觀看 `智邦` 提問相關問題.
+* 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題, 已成功安裝完成.
+* TODO
+  * [ ] 透過 `熱風槍` 回烘  `18pcs` 異常 `CFast card`.
