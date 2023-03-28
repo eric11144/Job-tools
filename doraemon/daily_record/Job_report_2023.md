@@ -918,6 +918,41 @@
 * 協助 `EU-FAE` 詢問 `DLMC` `-v FW verify` 參數相關問題, 外顯的檢查符合才更新, 不符合就不執行, 比方說 device 外顯為 `S20615`,  -v 帶 `S22831`, 這樣就不會更新.
 * 與 `Sales-MJ` 討論 `漢翔` 串接 `1.8 SATA` 相關問題, 先請客戶透過主機板 `SATA` 直接做串接.
 * TODO
-  * [ ] 分析 `EU` 送回之 `35 pcs` `CFast card`.
-  * [ ] 分析 `EU` 送回之 `3TG6-P` 相關問題.
+  * [x] 分析 `EU` 送回之 `35 pcs` `CFast card`.
+  * [x] 分析 `EU` 送回之 `3TG6-P` 相關問題.
   * [x] 提供 `Kiwi` 關於 `block 4` 相關 `FA` report.
+  * [x] 與 `Sales-MJ` 討論 `漢翔` `1.8 SATA SSD` 辨識問題.
+  * [x] 協助新人測試 `3MV2-P` 透過 `CrystalDiskMark` 測試相關效能.
+
+# 2023-03-27
+* 分析 `EU` 送回之 `35 pcs` `CFast card`, 後續發現有 `18pcs` 有異常, 後續會轉送至廠區照 `X-ray`.
+* 分析 `EU` 送回之 `3TG6-P` 相關問題, 後續發現為 `U37` power IC 有異常, 已經申請領料以及樣品做交叉驗證.
+* 提供 `Kiwi` 關於 `block 4` 相關 `FA` report.
+* 與 `Sales-MJ` 討論 `漢翔` `1.8 SATA SSD` 辨識問題, 後續決定借一條 `USB` 轉接線於客戶測試.
+* 協助新人測試 `3MV2-P` 透過 `CrystalDiskMark` 測試相關效能.
+* TODO
+  * [x] 轉送 `18pcs` 異常 `CFast card` 於場區照 `Controller` `X-ray`.
+  * [x] 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題.
+  * [x] 參與 `FAE Team 2` 週會.
+  * [x] 協助 `EU-FAE` 錄製 `3TE7` DLMC tool 相關影片, 以及提供相關 `FW` bin file.
+  * [x] 協助 `PM-Chelsea` 轉借 `3MG3-P` 於 `Thermal` team 人員.
+  * [x] 協助 `Leo` 觀看 `Canbus` 相關環境操作.
+  * [x] 協助 `Danny` 處理 `Smaer Cow` 相關環境架設, 包含 `partition` 切割 & `dd` 操作.
+  * [x] 教導新人如何操作 `mkmp tool`, 以及 `SN.txt` 如何產出.
+  * [x] 與 `PM-Jack` 討論 `3TE7 BiCS5` `DLMC tool` 相關內容.
+  * [x] 更新 `Ericssion` FA report 案號.
+
+# 2023-03-28
+* 轉送 `18pcs` 異常 `CFast card` 於場區照 `Controller` `X-ray`.
+* 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題, 目前已解決, 需開啟主機板 `Intel VMX` 功能.
+* 參與 `FAE Team 2` 週會.
+* 協助 `EU-FAE` 錄製 `3TE7` DLMC tool 相關影片, 以及提供相關 `FW` bin file.
+* 協助 `PM-Chelsea` 轉借 `3MG3-P` 於 `Thermal` team 人員.
+* 協助 `Leo` 觀看 `Canbus` 相關環境操作.
+* 協助 `Danny` 處理 `Smaer Cow` 相關環境架設, 包含 `partition` 切割 & `dd` 操作.
+* 教導新人如何操作 `mkmp tool`, 以及 `SN.txt` 如何產出.
+* 與 `PM-Jack` 討論 `3TE7 BiCS5` `DLMC tool` 相關內容.
+* 更新 `Ericssion` FA report 案號.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 於 `eFAE` 系統補充 `Ericssion` USB 客訴相關處理紀錄.
