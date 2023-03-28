@@ -943,7 +943,7 @@
   * [x] 更新 `Ericssion` FA report 案號.
 
 # 2023-03-28
-* 轉送 `18pcs` 異常 `CFast card` 於場區照 `Controller` `X-ray`.
+* 轉送 `18pcs` 異常 `CFast card` 於廠區照 `Controller` `X-ray`.
 * 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題, 目前已解決, 需開啟主機板 `Intel VMX` 功能.
 * 參與 `FAE Team 2` 週會.
 * 協助 `EU-FAE` 錄製 `3TE7` DLMC tool 相關影片, 以及提供相關 `FW` bin file.
@@ -956,3 +956,4 @@
 * TODO
   * [x] 參與 `FAE` 週會.
   * [ ] 於 `eFAE` 系統補充 `Ericssion` USB 客訴相關處理紀錄.
+  * [ ] 詢問 `Benson` 協助觀看 `18pcs` 異常 `CFast card` `X-ray` 照片
