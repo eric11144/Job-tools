@@ -977,4 +977,75 @@
 * 協助新人觀看 `智邦` 提問相關問題.
 * 處理 `ASUS B360-F` 主機板無法安裝 `Ubuntu` 相關問題, 已成功安裝完成.
 * TODO
-  * [ ] 透過 `熱風槍` 回烘  `18pcs` 異常 `CFast card`.
+  * [x] 透過 `熱風槍` 回烘  `18pcs` 異常 `CFast card`.
+  * [x] 觀看 `EU` `mSATA 3TG6-P` 客訴案狀況.
+  * [x] 協助新人了解 `elog` 是否會 `partition table` 損壞狀況.
+  * [x] 協助新人觀看 `python` 程式撰寫狀況.
+
+# 2023-03-30
+* 透過 `熱風槍` 回烘  `18pcs` 異常 `CFast card`.
+  * `4` pcs 正常.
+  * `14` pcs 還是無法辨識.
+* 觀看 `EU` `mSATA 3TG6-P` 客訴案狀況.
+* 協助新人了解 `elog` 是否會 `partition table` 損壞狀況.
+* 協助新人觀看 `python` 程式撰寫狀況.
+* TODO
+  * [x] 將 `11` pcs 異常 `CFast card` 送至 `RMA` 更換 `controller`, 其餘 `3` pcs 做進階分析.
+  * [x] 協助 `PM-Sharon` 提供 `3TG3-P` `Quick erase` 相關 `command`.
+  * [x] 撰寫 `mkmp tool` `SN` 產出程式.
+  * [x] 協助新人觀看 `python` 相關撰寫問題.
+  * [x] 參加 `EU-FAE` 週會.
+  * [x] 協助 `EU` 追蹤 `SMI` 分析狀況.
+
+# 2023-03-31
+* 將 `10` pcs 異常 `CFast card` 送至 `RMA` 更換 `controller`, 其餘 `4` pcs 做進階分析.
+  * `10` pcs `CFast card` 更換 `controller` 後, 皆可正常辨識.
+  * `BCA11706200510866` -> FW issue (`incorrect calculation of 'invalidcnt`).
+  * `YCA11806190040175` -> short
+  * `BCA11706200510548` -> `loader mode` (Flash ch 0 異常).
+  * `YCA11906040110294` -> Cannot format (`Write protect enable`).
+* 協助 `PM-Sharon` 提供 `3TG3-P` `Quick erase` 相關 `command`.
+* 撰寫 `mkmp tool` `SN` 產出程式.
+* 協助新人觀看 `python` 相關撰寫問題.
+* 參加 `EU-FAE` 週會.
+* 協助 `EU` 追蹤 `SMI` 分析狀況. 
+* TODO
+  * [x] 整理 `CFast card` `35` pcs 分析狀況, 並回報 `EU`.
+  * [x] 撈取 `CFast card` `35` pcs `iSMART` & `UART` 相關資訊.
+  * [x] 申請 `CFast card` `Flash` 料件申請.
+  * [x] 協助 `EU-FAE` 轉送 `3SE3 USB` 於 `RMA` 開卡設定 `SN`.
+  * [x] 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U37`.
+  * [x] 將 `CFast card` `YCA11806190040175`  送至 `RMA` 更換 `controller`.
+  * [x] 將 `CFast card` `BCA11706200510866` 重新開卡, 更新 `FW` (`S21804`). 
+  * [x] 漢翔人員回報轉接線可以使用.
+  * [x] 協助新人觀看客訴案.
+
+# 2023-04-06
+* 整理 `CFast card` `35` pcs 分析狀況, 並回報 `EU`.
+* 撈取 `CFast card` `35` pcs `iSMART` & `UART` 相關資訊.
+* 申請 `CFast card` `Flash` 料件申請.
+* 協助 `EU-FAE` 轉送 `3SE3 USB` 於 `RMA` 開卡設定 `SN`.
+* 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U37`, 經由測試後, 發現還是無法辨識.
+* 將 `CFast card` `YCA11806190040175`  送至 `RMA` 更換 `controller`, 經過測試後, 依然 short.
+* 將 `CFast card` `BCA11706200510866` 重新開卡, 更新 `FW` (`S21804`). 
+* 漢翔人員回報轉接線可以使用, 後續會進行內部測試討論.
+* 協助新人觀看客訴案.
+* TODO
+  * [x] 分析 `EU` `mSATA 3TG6-P` 無法辨識原因.
+  * [x] 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U13`.
+  * [x] 將 `CFast card` `BCA11706200510548` 送至 `RMA` 更換 `Flash`.
+  * [x] 協助 `PM-Eric` 測試 `3TG6-P` raid 效能測試.
+  * [x] 參加 `EU` auto FW update 討論會議.
+  * [x] 參加 `EU-FAE` 週會.
+  * [x] 觀看 `SMI` 分析 `controller` 相關結果.
+
+# 2023-04-07
+* 分析 `EU` `mSATA 3TG6-P` 無法辨識原因, 推測是 `U13` 供電異常.
+* 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U13`.
+* 將 `CFast card` `BCA11706200510548` 送至 `RMA` 更換 `Flash`.
+* 協助 `PM-Eric` 測試 `3TG6-P` raid 效能測試, 執行一次需花費 `13hr`, 預計下週一測試完成.
+* 參加 `EU` auto FW update 討論會議.
+* 參加 `EU-FAE` 週會.
+* 觀看 `SMI` 分析 `controller` 相關結果.
+* TODO
+  * [ ] 測試 `Kontron` 平台, 並將 `3TE6` 做 `FW` 更新.
