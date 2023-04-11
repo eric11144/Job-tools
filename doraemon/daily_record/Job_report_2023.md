@@ -1034,7 +1034,7 @@
   * [x] 分析 `EU` `mSATA 3TG6-P` 無法辨識原因.
   * [x] 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U13`.
   * [x] 將 `CFast card` `BCA11706200510548` 送至 `RMA` 更換 `Flash`.
-  * [x] 協助 `PM-Eric` 測試 `3TG6-P` raid 效能測試.
+  * [x] 協助 `PM-Eric` 測試 `3TG6-P` `RAID` 效能測試.
   * [x] 參加 `EU` auto FW update 討論會議.
   * [x] 參加 `EU-FAE` 週會.
   * [x] 觀看 `SMI` 分析 `controller` 相關結果.
@@ -1043,9 +1043,64 @@
 * 分析 `EU` `mSATA 3TG6-P` 無法辨識原因, 推測是 `U13` 供電異常.
 * 將 `EU` `mSATA 3TG6-P` 送至 `RMA` 更換 `U13`.
 * 將 `CFast card` `BCA11706200510548` 送至 `RMA` 更換 `Flash`.
-* 協助 `PM-Eric` 測試 `3TG6-P` raid 效能測試, 執行一次需花費 `13hr`, 預計下週一測試完成.
+* 協助 `PM-Eric` 測試 `3TG6-P` `RAID` 效能測試, 執行一次需花費 `13hr`, 預計下週一測試完成.
 * 參加 `EU` auto FW update 討論會議.
 * 參加 `EU-FAE` 週會.
 * 觀看 `SMI` 分析 `controller` 相關結果.
 * TODO
-  * [ ] 測試 `Kontron` 平台, 並將 `3TE6` 做 `FW` 更新.
+  * [x] 測試 `Kontron` 平台, 並將 `3TE6` 做 `FW` 更新.
+  * [x] 測試 `CFast card` `BCA11706200510548`.
+  * [x] 測試 `EU` `mSATA 3TG6-P`.
+  * [x] 協助 `PM-Eric` 測試 `3TG8-P` `RAID` 效能測試.
+  * [x] 協助新人觀看 `3MG2-P` 電路圖.
+
+# 2023-04-10
+* 測試 `Kontron` 平台, 並將 `3TE6` 做 `FW` 更新, 後續詢問新竹 `FW-RD`, 發現平台已有異常, 透過 `UART` log 觀看, 平台並未與 `Device` 做 link.
+* 測試 `CFast card` `BCA11706200510548`, `Device` 依然無法辨識, 經由查證發現為短路.
+* 測試 `EU` `mSATA 3TG6-P`, 更換完 `U13` power IC 後, 可正常辨識.
+* 協助 `PM-Eric` 測試 `3TG8-P` `RAID` 效能測試, 後續因客戶未提供 `RAID` 相關設定, 故無法做相關測試.
+* 協助新人觀看 `3MG2-P` 電路圖.
+* TODO
+  * [x] 參與 `FAE Team 2` 週會.
+  * [x] 觀看 `clonezilla` 操作以及設定客戶平台.
+  * [x] 觀看 `ATA cmd` 如何設定.
+  * [x] 協助新人觀看客訴問題.
+  * [x] 針對 `Kontron` 平台 `Device` `3TE6` 做 `8hr` `BurninTest`.
+
+# 2023-04-11
+* 參與 `FAE Team 2` 週會.
+* 觀看 `clonezilla` 操作以及設定客戶平台.
+  * 將 `device` `3TE7` 開卡( `S22831WE_NO_WP` / `S21606WE_NO_WP` ).
+  * 準備 `1` pcs USB 安裝 `clonezilla` OS.
+  * 準備 `1` pcs USB 擺放客戶 `OS` 壓縮檔.
+  * 將 `2` pcs USB & `1` pcs 客戶 `device` 接上平台.
+  * 透過 `clonezilla` 將客戶 `OS` 倒回.
+    * `選擇語言`.
+    * `選擇目前語言鍵盤`.
+    * `選擇使用再生龍`.
+    * `選擇使用印象檔處理整顆硬碟 or 部份分割區`.
+    * `選擇掛載USB進行備份`( 此選項進入後無法掛載, 可直接點選 `確定` 選項 ).
+    * `進入初學者模式`.
+    * `選擇還原印象檔至本機磁碟`.
+    * `選擇與備份印象檔相同磁碟切割區`.
+    * 後續點選確定執行備份, 執行完之後點選關機即完成備份.
+  * 透過 `ATA cmd` 設定加密內容.
+    * `Feature` -> `0x16`.
+    * `Sec_Cnt` -> `0x41`.
+    * `Device/Head` -> `0xE0`.
+    * `Command` -> `0x82`.
+* 觀看 `ATA cmd` 如何設定, 需設定對應 `FW` 開卡包.
+  * `BiCS 5` -> `S22831WE_NO_WP`.
+  * `BiCS 3` -> `S21606WE_NO_WP`.
+* 協助新人觀看客訴問題.
+* 針對 `Kontron` 平台 `Device` `3TE6` 做 `8hr` `BurninTest`, 結果為 `pass`.
+* 協助 `PM-Jack` 錄製 `Winsystem` 設定完成之相關影片.
+* TODO
+  * [x] 參加 `FAE` 週會.
+  * [x] 轉交 `Texim` `11` pcs `mSATA mini 3SE` 於 `RMA`.
+  * [x] 觀看測試平台問題, 並重灌 `ubuntu` 平台.
+  * [x] 協助 `Kiwi` 測試 `3TE7` `DLMC` 功能( `S21606` to `S23204P` ).
+  * [x] 處理 `台達` `CFast 3TE7` Flash 客訴案.
+  * [ ] 協助 `PM-Davis` 將 `3TE6` 調整為 `high pull` device 做開卡, 並於平台做相關 `power on / off` 測試.
+  * [x] 將 `EU` `mSATA 3TG6-P` 做 `2hr` `BurninTest` 相關測試.
+  * [ ] 觀看 `CFast 3SE3` 於客戶平台無法正常辨識狀況.
