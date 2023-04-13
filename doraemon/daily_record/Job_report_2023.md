@@ -1099,8 +1099,55 @@
   * [x] 參加 `FAE` 週會.
   * [x] 轉交 `Texim` `11` pcs `mSATA mini 3SE` 於 `RMA`.
   * [x] 觀看測試平台問題, 並重灌 `ubuntu` 平台.
-  * [x] 協助 `Kiwi` 測試 `3TE7` `DLMC` 功能( `S21606` to `S23204P` ).
+  * [x] 協助 `Kiwi`  測試 `3TE7` `DLMC` 功能( `S21606` to `S23204P` ).
   * [x] 處理 `台達` `CFast 3TE7` Flash 客訴案.
-  * [ ] 協助 `PM-Davis` 將 `3TE6` 調整為 `high pull` device 做開卡, 並於平台做相關 `power on / off` 測試.
+  * [x] 協助 `PM-Davis` 將 `3TE6` 調整為 `high pull` device 做開卡, 並於平台做相關 `power on / off` 測試.
   * [x] 將 `EU` `mSATA 3TG6-P` 做 `2hr` `BurninTest` 相關測試.
-  * [ ] 觀看 `CFast 3SE3` 於客戶平台無法正常辨識狀況.
+  * [x] 觀看 `CFast 3SE3` 於客戶平台無法正常辨識狀況.
+
+# 2023-04-12
+* 參加 `FAE` 週會.
+* 轉交 `Texim` `11` pcs `mSATA mini 3SE` 於 `RMA`.
+* 觀看測試平台問題, 並重灌 `ubuntu` 平台.
+* 協助 `Kiwi`  測試 `3TE7` `DLMC` 功能( `S21606` to `S23204P` ).
+* 處理 `台達` `CFast 3TE7` Flash 客訴案.
+* 協助 `PM-Davis` 將 `3TE6` 調整為 `high pull` device 做開卡, 並於平台做相關 `power on / off` 測試.
+* 將 `EU` `mSATA 3TG6-P` 做 `2hr` `BurninTest` 相關測試.
+* 觀看 `CFast 3SE3` 於客戶平台無法正常辨識狀況.
+* TODO
+  * [x] 協助 `FW-RD Thomas` 提供 `Kontron` 相關資訊.
+  * [x] 詢問 `MIS` 處理 `Microsoft` 認證問題.
+  * [x] 架設 `PM-Davis` 將 `3TE6` 調整為 `high pull`, 並於平台做 `reboot` 測試環境.
+  * [x] 協助新人處理 `3MR2-P` `ICE` 點位訊號焊接.
+  * [x] 協助 `EU-FAE` 提供 `mSATA 3TG6-P` 相關分析結果.
+  * [x] 協助 `EU-FAE` 提供 `CFast 3SE3` `35`pcs 相關分析結果.
+  * [x] 協助 `EU-FAE` 提供 `Ericission 3SE USB` 相關測試結果圖.
+
+# 2023-04-13
+* 協助 `FW-RD Thomas` 提供 `Kontron` 相關資訊.
+* 詢問 `MIS` 處理 `Microsoft` 認證問題.
+* 架設 `PM-Davis` 將 `3TE6` 調整為 `high pull`, 並於平台做 `reboot` 測試環境.
+* 協助新人處理 `3MR2-P` `ICE` 點位訊號焊接.
+* 協助 `EU-FAE` 提供 `mSATA 3TG6-P` 相關分析結果.
+* 協助 `EU-FAE` 提供 `CFast 3SE3` `35`pcs 相關分析結果.
+* 協助 `EU-FAE` 提供 `Ericission 3SE USB` 相關測試結果圖.
+* TODO
+  * [x] 回報 `3TE6` 調整為 `high pull`, 並於平台做 `reboot` 測試結果.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `PM-Jack` 準備 `Winsystem` 母碟.
+  * [x] 協助新人觀看 `3MG2-P S42` crystal 相關問題.
+  * [x] 協助 `Sales-Jessica` 修改 `Ericission 3SE USB` 客訴報告.
+  * [x] 提供 `EU-FAE` `3TE6` `S22620X1` 相關測試結果( `BurninTest` ).
+  * [x] 協助 `EU-FAE` 詢問 `DLMC` tool release note 內容.
+
+# 2023-04-14
+* 回報 `3TE6` 調整為 `high pull`, 並於平台做 `reboot` 測試結果.
+* 參與 `EU-FAE` 週會.
+* 協助 `PM-Jack` 準備 `Winsystem` 母碟.
+* 協助新人觀看 `3MG2-P S42` crystal 相關問題.
+* 協助 `Sales-Jessica` 修改 `Ericission 3SE USB` 客訴報告.
+* 提供 `EU-FAE` `3TE6` `S22620X1` 相關測試結果( `BurninTest` ).
+* 協助 `EU-FAE` 詢問 `DLMC` tool release note 內容.
+* TODO
+  * [ ] 將 `Kontron` 平台以及 `3TE6` 轉交給 `Sales-Nancy`.
+  * [ ] 整理 `CFast 3SE3` `35`pcs 相關分析過程報告.
