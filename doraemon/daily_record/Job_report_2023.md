@@ -1149,5 +1149,43 @@
 * 提供 `EU-FAE` `3TE6` `S22620X1` 相關測試結果( `BurninTest` ).
 * 協助 `EU-FAE` 詢問 `DLMC` tool release note 內容.
 * TODO
-  * [ ] 將 `Kontron` 平台以及 `3TE6` 轉交給 `Sales-Nancy`.
-  * [ ] 整理 `CFast 3SE3` `35`pcs 相關分析過程報告.
+  * [x] 將 `Kontron` 平台以及 `3TE6` 轉交給 `Sales-Nancy`.
+  * [x] 整理 `CFast 3SE3` `35`pcs 相關分析過程報告.
+  * [x] 協助 `Danny` 觀看 `innoAGE` 相關問題.
+  * [x] 協助新人前往 `RMA` 維修零件.
+  * [x] 詢問 `EU-FAE` 提供 `Vector` RAID 設定流程.
+
+# 2023-04-17
+* 將 `Kontron` 平台以及 `3TE6` 轉交給 `Sales-Nancy`.
+* 整理 `CFast 3SE3` `35`pcs 相關分析過程報告.
+* 協助 `Danny` 觀看 `innoAGE` 相關問題.
+* 協助新人前往 `RMA` 維修零件.
+* 詢問 `EU-FAE` 提供 `Vector` RAID 設定流程.
+* TODO
+  * [x] 與 `Kiwi` 討論 `CFast 3SE3` `35`pcs 相關分析過程報告.
+  * [x] 測試 `APdate card solution / HAENEL` `CFast card 3SE3` 客訴案平台.
+  * [x] 觀看 `CFast card 3SE3` 電路圖並焊接 `Reset` 訊號線.
+  * [x] 追蹤 `SMI` 分析 `controller` 進度.
+  * [x] 參與 `FAE-Team2` 週會.
+
+# 2023-04-18
+* 與 `Kiwi` 討論 `CFast 3SE3` `35`pcs 相關分析過程報告, 並將結果寄出.
+* 測試 `APdate card solution / HAENEL` `CFast card 3SE3` 客訴案平台.
+* 觀看 `CFast card 3SE3` 電路圖並焊接 `Reset` 訊號線, 經過幾次測試, 發現 `Reset` 電壓較低, 隨機性認碟, 經過討論後, 決定更換 `controller`.
+* 追蹤 `SMI` 分析 `controller` 進度, 尚未回覆.
+* 參與 `FAE-Team2` 週會.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `EU-FAE` 詢問 `DLMC` tool 相關 release note 細節.
+  * [x] 協助新人觀看 `S42 3MG2-P` 無法認碟問題.
+  * [x] 處理 `ASUS B360-F` 平台無法安裝 `OS` 於 `PCIE` 問題.
+  * [x] 清潔實驗室平台.
+
+# 2023-04-19
+* 參與 `FAE` 週會.
+* 協助 `EU-FAE` 詢問 `DLMC` tool 相關 release note 細節, 已經回覆給 `EU-FAE`.
+* 協助新人觀看 `S42 3MG2-P` 無法認碟問題, 經由電路檢查, 懷疑是 `Crystal` 線路中的電阻有問題, 已申請領料更換.
+* 處理 `ASUS B360-F` 平台無法安裝 `OS` 於 `PCIE` 問題, 後續發現為 `CSM` 內之 `PCIE` 欄位需改為 `Legacy`.
+* 清潔實驗室平台.
+* TODO
+  * [ ] 觀看 `CFast 3SE3` `35`pcs 中, `2`pcs 短路問題.
