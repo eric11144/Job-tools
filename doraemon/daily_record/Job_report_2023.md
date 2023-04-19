@@ -1188,4 +1188,24 @@
 * 處理 `ASUS B360-F` 平台無法安裝 `OS` 於 `PCIE` 問題, 後續發現為 `CSM` 內之 `PCIE` 欄位需改為 `Legacy`.
 * 清潔實驗室平台.
 * TODO
-  * [ ] 觀看 `CFast 3SE3` `35`pcs 中, `2`pcs 短路問題.
+  * [x] 整理 `ERICSSON - USB EDC H 3SE3` 客訴處理流程, 並整理成 PPT.
+  * [x] 協助新人觀看 `3TE6` `3TE7` 相關客訴案.
+  * [x] 與 `Ben` & `Miller` & `Kiwi` 討論 `ERICSSON - USB EDC H 3SE3` 客訴處理.
+  * [x] 前往 `RMA` 觀看維修紀錄.
+  * [x] 與 `EU-FAE` 討論 `CFast 3SE3` `35` pcs 分析報告內容.
+  * [x] 與 `EU-FAE` 討論 `APdata` `3SE3` 測試狀況.
+  * [x] 將 `APdata` `3SE3` `00302` 送至 `RMA` 更換 `controller`.
+  * [x] 參與 `ERICSSON - USB EDC H 3SE3` 客訴討論會議.
+
+# 2023-04-20
+* 整理 `ERICSSON - USB EDC H 3SE3` 客訴處理流程, 並整理成 PPT.
+* 協助新人觀看 `3TE6` `3TE7` 相關客訴案.
+* 與 `Ben` & `Miller` & `Kiwi` 討論 `ERICSSON - USB EDC H 3SE3` 客訴處理.
+* 前往 `RMA` 觀看維修紀錄.
+* 與 `EU-FAE` 討論 `CFast 3SE3` `35` pcs 分析報告內容.
+* 與 `EU-FAE` 討論 `APdata` `3SE3` 測試狀況.
+* 將 `APdata` `3SE3` `00302` 送至 `RMA` 更換 `controller`.
+* 參與 `ERICSSON - USB EDC H 3SE3` 客訴討論會議.
+* TODO
+  * [ ] 觀看 `APdata` `3SE3` `00302` 更換 `controller` 狀況.
+  * [ ] 參與 `EU-FAE` 週會.
