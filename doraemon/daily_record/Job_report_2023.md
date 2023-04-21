@@ -1207,5 +1207,24 @@
 * 將 `APdata` `3SE3` `00302` 送至 `RMA` 更換 `controller`.
 * 參與 `ERICSSON - USB EDC H 3SE3` 客訴討論會議.
 * TODO
-  * [ ] 觀看 `APdata` `3SE3` `00302` 更換 `controller` 狀況.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 觀看 `APdata` `3SE3` `00302` 更換 `controller` 狀況.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 分析 `ERICSSON - USB EDC H 3SE3` `5` pcs 中, 發現一片異常品.
+  * [x] 協助 `Kerry` 提供 `3TE6` 於 Intel 12代平台修改電阻之資料.
+  * [x] 修改 `ERICSSON - USB EDC H 3SE3` `4` pcs FA report.
+  * [x] 協助業務處理 `3TE6` `unpublish FW` 紀錄表.
+
+# 2023-04-21
+* 觀看 `APdata` `3SE3` `00302` 更換 `controller` 狀況, 換完之後, 異常現象消失.
+* 參與 `EU-FAE` 週會.
+* 分析 `ERICSSON - USB EDC H 3SE3` `5` pcs 中, 發現一片異常品, 後續發現為 `Crystal` 異常.
+* 協助 `Kerry` 提供 `3TE6` 於 Intel 12代平台修改電阻之資料.
+* 修改 `ERICSSON - USB EDC H 3SE3` `4` pcs FA report.
+* 協助業務處理 `3TE6` `unpublish FW` 紀錄表.
+* TODO
+  * [x] 測試 `APdata` `3SE3` `20001` 更換 `電容` 狀況.
+  * [x] 協助新人觀看客訴問題.
+  * [x] 修改 `ERICSSON - USB EDC H 3SE3` `4` pcs FA report.
+  * [x] 修改 `CFast 3SE3` `35` pcs FA report.
+  * [x] 協助 `EU-FAE` 處理 `3TE7` 缺少之 `FW` bin file.
+  * [x] 協助 `Leo` 觀看 `Linux` 執行 `Makefile` 相關問題.
