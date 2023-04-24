@@ -1228,3 +1228,19 @@
   * [x] 修改 `CFast 3SE3` `35` pcs FA report.
   * [x] 協助 `EU-FAE` 處理 `3TE7` 缺少之 `FW` bin file.
   * [x] 協助 `Leo` 觀看 `Linux` 執行 `Makefile` 相關問題.
+
+# 2023-04-24
+* 測試 `APdata` `3SE3` `20001` 更換 `電容` 狀況, 各測試 `30` 次.
+  * `C6` 電容取下 -> Fail rate : `14/30 -> 46%`.
+  * 更換 `controller` -> Fail rate : `0/30 -> 0%`.
+  * `C6`, `C8` 電容增加 `10nF & 10nf` -> Fail rate : `6/30 -> 20%`.
+  * `C6`, `C8` 電容增加 `10nF & 47nf` -> Fail rate : `6/30 -> 20%`.
+* 協助新人觀看客訴問題.
+* 修改 `ERICSSON - USB EDC H 3SE3` `4` pcs FA report, 並寄出給 `EU`.
+* 修改 `CFast 3SE3` `35` pcs FA report.
+* 協助 `EU-FAE` 處理 `3TE7` 缺少之 `FW` bin file.
+* 協助 `Leo` 觀看 `Linux` 執行 `Makefile` 相關問題.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 修改 `ERICSSON - USB EDC H 3SE3` `5` pcs FA report.
+  * [ ] 測試 `APdata` `3SE3` `20001` 加大 `電容` 狀況.
