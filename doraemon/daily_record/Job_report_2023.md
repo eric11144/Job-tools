@@ -1241,6 +1241,18 @@
 * 協助 `EU-FAE` 處理 `3TE7` 缺少之 `FW` bin file.
 * 協助 `Leo` 觀看 `Linux` 執行 `Makefile` 相關問題.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 修改 `ERICSSON - USB EDC H 3SE3` `5` pcs FA report.
-  * [ ] 測試 `APdata` `3SE3` `20001` 加大 `電容` 狀況.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 修改 `ERICSSON - USB EDC H 3SE3` `5` pcs FA report.
+  * [x] 測試 `APdata` `3SE3` `20001` 加大 `電容` 狀況.
+  * [x] 協助整理 `3TE7` 2020 客訴案狀況整理.
+  * [x] 協助新人觀看 `Korea` `3MR2-P` wirte protect 問題.
+
+# 2023-04-25
+* 參與 `FAE-team2` 週會.
+* 修改 `ERICSSON - USB EDC H 3SE3` `5` pcs FA report.
+* 測試 `APdata` `3SE3` `20001` 加大 `電容` 狀況, 測試 `30` 次 `power on/off`, 只發生 `1` 次 Fail.
+* 協助整理 `3TE7` 2020 客訴案狀況整理.
+* 協助新人觀看 `Korea` `3MR2-P` wirte protect 問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 測試 `Vector` 設定 `RAID` 功能.
