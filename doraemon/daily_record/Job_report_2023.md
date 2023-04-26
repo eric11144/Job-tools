@@ -1255,4 +1255,21 @@
 * 協助新人觀看 `Korea` `3MR2-P` wirte protect 問題.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 測試 `Vector` 設定 `RAID` 功能.
+  * [x] 測試 `Vector` 設定 `RAID` 功能.
+  * [x] 協助 `PM-Davis` & `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台.
+  * [x] 與廠長 `James` 討論 `35`pcs `CFast card` FA report 內容.
+  * [x] 撰寫 `3TE6 AIOT Platform Compatibility` 月會報告.
+  * [x] 協助新人觀看 `3MG2-P` 執行 `Write Protect` 相關操作驗證.
+
+# 2023-04-26
+* 參與 `FAE` 週會.
+* 測試 `Vector` 設定 `RAID` 功能.
+* 協助 `PM-Davis` & `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台.
+* 與廠長 `James` 討論 `35`pcs `CFast card` FA report 內容.
+* 撰寫 `3TE6 AIOT Platform Compatibility` 月會報告.
+* 協助新人觀看 `3MG2-P` 執行 `Write Protect` 相關操作驗證.
+* TODO
+  * [x] 協助 `PM-Davis` & `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台.
+  * [x] 與 `EU-FAE` 討論 `35`pcs `CFast card` FA report 內容.
+  * [x] 協助 `EU-Sales` 追蹤 `3TE7` 補上相關 `FW` bin file.
+  * [x] 協助 `EU-FAE` 架設 `Fedora` 平台.
