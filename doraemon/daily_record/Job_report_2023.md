@@ -1273,3 +1273,36 @@
   * [x] 與 `EU-FAE` 討論 `35`pcs `CFast card` FA report 內容.
   * [x] 協助 `EU-Sales` 追蹤 `3TE7` 補上相關 `FW` bin file.
   * [x] 協助 `EU-FAE` 架設 `Fedora` 平台.
+
+# 2023-04-27
+* 協助 `PM-Davis` & `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台.
+* 與 `EU-FAE` 討論 `35`pcs `CFast card` FA report 內容.
+* 協助 `EU-Sales` 追蹤 `3TE7` 補上相關 `FW` bin file.
+* 協助 `EU-FAE` 架設 `Fedora` 平台.
+* TODO
+  * [x] 參與 `FAE` 月會.
+  * [x] 分享 `3TE6 AIOT Platform Compatibility issues​` 案例以及測試手法.
+  * [x] 協助 `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台. 
+  * [x] 協助 `PM-Davis` 確認 `AIOT` `ASBI-020` 平台 `CPU` 型號.
+  * [x] 請教 `Jay` 關於 `SMI` device 開卡失敗的問題.
+  * [x] 架設 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device.
+  * [x] 協助 `EU-Sales Patrik` 回答關於 `DLMC` tool 問題.
+  * [x] 協助 `Sales-Jessica` 找尋 `FED221209005` 之 device.
+
+# 2023-04-28
+* 參與 `FAE` 月會.
+* 分享 `3TE6 AIOT Platform Compatibility issues​` 案例以及測試手法.
+* 協助 `FW-RD Adson` 測試 `V21118H2` 於 `AIOT` `ASBI-020` 平台, `TEST 4` 依然有問題. 
+* 協助 `PM-Davis` 確認 `AIOT` `ASBI-020` 平台 `CPU` 型號.
+* 請教 `Jay` 關於 `SMI` device 開卡失敗的問題.
+  * 因 `SMI` 開卡包都是搭配容量去做設計, 不能不同容量混著用, 如須混著用, 須將 `Parameter` 內的 `Setting Capacity manually` 改為 `Default`, 即可正常開卡.
+* 架設 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device.
+  * 架設過程中遇到黑屏問題, 後須將 `MB` 整個斷電後就可正常運行.
+  * 修改 `Grub` 相關設定, 發生無法進入 `OS` 問題.
+  * 懷疑是 `UUID` 衝突問題, 需要將 `2` pcs device 安裝完成後, 做進一步釐清.
+* 協助 `EU-Sales Patrik` 回答關於 `DLMC` tool 問題.
+* 協助 `Sales-Jessica` 找尋 `FED221209005` 之 device.
+* TODO
+  * [x] 寄出 `Vector` `RAID` 於 ` 3TG8-P` 測試結果.
+  * [x] 協助 `EU-Sales Patrik` 回答關於 `DLMC` tool 問題, 並寄出.
+  * [ ] 觀看 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device 之 `UUID`.
