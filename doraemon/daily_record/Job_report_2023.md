@@ -1305,4 +1305,36 @@
 * TODO
   * [x] 寄出 `Vector` `RAID` 於 ` 3TG8-P` 測試結果.
   * [x] 協助 `EU-Sales Patrik` 回答關於 `DLMC` tool 問題, 並寄出.
-  * [ ] 觀看 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device 之 `UUID`.
+  * [x] 觀看 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device 之 `UUID`.
+  * [x] 協助 `Rosch computer` 人員回答相關 `DLMC` tool 問題.
+  * [x] 協助新人觀看 `SMI` device 相關問題.
+
+# 2023-05-02
+* 寄出 `Vector` `RAID` 於 ` 3TG8-P` 測試結果.
+* 協助 `EU-Sales Patrik` 回答關於 `DLMC` tool 問題, 並寄出.
+* 觀看 `Fedora` 平台於 `3TE6` `1TB` & `256GB` device 之 `UUID`.
+* 協助 `Rosch computer` 人員回答相關 `DLMC` tool 問題.
+* 協助新人觀看 `SMI` device 相關問題.
+* TODO
+  * [x] 協助 `EU Sales-Sylvia` 處理 `SIMOS` `35`pcs 相關客訴報告.
+  * [x] 與 `EU-FAE` 討論相關客訴進度.
+    * [x] `Rosch computer` DLMC tool 狀況.
+    * [x] `Fedora` OS 認不到 `3TE6`.
+  * [x] 協助 `EU-FAE` 測試 `3TE7` 相關 `DLMC v3.8.0` 功能.
+    * [x] `DEM24-A28DK1KCADF`.
+    * [x] `DEM24-B56DK1KCAQF`.
+
+# 2023-05-03
+* 協助 `EU Sales-Sylvia` 處理 `SIMOS` `35`pcs 相關客訴報告, 已寄出.
+* 與 `EU-FAE` 討論相關客訴進度.
+  * `Rosch computer` DLMC tool 狀況.
+  * `Fedora` OS 認不到 `3TE6`.
+* 協助 `EU-FAE` 測試 `3TE7` 相關 `DLMC v3.8.0` 功能.
+  * `DLMC v3.8.0` 有增加 `controller` 辨識功能.
+  * `DEM24-A28DK1KCADF` -> `已完成`.
+  * `DEM24-B56DK1KCAQF` -> `等待 sample`.
+* TODO
+  * [x] 協助新人觀看 `innoworks` `3TE6` led 相關顯示問題.
+  * [x] 協助 `EU-FAE` 測試 `Fedora` OS 認不到 `3TE6` 狀況.
+  * [x] 協助 `Kiwi` 觀看 `dmesg` 相關操作.
+  * [x] 協助新人操作 `mkmp` tool.
