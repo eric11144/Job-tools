@@ -1353,6 +1353,7 @@
   * [x] 協助新人測試於 `3TE7` 安裝 `Windows embedded`, 並執行 `DLMC`, 觀看是否可正常運作.
   * [x] 與 `EU-FAE` 更新客訴案進度.
   * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 驗證 `3TE7` `256`GB DLMC 功能.
 
 # 2023-05-05
 * 協助測試 `Fedora` OS 認不到 `3TE6` 狀況, 並將結果提供給 `EU-FAE`.
@@ -1363,5 +1364,6 @@
 * 協助新人測試於 `3TE7` 安裝 `Windows embedded`, 並執行 `DLMC`, 可正常運作.
 * 與 `EU-FAE` 更新客訴案進度.
 * 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 驗證 `3TE7` `256`GB DLMC 功能, 並錄製影片.
 * TODO
   * [ ] 協助 `EU-FAE` 討論 `SIMOS` `35`pcs `CFast` card FA report.
