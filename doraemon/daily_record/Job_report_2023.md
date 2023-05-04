@@ -1338,3 +1338,30 @@
   * [x] 協助 `EU-FAE` 測試 `Fedora` OS 認不到 `3TE6` 狀況.
   * [x] 協助 `Kiwi` 觀看 `dmesg` 相關操作.
   * [x] 協助新人操作 `mkmp` tool.
+  * [x] 與 `EU-FAE` 更新客訴案進度.
+
+# 2023-05-04
+* 協助新人觀看 `innoworks` `3TE6` led 相關顯示問題.
+* 協助 `EU-FAE` 測試 `Fedora` OS 認不到 `3TE6` 狀況, 發現透過相同開卡包, 修改 `SN`, 皆無法認碟.
+* 協助 `Kiwi` 觀看 `dmesg` 相關操作.
+* 協助新人操作 `mkmp` tool.
+* 與 `EU-FAE` 更新客訴案進度.
+* TODO
+  * [x] 協助測試 `Fedora` OS 認不到 `3TE6` 狀況.
+  * [x] 協助測試 `Fedora` OS 認 `4TG2-P` 狀況.
+  * [x] 提供 `SIMOS` `35`pcs `CFast` card 測速結果.
+  * [x] 協助新人測試於 `3TE7` 安裝 `Windows embedded`, 並執行 `DLMC`, 觀看是否可正常運作.
+  * [x] 與 `EU-FAE` 更新客訴案進度.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-05-05
+* 協助測試 `Fedora` OS 認不到 `3TE6` 狀況, 並將結果提供給 `EU-FAE`.
+  * 透過不同開卡包開卡( `V21118N1`, `V22620N1` ), 皆可認碟.(修改 `SN` 保留前四碼, 修改第 `7` 碼, 修改尾碼 ).
+  * 透過相同開卡包開卡( `V21118N1`, `V22620N1` ), 皆不可認碟.(修改 `SN` 保留前四碼, 修改第 `7` 碼, 修改尾碼, `SN` -> `0000000000000`, `1111111111111` ).
+* 協助測試 `Fedora` OS 認 `4TG2-P` 狀況, 結果只能辨識到 `1`pcs.
+* 提供 `SIMOS` `35`pcs `CFast` card 測速結果.
+* 協助新人測試於 `3TE7` 安裝 `Windows embedded`, 並執行 `DLMC`, 可正常運作.
+* 與 `EU-FAE` 更新客訴案進度.
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [ ] 協助 `EU-FAE` 討論 `SIMOS` `35`pcs `CFast` card FA report.
