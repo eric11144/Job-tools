@@ -1366,4 +1366,27 @@
 * 參與 `EU-FAE` 週會.
 * 協助 `EU-FAE` 驗證 `3TE7` `256`GB DLMC 功能, 並錄製影片.
 * TODO
-  * [ ] 協助 `EU-FAE` 討論 `SIMOS` `35`pcs `CFast` card FA report.
+  * [x] 協助 `EU-FAE` 討論 `SIMOS` `35`pcs `CFast` card FA report.
+  * [x] 協助 `EU-FAE` 驗證 `DEM28-B56DK1GCAQF-Z71` `3TE7` `128GB` & `256GB` `DLMC` tool & `non Raid` `FW` bin file( `S22831` <-> `S21606` ). 
+  * [x] 協助 `EU-FAE` 驗證 `Rosch Computer` `3TE7` `256GB` `DLMC` tool & `FW` bin file( `S22831` -> `S21606` ).
+  * [x] 與 `EU-Sales Nancy` 討論 `DLMC` tool 進度.
+  * [x] 協助 `PM-Jack` 測試 `39`pcs `3TE7`.
+    * [x] `WD 128G` `10pcs`.
+    * [x] `WD 256G` `10pcs`.
+    * [x] `gTLC 128G` `10pcs`.
+    * [x] `cTLC 128G` `9pcs`.
+
+# 2023-05-08
+* 協助 `EU-FAE` 討論 `SIMOS` `35`pcs `CFast` card FA report, 提供 `1`pcs 測速結果.
+* 協助 `EU-FAE` 驗證 `DEM28-B56DK1GCAQF-Z71` `3TE7` `128GB` & `256GB` `DLMC` tool & `non Raid` `FW` bin file, 皆沒問題( `S22831` <-> `S21606` ). 
+* 協助 `EU-FAE` 驗證 `Rosch Computer` `3TE7` `256GB` `DLMC` tool & `FW` bin file, 皆沒問題( `S22831` -> `S21606` ). 
+* 與 `EU-Sales Nancy` 討論 `DLMC` tool 進度, 因 `3TE7` 發生 `SLC` & `TLC` 身份判斷問題, 故無法提供相關 `FW` bin file.
+* 協助 `PM-Jack` 測試 `39`pcs `3TE7`, 分別測試 `初始化` & `初始化` & `Baking` `1` hr.
+  * `WD 128G` `10pcs` -> `ok`.
+  * `WD 256G` `10pcs` -> `ok`.
+  * `gTLC 128G` `10pcs` -> `ok`.
+  * `cTLC 128G` `9pcs` -> `Baking` `1` hr `2`pcs `Assert`.
+* TODO
+  * [x] 參與 `FAE-Team 2` 週會.
+  * [x] 修復 `UART` 線針腳.
+  * [ ] 協助測試 `3TE6`, 分別測試 `初始化`.
