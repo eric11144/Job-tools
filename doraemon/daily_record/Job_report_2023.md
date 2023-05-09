@@ -1389,4 +1389,52 @@
 * TODO
   * [x] 參與 `FAE-Team 2` 週會.
   * [x] 修復 `UART` 線針腳.
-  * [ ] 協助測試 `3TE6`, 分別測試 `初始化`.
+  * [x] 協助測試 `3TE6`, 分別測試 `初始化`.
+    * [x] `WD` `10`pcs.
+      * [x] `128`GB `1`PCS.
+      * [x] `256`GB `3`PCS.
+      * [x] `512`GB `4`PCS.
+      * [x] `1`TB `2`PCS.
+    * [x] `gTLC` `10`pcs.
+      * [x] `P42` `128`GB `3`PCS.
+      * [x] `P80` `128`GB `3`PCS.
+      * [x] `P42` `1`TB `2`PCS.
+      * [x] `P80` `2`TB `2`PCS.
+    * [x] `cTLC` `10`pcs.
+      * [x] `P42` `128`GB `1`PCS.
+      * [x] `P42` `256`GB `1`PCS.
+      * [x] `P80` `128`GB `1`PCS.
+      * [x] `P42` `1`TB `3`PCS.
+      * [x] `P80` `2`TB `4`PCS.
+  * [x] 與 `PM-Davis` & `PM-Jack` 討論 `3TE6` 測試流程.
+  * [x] 協助新人詢問 `SMI` 原廠相關問題.
+  * [x] 協助 `FW RD-Adson` 處理 `3TE6` 於 `AIOT` 平台掉碟問題復現手法.
+
+# 2023-05-09
+* 參與 `FAE-Team 2` 週會.
+* 修復 `UART` 線針腳.
+* 協助測試 `3TE6`, 分別測試 `初始化`, 皆無遇到問題, 並將結果整理寄出.
+  * `WD` `10`pcs.
+    * `128`GB `1`PCS.
+    * `256`GB `3`PCS.
+    * `512`GB `4`PCS.
+    * `1`TB `2`PCS.
+  * `gTLC` `10`pcs.
+    * `P42` `128`GB `3`PCS.
+    * `P80` `128`GB `3`PCS.
+    * `P42` `1`TB `2`PCS.
+    * `P80` `2`TB `2`PCS.
+  * `cTLC` `10`pcs.
+    * `P42` `128`GB `1`PCS.
+    * `P42` `256`GB `1`PCS.
+    * `P80` `128`GB `1`PCS.
+    * `P42` `1`TB `3`PCS.
+    * `P80` `2`TB `4`PCS.
+* 與 `PM-Davis` & `PM-Jack` 討論 `3TE6` 測試流程, 發現與 `3TE7` 現象不太相同, `3TE6` 會發生 `initalize` 資料消失, 需特別注意觀看是否會消失.
+* 協助新人詢問 `SMI` 原廠相關問題.
+* 協助 `FW RD-Adson` 處理 `3TE6` 於 `AIOT` 平台掉碟問題復現手法.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 與 `EU-FAE` 討論 `3TE7` DLMC 失敗問題.
+  * [ ] 協助 `EU-FAE` 處理 `Vector` 相關資訊提供.
+  * [x] 重灌 `ubuntu` 平台.
