@@ -1435,6 +1435,22 @@
 * 協助 `FW RD-Adson` 處理 `3TE6` 於 `AIOT` 平台掉碟問題復現手法.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 與 `EU-FAE` 討論 `3TE7` DLMC 失敗問題.
-  * [ ] 協助 `EU-FAE` 處理 `Vector` 相關資訊提供.
+  * [x] 與 `EU-FAE` 討論 `3TE7` DLMC 失敗問題.
+  * [x] 協助 `EU-FAE` 處理 `Vector` 相關資訊提供.
   * [x] 重灌 `ubuntu` 平台.
+  * [x] 協助 `FW RD-Allen` 了解 `3TE7` `DLMC` tool 相關問題.
+  * [x] 協助 `Sales-MJ` 提供 `SATADOM` 電源相關問題.
+
+# 2023-05-10
+* 參與 `FAE` 週會.
+* 與 `EU-FAE` 討論 `3TE7` DLMC 失敗問題.
+* 協助 `EU-FAE` 處理 `Vector` 相關資訊提供.
+* 重灌 `ubuntu` 平台.
+* 協助 `FW RD-Allen` 了解 `3TE7` `DLMC` tool 相關問題.
+  * 客戶因 `DLMC` tool 更新完成後, 會向 `device` 再次發送 `identify` 指令, 取得 device 相關資訊, 但因 device 已經進入 idle 狀態, 所以導致更新過程中, 需等待許多時間.
+  * `SW RD-Allen` 會協助將第二次發送 `identify` 指令移除, 以及錯誤訊息, 解決等待時間過久問題.
+* 協助 `Sales-MJ` 提供 `SATADOM` 電源相關問題.
+* TODO
+  * [x] 架設 `Vector` `RAID` 測試平台.
+  * [ ] 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ).
+  * [x] 協助 `Sales-Jolie` 觀看 `3SE` `SMART` 內的 `Health` 資訊欄位.
