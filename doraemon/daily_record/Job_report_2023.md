@@ -1452,5 +1452,22 @@
 * 協助 `Sales-MJ` 提供 `SATADOM` 電源相關問題.
 * TODO
   * [x] 架設 `Vector` `RAID` 測試平台.
-  * [ ] 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ).
+  * [x] 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ).
   * [x] 協助 `Sales-Jolie` 觀看 `3SE` `SMART` 內的 `Health` 資訊欄位.
+  * [x] 協助 `Sales-Jolie` 觀看 `3TG6-P` 進入 `Loader` mode 問題.
+  * [x] 協助 `EU-FAE` 觀看 `ATA Security command` 相關問題.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-05-11
+* 架設 `Vector` `RAID` 測試平台.
+* 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ).
+  * `ASCI-120` -> 測試 `30` 次都沒遇到異常.
+* 協助 `Sales-Jolie` 觀看 `3SE` `SMART` 內的 `Health` 資訊欄位.
+* 協助 `Sales-Jolie` 觀看 `3TG6-P` 進入 `Loader` mode 問題.
+* 協助 `EU-FAE` 觀看 `ATA Security command` 相關問題.
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [x] 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ), 測試 `50`次.
+  * [x] 協助 `EU-Sales` 測試 `ATA Security Command`.
+  * [x] 與 `SW-RD  Allen` & `FW-RD Thomas` 討論如何解除 `Freeze` 狀態, 以及如何 `set password`.
+  * [x] 協助新人操作 `3TE7` FW 更新.
