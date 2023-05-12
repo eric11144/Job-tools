@@ -1471,3 +1471,19 @@
   * [x] 協助 `EU-Sales` 測試 `ATA Security Command`.
   * [x] 與 `SW-RD  Allen` & `FW-RD Thomas` 討論如何解除 `Freeze` 狀態, 以及如何 `set password`.
   * [x] 協助新人操作 `3TE7` FW 更新.
+
+# 2023-05-12
+* 協助 `PM-Davis` 驗證 `3TE6` `V23501` 於 `AIOT` 平台 ( `ASBI 020`, `ASCI-120` ), 測試 `50`次.
+  * `ASBI 020` -> 第 `33` 次發生異常, 已將狀況回報給 `FW-RD Adson`.
+* 協助 `EU-Sales` 測試 `ATA Security Command`, 並將其結果回報.
+  * 於 `Windows` 平台內, 只要 `detect` 到 `disk` 都會將其 `mode` 設定為 `Freeze`( 無論 `disk` 上斷電 / OS suspend ).
+  * 於 `Linux` 平台內, 第一次上電都會將 `disk` 都會將其 `mode` 設定為 `Freeze`, 重新上斷電後, `mode` 就會切為 `unFreeze`.
+  * `Windows` 平台下 `ATA Security Command`, 需透過 `客製 FW` & `ATA CMD`( `command` -> `0xFA` ) 將 disk 解除 `Freeze` 狀態, 才可透過 `iSMART` 設定 `Security password`.
+* 與 `SW-RD  Allen` & `FW-RD Thomas` 討論如何解除 `Freeze` 狀態, 以及如何 `set password`.
+* 協助新人操作 `3TE7` FW 更新.
+* TODO
+  * [x] 協助 `EU-Sales` 回覆 `ATA Security Command` 相關問題.
+  * [x] 協助 `EU-FAE` 提供 `Vector` RAID 測速相關資料.
+  * [x] 協助新人觀看 `3MG2-P` & `3ME4` 電路相關問題.
+  * [x] 與 `Miller` & `Kiwi` 討論 `ATA Security Command` 相關問題.
+  * [x] 協助新人觀看 `DLMC` & `MKMP` tool 操作相關問題.
