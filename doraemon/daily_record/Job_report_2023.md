@@ -1487,3 +1487,27 @@
   * [x] 協助新人觀看 `3MG2-P` & `3ME4` 電路相關問題.
   * [x] 與 `Miller` & `Kiwi` 討論 `ATA Security Command` 相關問題.
   * [x] 協助新人觀看 `DLMC` & `MKMP` tool 操作相關問題.
+
+# 2023-05-15
+* 協助 `EU-Sales` 回覆 `ATA Security Command` 相關問題.
+* 協助 `EU-FAE` 提供 `Vector` RAID 測速相關資料.
+* 協助新人觀看 `3MG2-P` & `3ME4` 電路相關問題.
+* 與 `Miller` & `Kiwi` 討論 `ATA Security Command` 相關問題.
+* 協助新人觀看 `DLMC` & `MKMP` tool 操作相關問題.
+* TODO
+  * [x] 參與 `FAE-Team2` 週會.
+  * [x] 協助 `Kiwi` 觀看 `3ME2 Micro SD` card 開卡問題.
+  * [x] 與 `EU-FAE` 討論相關客訴問題.
+  * [x] 協助 `EU-FAE` 測試並整理 `Rosch computer` `Fedora` 同時放入 `2`pcs `3TE6` device 無法認碟問題.
+
+# 2023-05-16
+* 參與 `FAE-Team2` 週會.
+* 協助 `Kiwi` 觀看 `3ME2 Micro SD` card 開卡問題.
+* 與 `EU-FAE` 討論相關客訴問題.
+* 協助 `EU-FAE` 測試並整理 `Rosch computer` `Fedora` 同時放入 `2`pcs `3TE6` device 無法認碟問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `EU-PM Alfie` 回覆 `TCG OPAL` 內 `biospba` image 如何取得.
+  * [x] 協助 `Kiwi` 架設 `sedutil` 測試環境.
+  * [x] 詢問 `FW-RD Allen` 關於 `CFast 3SE3` 於 `APdata` 平台訊號相關問題.
+
