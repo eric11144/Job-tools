@@ -1510,4 +1510,33 @@
   * [x] 協助 `EU-PM Alfie` 回覆 `TCG OPAL` 內 `biospba` image 如何取得.
   * [x] 協助 `Kiwi` 架設 `sedutil` 測試環境.
   * [x] 詢問 `FW-RD Allen` 關於 `CFast 3SE3` 於 `APdata` 平台訊號相關問題.
+  * [x] 修改 `ansible` 相關安裝流程.
+
+# 2023-05-17
+* 參與 `FAE` 週會.
+* 協助 `EU-PM Alfie` 回覆 `TCG OPAL` 內 `biospba` image 如何取得.
+* 協助 `Kiwi` 架設 `sedutil` 測試環境.
+* 詢問 `FW-RD Allen` 關於 `CFast 3SE3` 於 `APdata` 平台訊號相關問題.
+* 修改 `ansible` 相關安裝流程.
+* TODO
+  * [x] 參與 `3TE7` 身份認證問題討論會議.
+  * [x] 協助 `PM-Davis` 測試 `ASBI-020` `100` 次, 並錄製 `PCIe` analyzer.
+  * [x] 修改 `ansible` 相關安裝流程.
+  * [x] 協助新人觀看客訴案相關問題.
+  * [x] 與 `EU-PM Alfie` 討論 `Winsystem` 母片準備相關問題.
+  * [x] 協助新人更換 `Flash`.
+
+# 2023-05-18
+* 參與 `3TE7` 身份認證問題討論會議.
+* 協助 `PM-Davis` 測試 `ASBI-020` `100` 次, 並錄製 `PCIe` analyzer.
+* 修改 `ansible` 相關安裝流程, 處理 `install package version latest` 問題.
+* 協助新人觀看客訴案相關問題.
+* 與 `EU-PM Alfie` 討論 `Winsystem` 母片準備相關問題.
+* 協助新人更換 `Flash`.
+* TODO
+  * [x] 協助新人觀看 `3TE6` LED 顯示問題.
+  * [x] 協助新人開卡(`3TE7`).
+  * [x] 協助 `PM-Becky` 準備及測試 `3TG6-P` pcie `DLMC` tool.
+  * [x] 歸還 `Ericission` 客訴品, 共 `9`pcs 於 `EU-Sales Jessica`.
+  * [x] 測試 `ansible` 相關安裝流程.
 
