@@ -1,0 +1,8 @@
+---
+- name: Copy mkmp TOOL
+  copy:
+    src: "{{ role_path }}/files/mkmp_1.4.4_linux_x86_x64"
+    dest: /home/ubuntu/
+    mode: 0777
+    owner: ubuntu
+    group: ubuntu

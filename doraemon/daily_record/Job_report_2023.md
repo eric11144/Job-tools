@@ -1511,6 +1511,7 @@
   * [x] 協助 `Kiwi` 架設 `sedutil` 測試環境.
   * [x] 詢問 `FW-RD Allen` 關於 `CFast 3SE3` 於 `APdata` 平台訊號相關問題.
   * [x] 修改 `ansible` 相關安裝流程.
+  * [x] 協助 `EU-FAE` 整理 `Fedora` 測試相關過程.
 
 # 2023-05-17
 * 參與 `FAE` 週會.
@@ -1518,6 +1519,7 @@
 * 協助 `Kiwi` 架設 `sedutil` 測試環境.
 * 詢問 `FW-RD Allen` 關於 `CFast 3SE3` 於 `APdata` 平台訊號相關問題.
 * 修改 `ansible` 相關安裝流程.
+* 協助 `EU-FAE` 整理 `Fedora` 測試相關過程.
 * TODO
   * [x] 參與 `3TE7` 身份認證問題討論會議.
   * [x] 協助 `PM-Davis` 測試 `ASBI-020` `100` 次, 並錄製 `PCIe` analyzer.
@@ -1540,3 +1542,26 @@
   * [x] 歸還 `Ericission` 客訴品, 共 `9`pcs 於 `EU-Sales Jessica`.
   * [x] 測試 `ansible` 相關安裝流程.
 
+# 2023-05-19
+* 協助新人觀看 `3TE6` LED 顯示問題.
+* 協助新人開卡(`3TE7`).
+* 協助 `PM-Becky` 準備及測試 `3TG6-P` pcie `DLMC` tool.
+* 歸還 `Ericission` 客訴品, 共 `9`pcs 於 `EU-Sales Jessica`.
+* 測試 `ansible` 相關安裝流程.
+* TODO
+  * [x] 協助 `EU-FAE` 測試 `Hanel` 平台, 以及錄製 `UART` log.
+  * [x] 測試 `ansible` 相關流程(`中文輸入法`).
+  * [x] 協助新人觀看 `3MG2-P` 相關客訴問題.
+  * [x] 協助 `Danny` 觀看 `ubuntu` 操作相關問題.
+  * [x] 將 `Hanel` 客訴品(`3SE3`)送於 `RMA` 做 `controller` 更換. 
+
+# 2023-05-22
+* 協助 `EU-FAE` 測試 `Hanel` 平台, 以及錄製 `UART` log.
+* 測試 `ansible` 相關流程(`中文輸入法`).
+* 協助新人觀看 `3MG2-P` 相關客訴問題.
+* 協助 `Danny` 觀看 `ubuntu` 操作相關問題.
+* 將 `Hanel` 客訴品(`3SE3`)送於 `RMA` 做 `controller` 更換. 
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [ ] 測試 `ansible` 相關安裝流程.
+  * [x] 協助新人觀看 `3TE7` DLMC 問題, 以及 `3MG2-P` 客訴問題.

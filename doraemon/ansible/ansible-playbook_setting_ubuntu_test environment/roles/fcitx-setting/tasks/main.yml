@@ -1,0 +1,15 @@
+---
+- name: Creating fcitx Configuration 
+  copy:
+    src: "{{ role_path }}/files/.xsessionrc"
+    dest: /home/ubuntu/
+    owner: ubuntu
+    group: ubuntu
+
+- name: Source xsessionrc
+  shell: "source /home/ubuntu/.xsessionrc"
+  args:
+     executable: /bin/bash
+
+- name: Change Keyboard input method system
+  command: im-config -n fcitx

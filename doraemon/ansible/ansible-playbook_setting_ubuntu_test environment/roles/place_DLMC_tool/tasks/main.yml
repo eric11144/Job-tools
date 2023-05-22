@@ -1,0 +1,16 @@
+---
+- name: Copy DLMC 32 TOOL
+  copy:
+    src: "{{ role_path }}/files/DLMicro_32"
+    dest: /home/ubuntu/
+    mode: 0777
+    owner: ubuntu
+    group: ubuntu
+
+- name: Copy DLMC 64 TOOL
+  copy:
+    src: "{{ role_path }}/files/DLMicro_64"
+    dest: /home/ubuntu/
+    mode: 0777
+    owner: ubuntu
+    group: ubuntu
