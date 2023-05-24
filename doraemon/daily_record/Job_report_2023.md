@@ -1563,5 +1563,34 @@
 * 將 `Hanel` 客訴品(`3SE3`)送於 `RMA` 做 `controller` 更換. 
 * TODO
   * [x] 參與 `FAE-team2` 週會.
-  * [ ] 測試 `ansible` 相關安裝流程.
+  * [x] 測試 `ansible` 相關安裝流程.
   * [x] 協助新人觀看 `3TE7` DLMC 問題, 以及 `3MG2-P` 客訴問題.
+  * [x] 協助新人回答 `RRD` 發生情境.
+
+# 2023-05-23
+* 參與 `FAE-team2` 週會.
+* 測試 `ansible` 相關安裝流程.
+* 協助新人觀看 `3TE7` DLMC 問題, 以及 `3MG2-P` 客訴問題.
+* 協助新人回答 `RRD` 發生情境.
+  * device 放入資料, 一段時間未上電使用.
+  * 在資料寫入過程中, 異常斷電.
+  * 當資料寫入一段時間, 後續只有讀取未寫入時.
+* TODO
+  * [x] 協助 `PM-Jack` 處理 `3TE7` `AES` 造成之問題.
+  * [x] 參與 `FAE` 週會.
+  * [x] 從 `RMA` 取回 `Hanel` 客訴品, 並做相關測試.
+  * [x] 與 `EU-PM Alfie` & `PM Jack` 討論 `Winsystem` 母片製作問題.
+  * [x] 協助 `FAE-Nick` 提供 `USB-analyzer` tool.
+  * [x] 將另外 `1`pcs `Hanel` 客訴品送置產線照 `X-ray`. 
+
+# 2023-05-24
+* 協助 `PM-Jack` 處理 `3TE7` `AES` 造成之問題.
+* 參與 `FAE` 週會.
+* 從 `RMA` 取回 `Hanel` 客訴品, 並做相關測試, 經過 `10`次上斷電測試, 並無看到相關異常.
+* 與 `EU-PM Alfie` & `PM Jack` 討論 `Winsystem` 母片製作問題.
+* 協助 `FAE-Nick` 提供 `USB-analyzer` tool.
+* 將另外 `1`pcs `Hanel` 客訴品送置產線照 `X-ray`, 經由測試, 並無看到相關異常狀況. 
+* TODO
+  * [x] 協助 `PM-Jack` 製作 `Winsystem` 母片以及錄製相關影片.
+  * [ ] 協助 `PM-Jack` 處理 `3TE7` `AES` 問題.
+  * [ ] 測試 `ansible` 相關流程(`var environment`).
