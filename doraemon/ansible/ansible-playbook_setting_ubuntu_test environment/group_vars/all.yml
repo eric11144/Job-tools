@@ -8,9 +8,4 @@ ansible_ssh_extra_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/n
 ansible_ssh_pass: ubuntu
 ansible_user: ubuntu
 
-eth0_mac_output:
-  stdout: will be overriden
-eth0_mac: '{{ eth0_mac_output.stdout }}'
-
-NTP_SERVER: time.google.com
 FILE_PATH: /home/ubuntu/

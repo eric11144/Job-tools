@@ -40,6 +40,14 @@
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
 
+- name: copy gparted deb package
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/tmp/apt-repo/gparted_1.3.1-1ubuntu1_amd64.deb"
+    dest: "{{ FILE_PATH }}package_tool"
+    mode: 0777
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
 - name: copy htop deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/htop_3.0.5-7build2_amd64.deb"
@@ -67,6 +75,14 @@
 - name: copy smartmontools deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/smartmontools_7.2-1build2_amd64.deb"
+    dest: "{{ FILE_PATH }}package_tool"
+    mode: 0777
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: copy terminator deb package
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/tmp/apt-repo/terminator_2.1.1-1_all.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -100,6 +116,11 @@
     deb: "{{ FILE_PATH }}package_tool/google-chrome-stable_current_amd64.deb"
   ignore_errors: true
 
+- name: Install gparted package
+  apt:
+    deb: "{{ FILE_PATH }}package_tool/gparted_1.3.1-1ubuntu1_amd64.deb"
+  ignore_errors: true
+
 - name: Install htop package
   apt:
     deb: "{{ FILE_PATH }}package_tool/htop_3.0.5-7build2_amd64.deb"
@@ -118,6 +139,11 @@
 - name: Install smartmontools package
   apt:
     deb: "{{ FILE_PATH }}package_tool/smartmontools_7.2-1build2_amd64.deb"
+  ignore_errors: true
+
+- name: Install terminator package
+  apt:
+    deb: "{{ FILE_PATH }}package_tool/terminator_2.1.1-1_all.deb"
   ignore_errors: true
 
 - name: Install vim package

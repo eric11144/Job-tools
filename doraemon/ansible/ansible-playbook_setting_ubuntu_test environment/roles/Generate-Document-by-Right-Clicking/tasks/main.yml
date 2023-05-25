@@ -6,10 +6,10 @@
 
 - name: Touch a Python file
   ansible.builtin.file:
-    path: "{{ FILE_PATH }}Templates/python.py"
+    path: "{{ FILE_PATH }}Templates/Python.py"
     state: touch
 
 - name: Touch a Script file
   ansible.builtin.file:
-    path: "{{ FILE_PATH }}Templates/script.sh"
+    path: "{{ FILE_PATH }}Templates/Script.sh"
     state: touch
