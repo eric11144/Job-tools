@@ -13,3 +13,4 @@ eth0_mac_output:
 eth0_mac: '{{ eth0_mac_output.stdout }}'
 
 NTP_SERVER: time.google.com
+FILE_PATH: /home/ubuntu/

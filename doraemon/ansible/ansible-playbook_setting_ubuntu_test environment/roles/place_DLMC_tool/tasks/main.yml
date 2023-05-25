@@ -2,15 +2,15 @@
 - name: Copy DLMC 32 TOOL
   copy:
     src: "{{ role_path }}/files/DLMicro_32"
-    dest: /home/ubuntu/
+    dest: "{{ FILE_PATH }}"
     mode: 0777
-    owner: ubuntu
-    group: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: Copy DLMC 64 TOOL
   copy:
     src: "{{ role_path }}/files/DLMicro_64"
-    dest: /home/ubuntu/
+    dest: "{{ FILE_PATH }}"
     mode: 0777
-    owner: ubuntu
-    group: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"

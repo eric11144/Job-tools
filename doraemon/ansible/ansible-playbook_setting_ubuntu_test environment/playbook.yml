@@ -4,12 +4,12 @@
   become: true
   strategy: free
   roles:
-  #- role: install-deb-packages
-  #- role: Generate-Document-by-Right-Clicking
+  - role: install-deb-packages
+  - role: Generate-Document-by-Right-Clicking
   - role: fcitx-setting
-  #- role: place_DLMC_tool
-  #- role: place_iSMART_tool
-  #- role: place_mkmp_tool
-  #- role: ntpdate-hwclock-writeback
-  #- role: autoremove-deb-packages
-  #- role: reboot
+  - role: place_DLMC_tool
+  - role: place_iSMART_tool
+  - role: place_mkmp_tool
+  - role: ntpdate-hwclock-writeback
+  - role: autoremove-deb-packages
+  - role: reboot

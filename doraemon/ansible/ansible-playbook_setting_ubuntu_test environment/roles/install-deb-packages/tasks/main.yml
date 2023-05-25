@@ -2,132 +2,125 @@
 
 - name: Create tool package file
   file:
-    path: /home/ubuntu/package_tool/
+    path: "{{ FILE_PATH }}package_tool/"
     state: directory
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy code deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/code_1.77.3-1681292746_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy fcitx deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/fcitx_1%3a4.2.9.8-5_all.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy fcitx-chewing deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/fcitx-chewing_0.2.3-1_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy google chrome deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/google-chrome-stable_current_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy htop deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/htop_3.0.5-7build2_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy net-tools deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy nvme-cli deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/nvme-cli_1.16-3ubuntu0.1_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
-
-- name: copy openssh-server deb package
-  ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/openssh-server_1%3a8.9p1-3ubuntu0.1_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
-    mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy smartmontools deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/smartmontools_7.2-1build2_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: copy vim deb package
   ansible.builtin.copy:
     src: "{{ role_path }}/files/tmp/apt-repo/vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb"
-    dest: "/home/ubuntu/package_tool"
+    dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
-    owner: ubuntu
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: Install code package
   apt:
-    deb: "/home/ubuntu/package_tool/code_1.77.3-1681292746_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/code_1.77.3-1681292746_amd64.deb"
   ignore_errors: true
 
 - name: Install fcitx package
   apt:
-    deb: "/home/ubuntu/package_tool/fcitx_1%3a4.2.9.8-5_all.deb"
+    deb: "{{ FILE_PATH }}package_tool/fcitx_1%3a4.2.9.8-5_all.deb"
   ignore_errors: true
 
 - name: Install fcitx-chewing package
   apt:
-    deb: "/home/ubuntu/package_tool/fcitx-chewing_0.2.3-1_amd64.deb"
-  ignore_errors: true
-
-- name: Install gnome-system-monitor package
-  apt:
-    deb: "/home/ubuntu/package_tool/gnome-system-monitor_42.0-1_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/fcitx-chewing_0.2.3-1_amd64.deb"
   ignore_errors: true
 
 - name: Install google-chrome package
   apt:
-    deb: "/home/ubuntu/package_tool/google-chrome-stable_current_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/google-chrome-stable_current_amd64.deb"
   ignore_errors: true
 
 - name: Install htop package
   apt:
-    deb: "/home/ubuntu/package_tool/htop_3.0.5-7build2_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/htop_3.0.5-7build2_amd64.deb"
   ignore_errors: true
 
 - name: Install net-tools package
   apt:
-    deb: "/home/ubuntu/package_tool/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb"
   ignore_errors: true
 
 - name: Install nvme-cli package
   apt:
-    deb: "/home/ubuntu/package_tool/nvme-cli_1.16-3ubuntu0.1_amd64.deb"
-  ignore_errors: true
-
-- name: Install openssh-server package
-  apt:
-    deb: "/home/ubuntu/package_tool/openssh-server_1%3a8.9p1-3ubuntu0.1_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/nvme-cli_1.16-3ubuntu0.1_amd64.deb"
   ignore_errors: true
 
 - name: Install smartmontools package
   apt:
-    deb: "/home/ubuntu/package_tool/smartmontools_7.2-1build2_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/smartmontools_7.2-1build2_amd64.deb"
   ignore_errors: true
 
 - name: Install vim package
   apt:
-    deb: "/home/ubuntu/package_tool/vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb"
   ignore_errors: true

@@ -1,15 +1,37 @@
 ---
-- name: Creating fcitx Configuration 
+- name: Creating xsessionrc Configuration 
   copy:
     src: "{{ role_path }}/files/.xsessionrc"
-    dest: /home/ubuntu/
-    owner: ubuntu
-    group: ubuntu
+    dest: "{{ FILE_PATH }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: Source xsessionrc
-  shell: "source /home/ubuntu/.xsessionrc"
+  shell: "source {{ FILE_PATH }}.xsessionrc"
   args:
      executable: /bin/bash
 
+- name: Remove xinputrc Configuration 
+  file:
+    path: "{{ FILE_PATH }}.xinputrc"
+    state: absent
+
+- name: Creating Change Keyboard input method system script 
+  copy:
+    src: "{{ role_path }}/files/change_keyboard_input_method_system.sh"
+    dest: "{{ FILE_PATH }}"
+    mode: 0777
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
 - name: Change Keyboard input method system
-  command: im-config -n fcitx
+  shell: "source change_keyboard_input_method_system.sh"
+  args:
+     executable: /bin/bash
+
+- name: Creating chewing Configuration 
+  copy:
+    src: "{{ role_path }}/files/profile"
+    dest: "{{ FILE_PATH }}.config/fcitx/"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
