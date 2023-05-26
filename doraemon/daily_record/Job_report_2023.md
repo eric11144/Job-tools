@@ -1592,5 +1592,39 @@
 * 將另外 `1`pcs `Hanel` 客訴品送置產線照 `X-ray`, 經由測試, 並無看到相關異常狀況. 
 * TODO
   * [x] 協助 `PM-Jack` 製作 `Winsystem` 母片以及錄製相關影片.
-  * [ ] 協助 `PM-Jack` 處理 `3TE7` `AES` 問題.
-  * [ ] 測試 `ansible` 相關流程(`var environment`).
+  * [x] 協助 `PM-Jack` 處理 `3TE7` `AES` 問題.
+  * [x] 測試 `ansible` 相關流程(`var environment`).
+  * [x] 協助 `EU-Sales` 將 `SIMOS` 客訴品送至 `RMA`( `mSATA 3TG6-P`* 1pcs & `CFast card 3SE3`* 35pcs ).
+  * [x] 轉交母片於 `PE-Peiwen`.
+
+# 2023-05-25
+* 協助 `PM-Jack` 製作 `Winsystem` 母片以及錄製相關影片.
+* 協助 `PM-Jack` 處理 `3TE7` `AES` 問題.
+* 測試 `ansible` 相關流程(`var environment`).
+* 協助 `EU-Sales` 將 `SIMOS` 客訴品送至 `RMA`( `mSATA 3TG6-P`* 1pcs & `CFast card 3SE3`* 35pcs ).
+* 轉交母片於 `PE-Peiwen`.
+* TODO
+  * [x] 協助 `Kiwi` 將 `Doby` 客訴品 `USB 3SE` 送至產線照 `X-ray`.
+  * [x] 新增 `ansible` 相關流程( Add `gparted` `generate the file with right click` & update environment ).
+  * [x] 協助新人測試 `3TE7` 關於 `S21606` & `S23505` DLMC 過程.
+  * [x] 測試 `Hanel` 客訴案.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `FW-RD Adson` 討論 `Fedora` 異常功能修改狀況.
+  * [x] 與 `SW-RD` Allen 討論 `DLMC V3.9.0` 相關修改功能(`Get id table by 4 options`).
+
+# 2023-05-26
+* 協助 `Kiwi` 將 `Doby` 客訴品 `USB 3SE` 送至產線照 `X-ray`.
+* 新增 `ansible` 相關流程( Add `gparted` `generate the file with right click` & update environment ).
+* 協助新人測試 `3TE7` 關於 `S21606` & `S23505` DLMC 過程.
+* 測試 `Hanel` 客訴案, 並無看到異常現象.
+* 參與 `EU-FAE` 週會.
+* 與 `FW-RD Adson` 討論 `Fedora` 異常功能修改狀況.
+* 與 `SW-RD` Allen 討論 `DLMC V3.9.0` 相關修改功能(`Get id table by 4 options`).
+* TODO
+  * [x] 協助 `FW-RD Allen` 測試 `Avionics` 客訴案.
+  * [x] 協助 `EU-FAE` 提供 `Vector` 相關測速結果.
+  * [x] 教導 `工讀生` 測試 `3TE6` FW `V23505` 於 `AIOT` 平台認碟測試手法.
+  * [x] 協助新人與 `FW-RD Adson` 討論 `SBC booting` 過慢問題.
+  * [x] 協助 `EU-FAE` 撰寫 `DLMC V3.9.0` 相關操作流程以及差異.
+  * [x] 與 `SW-RD` Allen 討論 `DLMC V3.9.0` 相關修改功能.
+  * [x] 與 `EU-FAE YingXiang` & `PM-Jack` 討論 `AES` 開啟造成 `Disk` 無法被 access 相關問題及操作流程.
