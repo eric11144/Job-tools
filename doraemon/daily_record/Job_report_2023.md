@@ -1655,6 +1655,7 @@
 * TODO
   * [x] 轉送 `Hanel` 客訴案之 `device` 於 `RMA` 維修.
   * [x] 協助 `PE-Peiwen` 將 `mSATA` 開為 `ext4`.
-  * [ ] 協助 `FW-RD Allen` 架設 `FED230126002` `3TE7 SATA Slim` 測試環境.
+  * [x] 協助 `FW-RD Allen` 架設 `FED230126002` `3TE7 SATA Slim` 測試環境.
   * [x] 協助新人觀看 `DLMC` tool 相關修改內容.
   * [x] 協助 `FAE` team 整理實驗室相關物品.
+  * [x] 協助 `PM-Jack` 製作 `Winsystem` 相關母碟.
