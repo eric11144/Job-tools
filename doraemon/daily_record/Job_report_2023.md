@@ -1628,3 +1628,33 @@
   * [x] 協助 `EU-FAE` 撰寫 `DLMC V3.9.0` 相關操作流程以及差異.
   * [x] 與 `SW-RD` Allen 討論 `DLMC V3.9.0` 相關修改功能.
   * [x] 與 `EU-FAE YingXiang` & `PM-Jack` 討論 `AES` 開啟造成 `Disk` 無法被 access 相關問題及操作流程.
+
+# 2023-05-29
+* 協助 `FW-RD Allen` 測試 `Avionics` 客訴案.
+* 協助 `EU-FAE` 提供 `Vector` 相關測速結果.
+* 教導 `工讀生` 測試 `3TE6` FW `V23505` 於 `AIOT` 平台認碟測試手法.
+* 協助新人與 `FW-RD Adson` 討論 `SBC booting` 過慢問題.
+* 協助 `EU-FAE` 撰寫 `DLMC V3.9.0` 相關操作流程以及差異.
+* 與 `SW-RD` Allen 討論 `DLMC V3.9.0` 相關修改功能.
+* 與 `EU-FAE YingXiang` & `PM-Jack` 討論 `AES` 開啟造成 `Disk` 無法被 access 相關問題及操作流程.
+* TODO
+  * [x] 協助 `Sales-Walt` 提供 `Kontron` 客訴案相關報告.
+  * [x] 參與 `FAE` team 實驗室搬遷.
+  * [x] 與 `Kiwi` 討論目前客訴案進度.
+  * [x] 協助新人詢問 `FW-RD Adson` 關於 UART log 顯示相關內容( `NvmeCreate:id:1 size:7f` & `SetfFid:7,DW11:0 sv:0` ).
+  * [x] 處理 `Hanel` 客訴案之 `device` 焊接 `power sequence`.
+
+# 2023-05-30
+* 協助 `Sales-Walt` 提供 `Kontron` 客訴案相關報告.
+* 參與 `FAE` team 實驗室搬遷.
+* 與 `Kiwi` 討論目前客訴案進度.
+* 協助新人詢問 `FW-RD Adson` 關於 UART log 顯示相關內容( `NvmeCreate:id:1 size:7f` & `SetfFid:7,DW11:0 sv:0` ).
+  * `NvmeCreate:id:1 size:7f` -> 連到 `bridge`.
+  * `SetfFid:7,DW11:0 sv:0` -> 連到 `host` 端 `bios`.
+* 處理 `Hanel` 客訴案之 `device` 焊接 `power sequence`, 過程中發生短路問題, 導致 `device` 無法被讀取.
+* TODO
+  * [x] 轉送 `Hanel` 客訴案之 `device` 於 `RMA` 維修.
+  * [x] 協助 `PE-Peiwen` 將 `mSATA` 開為 `ext4`.
+  * [ ] 協助 `FW-RD Allen` 架設 `FED230126002` `3TE7 SATA Slim` 測試環境.
+  * [x] 協助新人觀看 `DLMC` tool 相關修改內容.
+  * [x] 協助 `FAE` team 整理實驗室相關物品.
