@@ -1659,3 +1659,65 @@
   * [x] 協助新人觀看 `DLMC` tool 相關修改內容.
   * [x] 協助 `FAE` team 整理實驗室相關物品.
   * [x] 協助 `PM-Jack` 製作 `Winsystem` 相關母碟.
+
+# 2023-05-31
+* 轉送 `Hanel` 客訴案之 `device` 於 `RMA` 維修.
+* 協助 `PE-Peiwen` 將 `mSATA` 開為 `ext4`.
+* 協助 `FW-RD Allen` 架設 `FED230126002` `3TE7 SATA Slim` 測試環境.
+* 協助新人觀看 `DLMC` tool 相關修改內容.
+* 協助 `FAE` team 整理實驗室相關物品.
+* 協助 `PM-Jack` 製作 `Winsystem` 相關母碟.
+* TODO
+  * [x] 協助 `William` 觀看安裝 `SATA analyzer` 相關問題.
+  * [x] 量測 `Hanel` 客訴案之 `device`, 並將 `power sequence` 相關訊號線焊上.
+  * [x] 請教 `Jay` 關於 `CFast 3SE3` 線路圖相關問題.
+  * [x] 協助新人觀看 `EU-FAE` 對於 `DLMC` tool 相關問題, 以及釐清各個工具的差異性. 
+  * [x] 透過 `FIO` 測試 `EU` `FED230126002` `3TE7 SATA Slim` 客訴案相關流程.
+
+# 2023-06-01
+* 協助 `William` 觀看安裝 `SATA analyzer` 相關問題.
+* 量測 `Hanel` 客訴案之 `device`, 並將 `power sequence` 相關訊號線焊上.
+* 請教 `Jay` 關於 `CFast 3SE3` 線路圖相關問題.
+* 協助新人觀看 `EU-FAE` 對於 `DLMC` tool 相關問題, 以及釐清各個工具的差異性. 
+* 透過 `FIO` 測試 `EU` `FED230126002` `3TE7 SATA Slim` 客訴案相關流程, 尚未看到相同異常現象.
+* TODO
+  * [x] 協助 `PM-Jack` 測試 `3TE7` 設定 `AES` password 後, 無法讀取檔案現象.
+  * [x] 協助 `Danny` 觀看 `Linux` 相關問題.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助新人詢問關於 `DLMC` tool 操作手冊相關問題.
+  * [x] 協助新人測試 `3ME4` 透過 `DLMC` tool 更新 `FW`( `L17606` -> `L20420` ).
+  * [x] 協助新人回覆 `智邦` 提出相關之問題.
+  * [x] 量測 `Hanel` 客訴案之 `device` `power sequence`, 並將其結果截圖.
+
+# 2023-06-02
+* 協助 `PM-Jack` 測試 `3TE7` 設定 `AES` password 後, 無法讀取檔案現象, 現象複製後, `FW RD` 回覆關於 `AES` unlocked 邏輯有錯誤, 並做後續修正.
+* 協助 `Danny` 觀看 `Linux` 相關問題.
+* 參與 `EU-FAE` 週會.
+* 協助新人詢問關於 `DLMC` tool 操作手冊相關問題.
+* 協助新人測試 `3ME4` 透過 `DLMC` tool 更新 `FW`( `L17606` -> `L20420` ).
+* 協助新人回覆 `智邦` 提出相關之問題.
+* 量測 `Hanel` 客訴案之 `device` `power sequence`, 並將其結果截圖, 後續發現 `RESET` 訊號不能量測 `CD` 點位, 故需重量.
+* TODO
+  * [x] 量測 `Hanel` 客訴案新退回之 `3pcs` `device`.
+  * [x] 量測 `Hanel` 客訴案新退回之 `device`, 並將 `power sequence` 相關訊號線焊上.
+  * [x] 協助 `EP-Peiwen` 處理 `USB` type( `ext3 128K` ).
+  * [x] 協助 `EU-FAE Jason` 提供 `3TE6-DEM28-02TDD1KCAQF` 相關 `FW` bin file.
+  * [x] 協助新人 setting Linux OS 於 `3TE6` device.
+  * [x] 教導新人操作 `COPY` mechine.
+  * [x] 與新人討論 `DLMC` tool 手冊, 並將其文件提供給 `EU-FAE`.
+  * [x] 領取 `SMI` 送分析知客訴品.
+  * [x] 協助 `EU-Sales` 回覆關於 `SIMOS` `CFast` 35pcs 之客訴問題.
+
+# 2023-06-03
+* 量測 `Hanel` 客訴案新退回之 `3pcs` `device`.
+* 量測 `Hanel` 客訴案新退回之 `device`, 並將 `power sequence` 相關訊號線焊上.
+* 協助 `EP-Peiwen` 處理 `USB` type( `ext3 128K` ).
+* 協助 `EU-FAE Jason` 提供 `3TE6-DEM28-02TDD1KCAQF` 相關 `FW` bin file.
+* 協助新人 setting Linux OS 於 `3TE6` device.
+* 教導新人操作 `COPY` mechine.
+* 與新人討論 `DLMC` tool 手冊, 並將其文件提供給 `EU-FAE`.
+* 領取 `SMI` 送分析知客訴品, 後續發現產品寄錯.
+* 協助 `EU-Sales` 回覆關於 `SIMOS` `CFast` 35pcs 之客訴問題.
+* TODO 
+  * [ ] 量測 `Hanel` 客訴案新退回之 `device` `power sequence`.
+  * [ ] 協助 `EU-FAE` 測試 `3TE6` `V2262001` 關於 `Fedora` `NSID` 重複任不到碟之問題.
