@@ -1708,7 +1708,7 @@
   * [x] 領取 `SMI` 送分析知客訴品.
   * [x] 協助 `EU-Sales` 回覆關於 `SIMOS` `CFast` 35pcs 之客訴問題.
 
-# 2023-06-03
+# 2023-06-05
 * 量測 `Hanel` 客訴案新退回之 `3pcs` `device`.
 * 量測 `Hanel` 客訴案新退回之 `device`, 並將 `power sequence` 相關訊號線焊上.
 * 協助 `EP-Peiwen` 處理 `USB` type( `ext3 128K` ).
@@ -1719,5 +1719,44 @@
 * 領取 `SMI` 送分析知客訴品, 後續發現產品寄錯.
 * 協助 `EU-Sales` 回覆關於 `SIMOS` `CFast` 35pcs 之客訴問題.
 * TODO 
-  * [ ] 量測 `Hanel` 客訴案新退回之 `device` `power sequence`.
-  * [ ] 協助 `EU-FAE` 測試 `3TE6` `V2262001` 關於 `Fedora` `NSID` 重複任不到碟之問題.
+  * [x] 量測 `Hanel` 客訴案新退回之 `device` `power sequence`.
+  * [x] 協助 `EU-FAE` 測試 `3TE6` `V2262001` 關於 `Fedora` `NSID` 重複任不到碟之問題.
+  * [x] 參加 `FAE-team2` 週會.
+  * [x] 協助 `Kiwi` 觀看 `喬鼎` `3ME4` 客訴品.
+  * [x] 協助新人觀看測試平台相關問題.
+  * [x] 處理 `Ericssion` `USB` 送至 `SMI` 分析品領回.
+  * [x] 協助新人送修 `CPU`.
+
+# 2023-06-06
+* 量測 `Hanel` 客訴案新退回之 `device` `power sequence`.
+* 協助 `EU-FAE` 測試 `3TE6` `V2262001` 關於 `Fedora` `NSID` 重複任不到碟之問題.
+* 參加 `FAE-team2` 週會.
+* 協助 `Kiwi` 觀看 `喬鼎` `3ME4` 客訴品, 已請業務幫忙詢問相關問題.
+* 協助新人觀看測試平台相關問題, 後續發現為 `CPU` 問題.
+* 處理 `Ericssion` `USB` 送至 `SMI` 分析品領回.
+* 協助新人送修 `CPU`.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `PM-Jack` 處理 `EU` `Winsystem` 母片製作 `2` pcs.
+  * [x] 錄製 `喬鼎` `3ME4` 客訴品 `Elog`.
+  * [x] 提供送修 `CPU` 以及相關風扇. 
+  * [x] 協助 `EU-FAE` 測試 `3TE6` `V22620Z1` 於 `Fedora` OS, 是否解決 `NSID` 相同造成無法辨識問題.
+  * [x] 測試實驗平台異常狀況.
+  * [x] 協助新人 setting `Ubuntu 22.04` 於 `3TE6` `4` pcs.
+  * [x] 協助新人詢問 `FW-RD Adson` 關於 `3TE6` `DLMC` `action commit` 問題.
+  * [x] 協助新人將 `3TE6` 測試相關結果影片上傳至 `Google Drive`.
+
+# 2023-06-07
+* 參與 `FAE` 週會.
+* 協助 `PM-Jack` 處理 `EU` `Winsystem` 母片製作 `2` pcs, 並轉交給 `EP` 相關人員.
+* 錄製 `喬鼎` `3ME4` 客訴品 `Elog`.
+* 提供送修 `CPU` 以及相關風扇. 
+* 協助 `EU-FAE` 測試 `3TE6` `V22620Z1` 於 `Fedora` OS, 是否解決 `NSID` 相同造成無法辨識問題, 經由測試, 並無看到相關問題, 已將結果整理並提供給 `EU-FAE`.
+* 測試實驗平台異常狀況, 後續發現為主機板供電於 `CPU` 有異常, 另外一片測試平台為 `CPU` 不支援 `內顯`, 需額外裝顯示卡.
+* 協助新人 setting `Ubuntu 22.04` 於 `3TE6` `4` pcs.
+* 協助新人詢問 `FW-RD Adson` 關於 `3TE6` `DLMC` `action commit` 問題, 經由討論後, 只能對 `device` 下 `action commit` `0` & `1`.
+* 協助新人將 `3TE6` 測試相關結果影片上傳至 `Google Drive`. 
+* TODO
+  * [ ] 建立 `TTS` 請 `FW-RD` 協助觀看 `喬鼎` `3ME4` 客訴品 `Elog`.
+  * [ ] 架設 `3TE7` 每次寫入 `4GB` file 測試環境, 觀看是否可看到與客戶相同之問題.
+
