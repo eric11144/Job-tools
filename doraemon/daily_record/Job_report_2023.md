@@ -1757,6 +1757,47 @@
 * 協助新人詢問 `FW-RD Adson` 關於 `3TE6` `DLMC` `action commit` 問題, 經由討論後, 只能對 `device` 下 `action commit` `0` & `1`.
 * 協助新人將 `3TE6` 測試相關結果影片上傳至 `Google Drive`. 
 * TODO
-  * [ ] 建立 `TTS` 請 `FW-RD` 協助觀看 `喬鼎` `3ME4` 客訴品 `Elog`.
-  * [ ] 架設 `3TE7` 每次寫入 `4GB` file 測試環境, 觀看是否可看到與客戶相同之問題.
+  * [x] 建立 `TTS` 請 `FW-RD` 協助觀看 `喬鼎` `3ME4` 客訴品 `Elog`.
+  * [x] 架設以及撰寫 `3TE7` 每次寫入 `4GB` file 測試環境, 觀看是否可看到與客戶相同之問題.
+  * [x] 於 `RMA` 取回 `Hanel` 客訴案之 `device`, 並透過 `copy mechine` 於客戶平台測試.
+  * [x] 協助新人使用 `copy mechine` 於 `3TE6`.
+  * [x] 協助新人執行 `3TE7` `Burnintest`.
+  * [ ] 協助 `Kiwi` 更新 `3TG8-P` FW version.
 
+# 2023-06-08
+* 建立 `TTS` 請 `FW-RD` 協助觀看 `喬鼎` `3ME4` 客訴品 `Elog`.
+* 架設以及撰寫 `3TE7` 每次寫入 `4GB` file 測試環境, 觀看是否可看到與客戶相同之問題.
+* 於 `RMA` 取回 `Hanel` 客訴案之 `device`, 並透過 `copy mechine` 於客戶平台測試, 測試上斷 `10`次, 並無看到相同問題.
+* 協助新人使用 `copy mechine` 於 `3TE6`.
+* 協助新人執行 `3TE7` `Burnintest`.
+* TODO  
+  * [x] 測試 `喬鼎` `3ME4` 客訴品, 看是否與客戶遇到之問題相同.
+  * [x] 測試 `3TE7` 每次寫入 `4GB` file, 觀看是否可看到與客戶相同之問題.
+  * [x] 協助 `Danny` 觀看 `ubuntu 16.04` kernel 更新問題.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-06-09
+* 測試 `喬鼎` `3ME4` 客訴品, 看是否與客戶遇到之問題相同, 經由測試開關機 `10` 次, 皆無看到問題, 已錄製影片於 `Sales-Leslie`.
+* 測試 `3TE7` 每次寫入 `4GB` file, 觀看是否可看到與客戶相同之問題, 全碟寫滿放置一段時間後, `disk` 進入 `Loader mode`.
+* 協助 `Danny` 觀看 `ubuntu 16.04` kernel 更新問題.
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [x] 錄製 `3TE7` 每次寫入 `4GB` file `UART` log.
+  * [x] 協助 `Kiwi` 更新 `3TG8-P` FW version.
+  * [x] 測試並撰寫 `3TG8-P` FW update 操作手冊.
+  * [x] 協助 `EU` 詢問 `Neousys-Tech` 遇到之客訴案測試手法.
+  * [x] 向 `Sales-Leslie` 回報 `3ME4` 測試狀況.
+  * [x] 協助 `Danny` 查找 `sd card` controller.
+
+# 2023-06-12
+* 錄製 `3TE7` 每次寫入 `4GB` file `UART` log.
+* 協助 `Kiwi` 更新 `3TG8-P` FW version.
+* 測試並撰寫 `3TG8-P` FW update 操作手冊.
+* 協助 `EU` 詢問 `Neousys-Tech` 遇到之客訴案測試手法.
+* 向 `Sales-Leslie` 回報 `3ME4` 測試狀況.
+* 協助 `Danny` 查找 `sd card` controller.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀看 `THALES` 提供測試 `3TE7 SATA Slim` 之 shell script.
+  * [x] 詢問原廠 `MK` 關於 `Hanel` 平台認碟相關問題.
+  * [x] 觀看 `GLYN` 客訴品 `SATADOM 3ME3` 狀況.
