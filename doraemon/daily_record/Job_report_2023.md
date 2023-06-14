@@ -1801,3 +1801,46 @@
   * [x] 觀看 `THALES` 提供測試 `3TE7 SATA Slim` 之 shell script.
   * [x] 詢問原廠 `MK` 關於 `Hanel` 平台認碟相關問題.
   * [x] 觀看 `GLYN` 客訴品 `SATADOM 3ME3` 狀況.
+  * [x] 幫忙 `EU-FAE` 詢問 `FW-RD Adson` 關於 `Fedora` 平台 FW 問題.
+
+# 2023-06-13
+* 參與 `FAE-team2` 週會.
+* 觀看 `THALES` 提供測試 `3TE7 SATA Slim` 之 shell script, 但後續發生平台問題, 導致無法驗證, 已經平台送修.
+* 詢問原廠 `MK` 關於 `Hanel` 平台認碟相關問題.
+* 觀看 `GLYN` 客訴品 `SATADOM 3ME3` 狀況.
+* 幫忙 `EU-FAE` 詢問 `FW-RD Adson` 關於 `Fedora` 平台 FW 問題.
+* TODO
+  * [x] 回報 `喬鼎` `3ME4` 測試狀況, 並將 `device` 轉交於業務.
+  * [x] 測試 `THALES` 提供測試 `3TE7 SATA Slim` 之 shell script 於客戶平台.
+  * [x] 處理 `Hanel` 客訴案, 須將客戶平台與 `device` 送於原廠分析, 並整理相關實驗過程.
+  * [x] 詢問 `FW-RD` 關於 `Hanel` 客訴案之 `FW` 相關測試.
+  * [x] 統整採購清單.
+  * [x] 協助新人處理 `mSATA` 轉接相關問題.
+
+# 2023-06-14
+* 回報 `喬鼎` `3ME4` 測試狀況, 並將 `device` 轉交於業務.
+* 測試 `THALES` 提供測試 `3TE7 SATA Slim` 之 shell script 於客戶平台, 但因平台發生問題, 無法開機進行驗證, 故將平台送修, 準備 `Samsung 970` & `M.2 3TE7` 來做實驗對照組.
+* 處理 `Hanel` 客訴案, 須將客戶平台與 `device` 送於原廠分析, 並整理相關實驗過程.
+* 詢問 `FW-RD` 關於 `Hanel` 客訴案之 `FW` 相關測試, 並將其整理提供給原廠人員.
+* 統整採購清單.
+* 協助新人處理 `mSATA` 轉接相關問題.
+* TODO
+  * [x] 準備 `THALES` 客訴案所需之 `2`pcs `3TE7 BiCS5` device, 並執行客戶提供之 `script`.
+  * [x] 整理 `THALES` 客訴案所做的實驗過程, 並參與 `EU` 討論會議.
+  * [x] 與 `Jason` 討論 `Vector` RAID 測試結果.
+  * [x] 協助新人處理 `Redhat` 安裝, `Windows IOT` 安裝於 `3TE6` & `AIOT` 平台, 以及回覆相關問題.
+  * [x] 統整採購清單.
+  * [x] 前往 `RMA` 取回送修之 `3TE7`, 並重開卡.
+  * [x] 協助 `Jay` 查找提供給 `超恩` 之 `FW` bin file.
+
+# 2023-06-15
+* 準備 `THALES` 客訴案所需之 `2`pcs `3TE7 BiCS5` device, 並執行客戶提供之 `script`.
+* 整理 `THALES` 客訴案所做的實驗過程, 並參與 `EU` 討論會議, 後續須將測試流程整理出來.
+* 與 `Jason` 討論 `Vector` RAID 測試結果, 後續發現 `Write` 測試參數以及 `RAID` capacity 需做修改, 並重起測試.
+* 協助新人處理 `Redhat` 安裝, `Windows IOT` 安裝於 `3TE6` & `AIOT` 平台, 以及回覆相關問題.
+* 統整採購清單.
+* 前往 `RMA` 取回送修之 `3TE7`, 並重開卡.
+* 協助 `Jay` 查找提供給 `超恩` 之 `FW` bin file.
+* TODO
+  * [ ] 觀看 `Vector` RAID 測試結果.
+  * [ ] 觀看 `THALES` 客訴案於兩個測試平台狀況.
