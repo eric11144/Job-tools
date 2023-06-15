@@ -1842,5 +1842,23 @@
 * 前往 `RMA` 取回送修之 `3TE7`, 並重開卡.
 * 協助 `Jay` 查找提供給 `超恩` 之 `FW` bin file.
 * TODO
+  * [x] 觀看 `Vector` RAID 測試結果.
+  * [x] 觀看 `THALES` 客訴案於兩個測試平台狀況.
+  * [x] 協助 `EU` 處理 `Ericssion` USB 客訴案.
+  * [x] 參與 `FAE-team2` 績效討論會議.
+  * [x] 協助新人處理 `CFast` & `AIOT` 平台客訴測試案.
+  * [x] 填寫績效考核內容.
+
+# 2023-06-16
+* 觀看 `Vector` RAID 測試結果, 後續 `EU-FAE` 回報客戶測試參數需進行調整, 經過調整後, 已開始測試.
+  * `Initialzation Method` -> `Quick init`.
+  * `Capacity` -> `14495514` MB.
+  * `Disk Cache Policy` -> `Enable`.
+  * `Select All` -> Select.
+* 觀看 `THALES` 客訴案於兩個測試平台狀況, 目前皆正常.
+* 協助 `EU` 處理 `Ericssion` USB 客訴案, 可正常辨識, `SMART` 已撈取, 並請 `SMI` 相關人員協助照 `X-ray`( `Controller`, `Flash`, `Controller` ).
+* 參與 `FAE-team2` 績效討論會議.
+* 協助新人處理 `CFast` & `AIOT` 平台客訴測試案.
+* 填寫績效考核內容.
+* TODO
   * [ ] 觀看 `Vector` RAID 測試結果.
-  * [ ] 觀看 `THALES` 客訴案於兩個測試平台狀況.
