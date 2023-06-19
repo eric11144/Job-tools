@@ -1878,7 +1878,19 @@
 * TODO  
   * [x] 回覆原廠 `MK` 關於 `Hanel` 平台相關問題.
   * [x] 協助 `福哥` 將 `Neousys` 平台取回, 並送回原廠更換 `CPU`.
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 協助新人處理 `3SE2-P` `JTAG` 訊號線.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人處理 `3SE2-P` `JTAG` 訊號線.
   * [x] 觀看 `THALES` 客訴案於兩個測試平台狀況.
-  * [ ] 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
+  * [x] 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
+  * [x] 與 `EU-FAE` & `EU-PM` 討論 `Ericssion` USB 分析進度.
+
+# 2023-06-18
+* 回覆原廠 `MK` 關於 `Hanel` 平台相關問題.
+* 協助 `福哥` 將 `Neousys` 平台取回, 並送回原廠更換 `CPU`.
+* 參與 `FAE-team2` 週會.
+* 協助新人處理 `3SE2-P` `JTAG` 訊號線.
+* 觀看 `THALES` 客訴案於兩個測試平台狀況, 尚未看到異常.
+* 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
+* 與 `EU-FAE` & `EU-PM` 討論 `Ericssion` USB 分析進度.
+* TODO
+  * [ ] 撰寫 `Ericssion` USB 分析報告.
