@@ -1861,4 +1861,24 @@
 * 協助新人處理 `CFast` & `AIOT` 平台客訴測試案.
 * 填寫績效考核內容.
 * TODO
-  * [ ] 觀看 `Vector` RAID 測試結果.
+  * [x] 觀看 `Vector` RAID 測試結果.
+  * [x] 前往 `RMA` 取回 `Ericssion` 送回之 `device`, 與相關人員討論 `Connector` 問題, 並整理初步分析相關結果.
+  * [x] 觀看 `THALES` 客訴案於兩個測試平台狀況.
+  * [x] 持續追蹤 `MK` 原廠是否可以協助分析 `Hanel` 平台.
+  * [x] 協助 `Sales-Jolie` 透過 `cmd-diskpart` 將 `3TG6-P` 做 `Initialize format`.
+  * [x] 協助新人錄製 `3SE2-P` 相關測試影片.
+
+# 2023-06-17
+* 觀看 `Vector` RAID 測試結果.
+* 前往 `RMA` 取回 `Ericssion` 送回之 `device`, 與相關人員討論 `Connector` 問題, 並整理初步分析相關結果.
+* 觀看 `THALES` 客訴案於兩個測試平台狀況.
+* 持續追蹤 `MK` 原廠是否可以協助分析 `Hanel` 平台.
+* 協助 `Sales-Jolie` 透過 `cmd-diskpart` 將 `3TG6-P` 做 `Initialize format`.
+* 協助新人錄製 `3SE2-P` 相關測試影片.
+* TODO  
+  * [x] 回覆原廠 `MK` 關於 `Hanel` 平台相關問題.
+  * [x] 協助 `福哥` 將 `Neousys` 平台取回, 並送回原廠更換 `CPU`.
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 協助新人處理 `3SE2-P` `JTAG` 訊號線.
+  * [x] 觀看 `THALES` 客訴案於兩個測試平台狀況.
+  * [ ] 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
