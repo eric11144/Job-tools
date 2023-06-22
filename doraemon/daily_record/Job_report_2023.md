@@ -1868,7 +1868,7 @@
   * [x] 協助 `Sales-Jolie` 透過 `cmd-diskpart` 將 `3TG6-P` 做 `Initialize format`.
   * [x] 協助新人錄製 `3SE2-P` 相關測試影片.
 
-# 2023-06-17
+# 2023-06-19
 * 觀看 `Vector` RAID 測試結果.
 * 前往 `RMA` 取回 `Ericssion` 送回之 `device`, 與相關人員討論 `Connector` 問題, 並整理初步分析相關結果.
 * 觀看 `THALES` 客訴案於兩個測試平台狀況.
@@ -1883,8 +1883,9 @@
   * [x] 觀看 `THALES` 客訴案於兩個測試平台狀況.
   * [x] 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
   * [x] 與 `EU-FAE` & `EU-PM` 討論 `Ericssion` USB 分析進度.
+  * [x] 協助組內處理採購清單.
 
-# 2023-06-18
+# 2023-06-20
 * 回覆原廠 `MK` 關於 `Hanel` 平台相關問題.
 * 協助 `福哥` 將 `Neousys` 平台取回, 並送回原廠更換 `CPU`.
 * 參與 `FAE-team2` 週會.
@@ -1892,5 +1893,33 @@
 * 觀看 `THALES` 客訴案於兩個測試平台狀況, 尚未看到異常.
 * 協助 `EU-FAE` 回報 `Vector` RAID 測試結果.
 * 與 `EU-FAE` & `EU-PM` 討論 `Ericssion` USB 分析進度.
+* 協助組內處理採購清單.
 * TODO
-  * [ ] 撰寫 `Ericssion` USB 分析報告.
+  * [x] 撰寫 `Ericssion` USB 分析報告.
+  * [x] 協助 `EU-PM` 詢問 `Ericssion` USB `date code` & `controller date code`.
+  * [x] 回報 `EU-Sales Sylvain` 關於 `THALES` 客訴案於兩個測試平台狀況.
+  * [x] 協助新人測試 `3TE6` FW `V20B09` & `V22620` 於 `ASCI-020` 平台.
+  * [x] 協助新人處理 `3MG2-P` 焊接 `EYES` 點位訊號線.
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `MK-Vector` 討論 `Hanel` 平台分析狀況.
+  * [x] 協助 `EU-FAE` 處理 `Rosch computer` 關於 `Fedora` 平台 `3TE6` `2` pcs 同時插上辨識問題.
+  * [x] 請教 `Jay` 關於 `WinPE` & `WinIOT` image 相關問題.
+
+# 2023-06-21
+* 撰寫 `Ericssion` USB 分析報告, 已寄出一版, 事後補上 `BurninTest`.
+* 協助 `EU-PM` 詢問 `Ericssion` USB `date code` & `controller date code`, 詢問完 `Toby`, 已將結果提供.
+* 回報 `EU-Sales Sylvain` 關於 `THALES` 客訴案於兩個測試平台狀況, 皆無看到異常, 目前等待平台維修回來.
+* 協助新人測試 `3TE6` FW `V20B09` & `V22620` 於 `ASCI-020` 平台, 發現為 `warm boot` 造成 `SW reset` & `HW reset` 相沖問題.
+* 協助新人處理 `3MG2-P` 焊接 `EYES` 點位訊號線.
+* 參與 `FAE` 週會.
+* 與 `MK-Vector` 討論 `Hanel` 平台分析狀況, 討論結果為無法分析平台訊號, 對於 `MK` 來說是平台訊號過弱, 於一般平台測試是沒問題的.
+* 協助 `EU-FAE` 處理 `Rosch computer` 關於 `Fedora` 平台 `3TE6` `2` pcs 同時插上辨識問題, 已將結果錄製影片, 並將 `device` 轉接於業助送回.
+* 請教 `Jay` 關於 `WinPE` & `WinIOT` image 相關問題.
+* TODO
+  * [x] 借出 `3TE7` `2.5 SATA` & `SATA Slim` & `mSATA` 3 種 type.
+  * [x] 補上 `BurninTest` 結果圖於 `Ericssion` USB 分析報告.
+  * [x] 整理歷年客訴案件處理狀況, 以及開發相關軟體清單.
+  * [x] 協助 `Sales-Jamie` 回答關於 `宸曜` 平台測試狀況.
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助新人詢問 `RD-Ray` 處理 `3TE7` FW Bin 調整為 `SATA 1.5G`.
+  * [x] 協助新人測試 `3TE6` FW `V22620X1` & `V22620` 於 `ASCI-020` 平台.
