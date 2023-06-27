@@ -1923,3 +1923,32 @@
   * [x] 參與 `FAE` 月會.
   * [x] 協助新人詢問 `RD-Ray` 處理 `3TE7` FW Bin 調整為 `SATA 1.5G`.
   * [x] 協助新人測試 `3TE6` FW `V22620X1` & `V22620` 於 `ASCI-020` 平台.
+
+# 2023-06-26
+* 借出 `3TE7` `2.5 SATA` & `SATA Slim` & `mSATA` 3 種 type.
+* 補上 `BurninTest` 結果圖於 `Ericssion` USB 分析報告.
+* 整理歷年客訴案件處理狀況, 以及開發相關軟體清單.
+* 協助 `Sales-Jamie` 回答關於 `宸曜` 平台測試狀況.
+* 參與 `FAE` 月會.
+* 協助新人詢問 `RD-Ray` 處理 `3TE7` FW Bin 調整為 `SATA 1.5G`.
+* 協助新人測試 `3TE6` FW `V22620X1` & `V22620` 於 `ASCI-020` 平台.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 整理每筆客訴案進度.
+  * [x] 與 `EU-FAE` 討論 `Ericssion` `EDC USB` 相關測試內容, 以及提供轉板 `PIN` 針規格.
+  * [x] 與 `HW-RD` 討論如何錄製 `CFast 3SE3` SATA analyzer, 以及相關訊號線如何製作.
+  * [x] 協助新人觀看 `DLMC` tool 相關執行問題, 以及測試 `V3.9.0` 於 `Windows 7` 執行狀況.
+  * [x] 測試 `Ericssion` `EDC USB` 第 `2` pcs 相關測試, 並將 device 送至 `RMA` 照 `X-ray`.
+
+# 2023-06-27
+* 參與 `FAE-team2` 週會.
+* 整理每筆客訴案進度.
+* 與 `EU-FAE` 討論 `Ericssion` `EDC USB` 相關測試內容, 以及提供轉板 `PIN` 針規格.
+* 與 `HW-RD` 討論如何錄製 `CFast 3SE3` SATA analyzer, 以及相關訊號線如何製作.
+* 協助新人觀看 `DLMC` tool 相關執行問題, 以及測試 `V3.9.0` 於 `Windows 7` 執行狀況.
+* 測試 `Ericssion` `EDC USB` 第 `2` pcs 相關測試, 並將 device 送至 `RMA` 照 `X-ray`.
+* TODO
+  * [ ] 協助新人製作 `Auto DLMC` tool for `3TE7`.
+  * [ ] 整理 `Ericssion` `EDC USB` 第 `2` pcs 相關測試結果, 以及 `X-ray` 照片.
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `EU-Sales Jessica` 討論 `Ericssion` `EDC USB` 相關測試內容.
