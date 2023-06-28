@@ -1948,7 +1948,25 @@
 * 協助新人觀看 `DLMC` tool 相關執行問題, 以及測試 `V3.9.0` 於 `Windows 7` 執行狀況.
 * 測試 `Ericssion` `EDC USB` 第 `2` pcs 相關測試, 並將 device 送至 `RMA` 照 `X-ray`.
 * TODO
-  * [ ] 協助新人製作 `Auto DLMC` tool for `3TE7`.
-  * [ ] 整理 `Ericssion` `EDC USB` 第 `2` pcs 相關測試結果, 以及 `X-ray` 照片.
+  * [x] 協助新人製作 `Auto DLMC` tool for `3TE7`.
+  * [x] 整理 `Ericssion` `EDC USB` 第 `2` pcs 相關測試結果, 以及 `X-ray` 照片.
   * [x] 參與 `FAE` 週會.
   * [x] 與 `EU-Sales Jessica` 討論 `Ericssion` `EDC USB` 相關測試內容.
+  * [x] 詢問 `宸曜` 平台維修狀態. 
+  * [x] 架設 `SATA analyzer` 錄製 `Hanel` 平台訊號過程.
+
+# 2023-06-28
+* 協助新人製作 `Auto DLMC` tool for `3TE7`.
+* 整理 `Ericssion` `EDC USB` 第 `2` pcs 相關測試結果, 以及 `X-ray` 照片.
+* 參與 `FAE` 週會.
+* 與 `EU-Sales Jessica` 討論 `Ericssion` `EDC USB` 相關測試內容, 並將測試結果寫入報告內提供出來.
+* 詢問 `宸曜` 平台維修狀態, 目前在業務手中, 尚未寄回.
+* 架設 `SATA analyzer` 錄製 `Hanel` 平台訊號過程, 發現訊號卡在 `COMMON RESET`, 無法往下執行.
+*  TODO
+   * [ ] 協助新人製作 `Auto DLMC` tool for `3TE7`.
+   * [x] 與 `Miller` 討論關於採購相關事項.
+   * [x] 協助新人準備測試平台於 `VN-Sales Lam`.
+   * [x] 協助 `Kiwi` 測試 `3TE7 SATA Slim` FW 更新於 `Windows 10` ( `S21606 nonRaid` <-> `S23505 nonRaid` ).
+   * [x] 取得 `3TE7 SATA Slim` device, 將 FW 更換為 `S22831`, 再執行 `THALES` 客訴案之 `Shell script`.
+   * [x] 架設 `SATA analyzer` 錄製 `Hanel` 平台訊號過程, 觀看 `COMMON RESET` 動作內容.
+   * [x] 與 `Kiwi` 討論 `EU` 客訴案( `FEC230209011` ) 測試內容, 並討論後續說法.
