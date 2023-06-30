@@ -1998,7 +1998,20 @@
  * TODO
    * [x] 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
    * [x] 協助新人修改 `一對多 DLMC tool`.
-   * [x] 協助詢問 `Xavier` 平台維修進度.
+   * [x] 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度.
    * [x] 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
    * [x] 參與 `PCIe Gen4` 相關客訴討論會議.
    * [x] 觀察 `Thales` 測試狀況.
+
+# 2023-07-03
+ * 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
+ * 協助新人修改 `一對多 DLMC tool`.
+   * 新增換行.
+   * 執行過程相關文字呈現.
+ * 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度, 目前尚未回覆.
+ * 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
+ * 參與 `PCIe Gen4` 相關客訴討論會議.
+ * 觀察 `Thales` 測試狀況, 目前已將碟寫滿, 並將其重新啟動, 並未看到相關問題.
+ * TODO
+   * [ ] 觀察 `Thales` 測試狀況.
+   * [ ] 觀察 `Xavier` 測試狀況.
