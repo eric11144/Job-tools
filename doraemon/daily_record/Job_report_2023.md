@@ -1972,46 +1972,78 @@
    * [x] 與 `Kiwi` 討論 `EU` 客訴案( `FEC230209011` ) 測試內容, 並討論後續說法.
 
 # 2023-06-29
- * 協助新人製作 `Auto DLMC` tool for `3TE7`.
- * 與 `Miller` 討論關於採購相關事項.
- * 協助新人準備測試平台於 `VN-Sales Lam`.
- * 協助 `Kiwi` 測試 `3TE7 SATA Slim` FW 更新於 `Windows 10` ( `S21606 nonRaid` <-> `S23505 nonRaid` ).
- * 取得 `3TE7 SATA Slim` device, 將 FW 更換為 `S22831`, 再執行 `THALES` 客訴案之 `Shell script`.
- * 架設 `SATA analyzer` 錄製 `Hanel` 平台訊號過程, 觀看 `COMMON RESET` 動作內容.
- * 與 `Kiwi` 討論 `EU` 客訴案( `FEC230209011` ) 測試內容, 並討論後續說法.
- * TODO
-   * [x] 參與 `EU-FAE` 週會.
-   * [x] 協助 `EU-Sales` 處理 `FEC230606009` `SATADOM` 送至 `RMA`.
-   * [x] 協助 `EU` 討論 `Hanel` 出貨測試流程.
-   * [x] 協助新人測試 `一對多 DLMC tool`.
-   * [x] 協助 `EU-FAE` 回覆 `4TG2-P` 關於 `TS1` 訊號修改.
+* 協助新人製作 `Auto DLMC` tool for `3TE7`.
+* 與 `Miller` 討論關於採購相關事項.
+* 協助新人準備測試平台於 `VN-Sales Lam`.
+* 協助 `Kiwi` 測試 `3TE7 SATA Slim` FW 更新於 `Windows 10` ( `S21606 nonRaid` <-> `S23505 nonRaid` ).
+* 取得 `3TE7 SATA Slim` device, 將 FW 更換為 `S22831`, 再執行 `THALES` 客訴案之 `Shell script`.
+* 架設 `SATA analyzer` 錄製 `Hanel` 平台訊號過程, 觀看 `COMMON RESET` 動作內容.
+* 與 `Kiwi` 討論 `EU` 客訴案( `FEC230209011` ) 測試內容, 並討論後續說法.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-Sales` 處理 `FEC230606009` `SATADOM` 送至 `RMA`.
+  * [x] 協助 `EU` 討論 `Hanel` 出貨測試流程.
+  * [x] 協助新人測試 `一對多 DLMC tool`.
+  * [x] 協助 `EU-FAE` 回覆 `4TG2-P` 關於 `TS1` 訊號修改.
 
 # 2023-06-30
- * 參與 `EU-FAE` 週會.
- * 協助 `EU-Sales` 處理 `FEC230606009` `SATADOM` 送至 `RMA`.
- * 協助 `EU` 討論 `Hanel` 出貨測試流程.
- * 協助新人測試 `一對多 DLMC tool`.
-   * `3TE7 P42 128GB` `S21606` -> `S23505`.
-   * `3TE7 P42 256GB` `S21606` -> `S23505`.
-   * `3TE7 P42 512GB` `S22831` -> `S23505`.
- * 協助 `EU-FAE` 回覆 `4TG2-P` 關於 `TS1` 訊號修改.
- * TODO
-   * [x] 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
-   * [x] 協助新人修改 `一對多 DLMC tool`.
-   * [x] 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度.
-   * [x] 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
-   * [x] 參與 `PCIe Gen4` 相關客訴討論會議.
-   * [x] 觀察 `Thales` 測試狀況.
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-Sales` 處理 `FEC230606009` `SATADOM` 送至 `RMA`.
+* 協助 `EU` 討論 `Hanel` 出貨測試流程.
+* 協助新人測試 `一對多 DLMC tool`.
+  * `3TE7 P42 128GB` `S21606` -> `S23505`.
+  * `3TE7 P42 256GB` `S21606` -> `S23505`.
+  * `3TE7 P42 512GB` `S22831` -> `S23505`.
+* 協助 `EU-FAE` 回覆 `4TG2-P` 關於 `TS1` 訊號修改.
+* TODO
+  * [x] 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
+  * [x] 協助新人修改 `一對多 DLMC tool`.
+  * [x] 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度.
+  * [x] 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
+  * [x] 參與 `PCIe Gen4` 相關客訴討論會議.
+  * [x] 觀察 `Thales` 測試狀況.
 
 # 2023-07-03
- * 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
- * 協助新人修改 `一對多 DLMC tool`.
-   * 新增換行.
-   * 執行過程相關文字呈現.
- * 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度, 目前尚未回覆.
- * 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
- * 參與 `PCIe Gen4` 相關客訴討論會議.
- * 觀察 `Thales` 測試狀況, 目前已將碟寫滿, 並將其重新啟動, 並未看到相關問題.
+* 協助 `EU-Sales` 回覆 `4TG2-P` 相關問題.
+* 協助新人修改 `一對多 DLMC tool`.
+ * 新增換行.
+ * 執行過程相關文字呈現.
+* 協助 `Sales-Jamie` 詢問 `Xavier` 平台維修進度, 目前尚未回覆.
+* 詢問 `4TG2-P` `FW-RD` 關於 `DGM28-01TDP1KCAEF` 使用之解決 `FW` 是否可以運行於 `DGM28-01TDP1KCCEF`.
+* 參與 `PCIe Gen4` 相關客訴討論會議.
+* 觀察 `Thales` 測試狀況, 目前已將碟寫滿, 並將其重新啟動, 並未看到相關問題.
+* TODO
+   * [x] 觀察 `Thales` 測試狀況.
+   * [x] 觀察 `Xavier` 測試狀況.
+   * [x] 協助 `Kiwi` 分析 `Simms International` `3ME2` 客訴問題.
+   * [x] 協助 `FW` 工讀生處理如何進入 `bios` `shell mode`.
+   * [x] 詢問 `Sales-Leslie` 關於 `喬鼎` 測試狀況.
+   * [x] 與 `EU-FAE Jason` 討論 `Ericsson` 關於 `EDC USB` 客訴報告內容.
+   * [x] 參與 `FAE team2` 週會.
+
+# 2023-07-04
+* 觀察 `Thales` 測試狀況, 皆正常.
+* 觀察 `Xavier` 測試狀況, 皆正常.
+* 協助 `Kiwi` 分析 `Simms International` `3ME2` 客訴問題, 並錄製 `UART` log.
+* 協助 `FW` 工讀生處理如何進入 `bios` `shell mode`.
+* 詢問 `Sales-Leslie` 關於 `喬鼎` 測試狀況.
+* 與 `EU-FAE Jason` 討論 `Ericsson` 關於 `EDC USB` 客訴報告內容.
+* 參與 `FAE team2` 週會.
  * TODO
+   * [x] 取得借出 `device`( `Thales` ), 並重新測試.
+   * [x] 詢問 `FW-RD` 關於 `Simms International` `3ME2` 客訴問題.
+   * [x] 協助新人觀看 `達明機器人` 客訴報告.
+   * [x] 協助新人架設 `Korea` AMD 平台( 透過 `RS232` to `USB` ).
+   * [x] 撰寫 `Ericsson` `EDC USB` 客訴報告.
+   * [x] 參與 `FAE` 週會.
+
+# 2023-07-05
+* 取得借出 `device`( `Thales` ), 並重新測試.
+* 詢問 `FW-RD` 關於 `Simms International` `3ME2` 客訴問題.
+* 協助新人觀看 `達明機器人` 客訴報告.
+* 協助新人架設 `Korea` AMD 平台( 透過 `RS232` to `USB` ).
+* 撰寫 `Ericsson` `EDC USB` 客訴報告.
+* 參與 `FAE` 週會.
+* TODO
    * [ ] 觀察 `Thales` 測試狀況.
    * [ ] 觀察 `Xavier` 測試狀況.
