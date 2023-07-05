@@ -2045,5 +2045,25 @@
 * 撰寫 `Ericsson` `EDC USB` 客訴報告.
 * 參與 `FAE` 週會.
 * TODO
-   * [ ] 觀察 `Thales` 測試狀況.
-   * [ ] 觀察 `Xavier` 測試狀況.
+   * [x] 觀察 `Thales` 測試狀況.
+   * [x] 觀察 `Xavier` 測試狀況.
+   * [x] 協助 `FAE-Leo` 架設 `Carmera` 相關環境.
+   * [x] 協助　`EU-Sales` 照射 `X-ray` 處理 `Ericsson` `EDC USB` connector 孔徑問題.
+   * [x] 協助新人回覆 `innoworks` 相關客訴問題. 
+   * [x] 協助新人觀看 `達明機器人` FA report.
+   * [x] 協助 `FAE-Danny` 處理 `3TG6-P` 開卡問題.
+   * [x] 發信詢問 `Simms International` 相關測試手法問題.
+
+# 2023-07-06
+* 觀察 `Thales` 測試狀況, 測試過程中發現平台重新開機, 目前加入 `systemctl` 相關 log 來做觀察.
+* 觀察 `Xavier` 測試狀況, 目前正常.
+* 協助 `FAE-Leo` 架設 `Carmera` 相關環境, 以及燒錄 `image`.
+* 協助　`EU-Sales` 照射 `X-ray` 處理 `Ericsson` `EDC USB` connector 孔徑問題, 九孔上下孔徑皆超過 `0.532mm`, 並將結果整理寄出.
+* 協助新人回覆 `innoworks` 相關客訴問題. 
+* 協助新人觀看 `達明機器人` FA report.
+* 協助 `FAE-Danny` 處理 `3TG6-P` 開卡問題.
+* 發信詢問 `Simms International` 相關測試手法問題.
+* TODO
+  * [ ] 觀察 `Thales` 測試狀況.
+  * [ ] 觀察 `Xavier` 測試狀況.
+  * [ ] 撰寫 `Hanel` FA report.
