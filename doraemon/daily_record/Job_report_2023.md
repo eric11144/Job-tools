@@ -2064,6 +2064,58 @@
 * 協助 `FAE-Danny` 處理 `3TG6-P` 開卡問題.
 * 發信詢問 `Simms International` 相關測試手法問題.
 * TODO
-  * [ ] 觀察 `Thales` 測試狀況.
-  * [ ] 觀察 `Xavier` 測試狀況.
-  * [ ] 撰寫 `Hanel` FA report.
+  * [x] 觀察 `Thales` 測試狀況.
+  * [x] 觀察 `Xavier` 測試狀況.
+  * [x] 撰寫 `Hanel` FA report.
+  * [x] 協助新人觀看 `innoWorks` 相關客訴問題.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-07-07
+* 觀察 `Thales` 測試狀況, 皆正常無異常.
+* 觀察 `Xavier` 測試狀況, 皆正常無異常.
+* 撰寫 `Hanel` FA report.
+* 協助新人觀看 `innoWorks` 相關客訴問題.
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [x] 觀察 `Thales` 測試狀況.
+  * [x] 觀察 `Xavier` 測試狀況, 將測試 `device` 移至 `宸曜` 平台.
+  * [x] 協助 `Sales-Jesse` 處理 `3TG6-P` FW bin file.
+  * [x] 協助 `EU-Sales` 回答 `FA` report 內 ISO 日期相關問題.
+  * [x] 協助新人觀看 `innoWorks` 相關客訴問題.
+  * [x] 詢問 `宸曜-Mona` 關於測試平台相關問題.
+  * [x] 協助 `Leo` 觀看 `Camera` 相關平台架設問題.
+
+# 2023-07-10
+* 觀察 `Thales` 測試狀況.
+* 觀察 `Xavier` 測試狀況, 將測試 `device` 移至 `宸曜` 平台.
+* 協助 `Sales-Jesse` 處理 `3TG6-P` FW bin file.
+* 協助 `EU-Sales` 回答 `FA` report 內 ISO 日期相關問題.
+* 協助新人觀看 `innoWorks` 相關客訴問題.
+* 詢問 `宸曜-Mona` 關於測試平台相關問題.
+* 協助 `Leo` 觀看 `Camera` 相關平台架設問題.
+* TODO
+  * [x] 架設 `Asrock` 測試平台, 並詢問測試相關條件.
+  * [x] 測試 `3TE2` 客人提供之測試環境.
+  * [x] 協助新人處理 `3SE3 CFast` 相關客訴問題.
+  * [x] 與 `PM-Jack` 討論料件借出問題.
+  * [x] 回報 `Thales` 測試狀況.
+  * [x] 與 `EU-PM Alfie` 討論 `Ericssion` `USE` 相關測試問題. 
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 詢問 `Sales-Leslie` 關於 `喬鼎` 測試狀況.
+  * [x] 與 `宸曜-Mona` 討論平台無法開機相關問題.
+
+# 2023-07-11
+* 架設 `Asrock` 測試平台, 並詢問測試相關條件.
+* 測試 `3TE2` 客人提供之測試環境, 需架設 `Windows10`, 並執行 `BurninTest`, cpu 需設定至 `70%`~`80%`, 重開機 `1000` cycle.
+* 協助新人處理 `3SE3 CFast` 相關客訴問題.
+* 與 `PM-Jack` 討論料件借出問題, 已請佩佩協助領料.
+* 回報 `Thales` 測試狀況, 測試皆正常.
+* 與 `EU-PM Alfie` 討論 `Ericssion` `USE` 相關測試問題, 需想辦法透過 `USB 3.0` 認碟. 
+* 參與 `FAE-team2` 週會.
+* 詢問 `Sales-Leslie` 關於 `喬鼎` 測試狀況, 等待客戶回覆.
+* 與 `宸曜-Mona` 討論平台無法開機相關問題, 需重新安裝 `OS`, 因 `eMMC` 寫滿, 導致無法開機.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 查找 `reboot` 自動執行 `BurninTest`.
+  * [ ] 重新安裝 `宸曜` 平台 `os`.
+  * [ ] 撰寫每秒寫入 `30KB` 檔案測試程式.
