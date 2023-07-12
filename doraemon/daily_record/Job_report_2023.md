@@ -2115,7 +2115,23 @@
 * 詢問 `Sales-Leslie` 關於 `喬鼎` 測試狀況, 等待客戶回覆.
 * 與 `宸曜-Mona` 討論平台無法開機相關問題, 需重新安裝 `OS`, 因 `eMMC` 寫滿, 導致無法開機.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 查找 `reboot` 自動執行 `BurninTest`.
-  * [ ] 重新安裝 `宸曜` 平台 `os`.
-  * [ ] 撰寫每秒寫入 `30KB` 檔案測試程式.
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助新人操作 `SATA analyzer` 錄製 `3ME4 mSATA` 相關訊號.
+  * [x] 查找 `reboot` 自動執行 `BurninTest`( `Asrock` ).
+  * [x] 重新安裝 `宸曜` 平台 `os`.
+  * [x] 撰寫每秒寫入 `30KB` 檔案測試程式( `FEA230621002-Issue with 3TE2 M.2` ).
+  * [x] 觀看 `Thales` 測試狀況.
+
+# 2023-07-12
+* 參與 `FAE` 週會.
+* 協助新人操作 `SATA analyzer` 錄製 `3ME4 mSATA` 相關訊號.
+* 查找 `reboot` 自動執行 `BurninTest`( `Asrock` ).
+* 重新安裝 `宸曜` 平台 `os`, 與 `Mona` 討論需架設 `ubuntu 18.04` 平台, 並安裝 `Nvidia SDK Manager` tool.
+* 撰寫每秒寫入 `30KB` 檔案測試程式( `FEA230621002-Issue with 3TE2 M.2` ).
+* 觀看 `Thales` 測試狀況, 皆正常.
+* TODO
+  * [x] 架設 `ubuntu 18.04` 平台, 並安裝 `Nvidia SDK Manager` tool, 重新安裝 `宸曜` 平台.
+  * [x] 協助新人操作 `SATA analyzer` 錄製 `3ME4 mSATA` 相關訊號.
+  * [x] 協助新人焊接 `3ME4 mSATA` UART log 訊號線.
+  * [x] 觀看 `Thales` 測試狀況.
+  * [ ] 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試( `FEA230621002-Issue with 3TE2 M.2` ).
