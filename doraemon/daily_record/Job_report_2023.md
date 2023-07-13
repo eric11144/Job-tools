@@ -2134,4 +2134,32 @@
   * [x] 協助新人操作 `SATA analyzer` 錄製 `3ME4 mSATA` 相關訊號.
   * [x] 協助新人焊接 `3ME4 mSATA` UART log 訊號線.
   * [x] 觀看 `Thales` 測試狀況.
-  * [ ] 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試( `FEA230621002-Issue with 3TE2 M.2` ).
+  * [x] 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試( `FEA230621002-Issue with 3TE2 M.2` ).
+  * [x] 處理 `Asrock` 於 `reboot` 自動執行 `BurninTest`
+  * [x] 與 `EU-FAE` 回報 `宸曜` 平台測試狀況.
+
+# 2023-07-13
+* 架設 `ubuntu 18.04` 平台, 並安裝 `Nvidia SDK Manager` tool, 重新安裝 `宸曜` 平台, 目前卡在 `JetPack` 版本無法選定 `4.6.1`.
+* 協助新人操作 `SATA analyzer` 錄製 `3ME4 mSATA` 相關訊號.
+* 協助新人焊接 `3ME4 mSATA` UART log 訊號線.
+* 觀看 `Thales` 測試狀況, 並無看到問題.
+* 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試( `FEA230621002-Issue with 3TE2 M.2` ), 已進行相關測試.
+* 處理 `Asrock` 於 `reboot` 自動執行 `BurninTest`
+* 與 `EU-FAE` 回報 `宸曜` 平台測試狀況, 目前卡在系統無法重新刷機.
+* TODO
+  * [x] 處理 `Asrock` 於 `reboot` 自動執行 `BurninTest`.
+  * [x] 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試.
+  * [x] 協助 `EU-FAE Jason` 查找 `3TE6-DEM28-C12DD1KCAQF` 對應之 bin file.
+  * [x] 協助 `EU-FAE Jason` 歸還 `Vector` 測試平台, 並轉交給 `Sandra`.
+  * [x] 將 `mSATA 3MG2-P` 送至 `RMA` 照 `X-ray`.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-07-14
+* 處理 `Asrock` 於 `reboot` 自動執行 `BurninTest`, 已找出方法測試, 需透過 `rebooter` tool 來進行.
+* 處理每秒寫入 `30KB` 檔案並自動重新開機啟動測試, 目前卡在無法開機進入 `OS`.
+* 協助 `EU-FAE Jason` 查找 `3TE6-DEM28-C12DD1KCAQF` 對應之 bin file, 並提供相關資訊.
+* 協助 `EU-FAE Jason` 歸還 `Vector` 測試平台, 並轉交給 `Sandra`.
+* 將 `mSATA 3MG2-P` 送至 `RMA` 照 `X-ray`.
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [ ] 觀看 `Asrock` 於 `reboot` 自動執行 `BurninTest` 測試結果.
