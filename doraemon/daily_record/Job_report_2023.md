@@ -2162,4 +2162,39 @@
 * 將 `mSATA 3MG2-P` 送至 `RMA` 照 `X-ray`.
 * 參與 `EU-FAE` 週會.
 * TODO
-  * [ ] 觀看 `Asrock` 於 `reboot` 自動執行 `BurninTest` 測試結果.
+  * [x] 觀看 `Asrock` 於 `reboot` 自動執行 `BurninTest` 測試結果.
+  * [x] 參與 `EU-Ericssion` 討論會議.
+  * [x] 協助 `PH-Lam` 準備測試用平台.
+  * [x] 協助新人觀看 `3MG2-P` 客訴案件( 更換 `Crystal`, 清除焊接線 ).
+  * [x] 觀看 `Thales` 測試狀況.
+
+# 2023-07-17
+* 觀看 `Asrock` 於 `reboot` 自動執行 `BurninTest` 測試結果.
+  * 後續因權限問題, 不能在重開機時, 執行 `BurninTest`, 故執行 `1000` reboot.
+* 參與 `EU-Ericssion` 討論會議.
+* 協助 `PH-Lam` 準備測試用平台.
+* 協助新人觀看 `3MG2-P` 客訴案件( 更換 `Crystal`, 清除焊接線 ).
+* 觀看 `Thales` 測試狀況.
+* TODO
+  * [x] 觀看以及回報 `Asrock` 於 `reboot` 自動執行測試結果.
+  * [x] 協助新人調整 `Crystal` (`3MG2-P` 客訴案件).
+  * [x] 協助新人量測 `3MG2-P` 供電狀況.
+  * [x] 回覆 `EU-Ericssion` 相關資訊.
+  * [x] 回報 `Thales` 測試相關狀況.
+  * [x] 與 `PM-Shao` 討論送修 `宸曜` 平台問題.
+  * [x] 重新安裝 `FEA230621002-Issue with 3TE2 M.2`  測試環境.
+
+# 2023-07-18
+* 觀看以及回報 `Asrock` 於 `reboot` 自動執行測試結果, 皆正常, 接下來執行 `Burnintest` `3~4` days.
+* 協助新人調整 `Crystal` (`3MG2-P` 客訴案件), 依然有認碟問題.
+* 協助新人量測 `3MG2-P` 供電狀況, 後續發現 `Power IC U8` 電源輸出有異常( 正常 `3.3V`, 量測 `0.6V` ).
+* 回覆 `EU-Ericssion` 相關資訊.
+  * 提供轉板照片, 以及 `hardware id` 資訊.
+  * 提供 `20` 次插拔結果.
+  * 送至 `RMA` 更換 connector.
+* 回報 `Thales` 測試相關狀況, 皆正常.
+* 與 `PM-Shao` 討論送修 `宸曜` 平台問題.
+* 重新安裝 `FEA230621002-Issue with 3TE2 M.2` 測試環境.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+
