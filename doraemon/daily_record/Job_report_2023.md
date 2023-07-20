@@ -2196,5 +2196,57 @@
 * 與 `PM-Shao` 討論送修 `宸曜` 平台問題.
 * 重新安裝 `FEA230621002-Issue with 3TE2 M.2` 測試環境.
 * TODO
-  * [ ] 參與 `FAE` 週會.
+  * [x] 參與 `FAE` 週會.
+  * [x] 詢問 `喬鼎` 客戶測試狀況.
+  * [x] 詢問 `Kerry` 關於 `Kontron` 對 `3TE6` 做 `DLMC` 後, 發生 `Assert` 狀況過程. 
+  * [x] 測試並修改每秒寫入 `30KB` 檔案並自動重新開機啟動測試
+  * [x] 協助新人處理 `Auto Format` 程式處理.
+ 
+# 2023-07-19
+* 參與 `FAE` 週會.
+* 詢問 `喬鼎` 客戶測試狀況.
+* 詢問 `Kerry` 關於 `Kontron` 對 `3TE6` 做 `DLMC` 後, 發生 `Assert` 狀況過程. 
+* 測試並修改每秒寫入 `30KB` 檔案並自動重新開機啟動測試, 尚未處理完成.
+* 協助新人處理 `Auto Format` 程式處理.
+* TODO
+  * [x] 測試 `Ericssion eUSB` 更換 connector 相關狀況.
+  * [x] 測試 `3TE6` FW 更換為 `V211180A`, 於 `Asrock` 平台測次 `1000`次 `reboot`.
+  * [x] 參與 `EU-PM Missie` 討論 `Ericssion eUSB` 狀況.
+  * [x] 從 `RMA` 取回並測試 `mSATA 3TG2-P`.
+  * [x] 協助新人架設 `Power Relay tool`. 
+  * [x] 與 `Kiwi` sync `3TE6` 測試 `Burnintest` `2hr` 以及 `idle` 一段時間後, 會發生 `CPU` `100%` 現象.
+  * [x] 協助新人照 `X-ray` (`3MG2-P` `2`pcs).
+
+# 2023-07-20
+* 測試 `Ericssion eUSB` 更換 connector 相關狀況, 於 `USB 3.0` 皆無法被辨識.
+* 測試 `3TE6` FW 更換為 `V211180A`, 於 `Asrock` 平台測次 `1000`次 `reboot`.
+* 參與 `EU-PM Missie` 討論 `Ericssion eUSB` 狀況.
+* 從 `RMA` 取回並測試 `mSATA 3TG2-P`, 依然無法辨識.
+* 協助新人架設 `Power Relay tool`, 中間發生 `cmd` 視窗控制權傳送訊號問題, 以及程式執行相關問題, 需使用 `teraterm 4.101` & 安裝 `TTL editor`, 執行程式檔名不能有中文. 
+* 與 `Kiwi` sync `3TE6` 測試 `Burnintest` `2hr` 以及 `idle` 一段時間後, 會發生 `CPU` `100%` 現象.
+* 協助新人照 `X-ray` (`3MG2-P` `2`pcs), 並無異常.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 回報 `Power Relay tool` 測試狀況, 共執行 `18` hr.
+  * [x] 回報 `3TE6` FW 更換為 `V211180A`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況.
+  * [x] 回覆 `Sales-Joan` 關於 `Kontron` 新舊版本 `FW` 更新問題.
+  * [x] 回報 `Ericssion` `eUSB` 相關測試狀況.
+  * [x] 修改每秒寫入 `30KB` 檔案並自動重新開機啟動測試程式.
+  * [x] 回報 `FEA230621002-Issue with 3TE2` 測試狀況.
+  * [x] 回覆 `EU-FAE` 關於 `Neousys` 測試相關狀況.
+  * [x] 觀看 `mSATA 3TG2-P` 無法辨識問題.
+
+# 2023-07-21
+* 參與 `EU-FAE` 週會.
+* 回報 `Power Relay tool` 測試狀況( `mSATA 3ME4` ), 共執行 `18` hr, 並未看到問題.
+* 回報 `3TE6` FW 更換為 `V211180A`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況, 並未看到問題.
+* 回覆 `Sales-Joan` 關於 `Kontron` 新舊版本 `FW` 更新問題.
+* 回報 `Ericssion` `eUSB` 相關測試狀況, `BurninTest` pass, 並錄製 `SMART`, `USB 3.0` 依然認不到.
+* 修改每秒寫入 `30KB` 檔案並自動重新開機啟動測試程式, 目前已修正完成.
+* 回報 `FEA230621002-Issue with 3TE2` 測試狀況.
+* 回覆 `EU-FAE` 關於 `Neousys` 測試相關狀況.
+* 觀看 `mSATA 3TG2-P` 無法辨識問題, 從 `UART` log 觀看到 `FW hang up`, 已詢問原廠.
+* TODO
+  * [ ] 觀看 `FEA230621002-Issue with 3TE2` 測試狀況.
+  * [ ] 追蹤原廠回覆 `mSATA 3TG2-P` 無法辨識問題.
 
