@@ -2247,6 +2247,28 @@
 * 回覆 `EU-FAE` 關於 `Neousys` 測試相關狀況.
 * 觀看 `mSATA 3TG2-P` 無法辨識問題, 從 `UART` log 觀看到 `FW hang up`, 已詢問原廠.
 * TODO
+  * [x] 觀看 `FEA230621002-Issue with 3TE2` 測試狀況.
+  * [x] 追蹤原廠回覆 `mSATA 3TG2-P` 無法辨識問題.
+  * [x] 參與 `EU-PM` 討論 `Ericssion eUSB` 客訴問題.
+  * [x] 觀看 `3TE6` `FW_V211180A` 經由 `BurninTest` `18` 小時後, `UART` log 是否會出現 `merge` 現象造成 `CPU` 過載.
+  * [x] 協助新人測試 `SMI` `DLMC` image.
+  * [x] 協助新人操作 `power cycle` 測試 tool.
+  * [x] 詢問 `Hyperstone` 人員是否能協助分析 `eUSB` `controller`.
+  * [x] 協助 `EU-PM` 回報 `Ericssion` `eUSB` 辨識狀況.
+  * [x] 協助 `EU` 測試 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot`.
+
+# 2023-07-24
+* 觀看 `FEA230621002-Issue with 3TE2` 測試狀況, 並無異常.
+* 追蹤原廠回覆 `mSATA 3TG2-P` 無法辨識問題, 暫無回應.
+* 參與 `EU-PM` 討論 `Ericssion eUSB` 客訴問題, 討論先將 `device` 寄送至 `Hyperstone` 協助分析.
+* 觀看 `3TE6` `FW_V211180A` 經由 `BurninTest` `18` 小時後, `UART` log 是否會出現 `merge` 現象造成 `CPU` 過載, 並無異常.
+* 協助新人測試 `SMI` `DLMC` image.
+* 協助新人操作 `power cycle` 測試 tool.
+* 詢問 `Hyperstone` 人員是否能協助分析 `eUSB` `controller`.
+* 協助 `EU-PM` 回報 `Ericssion` `eUSB` 辨識狀況, 有複製出 `2` 種辨識狀況, 但皆無法撈取 `SMART`.
+* 協助 `EU` 測試 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot`, 已架設完成.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
   * [ ] 觀看 `FEA230621002-Issue with 3TE2` 測試狀況.
-  * [ ] 追蹤原廠回覆 `mSATA 3TG2-P` 無法辨識問題.
+  * [ ] 觀看 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況.
 
