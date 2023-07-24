@@ -2268,7 +2268,29 @@
 * 協助 `EU-PM` 回報 `Ericssion` `eUSB` 辨識狀況, 有複製出 `2` 種辨識狀況, 但皆無法撈取 `SMART`.
 * 協助 `EU` 測試 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot`, 已架設完成.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 觀看 `FEA230621002-Issue with 3TE2` 測試狀況.
-  * [ ] 觀看 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀看 `FEA230621002-Issue with 3TE2` 測試狀況.
+  * [x] 觀看 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況.
+  * [x] 協助 `EU-PM` 觀看 `Ericssion` 客訴案實驗整理.
+  * [x] 協助 `EU-PM` 回覆 `Hyperstone` 相關問題.
+  * [x] 協助新人觀看 `Micro USB` 相關客訴問題, 以及回應 `3ME4` `FW` 外顯設定.
+  * [x] 協助 `Danny` 觀看 `Cfast card 3ME4` 開卡相關問題.
+  * [x] 協助 `Miller` 回覆 `Hanel` 平台客訴案狀況.
+  * [x] 協助 `Sales-Joan` 詢問關於 `3TE2` 問題復現狀況, 並與 `RD-Jian` 討論相關問題.
+
+# 2023-07-25
+* 參與 `FAE-team2` 週會.
+* 觀看 `FEA230621002-Issue with 3TE2` 測試狀況, 皆正常, 並將狀況回覆( `Reboot` : `85`, `File count` : `499985` ).
+* 觀看 `3TE6` FW 更換為 `V22620_20220914`, 於 `Asrock` 平台測試 `1000`次 `reboot` 狀況, 皆正常, 已將狀況回覆給 `EU-Sales`.
+* 協助 `EU-PM` 觀看 `Ericssion` 客訴案實驗整理, 並寄出給 `EU-PM Missie`.
+* 協助 `EU-PM` 回覆 `Hyperstone` 相關問題.
+* 協助新人觀看 `Micro USB` 相關客訴問題, 以及回應 `3ME4` `FW` 外顯設定.
+* 協助 `Danny` 觀看 `Cfast card 3ME4` 開卡相關問題, 發現可能為 `Controller` 異常.
+* 協助 `Miller` 回覆 `Hanel` 平台客訴案狀況, 目前已停止測試, 告知 `EU-Sales` 可透過 `copy machine`` 來做篩選條件.
+* 協助 `Sales-Joan` 詢問關於 `3TE2` 問題復現狀況, 並與 `RD-Jian` 討論相關問題.
+  * 主要原因為 `get flash temperature` 的機制導致異常! `get flash temperature` 在 `idle` 和 `RT` 階段更新時, 會切換 `flash mode`, 假設在切換過程還有 `Flash` 操作正在執行的話! 會導致資料錯誤而後引發`defect block` 產生.
+  * 目前告知 `Sales-Joan` 的說法為異常斷電導致 `System data` lose, 導致認不到碟.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 於 `FEA230621002-Issue with 3TE2` 測試中加入 `5` ~ `10` mins `idle` 狀態.
 
