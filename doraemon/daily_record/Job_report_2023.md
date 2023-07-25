@@ -2291,6 +2291,25 @@
   * 主要原因為 `get flash temperature` 的機制導致異常! `get flash temperature` 在 `idle` 和 `RT` 階段更新時, 會切換 `flash mode`, 假設在切換過程還有 `Flash` 操作正在執行的話! 會導致資料錯誤而後引發`defect block` 產生.
   * 目前告知 `Sales-Joan` 的說法為異常斷電導致 `System data` lose, 導致認不到碟.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 於 `FEA230621002-Issue with 3TE2` 測試中加入 `5` ~ `10` mins `idle` 狀態.
+  * [x] 參與 `FAE` 週會.
+  * [x] 於 `FEA230621002-Issue with 3TE2` 測試中加入 `5` ~ `10` mins `idle` 狀態, 並將 `OS` 更換成 `CentOS 7.X`.
+  * [x] 協助 `新竹` `FW-RD` 更新 `3TE6` FW -> ` V22620X2`, 並透過 `BurninTest` 測試.
+  * [x] 將 `Ericssion eUSB` 送至 `RMA` 更換 `Connector`.
+  * [x] 參與 `Kontron` 討論 `3TE6` `FW-V211180A, V2111804` -> `V226220X1` 差異.
+  * [x] 處理 `mSATA 3MG2-P` 客訴案.
+  * [x] 協助新人處理 `iTracker` `mSATA 3ME4` 相關操作.
+  * [x] 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄.
 
+# 2023-07-26
+* 參與 `FAE` 週會.
+* 於 `FEA230621002-Issue with 3TE2` 測試中加入 `5` ~ `10` mins `idle` 狀態, 並將 `OS` 更換成 `CentOS 7.X`.
+* 協助 `新竹` `FW-RD` 更新 `3TE6` FW -> ` V22620X2`, 並透過 `BurninTest` 測試, 已架設完成.
+* 將 `Ericssion eUSB` 送至 `RMA` 更換 `Connector`.
+* 參與 `Kontron` 討論 `3TE6` `FW-V211180A, V2111804` -> `V226220X1` 差異.
+* 處理 `mSATA 3MG2-P` 客訴案, 後續發現為 `Later bad` 過多導致開卡有相關問題.
+  * 第一次開卡需先將容量降低( `IDEMA` -> `Disk Size` ).
+  * 不參考之前紀錄之 `Later bad` ( `PreTest` -> `1. Don't Reference Original Bad` ).
+* 協助新人處理 `iTracker` `mSATA 3ME4` 相關操作.
+* 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄, 還再修改中.
+* TODO
+  * [ ] 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄.
