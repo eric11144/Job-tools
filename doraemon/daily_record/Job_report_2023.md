@@ -2312,4 +2312,18 @@
 * 協助新人處理 `iTracker` `mSATA 3ME4` 相關操作.
 * 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄, 還再修改中.
 * TODO
-  * [ ] 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄.
+  * [x] 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄.
+  * [x] 架設 `FRA` system, 觀看客訴問題.
+  * [x] 與 `EU-FAE` 討論 `FEB230608005` 於 `宸曜` 平台相關測試.
+  * [x] 測試 `mSATA 3MG2-P` 客訴案, 並提供相關資訊於 `EU-FAE`.
+  * [x] 針對 `mSATA 3MG2-P` 執行 `BurninTest`.
+
+# 2023-07-27
+* 修改 `3TE2` 測試程式, 加入 `reboot count` & `datetime` 紀錄, 目前已修改完成, 並進行相關測試.
+* 架設 `FRA` system, 觀看客訴問題.
+* 與 `EU-FAE` 討論 `FEB230608005` 於 `宸曜` 平台相關測試, 並追蹤維修狀況.
+* 測試 `mSATA 3MG2-P` 客訴案, 並提供相關資訊於 `EU-FAE`.
+* 針對 `mSATA 3MG2-P` 執行 `BurninTest`.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 觀看 `FRA` system 客訴問題.

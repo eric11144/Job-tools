@@ -6,12 +6,11 @@ import os
 home_directory = os.path.expanduser("~")
 folder_path = home_directory + '/test/'  # 要写入文件的文件夹路径
 test_file_prefix = 'file'  # 文件名前缀
-reboot_file_path = home_directory + '/reboot_log/'
-reboot_log_file = reboot_file_path + "reboot_count.txt"
+reboot_file_path = home_directory + 'reboot_log/'
+reboot_log_file = "reboot_count.txt"
 disk_limit = 80  # 磁盘使用率限制，当超过该百分比时触发删除操作
 runtime = 3600  # 运行时间（秒），即1小时
 file_count = 1
-log = []
 
 current_time = datetime.datetime.now()
 current_time_int = int(round(current_time.timestamp()))
@@ -73,7 +72,7 @@ while True:
     if start_time_int - current_time_int >= runtime:
         wait_time = 60
         # Restart system
-        print("make file")
+        
         # Check reboot file is exists or not.
         if not os.path.exists(reboot_file_path):
             os.makedirs(reboot_file_path)
@@ -86,24 +85,22 @@ while True:
                 f.writelines(log)
         # Read reboot log file with reboot count
         else:
-            print('Read reboot log file with reboot count')
             with open(reboot_log_file, 'r') as f:
                 log = f.readlines()
             
-                if log and "Reboot count:" in log[0]:
-                    count = int(log[0].split(":")[1].strip()) + 1
-                    log[0] = f"Reboot count: {count}\n"
-                else:
-                    log.insert(0, "Reboot count: 1\n")
+            if log and "Reboot count:" in log[0]:
+                count = int(log[0].split(":")[1].strip()) + 1
+                log[0] = f"Reboot count: {count}\n"
+            else:
+                log.insert(0, "Reboot count: 1\n")
 
-                current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                log.append(f"Rebooted at: {current_time}\n")
+            current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            log.append(f"Rebooted at: {current_time}\n")
 
-                with open(reboot_log_file, 'w') as f:
-                    f.writelines(log)
+            with open(reboot_log_file, 'w') as f:
+                f.writelines(log)
         
         while True:
-            print("Start to restart system")
             mins, secs = divmod(wait_time, 60)
             timer = '{:02d}'.format(secs)
             print("restart_time : " + str(timer), end="\r")
