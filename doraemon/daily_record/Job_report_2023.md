@@ -2325,5 +2325,55 @@
 * 測試 `mSATA 3MG2-P` 客訴案, 並提供相關資訊於 `EU-FAE`.
 * 針對 `mSATA 3MG2-P` 執行 `BurninTest`.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 觀看 `FRA` system 客訴問題.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 觀看 `FRA` system 客訴問題.
+  * [x] 協助新人處理 `3IE4` 開卡問題.
+  * [x] 協助新人回覆 `micro sd card` 相關信件問題.
+  * [x] 協助 `EU-Sales` 處理 `Hanel` sorting 問題.
+
+# 2023-07-28
+* 參與 `EU-FAE` 週會.
+* 觀看 `FRA` system 客訴問題.
+  * 1. MOP12302230020012 -> Can enter the OS normally, but takes about 2 minutes.
+  * 2. MOP12302230020028 -> Unrecognizable, preliminarily determined to be a power issue.
+  * 3. MOP12302230020016 -> Can enter the OS normally, no abnormal phenomena observed.
+  * 4. MOP12302230020046 -> Recognizable normally.
+* 協助新人處理 `3IE4` 開卡問題.
+* 協助新人回覆 `micro sd card` 相關信件問題.
+* 協助 `EU-Sales` 處理 `Hanel` sorting 問題.
+* TODO
+  * [x] 查找 `MOP12302230020028` power issue.
+  * [x] 錄製 `MOP12302230020016` & `MOP12302230020012` UART log.
+  * [x] 協助 `Alan` 查找 `電路圖` & `位置圖`.
+  * [x] 詢問 `Adson` 關於 `AIOT` 平台問題.
+  * [x] 協助新人處理 `越南-Sales` 相關平台操作問題.
+
+# 2023-07-31
+* 查找 `MOP12302230020028` power issue, 透過分析, 發現為 `U21` powere IC 破損.
+* 錄製 `MOP12302230020016` & `MOP12302230020012` UART log.
+* 協助 `Alan` 查找 `電路圖` & `位置圖`.
+* 詢問 `Adson` 關於 `AIOT` 平台問題.
+* 協助新人處理 `越南-Sales` 相關平台操作問題.
+* TODO
+  * [x] 建立 `FRA` system 客訴於 `TTS`, 並提供相關 `SMART` & `UART`.
+  * [x] 將 `MOP12302230020028` 送至 `RMA` 更換料件.
+  * [x] 協助 `EU-Sales` 處理 `Hanel` sorting 相關問題, 並透過 `EU-Sales` 詢問取得相關 `HW` & `SW` 資源.
+  * [x] 參與 `FAE-team1` 週會.
+  * [x] 協助分析 `融程電子` 客訴品( `mSATA 3TG6-P` ).
+  * [x] 協助 `EU-Sales` 處理 `Ericssion` 銷帳相關問題.
+  * [x] 回報 `3TE2` 客訴案測試結果.
+
+# 2023-08-01
+* 建立 `FRA` system 客訴於 `TTS`, 並提供相關 `SMART` & `UART`, 並無看到相關異常訊息.
+* 將 `MOP12302230020028` 送至 `RMA` 更換料件.
+* 協助 `EU-Sales` 處理 `Hanel` sorting 相關問題, 並透過 `EU-Sales` 詢問取得相關 `HW` & `SW` 資源.
+* 參與 `FAE-team1` 週會.
+* 協助分析 `融程電子` 客訴品( `mSATA 3TG6-P` ), 並錄製 `UART` log 提供於 `FW-RD` 分析, 後續發現為 `read retry` 過多, 導致 `performance` 下降.
+* 協助 `EU-Sales` 處理 `Ericssion` 銷帳相關問題.
+* 回報 `3TE2` 客訴案測試結果.
+* TODO
+  * [x] 將 `融程電子` 客訴品( `mSATA 3TG6-P` ) 透過 `DLMC` 更新 `FW`.
+  * [x] 協助 `EU-PM` 追蹤 `Ericssion` 送回原廠分析進度.
+  * [x] 與 `FW-RD SID` 討論 `4TG2-P` `開機` & `重開機` 速度過慢問題.
+  * [x] 與 `宸曜` 人員討論平台狀況.
+  * [x] 協助 `Hyperstone` 人員寄送轉接板.
