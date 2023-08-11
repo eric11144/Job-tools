@@ -2377,3 +2377,125 @@
   * [x] 與 `FW-RD SID` 討論 `4TG2-P` `開機` & `重開機` 速度過慢問題.
   * [x] 與 `宸曜` 人員討論平台狀況.
   * [x] 協助 `Hyperstone` 人員寄送轉接板.
+
+# 2023-08-02
+* 將 `融程電子` 客訴品( `mSATA 3TG6-P` ) 透過 `DLMC` 更新 `FW`.
+* 協助 `EU-PM` 追蹤 `Ericssion` 送回原廠分析進度.
+* 與 `FW-RD SID` 討論 `4TG2-P` `開機` & `重開機` 速度過慢問題.
+* 與 `宸曜` 人員討論平台狀況.
+* 協助 `Hyperstone` 人員寄送轉接板.
+* TODO
+  * [x] 參與 `EU` `Ericssion eUSB` 客訴案討論會議.
+  * [x] 測試 `Asrock` 執行 `3TE6 2TB`( `FW -> V211180A` ), 是否可以正常.
+  * [x] 協助 `EU-FAE` 詢問銅柱相關問題.
+  * [x] 觀看 `3TE2` 客訴案測試結果, 並與 `Sales-Joan` 討論.
+  * [x] 協助 `Sales-Vivian` 處理 `融程` `mSATA 3TG6-P` 客訴案分析.
+
+# 2023-08-03
+* 參與 `EU` `Ericssion eUSB` 客訴案討論會議, 詢問 `Hyperstone` 關於分析的狀況, 並領取 `Controller` 料件.
+* 測試 `Asrock` 執行 `3TE6 2TB`( `FW -> V211180A` ), 是否可以正常, 測試後續發現平台有問題, 已將平台送修.
+* 協助 `EU-FAE` 詢問銅柱相關問題.
+* 觀看 `3TE2` 客訴案測試結果, 並與 `Sales-Joan` 討論.
+* 協助 `Sales-Vivian` 處理 `融程` `mSATA 3TG6-P` 客訴案分析, 需要 `Sales` 幫忙詢問當時處理客訴的 `China-FAE`.
+* TODO
+  * [x] 颱風天放假.
+
+# 2023-08-04
+* 颱風天放假.
+* TODO
+  * [x] 協助 `FAE-Danny` 處理 `FA230711001` `3SE4` 客訴案.
+  * [x] 取回 `宸曜` 送回之平台.
+  * [x] 撰寫 `融程` `mSATA 3TG6-P` 客訴案分析報告, 並與 `Jay` 討論.
+  * [x] 架設 `Supermicro` 測試環境, `4TG2-P`( `FW -> E23609` ) 第一次開機會辨識, `reboot` 後, 認不到 `device`.
+  * [x] 與 `EU-PM` 討論 `Ericssion eUSB` 分析狀況.
+  * [x] 詢問 `FW-RD Jason` 關於 `mSATA 3TG6-P` `read retry` 機制修改流程.
+  * [x] 詢問機構組 `Jason` 關於 `銅柱` 查訊相關問題.
+
+# 2023-08-07
+* 協助 `FAE-Danny` 處理 `FA230711001` `3SE4` 客訴案.
+* 取回 `宸曜` 送回之平台.
+* 撰寫 `融程` `mSATA 3TG6-P` 客訴案分析報告, 並與 `Jay` 討論, 並將報告寄出給 `Sales-Vivian`.
+* 架設 `Supermicro` 測試環境, `4TG2-P`( `FW -> E23609` ) 第一次開機會辨識, `reboot` 後, 認不到 `device`.
+* 與 `EU-PM` 討論 `Ericssion eUSB` 分析狀況.
+  * `Hyperstone` office 並無 `USB analyzer`.
+  * 初步檢查電性相關狀況.
+  * 已聯絡相關人員將 `Device` 寄回.
+* 詢問 `FW-RD Jason` 關於 `mSATA 3TG6-P` `read retry` 機制修改流程, 並將其畫成流程圖.
+* 詢問機構組 `Jason` 關於 `銅柱` 查訊相關問題, 經由系統查詢, 並未有 `EU-FAE` 所需之規格, 後續會再提供相關資訊給 `EU-FAE`.
+* TODO
+  * [x] 協助 `EU` 領出 `Ericssion` `eUSB` controller.
+  * [x] 整理 `Ericssion` `eUSB` 量測結果m, 並與 `EU-PM` 討論.
+  * [x] 架設 `Supermicro` 測試環境並錄製 `UART` log 提供給 `FW-RD Sid`.
+  * [x] 修改 `融程` `mSATA 3TG6-P` 客訴案分析報告.
+  * [x] 協助新人量測 `mSATA 3ME3` 客訴品.
+
+# 2023-08-08
+* 協助 `EU` 領出 `Ericssion` `eUSB` controller.
+* 整理 `Ericssion` `eUSB` 量測結果m, 並與 `EU-PM` 討論.
+* 架設 `Supermicro` 測試環境並錄製 `UART` log 提供給 `FW-RD Sid`.
+* 修改 `融程` `mSATA 3TG6-P` 客訴案分析報告, 後續討論將 `FW`.
+* 協助新人量測 `mSATA 3ME3` 客訴品.
+* TODO
+  * [x] 回覆送修主機板相關問題.
+  * [x] 參與 `FAE` 週會.
+  * [x] 參與 `EU` 討論 `Ericssion` `eUSB` 客訴會議.
+  * [x] 協助新人觀看 `3ME3` 量測 `Flash` 相關狀況.
+  * [x] 從 `RMA` 領回 `Ericssion` `eUSB` 更換為新 `controller`, 並做 `20` 次插拔實驗.
+  * [x] 撰寫 `3TE2` 客訴案報告, 並與 `Sales` 討論.
+  * [x] 架設 `Neousys` 平台, 並觀察是否可以正常運行.
+
+# 2023-08-09
+* 回覆送修主機板相關問題.
+* 參與 `FAE` 週會.
+* 參與 `EU` 討論 `Ericssion` `eUSB` 客訴會議.
+* 協助新人觀看 `3ME3` 量測 `Flash` 相關狀況.
+* 從 `RMA` 領回 `Ericssion` `eUSB` 更換為新 `controller`, 並做 `20` 次插拔實驗, 並回報測試狀況.
+* 撰寫 `3TE2` 客訴案報告, 並與 `Sales` 討論, 回覆客戶相關問題.
+* 架設 `Neousys` 平台, 確認平台可以正常運行.
+* TODO
+  * [x] 協助 `FW-RD Jason` 回覆 `TTS` 測試狀況.
+  * [x] 回報 `Ericssion` `eUSB` 處理狀況.
+  * [x] 協助新人處理 `notebook` 問題.
+  * [x] 將 `Ericssion` `eUSB` 送至 `RMA` 更換為新品 `Controller`.
+  * [x] 回覆 `3TE2` 客訴案客戶相關問題.
+  * [x] 協助新人觀看 `Digi` 客訴案報告.
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-08-10
+* 協助 `FW-RD Jason` 回覆 `TTS` 測試狀況.
+* 回報 `Ericssion` `eUSB` 處理狀況.
+* 協助新人處理 `notebook` 問題.
+* 將 `Ericssion` `eUSB` 送至 `RMA` 更換為新品 `Controller`.
+* 回覆 `Concurrent` `3TE2` 客訴案客戶相關問題.
+* 協助新人觀看 `Digi` 客訴案報告.
+* TODO
+  * [x] 回報 `Ericssion` `eUSB` 處理狀況.
+  * [x] 參與 `EU` 討論 `Ericssion` `eUSB` 客訴會議.
+  * [x] 於 `Supermicro` 測試 `4TG2-P` 執行 `DLMC`( `FW` `E23609` -> `E23810` ).
+  * [x] 詢問 `Jay` 關於 `4TG2-P` 開卡操作流程.
+  * [x] 至 `RMA` 領取 `Ericssion` `eUSB`, 並做插拔測試.
+  * [x] 回覆 `EU-FAE` 關於如何從 `iSMART` 觀看歷史 `高溫` & `低溫`.
+  * [x] 參與 `Concurrent ` `3TE2` 討論會議.
+  * [x] 詢問 `FW-RD Jian` 關於 `3TE2` `data lose` 產生條件, 以及進入 `idle` 相關方式.
+
+# 2023-08-11
+* 回報 `Ericssion` `eUSB` 處理狀況.
+* 參與 `EU` 討論 `Ericssion` `eUSB` 客訴會議.
+* 於 `Supermicro` 測試 `4TG2-P` 執行 `DLMC`( `FW` `E23609` -> `E23810` ), 可正常運行, 並錄製影片.
+  * 因 `FW` 版本限制無法跨版本 `DLMC`, 故須將 `Device` 重新開卡.
+* 詢問 `Jay` 關於 `4TG2-P` 開卡操作流程.
+  * 須將 `mode` 改為 `open card`.
+  * `EUI64` 設定需修改 `config.ini`.
+* 至 `RMA` 領取 `Ericssion` `eUSB`, 並做插拔測試, 換回異常品 `controller` 後, 無法被 `USB3.0` 被辨識, 初步判斷 `controller` 有異常.
+* 回覆 `EU-FAE` 關於如何從 `iSMART` 觀看歷史 `高溫` & `低溫`.
+* 參與 `Concurrent ` `3TE2` 討論會議, 後續需要提供 `DLMC` tool.
+* 詢問 `FW-RD Jian` 關於 `3TE2` `data lose` 產生條件, 以及進入 `idle` 相關方式.
+* 協助新人處理 `mSATA 3ME3` 更換 `Flash`.
+* TODO
+  * [x] 協助新人觀看 `SATA Slim 3ME3` 客訴報告.
+  * [x] 量測 `Ericssion` `eUSB` `TX & RX` 阻抗數值.
+  * [x] 將 `Ericssion` `eUSB`  送至 `RMA` 與新品對調 `controller`.
+  * [x] 測試 `FRA SYS` `4TG2-P` `20046` BurninTest.
+  * [x] 詢問關於 `3TE7` 於 `DLMC` 情況下, 不 `reset` 進行更新之工具.
+  * [x] 協助新人回覆 `VN-Sales` 相關技術問題.
+
