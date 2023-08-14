@@ -2499,3 +2499,19 @@
   * [x] 詢問關於 `3TE7` 於 `DLMC` 情況下, 不 `reset` 進行更新之工具.
   * [x] 協助新人回覆 `VN-Sales` 相關技術問題.
 
+# 2023-08-14
+* 協助新人觀看 `SATA Slim 3ME3` 客訴報告.
+* 量測 `Ericssion` `eUSB` `TX & RX` 阻抗數值.
+* 將 `Ericssion` `eUSB`  送至 `RMA` 與新品對調 `controller`.
+* 測試 `FRA SYS` `4TG2-P` `20046` BurninTest.
+* 詢問關於 `3TE7` 於 `DLMC` 情況下, 不 `reset` 進行更新之工具.
+* 協助新人回覆 `VN-Sales` 相關技術問題.
+* TODO
+  * [x] 參與 `FAE-Team2` 週會.
+  * [x] 架設 `FRA` System 執行 `BurninTest`( `20046` ).
+  * [x] 至 `RMA` 領取 `Ericssion` `eUSB`, 並做 `20` 次插拔測試( 異常品 `controller` -> `DEUH2-08GY91SWADB-G58B` ), 並回報進度.
+  * [x] 更新 `FA` case 進度於 `eFAE` system.
+  * [x] 協助 `PM-Becky` 測試 `4TE3` 於 `Supermicro` MB.
+  * [ ] 撰寫 `3TE2` DLMC tool 操作手冊.
+  * [x] 協助新人觀看 `mSATA 3ME3` & `CFast 3ME4` 客訴案.
+
