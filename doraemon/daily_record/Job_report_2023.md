@@ -2515,3 +2515,72 @@
   * [ ] 撰寫 `3TE2` DLMC tool 操作手冊.
   * [x] 協助新人觀看 `mSATA 3ME3` & `CFast 3ME4` 客訴案.
 
+# 2023-08-15
+* 參與 `FAE-Team2` 週會.
+* 架設 `FRA` System 執行 `BurninTest`( `20046` ).
+* 至 `RMA` 領取 `Ericssion` `eUSB`, 並做 `20` 次插拔測試( 異常品 `controller` -> `DEUH2-08GY91SWADB-G58B` ), 並回報進度.
+* 更新 `FA` case 進度於 `eFAE` system.
+* 協助 `PM-Becky` 測試 `4TE3` 於 `Supermicro` MB.
+* 協助新人觀看 `mSATA 3ME3` & `CFast 3ME4` 客訴案.
+* TODO
+  * [x] 參與 `FAE team` 週會.
+  * [x] 協助 `EU-PM` 詢問 `CN` 使用 `analyzer` 相關時間. 
+  * [x] 觀看海洋淨灘影片.
+  * [x] 測試送修之測試 `MSI` 主機板.
+  * [x] 協助 `Benson` 處理 `Ericssion` 相關分析, 並提供相關資訊.
+  * [x] 詢問 `Hyperstone` 關於 `set bit 24 deactivate U1 mode` 設定功能.
+  * [x] 提供 `EU-FAE` 關於 `Neousys'` platform 測試狀況.
+  * [x] 提供 `EU-FAE` `ASRock` platform 關於 `reboot` `1000` cycle 測試結果.
+
+# 2023-08-16
+* 參與 `FAE team` 週會.
+* 協助 `EU-PM` 詢問 `CN` 使用 `analyzer` 相關時間. 
+* 觀看海洋淨灘影片.
+* 測試送修之測試 `MSI` 主機板.
+* 協助 `Benson` 處理 `Ericssion` 相關分析, 並提供相關資訊.
+* 詢問 `Hyperstone` 關於 `set bit 24 deactivate U1 mode` 設定功能.
+* 提供 `EU-FAE` 關於 `Neousys'` platform 測試狀況.
+* 提供 `EU-FAE` `ASRock` platform 關於 `reboot` `1000` cycle 測試結果.
+* TODO
+  * [x] 協助拍攝測試平台 `MSI` 故障影片.
+  * [x] 協助 `EU-FAE` 架設 `Supermicro` 測試 `4TG2-P` 關於 `Event log` 相關 `warning` message 問題.
+  * [x] 與 `FW-RD` 討論關於 `3TE7` 透過 `WinPE` 安裝之相關流程.
+  * [x] 與 `EU-FAE` 討論客訴案相關狀況.
+  * [x] 參與 `EU` 討論 `Ericssion` 客訴處理會議.
+  * [x] 協助新人量測透過 `Chamber` 於 `-40` 度情況下, `SATA Slim 3ME3-S21804` `reboot` & `cold boot` 時間.
+  * [x] 與新竹 `FW-RD` ＆ `Fred` 討論 `3TE2` DLMC 狀況.
+
+# 2023-08-17
+* 協助拍攝測試平台 `MSI` 故障影片.
+* 協助 `EU-FAE` 架設 `Supermicro` 測試 `4TG2-P` 關於 `Event log` 相關 `warning` message 問題.
+* 與 `FW-RD` 討論關於 `3TE7` 透過 `WinPE` 安裝之相關流程.
+* 與 `EU-FAE` 討論客訴案相關狀況.
+* 參與 `EU` 討論 `Ericssion` 客訴處理會議.
+* 協助新人量測透過 `Chamber` 於 `-40` 度情況下, `SATA Slim 3ME3-S21804` `reboot` & `cold boot` 時間.
+* 與新竹 `FW-RD` ＆ `Fred` 討論 `3TE2` DLMC 狀況.
+* TODO  
+  * [x] 協助 `PM-Becky` 回報 `4TE3` `warm boot` 測試狀況.
+  * [x] 拍攝 `MSI` 主機板異常證明影片.
+  * [x] 架設 `WinPE` 環境.
+  * [x] 協助新竹 `FW-RD` 查詢 `3TE2` 客訴品 `FW` version, 並討論如何進行 `DLMC`.
+  * [x] 協助新人架設 `電源供應器` 量測 `CFast card 3ME4` 訊號變化.
+  * [x] 協助新人詢問 `DQE` 人員是否有空的 `chamber` 可進行低溫測試.
+  * [x] 查找 `FRA` SYS 螢幕輸出問題.
+
+# 2023-08-18
+* 協助 `PM-Becky` 回報 `4TE3` `warm boot` 測試狀況.
+* 拍攝 `MSI` 主機板異常證明影片.
+* 架設 `WinPE` 環境.
+* 協助新竹 `FW-RD` 查詢 `3TE2` 客訴品 `FW` version, 並討論如何進行 `DLMC`.
+* 協助新人架設 `電源供應器` 量測 `CFast card 3ME4` 訊號變化.
+* 協助新人詢問 `DQE` 人員是否有空的 `chamber` 可進行低溫測試.
+* 查找 `FRA` SYS 螢幕輸出問題, 後續發現為 `power cable` 不能用 `EU`.
+* TODO
+  * [x] 協助新人架設 `Windows 7 embededd` 環境.
+  * [x] 架設 `WinPE` 環境.
+  * [x] 協助 `EU-PM` 回答 `Ericssion` 技術問題.
+  * [x] 與 `EU-FAE` 討論 `Rosch computer` DLMC tool 流程.
+  * [x] 測試 `4TG2-P` 於 `Supermicro` 平台是否會出現 `ID 17 Warning` message, 並回報初步測試狀況.
+  * [x] 協助新人架設 `電源供應器` 量測 `CFast card 3ME4` 訊號變化.
+
+
