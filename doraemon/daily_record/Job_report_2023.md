@@ -2583,4 +2583,62 @@
   * [x] 測試 `4TG2-P` 於 `Supermicro` 平台是否會出現 `ID 17 Warning` message, 並回報初步測試狀況.
   * [x] 協助新人架設 `電源供應器` 量測 `CFast card 3ME4` 訊號變化.
 
+# 2023-08-21
+* 協助新人架設 `Windows 7 embededd` 環境.
+* 架設 `WinPE` 環境.
+* 協助 `EU-PM` 回答 `Ericssion` 技術問題.
+* 與 `EU-FAE` 討論 `Rosch computer` DLMC tool 流程.
+* 測試 `4TG2-P` 於 `Supermicro` 平台是否會出現 `ID 17 Warning` message, 並回報初步測試狀況.
+* 協助新人架設 `電源供應器` 量測 `CFast card 3ME4` 訊號變化.
+* TODO
+  * [x] 協助 `Kiwi` 參與 `Asia` `3TE7` 進行測試, reboot後無法進入系統之客訴討論會議.
+  * [x] 修改 `Ericssion` `FA` report.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `EU-FAE` 需要之 `DLMC` tool (without `reset`).
+  * [x] 回報 `Supermicro` `reboot` 測試結果.
 
+# 2023-08-22
+* 協助 `Kiwi` 參與 `Asia` `3TE7` 進行測試, reboot後無法進入系統之客訴討論會議.
+* 修改 `Ericssion` `FA` report, 並回覆相關問題.
+* 參與 `FAE-team2` 週會.
+* 測試 `EU-FAE` 需要之 `DLMC` tool (without `reset`), 後續測試發現需要 `reset` 才可更新 `FW`.
+* 回報 `Supermicro` `reboot` 測試結果.
+* TODO
+  * [x] 測試 `EU-FAE` 需要之 `DLMC` tool (without `reset`).
+  * [x] 與 `Arlen` 討論 `DLMC` tool (without `reset`).
+  * [x] 詢問 `PE` 關於清潔劑領取相關問題.
+  * [x] 協助 `Sales-Vivian` 處理 `融程` 客訴品( Update FW -> `S23707` )
+  * [x] 協助 `Celia` 處理團購物品.
+  * [x] 參與 `4TG2-P` 於 `Supermicro` 測試討論會議( `Windows` `Event log` -> `ID:17` warning ).
+  * [x] 與 `EU-YingXiang` 討論 `Rosch computer` 需要之 `DLMC` tool.
+  * [x] 詢問 `Jay` 關於 `3TG6-P` `write code` 相關操作.
+
+# 2023-08-23
+* 測試 `EU-FAE` 需要之 `DLMC` tool (without `reset`).
+* 與 `Arlen` 討論 `DLMC` tool (without `reset`).
+* 詢問 `PE` 關於清潔劑領取相關問題.
+* 協助 `Sales-Vivian` 處理 `融程` 客訴品( Update FW -> `S23707` )
+* 協助 `Celia` 處理團購物品.
+* 參與 `4TG2-P` 於 `Supermicro` 測試討論會議( `Windows` `Event log` -> `ID:17` warning ).
+* 與 `EU-YingXiang` 討論 `Rosch computer` 需要之 `DLMC` tool.
+* 詢問 `Jay` 關於 `3TG6-P` `write code` 相關操作.
+* TODO
+  * [x] 測試 `3TE2` `FW` update tool( `K19603` -> `K19603e1` ).
+  * [x] 詢問 `Kiwi` 關於 `3TE2` 開卡相關問題.
+  * [x] 提供 `銅柱` 相關領料資訊於 `EU-Jason`.
+  * [x] 與 `Sales-Joan` 討論 `3TE2` 狀況處理.
+  * [x] 觀察 `FRA sys` 測試 `20016` reboot 狀況.
+  * [x] 撰寫 `3TE2` DLMC tool 操作手冊.
+  * [x] 協助新人觀看 `CFast 3ME4` & `mSATA 3ME3` 相關客訴問題.
+
+# 2023-08-24
+* 測試 `3TE2` `FW` update tool( `K19603` -> `K19603e1` ), 已測試完成, 並提供相關 `bin file`.
+* 詢問 `Kiwi` 關於 `3TE2` 開卡相關問題.
+* 提供 `銅柱` 相關領料資訊於 `EU-Jason`.
+* 與 `Sales-Joan` 討論 `3TE2` 狀況處理.
+* 觀察 `FRA sys` 測試 `20016` reboot 狀況, 發現掉碟現象, 已回報給 `FW-RD Sid`.
+* 撰寫 `3TE2` DLMC tool 操作手冊, 並提供給 `Sales-Joan`.
+* 協助新人觀看 `CFast 3ME4` & `mSATA 3ME3` 相關客訴問題.
+* TODO
+  * [ ] 測試 `FRA sys` 測試 `20016` reboot.
+  * [ ] 參與 `EU-FAE` 週會.
