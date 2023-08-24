@@ -2640,5 +2640,10 @@
 * 撰寫 `3TE2` DLMC tool 操作手冊, 並提供給 `Sales-Joan`.
 * 協助新人觀看 `CFast 3ME4` & `mSATA 3ME3` 相關客訴問題.
 * TODO
-  * [ ] 測試 `FRA sys` 測試 `20016` reboot.
+  * [x] 測試 `FRA sys` 測試 `20016` reboot.
+  * [ ] 測試 `CFast card 3IE7` 更新 `S23809i` 狀況.
+  * [x] 與 `Sales-Joan` 討論 `3TE2` 客戶問題回覆內容.
+  * [x] 回報 `FRA SYS` 測試狀況, 以及環境執行狀態.
+  * [x] 協助新人回覆 `CFast  3ME4` & `SATADOM 3ME3` 客戶相關提問.
+  * [ ] 協助 `EU-FAE` 觀看 `3MR3-P` 客訴問題.
   * [ ] 參與 `EU-FAE` 週會.
