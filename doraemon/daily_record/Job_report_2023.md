@@ -2641,9 +2641,38 @@
 * 協助新人觀看 `CFast 3ME4` & `mSATA 3ME3` 相關客訴問題.
 * TODO
   * [x] 測試 `FRA sys` 測試 `20016` reboot.
-  * [ ] 測試 `CFast card 3IE7` 更新 `S23809i` 狀況.
   * [x] 與 `Sales-Joan` 討論 `3TE2` 客戶問題回覆內容.
   * [x] 回報 `FRA SYS` 測試狀況, 以及環境執行狀態.
   * [x] 協助新人回覆 `CFast  3ME4` & `SATADOM 3ME3` 客戶相關提問.
-  * [ ] 協助 `EU-FAE` 觀看 `3MR3-P` 客訴問題.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 觀看 `3MR3-P` 客訴問題.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助新人參與 `innoworks` & `VN` 客訴討論會議.
+
+# 2023-08-25
+* 測試 `FRA sys` 測試 `20016` reboot.
+* 與 `Sales-Joan` 討論 `3TE2` 客戶問題回覆內容.
+* 回報 `FRA SYS` 測試狀況, 以及環境執行狀態.
+* 協助新人回覆 `CFast  3ME4` & `SATADOM 3ME3` 客戶相關提問.
+* 協助 `EU-FAE` 觀看 `3MR3-P` 客訴問題, 其中 `1`pcs 確實無法認碟.
+* 參與 `EU-FAE` 週會.
+* 協助新人參與 `innoworks` & `VN` 客訴討論會議.
+* TODO
+  * [x] 測試 `CFast card 3IE7` 更新 `S23809i` 狀況, 並錄製相關證明影片.
+  * [x] 協助 `EU-FAE` 更新 `Supermicro` bios -> `2.7` & 更新 `OS` -> `Windows 10 pro`.
+  * [x] 更新 `FRA SYS` 內 `OS` kernel & 執行 `reboot` `3000` 次.
+  * [x] 觀看 `3MR3-P` 客訴品其餘 `7` pcs.
+  * [x] 協助新人回覆 `innoworks` & `VN` 客訴問題.
+  * [x] 將 `3MG2-P` device 送至 `RMA`.
+  * [x] 協助組內人員發送訂購設備.
+
+# 2023-08-28
+* 測試 `CFast card 3IE7` 更新 `S23809i` 狀況, 並錄製相關證明影片.
+* 協助 `EU-FAE` 更新 `Supermicro` bios -> `2.7` & 更新 `OS` -> `Windows 10 pro`.
+* 更新 `FRA SYS` 內 `OS` kernel & 執行 `reboot` `3000` 次.
+* 觀看 `3MR3-P` 客訴品其餘 `7` pcs.
+* 協助新人回覆 `innoworks` & `VN` 客訴問題.
+* 將 `3MG2-P` device 送至 `RMA`.
+* 協助組內人員發送訂購設備.
+* TODO
+  * [ ] 參與 `FAE team2` 週會.
+  * [ ] 整理 `3MR3-P` 客訴品 `8` pcs 相關資訊以及 `Log`.
