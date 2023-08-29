@@ -2674,5 +2674,32 @@
 * 將 `3MG2-P` device 送至 `RMA`.
 * 協助組內人員發送訂購設備.
 * TODO
-  * [ ] 參與 `FAE team2` 週會.
-  * [ ] 整理 `3MR3-P` 客訴品 `8` pcs 相關資訊以及 `Log`.
+  * [x] 參與 `FAE team2` 週會.
+  * [x] 整理 `3MR3-P` 客訴品 `8` pcs 相關資訊以及 `Log`.
+  * [x] 協助 `Jay` 查找 `PCIe` analyzer 安裝包.
+  * [x] 詢問 `China-FAE` 是否能協助錄製 `eUSB` analyzer.
+  * [x] 協助 `FW RD-Mike` 處理 `Nexcom` 平台.
+  * [x] 詢問 `Sales-Joan` 關於 `FEA230804005` `3TE7` 客訴案處理後續狀況.
+  * [x] 協助新人撰寫 `3ME3` 透過 `ssh` 更新 `FW` 相關操作手冊.
+  * [x] 觀察 `FRA SYS` 測試狀況.
+  * [x] 觀看 `Supermicro` 更新 `Bios` & `Windows 10 pro` 測試狀況.
+  * [x] 協助新人與 `Jay` 討論 `CFast 3ME4` 客訴案處理.
+
+# 2023-08-29
+* 參與 `FAE team2` 週會.
+* 整理 `3MR3-P` 客訴品 `8` pcs 相關資訊以及 `Log`, 並寄給 `EU-FAE`.
+* 協助 `Jay` 查找 `PCIe` analyzer 安裝包.
+* 詢問 `China-FAE` 是否能協助錄製 `eUSB` analyzer.
+* 協助 `FW RD-Mike` 處理 `Nexcom` 平台.
+* 詢問 `Sales-Joan` 關於 `FEA230804005` `3TE7` 客訴案處理後續狀況.
+* 協助新人撰寫 `3ME3` 透過 `ssh` 更新 `FW` 相關操作手冊.
+* 觀察 `FRA SYS` 測試狀況, 目前測試 `4000` cycle reboot, 尚未看到掉碟問題, 會持續加測.
+* 觀看 `Supermicro` 更新 `Bios` & `Windows 10 pro` 測試狀況, 經過 `3000` cycle reboot 測試, 尚未看到客戶反應之 `Event ID 17` 問題.
+* 協助新人與 `Jay` 討論 `CFast 3ME4` 客訴案處理.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 回報 `SARL` 客訴案測試狀況.
+  * [ ] 與 `FW RD-Sid` 討論 `FRA SYS` 測試狀況, 以及 `FW` 修改內容.
+  * [x] 協助新人錄製 `3ME3` 透過 `ssh` 更新 `FW` 相關影片.
+  * [ ] 協助 `Kiwi` 觀看 `Joanne` 客訴品 `CFast card 3ME4` 狀況.
+  * [ ] 撰寫 `FAE` 月會報告(關於 `4TG2-P` DLMC 更新 tool & `Supermicro` 平台 `warm boot` 案例分享 ).
