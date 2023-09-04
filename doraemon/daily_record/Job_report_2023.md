@@ -2699,7 +2699,77 @@
 * TODO
   * [x] 參與 `FAE` 週會.
   * [x] 回報 `SARL` 客訴案測試狀況.
-  * [ ] 與 `FW RD-Sid` 討論 `FRA SYS` 測試狀況, 以及 `FW` 修改內容.
+  * [x] 與 `FW RD-Sid` 討論 `FRA SYS` 測試狀況, 以及 `FW` 修改內容.
   * [x] 協助新人錄製 `3ME3` 透過 `ssh` 更新 `FW` 相關影片.
-  * [ ] 協助 `Kiwi` 觀看 `Joanne` 客訴品 `CFast card 3ME4` 狀況.
-  * [ ] 撰寫 `FAE` 月會報告(關於 `4TG2-P` DLMC 更新 tool & `Supermicro` 平台 `warm boot` 案例分享 ).
+  * [x] 協助 `Kiwi` 觀看 `Joanne` 客訴品 `CFast card 3ME4` 狀況.
+  * [x] 撰寫 `FAE` 月會報告(關於 `4TG2-P` DLMC 更新 tool & `Supermicro` 平台 `warm boot` 案例分享 ).
+  * [x] 與 `FW-RD Allen` 討論 `FEB230811006 FACTORY-SYS` 關於 `InnoOSR 3TO7` 相關客訴問題.
+  * [x] 送 `FA230828007-Aristocrat Tech` 之客訴品 `CFast card 3ME4` 至 `RMA` 協助量測 `controller` & `Flash` `X-ray`.
+
+# 2023-08-30
+* 參與 `FAE` 週會.
+* 回報 `SARL` 客訴案測試狀況.
+* 與 `FW RD-Sid` 討論 `FRA SYS` 測試狀況, 以及 `FW` 修改內容.
+* 協助新人錄製 `3ME3` 透過 `ssh` 更新 `FW` 相關影片.
+* 協助 `Kiwi` 觀看 `Joanne` 客訴品 `CFast card 3ME4` 狀況.
+* 撰寫 `FAE` 月會報告(關於 `4TG2-P` DLMC 更新 tool & `Supermicro` 平台 `warm boot` 案例分享 ).
+* 與 `FW-RD Allen` 討論 `FEB230811006 FACTORY-SYS` 關於 `InnoOSR 3TO7` 相關客訴問題.
+* 送 `FA230828007-Aristocrat Tech` 之客訴品 `CFast card 3ME4` 至 `RMA` 協助量測 `controller` & `Flash` `X-ray`, 並無發現異常.
+* TODO
+  * [x] 與 `EU-FAE` 討論 `3MR3-P` 相關分析結果.
+  * [x] 修改 `FAE` 月會分享之報告.
+  * [x] 協助 `Kiwi` 觀看 `FA230828007-Aristocrat Tech` 之客訴品 `CFast card 3ME4` 狀況, 並進行相關量測實驗.
+  * [x] 參加 `FAE` 月會.
+  * [x] 協助新人觀看 `Innoworks` 相關客訴問題.
+
+# 2023-08-31
+* 與 `EU-FAE` 討論 `3MR3-P` 相關分析結果.
+* 修改 `FAE` 月會分享之報告.
+* 協助 `Kiwi` 觀看 `FA230828007-Aristocrat Tech` 之客訴品 `CFast card 3ME4` 狀況, 並進行相關量測實驗.
+  * 與正常品交換 `Power IC` -> `Failed`.
+  * 送至 `RMA` 更換 controller -> `Pass`.
+* 參加 `FAE` 月會.
+* 協助新人觀看 `Innoworks` 相關客訴問題.
+* TODO
+  * [x] 與 `Jay` 討論關於 `融程` 客訴案之 `mSATA 3TG6-P` 掉速相關問題.
+  * [x] 修改到班時間.
+  * [x] 與 `Sales-Vivian` 討論 `融程` 反應之掉速問題, 並詢問客戶相關操作狀況.
+  * [x] 至 `工程部` 借取 `eUSB` 組裝治具, 並與 `EU-PM Alfie` 討論.
+  * [x] 與 `Miller` 討論 `Ericssion` 相關測試 `SOP` 流程問題.
+  * [x] 協助 `Joanne` 關於 `3ME4` `controller` 異常相關問題.
+  * [x] 參加淨灘說明會.
+  * [x] 協助新人觀看 `Innoworks` 相關客訴問題.
+  * [x] 觀看 `FRA SYS` 客訴品 `4TG2-P` 隨機認不到碟問題.
+
+# 2023-09-01
+* 與 `Jay` 討論關於 `融程` 客訴案之 `mSATA 3TG6-P` 掉速相關問題.
+* 修改到班時間.
+* 與 `Sales-Vivian` 討論 `融程` 反應之掉速問題, 並詢問客戶相關操作狀況.
+* 至 `工程部` 借取 `eUSB` 組裝治具, 並與 `EU-PM Alfie` 討論.
+* 與 `Miller` 討論 `Ericssion` 相關測試 `SOP` 流程問題.
+* 協助 `Joanne` 關於 `3ME4` `controller` 異常相關問題, 並將異常品做 `controller` 交叉驗證.
+* 參加淨灘說明會.
+* 協助新人觀看 `Innoworks` 相關客訴問題.
+* 觀看 `FRA SYS` 客訴品 `4TG2-P` 隨機認不到碟問題, 並與 `FW-RD Sid` 討論.
+* TODO
+  * [x] 重新錄製 `FRA SYS` 客訴品 `4TG2-P` 隨機認不到碟 `UART` log.
+  * [x] 至 `RMA` 取回 `3ME4` (將異常品 `controller` 換回異常品, 觀看認碟進度).
+  * [x] 量測 `Ericssion` `eUSB` `8`pcs 認碟狀況, 並整理.
+  * [x] 測試 `Rosch computer` 需要之 `DLMC` tool( `V3.11.0` -> `ROM  mocd` ).
+  * [x] 關於 `3ME4` `controller` 異常相關問題.
+  * [x] 協助新人錄製 `3TE7` `DLMC` 透過 `ssh` 更新 `FW` 相關影片.
+  * [x] 協助新人錄製 `3TE7` `DLMC` 透過 `ssh` 更新 `FW` 相關影片, 並提供工具於 `EU-FAE`.
+
+# 2023-09-04
+* 重新錄製 `FRA SYS` 客訴品 `4TG2-P` 隨機認不到碟 `UART` log.
+* 至 `RMA` 取回 `3ME4` (將異常品 `controller` 換回異常品, 觀看認碟進度).
+* 量測 `Ericssion` `eUSB` `8`pcs 認碟狀況, 並整理.
+* 測試 `Rosch computer` 需要之 `DLMC` tool( `V3.11.0` -> `ROM  mocd` ).
+* 關於 `3ME4` `controller` 異常相關問題. 
+* 提供 `Sales-Joanne` 相關 `X-ray` 照片.
+* 協助新人錄製 `3TE7` `DLMC` 透過 `ssh` 更新 `FW` 相關影片, 並提供工具於 `EU-FAE`.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [ ] 架設 `3MR3-P` 執行環境, 並上電錄製 `UART` log,觀看是否可以辨識到.
+  * [ ] 量測 `Ericssion` `eUSB` `3` pcs 異常品電性量測.
+  * [x] 填寫 `3ME4` `controller` 送至原廠分析單, 並回覆原廠相關問題.
