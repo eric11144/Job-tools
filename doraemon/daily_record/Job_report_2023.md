@@ -2770,6 +2770,58 @@
 * 協助新人錄製 `3TE7` `DLMC` 透過 `ssh` 更新 `FW` 相關影片, 並提供工具於 `EU-FAE`.
 * TODO
   * [x] 參與 `FAE-team2` 週會.
-  * [ ] 架設 `3MR3-P` 執行環境, 並上電錄製 `UART` log,觀看是否可以辨識到.
-  * [ ] 量測 `Ericssion` `eUSB` `3` pcs 異常品電性量測.
+  * [x] 架設 `3MR3-P` 執行環境, 並上電錄製 `UART` log,觀看是否可以辨識到.
+  * [x] 量測 `Ericssion` `eUSB` `3` pcs 異常品電性量測.
   * [x] 填寫 `3ME4` `controller` 送至原廠分析單, 並回覆原廠相關問題.
+  * [x] 觀看 `FRA SYS` 測試狀況.
+  * [x] 協助 `EU-FAE` 領取 `CFast card 3IE7`.
+  * [x] 協助 `採購` 回覆 `Marvell` 送修相關問題.
+
+# 2023-09-05
+* 參與 `FAE-team2` 週會.
+* 架設 `3MR3-P` 執行環境, 並上電錄製 `UART` log,觀看是否可以辨識到.
+* 量測 `Ericssion` `eUSB` `3` pcs 異常品電性量測.
+* 填寫 `3ME4` `controller` 送至原廠分析單, 並回覆原廠相關問題.
+* 觀看 `FRA SYS` 測試狀況, 結果與 `JP-PFU` 客訴問題相同, 並將問題回報給 `EU`.
+* 協助 `EU-FAE` 領取 `CFast card 3IE7`.
+* 協助 `採購` 回覆 `Marvell` 送修相關問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `採購` 回覆 `Marvell` 送修相關問題.
+  * [x] 與 `Kiwi` 前往 `RMA` 借取 `Marvell` controller sorting board, 並做相關交叉測試驗證.
+  * [x] 協助新人回覆 `innoWorks` 相關客訴問題.
+  * [x] 協助新人架設 `Ubuntu 16.04` `reboot count` 測試程式.
+  * [x] 協助 `FW-RD Allen` 錄製 `SCN` `5` pcs `3MR3-P` 相關 `SMART` info.
+  * [x] 協助新人觀看 `3TG6-P` 相關客訴問題.
+  * [x] 協助 `EU` 量測 `1`pcs `Ericssion` `eUSB` 之 `Power sequence` `Open short` `Crystal`. 
+
+# 2023-09-06
+* 參與 `FAE` 週會.
+* 協助 `採購` 回覆 `Marvell` 送修相關問題.
+* 與 `Kiwi` 前往 `RMA` 借取 `Marvell` controller sorting board, 並做相關交叉測試驗證.
+* 協助新人回覆 `innoWorks` 相關客訴問題.
+* 協助新人架設 `Ubuntu 16.04` `reboot count` 測試程式.
+* 協助 `FW-RD Allen` 錄製 `SCN` `5` pcs `3MR3-P` 相關 `SMART` info.
+* 協助新人觀看 `3TG6-P` 相關客訴問題.
+* 協助 `EU` 量測 `1`pcs `Ericssion` `eUSB` 之 `Power sequence` `Open short` `Crystal`. 
+* TODO
+  * [x] 協助 `EU` 量測 `3`pcs `Ericssion` `eUSB` 之 `Power sequence` `Open short` `Crystal`. 
+  * [x] 整理 `3`pcs `Ericssion` `eUSB` 相關測試結果.
+  * [x] 協助新人觀看 `innoWorks` 關於 `ssh` 遠端更新操作, 以及 `CFast` 相關問題.
+  * [x] 與 `FW-RD Allen` 討論 `3MR3-P` 其中一片無法認碟問題.
+  * [x] 詢問 `HW-RD Chiyang` 關於 `eUSB` `1.8V` 的量測.
+  * [x] 與 `EU-FAE` 討論客訴案進度狀況.
+
+# 2023-09-07
+* 協助 `EU` 量測 `3`pcs `Ericssion` `eUSB` 之 `Power sequence` `Open short` `Crystal`. 
+* 整理 `3`pcs `Ericssion` `eUSB` 相關測試結果, 並回報給 `EU`.
+* 協助新人觀看 `innoWorks` 關於 `ssh` 遠端更新操作, 以及 `CFast` 相關問題.
+* 與 `FW-RD Allen` 討論 `3MR3-P` 其中一片無法認碟問題.
+* 詢問 `HW-RD Chiyang` 關於 `eUSB` `1.8V` 的量測.
+* 與 `EU-FAE` 討論客訴案進度狀況.
+* TODO
+  * [ ] 撰寫 `Aristacrat` `FA` report.
+  * [ ] 測試 `3IE7` `80GB` `DLMC` tool.
+  * [ ] 參與 `EU-FAE` 週會.
+
+
