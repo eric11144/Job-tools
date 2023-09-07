@@ -2820,8 +2820,23 @@
 * 詢問 `HW-RD Chiyang` 關於 `eUSB` `1.8V` 的量測.
 * 與 `EU-FAE` 討論客訴案進度狀況.
 * TODO
-  * [ ] 撰寫 `Aristacrat` `FA` report.
-  * [ ] 測試 `3IE7` `80GB` `DLMC` tool.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 撰寫 `Aristacrat` `FA` report.
+  * [x] 測試 `3IE7` `80GB` `DLMC` tool.
+  * [x] 協助 `FW-RD Allen` 測試 `3MR3-P` `5` pcs 成功進入系統時間(建表完成).
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 測試 `Hanel` 平台 usb cable 功能, 以及是否能進入 `bios`.
+  * [x] 協助新人觀看 `innoWorks` `CFast card` 相關問題.
+  * [x] 協助新人透過烤箱測試 `3MR2-P` 老化驗證.
+  * [x] 透過顯微鏡觀看 `Ericssion` `eUSB` `Crystal` 外觀狀況.
 
-
+# 2023-09-08
+* 撰寫 `Aristacrat` `FA` report, 已將初步報告寄出.
+* 測試 `3IE7` `80GB` `DLMC` tool, 可正常運行( `S21606i -> S23809i` ).
+* 協助 `FW-RD Allen` 測試 `3MR3-P` `5` pcs 成功進入系統時間(建表完成).
+* 參與 `EU-FAE` 週會.
+* 測試 `Hanel` 平台 usb cable 功能, 以及是否能進入 `bios`, 經過驗證後, 是沒有問題的, 並將結果回覆給 `EU`.
+* 協助新人觀看 `innoWorks` `CFast card` 相關問題.
+* 協助新人透過烤箱測試 `3MR2-P` 老化驗證.
+* 透過顯微鏡觀看 `Ericssion` `eUSB` `Crystal` 外觀狀況.
+* TODO
+  * [ ] 協助 `FW-RD Allen` 測試 `3MR3-P` `5` pcs(新版 FW).
