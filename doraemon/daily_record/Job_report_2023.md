@@ -2839,4 +2839,34 @@
 * 協助新人透過烤箱測試 `3MR2-P` 老化驗證.
 * 透過顯微鏡觀看 `Ericssion` `eUSB` `Crystal` 外觀狀況.
 * TODO
-  * [ ] 協助 `FW-RD Allen` 測試 `3MR3-P` `5` pcs(新版 FW).
+  * [x] 協助 `Alex` 提供透過 `DLMC` tool 進入 `ROM` mode 的資訊.
+  * [x] 協助 `Kerry` 提供關於 `3TE6` 2pcs 同時接上認不到碟的問題, 以及解法.
+  * [x] 與 `EU-FAE` 討論 `3MR3-P` 後續處理狀況.
+  * [x] 協助新人架設 `Power Cycling` 環境.
+  * [x] 將 `Ericssion` `eUSB` `BCA12206150155234` 送至 `RMA` 更換 `Crystal`.
+
+# 2023-09-11
+* 協助 `Alex` 提供透過 `DLMC` tool 進入 `ROM` mode 的資訊.
+* 協助 `Kerry` 提供關於 `3TE6` 2pcs 同時接上認不到碟的問題, 以及解法.
+* 與 `EU-FAE` 討論 `3MR3-P` 後續處理狀況.
+* 協助新人架設 `Power Cycling` 環境.
+* 將 `Ericssion` `eUSB` `BCA12206150155234` 送至 `RMA` 更換 `Crystal`.
+* TODO
+  * [x] 修改 `FEA230804005` `3TE7` `FA` report.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
+  * [x] 詢問 `CN-FAE Rowand` 關於 `USB` analyzer 使用進度.
+  * [x] 量測 `FA230828007` `Aristocrat Tech` `3ME4` controller 透過 sorting board 量測 `SATA` analyzer.
+  * [x] 協助 `Sales-Vivian` 找尋 `融程科技` 測試平台.
+
+# 2023-09-12
+* 修改 `FEA230804005` `3TE7` `FA` report.
+* 參與 `FAE-team2` 週會.
+* 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
+* 詢問 `CN-FAE Rowand` 關於 `USB` analyzer 使用進度, 預計下週會寄回.
+* 量測 `FA230828007` `Aristocrat Tech` `3ME4` controller 透過 sorting board 量測 `SATA` analyzer, 並提供給原廠分析.
+* 協助 `Sales-Vivian` 找尋 `融程科技` 測試平台, 並將其歸還給客戶.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 追蹤 `FA230828007` `Aristocrat Tech` 分析進度.
+  * [ ] 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
