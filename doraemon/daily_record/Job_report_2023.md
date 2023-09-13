@@ -2867,6 +2867,34 @@
 * 量測 `FA230828007` `Aristocrat Tech` `3ME4` controller 透過 sorting board 量測 `SATA` analyzer, 並提供給原廠分析.
 * 協助 `Sales-Vivian` 找尋 `融程科技` 測試平台, 並將其歸還給客戶.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 追蹤 `FA230828007` `Aristocrat Tech` 分析進度.
-  * [ ] 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
+  * [x] 參與 `FAE` 週會.
+  * [x] 追蹤 `FA230828007` `Aristocrat Tech` 分析進度.
+  * [x] 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
+  * [x] 與 `EU-FAE` 討論 `SARL` 客訴案狀況.
+  * [x] 協助 `EU-FAE` 查找 `3TE6` `V2111804` & `V2111806` DLMC 相關限制.
+  * [x] 協助新人針對 `CFast 3ME4` `2`pcs 執行 `ReMP`.
+  * [x] 協助 `Kiwi` 測試 `VN` `3TE7` 於 `UEFI` & `Legacy` mode warm boot 隨機無法認碟問題.
+  * [x] 與 `EP Kevin` 討論 `Hanel` 後續出貨驗證流程.
+  * [x] 協助 `Sales-Joanne` 將 `Aristocrat Tech` `CFast 3ME4` 送至維修部觀看是否有客戶資料.
+  * [x] 與 `Edom-Chad` 討論 `controller` 分析處理狀況.
+
+# 2023-09-13
+* 參與 `FAE` 週會.
+* 追蹤 `FA230828007` `Aristocrat Tech` 分析進度.
+* 協助新人觀看 `innoWorks` `CFast 3ME4` 火車平台客訴案.
+* 與 `EU-FAE` 討論 `SARL` 客訴案狀況.
+* 協助 `EU-FAE` 查找 `3TE6` `V2111804` & `V2111806` DLMC 相關限制.
+* 協助新人針對 `CFast 3ME4` `2`pcs 執行 `ReMP`.
+* 協助 `Kiwi` 測試 `VN` `3TE7` 於 `UEFI` & `Legacy` mode warm boot 隨機無法認碟問題.
+* 與 `EP Kevin` 討論 `Hanel` 後續出貨驗證流程.
+* 協助 `Sales-Joanne` 將 `Aristocrat Tech` `CFast 3ME4` 送至維修部觀看是否有客戶資料.
+* 與 `Edom-Chad` 討論 `controller` 分析處理狀況.
+* TODO
+  * [x] 與 `EU-FAE` 討論 `Hanel` 送至 `RMA` 維修狀況.
+  * [x] 協助 `Kiwi` 處理 `M.2` 訊號線焊接(詢問 `RMA` 人員).
+  * [x] 協助新人回覆 `innoWokrs` 關於 `mSATA` image 內容相關問題.
+  * [x] 取回並測試 `Aristocrat Tech` `CFast 3ME4` 資料內容.
+  * [x] 測試 `Ericssion` `3SE eSUB` only `USB 2.0` 辨識問題(更換 `connector`).
+  * [x] 協助新人測試 `3ME4` `dd` image 功能.
+
+
