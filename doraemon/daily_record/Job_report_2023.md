@@ -2897,4 +2897,16 @@
   * [x] 測試 `Ericssion` `3SE eSUB` only `USB 2.0` 辨識問題(更換 `connector`).
   * [x] 協助新人測試 `3ME4` `dd` image 功能.
 
-
+# 2023-09-14
+* 與 `EU-FAE` 討論 `Hanel` 送至 `RMA` 維修狀況.
+* 協助 `Kiwi` 處理 `M.2` 訊號線焊接(詢問 `RMA` 人員).
+* 協助新人回覆 `innoWokrs` 關於 `mSATA` image 內容相關問題.
+* 取回並測試 `Aristocrat Tech` `CFast 3ME4` 資料內容.
+* 測試 `Ericssion` `3SE eSUB` only `USB 2.0` 辨識問題(更換 `connector`).
+* 協助新人測試 `3ME4` `dd` image 功能.
+* TODO
+  * [x] 參與 `Ericssion` `eUSB` 分析狀況討論.
+  * [x] 與 `Marvell` 代理商討論送驗相關問題, 並將狀況回報給 `Sales-Joanne`.
+  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 協助新人回覆 `innoWorks` 關於 `GC` & `sector 0` 相關問題.
+  * [x] 更新 `eFAE` 客訴案相關進度.
