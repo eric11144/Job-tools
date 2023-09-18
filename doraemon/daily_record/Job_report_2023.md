@@ -2907,6 +2907,43 @@
 * TODO
   * [x] 參與 `Ericssion` `eUSB` 分析狀況討論.
   * [x] 與 `Marvell` 代理商討論送驗相關問題, 並將狀況回報給 `Sales-Joanne`.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 參與 `EU-FAE` 週會.
   * [x] 協助新人回覆 `innoWorks` 關於 `GC` & `sector 0` 相關問題.
   * [x] 更新 `eFAE` 客訴案相關進度.
+
+# 2023-09-15
+* 參與 `Ericssion` `eUSB` 分析狀況討論.
+* 與 `Marvell` 代理商討論送驗相關問題, 並將狀況回報給 `Sales-Joanne`.
+* 參與 `EU-FAE` 週會.
+* 協助新人回覆 `innoWorks` 關於 `GC` & `sector 0` 相關問題.
+* 更新 `eFAE` 客訴案相關進度.
+* TODO  
+  * [x] 針對 `Ericssion` `eUSB` `BCA12205190324191` 備份資料後, 重新 `Format`, 進行 `50` 次認碟時間.
+  * [x] 提供 `Marvell` 代理商相關送驗資訊.
+  * [x] 與新人討論 `innoWorks` `3ME4` `FW` `Gen2 & Gen3` 相關問題.
+  * [x] 寄送 `Ericssion` `eUSB` `2`pcs 至 `CN` 錄製 `analyzer`.
+
+# 2023-09-18
+* 針對 `Ericssion` `eUSB` `BCA12205190324191` 備份資料後, 重新 `Format`, 進行 `50` 次認碟時間.
+* 提供 `Marvell` 代理商相關送驗資訊.
+* 與新人討論 `innoWorks` `3ME4` `FW` `Gen2 & Gen3` 相關問題.
+* 寄送 `Ericssion` `eUSB` `2`pcs 至 `CN` 錄製 `analyzer`.
+* 更新 `eFAE` 系統客訴案相關進度.
+* TODO
+  * [x] 與 `Sales-Joan` 討論 `Simms` 客訴案 `FA` report.
+  * [x] 協助新人回答 `innoWorks` 關於 `Sector 0` `GC & wear leveling` 相關問題.
+  * [x] 協助新人回答 `innoWorks` 關於 `Ubuntu` `dmesg` 內的 `ATA` command 相關問題.
+  * [x] 參與 `EU` 討論 `Ericssion` `eUSB` `BCA12205190324191` 認碟速度較慢的問題.
+  * [x] 協助 `EU-FAE` 提供 `DES25-A28D08BC1QC` 開卡包.
+  * [x] 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` controller.
+
+# 2023-09-19
+* 與 `Sales-Joan` 討論 `Simms` 客訴案 `FA` report, 需修改日期, 以及 `In charge` & `Date`.
+* 協助新人回答 `innoWorks` 關於 `Sector 0` `GC & wear leveling` 相關問題.
+* 協助新人回答 `innoWorks` 關於 `Ubuntu` `dmesg` 內的 `ATA` command 相關問題.
+* 參與 `EU` 討論 `Ericssion` `eUSB` `BCA12205190324191` 認碟速度較慢的問題.
+* 協助 `EU-FAE` 提供 `DES25-A28D08BC1QC` 開卡包.
+* 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` controller.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 測試 `BCA12203290522077` 更換回 `old` controller 辨識狀況.
