@@ -2935,7 +2935,7 @@
   * [x] 協助新人回答 `innoWorks` 關於 `Ubuntu` `dmesg` 內的 `ATA` command 相關問題.
   * [x] 參與 `EU` 討論 `Ericssion` `eUSB` `BCA12205190324191` 認碟速度較慢的問題.
   * [x] 協助 `EU-FAE` 提供 `DES25-A28D08BC1QC` 開卡包.
-  * [x] 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` controller.
+  * [x] 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` `Controller`.
 
 # 2023-09-19
 * 與 `Sales-Joan` 討論 `Simms` 客訴案 `FA` report, 需修改日期, 以及 `In charge` & `Date`.
@@ -2943,7 +2943,22 @@
 * 協助新人回答 `innoWorks` 關於 `Ubuntu` `dmesg` 內的 `ATA` command 相關問題.
 * 參與 `EU` 討論 `Ericssion` `eUSB` `BCA12205190324191` 認碟速度較慢的問題.
 * 協助 `EU-FAE` 提供 `DES25-A28D08BC1QC` 開卡包.
-* 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` controller.
+* 將 `BCA12203290522077` 送至 `RMA` 更換回 `old` `Controller`.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 測試 `BCA12203290522077` 更換回 `old` controller 辨識狀況.
+  * [x] 參與 `FAE` 週會.
+  * [x] 測試 `BCA12203290522077` 更換回 `old` `Controller` 辨識狀況.
+  * [x] 將 `Aristocrat Tech` `CFast 3ME4` 欲分析 `Controller` 交至採購寄往原廠分析.
+  * [x] 練習 `C++` 相關 function 使用.
+
+# 2023-09-20
+* 參與 `FAE` 週會.
+* 測試 `BCA12203290522077` 更換回 `old` `Controller` 辨識狀況.
+* 將 `Aristocrat Tech` `CFast 3ME4` 欲分析 `Controller` 交至採購寄往原廠分析.
+* 練習 `C++` 相關 function 使用.
+* TODO
+  * [x] 協助新人處理 `VN-Sales` `3TE7` `ReMP` 相關操作.
+  * [x] 協助新人回覆 `innoWorks` `mSATA 3SE3` 相關問題.
+  * [x] 協助新人處理 `SATADOM` 相關接線問題.
+  * [x] 協助組內領出轉板料件.
+  * [x] 回報 `EU` `Ericssion` `eUSB` 測試分析狀況.
+  * [x] 與 `EU-FAE` 討論 `3ME3` 客訴案處理狀況.
