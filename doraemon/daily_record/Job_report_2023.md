@@ -2962,3 +2962,42 @@
   * [x] 協助組內領出轉板料件.
   * [x] 回報 `EU` `Ericssion` `eUSB` 測試分析狀況.
   * [x] 與 `EU-FAE` 討論 `3ME3` 客訴案處理狀況.
+
+# 2023-09-21
+* 協助新人處理 `VN-Sales` `3TE7` `ReMP` 相關操作.
+* 協助新人回覆 `innoWorks` `mSATA 3SE3` 相關問題.
+* 協助新人處理 `SATADOM` 相關接線問題.
+* 協助組內領出轉板料件.
+* 回報 `EU` `Ericssion` `eUSB` 測試分析狀況.
+* 與 `EU-FAE` 討論 `3ME3` 客訴案處理狀況.
+* TODO
+  * [x] 協助 `Alan` 觀看 `CIFX 90-E2CO` 相關資訊.
+  * [x] 協助新人驗證 `innoWorks` 關於 `hexdump` 資料顯示.
+    * [x] `A` device image copy to `B` device.
+    * [x] Use same `Ubuntu 22.04` image to install OS in `A` & `B` device. 
+  * [x] 協助查找 `innoWorks` 關於 `wear leveling` & `Garbage collection` 動作執行解說影片.
+  * [x] 查找 `SODDIMM` 相關 `DRAM`.
+
+# 2023-09-22
+* 協助 `Alan` 觀看 `CIFX 90-E2CO` 相關資訊.
+* 協助新人驗證 `innoWorks` 關於 `hexdump` 資料顯示.
+  * `A` device image copy to `B` device.
+  * Use same `Ubuntu 22.04` image to install OS in `A` & `B` device. 
+* 協助查找 `innoWorks` 關於 `wear leveling` & `Garbage collection` 動作執行解說影片.
+* 查找 `SODDIMM` 相關 `DRAM`.
+* TODO
+  * [x] 詢問 `Rowand` 關於 `eUSB` 錄製 `analyzer` 相關資訊.
+  * [x] 詢問 `Mickey` 關於 `SATADOM` power cable 相關料號.
+  * [x] 協助新人觀看 `3TE7` 無法認碟問題.
+  * [x] 觀看 `3TG6-P P80` 無法認碟問題.
+
+# 2023-09-23
+* 詢問 `Rowand` 關於 `eUSB` 錄製 `analyzer` 相關資訊, 經過討論後, 需寄出信件告知需要量測的動作.
+* 詢問 `Mickey` 關於 `SATADOM` power cable 相關料號, 並進行照片查找.
+* 協助新人觀看 `3TE7` 無法認碟問題, 經由電路查找, 發現為 `U41` power IC 異常.
+* 觀看 `3TG6-P P80` 無法認碟問題, 問題為 `ASSERT: M(3)F(21)L(10506)`, 目前等待 `FW` 驗證.
+* TODO
+  * [x] 協助新人觀看 `innoWorks` 關於 `wear leveling` & `Garbage collection` 相關問題.
+  * [x] 協助 `VN-Sales` 處理 `3TE7` 在當 `OS` System 使用時, 能否進行 `DLMC`(透過 `-j`).
+  * [x] 協助新人錄製 `3TE7` `DLMC` tool 操作影片.
+  * [x] 與 `Sales-Joan` 討論 `UK004` `3MG2-P` 無法認碟問題.
