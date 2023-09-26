@@ -3001,3 +3001,30 @@
   * [x] 協助 `VN-Sales` 處理 `3TE7` 在當 `OS` System 使用時, 能否進行 `DLMC`(透過 `-j`).
   * [x] 協助新人錄製 `3TE7` `DLMC` tool 操作影片.
   * [x] 與 `Sales-Joan` 討論 `UK004` `3MG2-P` 無法認碟問題.
+
+# 2023-09-25
+* 協助新人觀看 `innoWorks` 關於 `wear leveling` & `Garbage collection` 相關問題.
+* 協助 `VN-Sales` 處理 `3TE7` 在當 `OS` System 使用時, 能否進行 `DLMC`(透過 `-j`).
+* 協助新人錄製 `3TE7` `DLMC` tool 操作影片.
+* 與 `Sales-Joan` 討論 `UK004` `3MG2-P` 無法認碟問題.
+* TODO
+  * [x] 參與 `FAE team2` 週會.
+  * [x] 協助 `Sales-Vincent` 討論 `3TG6-P (P80)` 處理狀況以及分享相關異常資訊.
+  * [x] 與 `FW-RD Mike` 討論異常資訊處理狀況, 並詢問相關更新流程.
+  * [x] 測試 `3TG6-P (P80)` 透過 `DLMC V3.11.0` 更新 `FW`( `C22822` -> `C22822E` ).
+  * [x] 與 `CN-FAE` 討論 `eUSB` 錄製之 `analyzer`.
+  * [x] 追蹤 `Marvell` 原廠分析進度.
+
+# 2023-09-26
+* 參與 `FAE team2` 週會.
+* 協助 `Sales-Vincent` 討論 `3TG6-P (P80)` 處理狀況以及分享相關異常資訊.
+* 與 `FW-RD Mike` 討論異常資訊處理狀況, 並詢問相關更新流程.
+* 測試 `3TG6-P (P80)` 透過 `DLMC V3.11.0` 更新 `FW`( `C22822` -> `C22822E` ).
+* 撰寫 `3TG6-P (P80)` 透過 `DLMC V3.11.0` 更新 `FW` 操作文件, 並提供給 `Sales-Vincent`.
+* 與 `CN-FAE` 討論 `eUSB` 錄製之 `analyzer`.
+* 追蹤 `Marvell` 原廠分析進度, 目前已經異常品 `controller` 送至國外做分析.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 提供 `eUSB` 錄製之 `analyzer` 於 `Hyperstone` 原廠協助分析.
+  * [x] 與 `Sales-Vincent` 討論 `3TG6-P (P80)` `FW` 更新相關事項.
+  * [ ] 協助新人測試 `teamviewer` 遠端更新 `SSD`.
