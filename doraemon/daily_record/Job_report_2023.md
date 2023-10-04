@@ -3027,4 +3027,67 @@
   * [x] 參與 `FAE` 週會.
   * [x] 提供 `eUSB` 錄製之 `analyzer` 於 `Hyperstone` 原廠協助分析.
   * [x] 與 `Sales-Vincent` 討論 `3TG6-P (P80)` `FW` 更新相關事項.
-  * [ ] 協助新人測試 `teamviewer` 遠端更新 `SSD`.
+  * [x] 協助新人測試 `teamviewer` 遠端更新 `SSD`.
+
+# 2023-09-27
+* 參與 `FAE` 週會.
+* 提供 `eUSB` 錄製之 `analyzer` 於 `Hyperstone` 原廠協助分析.
+* 與 `Sales-Vincent` 討論 `3TG6-P (P80)` `FW` 更新相關事項.
+* 協助新人測試 `teamviewer` 遠端更新 `SSD`.
+* TODO
+  * [x] 協助 `Sales-Vincent` 查找 `FTB221125007` 客訴案內容.
+  * [x] 協助 `Kiwi` 查找 `Blue screen` 相關客訴報告.
+  * [x] 協助 `Alan` 查找 `Remove PHYID checking` 相關資訊.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助新人 copy `3TE7`.
+  * [x] 錄製 `eUSB 3SE` analyzer 於 `hyperstone`.
+
+# 2023-09-28
+* 協助 `Sales-Vincent` 查找 `FTB221125007` 客訴案內容.
+* 協助 `Kiwi` 查找 `Blue screen` 相關客訴報告.
+* 協助 `Alan` 查找 `Remove PHYID checking` 相關資訊.
+* 參與 `EU-FAE` 週會.
+* 協助新人 copy `3TE7`.
+* 錄製 `eUSB 3SE` analyzer 於 `hyperstone`.
+* TODO
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助 `Sales-Joan` 處理 `3MG2-P M.2 SATA SSD (256G) failures (HW-490)` 客戶問題.
+  * [x] 與 `CN-Lyle` & `hyperstone Elvis` 討論 `eUSB` analyzer 相關問題.
+  * [x] 協助新人處理相關客訴問題.
+
+# 2023-10-02
+* 參與 `FAE` 月會.
+* 協助 `Sales-Joan` 處理 `3MG2-P M.2 SATA SSD (256G) failures (HW-490)` 客戶問題.
+* 與 `CN-Lyle` & `hyperstone Elvis` 討論 `eUSB` analyzer 相關問題.
+* 協助新人處理相關客訴問題.
+* TODO
+  * [x] 撰寫 `Ericssion` 8pcs 客訴案報告.
+  * [x] 協助新人處理 `iCF 9000` 客訴問題.
+  * [x] 觀看 `B&R` 客訴案( `FEB230911016 - 3MV2-P`).
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 請 `CN-Rowand` 協助寄回 `2`pcs devices.
+
+# 2023-10-03
+* 撰寫 `Ericssion` 8pcs 客訴案報告.
+* 協助新人處理相關客訴問題.
+* 觀看 `B&R` 客訴案( `FEB230911016 - 3MV2-P`).
+* 參與 `FAE-team2` 週會.
+* 請 `CN-Rowand` 協助寄回 `2`pcs devices.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 將 `8`pcs `eUSB` 送至 `RMA` 透過 `X-ray` 觀看 connector.
+  * [x] 撰寫 `B&R` 客訴案報告.
+  * [x] 撰寫 `Ericssion` 8pcs 客訴案報告.
+  * [x] 與 `Kiwi` 討論 `FEA230526003` 相關客戶問題回覆.
+  * [x] 協助 `Sales-Vincent` 提供 `DLMC` tool.
+
+# 2023-10-04
+* 參與 `FAE` 週會.
+* 將 `8`pcs `eUSB` 送至 `RMA` 透過 `X-ray` 觀看 connector.
+* 撰寫 `B&R` 客訴案報告.
+* 撰寫 `Ericssion` 8pcs 客訴案報告.
+* 與 `Kiwi` 討論 `FEA230526003` 相關客戶問題回覆.
+* 協助 `Sales-Vincent` 提供 `DLMC` tool.
+* TODO
+  * [ ] 協助 `Sales-Joan` 回覆 `FEA230526003` 客訴案問題.
+  * [ ] 協助製作 `WinPE` 安裝 disk.
