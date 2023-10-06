@@ -3089,5 +3089,34 @@
 * 與 `Kiwi` 討論 `FEA230526003` 相關客戶問題回覆.
 * 協助 `Sales-Vincent` 提供 `DLMC` tool.
 * TODO
-  * [ ] 協助 `Sales-Joan` 回覆 `FEA230526003` 客訴案問題.
-  * [ ] 協助製作 `WinPE` 安裝 disk.
+  * [x] 協助 `Sales-Joan` 回覆 `FEA230526003` 客訴案問題.
+  * [x] 協助 `Sales-Vincent` 處理 `PCIe 3TG6-P` 無法 `DLMC` 問題.
+  * [x] 通知 `CN-FAE` 將 `Ericssion` `eUSB` 送回 `HQ`.
+  * [x] 協助 `Sales-Joan` 與 `PM-Jack` 詢問 `PCN` 相關修改事項.
+  * [x] 測試 `EU` `SATA 3ME3` `controller` 重新回焊認碟狀況.
+
+# 2023-10-05
+* 協助 `Sales-Joan` 回覆 `FEA230526003` 客訴案問題.
+* 協助 `Sales-Vincent` 處理 `PCIe 3TG6-P` 無法 `DLMC` 問題, 經過詢問後, 發現原因應該為客戶端 `OS` 為客製化 `OS`, 可能就會造成 `DLMC` 出現異常.
+* 通知 `CN-FAE` 將 `Ericssion` `eUSB` 送回 `HQ`, 預計連假後寄回 `HQ`.
+* 協助 `Sales-Joan` 與 `PM-Jack` 詢問 `PCN` 相關修改事項, 卻只修改 `power IC`.
+* 測試 `EU` `SATA 3ME3` `controller` 重新回焊認碟狀況, 有出現假性認碟狀況, 後續已將 `device` 送至 `RMA` 更換新 `controller`.
+* TODO
+  * [x] 協助 `Sales-Vincent` 錄製 `3TG6-P` 當 `OS` disk 執行 `DLMC` 狀況.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 詢問關於 `NCQ` 相關問題.
+  * [x] 協助新人觀看 `innoWorks` 客訴問題.
+
+# 2023-10-06
+* 協助 `Sales-Vincent` 錄製 `3TG6-P` 當 `OS` disk 執行 `DLMC` 狀況.
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 詢問關於 `NCQ` 相關問題.
+* 協助新人觀看 `innoWorks` 客訴問題.
+* 測試 `Windows 7` OS 安裝.
+* TODO
+  * [x] 協助新人測試 `mSATA 3ME3` `invalid count = 2048`, 造成 `data lose` 相關實驗.
+  * [x] 測試 `Windows 7` OS 安裝.
+  * [x] 協助 `Kiwi` 觀看 `TCG opal` 相關架設.
+  * [x] 協助 `EU-FAE` 借出樣品.
+  * [x] 協助新人架設 `SATADOM` 測試環境.
+
