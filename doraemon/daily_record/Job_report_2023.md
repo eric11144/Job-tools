@@ -3119,4 +3119,47 @@
   * [x] 協助 `Kiwi` 觀看 `TCG opal` 相關架設.
   * [x] 協助 `EU-FAE` 借出樣品.
   * [x] 協助新人架設 `SATADOM` 測試環境.
+  * [x] 協助 `EU-FAE` 回覆 `4TG2-P` `Thermal Throttling` `FW` update 問題.
+  * [x] 協助新人製作 `Ubuntu 22.04 Server` 安裝 disk.
+
+# 2023-10-11
+* 協助新人測試 `mSATA 3ME3` `invalid count = 2048`, 造成 `data lose` 相關實驗.
+* 測試 `Windows 7` OS 安裝.
+* 協助 `Kiwi` 觀看 `TCG opal` 相關架設.
+* 協助 `EU-FAE` 借出樣品.
+* 協助新人架設 `SATADOM` 測試環境.
+* 協助 `EU-FAE` 回覆 `4TG2-P` `Thermal Throttling` `FW` update 問題.
+* 協助新人製作 `Ubuntu 22.04 Server` 安裝 disk.
+* TODO
+  * [x] 協助 `EU-FAE` 處理 `4TG2-P` 樣品借出 & `DLMC` tool.
+  * [x] 協助 `EU-FAE` 查找 `FED230609011` `3TE6` 客訴品位置( `YCA12302020080032` ).
+  * [x] 協助 `Sales-Cindy` 處理 `CFast 3IE7` `DLMC` tool.
+  * [x] 協助新人於 `SATADOM` 安裝 `Ubuntu 22.04 Server`.
+  * [x] 協助新人詢問關於每版 `FW` 相關驗證報告. 
+
+# 2023-10-12
+* 協助 `EU-FAE` 處理 `4TG2-P` 樣品借出 & `DLMC` tool, 並提供相關影片, `U.2` 於 `Ubuntu` 執行 `DLMC` tool 缺少相關轉板, 暫無法執行.
+* 協助 `EU-FAE` 查找 `FED230609011` `3TE6` 客訴品位置( `YCA12302020080032` ).
+* 協助 `Sales-Cindy` 處理 `CFast 3IE7` `DLMC` tool.
+* 協助新人於 `SATADOM` 安裝 `Ubuntu 22.04 Server`.
+* 協助新人詢問關於每版 `FW` 相關驗證報告. 
+* TODO
+  * [x] 協助 `EU-FAE` 詢問關於 `4TG2-P` 於 `Ubuntu` 透過 `nvme-cli` 執行 `DLMC` 相關指令, 以及更新步驟.
+  * [x] 協助 `EU-FAE` 提供 `4TG2-P` 於 `Ubuntu` 透過 `nvme-cli` 執行 `DLMC` 驗證影片.
+  * [x] 取回 `RMA` 維修之 `SATA 2.5 3ME3`, 並執行相關測試.
+  * [x] 觀看 `艾東` 客訴案(`mSATA 3IE4`).
+  * [x] 參與 `EU-FAE` 週會.
+
+# 2023-10-13
+* 協助 `EU-FAE` 詢問關於 `4TG2-P` 於 `Ubuntu` 透過 `nvme-cli` 執行 `DLMC` 相關指令, 以及更新步驟.
+* 協助 `EU-FAE` 提供 `4TG2-P` 於 `Ubuntu` 透過 `nvme-cli` 執行 `DLMC` 驗證影片.
+* 取回 `RMA` 維修之 `SATA 2.5 3ME3`, 並執行相關測試.
+* 觀看 `艾東` 客訴案(`mSATA 3IE4`).
+* 參與 `EU-FAE` 週會.
+* TODO
+  * [x] 建立 `艾東` 客訴案(`mSATA 3IE4`) 於 `TTS`.
+  * [x] 協助新人觀看 `SATADOM` 安裝 `Ubuntu Server` 問題.
+  * [x] 測試 `SATA 2.5 3ME3` 不同版 `FW`(`Mode: Legacy`), 觀看 `log`.
+  * [x] 提供並回覆 `eUSB` 相關資訊於 `Hyperstone` 人員.
+  * [x] 寄送良品 `eUSB` 於 `Hyperstone` 人員.
 
