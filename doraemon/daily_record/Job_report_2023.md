@@ -3163,3 +3163,50 @@
   * [x] 提供並回覆 `eUSB` 相關資訊於 `Hyperstone` 人員.
   * [x] 寄送良品 `eUSB` 於 `Hyperstone` 人員.
 
+# 2023-10-16
+* 建立 `艾東` 客訴案(`mSATA 3IE4`) 於 `TTS`.
+* 協助新人觀看 `SATADOM` 安裝 `Ubuntu Server` 問題.
+* 測試 `SATA 2.5 3ME3` 不同版 `FW`(`Mode: Legacy`), 觀看 `log`.
+* 提供並回覆 `eUSB` 相關資訊於 `Hyperstone` 人員.
+* 寄送良品 `eUSB` 於 `Hyperstone` 人員.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Sales-Vincent` 處理 `特裁申請`.
+  * [x] 協助 `Sales-Vivian` 回覆 `艾夏` 客訴案分析進度.
+  * [x] 協助 `FW RD-Eddie` dump `艾夏` 客訴品相關 `UART` log.
+  * [x] 協助詢問 `Sales-Joan` 關於兩筆客訴案後續處理.
+  * [x] 協助 `PM-Jack` & `EU` 量測 `Winsys` `4999`pcs 客退品使用問題.
+
+# 2023-10-17
+* 參與 `FAE-team2` 週會.
+* 協助 `Sales-Vincent` 處理 `特裁申請`.
+* 協助 `Sales-Vivian` 回覆 `艾夏` 客訴案分析進度.
+* 協助 `FW RD-Eddie` dump `艾夏` 客訴品相關 `UART` log.
+* 協助詢問 `Sales-Joan` 關於兩筆客訴案後續處理.
+* 協助 `PM-Jack` & `EU` 量測 `Winsys` `4999`pcs 客退品使用問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 整理 `Winsys` `8pcs` 量測結果.
+  * [x] 詢問 `FW RD-Eddie` 關於 `艾夏` 客訴品分析結果.
+  * [x] 參與 `EU` 會議討論 `Winsys` 量測.
+  * [x] 協助 `Kiwi` 測試 `3TE6` 開卡包 `EUI64` 功能.
+  * [x] 協助新人觀看 `Innoworks` `3ME3` 客訴報告.
+
+# 2023-10-18
+* 參與 `FAE` 週會.
+* 整理 `Winsys` `8pcs` 量測結果.
+* 詢問 `FW RD-Eddie` 關於 `艾夏` 客訴品分析結果.
+* 參與 `EU` 會議討論 `Winsys` 量測.
+* 協助 `Kiwi` 測試 `3TE6` 開卡包 `EUI64` 功能.
+* 協助新人觀看 `Innoworks` `3ME3` 客訴報告.
+* TODO
+  * [x] 整理並測試 `Winsys` 退回客訴品( 8箱內所有的 `device` 盒子, 各取一片出來, 共 `76`pcs ).
+  * [x] 協助新人觀看 `Innoworks` 客訴案.
+  * [x] 協助 `Jason` 查詢 `Vector` `RAID` 量測相關紀錄.
+
+# 2023-10-19
+* 整理並測試 `Winsys` 退回客訴品( 8箱內所有的 `device` 盒子, 各取一片出來, 共 `76`pcs ), 目前已量測 `26`pcs, 並錄製相關影片.
+* 協助新人觀看 `Innoworks` 客訴案.
+* 協助 `Jason` 查詢 `Vector` `RAID` 量測相關紀錄.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
