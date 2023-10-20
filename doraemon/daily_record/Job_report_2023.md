@@ -3209,4 +3209,43 @@
 * 協助新人觀看 `Innoworks` 客訴案.
 * 協助 `Jason` 查詢 `Vector` `RAID` 量測相關紀錄.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `PM-Jack` & `PM-Alfie` 繼續量測 `Winsys` 退回客訴品剩餘 `50`pcs.
+  * [x] 整理 `Winsys` 退回客訴品測試結果.
+  * [x] 協助 `RD-Ray` 錄製 `Winsys` 退回客訴品( `Normal` & `Fail` sample ) `SATA analyzer`.
+  * [x] 協助新人安裝 `Fedora` OS 於 `SATADOM`.
+  * [x] 協助新人量測 `3TE6` `ReMP`( `V211180A` -> `V22620` ).
+  * [x] 協助新人觀看 `innoWorks` 客訴案報告.
+  * [x] 處理 `SATA 2.5 3TG6-P` 更新 `FW`. 
+  * [x] 追蹤 `Ericssion` 分析狀況.
+
+# 2023-10-20
+* 參與 `EU-FAE` 週會.
+* 協助 `PM-Jack` & `PM-Alfie` 繼續量測 `Winsys` 退回客訴品剩餘 `50`pcs.
+* 整理 `Winsys` 退回客訴品測試結果, 並提供給相關人員.
+* 協助 `RD-Ray` 錄製 `Winsys` 退回客訴品( `Normal` & `Fail` sample ) `SATA analyzer`.
+* 協助新人安裝 `Fedora` OS 於 `SATADOM`, 目前尚未完成.
+* 協助新人量測 `3TE6` `ReMP`( `V211180A` -> `V22620` ).
+* 協助新人觀看 `innoWorks` 客訴案報告.
+* 處理 `SATA 2.5 3TG6-P` 更新 `FW`, 目前尚未處理完成. 
+* 追蹤 `Ericssion` 分析狀況.
+* TODO
+  * [x] 與 `FW RD-Allen` sync `3TE7` `DLMC` `Jump ROM` 相關問題.
+  * [x] 協助新人將 `iCF Card` 送至 `RMA`.
+  * [x] 協助新人安裝 `Fedora` OS 於 `SATADOM`.
+  * [x] 協助新人將 `SATADOM` 送至 `RMA` 照 `X-ray`.
+  * [x] 處理 `SATA 2.5 3TG6-P` 更新 `FW`.
+  * [x] 詢問補打卡相關問題.
+  * [x] 追蹤 `Ericssion` 分析狀況, 並回覆 `Hyperstone` 人員相關問題.
+
+# 2023-10-23
+* 與 `FW RD-Allen` sync `3TE7` `DLMC` `Jump ROM` 相關問題.
+* 協助新人將 `iCF Card` 送至 `RMA`.
+* 協助新人安裝 `Fedora` OS 於 `SATADOM`, 安裝完成後, 觀看 `partition` 皆為 `unknow partition`, 後續需錄製相關 `UART` log.
+* 協助新人將 `SATADOM` 送至 `RMA` 照 `X-ray`.
+* 處理 `SATA 2.5 3TG6-P` 更新 `FW`, 已完成更新(需要使用舊平台更新).
+* 詢問補打卡相關問題.
+* 追蹤 `Ericssion` 分析狀況, 並回覆 `Hyperstone` 人員相關問題.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 協助新人觀看 `SATADOM` 問題.
