@@ -3247,5 +3247,89 @@
 * 詢問補打卡相關問題.
 * 追蹤 `Ericssion` 分析狀況, 並回覆 `Hyperstone` 人員相關問題.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 協助新人觀看 `SATADOM` 問題.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人觀看 `SATADOM` 問題.
+  * [x] 查找轉板裝上開關電路.
+  * [x] 與 `FW-RD` 討論 `Winsys` 系統擋相關差異, 並與 `PM-Alfie` & `PM-Jack` 討論.
+
+# 2023-10-24
+* 參與 `FAE-team2` 週會.
+* 協助新人觀看 `SATADOM` 問題.
+* 查找轉板裝上開關電路.
+* 與 `FW-RD` 討論 `Winsys` 系統擋相關差異, 並與 `PM-Alfie` & `PM-Jack` 討論.
+* TODO
+  * [x] 與 `PM-Alfie` & `PM-Jack` 討論 `Winsys` 客訴案.
+  * [x] 協助 `FW-RD` 測試 `Winsys` 解鎖過程斷電相關現象.
+  * [x] 與 `Sales-Joan` 討論 `Simms` 客訴案( `M.2 (P42) 3TE7` & `M.2 (P42) 3TE2` ) 後續處理.
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Kiwi` 建立 `3ME4` `power cycle count` issue 於 `TTS`.
+
+# 2023-10-25
+* 與 `PM-Alfie` & `PM-Jack` 討論 `Winsys` 客訴案.
+* 協助 `FW-RD` 測試 `Winsys` 解鎖過程斷電相關現象.
+* 與 `Sales-Joan` 討論 `Simms` 客訴案( `M.2 (P42) 3TE7` & `M.2 (P42) 3TE2` ) 後續處理.
+* 參與 `FAE` 週會.
+* 協助 `Kiwi` 建立 `3ME4` `power cycle count` issue 於 `TTS`.
+* TODO
+  * [x] 協助 `Kiwi` 架設 `鼎通盛` 測試環境, 並錄製 `UART` log.
+  * [x] 協助 `Eva` 驗證及打包 `DLMC` 流程工具.
+  * [x] 協助 `Sales-Joan` 處理 `3TE7` `Re-MP` 到 `iSLC 160GB`, 並修改 `Disk Label`.
+  * [x] 與 `FW-RD Weiting` 討論 `3ME4` `power cycle count` issue 測試手法.
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助 `Sales-Joan` 詢問 `SATA 3TE7` 掉速相關問題.
+  * [x] 分析 `Ericssion` `eUSB` `辨識` ＆ `電性量測`, 並將 `Device` 送至 `SMT` 照 `Controller` & `Flash` `X-ray`.
+  * [x] 協助 `Jay` 修改 `DLMC` 根據 `Capacity` 判斷 `FW` bin file 之 `Shell script`.
+
+# 2023-10-26
+* 協助 `Kiwi` 架設 `鼎通盛` 測試環境, 並錄製 `UART` log.
+* 協助 `Eva` 驗證及打包 `DLMC` 流程工具.
+* 協助 `Sales-Joan` 處理 `3TE7` `Re-MP` 到 `iSLC 160GB`, 並修改 `Disk Label`.
+* 與 `FW-RD Weiting` 討論 `3ME4` `power cycle count` issue 測試手法.
+* 參與 `FAE` 月會.
+* 協助 `Sales-Joan` 詢問 `SATA 3TE7` 掉速相關問題.
+* 分析 `Ericssion` `eUSB` `辨識` ＆ `電性量測`, 並將 `Device` 送至 `SMT` 照 `Controller` & `Flash` `X-ray`.
+* 協助 `Jay` 修改 `DLMC` 根據 `Capacity` 判斷 `FW` bin file 之 `Shell script`.
+* TODO
+  * [x] 整理 `Ericssion` `eUSB` 相關實驗數據.
+  * [x] 協助 `Sales-Joan` 觀看 `solidstatedisks` 關於 `3TE7` 同時插上 `2`pcs `Device`, 無法認碟問題. 
+  * [x] 撰寫 `艾夏` `mSATA 3TE7` `FA report`.
+  * [x] 協助 `EU FAE` 詢問廠區是否有熱成像儀.
+  * [x] 與 `EU FAE` 討論關於 `DLMC` `V3.9.0(Mode 7 + WP)` 上鎖相關資訊.
+  * [x] 詢問 `FW RD` 關於　`3TE7` 掉速相關可能.
+
+# 2023-10-27
+* 整理 `Ericssion` `eUSB` 相關實驗數據.
+* 協助 `Sales-Joan` 觀看 `solidstatedisks` 關於 `3TE7` 同時插上 `2`pcs `Device`, 無法認碟問題. 
+* 撰寫 `艾夏` `mSATA 3TE7` `FA report`, 並提供給 `Sales-Vivian`.
+* 協助 `EU FAE` 詢問廠區是否有熱成像儀, 結果是沒有.
+* 與 `EU FAE` 討論關於 `DLMC` `V3.9.0(Mode 7 + WP)` 上鎖相關資訊, 只適用於 `3ME4`.
+* 詢問 `FW RD` 關於　`3TE7` 掉速相關可能.
+* TODO
+  * [x] 參與公司運動會.
+
+# 2023-10-30
+* 參與公司運動會.
+* TODO
+  * [x] 協助了解 `3TE7` 同時插上 `2`pcs `Device`, 無法認碟問題, 並與 `Sales` 討論後續處理方式.
+  * [x] 撰寫 `Ericssion` `10`pcs 初步報告.
+  * [x] 撰寫 `Ericssion` `8`pcs `FA` report 結論.
+  * [x] 協助回覆 `Sales-Vivian` 關於 `艾夏` `mSATA 3TE7` `FA report` 問題.
+  * [x] 與 `FW RD Eddie` 討論 `3ME4` `Erase error` 分析進度, 並協助詢問破壞性實驗手法.
+  * [x] 與 `Sales-Joanne` 討論 `Aristocrat CFast 3ME4` 無法辨識問題原廠分析報告.
+  * [x] 協助 `Kiwi` 傳送 `週會報告`.
+  * [x] 協助 `Alex` 回覆關於 `DLMC` `FW Verify` 相關操作.
+  * [x] 協助新人觀看 `3TE6` 更新相關客訴問題.
+
+# 2023-10-31
+* 協助了解 `3TE7` 同時插上 `2`pcs `Device`, 無法認碟問題, 並與 `Sales` 討論後續處理方式.
+* 撰寫 `Ericssion` `10`pcs 初步報告.
+* 撰寫 `Ericssion` `8`pcs `FA` report 結論.
+* 協助回覆 `Sales-Vivian` 關於 `艾夏` `mSATA 3TE7` `FA report` 問題.
+* 與 `FW RD Eddie` 討論 `3ME4` `Erase error` 分析進度, 並協助詢問破壞性實驗手法.
+* 與 `Sales-Joanne` 討論 `Aristocrat CFast 3ME4` 無法辨識問題原廠分析報告.
+* 協助 `Kiwi` 傳送 `週會報告`.
+* 協助 `Alex` 回覆關於 `DLMC` `FW Verify` 相關操作.
+* 協助新人觀看 `3TE6` 更新相關客訴問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+
