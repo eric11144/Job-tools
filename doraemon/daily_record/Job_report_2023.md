@@ -3332,4 +3332,11 @@
 * 協助新人觀看 `3TE6` 更新相關客訴問題.
 * TODO
   * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Sales-Joan` 回覆 `3TE7` 掉速客訴問題.
+  * [x] 撰寫 `Ericssion` `8`pcs `FA` report & `10`pcs `first` draft `FA` report.
+  * [x] 與 `Miller` & `EU-FAE` 討論 `Ericssion` 2筆 `FA` report.
+  * [x] 協助新人架設 `Fedora` Server 於 `SATADOM`.
+  * [x] 與 `Alex` 討論 `DLMC` tool 中的 `FW Verify` 相關功能.
+  * [x] 參與研發部月會.
+  * [x] 參與 `EU` 關於 `Eurcompus` `Winsys` 討論會議.
 
