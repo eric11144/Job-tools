@@ -3340,3 +3340,34 @@
   * [x] 參與研發部月會.
   * [x] 參與 `EU` 關於 `Eurcompus` `Winsys` 討論會議.
 
+# 2023-11-01
+* 參與 `FAE` 週會.
+* 協助 `Sales-Joan` 回覆 `3TE7` 掉速客訴問題.
+* 撰寫 `Ericssion` `8`pcs `FA` report & `10`pcs `first` draft `FA` report.
+* 與 `Miller` & `EU-FAE` 討論 `Ericssion` 2筆 `FA` report.
+* 協助新人架設 `Fedora` Server 於 `SATADOM`.
+* 與 `Alex` 討論 `DLMC` tool 中的 `FW Verify` 相關功能.
+* 參與研發部月會.
+* 參與 `EU` 關於 `Eurcompus` `Winsys` 討論會議.
+* TODO
+  * [x] 協助 `PM-Jack` 測試 `mSATA 3TE7 Bisc5` 於 `Winsys` 進行異常上斷電測試.
+  * [x] 與 `EU-PM` 討論 `Winsys` 測試相關流程.
+  * [x] 與 `EU-FAE` 討論 `Ericssion` 後續分析動作.
+  * [x] 於 `RMA` 取回 `Ericssion` `3`pcs 異常品, 並做相關驗證測試.
+  * [x] 與 `Sales-Joanne` 討論 `Aristocrat CFast 3ME4` 原廠報告.
+  * [x] 詢問 `Jay` 關於 `3TE2` 開卡相關操作.
+
+# 2023-11-02
+* 協助 `PM-Jack` 測試 `mSATA 3TE7 Bisc5` 於 `Winsys` 進行異常上斷電測試.
+* 與 `EU-PM` 討論 `Winsys` 測試相關流程.
+* 與 `EU-FAE` 討論 `Ericssion` 後續分析動作.
+* 於 `RMA` 取回 `Ericssion` `3`pcs 異常品, 並做相關驗證測試.
+* 與 `Sales-Joanne` 討論 `Aristocrat CFast 3ME4` 原廠報告.
+* 詢問 `Jay` 關於 `3TE2` 開卡相關操作.
+* TODO
+  * [x] 上午請假 `3` 小時.
+  * [x] 協助 `Danny` 觀看示波器操作.
+  * [x] 協助 `Kiwi` 觀看 `3MG2-P` 出現 `SMART` error 相關異常訊息問題.
+  * [x] 協助 `FW RD Weiting` 測試 `3ME4` `Abnormal power cycle count` fix bin file.
+  * [x] 協助新人製作 `3ME4` `DLMC` ro `L23721` image.
+
