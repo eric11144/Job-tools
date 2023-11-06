@@ -3371,3 +3371,28 @@
   * [x] 協助 `FW RD Weiting` 測試 `3ME4` `Abnormal power cycle count` fix bin file.
   * [x] 協助新人製作 `3ME4` `DLMC` ro `L23721` image.
 
+# 2023-11-03
+* 上午請假 `3` 小時.
+* 協助 `Danny` 觀看示波器操作.
+* 協助 `Kiwi` 觀看 `3MG2-P` 出現 `SMART` error 相關異常訊息問題.
+* 協助 `FW RD Weiting` 測試 `3ME4` `Abnormal power cycle count` fix bin file.
+* 協助新人製作 `3ME4` `DLMC` ro `L23721` image.
+* TODO
+  * [x] 與 `EU-FAE` sync 目前 `Ericssion` 分析狀況.
+  * [x] 與 `Weiting` 討論 `3ME4` 修正 `Abnormal power cycle count` 外顯名稱.
+  * [x] 與 `EU-PM` 討論 `Winsys` 測試內容.
+  * [x] 協助 `Jay` 測試 `2SE2` USB 電性測試, 以及故障零件電路查找.
+  * [x] 進行 `Ericssion` 客退品電路相關分析( `short` & `crystal` ).
+
+# 2023-11-06
+* 與 `EU-FAE` sync 目前 `Ericssion` 分析狀況.
+* 與 `Weiting` 討論 `3ME4` 修正 `Abnormal power cycle count` 外顯名稱.
+* 與 `EU-PM` 討論 `Winsys` 測試內容.
+* 協助 `Jay` 測試 `2SE2` USB 電性測試, 以及故障零件電路查找.
+* 進行 `Ericssion` 客退品電路相關分析( `short` & `crystal` ).
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人安裝 `Fedora` 於 `SATADOM`.
+  * [ ] 觀看 `Windows IOT` 更新 `NVME controller` driver.
+  * [ ] 觀看 `M.2 3MG2-P` 於 Linux 發生 `SMART` error 相關問題.
+  * [ ] 處理 `3ME4` `FW` 客製申請單.  
