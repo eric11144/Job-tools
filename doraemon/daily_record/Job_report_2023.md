@@ -3393,6 +3393,49 @@
 * TODO
   * [x] 參與 `FAE-team2` 週會.
   * [x] 協助新人安裝 `Fedora` 於 `SATADOM`.
-  * [ ] 觀看 `Windows IOT` 更新 `NVME controller` driver.
-  * [ ] 觀看 `M.2 3MG2-P` 於 Linux 發生 `SMART` error 相關問題.
-  * [ ] 處理 `3ME4` `FW` 客製申請單.  
+  * [x] 觀看 `Windows IOT` 更新 `NVME controller` driver.
+  * [x] 觀看 `M.2 3MG2-P` 於 Linux 發生 `SMART` error 相關問題.
+  * [x] 處理 `3ME4` `FW` 客製申請單.  
+
+# 2023-11-07
+* 參與 `FAE-team2` 週會.
+* 協助新人安裝 `Fedora` 於 `SATADOM`.
+* 觀看 `Windows IOT` 更新 `NVME controller` driver.
+* 觀看 `M.2 3MG2-P` 於 Linux 發生 `SMART` error 相關問題.
+* 處理 `3ME4` `FW` 客製申請單.  
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Danny` 處理 `FIO` 相關測試.
+  * [x] 透過 `Ubuntu` 相關 disk health check tool 測試 disk 相關狀況.
+  * [x] 與 `FW RD` 討論 `3ME4` `erase error` 相關分析狀況.
+  * [x] 協助新人架設 `nano SSD 3TE7` 客戶平台低溫測試( `-35` ).
+  * [x] 協助新人錄製 `SATADOM 3TE7` 關於 `SSH` 相關驗證影片.
+
+# 2023-11-08
+* 參與 `FAE` 週會.
+* 協助 `Danny` 處理 `FIO` 相關測試.
+* 透過 `Ubuntu` 相關 disk health check tool 測試 disk 相關狀況, 並發信給 `SMI` 原廠詢問此異常現象問題產生, 原廠回覆是 `Hardware ECC` 過高, 導致的告警現象.
+* 與 `FW RD` 討論 `3ME4` `erase error` 相關分析狀況.
+* 協助新人架設 `nano SSD 3TE7` 客戶平台低溫測試( `-35` ).
+* 協助新人錄製 `SATADOM 3TE7` 關於 `SSH` 相關驗證影片.
+* TODO
+  * [x] 回覆 `鼎通盛` 關於 `3TE7` 降速相關問題, 並做相關測試.
+  * [x] 將 `Ericssion` 2pcs 異常品送至 `RMA` 更換零件( `Crystal` & `Controller` ).
+  * [x] 協助新人測試 `nano SSD 3TE7` 於客戶平台錄製相關 `UART` log.
+  * [x] 協助 `Sales-Vivian` 處理 `艾夏` 相關客訴, 並協助回覆客戶相關問題.
+  * [x] 與 `FW RD` 了解 `3ME4` 發生 `erase error` 相關原理.
+  * [x] 撰寫 `艾夏` `3ME4` `erase error` `FA` report.
+  * [x] 依照 `SMI` 原廠回覆, 對 `3MG2-P` 進行相關老化測試, 驗證 `Hardware ECC` 產生過多造成的 error message. 
+
+# 2023-11-09
+* 回覆 `鼎通盛` 關於 `3TE7` 降速相關問題, 並做相關測試.
+* 將 `Ericssion` 2pcs 異常品送至 `RMA` 更換零件( `Crystal` & `Controller` ).
+* 協助新人測試 `nano SSD 3TE7` 於客戶平台錄製相關 `UART` log, 因不知客戶 `buadrate` 相關設定, 故無法錄製 log.
+* 協助 `Sales-Vivian` 處理 `艾夏` 相關客訴, 並協助回覆客戶相關問題.
+* 與 `FW RD` 了解 `3ME4` 發生 `erase error` 相關原理.
+* 撰寫 `艾夏` `3ME4` `erase error` `FA` report.
+* 依照 `SMI` 原廠回覆, 對 `3MG2-P` 進行相關老化測試, 驗證 `Hardware ECC` 產生過多造成的 error message.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 測試 `鼎通盛` 關於 `3TE7` 降速驗證.
+  * [ ] 觀看 `3MG2-P` 寫入測試狀況, 並觀察 `Hardware ECC` 是否有大量增加.
