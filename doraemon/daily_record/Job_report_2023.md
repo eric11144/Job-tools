@@ -3482,7 +3482,10 @@
 * 請教 `Kiwi` 關於 `3IE4` 開卡相關設定.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log 相關測試.
-  * [ ] 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題.
+  * [x] 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log 相關測試.
+  * [x] 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題.
   * [x] 協助 `EP-Peiwen` 觀看 `eUSB` partition table 切割問題.
+  * [x] 協助處理 `3TE2` DLMC `FW` 外顯問題.
+  * [x] 與 `EU-FAE` 討論 `eUSB` partition table 問題.
+  * [x] 協助 `Sales-Joan` 回答客戶相關問題, 以及進度.
 
