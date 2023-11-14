@@ -3489,3 +3489,15 @@
   * [x] 與 `EU-FAE` 討論 `eUSB` partition table 問題.
   * [x] 協助 `Sales-Joan` 回答客戶相關問題, 以及進度.
 
+# 2023-11-15
+* 參與 `FAE` 週會.
+* 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log 相關測試, 發現版端上的 `pin` 都無法錄製相關訊息, 後續會在詢問客戶線路圖資訊.
+* 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題, 目前還再詢問 `FW RD`.
+* 協助 `EP-Peiwen` 觀看 `eUSB` partition table 切割問題.
+* 協助處理 `3TE2` DLMC `FW` 外顯問題, 已確定完畢, 需要 `FW RD` 協助修改外顯.
+* 與 `EU-FAE` 討論 `eUSB` partition table 問題.
+* 協助 `Sales-Joan` 回答客戶相關問題, 以及進度, 已全部回覆.
+* TODO
+  * [ ] 協助處理 `eUSB` partition table 切割問題.
+  * [ ] 測試 `3TE2` `DLMC` 相關功能.
+  * [ ] 協助 `EU` 發信詢問 `Hyperstone` 關於後續問題分析狀況.
