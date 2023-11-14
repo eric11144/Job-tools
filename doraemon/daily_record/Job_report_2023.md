@@ -3436,6 +3436,53 @@
 * 撰寫 `艾夏` `3ME4` `erase error` `FA` report.
 * 依照 `SMI` 原廠回覆, 對 `3MG2-P` 進行相關老化測試, 驗證 `Hardware ECC` 產生過多造成的 error message.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 測試 `鼎通盛` 關於 `3TE7` 降速驗證.
-  * [ ] 觀看 `3MG2-P` 寫入測試狀況, 並觀察 `Hardware ECC` 是否有大量增加.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 測試 `鼎通盛` 關於 `3TE7` 降速驗證.
+  * [x] 觀看 `3MG2-P` 寫入測試狀況, 並觀察 `Hardware ECC` 是否有大量增加.
+  * [x] 協助 `Sales-Lisa` 轉送 `FAE` 案件.
+  * [x] 測試 `Ericssion` `eUSB` 更換 `controller` 後狀況.
+  * [x] 撰寫 `艾夏` `3ME4` 客訴案 `FA` report.
+
+# 2023-11-10
+* 參與 `EU-FAE` 週會.
+* 測試 `鼎通盛` 關於 `3TE7` 降速驗證.
+* 觀看 `3MG2-P` 寫入測試狀況, 並觀察 `Hardware ECC` 是否有大量增加.
+* 協助 `Sales-Lisa` 轉送 `FAE` 案件.
+* 測試 `Ericssion` `eUSB` 更換 `controller` 後狀況.
+* 撰寫 `艾夏` `3ME4` 客訴案 `FA` report.
+* TODO
+  * [x] 協助 `Sales-Joan` 處理 `3MG2-P` `Hardware ECC` 相關客戶問題.
+  * [x] 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log.
+  * [x] 協助新人查找 `Windows 10 LTSC 1809` 更新至 `21H2` 相關方法.
+  * [x] 協助 `EP-Peiwen` 觀看 `eUSB` partition table 切割問題.
+  * [x] 撰寫 `Ericssion` `10`pcs `FA` report, 並提供給 `EU`. 
+
+# 2023-11-13
+* 協助 `Sales-Joan` 處理 `3MG2-P` `Hardware ECC` 相關客戶問題.
+* 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log.
+* 協助新人查找 `Windows 10 LTSC 1809` 更新至 `21H2` 相關方法.
+* 協助 `EP-Peiwen` 觀看 `eUSB` partition table 切割問題.
+* 撰寫 `Ericssion` `10`pcs `FA` report, 並提供給 `EU`. 
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助回覆 `鼎通盛-May` 相關測速問題.
+  * [x] 協助詢問 `EU-Simon` 關於 `3MG2-P` `Hardware ECC` 相關操作, 以及回報目前測試狀況.
+  * [x] 協助 `PM-Micky` 回覆關於 `Ericssion` `eUSB` 相關問題.
+  * [x] 協助 `Sales-Vivian` 提供 `InnoOSR` 相關工具.
+  * [x] 協助 `Danny` 操作 `3TG6-P` `write code` 功能.
+  * [x] 請教 `Kiwi` 關於 `3IE4` 開卡相關設定.
+
+# 2023-11-14
+* 參與 `FAE-team2` 週會.
+* 協助回覆 `鼎通盛-May` 相關測速問題.
+* 協助詢問 `EU-Simon` 關於 `3MG2-P` `Hardware ECC` 相關操作, 以及回報目前測試狀況.
+* 協助 `PM-Micky` 回覆關於 `Ericssion` `eUSB` 相關問題.
+* 協助 `Sales-Vivian` 提供 `InnoOSR` 相關工具.
+* 協助 `Danny` 操作 `3TG6-P` `write code` 功能.
+* 請教 `Kiwi` 關於 `3IE4` 開卡相關設定.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 協助新人測試 `nano SSD 3TE7` 錄製 `UART` log 相關測試.
+  * [ ] 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題.
+  * [x] 協助 `EP-Peiwen` 觀看 `eUSB` partition table 切割問題.
+
