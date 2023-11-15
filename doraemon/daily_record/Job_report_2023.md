@@ -3498,6 +3498,27 @@
 * 與 `EU-FAE` 討論 `eUSB` partition table 問題.
 * 協助 `Sales-Joan` 回答客戶相關問題, 以及進度, 已全部回覆.
 * TODO
-  * [ ] 協助處理 `eUSB` partition table 切割問題.
-  * [ ] 測試 `3TE2` `DLMC` 相關功能.
-  * [ ] 協助 `EU` 發信詢問 `Hyperstone` 關於後續問題分析狀況.
+  * [x] 協助處理 `eUSB` partition table 切割問題.
+  * [x] 測試 `3TE2` `DLMC` 相關功能.
+  * [x] 協助 `EU` 發信詢問 `Hyperstone` 關於後續問題分析狀況. 
+  * [x] 協助新人詢問客戶關於 `Korea` `NANO SSD` 相關 `UART` 錄製問題.
+  * [x] 與 `EP-Peiwen` sync `eUSB` partition table 問題.
+  * [x] 詢問客戶關於 `3SE2-P` 上斷電時間相關測試參數.
+  * [x] 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題, 並回覆給客戶.
+  * [x] 協助新人前往 `SW RD` 討論 `3TE6` `04 & 0A` `DLMC` 相關流程.
+  * [x] 與 `EU FAE` 討論 `eUSB` partition table 問題.
+
+# 2023-11-16
+* 協助處理 `eUSB` partition table 切割問題.
+* 測試 `3TE2` `DLMC` 相關功能.
+* 協助 `EU` 發信詢問 `Hyperstone` 關於後續問題分析狀況. 
+* 協助新人詢問客戶關於 `Korea` `NANO SSD` 相關 `UART` 錄製問題.
+* 與 `EP-Peiwen` sync `eUSB` partition table 問題.
+* 詢問客戶關於 `3SE2-P` 上斷電時間相關測試參數.
+* 詢問 `FW RD` 關於 `3TE7` `512GB` 於高溫無法恢復速度問題, 並回覆給客戶.
+* 協助新人前往 `SW RD` 討論 `3TE6` `04 & 0A` `DLMC` 相關流程.
+* 與 `EU FAE` 討論 `eUSB` partition table 問題.
+* TODO
+  * [ ] 參與 `EU FAE` 週會.
+  * [ ] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
