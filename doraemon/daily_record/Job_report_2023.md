@@ -3519,6 +3519,21 @@
 * 協助新人前往 `SW RD` 討論 `3TE6` `04 & 0A` `DLMC` 相關流程.
 * 與 `EU FAE` 討論 `eUSB` partition table 問題.
 * TODO
-  * [ ] 參與 `EU FAE` 週會.
-  * [ ] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [x] 參與 `EU FAE` 週會.
+  * [x] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
+  * [x] 協助測試 `Tritech` `3TE6` 執行 `Burnintest`, 觀看是否會掉碟.
+  * [x] 協助新人撈取 `NANO SSD` 相關 `syslog` & `kernel log`.
+  * [x] 協助 `EU-Sales` 歸還 `Asrock` 平台, 並查找 `Device`.
+
+# 2023-11-17
+* 參與 `EU FAE` 週會.
+* 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況, 客戶尚未回覆.
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 目前尚未拿到 `Disk`.
+* 協助測試 `Tritech` `3TE6` 執行 `Burnintest`, 觀看是否會掉碟.
+* 協助新人撈取 `NANO SSD` 相關 `syslog` & `kernel log`.
+* 協助 `EU-Sales` 歸還 `Asrock` 平台, 並查找 `Device`, 但 `Device` 尚未找到.
+* TODO
   * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
+  * [ ] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [ ] 觀看 `Tritech` `3TE6` 執行 `Burnintest` 結果.
