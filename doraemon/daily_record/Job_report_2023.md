@@ -3534,6 +3534,21 @@
 * 協助新人撈取 `NANO SSD` 相關 `syslog` & `kernel log`.
 * 協助 `EU-Sales` 歸還 `Asrock` 平台, 並查找 `Device`, 但 `Device` 尚未找到.
 * TODO
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
+  * [x] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [x] 觀看 `Tritech` `3TE6` 執行 `Burnintest` 結果.
+  * [x] 協助 `PM-Davis` 測試 `3TO7` `innoOSR` `LED` 顯示, 以及運行功能.
+  * [x] 協助 `EU-Sales` 歸還相關客訴品( `Ericssion` `20pcs` & `KEBA` `CFast 3IE7` ).
+
+# 2023-11-20
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 目前尚未拿到 `device`.
+* 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況, 客戶尚未回覆.
+* 觀看 `Tritech` `3TE6` 執行 `Burnintest` 結果.
+* 協助 `PM-Davis` 測試 `3TO7` `innoOSR` `LED` 顯示, 以及運行功能.
+* 協助 `EU-Sales` 歸還相關客訴品( `Ericssion` `20pcs` & `KEBA` `CFast 3IE7` ).
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
   * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
   * [ ] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
-  * [ ] 觀看 `Tritech` `3TE6` 執行 `Burnintest` 結果.
+  * [ ] 測試 `Astute` `3MG2-P` 客訴品, 重新開卡, 並進行老化測試, 觀看 `Hardware ECC` 是否會增加.
+
