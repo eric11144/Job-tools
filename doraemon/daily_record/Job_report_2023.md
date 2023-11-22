@@ -3547,8 +3547,73 @@
 * 協助 `PM-Davis` 測試 `3TO7` `innoOSR` `LED` 顯示, 以及運行功能.
 * 協助 `EU-Sales` 歸還相關客訴品( `Ericssion` `20pcs` & `KEBA` `CFast 3IE7` ).
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
-  * [ ] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
-  * [ ] 測試 `Astute` `3MG2-P` 客訴品, 重新開卡, 並進行老化測試, 觀看 `Hardware ECC` 是否會增加.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作.
+  * [x] 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+  * [x] 測試 `Astute` `3MG2-P` 客訴品, 重新開卡, 並進行老化測試, 觀看 `Hardware ECC` 是否會增加.
+  * [x] 協助 `Sales-Vincent` 詢問關於 `3TG6-P` `PCIe` `FW-C23803` 修改內容.
+  * [x] 協助 `Sales-Vivian` 處理 `innoOSR` 相關 demo.
+  * [x] 協助 `EU-FAE` 處理 `Hyperstone` 提供的相關回覆, 以及 `white paper`.
 
+# 2023-11-21
+* 參與 `FAE-team2` 週會.
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 尚未拿到樣品.
+* 測試 `3SE2-P` 依照客戶上斷電時間參數, 測試認碟狀況.
+* 測試 `Astute` `3MG2-P` 客訴品, 重新開卡( `M151112` ), 並進行老化測試, 觀看 `Hardware ECC` 是否會增加.
+* 協助 `Sales-Vincent` 詢問關於 `3TG6-P` `PCIe` `FW-C23803` 修改內容.
+* 協助 `Sales-Vivian` 處理 `innoOSR` 相關 demo.
+* 協助 `EU-FAE` 處理 `Hyperstone` 提供的相關回覆, 以及 `white paper`.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶提供之異常樣品做相關驗證.
+  * [x] 協助 `Sales-Vivian` 遠端提供 `iCAP` tool.
+  * [x] 紀錄 `Astute` `3MG2-P` 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [x] 紀錄 `3SE2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`.
+  * [x] 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+  * [x] 詢問 `FW-RD Allen` 關於 `3IE7` `640GB` `thermal throttling` 相關機制.
+  * [x] 協助 `EU` 申請領取測試樣品.
+
+# 2023-11-22
+* 參與 `FAE` 週會.
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶提供之異常樣品做相關驗證.
+* 協助 `Sales-Vivian` 遠端提供 `iCAP` tool.
+* 紀錄 `Astute` `3MG2-P` 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值, 進行 `48` hr 測試, `Hardware ECC` 數值增加到 `1972`.
+* 紀錄 `3SE2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`.
+* 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+* 詢問 `FW-RD Allen` 關於 `3IE7` `640GB` `thermal throttling` 相關機制.
+* 協助 `EU` 申請領取測試樣品.
+* TODO
+  * [x] 提供 `3SE2-P` 依照客戶上斷電時間參數測試驗證相關影片.
+  * [x] `Astute` `3MG2-P` 客訴品進行重新開卡( `M161125` ), 再 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [x] 協助 `Sales-Joan` 整理 `鼎通盛` 相關測速條件.
+  * [x] 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+  * [x] 協助 `PM-Davis` 處理 `innoOSR` 關於新料 `bottom` 相關驗證影片.
+  * [x] 協助 `EU-FAE` 驗證 `mSATA 3TE7` 進行 `DLMC` 相關驗證影片( `S21606` -> `S23505` ).
+  * [x] 與 `EU-FAE` 討論 `eUSB` partition table 切割操作後續處理方式.
+  * [x] 協助新人錄製 `3TE7` `DLMC` 相關驗證影片.
+  * [x] 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat` OS 相關流程.
+
+# 2023-11-23
+* 提供 `3SE2-P` 依照客戶上斷電時間參數測試驗證相關影片.
+* `Astute` `3MG2-P` 客訴品進行重新開卡( `M161125` ), 再 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+* 協助 `Sales-Joan` 整理 `鼎通盛` 相關測速條件.
+  * `Device`: `DES25-C12DK1KCCQF`
+    * 溫度 `70` 度 & `90`度
+    * 1. 測試 `Re-MP` 狀態, 執行 `CDM`.
+    * 2. 延續測試 `1`, 透過 `burnintest 2hr`後, 測試 `CDM`.
+    * 3. 延續測試 `2`, `device` 靜置( `5`, `10`, `15` min ), 測試 `CDM`.
+  * `Device`: `DHS25-F4GDK1KCCQF`
+    * 溫度 `70` 度 & `90` 度.
+    * 測試 `CDM`.
+* 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+* 協助 `PM-Davis` 處理 `innoOSR` 關於新料 `bottom` 相關驗證影片.
+* 協助 `EU-FAE` 驗證 `mSATA 3TE7` 進行 `DLMC` 相關驗證影片( `S21606` -> `S23505` ).
+* 與 `EU-FAE` 討論 `eUSB` partition table 切割操作後續處理方式.
+* 協助新人錄製 `3TE7` `DLMC` 相關驗證影片.
+* 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat` OS 相關流程, 目前驗證 `Redhat 8.7` 無異常.
+* TODO
+  * [ ] 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關流.
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶寄回之新樣品.
+  * [ ] 紀錄 `Astute` `3MG2-P` ( `M161125` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [ ] 測試 `3MG2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`( 等待領料樣品 ).
