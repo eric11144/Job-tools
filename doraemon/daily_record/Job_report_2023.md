@@ -3612,8 +3612,54 @@
 * 協助新人錄製 `3TE7` `DLMC` 相關驗證影片.
 * 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat` OS 相關流程, 目前驗證 `Redhat 8.7` 無異常.
 * TODO
-  * [ ] 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關流.
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶寄回之新樣品.
-  * [ ] 紀錄 `Astute` `3MG2-P` ( `M161125` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
-  * [ ] 測試 `3MG2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`( 等待領料樣品 ).
+  * [x] 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關流程.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶寄回之新樣品.
+  * [x] 紀錄 `Astute` `3MG2-P` ( `M161125` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [x] 測試 `3MG2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`( 等待領料樣品 ).
+
+# 2023-11-24
+* 協助 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關流程.
+* 參與 `EU-FAE` 週會.
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作, 透過客戶寄回之新樣品.
+* 紀錄 `Astute` `3MG2-P` ( `M161125` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+* 測試 `3MG2-P` 依照客戶上斷電時間參數, `SMART` 內的 `power cycle count`( 等待領料樣品 ).
+* TODO
+  * [x] 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+  * [x] 提供 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關結果.
+  * [x] 申請 `3MG2-P` 樣品借出.
+  * [x] 紀錄 `Astute` `3MG2-P` ( `M191018` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [x] 與 `EU-FAE` 討論 `SMI` `Hardware ECC` 相關客訴處理.
+
+# 2023-11-27
+* 協助 `Sales-Joan` 回覆 `鼎通盛` 相關測速問題.
+* 提供 `Sales-Eric` 驗證 `3TE6` 安裝 `Redhat 7.6` OS 相關結果.
+* 申請 `3MG2-P` 樣品借出.
+* 紀錄 `Astute` `3MG2-P` ( `M191018` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+* 與 `EU-FAE` 討論 `SMI` `Hardware ECC` 相關客訴處理.
+* TODO
+  * [x] 參加組內 `FAE-team2` 週會.
+  * [x] 紀錄 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+  * [x] 回覆 `3MG2-P` 依照客戶上斷電時間參數相關測試問題.
+  * [x] 詢問 `SMI` 關於 `Hardware ECC` 相關資訊, 以及是否有對應解決 `FW`.
+  * [x] 整理客戶案目前處理進度.
+  * [x] 量測 `Mistral solution` `2.5" SATA 3TG6-P` 客訴案.
+
+# 2023-11-28
+* 參加組內 `FAE-team2` 週會.
+* 紀錄 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品進行 `BurninTest` 測試, 並紀錄 `Hardware ECC` 數值.
+* 回覆 `3MG2-P` 依照客戶上斷電時間參數相關測試問題.
+* 詢問 `SMI` 關於 `Hardware ECC` 相關資訊, 以及是否有對應解決 `FW`.
+* 整理客戶案目前處理進度.
+* 量測 `Mistral solution` `2.5" SATA 3TG6-P` 客訴案.
+  * `UART` log 無法錄製.
+  * `UART` 腳位無電壓輸出.
+  * 發現電容部份短路.
+  * `5V` 電源無輸出, 以及相關電路內的電容都短路.
+  * `U10` Power IC 燒毀.
+* TODO
+  * [x] 參與 `FAE` 週會. 
+  * [ ] 回報 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品 `BurninTest` 測試結果.
+  * [ ] 申請料件領出.
+  * [ ] 協助測試 `3ME4` `DLMC` tool 於所有組態.
+  * [ ] 回報 `3MG2-P` 依照客戶上斷電時間參數測試相關結果( `Device` 內安裝 `OS`, 驗證是否會 `lose data` ).
