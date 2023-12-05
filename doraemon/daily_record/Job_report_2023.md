@@ -3659,7 +3659,86 @@
   * `U10` Power IC 燒毀.
 * TODO
   * [x] 參與 `FAE` 週會. 
-  * [ ] 回報 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品 `BurninTest` 測試結果.
-  * [ ] 申請料件領出.
-  * [ ] 協助測試 `3ME4` `DLMC` tool 於所有組態.
-  * [ ] 回報 `3MG2-P` 依照客戶上斷電時間參數測試相關結果( `Device` 內安裝 `OS`, 驗證是否會 `lose data` ).
+  * [x] 回報 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品 `BurninTest` 測試結果.
+  * [x] 申請料件領出.
+  * [x] 協助測試 `3ME4` `DLMC` tool 於所有組態.
+  * [x] 回報 `3MG2-P` 依照客戶上斷電時間參數測試相關結果( `Device` 內安裝 `OS`, 驗證是否會 `lose data` ).
+
+# 2023-11-29
+* 參與 `FAE` 週會. 
+* 回報 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品 `BurninTest` 測試結果.
+* 申請料件領出.
+* 協助測試 `3ME4` `DLMC` tool 於所有組態.
+* 回報 `3MG2-P` 依照客戶上斷電時間參數測試相關結果( `Device` 內安裝 `OS`, 驗證是否會 `lose data` ).
+* TODO
+  * [x] 參加 `FAE` 月會.
+  * [x] 協助回覆 `Sales-Daphne` 關於 `3TG6-P` 客訴品分析結果.
+  * [x] 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作( 驗證新品拷貝功能是否正常 ).
+  * [x] 協助 `Danny` 撈取 `micro USB` `SMART` info.
+  * [x] 回報 `Marvell` 分析狀況於 `Sales-Joanne`, 並取回送驗樣品.
+
+# 2023-11-30
+* 參加 `FAE` 月會.
+* 協助回覆 `Sales-Daphne` 關於 `3TG6-P` 客訴品分析結果.
+* 協助 `EP-Peiwen` 測試 `eUSB` partition table 切割操作( 驗證新品拷貝功能是否正常 ).
+* 協助 `Danny` 撈取 `micro USB` `SMART` info.
+* 回報 `Marvell` 分析狀況於 `Sales-Joanne`, 並取回送驗樣品.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Kiwi` 觀看 `3TG6-P` 客訴品.
+  * [x] 與 `EU-Sales` 討論 `eUSB` partition table 後續處理.
+  * [x] 與 `Marvell` 原廠人員討論送驗樣品取回.
+  * [x] 協助 `EU-FAE` 提供 `FEB231120007` 更新 tool.
+
+# 2023-12-01
+* 參與 `EU-FAE` 週會.
+* 協助 `Kiwi` 觀看 `3TG6-P` 客訴品.
+* 與 `EU-Sales` 討論 `eUSB` partition table 後續處理.
+* 與 `Marvell` 原廠人員討論送驗樣品取回.
+* 協助 `EU-FAE` 提供 `FEB231120007` 更新 tool.
+* TODO
+  * [x] 協助 `EU-Sales` 處理 `USB` 後續重工條件.
+  * [x] 與 `Solid State Disks Ltd-Macolm` 討論 `3MG2-P` abnormal power cycle 測試結果, 並提供相關細節.
+  * [x] 協助新人錄製 `innoworks` `nano SSD 3TE7` 相關 `UART` log.
+  * [x] 紀錄 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品進行 `BurninTest` 測試結果.
+
+# 2023-12-04
+* 協助 `EU-Sales` 處理 `USB` 後續重工條件.
+* 與 `Solid State Disks Ltd-Macolm` 討論 `3MG2-P` abnormal power cycle 測試結果, 並提供相關細節.
+* 協助新人錄製 `innoworks` `nano SSD 3TE7` 相關 `UART` log.
+* 紀錄 `Astute` `3MG2-P` ( `S0903A_C3` ) 客訴品進行 `BurninTest` 測試結果.
+* TODO
+  * [x] 提供 `EU-Sales` `Winsys` `4999` pcs.
+  * [x] 協助 `FW RD` 處理 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+  * [x] 協助 `Kiwi` 觀看 `FEA231128002-Simms` `mSATA 3IE3` 客訴品異常狀況.
+  * [x] 與 `Sales-Daphne` 討論 `FA231124002` `Mistral` 分析狀況.
+  * [x] 協助 `Sales-Joan` 確認 `3TE2` `PCN` `FW` 路徑.
+  * [x] 協助 `Sales-Joan` 提供並測試 `3MG2-P` `FW` 更新 `IMAGE`.
+
+# 2023-12-05
+* 提供 `EU-Sales` `Winsys` `4999` pcs.
+* 協助 `FW RD` 處理 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+* 協助 `Kiwi` 觀看 `FEA231128002-Simms` `mSATA 3IE3` 客訴品異常狀況.
+* 與 `Sales-Daphne` 討論 `FA231124002` `Mistral` 分析狀況.
+* 協助 `Sales-Joan` 確認 `3TE2` `PCN` `FW` 路徑.
+* 協助 `Sales-Joan` 提供並測試 `3MG2-P` `FW` 更新 `IMAGE`.
+* TODO
+  * [x] 協助 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
+  * [x] 提供 `FA231124002` `Mistral` `FA` report.
+  * [x] 協助新人錄製 `3TE6` `PCIe` analyzer.
+  * [x] 紀錄並回報 `EU` `FEB231113012` `Tritech` `Burnintest` 狀況(測試 `20` days).
+  * [x] 詢問 `Kiwi` & `Jay` 關於 `bad queue` 相關原因跟說法.
+  * [x] 詢問 `PM-Wayne` 關於 `3TG6-P` `A21513` -> `A23A20` `DLMC` 可行性.
+
+# 2023-12-06
+* 協助 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
+* 提供 `FA231124002` `Mistral` `FA` report.
+* 協助新人錄製 `3TE6` `PCIe` analyzer.
+* 紀錄並回報 `EU` `FEB231113012` `Tritech` `Burnintest` 狀況(測試 `20` days).
+* 詢問 `Kiwi` & `Jay` 關於 `bad queue` 相關原因跟說法.
+* 詢問 `PM-Wayne` 關於 `3TG6-P` `A21513` -> `A23A20` `DLMC` 可行性.
+* TODO
+  * [ ] 轉送 `FA231124002` `Mistral` 客訴品 `3TG6-P` 於 `RMA`.
+  * [ ] 協助回覆 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
+  * [ ] 測試 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+
