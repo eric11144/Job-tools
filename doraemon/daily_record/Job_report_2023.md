@@ -3738,7 +3738,79 @@
 * 詢問 `Kiwi` & `Jay` 關於 `bad queue` 相關原因跟說法.
 * 詢問 `PM-Wayne` 關於 `3TG6-P` `A21513` -> `A23A20` `DLMC` 可行性.
 * TODO
-  * [ ] 轉送 `FA231124002` `Mistral` 客訴品 `3TG6-P` 於 `RMA`.
-  * [ ] 協助回覆 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
-  * [ ] 測試 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+  * [x] 轉送 `FA231124002` `Mistral` 客訴品 `3TG6-P` 於 `RMA`.
+  * [x] 協助回覆 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
+  * [x] 測試 `Sales-Vivian` 關於 `3IE7` 掉速問題.
 
+# 2023-12-07
+* 轉送 `FA231124002` `Mistral` 客訴品 `3TG6-P` 於 `RMA`.
+* 協助回覆 `Sales-Jolie` 關於 `勝捷思` 客訴案相關問題.
+* 測試 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 搬遷位置.
+  * [x] 協助新人測試 `3TE6` `V20407` -> `V20B09` DLMC tool.
+  * [x] 協助組內詢問關於 `SSD Product` `FW` DLMC 對應表.
+  * [x] 與 `RMA` 人員討論 `FA231124002` device 零件維修.
+  * [x] 測試 `3TG6-P` 透過 `ReMP` 更新 FW( `A21513` -> `A23B20` ).
+
+# 2023-12-08
+* 參與 `EU-FAE` 週會.
+* 搬遷位置.
+* 協助新人測試 `3TE6` `V20407` -> `V20B09` DLMC tool.
+* 協助組內詢問關於 `SSD Product` `FW` DLMC 對應表.
+* 與 `RMA` 人員討論 `FA231124002` device 零件維修.
+* 測試 `3TG6-P` 透過 `ReMP` 更新 FW( `A21513` -> `A23B20` ).
+* TODO
+  * [x] 協助 `PM-Kevin` 測試 `3TE6` 透過 `SN.txt` 更新 `FW`.
+    * [x] `Power cycle count` -> `63`( `2`pcs ).
+    * [x] `FW` `V21118` -> `V22620` ( `2`pcs ).
+  * [x] 詢問 `EU-PM` 關於 `Ericssion` 後續分析狀況.
+  * [x] 協助新人搬遷座位.
+
+# 2023-12-11
+* 協助 `PM-Kevin` 測試 `3TE6` 透過 `SN.txt` 更新 `FW`.
+  * `Power cycle count` -> `63`( `2`pcs ).
+  * `FW` `V21118` -> `V22620` ( `2`pcs ).
+* 詢問 `EU-PM` 關於 `Ericssion` 後續分析狀況.
+* 協助新人搬遷座位.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助回覆 `Sales-Vivian` 關於 `融程` 客訴相關問題.
+  * [x] 協助組內架設網路.
+  * [x] 協助 `PM-Jack` 測試 `3IE7` 各組態 `DLMC` tool.
+  * [x] 協助新人錄製 `PCIe` analyzer.
+  * [x] 撰寫 `FEA231128002` FA report.
+
+# 2023-12-12
+* 參與 `FAE-team2` 週會.
+* 協助回覆 `Sales-Vivian` 關於 `融程` 客訴相關問題.
+* 協助組內架設網路.
+* 協助 `PM-Jack` 測試 `3IE7` 各組態 `DLMC` tool.
+* 協助新人錄製 `PCIe` analyzer.
+* 撰寫 `FEA231128002` FA report.
+* TODO
+  * [x] 參與 `FAE` team 週會.
+  * [x] 協助新人錄製 `PCIe` analyzer.
+  * [x] 協助組內架設網路.
+  * [x] 轉送 `FEA231201001` `3TE7` 至 `RMA` 更換 `U36`.
+  * [x] 協助回覆 `Sales-Vivian` 關於 `融程` 客訴相關問題.
+  * [x] 與 `Hyperstone` 人員取回 `Ericssion` 送驗樣品.
+  * [x] 協助 `EU-FAE` 架設 `3TE6` 於 `Linux` 執行 `BurninTest` `1`個月.
+
+# 2023-12-13
+* 參與 `FAE` team 週會.
+* 協助新人錄製 `PCIe` analyzer.
+* 協助組內架設網路.
+* 轉送 `FEA231201001` `3TE7` 至 `RMA` 更換 `U36`.
+* 協助回覆 `Sales-Vivian` 關於 `融程` 客訴相關問題.
+* 與 `Hyperstone` 人員取回 `Ericssion` 送驗樣品.
+* 協助 `EU-FAE` 架設 `3TE6` 於 `Linux` 執行 `BurninTest` `1`個月.
+* TODO
+  * [x] 撰寫 `FEA231201001` FA report.
+  * [x] 與 `Sales-Joan` 討論 `FA` case.
+  * [x] 與 `FW-RD Allen` 關於 `3IE3` 讀取 `SMART` info 相關事項( `是否可更換 Flash 即可讀到資訊` ).
+  * [x] 架設 `3TE6` 於 `Linux` 執行 `BurninTest` `1`個月.
+  * [x] 研究如何安裝 `D-Link T185` wifi dongle 於 `Linux`.
+  * [x] 協助 `Jay` 將 device 送至 `RMA` 照 `X-ray`.
+  * [x] 協助 `Sales-Louis` 詢問關於 `Boeing` 廠內出貨驗證流程.
