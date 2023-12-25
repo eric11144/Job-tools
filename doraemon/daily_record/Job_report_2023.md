@@ -3814,3 +3814,147 @@
   * [x] 研究如何安裝 `D-Link T185` wifi dongle 於 `Linux`.
   * [x] 協助 `Jay` 將 device 送至 `RMA` 照 `X-ray`.
   * [x] 協助 `Sales-Louis` 詢問關於 `Boeing` 廠內出貨驗證流程.
+
+# 2023-12-14
+* 撰寫 `FEA231201001` FA report.
+* 與 `Sales-Joan` 討論 `FA` case.
+* 與 `FW-RD Allen` 關於 `3IE3` 讀取 `SMART` info 相關事項( `是否可更換 Flash 即可讀到資訊` ).
+* 架設 `3TE6` 於 `Linux` 執行 `BurninTest` `1`個月.
+* 研究如何安裝 `D-Link T185` wifi dongle 於 `Linux`.
+* 協助 `Jay` 將 device 送至 `RMA` 照 `X-ray`.
+* 協助 `Sales-Louis` 詢問關於 `Boeing` 廠內出貨驗證流程.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `EU` 討論 `3TE7` `DLMC tool` 大進版相關功能.
+  * [x] 協助新人測試 `3TE6` 透過 `GDP` 更新 `FW`.
+  * [x] 協助回覆 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+  * [x] 協助 `EU-FAE` 借出 `3TG6-P` 相關測試樣品.
+  * [x] 協助提供 `FEA231128002` & `FEA231201001` `FA` report 於客戶.
+
+# 2023-12-15
+* 參與 `EU-FAE` 週會.
+* 與 `EU` 討論 `3TE7` `DLMC tool` 大進版相關功能.
+* 協助新人測試 `3TE6` 透過 `GDP` 更新 `FW`.
+* 協助回覆 `Sales-Vivian` 關於 `3IE7` 掉速問題.
+* 協助 `EU-FAE` 借出 `3TG6-P` 相關測試樣品.
+* 協助提供 `FEA231128002` & `FEA231201001` `FA` report 於客戶.
+* TODO
+  * [x] 協助 `EU` 驗證 `DLMC` tool 透過 `SN.txt` 更新 `FW` 相關 `status` 確認.
+  * [x] 與 `EU` team 討論 `DLMC` tool 透過 `SN.txt` 更新 `FW` 相關需求確認.
+  * [x] 協助新人架設 `DLMC` auto run 功能於 `usb` dongle.
+  * [x] 撰寫及測試 `auto run` GDP `DLMC` tool.
+  * [x] 撰寫 `DLMC` tool `auto run` 相關操作手冊.
+  * [x] 與 `Kiwi` 討論 `DLMC` tool 相關需求.
+
+# 2023-12-18
+* 協助 `EU` 驗證 `DLMC` tool 透過 `SN.txt` 更新 `FW` 相關 `status` 確認.
+* 與 `EU` team 討論 `DLMC` tool 透過 `SN.txt` 更新 `FW` 相關需求確認.
+* 協助新人架設 `DLMC` auto run 功能於 `usb` dongle.
+* 撰寫及測試 `auto run` GDP `DLMC` tool.
+* 撰寫 `DLMC` tool `auto run` 相關操作手冊.
+* 與 `Kiwi` 討論 `DLMC` tool 相關需求.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 處理 `FEB231124004-B&R` 6pcs 相關異常狀況.
+  * [x] 提供 `auto run` `DLMC` tool 於 `EU` team.
+  * [x] 詢問 `Jay` 關於 `3MV2-P` UART log 相關問題.
+  * [x] 與 `Kiwi` & `Sales-Joan` 參與 `Simms` 關於 `3MG2-P` `Hardware ECC` 過高相關問題.
+  * [x] 協助 `Sales-Joile` 回覆相關客訴問題.
+  * [x] 協助 `EU-FAE` 查找 `3TG8-P` 相關 `DLMC` tool.
+  * [x] 協助新人於客戶平台測試 `DLMC` `auto run` 透過 `GDP` 更新 `FW` 過程.
+
+# 2023-12-19
+* 參與 `FAE-team2` 週會.
+* 處理 `FEB231124004-B&R` 6pcs 相關異常狀況.
+* 提供 `auto run` `DLMC` tool 於 `EU` team.
+* 詢問 `Jay` 關於 `3MV2-P` UART log 相關問題.
+* 與 `Kiwi` & `Sales-Joan` 參與 `Simms` 關於 `3MG2-P` `Hardware ECC` 過高相關問題.
+* 協助 `Sales-Joile` 回覆相關客訴問題.
+* 協助 `EU-FAE` 查找 `3TG8-P` 相關 `DLMC` tool.
+* 協助新人於客戶平台測試 `DLMC` `auto run` 透過 `GDP` 更新 `FW` 過程.
+* TODO
+  * [x] 協助 `Alex` 觀看 `Debian 10` 相關 `OS`.
+  * [x] 協助 `Jay` 送修之 `4IG2-P` `4` pcs.
+  * [x] 與 `FW-RD Weiting` 討論 `艾夏` `3ME4` 後續分析狀況.
+  * [x] 協助 `EU` 釐清 `DLMC` tool 執行過程中, 發生 `Fail` & `Success` 相關動作之 `Status` code.
+  * [x] 量測 `FEB231124004-B&R` 6pcs 驗證實驗.
+  * [x] 回覆 `FEB231124004-B&R` 6pcs 相關異常狀況.
+  * [x] 協助新人觀看 `3TE6` 觸發 `inno Trim` 相關測試 `script`.
+
+# 2023-12-20
+* 協助 `Alex` 觀看 `Debian 10` 相關 `OS`.
+* 與 `FW-RD Weiting` 討論 `艾夏` `3ME4` 後續分析狀況.
+* 協助 `EU` 釐清 `DLMC` tool 執行過程中, 發生 `Fail` & `Success` 相關動作之 `Status` code.
+* 量測 `FEB231124004-B&R` 6pcs 驗證實驗.
+* 回覆 `FEB231124004-B&R` 6pcs 相關異常狀況.
+* 協助新人觀看 `3TE6` 觸發 `inno Trim` 相關測試 `script`.
+* 協助 `Jay` 送修之 `4IG2-P` `4` pcs.
+* TODO
+  * [x] 填寫 `考績自評`.
+  * [x] 與 `Sales-Jessica` 討論 `B&R` 相關分析狀況.
+  * [x] 與 `SW-RD Allen` & `FW-RD Allen` & `PM-George` 討論 `DLMC` tool 執行過程中, 發生 `Fail` & `Success` 相關動作之 `Status` code.
+  * [x] 個人財產盤點.
+  * [x] 協助 `Jay` 取回送修之 `4IG2-P` `4` pcs.
+  * [x] 撰寫 `FEB231124004-B&R` 6pcs `FA` report.
+
+# 2023-12-21
+* 填寫 `考績自評`.
+* 與 `Sales-Jessica` 討論 `B&R` 相關分析狀況.
+* 與 `SW-RD Allen` & `FW-RD Allen` & `PM-George` 討論 `DLMC` tool 執行過程中, 發生 `Fail` & `Success` 相關動作之 `Status` code.
+* 個人財產盤點.
+* 協助 `Jay` 取回送修之 `4IG2-P` `4` pcs.
+* 撰寫 `FEB231124004-B&R` 6pcs `FA` report.
+* TODO
+  * [x] 參與 `EU` 週會.
+  * [x] 協助 `EU` 準備 & 驗證 `3TE7` `Bisc3 ~ Bisc5` `DLMC` bin file.
+  * [x] 詢問 `PM-Jack` & `FW-RD` 關於 `FW` bin file 外顯修改確認.
+  * [x] 協助 `Sales-Louis` 處理 `康加特` 錄製 `UART` log 相關文件.
+  * [x] 協助驗證 `DLMC` tool `3.14.0` 相關功能.
+  * [x] 與 `SW-RD Allen` 討論關於 `DLMC` tool `3.14.0` 內的 `SN.txt` 填寫.
+
+# 2023-12-22
+* 參與 `EU` 週會.
+* 協助 `EU` 準備 & 驗證 `3TE7` `Bisc3 ~ Bisc5` `DLMC` bin file.
+* 詢問 `PM-Jack` & `FW-RD` 關於 `FW` bin file 外顯修改確認.
+* 協助 `Sales-Louis` 處理 `康加特` 錄製 `UART` log 相關文件.
+* 協助驗證 `DLMC` tool `3.14.0` 相關功能.
+* 與 `SW-RD Allen` 討論關於 `DLMC` tool `3.14.0` 內的 `SN.txt` 填寫.
+* TODO
+  * [x] 撰寫 `B&R` FA report.
+  * [x] 協助 `DQ-Benson` 提供 `B&R` 異常品送往 `RMA` 照 `X-Ray`.
+  * [x] 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品.
+  * [x] 與 `Kiwi` 討論關於 `鼎通盛` 測試 `3TE7` 高溫掉速問題.
+  * [x] 處理 `B&R` `2`pcs 客退品狀況.
+  * [x] 與 `SW-RD Allen` 討論關於 `DLMC` tool `3.14.0` 內的 `SN.txt` 填寫.
+  * [x] 協助 `EU` 處理 `USB 2SE2` 關於客戶測試 `partition` 相關問題.
+
+# 2023-12-25
+* 撰寫 `B&R` FA report.
+* 協助 `DQ-Benson` 提供 `B&R` 異常品送往 `RMA` 照 `X-Ray`, 晶線皆無異常.
+* 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品, 目前排除零件燒毀問題.
+* 與 `Kiwi` 討論關於 `鼎通盛` 測試 `3TE7` 高溫掉速問題, 後續發現與報告不符合, 已進行相關高溫實驗.
+* 處理 `B&R` `2`pcs 客退品狀況, NPF.
+* 與 `SW-RD Allen` 討論關於 `DLMC` tool `3.14.0` 內的 `SN.txt` 填寫.
+* 協助 `EU` 處理 `USB 2SE2` 關於客戶測試 `partition` 相關問題, 後續發現為客戶將 `device` 於 `Windows` 重新 format, 導致相關 `partition` 異常, 並提供母碟相關資訊.
+* TODO
+  * [x] 協助新人拆卸 `innoworks` `NANO SSD` 並接上 `UART`.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助處理 `Sales-Joan` `3MG2-P` `Hardware ECC` 過高之測試環境.
+  * [x] 協助新人觀看 `3TE6` & `3TEA` 開卡問題.
+  * [x] 協助 `Jay` & `Eva` 處理 `CentOS` & `Redhat` 安裝 package 相關問題.
+  * [x] 協助回覆 `Simmos` 關於 `3MG2-P` 無法透過 `USB` `DLMC` 更新 `FW` 問題.
+
+# 2023-12-26
+* 協助新人拆卸 `innoworks` `NANO SSD` 並接上 `UART`.
+* 參與 `FAE-team2` 週會.
+* 協助處理 `Sales-Joan` `3MG2-P` `Hardware ECC` 過高之測試環境.
+* 協助新人觀看 `3TE6` & `3TEA` 開卡問題.
+* 協助 `Jay` & `Eva` 處理 `CentOS` & `Redhat` 安裝 package 相關問題.
+* 協助回覆 `Simmos` 關於 `3MG2-P` 無法透過 `USB` `DLMC` 更新 `FW` 問題.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品.
+  * [ ] 撰寫 `B&R` `2`pcs `NPF` FA report.
+  * [ ] 觀看 `3MG2-P` `Hardware ECC` 過高之測試狀況.
+  * [ ] 觀看 `EU` `CFast card` `20`pcs 異常品狀況.
+
