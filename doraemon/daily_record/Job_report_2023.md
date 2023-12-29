@@ -3952,9 +3952,59 @@
 * 協助 `Jay` & `Eva` 處理 `CentOS` & `Redhat` 安裝 package 相關問題.
 * 協助回覆 `Simmos` 關於 `3MG2-P` 無法透過 `USB` `DLMC` 更新 `FW` 問題.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品.
-  * [ ] 撰寫 `B&R` `2`pcs `NPF` FA report.
-  * [ ] 觀看 `3MG2-P` `Hardware ECC` 過高之測試狀況.
-  * [ ] 觀看 `EU` `CFast card` `20`pcs 異常品狀況.
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品.
+  * [x] 撰寫 `B&R` `2`pcs `NPF` FA report.
+  * [x] 觀看 `3MG2-P` `Hardware ECC` 過高之測試狀況.
+  * [x] 觀看 `EU` `CFast card` `20`pcs 異常品狀況.
+  * [x] 協助新人架設 `3TE6` 透過 `innoworks` 平台執行 `DLMC` tool( `GDP` ).
+  * [x] 協助新人錄製 `3TE7 NANO ssd` `UART` log.
 
+# 2023-12-27
+* 參與 `FAE` 週會.
+* 協助 `Sales-Daphne` 觀看 `3TG6-P` 客退異常品, 經電路初步分析, 懷疑是 `U13` power switch IC 有異常, 並送至 `RMA` 更換零件.
+* 撰寫 `B&R` `2`pcs `NPF` FA report.
+* 觀看 `3MG2-P` `Hardware ECC` 過高之測試狀況, 目前 `reboot` 測試無相關異常.
+* 觀看 `EU` `CFast card` `20`pcs 異常品狀況.
+* 協助新人架設 `3TE6` 透過 `innoworks` 平台執行 `DLMC` tool( `GDP` ).
+* TODO
+  * [x] 與 `Sales-Jolie` 討論 `聖捷思` `3TG6-P` 後續維修處理.
+  * [x] 觀看 `3TG6-P` 客退異常品維修後之狀況.
+  * [x] 與 `Sales-Daphne` 討論 `3TG6-P` 無法認碟問題, 並整理相關分析資訊.
+  * [x] 協助 `Sales-Lisa` 點選 `Simmons` `3MG2-P` device 送回處理.
+  * [x] 查找 `3TG6-P` 客退異常品零件 `BOM` 表.
+  * [x] 撰寫 `B&R` `2`pcs `NPF` FA report.
+
+# 2023-12-28
+* 與 `Sales-Jolie` 討論 `聖捷思` `3TG6-P` 後續維修處理.
+* 觀看 `3TG6-P` 客退異常品維修後之狀況.
+* 與 `Sales-Daphne` 討論 `3TG6-P` 無法認碟問題, 並整理相關分析資訊, 進階分析過程發現 `UG1` & `UG2` `power IC` 異常.
+* 協助 `Sales-Lisa` 點選 `Simmons` `3MG2-P` device 送回處理.
+* 查找 `3TG6-P` 客退異常品零件 `BOM` 表, 發現 `PCB` 版號對不上, 後續透過 `PCB` 版號反查零件位置, 並領出相關零件.
+* 撰寫 `B&R` `2`pcs `NPF` FA report.
+* TODO
+  * [x] 辦公室座位網路拉線.
+  * [x] 撰寫 `B&R` `2`pcs `NPF` FA report, 並提供 `FA` report.
+  * [x] 協助 `EU-Sales` 觀看 `iCF card 9000` 異常狀況.
+  * [x] 錄製 `27`pcs `CFast card` 異常品 `UART` log & 認碟狀況.
+  * [x] 參與 `FAE-team2` 面談.
+  * [x] 協助新人處理 `innoworks` 透過 `dd` copy image.
+  * [x] 與 `EU-Sales` 討論 `B&R` 分析狀況.
+  * [x] 協助新人分析 `eUSB 2SE2` 相關操作.
+
+# 2023-12-29
+* 辦公室座位網路拉線.
+* 撰寫 `B&R` `2`pcs `NPF` FA report, 並提供 `FA` report.
+* 協助 `EU-Sales` 觀看 `iCF card 9000` 異常狀況.
+* 錄製 `27`pcs `CFast card` 異常品 `UART` log & 認碟狀況.
+* 參與 `FAE-team2` 面談.
+* 協助新人處理 `innoworks` 透過 `dd` copy image.
+* 與 `EU-Sales` 討論 `B&R` 分析狀況.
+* 協助新人分析 `eUSB 2SE2` 相關操作.
+* TODO
+  * [x] 錄製 `27`pcs `CFast card` 異常品 `UART` log & 認碟狀況.
+  * [x] 協助新人驗證 `innoworks` 經由 `dd` copy image 開機狀況.
+  * [x] 協助 `Sales-Joan` 觀看 `鼎通盛` 測試 `3IE7 40GB` 掉速問題.
+  * [x] 協助 `Jessie` 處理實驗室環安檢查相關事項.
+  * [x] 協助新人觀看 `AAEON` 關於 `3TE6` 透過 `USB` dongle 更新 `FW` 操作 SOP.
+  * [x] 協助 `Sales-Joan` 整理 `3MG2-P` `Hardware ECC` 過高客訴案, 目前測試狀況, 以及功能驗證相關訊息.
