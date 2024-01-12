@@ -85,7 +85,61 @@
 * 協助 `Sales-Vincent` 詢問關於 `4TG2-P` 是否可透過 `DLMC` 更新 `FW`( `F22616` -> `F23919` ).
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 錄製 `台泥` `3TG6-P` `PCIe` 客訴品 `Utility`.
+  * [x] 錄製 `台泥` `3TG6-P` `PCIe` 客訴品 `Utility`.
   * [x] 與 `Sales-Vivian` 討論 `台泥` 客訴案處理進度.
-  * [ ] 測試 `FEC231215007` `27`pcs `CFast 3SE3` 速度測試.
+  * [x] 測試 `FEC231215007` `27`pcs `CFast 3SE3` 速度測試.
+  * [x] 協助 `EU-FAE` 整理 `27` pcs `CFast 3SE3` 認碟狀況( `USB` & `Motherboard` ).
+
+# 2024-01-10
+* 參與 `FAE` 週會.
+* 錄製 `台泥` `3TG6-P` `PCIe` 客訴品 `Utility`.
+* 與 `Sales-Vivian` 討論 `台泥` 客訴案處理進度.
+* 測試 `FEC231215007` `27`pcs `CFast 3SE3` 速度測試.
+* 協助 `EU-FAE` 整理 `27` pcs `CFast 3SE3` 認碟狀況( `USB` & `Motherboard` ).
+* TODO
+  * [x] 與 `EU-Sales` 討論關於 `Extra computer` 處理狀況.
+  * [x] 協助 `EU-FAE` 整理 `11`pcs `3TE7` 相關測試結果.
+  * [x] 與 `FW-RD` 討論 `3TE7` 相關 `UART` log 訊息意義.
+
+# 2024-01-11
+* 與 `EU-Sales` 討論關於 `Extra computer` 處理狀況.
+* 協助 `EU-FAE` 整理 `11`pcs `3TE7` 相關測試結果.
+  * `SRR_1:0,0;c,c,c` -> 身份判別
+  * `EH_PBT` -> `PBT` 建表的 `retry`( 建表回推 ).
+  * `CMT_A0` -> `PBT` 建表在回推斷電前寫的資料.
+  * `D_UNC2:0,1` -> `UNC`.
+  * `INV1:4ca9200,STS:2` -> 建表回推的資料讀 `Fail`.
+  * `Laa Over1` -> `GC` 的時候讀出來的資料有問題( `SLC/TLC判錯` ).
+* 與 `FW-RD` 討論 `3TE7` 相關 `UART` log 訊息意義.
+* TODO
+  * [x] 協助 `FW-RD` 提供 `台泥` `3TG6-P` `PCIe` `Crystal disk info` 相關 `RAW` value.
+  * [x] 更新 `eFAE` 系統相關客訴處理進度.
+  * [x] 參加 `EU-FAE` 週會.
+  * [x] 更新 `台泥` & `紫微科技` 客訴案處理進度.
+  * [x] 處理 `紫微科技` `3ME4` `10`pcs 客訴案分析.
+  * [x] 參與 `Astute Electronics` 討論 `3MG2-P` `Hardware ECC` 相關測試結果會議.
+  * [x] 協助新人轉送 `SATADOM 3ME3` `RMA` 維修零件.
+
+# 2024-01-12
+* 協助 `FW-RD` 提供 `台泥` `3TG6-P` `PCIe` `Crystal disk info` 相關 `RAW` value.
+* 更新 `eFAE` 系統相關客訴處理進度.
+* 參加 `EU-FAE` 週會.
+* 更新 `台泥` & `紫微科技` 客訴案處理進度.
+  * `9`pcs 皆可認碟, 其中 `1`pcs 為 `retry` 問題.
+* 處理 `紫微科技` `3ME4` `10`pcs 客訴案分析.
+* 參與 `Astute Electronics` 討論 `3MG2-P` `Hardware ECC` 相關測試結果會議.
+* 協助新人轉送 `SATADOM 3ME3` `RMA` 維修零件.
+* TODO
+  * [x] 協助 `Astute Electronics` 架設 `3MG2-P` 相關 `reboot` 測試( `M150821` ).
+  * [x] 協助提供 `3TE6` `Auto DLMC` tool 相關 image.
+  * [x] 整理 `紫微科技` `3ME4` `10`pcs 相關資訊.
+  * [x] 協助新人觀看 `USB 2SE2` 相關開卡問題.
+
+# 2024-01-15
+* 協助 `Astute Electronics` 架設 `3MG2-P` 相關 `reboot` 測試( `M150821` ).
+* 協助提供 `3TE6` `Auto DLMC` tool 相關 image.
+* 整理 `紫微科技` `3ME4` `10`pcs 相關資訊.
+* 協助新人觀看 `USB 2SE2` 相關開卡問題.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
 
