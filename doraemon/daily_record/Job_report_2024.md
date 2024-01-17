@@ -141,5 +141,35 @@
 * 整理 `紫微科技` `3ME4` `10`pcs 相關資訊.
 * 協助新人觀看 `USB 2SE2` 相關開卡問題.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 轉交 `FEB231201005` `B&R` `2pcs` device 於 `Sales`.
+  * [x] 與 `EU` 討論 `3TG8-P` 相關 `DLMC` 相關流程.
+  * [x] 協助 `Sales-Joan` 詢問關於 `SMI` `DLMC` tool 相關資訊.
+  * [x] 協助新人觀看 `TBW` & `DWPD` 相關運算.
+  * [x] 整理並撰寫 `紫微科技` `10`pcs `FA` report.
 
+# 2024-01-16
+* 參與 `FAE-team2` 週會.
+* 轉交 `FEB231201005` `B&R` `2pcs` device 於 `Sales`.
+* 與 `EU` 討論 `3TG8-P` 相關 `DLMC` 相關流程.
+* 協助 `Sales-Joan` 詢問關於 `SMI` `DLMC` tool 相關資訊.
+* 協助新人觀看 `TBW` & `DWPD` 相關運算.
+* 整理並撰寫 `紫微科技` `10`pcs `FA` report.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 提供 `紫微科技` `10`pcs `FA` report.
+  * [x] 參與 `EU` 討論 `3TG8-P` 更新 `FW` 相關問題.
+  * [x] 協助 `Kiwi` 提供 `RRD` 相關文件, 以及回覆信件解決客戶問題相關 `case`.
+  * [x] 與 `Sales-Vivian` 討論 `紫微科技` `10`pcs `FA` report.
+
+# 2024-01-17
+* 參與 `FAE` 週會.
+* 提供 `紫微科技` `10`pcs `FA` report.
+* 參與 `EU` 討論 `3TG8-P` 更新 `FW` 相關問題.
+* 協助 `Kiwi` 提供 `RRD` 相關文件, 以及回覆信件解決客戶問題相關 `case`.
+* 與 `Sales-Vivian` 討論 `紫微科技` `10`pcs `FA` report.
+* TODO
+  * [x] 協助 `EU` 驗證 `3IE7` `DLMC` tool( `S21606i -> S23505i` ).
+  * [x] 協助新人觀看 `USB 2SE2` 相關問題分析及回覆.
+  * [x] 協助 `Sales-Joan` 觀看 `Astute Electronics` 架設 `3MG2-P` 相關 `reboot` 測試結果( `M150821` ).
+  * [x] 協助 `Kerry` 處理 `3TE6` auto `DLMC` tool 操作.
