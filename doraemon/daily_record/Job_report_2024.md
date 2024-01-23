@@ -173,3 +173,51 @@
   * [x] 協助新人觀看 `USB 2SE2` 相關問題分析及回覆.
   * [x] 協助 `Sales-Joan` 觀看 `Astute Electronics` 架設 `3MG2-P` 相關 `reboot` 測試結果( `M150821` ).
   * [x] 協助 `Kerry` 處理 `3TE6` auto `DLMC` tool 操作.
+
+# 2024-01-18
+* 協助 `EU` 驗證 `3IE7` `DLMC` tool( `S21606i -> S23505i` ).
+* 協助新人觀看 `USB 2SE2` 相關問題分析及回覆.
+* 協助 `Sales-Joan` 觀看 `Astute Electronics` 架設 `3MG2-P` 相關 `reboot` 測試結果( `M150821` ).
+* 協助 `Kerry` 處理 `3TE6` auto `DLMC` tool 操作.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `FW-RD` 提供 `3TE7` `3.3V` 電壓位置圖.
+  * [x] 協助 `EU` 詢問 `HW-RD` 關於 `3TG8-P` & `3TG6-P` `LED` 顯示相關問題.
+  * [x] 協助 `EU` 準備 `M.2 SATA` anaylzer 相關訊號轉接版. 
+  * [x] 協助 `Sales-Joan` 準備 `3TE7` `DLMC` device 於新人.
+
+# 2024-01-19
+* 參與 `EU-FAE` 週會.
+* 協助 `FW-RD` 提供 `3TE7` `3.3V` 電壓位置圖.
+* 協助 `EU` 詢問 `HW-RD` 關於 `3TG8-P` & `3TG6-P` `LED` 顯示相關問題.
+* 協助 `EU` 準備 `M.2 SATA` anaylzer 相關訊號轉接版. 
+* 協助 `Sales-Joan` 準備 `3TE7` `DLMC` device 於新人.
+* TODO
+  * [x] 與 `Sales-Joan` 討論 `SMI` upgrade tool.
+  * [x] 提供 `3MG2-P` 於 `FW-M150821` 測試結果, 以及 `SMI` `64bit` `DLMC` tool.
+  * [x] 協助 `EU` 驗證 `Extra computer` `4`pcs `NPF` 進入系統狀況, 以及相關 `image`.
+  * [x] 提供 `Extra computer` `4`pcs `NPF` 進入系統結果圖.
+
+# 2024-01-22
+* 與 `Sales-Joan` 討論 `SMI` upgrade tool.
+* 提供 `3MG2-P` 於 `FW-M150821` 測試結果, 以及 `SMI` `64bit` `DLMC` tool.
+* 協助 `EU` 驗證 `Extra computer` `4`pcs `NPF` 進入系統狀況, 以及相關 `image`.
+* 提供 `Extra computer` `4`pcs `NPF` 進入系統結果圖.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `EU` 測試 `4TG2-P` `Re-MP` & `DLMC` tool 操作條件( `E22C25` -> `E23915` ).
+  * [x] 協助 `Sales-Jolie` 評估 `3TG6-P` `DLMC` 可行性( `A21513` -> `A23209` ).
+  * [x] 與 `Sales-Joan` 討論關於 `3TE2` `DLMC` tool ( `K19C18` -> `K19603` ).
+  * [x] 協助新人架設低溫測試 `NANO SSD`.
+
+# 2024-01-23
+* 參與 `FAE-team2` 週會.
+* 協助 `EU` 測試 `4TG2-P` `Re-MP` & `DLMC` tool 操作條件( `E22C25` -> `E23915` ).
+* 協助 `Sales-Jolie` 評估 `3TG6-P` `DLMC` 可行性( `A21513` -> `A23209` ).
+* 與 `Sales-Joan` 討論關於 `3TE2` `DLMC` tool ( `K19C18` -> `K19603` ).
+* 協助新人架設低溫測試 `NANO SSD`.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 撰寫 `B&R` `27`pcs `FA` report.
+  * [ ] 協助 `EU` 測試 `3TG8-P` `DLMC` bin file.
+  * [x] 協助新人架設 `3TE7` `SATA Slim` 低溫開機測試.
