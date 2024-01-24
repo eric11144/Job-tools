@@ -90,7 +90,15 @@
 
 - name: copy vim deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb"
+    src: "{{ role_path }}/files/tmp/vim_2%3a8.2.3995-1ubuntu2.15_amd64.deb"
+    dest: "{{ FILE_PATH }}package_tool"
+    mode: 0777
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: copy fio deb package
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/tmp/fio_3.28-1_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -148,5 +156,10 @@
 
 - name: Install vim package
   apt:
-    deb: "{{ FILE_PATH }}package_tool/vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb"
+    deb: "{{ FILE_PATH }}package_tool/vim_2%3a8.2.3995-1ubuntu2.15_amd64.deb"
+  ignore_errors: true
+
+- name: Install fio package
+  apt:
+    deb: "{{ FILE_PATH }}package_tool/fio_3.28-1_amd64.deb"
   ignore_errors: true
