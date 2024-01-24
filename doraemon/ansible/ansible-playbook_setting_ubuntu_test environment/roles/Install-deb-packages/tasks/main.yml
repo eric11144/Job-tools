@@ -10,7 +10,7 @@
 
 - name: copy code deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/code_1.77.3-1681292746_amd64.deb"
+    src: "{{ role_path }}/files/code_1.77.3-1681292746_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -18,7 +18,7 @@
 
 - name: copy fcitx deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/fcitx_1%3a4.2.9.8-5_all.deb"
+    src: "{{ role_path }}/files/fcitx_1%3a4.2.9.8-5_all.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -26,7 +26,7 @@
 
 - name: copy fcitx-chewing deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/fcitx-chewing_0.2.3-1_amd64.deb"
+    src: "{{ role_path }}/files/fcitx-chewing_0.2.3-1_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -34,7 +34,7 @@
 
 - name: copy google chrome deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/google-chrome-stable_current_amd64.deb"
+    src: "{{ role_path }}/files/google-chrome-stable_current_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -42,7 +42,7 @@
 
 - name: copy gparted deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/gparted_1.3.1-1ubuntu1_amd64.deb"
+    src: "{{ role_path }}/files/gparted_1.3.1-1ubuntu1_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -50,7 +50,7 @@
 
 - name: copy htop deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/htop_3.0.5-7build2_amd64.deb"
+    src: "{{ role_path }}/files/htop_3.0.5-7build2_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -58,7 +58,7 @@
 
 - name: copy net-tools deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb"
+    src: "{{ role_path }}/files/net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -66,7 +66,7 @@
 
 - name: copy nvme-cli deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/nvme-cli_1.16-3ubuntu0.1_amd64.deb"
+    src: "{{ role_path }}/files/nvme-cli_1.16-3ubuntu0.1_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -74,7 +74,7 @@
 
 - name: copy smartmontools deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/smartmontools_7.2-1build2_amd64.deb"
+    src: "{{ role_path }}/files/smartmontools_7.2-1build2_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -82,7 +82,7 @@
 
 - name: copy terminator deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/apt-repo/terminator_2.1.1-1_all.deb"
+    src: "{{ role_path }}/files/terminator_2.1.1-1_all.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -90,7 +90,7 @@
 
 - name: copy vim deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/vim_2%3a8.2.3995-1ubuntu2.15_amd64.deb"
+    src: "{{ role_path }}/files/vim_2%3a8.2.3995-1ubuntu2.15_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
@@ -98,7 +98,7 @@
 
 - name: copy fio deb package
   ansible.builtin.copy:
-    src: "{{ role_path }}/files/tmp/fio_3.28-1_amd64.deb"
+    src: "{{ role_path }}/files/fio_3.28-1_amd64.deb"
     dest: "{{ FILE_PATH }}package_tool"
     mode: 0777
     owner: "{{ ansible_user }}"
