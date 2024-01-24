@@ -218,6 +218,20 @@
 * 協助新人架設低溫測試 `NANO SSD`.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 撰寫 `B&R` `27`pcs `FA` report.
-  * [ ] 協助 `EU` 測試 `3TG8-P` `DLMC` bin file.
+  * [x] 協助 `EU` 測試 `3TG8-P` `DLMC` bin file.
   * [x] 協助新人架設 `3TE7` `SATA Slim` 低溫開機測試.
+  * [x] 協助 `Sales-Joan` 與 `FW-RD Jian` 討論 `3TE2` DLMC 相關問題( `K19C18` -> `K19603` ).
+  * [x] 協助 `EU-FAE` 測試 `M.2 -> SATA` analyzer 轉板電源供應接線.
+
+# 2024-01-24
+* 參與 `FAE` 週會.
+* 協助 `EU` 測試 `3TG8-P` `DLMC` bin file.
+* 協助新人架設 `3TE7` `SATA Slim` 低溫開機測試.
+* 協助 `Sales-Joan` 與 `FW-RD Jian` 討論 `3TE2` DLMC 相關問題( `K19C18` -> `K19603` ).
+* 協助 `EU-FAE` 測試 `M.2 -> SATA` analyzer 轉板電源供應接線.
+* TODO
+  * [x] 協助 `EU` 觀看 `FEC231103010` `USB` 相關 `format` 格式, 並整理相關結果.
+  * [x] 詢問 `PM-Micky` 關於 `FEC231220004` `Avnet / SICK AG` 客訴品處理( `3TG8-P` ).
+  * [x] 協助回答 `PM-Micky` 關於 `SMI` `DLMC` tool source code 問題.
+  * [x] 協助 `EU-FAE` 提供 `Extra computer` `OS` image.
+  * [ ] 撰寫 `B&R` `27`pcs `FA` report.
