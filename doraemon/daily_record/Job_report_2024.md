@@ -234,4 +234,104 @@
   * [x] 詢問 `PM-Micky` 關於 `FEC231220004` `Avnet / SICK AG` 客訴品處理( `3TG8-P` ).
   * [x] 協助回答 `PM-Micky` 關於 `SMI` `DLMC` tool source code 問題.
   * [x] 協助 `EU-FAE` 提供 `Extra computer` `OS` image.
-  * [ ] 撰寫 `B&R` `27`pcs `FA` report.
+  * [x] 撰寫 `B&R` `27`pcs `FA` report.
+
+# 2024-01-25
+* 協助 `EU` 觀看 `FEC231103010` `USB` 相關 `format` 格式, 並整理相關結果.
+* 詢問 `PM-Micky` 關於 `FEC231220004` `Avnet / SICK AG` 客訴品處理( `3TG8-P` ).
+* 協助回答 `PM-Micky` 關於 `SMI` `DLMC` tool source code 問題.
+* 協助 `EU-FAE` 提供 `Extra computer` `OS` image.
+* 撰寫 `B&R` `27`pcs `FA` report.
+* TODO
+  * [x] 協助 `Sales-Joan` 詢問 `FW-RD` 關於 `3TE2` `FW` 相關問題.
+  * [x] 協助新人取得 `Rainer` 新版 `FW`.
+  * [x] 前往維修部取回送修 `SATADOM 3SE3`.
+  * [x] 協助 `EU` 架設 `3TG8-P` `power cyclying` 遇到 `Blue screen` 異常.
+  * [x] 協助 `EU` 觀看 `M.2` `SATA analyzer` 轉板串接問題. 
+
+# 2024-01-26
+* 協助 `Sales-Joan` 詢問 `FW-RD` 關於 `3TE2` `FW` 相關問題.
+* 協助新人取得 `Rainer` 新版 `FW`.
+* 前往維修部取回送修 `SATADOM 3SE3`.
+* 協助 `EU` 架設 `3TG8-P` `power cyclying` 遇到 `Blue screen` 異常.
+* 協助 `EU` 觀看 `M.2` `SATA analyzer` 轉板串接問題.
+* TODO
+  * [x] 協助新人架設低溫測試環境.
+  * [x] 協助 `Sales-Joan` 處理 `3MG2-P` `DLMC` tool source code.
+  * [x] 與 `EP-Peiwen` & `EU-Sales` 討論關於 `USB` `2SE2` 相關驗證流程.
+  * [x] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+
+# 2024-01-29
+* 協助新人架設低溫測試環境.zo e
+* 協助 `Sales-Joan` 處理 `3MG2-P` `DLMC` tool source code.
+* 與 `EP-Peiwen` & `EU-Sales` 討論關於 `USB` `2SE2` 相關驗證流程.
+* 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+* TODO
+  * [x] 協助 `Sales-Jolie` 處理 `3TG6-P` `1T` & `4T` `DLMC` tool & 測試.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 撰寫 `B&R` `27`pcs `FA` report.
+  * [x] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+  * [x] 協助新人觀看 `SATADOM 3SE3` `1.2V` 問題.
+
+# 2024-01-30
+* 協助 `Sales-Jolie` 處理 `3TG6-P` `1T` & `4T` `DLMC` tool & 測試.
+* 參與 `FAE-team2` 週會.
+* 撰寫 `B&R` `27`pcs `FA` report.
+* 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+* 協助新人觀看 `SATADOM 3SE3` `1.2V` 問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助新人觀看客戶相關問題.
+  * [x] 參與研發處月會.
+  * [x] 與 `FW-RD` 討論 `台泥儲能` `3TG6-P` 分析相關進度.
+  * [x] 協助 `Kerry` 提供 `3MG2-P` `Hardware ECC` 調整 `FW`.
+  * [x] 撰寫 `B&R` `27`pcs `FA` report.
+  * [x] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+
+# 2024-01-31
+* 參與 `FAE` 週會.
+* 協助新人觀看客戶相關問題.
+* 參與研發處月會.
+* 與 `FW-RD` 討論 `台泥儲能` `3TG6-P` 分析相關進度.
+* 協助 `Kerry` 提供 `3MG2-P` `Hardware ECC` 調整 `FW`.
+* 撰寫 `B&R` `27`pcs `FA` report.
+* 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+* TODO
+  * [x] 協助處理 `Sales-Vincent` 之 `Digicor Pty` 客訴品(`3TE6`).
+  * [x] 撰寫 `B&R` `27`pcs `FA` report.
+  * [x] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+  * [x] 參與 `EU` `3TG8-P` FW 更新討論會議.
+  * [x] 參與 `FAE` 月會.
+
+# 2024-02-01
+* 協助處理 `Sales-Vincent` 之 `Digicor Pty` 客訴品(`3TE6`), 發現 `UART` log 並無印出相關資訊, 已反應給 `FW-RD`, 後續會提供一版 `Debug FW`.
+* 撰寫 `B&R` `27`pcs `FA` report.
+* 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+* 參與 `EU` `3TG8-P` FW 更新討論會議.
+* 參與 `FAE` 月會.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 提供 `Tritech Solutions` 客訴品 `3TE6` 測試 `BurninTest` `1` month 結果.
+  * [x] 提供 `B&R` `27`pcs `FA` report.
+  * [x] 協助 `Jay` 詢問 `EU` 客訴案( `FED240131005-ECRIN SYSTEMS` & `FEC240131002-SIMOS Elektronik` ) `problem` 資訊.
+  * [x] 協助 `EU-FAE` 提供 `E1S` form factor 相關資訊.
+  * [x] 協助 `Danny` 架設 `Windows 11` 測試 `teraterm` 運行狀況.
+  * [x] 測試 `Digicor Pty` 客訴品(`3TE6`) 透過 `write code` 更新 `FW`.
+  * [x] 撰寫 `Digicor Pty` 客訴品(`3TE6`) `FA` report.
+
+# 2024-02-02
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 提供 `Tritech Solutions` 客訴品 `3TE6` 測試 `BurninTest` `1` month 結果.
+* 提供 `B&R` `27`pcs `FA` report.
+* 協助 `Jay` 詢問 `EU` 客訴案( `FED240131005-ECRIN SYSTEMS` & `FEC240131002-SIMOS Elektronik` ) `problem` 資訊.
+* 協助 `EU-FAE` 提供 `E1S` form factor 相關資訊.
+* 協助 `Danny` 架設 `Windows 11` 測試 `teraterm` 運行狀況.
+* 測試 `Digicor Pty` 客訴品(`3TE6`) 透過 `write code` 更新 `FW`.
+* 撰寫 `Digicor Pty` 客訴品(`3TE6`) `FA` report.
+* TODO
+  * [x] 協助 `Sam` 提供 `3TE4` sample 於 `Thomas` 測試 `reset`.
+  * [x] 協助 `EP-Peiwen` 測試 `USB` `2SE2` format 格式確認, 並截圖.
+  * [x] 協助 `Sales-Vincent` 提供 `Digicor Pty` 所需之 `DLMC` tool & `FW` bin file.
+  * [ ] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+  * [ ] 協助新人觀看 `FA` report.
+  * [ ] 撰寫 `紫薇科技` `FA` report.
