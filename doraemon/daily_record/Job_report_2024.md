@@ -332,6 +332,42 @@
   * [x] 協助 `Sam` 提供 `3TE4` sample 於 `Thomas` 測試 `reset`.
   * [x] 協助 `EP-Peiwen` 測試 `USB` `2SE2` format 格式確認, 並截圖.
   * [x] 協助 `Sales-Vincent` 提供 `Digicor Pty` 所需之 `DLMC` tool & `FW` bin file.
-  * [ ] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
-  * [ ] 協助新人觀看 `FA` report.
-  * [ ] 撰寫 `紫薇科技` `FA` report.
+  * [x] 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+  * [x] 協助新人觀看 `FA` report.
+  * [x] 撰寫 `紫薇科技` `FA` report.
+
+# 2024-02-05
+* 協助 `Sam` 提供 `3TE4` sample 於 `Thomas` 測試 `reset`.
+* 協助 `EP-Peiwen` 測試 `USB` `2SE2` format 格式確認, 並截圖.
+* 協助 `Sales-Vincent` 提供 `Digicor Pty` 所需之 `DLMC` tool & `FW` bin file.
+* 追蹤 `3TG8-P` `power cyclying` 測試狀況.
+* 協助新人觀看 `FA` report.
+* 撰寫 `紫薇科技` `FA` report.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Sales-Vincent` 提供 `3TE6` DLMC 驗證 `SMART` 資訊.
+  * [x] 與 `EU` 討論 `4TG2-P` 相關 `Re-MP` tool & `DLMC` tool 工具.
+  * [x] 與 `FW-RD` 討論 `4TG2-P` `E23915` `DLMC` tool.
+  * [x] 協助新人觀看 `FA` report.
+
+# 2024-02-06
+* 參與 `FAE-team2` 週會.
+* 協助 `Sales-Vincent` 提供 `3TE6` DLMC 驗證 `SMART` 資訊.
+* 與 `EU` 討論 `4TG2-P` 相關 `Re-MP` tool & `DLMC` tool.
+* 與 `FW-RD` 討論 `4TG2-P` `E23915` `DLMC` tool.
+* 協助新人觀看 `FA` report.
+* TODO
+  * [x] 協助 `EU-FAE` 架設 `3TG8-P` power cyclying 測試( `power-on`: `100` sec, `power-off` : `7`sec ).
+  * [x] 與 `DQE` 討論 `3TG8-P` power cyclying 測試並取得相關關閉 `windows 修復` 畫面.
+  * [x] 與 `EU-Sales` 討論 `4TG2-P` 相關 `Re-MP` tool & `DLMC` tool` 處理狀況.
+  * [x] 撰寫 `紫薇科技` `FA` report.
+
+# 2024-02-07
+* 協助 `EU-FAE` 架設 `3TG8-P` power cyclying 測試( `power-on`: `100` sec, `power-off` : `7`sec ).
+* 與 `DQE` 討論 `3TG8-P` power cyclying 測試並取得相關關閉 `windows 修復` 畫面.
+* 與 `EU-Sales` 討論 `4TG2-P` 相關 `Re-MP` tool & `DLMC` tool` 處理狀況.
+* 撰寫 `紫薇科技` `FA` report.
+* TODO
+  * [x] 協助 `EU-FAE` 驗證 `3IE7` DLMC tool.
+  * [x] 協助 `EU-Sales` 處理 `3TG8-P` DLMC tool 相關 `bin file`.
+  * [x] 協助 `EU-Sales` 處理 `Boeing` `3TG8-P` DLMC tool 相關 `bin file`.
