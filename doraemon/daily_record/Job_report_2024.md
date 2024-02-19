@@ -371,3 +371,47 @@
   * [x] 協助 `EU-FAE` 驗證 `3IE7` DLMC tool.
   * [x] 協助 `EU-Sales` 處理 `3TG8-P` DLMC tool 相關 `bin file`.
   * [x] 協助 `EU-Sales` 處理 `Boeing` `3TG8-P` DLMC tool 相關 `bin file`.
+
+# 2024-02-15
+* 協助 `EU-FAE` 驗證 `3IE7` DLMC tool.
+* 協助 `EU-Sales` 處理 `3TG8-P` DLMC tool 相關 `bin file`.
+* 協助 `EU-Sales` 處理 `Boeing` `3TG8-P` DLMC tool 相關 `bin file`.
+* TODO
+  * [x] 協助處理 `Boeing` `3TG6-P` 認不到碟問題.
+  * [x] 詢問 `FW RD` 關於 `Boeing` 提供之 `UART` log.
+  * [x] 參與 `EU FAE` 週會.
+  * [x] 協助新人觀看 `innoWorks` 反應 `3IE4` 相關認不到碟問題.
+
+# 2024-02-16
+* 協助處理 `Boeing` `3TG6-P` 認不到碟問題.
+* 詢問 `FW RD` 關於 `Boeing` 提供之 `UART` log.
+* 參與 `EU FAE` 週會.
+* 協助新人觀看 `innoWorks` 反應 `3IE4` 相關認不到碟問題.
+* TODO
+  * [x] 與 `FW RD` 討論 `Keba` 相關測試問題.
+  * [x] 詢問 `EU FAE` 關於 `Keba` 相關測試手法以及流程.
+  * [x] 協助 `EU` 將 `3TG8-P` 送至 `DQE` 測試 `power cycling`.
+  * [x] 撰寫 `台泥儲能` `3TG6-P` `PCIe` 相關 `FA` report.
+  * [x] 提供 `Boeing` `3TG6-P` 錄製 `UART` log 相關 `token key`.
+
+# 2024-02-17
+* 與 `FW RD` 討論 `Keba` 相關測試問題.
+* 詢問 `EU FAE` 關於 `Keba` 相關測試手法以及流程.
+* 協助 `EU` 將 `3TG8-P` 送至 `DQE` 測試 `power cycling`.
+* 撰寫 `台泥儲能` `3TG6-P` `PCIe` 相關 `FA` report.
+* 提供 `Boeing` `3TG6-P` 錄製 `UART` log 相關 `token key`.
+* TODO
+  * [x] 協助新人觀看 `SATADOM` `loader mode` 相關電路圖.
+  * [x] 參與 `Simmons` 關於 `3MG2-P` `Hardware ECC` 討論會議.
+  * [x] 測試 `3MG2-P` 透過 `DLMC` 互刷 `FW` `M161225` <-> `M190903`.
+  * [x] 協助新人架設低溫( `-35˚C` )測試環境.
+
+# 2024-02-19
+* 協助新人觀看 `SATADOM` `loader mode` 相關電路圖.
+* 參與 `Simmons` 關於 `3MG2-P` `Hardware ECC` 討論會議.
+* 測試 `3MG2-P` 透過 `DLMC` 互刷 `FW` `M161225` <-> `M190903`.
+* 協助新人架設低溫( `-35˚C` )測試環境.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Kiwi` 查找 `Rainer` `8T` 相關更新 `bin` file.
+  * [ ] 協助 `Sales-Joan` 提供 `FW` `M161225` 更新 tool. 
