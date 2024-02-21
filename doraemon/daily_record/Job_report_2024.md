@@ -414,4 +414,25 @@
 * TODO
   * [x] 參與 `FAE-team2` 週會.
   * [x] 協助 `Kiwi` 查找 `Rainer` `8T` 相關更新 `bin` file.
-  * [ ] 協助 `Sales-Joan` 提供 `FW` `M161225` 更新 tool. 
+  * [x] 協助 `Sales-Joan` 提供 `FW` `M161225` 更新 tool. 
+
+# 2024-02-20
+* 參與 `FAE-team2` 週會.
+* 協助 `Kiwi` 查找 `Rainer` `8T` 相關更新 `bin` file.
+* 協助 `Sales-Joan` 提供 `FW` `M161225` 更新 tool. 
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `FW-RD` 架設 `Keba` 測試環境.
+  * [x] 詢問 `EU-FAE` 關於 `Keba` 測試相關條件.
+  * [x] 協助 `Sales-Joile` 處理 `裕達` copy image 相關異常.
+
+# 2024-02-21
+* 參與 `FAE` 週會.
+* 協助 `FW-RD` 架設 `Keba` 測試環境.
+* 詢問 `EU-FAE` 關於 `Keba` 測試相關條件.
+* 協助 `Sales-Joile` 處理 `裕達` copy image 相關異常.
+* TODO
+  * [x] 協助 `Sales-Joile` 提供 `裕達` 測試結果.
+  * [ ] 協助處理 `EU` 遇到之 `3TG8-P` 相關 `SATA` command time out 問題.
+  * [x] 協助新人處理 `3IE4` Freeze 相關異常問題.
+  * [x] 協助回覆 `Boeing` 相關問題.
