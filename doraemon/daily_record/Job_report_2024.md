@@ -433,6 +433,49 @@
 * 協助 `Sales-Joile` 處理 `裕達` copy image 相關異常.
 * TODO
   * [x] 協助 `Sales-Joile` 提供 `裕達` 測試結果.
-  * [ ] 協助處理 `EU` 遇到之 `3TG8-P` 相關 `SATA` command time out 問題.
+  * [x] 協助處理 `EU` 遇到之 `3TG8-P` 相關 `SATA` command time out 問題.
   * [x] 協助新人處理 `3IE4` Freeze 相關異常問題.
   * [x] 協助回覆 `Boeing` 相關問題.
+
+# 2024-02-22
+* 協助 `Sales-Joile` 提供 `裕達` 測試結果.
+* 協助處理 `EU` 遇到之 `3TG8-P` 相關 `SATA` command time out 問題.
+* 協助新人處理 `3IE4` Freeze 相關異常問題.
+* 協助回覆 `Boeing` 相關問題. 
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 透過 `SATA analyzer` 測試 `3TG8-P` 關於 `SATA` link 相關問題( `COMRESET` 重複下兩次 ).
+    * [x] `2TB`.
+    * [x] `4TB`.
+    * [x] `8TB`.
+  * [x] 協助 `PM-Micky` 回覆關於 `Hardware_ECC_Recovered` & `Read_Error_Retry_Rate` 相關問題. 
+  * [x] 統整並回報 `裕達` 目前測試狀況於 `Sales-Joile`.
+  * [x] 與 `EU-FAE` 同步關於 `SIMOS` `27`pcs 內 `2`pcs `loader mode` 問題.
+  * [x] 協助 `EU-FAE` 測試 `SIMOS` `27`pcs 內 `2`pcs `loader mode` 經過 `ReMP` 後狀況.
+ 
+# 2024-02-23
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 透過 `SATA analyzer` 測試 `3TG8-P` 關於 `SATA` link 相關問題( `COMRESET` 重複下兩次 ).
+  * `2TB`.
+  * `4TB`.
+  * `8TB`.
+* 協助 `PM-Micky` 回覆關於 `Hardware_ECC_Recovered` & `Read_Error_Retry_Rate` 相關問題. 
+* 統整並回報 `裕達` 目前測試狀況於 `Sales-Joile`.
+* 與 `EU-FAE` 同步關於 `SIMOS` `27`pcs 內 `2`pcs `loader mode` 問題.
+* 協助 `EU-FAE` 測試 `SIMOS` `27`pcs 內 `2`pcs `loader mode` 經過 `ReMP` 後狀況, 結果確定為 `controller` 異常.
+* TODO
+  * [x] 協助 `EU` 回覆關於 `3IE4` `uSD` 相關問題.
+  * [x] 協助 `FW-RD` 測試 `3MG-P` 關於 `SE` 相關操作.
+  * [x] 協助 `Sales-Anita` 回覆關於 `B&R` `2` pcs `NPF` 相關問題( 客戶認不到 `device` 相關可能性 ).
+  * [x] 參與 `RD` 技術分享會議.
+  * [x] 協助觀看 `FEA240220006` `3MG2-P` 相關客訴問題.
+
+# 2024-02-26
+* 協助 `EU` 回覆關於 `3IE4` `uSD` 相關問題.
+* 協助 `FW-RD` 測試 `3MG-P` 關於 `SE` 相關操作.
+* 協助 `Sales-Anita` 回覆關於 `B&R` `2` pcs `NPF` 相關問題( 客戶認不到 `device` 相關可能性 ).
+* 參與 `RD` 技術分享會議.
+* 協助觀看 `FEA240220006` `3MG2-P` 相關客訴問題, 目前結果為 `NPF`.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 協助 `FW-RD` 透過 `write code` 更新 `FW` 並測試 `3MG-P` 關於 `SE` 相關操作.
