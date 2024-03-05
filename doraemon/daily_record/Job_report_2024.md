@@ -477,5 +477,86 @@
 * 參與 `RD` 技術分享會議.
 * 協助觀看 `FEA240220006` `3MG2-P` 相關客訴問題, 目前結果為 `NPF`.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 協助 `FW-RD` 透過 `write code` 更新 `FW` 並測試 `3MG-P` 關於 `SE` 相關操作.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `FW-RD` 透過 `write code` 更新 `FW` 並測試 `3MG-P` 關於 `SE` 相關操作.
+  * [x] 協助 `Kiwi` 追蹤 `3TG8-P` Led 反向問題進度(`HW-RD` `大 J`).
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助 `EU` 借出 `Hanel` 平台做相關驗證.
+  * [x] 協助 `EU` 借出 `Winsys` 平台做相關驗證.
+  * [x] 申請驗證樣品 `3TG8-P` & `3MG2-P 512GB`.
+
+
+# 2024-02-27
+* 參與 `FAE-team2` 週會.
+* 協助 `FW-RD` 透過 `write code` 更新 `FW` 並測試 `3MG-P` 關於 `SE` 相關操作.
+* 協助 `Kiwi` 追蹤 `3TG8-P` Led 反向問題進度(`HW-RD` `大 J`).
+* 參與 `FAE` 月會.
+* 協助 `EU` 借出 `Hanel` 平台做相關驗證.
+* 協助 `EU` 借出 `Winsys` 平台做相關驗證.
+* 申請驗證樣品 `3TG8-P` & `3MG2-P 512GB`.
+* TODO
+  * [x] 協助 `Sales-Jolie` 歸還 `裕達` 測試平台.
+  * [x] 協助 `EU-FAE` 觀看 `B&R` `3MV2-P` 異常狀況.
+  * [x] 協助 `Sales` 提供 `TPS` 測試相關步驟與條件( `CDM` 測試結果驗證 ).
+  * [x] 協助 `EU-PM` 提供 `3TG8-P` `cold boot` slow 相關 `SATA analyzer` 結果.
+  * [x] 協助新人測試透過 `C++` 產生每秒寫入 `10kb` 資料, 寫到 `64MB` 時, 會再產生一個檔案繼續寫.
+
+# 2024-02-28
+* 協助 `Sales-Jolie` 歸還 `裕達` 測試平台.
+* 協助 `EU-FAE` 觀看 `B&R` `3MV2-P` 異常狀況.
+* 協助 `Sales` 提供 `TPS` 測試相關步驟與條件( `CDM` 測試結果驗證 ).
+* 協助 `EU-PM` 提供 `3TG8-P` `cold boot` slow 相關 `SATA analyzer` 結果.
+* 協助新人測試透過 `C++` 產生每秒寫入 `10KB` 資料, 寫到 `64MB` 時, 會再產生一個檔案繼續寫.
+* TODO
+  * [x] `228` 放假.
+
+# 2024-02-29
+* `228` 放假.
+* TODO
+  * [x] 協助 `EU-FAE` 測試 `Hanel` 平台 `20` 次異常上斷電.
+  * [x] 協助 `PM-Alfie` 測試 `Winsys` 上電完, 進入系統後, `20` 次異常上斷電.
+  * [x] 協助新人測試 `nano SSD` `ReMP` 相關流程.
+  * [x] 協助新人測試透過 `C++` 產生每秒寫入 `10KB` 資料.
+
+# 2024-03-01
+* 協助 `EU-FAE` 測試 `Hanel` 平台 `20` 次異常上斷電.
+* 協助 `PM-Alfie` 測試 `Winsys` 上電完, 進入系統後, `20` 次異常上斷電.
+* 協助新人測試 `nano SSD` `ReMP` 相關流程.
+* 協助新人測試透過 `C++` 產生每秒寫入 `10KB` 資料.
+* TODO
+  * [x] 協助 `Jay` 修改 `FW` update tool.
+  * [x] 與 `Jay` 討論關於 `FW` update tool 相關架構.
+  * [x] 與 `PM-Micky` 討論關於 `3TG8-P` `cold boot` slow 相關 `SATA analyzer` 結果.
+  * [x] 協助 `Simon` 提供 `3MG2-P` `M150821` -> `M161225` update tool.
+  * [x] 測試 `3MG2-P` `M150821` -> `M161225` update tool.
+
+# 2024-03-04
+* 協助 `Jay` 修改 `FW` update tool.
+* 與 `Jay` 討論關於 `FW` update tool 相關架構.
+* 與 `PM-Micky` 討論關於 `3TG8-P` `cold boot` slow 相關 `SATA analyzer` 結果.
+* 協助 `Simon` 提供 `3MG2-P` `M150821` -> `M161225` update tool.
+* 測試 `3MG2-P` `M150821` -> `M161225` update tool.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助分析 `EU` 送回之 `SIE` 異常品 `3IE4` 3pcs.
+  * [x] 協助 `Sales-Daphne` 處理 `3TG6-P` `4TB` 燒毀客訴品歸還.
+  * [x] 協助 `EU-FAE` 測試 `3MG-P` `FW: R140220_DQS_ALL_7` `SE` 功能.
+  * [x] 與 `EU-FAE` sync `FA` case 相關進度.
+  * [x] 協助 `Kerry` 提供 `3TE6` `FW: V2042781` `ReMP` tool.
+
+# 2024-03-05
+* 參與 `FAE-team2` 週會.
+* 協助分析 `EU` 送回之 `SIE` 異常品 `3IE4` 3pcs.
+* 協助 `Sales-Daphne` 處理 `3TG6-P` `4TB` 燒毀客訴品歸還.
+* 協助 `EU-FAE` 測試 `3MG-P` `FW: R140220_DQS_ALL_7` `SE` 功能.
+* 與 `EU-FAE` sync `FA` case 相關進度.
+* 協助 `Kerry` 提供 `3TE6` `FW: V2042781` `ReMP` tool.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Sales-Joan` 觀看 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 客訴品.
+  * [x] 與 `Sales-Joan` 討論相關客訴案進度.
+  * [x] 整理相關客訴案資料, 並上傳.
+  * [x] 協助新人觀看 `Sangfor OS` 相關客訴問題.
+  * [x] 與 `FW-RD` 討論 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 發生 `ATA standby` 相關問題.
+  * [x] 協助新人修改透過 `C++` 產生每秒寫入 `10KB` 資料.
+
