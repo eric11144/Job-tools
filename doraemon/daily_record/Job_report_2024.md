@@ -560,3 +560,75 @@
   * [x] 與 `FW-RD` 討論 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 發生 `ATA standby` 相關問題.
   * [x] 協助新人修改透過 `C++` 產生每秒寫入 `10KB` 資料.
 
+# 2024-03-06
+* 參與 `FAE` 週會.
+* 協助 `Sales-Joan` 觀看 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 客訴品.
+* 與 `Sales-Joan` 討論相關客訴案進度.
+* 整理相關客訴案資料, 並上傳.
+* 協助新人觀看 `Sangfor OS` 相關客訴問題.
+* 與 `FW-RD` 討論 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 發生 `ATA standby` 相關問題.
+* 協助新人修改透過 `C++` 產生每秒寫入 `10KB` 資料.
+* TODO
+  * [x] 協助 `Sales-Jolie` 處理 `紫微科技` `10`pcs 相關問題.
+  * [x] 協助 `Sales-Joan` 處理 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 客訴問題.
+  * [x] 與 `FW-RD` 討論 `ATA standby` 相關問題.
+  * [x] 協助 `EU` 提供 `3TG8-P` 錄製 `UART` log 相關線材, 以及截圖.
+  * [x] 了解 `copy` machine 相關操作.
+
+# 2024-03-07
+* 協助 `Sales-Jolie` 處理 `紫微科技` `10`pcs 相關問題.
+* 協助 `Sales-Joan` 處理 `FED240301009-EUROCOMPOS` `mSATA 3TE7` 客訴問題.
+* 與 `FW-RD` 討論 `ATA standby` 相關問題.
+* 協助 `EU` 提供 `3TG8-P` 錄製 `UART` log 相關線材, 以及截圖.
+* 了解 `copy` machine 相關操作.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Sales-Jessica` 處理 `FEB231113012` `3TE6` 客訴品銷退.
+  * [x] 與 `Sales-Amy` sync `紫微科技` `10`pcs 相關問題, 並提供相關報告.
+  * [x] 提供 `FED240301009-EUROCOMPOS` `mSATA 3TE7` `FA` report 於 `Sales-Joan`.
+  * [x] 參與 `3TG8-P` `DAS` LED 燈號顯示問題.
+  * [x] 與 `EU-FAE` sync `FEC240206005 HAENEL` & `FEC240221 005 SIMOS` & `FEB240124005 B&R` 客訴進度.
+
+# 2024-03-08
+* 參與 `EU-FAE` 週會.
+* 協助 `Sales-Jessica` 處理 `FEB231113012` `3TE6` 客訴品銷退.
+* 與 `Sales-Amy` sync `紫微科技` `10`pcs 相關問題, 並提供相關報告.
+* 提供 `FED240301009-EUROCOMPOS` `mSATA 3TE7` `FA` report 於 `Sales-Joan`, 但因後續 `S22801` 會再提供新版 `wear-leveling` 改動機制, 故先不提供相關 `FW`.
+* 參與 `3TG8-P` `DAS` LED 燈號顯示問題.
+* 與 `EU-FAE` sync `FEC240206005 HAENEL` & `FEC240221005 SIMOS` & `FEB240124005 B&R` 客訴進度.
+* TODO
+  * [x] 協助 `EU-FAE` 詢問關於 `FEB240124005 B&R` `3MV2-P` 在 `FW handup` 狀態下, 如何讀取 `Later bad` 相關資訊.
+  * [x] 協助 `EU-Sales Sylvia` 回覆 `FEC230308006` `FA` report 相關問題.
+  * [x] 協助 `EU-FAE` 觀看 `3TG8-P` `UART` log 相關操作手冊.
+  * [x] 協助新人觀看 `USB` `DLMC` tool image by `UltraISO`.
+  * [x] 協助新人測試 `2.5" SSD 3ME3` `ReMP` & `copy` image.
+
+# 2024-03-11
+* 協助 `EU-FAE` 詢問關於 `FEB240124005 B&R` `3MV2-P` 在 `FW handup` 狀態下, 如何讀取 `Later bad` 相關資訊.
+* 協助 `EU-Sales Sylvia` 回覆 `FEC230308006` `FA` report 相關問題.
+* 協助 `EU-FAE` 觀看 `3TG8-P` `UART` log 相關操作手冊.
+* 協助新人觀看 `USB` `DLMC` tool image by `UltraISO`.
+* 協助新人測試 `2.5" SSD 3ME3` `ReMP` & `copy` image.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助新人觀看 `台達` 平台錄製 `SATA` trace 相關環境.
+  * [x] 協助 `PM-Micky` 回覆關於 `eUSB` 透過 `iTracker` & `smartctl` & `iSMART` tool 讀取出來的 `SMART` 資訊相關差異.
+  * [x] 協助 `EU` 提供 `FEC240219006-SIE` `FA` report.
+  * [x] 撰寫 `FEC240219006-SIE` `FA` report.
+  * [x] 協助 `Sales-Joan` 回覆 `3MG2-P` `FW` update 相關問題( `M150821` -> `M161225` ).
+  * [x] 協助 `PM-Micky` 回覆關於 `3TG8-P` cold boot slow 相關問題.
+
+# 2024-03-12
+* 參與 `FAE-team2` 週會.
+* 協助新人觀看 `台達` 平台錄製 `SATA` trace 相關環境.
+* 協助 `PM-Micky` 回覆關於 `eUSB` 透過 `iTracker` & `smartctl` & `iSMART` tool 讀取出來的 `SMART` 資訊相關差異.
+* 協助 `EU` 提供 `FEC240219006-SIE` `FA` report.
+* 撰寫 `FEC240219006-SIE` `FA` report.
+* 協助 `Sales-Joan` 回覆 `3MG2-P` `FW` update 相關問題( `M150821` -> `M161225` ).
+* 協助 `PM-Micky` 回覆關於 `3TG8-P` cold boot slow 相關問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [ ] 協助觀看 `FEB240301010` `3SE` `13`pcs 相關客訴問題.
+  * [x] 協助新人處理 `power cycling` 環境測試問題.
+  * [ ] 撰寫 `FEA240220006` `FA` report.
+  * [ ] 測試 `FEB240124005 B&R` `3MV2-P` 透過 `Download ISP` 讀取 `later bad`.
