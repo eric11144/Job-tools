@@ -628,7 +628,91 @@
 * 協助 `PM-Micky` 回覆關於 `3TG8-P` cold boot slow 相關問題.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [ ] 協助觀看 `FEB240301010` `3SE` `13`pcs 相關客訴問題.
+  * [x] 協助觀看 `FEB240301010` `3SE` `13`pcs 相關客訴問題.
   * [x] 協助新人處理 `power cycling` 環境測試問題.
-  * [ ] 撰寫 `FEA240220006` `FA` report.
-  * [ ] 測試 `FEB240124005 B&R` `3MV2-P` 透過 `Download ISP` 讀取 `later bad`.
+  * [x] 撰寫 `FEA240220006` `FA` report.
+  * [x] 測試 `FEB240124005 B&R` `3MV2-P` 透過 `Download ISP` 讀取 `later bad`.
+  * [x] 與 `EU-Sales Sylvia` 討論關於 `FEC230308006` `35`pcs 分析結果.
+
+# 2024-03-13
+* 參與 `FAE` 週會.
+* 協助觀看 `FEB240301010` `3SE` `13`pcs 相關客訴問題.
+* 協助新人處理 `power cycling` 環境測試問題.
+* 撰寫 `FEA240220006` `FA` report.
+* 測試 `FEB240124005 B&R` `3MV2-P` 透過 `Download ISP` 讀取 `later bad`.
+* 與 `EU-Sales Sylvia` 討論關於 `FEC230308006` `35`pcs 分析結果.
+* TODO
+  * [x] 詢問 `PM-Jack` 關於 `3TE7` `BiSC4` `S22801` 進版狀況.
+  * [x] 協助轉送 `紫微科技` `10`pcs 至 `RMA`.
+  * [x] 協助新人觀看 `AAEON` 相關分析報告.
+  * [x] 協助 `Sales-Joan` 撰寫 `Astute Electronic`  `3TE7` `RRD` `FA` report.
+  * [x] 協助新人提供 `IC` 開蓋分析報告.
+
+# 2024-03-14
+* 詢問 `PM-Jack` 關於 `3TE7` `BiSC4` `S22801` 進版狀況.
+* 協助轉送 `紫微科技` `10`pcs 至 `RMA`.
+* 協助新人觀看 `AAEON` 相關分析報告.
+* 協助 `Sales-Joan` 撰寫 `Astute Electronic`  `3TE7` `RRD` `FA` report.
+* 協助新人提供 `IC` 開蓋分析報告.
+* TODO
+  * [x] 協助 `FW-RD Allen` 架設 `Extra computer` 測試環境.
+  * [x] 協助 `Jay` 尋找 `FW-RD Allen` 處理相關客訴案.
+  * [x] 處理 `Winsys` 相關平台測試, 並錄製相關 `UART` log 與 `FW-RD Ray` 討論.
+    * [x] `客戶平台` ＆ `廠區測試平台` `A B A` 交叉測試.
+    * [x] `廠區測試 device` 於 `客戶平台` 測試.
+  * [x] 參與 `EU-FAE` 週會. 
+  * [x] 協助 `EU-FAE` 提供 `3ME3` `write code` tool(`JMMPTOOL.ini + SRAM + sys_s + Flash`).
+
+# 2024-03-15
+* 協助 `FW-RD Allen` 架設 `Extra computer` 測試環境.
+* 協助 `Jay` 尋找 `FW-RD Allen` 處理相關客訴案.
+* 處理 `Winsys` 相關平台測試, 並錄製相關 `UART` log 與 `FW-RD Ray` 討論.
+  * `客戶平台` ＆ `廠區測試平台` `A B A` 交叉測試.
+  * `廠區測試 device` 於 `客戶平台` 測試.
+* 參與 `EU-FAE` 週會. 
+* 協助 `EU-FAE` 提供 `3ME3` `write code` tool(`JMMPTOOL.ini + SRAM + sys_s + Flash`).
+* TODO
+  * [x] 與 `EU-PM` & `EU-FAE` 討論 `Winsys` 相關測試進度.
+  * [x] 協助 `Jay` & `Kiwi` 搬 `安勤` 平台, 並協助拆機架設( `6`台 ).
+  * [x] 與 `FW-RD Ray` 討論關於 `Winsys` 平台行為問題, 並協助提供新版 `FW`.
+  * [x] 協助 `EU` 測試 `Extra computer` 異常現象.
+    * [x] `3MG2-P`.
+    * [x] `3TEB`.
+    * [x] `3TE7`.
+
+# 2024-03-18
+* 與 `EU-PM` & `EU-FAE` 討論 `Winsys` 相關測試進度.
+* 協助 `Jay` & `Kiwi` 搬 `安勤` 平台, 並協助拆機架設( `6`台 ).
+* 與 `FW-RD Ray` 討論關於 `Winsys` 平台行為問題, 並協助提供新版 `FW`.
+* 協助 `EU` 測試 `Extra computer` 異常現象, 異常斷電 `3` 次皆會看到 `Blue screen`.
+  * 斷電 `10s`, `20s`, `30s`, `60s`
+  * `3MG2-P`( `M190303` ).
+  * `3TEB`.
+  * `3TE7`.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `Winsys` 新版 `FW` `Q21QCAAC_try_slc_keep_240315`.
+  * [x] 參與 `EU` `Winsys` 分析進度討論相關會議.
+  * [x] 協助 `EU` 測試 `Extra computer` 異常現象, 異常斷電 `3` 次皆會看到 `Blue screen`.
+    * [x] `Samsung 850`.
+    * [x] `3TE7` (`iCell`).
+  * [x] 協助回覆 `Winsys` 新版 `FW` `Q21QCAAC_try_slc_keep_240315` 測試結果於 `EU`.
+  * [x] 與 `Sales-Joan` 討論 `Astute Electronic` 相關 `FA` 說法.
+
+# 2024-03-19
+* 參與 `FAE-team2` 週會.
+* 測試 `Winsys` 新版 `FW` `Q21QCAAC_try_slc_keep_240315`.
+* 參與 `EU` `Winsys` 分析進度討論相關會議.
+* 協助 `EU` 測試 `Extra computer` 異常現象, 異常斷電 `3` 次皆會看到 `Blue screen`.
+  * `Samsung 850`.
+  * `3TE7` (`iCell`).
+* 協助回覆 `Winsys` 新版 `FW` `Q21QCAAC_try_slc_keep_240315` 測試結果於 `EU`.
+* 與 `Sales-Joan` 討論 `Astute Electronic` 相關 `FA` 說法.
+* TODO
+  * [x] 協助 `EU` 測試 `Extra computer` 異常現象.
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `FW-RD Ray` 討論關於 `Winsys` `FW` 修改內容.
+  * [x] 協助 `Kiwi` 修改 `鼎通盛` `FA` report( `FA240307009` ).
+  * [x] 撰寫 `B&R` `3MV2-P` `FA` report.
+
+
