@@ -715,4 +715,154 @@
   * [x] 協助 `Kiwi` 修改 `鼎通盛` `FA` report( `FA240307009` ).
   * [x] 撰寫 `B&R` `3MV2-P` `FA` report.
 
+# 2024-03-20
+* 協助 `EU` 測試 `Extra computer` 異常現象.
+* 參與 `FAE` 週會.
+* 與 `FW-RD Ray` 討論關於 `Winsys` `FW` 修改內容.
+* 協助 `Kiwi` 修改 `鼎通盛` `FA` report( `FA240307009` ).
+* 撰寫 `B&R` `3MV2-P` `FA` report.
+* TODO
+  * [x] 協助 `EU` 測試透過 `iSMART` 執行 `NVM` format command.
+    * [x] `GUI`.
+    * [x] `VC`.
+    * [x] `Windows 11`.
+  * [x] 協助 `PM-Jack` 領出 `CFast connector` 料件.
+  * [x] 協助 `Jay` 透過 `CDM` 測試 `3ME4`. 
+  * [x] 量測 `mSATA mini 3SE` `6`pcs 電路.
+  * [x] 測試 `Extra computer` 異常上斷電測試.
+    * [x] `power on` -> `10s`, `power off` -> `10s`.
 
+# 2024-03-21
+* 協助 `EU` 測試透過 `iSMART` 執行 `NVM` format command.
+  * `GUI`.
+  * `VC`.
+  * `Windows 11`.
+* 協助 `PM-Jack` 領出 `CFast connector` 料件.
+* 協助 `Jay` 透過 `CDM` 測試 `3ME4`. 
+* 量測 `mSATA mini 3SE` `6`pcs 電路.
+* 測試 `Extra computer` 異常上斷電測試.
+  * `power on` -> `10s`, `power off` -> `10s`.
+* TODO
+  * [x] 詢問 `PE-Peiwen` 查找 `4DMSMD09T62` 線路圖.
+  * [x] 參與 `EU` 週會.
+  * [x] 整理透過 `iSMART` 執行 `NVM` format command 相關測試結果, 並發信.
+  * [x] 申請 `mSATA mini 3SE` `power IC`, 並將其分析結果提供給 `EU`.
+  * [x] 整理 `Extra computer` 相關測試結果於 `Excel`.
+
+# 2024-03-22
+* 詢問 `PE-Peiwen` 查找 `4DMSMD09T62` 線路圖.
+* 參與 `EU` 週會.
+* 整理透過 `iSMART` 執行 `NVM` format command 相關測試結果, 並發信.
+* 申請 `mSATA mini 3SE` `power IC`, 並將其分析結果提供給 `EU`.
+* 整理 `Extra computer` 相關測試結果於 `Excel`.
+* TODO
+  * [x] 測試 `Extra computer` 異常上斷電測試.
+    * [x] `power on` -> `90s`, `power off` -> `10s`.
+    * [x] `power on` -> `120s`, `power off` -> `10s`.
+    * [x] `power on` -> `180s`, `power off` -> `10s`.
+    * [x] `Second` cycle `power on` -> `90s`, `power off` -> `10s`.
+    * [x] `FW` with `close idle power saving mode`.
+    * [x] `Stander Win10 LTSC 2019` OS.
+  * [x] 協助 `EU-FAE` 了解 `3MR-P` `wrtie code` 更新 `FW` 問題.
+  * [x] 與 `PM-Jack` 討論 `Winsys` `FW` 進版相關問題.
+  * [x] 協助新人處理 `NANO SSD` 相關測試.
+  * [x] 協助新人修改 `write code` script.
+
+# 2024-03-25
+* 測試 `Extra computer` 異常上斷電測試.
+  * `power on` -> `90s`, `power off` -> `10s`.
+  * `power on` -> `120s`, `power off` -> `10s`.
+  * `power on` -> `180s`, `power off` -> `10s`.
+  * `Second` cycle `power on` -> `90s`, `power off` -> `10s`.
+  * `FW` with `close idle power saving mode`.
+  * `Stander Win10 LTSC 2019` OS.
+* 協助 `EU-FAE` 了解 `3MR-P` `wrtie code` 更新 `FW` 問題.
+* 與 `PM-Jack` 討論 `Winsys` `FW` 進版相關問題.
+* 協助新人處理 `NANO SSD` 相關測試.
+* 協助新人修改 `write code` script.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 加測 `Extra computer` 異常上斷電測試( `Stander Win10 LTSC 2019 OS.` ).
+  * [x] 協助 `EU-Sales` & `PM-Jack` 將 `Winsys` `3` pcs 送至烤箱驗證 `RRD` 現象.
+    * [x] `1`pcs 更新至新版 `FW`.
+    * [x] `2`pcs 維持原 `FW`, 等問題復現後, 再更新至新版 `FW`.
+  * [x] 測試 `3MR-P` `wrtie code` 更新 `FW` 問題.
+  * [x] 詢問 `FW-RD Ray` 關於 `SLC` & `TLC` 功能加入問題.
+
+# 2024-03-26
+* 參與 `FAE-team2` 週會.
+* 加測 `Extra computer` 異常上斷電測試( `Stander Win10 LTSC 2019 OS.` ).
+* 協助 `EU-Sales` & `PM-Jack` 將 `Winsys` `BiCS 5` `3` pcs 送至烤箱驗證 `RRD` 現象.
+  * `1`pcs 更新至新版 `FW`.
+  * `2`pcs 維持原 `FW`, 等問題復現後, 再更新至新版 `FW`.
+* 測試 `3MR-P` `wrtie code` 更新 `FW` 問題.
+* 詢問 `FW-RD Ray` 關於 `SLC` & `TLC` 功能加入問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Sales-Joan` 討論關於 `FEA240223001` `3TE7` `RRD` 相關說明.
+  * [x] 協助 `EU-FAE` 提供 `L23B03` `ReMP` tool.
+  * [x] 協助 `EU-FAE` 處理 `3MR-P` 無法 `write code` 相關問題.
+  * [x] 協助　`EU-FAE` 提供 `3TG6-P` `ReMP` tool.
+  * [x] 處理 `USB` 於公司內部無法使用問題.
+  * [x] 與 `William` 討論 `3ME4` `ReMP` tool 相關問題.
+  * [x] 協助 `Sales-Vanessa` 回覆 `鼎通盛` `3IE7` 相關高低溫測速問題.
+  * [x] `FEB240301010` `DEMSM-01GD07ACBBR` 5pcs 送至 `RMA` 更換 `U14 power IC`
+  * [x] 整理 `Winsys` `BiCS 5` `3` pcs, 送至 `chamber` `110˚C`, 並烘烤 `4` hours 測試結果.
+    * [x] `1` pcs was updated to the new firmware version.
+    * [x] `2` pcs remained in the condition returned by the customer.
+  * [x] 協助 `EU-Sales` & `PM-Jack` 將 `Winsys` `BiCS 3` `5` pcs 送至烤箱驗證 `RRD` 現象.
+    * [x] `2` pcs was updated to the new firmware version.
+    * [x] `3` pcs remained in the condition returned by the customer.
+  * [x] 討論新人教學方針.
+
+# 2024-03-27
+* 參與 `FAE` 週會.
+* 協助 `Sales-Joan` 討論關於 `FEA240223001` `3TE7` `RRD` 相關說明.
+* 協助 `EU-FAE` 提供 `L23B03` `ReMP` tool.
+* 協助 `EU-FAE` 處理 `3MR-P` 無法 `write code` 相關問題, 後續發現為 `comtroller` 選擇錯誤.
+* 協助　`EU-FAE` 提供 `3TG6-P` `ReMP` tool, 已寄出信件.
+* 處理 `USB` 於公司內部無法使用問題, 已處理完成.
+* 與 `William` 討論 `3ME4` `ReMP` tool 相關問題, 已寄出信件.
+* 協助 `Sales-Vanessa` 回覆 `鼎通盛` `3IE7` 相關高低溫測速問題, 已寄出信件.
+* 將 `FEB240301010` `DEMSM-01GD07ACBBR` 4pcs 送至 `RMA` 更換 `U14 power IC`, `1` pcs 發現為 `U12 power IC` pin 脫落.
+* 整理 `Winsys` `BiCS 5` `3` pcs, 送至 `chamber` `110˚C`, 並烘烤 `4` hours 測試結果.
+  * `1` pcs was updated to the new firmware version.
+  * `2` pcs remained in the condition returned by the customer.
+* 協助 `EU-Sales` & `PM-Jack` 將 `Winsys` `BiCS 3` `5` pcs 送至烤箱驗證 `RRD` 現象.
+  * `2` pcs was updated to the new firmware version.
+  * `3` pcs remained in the condition returned by the customer.
+* 討論新人教學方針.
+* TODO
+  * [x] 處理 `FEB240301010` `DEMSM-01GD07ACBBR` 剩餘 `5`pcs 相關問題.
+  * [x] 整理 `Winsys` `BiCS 3` `5` pcs, 送至 `chamber` `110˚C`, 並烘烤 `12` hours 測試結果.
+  * [x] 協助 `EU-FAE` 測試 `4TG2-P` `FW` update `E22C23` -> `E23907` ( `DGM28-04TDP1KCAEF` ).
+  * [x] 與 `PM-Jack` 討論 `Winsys` `BiCS 3` `5` pcs 測試結果.
+  * [x] 與 `FW-RD` 討論 `3TE7` 客訴案進度.
+  * [x] 協助新人處理 `NANO SSD` 相關客訴問題.
+  * [x] 撰寫 `FEB240301010` `FA` report.
+
+# 2024-03-28
+* 處理 `FEB240301010` `DEMSM-01GD07ACBBR` 剩餘 `5`pcs 相關問題.
+* 整理 `Winsys` `BiCS 3` `5` pcs, 送至 `chamber` `110˚C`, 並烘烤 `12` hours 測試結果.
+  * The issue reported by the customer did not occur (after being `power-cycled` `5` times).
+  * The customer's issue was not replicated; however, the `read retry` phenomenon was observed through `UART` logs,but it was possible to normally enter the customer's system (after being `power-cycled` `5` times).
+* 協助 `EU-FAE` 測試 `4TG2-P` `FW` update `E22C23` -> `E23907` ( `DGM28-04TDP1KCAEF` ), 中間開卡發生失敗問題.
+* 與 `PM-Jack` 討論 `Winsys` `BiCS 3` `5` pcs 測試結果.
+* 與 `FW-RD` 討論 `3TE7` 客訴案進度.
+* 協助新人處理 `NANO SSD` 相關客訴問題.
+* 撰寫 `FEB240301010` `FA` report.
+* TODO
+  * [x] 撰寫 `FEB240301010` `FA` report.
+  * [x] 與 `FW-RD` 討論 `DGM28-04TDP1KCAEF` 開卡失敗相關問題.
+  * [x] 協助新人處理 `NANO SSD` 相關客訴問題.
+  * [x] 協助 `FW-RD` 量測 `Winsys` 客訴案 `FW` 更新前後的速度差異.
+  * [x] 協助 `EU-FAE` 測試 `4TG2-P` `512GB` `FW` update `E22C23` -> `E23907`.
+
+# 2024-03-29
+* 撰寫 `FEB240301010` `FA` report.
+* 與 `FW-RD` 討論 `DGM28-04TDP1KCAEF` 開卡失敗相關問題, 發現 `Flash` 為 `Micron`, 更改對應的 `device` 後, 即可正常操作..
+* 協助新人處理 `NANO SSD` 相關客訴問題.
+* 協助 `FW-RD` 量測 `Winsys` 客訴案 `FW` 更新前後的速度差異.
+* 協助 `EU-FAE` 測試 `4TG2-P` `512GB` `FW` update `E22C23` -> `E23907`.
+* TODO
+  * [ ] 撰寫 `FEB240301010` `FA` report.
