@@ -865,4 +865,21 @@
 * 協助 `FW-RD` 量測 `Winsys` 客訴案 `FW` 更新前後的速度差異.
 * 協助 `EU-FAE` 測試 `4TG2-P` `512GB` `FW` update `E22C23` -> `E23907`.
 * TODO
-  * [ ] 撰寫 `FEB240301010` `FA` report.
+  * [x] 撰寫 `FEB240301010` `FA` report.
+  * [x] 協助處理 `EU` `A-plus` 客訴案.
+  * [x] 協助 `Winsys` 透過 `USB` 更新 `FW` 至 `S24325`.
+    * [x] `Ubuntu 20.04 server`.
+    * [x] `Stormshield` 更新之 `Linux OS`.
+
+# 2024-04-01
+* 撰寫 `FEB240301010` `FA` report.
+* 協助處理 `EU` `A-plus` 客訴案.
+* 協助 `Winsys` 透過 `USB` 更新 `FW` 至 `S24325`.
+  * `Ubuntu 20.04 server`, 結果是失敗.
+  * `Stormshield` 更新之 `Linux OS`, 結果是失敗.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 更新客訴案進度更新.
+  * [x] 協助 `Winsys` 透過 `USB` 更新 `FW` 至 `S24325`.
+    * [x] `Ubuntu 20.04 desktop`.
+  * [x] 協助 `PM-Micky` 回覆關於 `iSMART` 相關讀取問題.
