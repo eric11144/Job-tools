@@ -883,3 +883,35 @@
   * [x] 協助 `Winsys` 透過 `USB` 更新 `FW` 至 `S24325`.
     * [x] `Ubuntu 20.04 desktop`.
   * [x] 協助 `PM-Micky` 回覆關於 `iSMART` 相關讀取問題.
+
+# 2024-04-02
+* 參與 `FAE-team2` 週會.
+* 更新客訴案進度更新.
+* 協助 `Winsys` 透過 `USB` 更新 `FW` 至 `S24325`.
+  * `Ubuntu 20.04 desktop`.
+* 協助 `PM-Micky` 回覆關於 `iSMART` 相關讀取問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 測試 `Extra computer` 異常上斷電測試( `Stander Win10 22H2 OS.` ).
+  * [x] 協助 `PM-Micky` 測試透過 `smartmontools` & `iSMART` 讀取 `SMI` `SMI 3280 USB` 相關資訊. 
+  * [x] 分析 `A-plus` `3ME2` `2pcs` 客訴品.
+    * [x] `UART`.
+    * [x] `ReMP`.
+    * [x] `線路檢查`. 
+    * [x] `Debug Mode`.
+  * [x] 與新人討論 `教學文件` 相關內容.
+  * [x] 更新 `客訴案` 分析相關進度.
+
+# 2024-04-03
+* 參與 `FAE` 週會.
+* 測試 `Extra computer` 異常上斷電測試( `Stander Win10 22H2 OS.` ), 結果是會出現 `recovery`, 但可復原進入系統.
+* 協助 `PM-Micky` 測試透過 `smartmontools` & `iSMART` 讀取 `SMI` `SMI 3280 USB` 相關資訊. 
+* 分析 `A-plus` `3ME2` `2pcs` 客訴品.
+  * `UART`.
+  * `ReMP`.
+  * `線路檢查`. 
+  * `Debug Mode`.
+* 與新人討論 `教學文件` 相關內容.
+* 更新 `客訴案` 分析相關進度.
+* TODO
+  * [ ] 撰寫 `教學文件` 相關內容.
