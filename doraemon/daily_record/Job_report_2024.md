@@ -914,4 +914,85 @@
 * 與新人討論 `教學文件` 相關內容.
 * 更新 `客訴案` 分析相關進度.
 * TODO
-  * [ ] 撰寫 `教學文件` 相關內容.
+  * [x] 發生 `7`級 地震.
+  * [x] 撰寫 `教學文件` 相關內容.
+  * [x] 協助 `Kerry` 提供 wifi 設定.
+  * [x] 與 `EU-FAE` 討論關於 `KEBA` 測試 `FIO script`.
+  * [x] 與 `QT` 人員取得 `FIO` 測試 `script`.
+  * [x] 提供 `Texim` `FA` report.
+
+# 2024-04-08
+* 發生 `7`級 地震.
+* 撰寫 `教學文件` 相關內容.
+* 協助 `Kerry` 提供 wifi 設定.
+* 與 `EU-FAE` 討論關於 `KEBA` 測試 `FIO script`.
+* 與 `QT` 人員取得 `FIO` 測試 `script`.
+* 提供 `Texim` `FA` report.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 討論教學文件相關內容.
+  * [x] 撰寫 `教學文件` 相關內容.
+  * [x] 與 `EU-FAE` 討論客訴案相關進度.
+  * [x] 與 `FW-RD` 討論 `Extra computer` `blue screen` 下一步相關測試.
+  * [x] 復現 `Extra computer` `blue screen` 出現 `BCD` boot fail 現象.
+
+# 2024-04-09
+* 參與 `FAE-team2` 週會.
+* 討論教學文件相關內容.
+* 撰寫 `教學文件` 相關內容.
+* 與 `EU-FAE` 討論客訴案相關進度.
+* 與 `FW-RD` 討論 `Extra computer` `blue screen` 下一步相關測試.
+* 復現 `Extra computer` `blue screen` 出現 `BCD` boot fail 現象.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 參與 `EU` 討論 `3TE6` 搭配 `new pcb` & `FW V23701` 導致無法認碟問題.
+  * [x] 提供 `3TE6` `PCB:B6C` & `B+M to M key` 轉板給 `EU`.
+  * [x] 與 `PM-Jack` 討論 `Winsys` `DLMC` tool 製作時間, 以及內容.
+  * [x] 申請測試用轉板.
+  * [x] 整理 `EU` 客訴案支援狀況表.
+
+# 2024-04-10
+* 參與 `FAE` 週會.
+* 參與 `EU` 討論 `3TE6` 搭配 `new pcb` & `FW V23701` 導致無法認碟問題.
+* 提供 `3TE6` `PCB:B6C` & `B+M to M key` 轉板給 `EU`.
+* 與 `PM-Jack` 討論 `Winsys` `DLMC` tool 製作時間, 以及內容.
+* 申請測試用轉板.
+* 整理 `EU` 客訴案支援狀況表.
+* TODO
+  * [x] 協助新人測試 `FIO` 指令.
+  * [x] 協助處理 `FEA240318001` 客訴案.
+  * [x] 協助 `Kiwi` 處理 `3MG-P` 開卡.
+  * [x] 協助新人處理 `3TE6` 開卡.
+  * [x] 與 `Sales-Joan` 討論 `Simms` 關於 `3TE7` `FW` 進版問題.
+  * [x] 撰寫 `KEBA` 測試所需之 `FIO` script.
+  * [x] 協助 `team2` 將 `asmedia` 開卡版燒錄 `bridge` `FW`.
+
+# 2024-04-11
+* 協助新人測試 `FIO` 指令.
+* 協助處理 `FEA240318001` 客訴案.
+* 協助 `Kiwi` 處理 `3MG-P` 開卡.
+* 協助新人處理 `3TE6` 開卡.
+* 與 `Sales-Joan` 討論 `Simms` 關於 `3TE7` `FW` 進版問題.
+* 撰寫 `KEBA` 測試所需之 `FIO` script.
+* 協助 `team2` 將 `asmedia` 開卡版燒錄 `bridge` `FW`.
+* TODO
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 統整 `FEA240318001` 客訴案初步分析狀況.
+  * [x] 請教 `Kenzi` & `Hyperstone` 關於 `iCF 4000` `SMART` 資訊讀取.
+  * [x] 與 `FW-RD` 測試 `Extra computer` `blue screen` 相關問題.
+    * [x] 將 `MBR` & `hidden partition` 透過 `WP` 設定後, 觀看是否可以減緩狀況
+
+# 2024-04-12
+* 觀看 `KEBA` 客訴案測試狀況, 並請 `EU-FAE` 協助與客人確認.
+* 參與 `EU-FAE` 週會.
+* 統整 `FEA240318001` 客訴案初步分析狀況.
+* 請教 `Kenzi` & `Hyperstone` 關於 `iCF 4000` `SMART` 資訊讀取.
+  * `hyperstone` tool 不支援 `iCF 4000` 讀取 `SMART`.
+  * `iSMART` 可讀取, 但相關數值需與原廠確認.
+  * `SMART` 只支援 `disk life percent`.
+* 與 `FW-RD` 測試 `Extra computer` `blue screen` 相關問題.
+  * 將 `MBR` & `hidden partition` 透過 `WP` 設定後, 觀看是否可以減緩狀況, 結果是 `blue screen` 現象還是有, 但 `BCD` boot 可透過 `recovery` 修復後進入系統.
+* TODO
+  * [ ] 觀看 `KEBA` 客訴案測試狀況.
+  * [ ] 統整 `FEA240318001` 客訴案初步分析狀況.
