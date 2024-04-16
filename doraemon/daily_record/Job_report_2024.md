@@ -994,5 +994,62 @@
 * 與 `FW-RD` 測試 `Extra computer` `blue screen` 相關問題.
   * 將 `MBR` & `hidden partition` 透過 `WP` 設定後, 觀看是否可以減緩狀況, 結果是 `blue screen` 現象還是有, 但 `BCD` boot 可透過 `recovery` 修復後進入系統.
 * TODO
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 統整 `FEA240318001` 客訴案初步分析狀況.
+  * [x] 請教 `EP` & `RMA` 人員如何針對 `iCF 4000` 進行開卡.
+  * [x] 協助 `Kerry` 處理 `DLMC` 執行 `script`.
+  * [x] 協助 `Shelly` 測試 `3TG8-P` 透過 `hdparm` 更新 `FW`.
+  * [x] 與 `Hyperstone` 人員討論 `iCF 4000` 相關異常現象檢測.
+
+# 2024-04-15
+* 觀看 `KEBA` 客訴案測試狀況.
+* 統整 `FEA240318001` 客訴案初步分析狀況.
+* 請教 `EP` & `RMA` 人員如何針對 `iCF 4000` 進行開卡.
+* 協助 `Kerry` 處理 `DLMC` 執行 `script`.
+  * 次數檢測.
+* 協助 `Shelly` 測試 `3TG8-P` 透過 `hdparm` 更新 `FW`.
+  * 後續發現 `device` 原開卡相關設定 (`AES`,`opal`...), 都需相同才可正常 `DLMC`.
+* 與 `Hyperstone` 人員討論 `iCF 4000` 相關異常現象檢測.
+  * `Erase count` 數值正確性.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 請教 `EP` & `RMA` 人員如何針對 `iCF 4000` 進行開卡.
+  * [x] 與 `Hyperstone` 人員討論 `iCF 4000` 相關異常現象檢測.
+  * [x] 協助 `Shelly` 測試 `3TG8-P` 透過客戶軟體更新 `FW`.
+  * [x] 協助 `Kerry` 架設測試 `FIO`.
+  * [x] 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
+
+# 2024-04-15
+* 參與 `FAE-team2` 週會.
+* 請教 `EP` & `RMA` 人員如何針對 `iCF 4000` 進行開卡.
+* 與 `Hyperstone` 人員討論 `iCF 4000` 相關異常現象檢測, 並將異常品 `4pcs` 送至 `Hyperstone` 分析.
+* 協助 `Shelly` 測試 `3TG8-P` 透過客戶軟體更新 `FW`, 發現相關檔案缺少導致更新失敗.
+* 協助 `Kerry` 架設測試 `FIO`, 並提供相關 `cfg`.
+* 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition, 遇到 `Grub install fail` 問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助回報 `iCF 4000` 相關異常現象檢測結果.
+  * [x] 協助 `Sales-Joan` 處理 `3TG6-P 1T` 開機過慢相關異常問題.
+  * [x] 協助 `Sales-Joan` 處理 `石油監測` 客訴案提供之 `iSMART` 資訊.
+  * [x] 協助 `Kerry` 處理 `Debian 8` 相關 `FIO` 環境架設.
+    * [x] 修改 `apt source`.
+    * [x] 修改 `ethernet IP`.
+    * [x] 安裝 `FIO` & `vim`.
+  * [x] 協助 `Shelly` 測試 `3TG8-P` 透過客戶軟體更新 `FW`.
+  * [x] 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
+
+# 2024-04-16
+* 參與 `FAE` 週會.
+* 協助回報 `iCF 4000` 相關異常現象檢測結果.
+* 協助 `Sales-Joan` 處理 `3TG6-P 1T` 開機過慢相關異常問題.
+* 協助 `Sales-Joan` 處理 `石油監測` 客訴案提供之 `iSMART` 資訊, 可能需要客戶提供細節 `SMART` info.
+* 協助 `Kerry` 處理 `Debian 8` 相關 `FIO` 環境架設.
+  * 修改 `apt source`.
+  * 修改 `ethernet IP`.
+  * 安裝 `FIO` & `vim`.
+* 協助 `Shelly` 測試 `3TG8-P` 透過客戶軟體更新 `FW`.
+* 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
+* TODO
+  * [ ] 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
   * [ ] 觀看 `KEBA` 客訴案測試狀況.
-  * [ ] 統整 `FEA240318001` 客訴案初步分析狀況.
+  * [ ] 架設 `iSMART` 串接 `influxdb` & `Grafana`.
