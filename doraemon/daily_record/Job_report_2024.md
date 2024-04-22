@@ -1069,9 +1069,9 @@
   * [x] 詢問 `hyperstone` 關於 `iCF 4000` `SMART attributes` 相關讀取問題.
 
 # 2024-04-18
-* 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境.
+* 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S24417i` ).
 * 修改異常上斷電腳本.
-* 協助 `Joan` 處理 `3TE7` `FW` 支援 `iAnalyzer`( `EnDataLogging` ) 功能批次查詢.
+* 協助 `Joan` 處理 `3TE7` `FW` 支援 `iAnalyzer`( `EnDataLogging` ) 功能批次查詢, 並將結果提供寄出.
   * `23年` 有開啟相關設定.
   * `24年` 沒有開啟相關設定.
 * 詢問 `hyperstone` 關於 `iCF 4000` `SMART attributes` 相關讀取問題.
@@ -1081,3 +1081,28 @@
   * [x] 修改異常上斷電腳本.
   * [x] 觀看 `KEBA` 客訴案測試狀況.
   * [x] 提供 `iSMART` 相關操作給客戶觀看 `iCF 4000` `Avg. erase count`.
+
+# 2024-04-19
+* 參與 `EU-FAE` 週會.
+* 詢問 `EnDataLogging` 是否能透過 `FW` `DLMC` 開啟功能.
+* 修改異常上斷電腳本.
+* 觀看 `KEBA` 客訴案測試狀況.
+* 提供 `iSMART` 相關操作給客戶觀看 `iCF 4000` `Avg. erase count`.
+* TODO
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S23630i_1over3_20230630` ).
+  * [x] 提供 `Neousys` 目前與原廠討論相關結果寄出.
+  * [x] 撰寫 `Linux` 教學文件.
+  * [x] 協助新人撰寫產生 `900GB` 資料持續寫入 `script`.
+
+# 2024-04-22
+* 觀看 `KEBA` 客訴案測試狀況.
+* 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S23630i_1over3_20230630` ).
+* 提供 `Neousys` 目前與原廠討論相關結果寄出.
+* 撰寫 `Linux` 教學文件.
+* 協助新人撰寫產生 `900GB` 資料持續寫入 `script`.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S23630i_1over3_20230630` ).
+  * [x] 協助 `Sales-Vincent` 觀看 `3TE4` `disk benchmark` 相關問題.
+  * [x] 安裝 `kdiskmark` 相關套件.
