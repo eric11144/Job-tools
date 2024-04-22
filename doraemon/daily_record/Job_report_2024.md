@@ -1050,6 +1050,34 @@
 * 協助 `Shelly` 測試 `3TG8-P` 透過客戶軟體更新 `FW`.
 * 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
 * TODO
-  * [ ] 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
-  * [ ] 觀看 `KEBA` 客訴案測試狀況.
-  * [ ] 架設 `iSMART` 串接 `influxdb` & `Grafana`.
+  * [x] 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 協助 `Kerry` 處理 `Debian 8` 架設 `fio` 相關問題.
+  * [x] 協助觀看 `Curtiss Wright` `3TG6-P` 發生開機過慢的問題.
+  * [x] 與 `Jason` 討論相關 `3TG6-P` 發生開機過慢的可能問題.
+
+# 2024-04-17
+* 測試 `micro usb` 安裝 `ubuntu` 並切割 `6` partition.
+* 觀看 `KEBA` 客訴案測試狀況.
+* 協助 `Kerry` 處理 `Debian 8` 架設 `fio` 相關問題.
+* 協助觀看 `Curtiss Wright` `3TG6-P` 發生開機過慢的問題.
+* 與 `Jason` 討論相關 `3TG6-P` 發生開機過慢的可能問題.
+* TODO
+  * [x] 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境.
+  * [x] 修改異常上斷電腳本.
+  * [x] 協助 `Joan` 處理 `3TE7` `FW` 支援 `iAnalyzer` 功能批次查詢.
+  * [x] 詢問 `hyperstone` 關於 `iCF 4000` `SMART attributes` 相關讀取問題.
+
+# 2024-04-18
+* 協助 `FW-RD Allen` 架設 `KEBA` 異常上斷電寫入資料環境.
+* 修改異常上斷電腳本.
+* 協助 `Joan` 處理 `3TE7` `FW` 支援 `iAnalyzer`( `EnDataLogging` ) 功能批次查詢.
+  * `23年` 有開啟相關設定.
+  * `24年` 沒有開啟相關設定.
+* 詢問 `hyperstone` 關於 `iCF 4000` `SMART attributes` 相關讀取問題.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 詢問 `EnDataLogging` 是否能透過 `FW` `DLMC` 開啟功能.
+  * [x] 修改異常上斷電腳本.
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 提供 `iSMART` 相關操作給客戶觀看 `iCF 4000` `Avg. erase count`.
