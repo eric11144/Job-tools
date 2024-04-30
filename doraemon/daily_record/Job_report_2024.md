@@ -1106,3 +1106,90 @@
   * [x] 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S23630i_1over3_20230630` ).
   * [x] 協助 `Sales-Vincent` 觀看 `3TE4` `disk benchmark` 相關問題.
   * [x] 安裝 `kdiskmark` 相關套件.
+
+# 2024-04-23
+* 參與 `FAE-team2` 週會.
+* 架設 `KEBA` 異常上斷電寫入資料環境( `FW`: `S23630i_1over3_20230630` ).
+* 協助 `Sales-Vincent` 觀看 `3TE4` `disk benchmark` 相關問題.
+* 安裝 `kdiskmark` 相關套件.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 觀看 `KEBA` 客訴案測試狀況.
+  * [x] 架設 `KEBA` 異常上斷電寫入資料環境( `3MG2-P` ).
+  * [x] 協助 `Shelly` 處理 `3ME4` performance 問題.
+  * [x] 協助 `EU-Missie` 回覆關於 `3MG2-P` `thermal throttling` 相關機制.
+  * [x] 與 `EU-Sales Jessica` 討論關於 `APLUS` `FEB240322006` & `FEB240322007`.
+
+# 2024-04-24
+* 參與 `FAE` 週會.
+* 觀看 `KEBA` 客訴案測試狀況.
+* 架設 `KEBA` 異常上斷電寫入資料環境( `3MG2-P` ), 因容量太大, `free blcok` 過多, 可能無法複製客戶問題, 故更換為 `M41` `16GB`.
+* 協助 `Shelly` 處理 `3ME4` performance 問題.
+* 協助 `EU-Missie` 回覆關於 `3MG2-P` `thermal throttling` 相關機制.
+* 與 `EU-Sales Jessica` 討論關於 `APLUS` `FEB240322006` & `FEB240322007`.
+* TODO
+  * [x] 參與 `being innodisker` 討論會議.
+  * [x] 架設 `Grafana` 串接 `influxdb` & `iSMART` & `nginx` 資料顯示環境.
+  * [x] 協助 `PM-Jack` 測試 `Winsys` `32G` & `64G` `DLMC` 相關 `bin file`.
+  * [x] 詢問 `PM-Becky` 關於 `Kontron` `4IE3` `WP` 相關狀況.
+
+# 2024-04-25
+* 參與 `being innodisker` 討論會議.
+* 架設 `Grafana` 串接 `influxdb` & `iSMART` & `nginx` 資料顯示環境.
+  * `Grafana` 串接 `nginx` 已完成.
+* 協助 `PM-Jack` 測試 `Winsys` `32G` & `64G` `DLMC` 相關 `bin file`.
+* 詢問 `PM-Becky` 關於 `Kontron` `4IE3` `WP` 相關狀況.
+* TODO
+  * [x] 協助 `PM-Jack` 測試 `Winsys` `32G` & `64G` `DLMC` 相關 `bin file`.
+  * [x] 撰寫月會分享題目.
+  * [x] 與 `Sales-Jessica` 討論 `Winsys` & `nanoSSD` 相關問題.
+  * [x] 協助 `Shelly` 處理 `900G` 透過 `FIO` 寫入 `3TG6-P` 相關驗證.
+  * [x] 撰寫 `Winsys` 客訴案例分享報告.
+  * [x] 提供 `PM-Jack` 關於 `Winsys` `FW` 更新 `tool`.
+  * [x] 協助 `FW-RD` 架設 `KEBA` 異常上斷電寫入資料環境( `M41` )
+
+# 2024-04-26
+* 協助 `PM-Jack` 測試 `Winsys` `32G` & `64G` `DLMC` 相關 `bin file`.
+* 撰寫月會分享題目.
+* 與 `Sales-Jessica` 討論 `Winsys` & `nanoSSD` 相關問題.
+* 協助 `Shelly` 處理 `900G` 透過 `FIO` 寫入 `3TG6-P` 相關驗證.
+* 撰寫 `Winsys` 客訴案例分享報告.
+* 提供 `PM-Jack` 關於 `Winsys` `FW` 更新 `tool`.
+* 協助 `FW-RD` 架設 `KEBA` 異常上斷電寫入資料環境( `M41` )
+* TODO
+  * [x] 與 `PM-Jack` 關於 `Winsys` 後續 `FW` 更新相關進度.
+  * [x] 與 `EU-Sales Sylvain` 討論 `Winsys` 更新 `FW` 各種方案及所需時間.
+  * [x] 撰寫 `Winsys` 客訴案例分享報告.
+  * [x] 觀察 `KEBA` 異常上斷電寫入資料環境( `M41` ).
+  * [x] 架設 `Grafana` 串接 `influxdb` & `iSMART` & `nginx` 資料顯示環境.
+
+# 2024-04-29
+* 與 `PM-Jack` 關於 `Winsys` 後續 `FW` 更新相關進度.
+* 與 `EU-Sales Sylvain` 討論 `Winsys` 更新 `FW` 各種方案及所需時間.
+* 撰寫 `Winsys` 客訴案例分享報告.
+* 觀察 `KEBA` 異常上斷電寫入資料環境( `M41` ), 皆正常.
+* 架設 `Grafana` 串接 `influxdb` & `iSMART` & `nginx` 資料顯示環境.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀察 `KEBA` 異常上斷電寫入資料環境( `M41` ).
+  * [x] 觀察 `KEBA` 異常上斷電寫入資料環境( `mSATA 3TE7` ).
+  * [x] 協助 `FW-RD` 架設 `KEBA` 異常上斷電寫入資料環境( `M41` & `MK8215` )
+  * [x] 詢問關於 `Winsys` `FW` 啟動相關流程.
+  * [x] 詢問 `EU-FAE` 相關 `FA` case 狀況.
+  * [x] 撰寫 `Winsys` 客訴案例分享報告.
+  * [x] 協助 `Shelly` 錄製 `3TG8-P` 測試影片.
+
+# 2024-04-29
+* 參與 `FAE-team2` 週會.
+* 觀察 `KEBA` 異常上斷電寫入資料環境( `M41` ).
+* 觀察 `KEBA` 異常上斷電寫入資料環境( `mSATA 3TE7` ).
+* 協助 `FW-RD` 架設 `KEBA` 異常上斷電寫入資料環境( `M41` & `MK8215` )
+* 詢問關於 `Winsys` `FW` 啟動相關流程.
+* 詢問 `EU-FAE` 相關 `FA` case 狀況.
+* 撰寫 `Winsys` 客訴案例分享報告.
+* 協助 `Shelly` 錄製 `3TG8-P` 測試影片.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Shelly` 處理 `研陽` `3TE6` 客訴案.
+  * [x] 架設 `KEBA` 異常上斷電寫入資料環境( `M41` ).
+  * [ ] 撰寫 `Winsys` 客訴案例分享報告.
