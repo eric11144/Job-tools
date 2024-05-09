@@ -1,3 +1,6 @@
 終端中輸入gnome-session-properties打開Ubuntu開機首選項管理
 
 點擊上圖中的“添加”按鈕，如圖所示，在下圖中名稱和註釋隨便填寫，命令裏填寫：gnome-terminal，點擊“添加”
+
+
+ubuntu 22.04之後需透過圖形化界面中的 startup中的欄位做相關設定

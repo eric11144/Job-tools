@@ -1,0 +1,4 @@
+sudo 免使用密碼
+執行 `sudo visudo`
+將 sudo 此行改為以下
+%sudo   ALL=(ALL:ALL) NOPASSWD:ALL
