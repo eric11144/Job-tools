@@ -1179,7 +1179,7 @@
   * [x] 撰寫 `Winsys` 客訴案例分享報告.
   * [x] 協助 `Shelly` 錄製 `3TG8-P` 測試影片.
 
-# 2024-04-29
+# 2024-04-30
 * 參與 `FAE-team2` 週會.
 * 觀察 `KEBA` 異常上斷電寫入資料環境( `M41` ).
 * 觀察 `KEBA` 異常上斷電寫入資料環境( `mSATA 3TE7` ).
@@ -1192,4 +1192,101 @@
   * [x] 參與 `FAE` 週會.
   * [x] 協助 `Shelly` 處理 `研陽` `3TE6` 客訴案.
   * [x] 架設 `KEBA` 異常上斷電寫入資料環境( `M41` ).
-  * [ ] 撰寫 `Winsys` 客訴案例分享報告.
+  * [x] 撰寫 `Winsys` 客訴案例分享報告.
+  * [x] 參與 `FAE` 月會.
+  * [x] 與 `FW-RD` 討論 `KEBA` 異常上斷電寫入資料環境(  `3TE7` & `M41` ).
+
+# 2024-05-01
+* 參與 `FAE` 週會.
+* 協助 `Shelly` 處理 `研陽` `3TE6` 客訴案.
+* 架設 `KEBA` 異常上斷電寫入資料環境( `M41` ).
+* 撰寫 `Winsys` 客訴案例分享報告.
+* 參與 `FAE` 月會.
+* 與 `FW-RD` 討論 `KEBA` 異常上斷電寫入資料環境(  `3TE7` & `M41` ).
+* TODO
+  * [x] 勞動節放假.
+
+# 2024-05-02
+* 勞動節放假.
+* TODO
+  * [x] 協助 `Danny` 處理 `USB` 管制.
+  * [x] 協助詢問 `SMI` 關於 `3TG8-P` 目前 log 分析狀況,
+  * [x] 回報 `SMI` 相關回覆於 `Sales-Sylvia`.
+  * [x] 協助 `Shelly` 處理 `viox` `3TE7` 寫入相關問題.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `EU-FAE` 處理 `3IE2-P` 進入 `Loader mode` 相關問題.
+ 
+# 2024-05-03
+* 協助 `Danny` 處理 `USB` 管制.
+* 協助詢問 `SMI` 關於 `3TG8-P` 目前 log 分析狀況,
+* 回報 `SMI` 相關回覆於 `Sales-Sylvia`.
+* 協助 `Shelly` 處理 `viox` `3TE7` 寫入相關問題.
+* 參與 `EU-FAE` 週會.
+* 協助 `EU-FAE` 處理 `3IE2-P` 進入 `Loader mode` 相關問題.
+* TODO
+  * [x] 協助 `Simms` 提供 `iSMART` tool 讀取 `iCF 9000` 相關資訊.
+  * [x] 協助 `EU-FAE` 處理 `Vitec` 關於 `3TE6` `warm boot` 相關問題.
+  * [x] 協助 `Joan` 架設 `3TG6-P` `A19307` 測試寫入造成 `SATA` link 過慢問題.
+  * [x] 撰寫 `3TG6-P` `A19307` 測試寫入程式.
+  * [x] 參與 `3TG8-P` `EU` 討論會議.
+  * [x] 協助 `Shelly` 處理 `teamviewer` 遠端連線觀看 `FW` 更新問題.
+
+# 2024-05-06
+* 協助 `Simms` 提供 `iSMART` tool 讀取 `iCF 9000` 相關資訊.
+* 協助 `EU-FAE` 處理 `Vitec` 關於 `3TE6` `warm boot` 相關問題, 後續發現與 `V21118H2` 可解此問題, 已提供給 `EU` 測試.
+* 協助 `Joan` 架設 `3TG6-P` `A19307` 測試寫入造成 `SATA` link 過慢問題.
+* 撰寫 `3TG6-P` `A19307` 測試寫入程式.
+* 參與 `3TG8-P` `EU` 討論會議.
+* 協助 `Shelly` 處理 `teamviewer` 遠端連線觀看 `FW` 更新問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Sales-Vincent` 處理 `TLC disk` & `MLC disk` 容量顯示於 `CDI` 沒有足容原因. 
+  * [x] 請教 `SMI` FAE & `FW-RD Allen` & `FW-RD Ray` 關於 `TLC disk` & `MLC disk` 容量顯示於 `CDI` 沒有足容原因.
+  * [x] 修改 `3TG6-P` `A19307` 測試寫入程式.
+  * [x] 撰寫 `eFAE` 系統 case 相關進度.
+
+# 2024-05-07
+* 參與 `FAE-team2` 週會.
+* 協助 `Sales-Vincent` 處理 `TLC disk` & `MLC disk` 容量顯示於 `CDI` 沒有足容原因. 
+* 請教 `SMI` FAE & `FW-RD Allen` & `FW-RD Ray` 關於 `TLC disk` & `MLC disk` 容量顯示於 `CDI` 沒有足容原因.
+* 修改 `3TG6-P` `A19307` 測試寫入程式.
+* 撰寫 `eFAE` 系統 case 相關進度.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 撰寫 `eFAE` 系統 case 相關進度.
+  * [x] 參與 `3TE7` PCN 討論會議.
+  * [x] 協助 `EU` 處理 `Ericssion` `eUSB` 客訴案.
+  * [x] 協助 `Shelly` 進行 `3TE6` 開卡測試.
+  * [x] 詢問關於 `DLMC` 針對 `pcie` 加入 `nvme reset` command 相關問題.
+  * [x] 參與 `EU` 討論 `3TE6` `FW` 進版相關會議.
+
+# 2024-05-08
+* 參與 `FAE` 週會.
+* 撰寫 `eFAE` 系統 case 相關進度.
+* 參與 `3TE7` PCN 討論會議.
+* 協助 `EU` 處理 `Ericssion` `eUSB` 客訴案, 目前看到狀況為 `NPF`.
+* 協助 `Shelly` 進行 `3TE6` 開卡測試.
+* 詢問關於 `DLMC` 針對 `pcie` 加入 `nvme reset` command 相關問題.
+* 參與 `EU` 討論 `3TE6` `FW` 進版相關會議.
+* TODO
+  * [x] 取回 `Ericssion` `eUSB` device & 整理相關測試照片.
+  * [x] 協助 `Shelly` 進行 `3TE6` 開卡 & `DLMC` tool 測試.
+  * [x] 與 `Sales-Jessica` 討論關於 `Portwell SSD quality issue 3IE2-P` 處理方向.
+  * [x] 觀看 `KEBA` 測試平台狀況.
+  * [x] 整理 `KEBA` 相關測試 log.
+  * [x] 協助 `Joan` 整理 `3TG6-P` `A19307` 測試狀況.
+
+# 2024-05-09
+* 取回 `Ericssion` `eUSB` device & 整理相關測試照片.
+* 協助 `Shelly` 進行 `3TE6` 開卡 & `DLMC` tool 測試.
+* 與 `Sales-Jessica` 討論關於 `Portwell SSD quality issue 3IE2-P` 處理方向.
+* 觀看 `KEBA` 測試平台狀況.
+* 整理 `KEBA` 相關測試 log.
+* 協助 `Joan` 整理 `3TG6-P` `A19307` 測試狀況.
+* TODO  
+  * [x] 寄送 `3TG6-P` `A19307` 測試狀況於客戶端.
+  * [x] 取得客戶提供之測試程式, 並重新架設環境.
+  * [x] 協助 `Shelly` 進行 `3TE6` 開卡 & `DLMC` tool 測試.
+  * [x] 觀看 `KEBA` 測試平台狀況.
+  * [x] 協助 `EP-Hank` 處理 `IMAGE` 系統還原.
+
