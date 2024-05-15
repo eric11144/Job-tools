@@ -1289,4 +1289,66 @@
   * [x] 協助 `Shelly` 進行 `3TE6` 開卡 & `DLMC` tool 測試.
   * [x] 觀看 `KEBA` 測試平台狀況.
   * [x] 協助 `EP-Hank` 處理 `IMAGE` 系統還原.
+  * [x] 依照 `Simon` 提供之客戶測試程式, 準備相關環境測試.
+
+# 2024-05-10
+* 寄送 `3TG6-P` `A19307` 測試狀況於客戶端.
+* 取得客戶提供之測試程式, 並重新架設環境.
+* 協助 `Shelly` 進行 `3TE6` 開卡 & `DLMC` tool 測試.
+* 觀看 `KEBA` 測試平台狀況.
+* 協助 `EP-Hank` 處理 `IMAGE` 系統還原.
+* TODO
+  * [x] 協助 `EU` 觀看 `FEB240422003` `3IE2-P` 客訴品.
+  * [x] 與 `SMI` 討論關於 `3IE2-P` 無法認碟, 也無相關 `UART` log 的後續處理.
+  * [x] 依照 `Curtiss Wright` 提供之測試程式, 進行相關測試.
+  * [x] 與 `Miller` 討論關於 `winsys` 客訴分享報告.
+  * [x] 詢問 `FW-RD Ray` 關於 `SLC` & `TLC` 身份判別相關 `Rule`.
+  * [x] 觀看 `KEBA` 測試平台狀況.
+
+# 2024-05-13
+* 協助 `EU` 觀看 `FEB240422003` `3IE2-P` 客訴品, 後續發現為 `Channel 0` 之 `Flash id` 有異常, 導致無法正常認碟.
+* 與 `SMI` 討論關於 `3IE2-P` 無法認碟, 也無相關 `UART` log 的後續處理, 將 `device` 跳至 `Loader mode`, 並接上主機板電源, 不能使用轉板, 因電壓不足, 透過 `MP tool` 發現 `Flash id` 不一致問題.
+* 依照 `Curtiss Wright` 提供之測試程式, 進行相關測試, 並未看到開機過慢之問題.
+* 與 `Miller` 討論關於 `winsys` 客訴分享報告.
+* 詢問 `FW-RD Ray` 關於 `SLC` & `TLC` 身份判別相關 `Rule`.
+* 觀看 `KEBA` 測試平台狀況.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀看 `KEBA` 測試平台狀況.
+  * [x] 觀看 `Curtiss Wright` 測試平台狀況.
+  * [x] 處理 `power cycle` 治具無法正常使用相關問題.
+  * [x] 整理 `FEB240422003` `3IE2-P` 分析狀況, 並送至 `RMA` 照 `controller` & `DRAM` 之 `x-ray`.
+
+# 2024-05-14
+* 參與 `FAE-team2` 週會.
+* 觀看 `KEBA` 測試平台狀況, 發現 `M41` device 資料毀損.
+* 觀看 `Curtiss Wright` 測試平台狀況.
+* 處理 `power cycle` 治具無法正常使用相關問題, 重新接上 `power` 後, 可正常運作.
+* 觀看 `extra computer` 測試平台狀況.
+* 整理 `FEB240422003` `3IE2-P` 分析狀況, 並送至 `RMA` 照 `controller` & `DRAM` 之 `x-ray`.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 至 `RMA` 取回 `FEB240422003` `3IE2-P` 客訴品, 並做相關測試.
+  * [x] 協助 `PM-Jack` 觀看 `winsys` `FW` 更新 `bin file`.
+  * [x] 協助 `Sales` 查詢 `Ericssion` `USB` 相關 `SN`.
+  * [x] 協助 `Shelly` 處理 `3TE6` 測試 `V2111804` & `V211180A` `FW` 更新流程.
+  * [x] 與 `EU-FAE` 討論目前案子處理相關狀況.
+  * [x] 觀看 `KEBA` 測試平台狀況.
+  * [x] 測試 `neousys` `3TG8-P` 降速相關問題複製.
+
+# 2024-05-15
+* 參與 `FAE` 週會.
+* 至 `RMA` 取回 `FEB240422003` `3IE2-P` 客訴品, 並做相關測試, 後續發現還是有相同問題, 送至 `RMA` 針對 `Flash` 做 `Re-mount`.
+* 協助 `PM-Jack` 觀看 `winsys` `FW` 更新 `bin file`.
+* 協助 `Sales` 查詢 `Ericssion` `USB` 相關 `SN`.
+* 協助 `Shelly` 處理 `3TE6` 測試 `V2111804` & `V211180A` `FW` 更新流程.
+* 與 `EU-FAE` 討論目前案子處理相關狀況.
+* 觀看 `KEBA` 測試平台狀況.
+* 測試 `neousys` `3TG8-P` 降速相關問題複製.
+* TODO
+  * [x] 架設 `neousys` `3TG8-P` `Linux mint 20` 測試環境.
+  * [x] 參與 `EU` 客訴案後續處理 `Rule`.
+  * [x] 至 `RMA` 取回 `FEB240422003` `3IE2-P` 客訴品, 並做相關測試.
+  * [x] 協助 `Sales-Nancy` 了解 `FEC240219006` 電容客訴案狀況.
+  * [x] 詢問 `EU-Sales Sylvain` 關於 `winsys` 出貨相關流程.
 
