@@ -1352,3 +1352,22 @@
   * [x] 協助 `Sales-Nancy` 了解 `FEC240219006` 電容客訴案狀況.
   * [x] 詢問 `EU-Sales Sylvain` 關於 `winsys` 出貨相關流程.
 
+# 2024-05-16
+* 架設 `neousys` `3TG8-P` `Linux mint 20` 測試環境.
+* 參與 `EU` 客訴案後續處理 `Rule`.
+* 至 `RMA` 取回 `FEB240422003` `3IE2-P` 客訴品, 並做相關測試.
+* 協助 `Sales-Nancy` 了解 `FEC240219006` 電容客訴案狀況.
+* 詢問 `EU-Sales Sylvain` 關於 `winsys` 出貨相關流程.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 整理 `3TG8-P` `Linux mint 20` 測試結果.
+  * [x] 與 `Neosys` 相關人員討論 `3TG8-P` `Linux mint 20` 目前測試狀況.
+  * [x] 協助 `EU-FAE` 提供 `DQE` 使用之 `FIO` 測試程式.
+  * [x] 詢問 `Sales-Sylvain` & `Sales-Jessica` & `Sales-Deirdre` 關於 `Winsys` 出貨相關流程與時間.
+  * [x] 與 `Sales-Sylvain` 討論 `Winsys` 更新 `FW` 相關問題.
+  * [x] 協助 `PM-Micky` 確認 `DESSL-04GD09SCADBB` `SATADOM` `pin7` & `pin8` 電源相關支援.
+  * [x] 協助 `Shelly` 架設 `RPI 5` 測試環境.
+  * [x] 修改 `Winsys-3TE7 PBT Table Rebuild issue` 客訴分享案件報告.
+  * [x] 與 `Miller` 討論客訴分享案件報告.
+  * [x] 整理 `Extra computer` 客戶系統相關資訊, 並紀錄於 `eFAE` system.
+
