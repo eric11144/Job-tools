@@ -1371,3 +1371,75 @@
   * [x] 與 `Miller` 討論客訴分享案件報告.
   * [x] 整理 `Extra computer` 客戶系統相關資訊, 並紀錄於 `eFAE` system.
 
+# 2024-05-17
+* 參與 `EU-FAE` 週會.
+* 整理 `3TG8-P` `Linux mint 20` 測試結果.
+* 與 `Neosys` 相關人員討論 `3TG8-P` `Linux mint 20` 目前測試狀況.
+* 協助 `EU-FAE` 提供 `DQE` 使用之 `FIO` 測試程式.
+* 詢問 `Sales-Sylvain` & `Sales-Jessica` & `Sales-Deirdre` 關於 `Winsys` 出貨相關流程與時間.
+* 與 `Sales-Sylvain` 討論 `Winsys` 更新 `FW` 相關問題.
+* 協助 `PM-Micky` 確認 `DESSL-04GD09SCADBB` `SATADOM` `pin7` & `pin8` 電源相關支援.
+* 協助 `Shelly` 架設 `RPI 5` 測試環境.
+* 修改 `Winsys-3TE7 PBT Table Rebuild issue` 客訴分享案件報告.
+* 與 `Miller` 討論客訴分享案件報告.
+* 整理 `Extra computer` 客戶系統相關資訊, 並紀錄於 `eFAE` system.
+* TODO
+  * [x] 協助 `EU` 處理 `3IE2-P` `2` pcs 客訴案.
+  * [x] 查找 `Winsys` 出貨流程時間.
+  * [x] 與 `Neousys` `FAE` 討論 `3TG8-P` 掉速, 以及 `I/O error` 相關問題.
+  * [x] 協助 `EU` 測試 `4TE3` install `Windows 10 / 11` 超過半小時相關異常.
+  * [x] 協助 `Sales` 回覆 `4TE3` 與 `Samsung` performance 相關差異.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題.
+
+# 2024-05-20
+* 協助 `EU` 處理 `3IE2-P` `2` pcs 客訴案, 皆可認碟.
+* 查找 `Winsys` 出貨流程時間.
+* 與 `Neousys` `FAE` 討論 `3TG8-P` 掉速, 以及 `I/O error` 相關問題.
+* 協助 `EU` 測試 `4TE3` install `Windows 10 / 11` 超過半小時相關異常, 皆無看到相關異常.
+* 協助 `Sales` 回覆 `4TE3` 與 `Samsung` performance 相關差異, 並回覆給 `Sales`.
+* 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Shelly` 參與 `Moxa` & `Dubayy` 討論 `3TE7` 配合 `RAID card` 不認碟相關討論會議.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題.
+  * [x] 協助 `FW-RD` 測試 `power cycling` 抓取 `keyword` 後不重啟功能修改.
+  * [x] 協助 `EU` 提供 `KEBA` `3TE7` 資料寫入搭配異常上斷電測試, 發生掉資料相關異常圖片.
+  * [x] 協助 `EU` 測試 `Vitec` `3TE6` 執行 `DLMC` 發生之異常現象.
+  * [x] 協助 `Shelly` 處理 `iPacker` 無法撈取 `MP tool` 相關問題.
+
+# 2024-05-21
+* 參與 `FAE-team2` 週會.
+* 協助 `Shelly` 參與 `Moxa` & `Dubayy` 討論 `3TE7` 配合 `RAID card` 不認碟相關討論會議.
+* 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題, 並焊接相關電源訊號線.
+* 協助 `FW-RD` 測試 `power cycling` 抓取 `keyword` 後不重啟功能修改.
+* 協助 `EU` 提供 `KEBA` `3TE7` 資料寫入搭配異常上斷電測試, 發生掉資料相關異常圖片.
+* 協助 `EU` 測試 `Vitec` `3TE6` 執行 `DLMC` 發生之異常現象.
+* 協助 `Shelly` 處理 `iPacker` 無法撈取 `MP tool` 相關問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `EU` 測試 `Vitec` `3TE6` 執行 `DLMC` 發生之異常現象.
+  * [x] 協助 `Shelly` 處理 `iPacker` 無法撈取 `MP tool` 相關問題.
+  * [x] 處理 `KEBA` `3TE7` 搭配 `power cycling` 治具執行相關問題.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題.
+  * [x] 測試 `Portwell` `3IE2-P` `re-mount` `controller` 後, 認碟相關測試.
+  * [x] 將 `Portwell` `3IE2-P` 送至 `RMA` 更換 `controller`.
+  * [x] 協助 `Shelly` 處理 `Moxa` & `Dubayy` 遠端更新 `3TE7` 相關設定.
+  * [x] 協助 `EU` 查找 `3IE2-P` 搭配 `瑞傳` 平台相關認碟問題 `FA` case.
+  * [x] 與 `EU-FAE` 討論 `nvme` `DLMC` 相關問題.
+
+# 2024-05-22
+* 參與 `FAE` 週會.
+* 協助 `EU` 測試 `Vitec` `3TE6` 執行 `DLMC` 發生之異常現象, 後續發現 `command` 沒加入 `-a`.
+* 協助 `Shelly` 處理 `iPacker` 無法撈取 `MP tool` 相關問題.
+* 處理 `KEBA` `3TE7` 搭配 `power cycling` 治具執行相關問題, 目前更改 `relay` 位置到 `2`.
+* 協助 `Shelly` 處理 `3TG8-P` 於 `rpi4` 認碟相關問題.
+* 測試 `Portwell` `3IE2-P` `re-mount` `controller` 後, 認碟相關測試, 依然無法認碟.
+* 將 `Portwell` `3IE2-P` 送至 `RMA` 更換 `controller`.
+* 協助 `Shelly` 處理 `Moxa` & `Dubayy` 遠端更新 `3TE7` 相關設定.
+* 協助 `EU` 查找 `3IE2-P` 搭配 `瑞傳` 平台相關認碟問題 `FA` case.
+* 與 `EU-FAE` 討論 `nvme` `DLMC` 相關問題.
+* TODO
+  * [ ] 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
+  * [ ] 撰寫 `Ericssion` `NPF` `FA` report.
+  * [ ] 撰寫 `Linux` 教學文件.
+ 
