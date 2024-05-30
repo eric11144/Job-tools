@@ -1439,7 +1439,91 @@
 * 協助 `EU` 查找 `3IE2-P` 搭配 `瑞傳` 平台相關認碟問題 `FA` case.
 * 與 `EU-FAE` 討論 `nvme` `DLMC` 相關問題.
 * TODO
-  * [ ] 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
-  * [ ] 撰寫 `Ericssion` `NPF` `FA` report.
-  * [ ] 撰寫 `Linux` 教學文件.
- 
+  * [x] 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
+  * [x] 撰寫 `Ericssion` `NPF` `FA` report.
+  * [x] 撰寫 `Linux` 教學文件.
+  * [x] 協助 `Neosys` 詢問客戶相關借出樣品狀況.
+  * [x] 協助 `Rex` 處理 `3TE7` `Re-MP`.
+  * [x] 協助 `EU-PM` 了解 `SLC cache` 於 `3TG8-P` 運作行為. 
+
+# 2024-05-23
+* 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
+* 撰寫 `Ericssion` `NPF` `FA` report.
+* 撰寫 `Linux` 教學文件.
+* 協助 `Neosys` 詢問客戶相關借出樣品狀況.
+* 協助 `Rex` 處理 `3TE7` `Re-MP`.
+* 協助 `EU-PM` 了解 `SLC cache` 於 `3TG8-P` 運作行為. 
+* TODO
+  * [x] 觀看 `Portwell` `1` pcs 客訴品.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `EU-Sales` sync 關於 `Winsys` 相關狀況.
+  * [x] 與 `EU-YingXiang` sync `Portwell` `4` pcs 分析狀況.
+  * [x] 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
+  * [x] 協助 `Shelly` 處理 `3TE7` `write code`.
+  * [x] 觀看 `Simms` `8`pcs 客訴品狀況.
+
+# 2024-05-27
+* 觀看 `Portwell` `1` pcs 客訴品.
+* 參與 `EU-FAE` 週會.
+* 與 `EU-Sales` sync 關於 `Winsys` 相關狀況.
+* 與 `EU-YingXiang` sync `Portwell` `4` pcs 分析狀況.
+  * `1` pcs 發現更換 `Flash` 發生問題, 後續再送至 `RMA` 更換.
+  * `3` pcs 執行 `BurninTest` `8`hr.
+* 觀看 `KEBA` `3TE7` 搭配 `power cycling` 治具執行狀況.
+* 協助 `Shelly` 處理 `3TE7` `write code`.
+* 觀看 `Simms` `8`pcs 客訴品狀況, `6` `pcs` 零件 & `pad` 破損, `1` pcs短路, `1` pcs 可辨識, 將其中 `5pcs` 丟入清潔劑中去膠.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 參與 `FAE` 月會分享.
+  * [x] 協助 `Willam` 提供 `wifi` password.
+  * [x] 協助 `Sales` 歸還 `FEB231124004` & `FEB230911016` devices.
+  * [x] 觀看 `Simms` `8` pcs 其中一片外觀較完整 `device`.
+  * [x] 與 `EUYingXiang` sync `3TE7` `release` 版本. 
+
+# 2024-05-28
+* 參與 `FAE-team2` 週會.
+* 參與 `FAE` 月會分享.
+* 協助 `Willam` 提供 `wifi` password.
+* 協助 `Sales` 歸還 `FEB231124004` & `FEB230911016` devices.
+* 觀看 `Simms` `8` pcs 其中一片外觀較完整 `device`, 後續量測發現 `controller` pad 點損壞, 無法分析, 共 `2pcs`.
+* 與 `EU-YingXiang` sync `3TE7` `release` 版本. 
+* TODO
+  * [x] 處理 `Portwell` `4` pcs 分析狀況.
+  * [x] 與 `Sales-Joan` sync 分析狀況.
+  * [x] 協助 `Sales-Vincent` 處理 `3TG6-P` `DLMC` 操作( `A23A20` -> `A23109-0210` ).
+  * [x] 協助 `FW-RD Allen` 準備 `auto boot` 執行 `script` image.
+  * [x] 提供 `3TG6-P` `DLMC` 操作文件, 以及相關 `bin file`.
+
+# 2024-05-29
+* 處理 `Portwell` `4` pcs 分析狀況.
+  * `1`pcs 更換 `Flash` 後, `Flash id` table 顯示正常.
+  * `3`pcs `BurninTest` `8`hr 皆正常.
+* 與 `Sales-Joan` sync 分析狀況.
+* 協助 `Sales-Vincent` 處理 `3TG6-P` `DLMC` 操作( `A23A20` -> `A23109-0210` ).
+* 協助 `FW-RD Allen` 準備 `auto boot` 執行 `script` image.
+* 提供 `3TG6-P` `DLMC` 操作文件, 以及相關 `bin file`.
+* TODO
+  * [x] 協助 `Sales-Jolie` 處理 `聖捷思` `FW` 更新後相關問題.
+  * [x] 協助 `EU-YingXiang` 測試 `4TE3` performance.
+  * [x] 與 `EU-YingXiang` sync 測試狀況.
+  * [x] 整理相關客訴案資料.
+  * [x] 協助 `EU-FAE` 詢問 `SMI` 關於 `later bad` 於使用時間較短的狀況下, 產生之原因.
+  * [x] 參與 `3TE7` 後續客訴討論之時間.
+  * [x] 製作 `UART` pin 針.
+
+# 2024-05-30
+* 協助 `Sales-Jolie` 處理 `聖捷思` `FW` 更新後相關問題.
+* 協助 `EU-YingXiang` 測試 `4TE3` performance.
+* 與 `EU-YingXiang` sync 測試狀況, 後續發現無法正常開卡, 經過測試發現 `channel 2` `Flash` 有相關異常.
+* 整理相關客訴案資料.
+* 協助 `EU-FAE` 詢問 `SMI` 關於 `later bad` 於使用時間較短的狀況下, 產生之原因.
+* 參與 `3TE7` 後續客訴討論之時間.
+* 製作 `UART` pin 針.
+* TODO
+  * [x] 協助 `Jay` 詢問關於 `Later bad block` size.
+  * [x] 協助 `FW-RD Allen` 觀看 `fio` script 運行.
+  * [x] 詢問 `FW-RD Allen` & `FW-RD Ray` & `PM-Jack` 關於 `Later bad block` size.
+  * [x] 觀看 `Flash` 相關 `spec` 文件.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `YingXiang` sync `Portwell` 後續測試流程.
+  * [x] 回烘 `Portwell` device `channel 2` `Flash`.
