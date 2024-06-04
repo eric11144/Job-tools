@@ -1527,3 +1527,62 @@
   * [x] 參與 `EU-FAE` 週會.
   * [x] 與 `YingXiang` sync `Portwell` 後續測試流程.
   * [x] 回烘 `Portwell` device `channel 2` `Flash`.
+
+# 2024-05-31
+* 協助 `Jay` 詢問關於 `Later bad block` size.
+* 協助 `FW-RD Allen` 觀看 `fio` script 運行.
+* 詢問 `FW-RD Allen` & `FW-RD Ray` & `PM-Jack` 關於 `Later bad block` size.
+* 觀看 `Flash` 相關 `spec` 文件.
+* 參與 `EU-FAE` 週會.
+* 與 `YingXiang` sync `Portwell` 後續測試流程.
+* 回烘 `Portwell` device `channel 2` `Flash`.
+* TODO
+  * [x] 至 `RMA` 取回 `Portwell` device `channel 2` `Flash`, 並測試.
+  * [x] 協助 `Shelly` 觀看 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+  * [x] 參與 `MK` 討論 `3TE7` 發生無法認碟相關會議(`TO` & 降 `Gen`).
+  * [x] 與  `YingXiang` sync `Portwell` 測試結果.
+  * [x] 與 `Sales-Joan` 討論 `HMI` `7`pcs 客訴品分析狀況.
+  * [x] 回報 `Curtisswright` 關於 `3TG6-P` 測試寫入, 以及關機再開機, 發生降 `Gen` 測試結果.
+
+# 2024-06-03
+* 至 `RMA` 取回 `Portwell` device `channel 2` `Flash`, 並測試.
+* 協助 `Shelly` 觀看 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+* 參與 `MK` 討論 `3TE7` 發生無法認碟相關會議(`TO` & 降 `Gen`).
+* 與  `YingXiang` sync `Portwell` 測試結果.
+* 與 `Sales-Joan` 討論 `HMI` `7`pcs 客訴品分析狀況.
+* 回報 `Curtisswright` 關於 `3TG6-P` 測試寫入, 以及關機再開機, 發生降 `Gen` 測試結果.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Shelly` 觀看 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+  * [x] 協助 `聖捷思` 人員處理 `3TG6-P` `4TB` `DLMC` 相關問題.
+  * [x] 與 `Sales-Jolie` 討論關於 `聖捷思` `DLMC` 相關問題.
+  * [x] 協助 `Kiwi` 提供 `4TE3` 透過 `CDM` 測試結果圖.
+  * [x] 協助 `EU` 觀看 `Portwell` `50010` 透過 `BurninTest` 測試 `74` hour 是否會造成 `Later bad` 持續增加狀況.
+  * [x] 詢問 `SMI` 人員關於 `Re-MP` 發生 `TRAN ADJ Fail` 相關問題.
+
+# 2024-06-04
+* 參與 `FAE-team2` 週會.
+* 協助 `Shelly` 觀看 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+* 協助 `聖捷思` 人員處理 `3TG6-P` `4TB` `DLMC` 相關問題.
+* 與 `Sales-Jolie` 討論關於 `聖捷思` `DLMC` 相關問題.
+* 協助 `Kiwi` 提供 `4TE3` 透過 `CDM` 測試結果圖.
+* 協助 `EU` 觀看 `Portwell` `50010` 透過 `BurninTest` 測試 `74` hour 是否會造成 `Later bad` 持續增加狀況.
+* 詢問 `SMI` 人員關於 `Re-MP` 發生 `TRAN ADJ Fail` 相關問題, 後續回覆是 `training flash` 有問題，推段式controller跟flash信號有問題造成的.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+    * [x] 串接示波器量測 `Voltage` & `Current`.
+    * [x] 焊接 `SATA tray` `5V` input & `SSD` `5V` output 訊號線.
+  * [x] 協助 `Shelly` demo `3TG8-P` 接上 `rpi4` 平台於 `innoWorks` 人員.
+  * [x] 協助 `EU` 提供 `KEBA` 測試 `Shell script` & `platform` 相關資訊.
+
+# 2024-06-05
+* 參與 `FAE` 週會.
+* 協助 `Shelly` 處理 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+  * 串接示波器量測 `Voltage` & `Current`.
+  * 焊接 `SATA tray` `5V` input & `SSD` `5V` output 訊號線.
+* 協助 `Shelly` demo `3TG8-P` 接上 `rpi4` 平台於 `innoWorks` 人員.
+* 協助 `EU` 提供 `KEBA` 測試 `Shell script` & `platform` 相關資訊.
+* TODO
+  * [ ] 協助 `Shelly` 處理 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+  * [ ] 修改 `Grafana` & `influxdb` 相關串接.
