@@ -1575,14 +1575,31 @@
     * [x] 焊接 `SATA tray` `5V` input & `SSD` `5V` output 訊號線.
   * [x] 協助 `Shelly` demo `3TG8-P` 接上 `rpi4` 平台於 `innoWorks` 人員.
   * [x] 協助 `EU` 提供 `KEBA` 測試 `Shell script` & `platform` 相關資訊.
+  * [x] 協助 `Shelly` 錄製 `30` 次 `3TG8-P` 於 `rpi4` 平台進行熱插拔認碟測試.
 
 # 2024-06-05
 * 參與 `FAE` 週會.
-* 協助 `Shelly` 處理 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
+* 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
   * 串接示波器量測 `Voltage` & `Current`.
   * 焊接 `SATA tray` `5V` input & `SSD` `5V` output 訊號線.
-* 協助 `Shelly` demo `3TG8-P` 接上 `rpi4` 平台於 `innoWorks` 人員.
+* 協助 `Shelly` demo `3TG8-P` 串接 `rpi4` 平台於 `innoWorks` 人員.
 * 協助 `EU` 提供 `KEBA` 測試 `Shell script` & `platform` 相關資訊.
+* 協助 `Shelly` 錄製 `30` 次 `3TG8-P` 於 `rpi4` 平台進行熱插拔認碟測試.
 * TODO
-  * [ ] 協助 `Shelly` 處理 `3TG8-P` 接上 `rpi4` 平台發生無法認碟問題.
-  * [ ] 修改 `Grafana` & `influxdb` 相關串接.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
+  * [x] 測試 `3TG8-P` 接上 `rpi4` 平台發生 `loader mode` 問題, 並錄製 `UART` log.
+  * [x] 協助 `Jay` 觀看 `console` 平台執行 `DLMC` tool 相關狀況.
+  * [x] 協助 `EU` 測試 `3IE7` 於 `iSMART` 顯示之 `P/E cycle` & `Device life` 計算異常.
+  * [x] 協助 `Shelly` 針對 `3TG6-P` 執行 `Re-MP`.
+
+# 2024-06-06
+* 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
+* 測試 `3TG8-P` 接上 `rpi4` 平台發生 `loader mode` 問題, 並錄製 `UART` log.
+* 協助 `Jay` 觀看 `console` 平台執行 `DLMC` tool 相關狀況.
+* 協助 `EU` 測試 `3IE7` 於 `iSMART` 顯示之 `P/E cycle` & `Device life` 計算異常.
+* 協助 `Shelly` 針對 `3TG6-P` 執行 `Re-MP`.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
+  * [ ] 協助 `EU` 架設 `Portwell` 測試環境平台.
+
