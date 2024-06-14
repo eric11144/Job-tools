@@ -1599,7 +1599,89 @@
 * 協助 `EU` 測試 `3IE7` 於 `iSMART` 顯示之 `P/E cycle` & `Device life` 計算異常.
 * 協助 `Shelly` 針對 `3TG6-P` 執行 `Re-MP`.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
-  * [ ] 協助 `EU` 架設 `Portwell` 測試環境平台.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
+  * [x] 協助 `EU` 架設 `Portwell` 測試環境平台.
+  * [x] 協助 `Sales-Vincent` 處理客戶 `3IE7` 進版 `PCN` 之相關問題.
+  * [x] 協助回覆 `Neosys` 目前客訴處理狀況.
+  * [x] 協助 `EU` 撰寫 `B&R` `FA` report.
+  * [x] 協助 `Jay` 觀看於 `console` 無法執行 `DLMC` tool 選單功能.
 
+# 2024-06-07
+* 參與 `EU-FAE` 週會.
+* 協助 `Shelly` 處理 `3TG8-P` 串接 `rpi4` 平台發生無法認碟問題.
+* 協助 `EU` 架設 `Portwell` 測試環境平台.
+* 協助 `Sales-Vincent` 處理客戶 `3IE7` 進版 `PCN` 之相關問題.
+* 協助回覆 `Neosys` 目前客訴處理狀況.
+* 協助 `EU` 撰寫 `B&R` `FA` report, 後續發現 `Flash` channel 3 有相關異常, 並透過 `Re-MP` tool 截圖.
+* 協助 `Jay` 觀看於 `console` 無法執行 `DLMC` tool 選單功能.
+* TODO
+  * [x] 協助 `EU` 撰寫 `B&R` `FA` report, 並提供 report.
+  * [x] 協助 `Jay` 處理 `Linux` 透過 `concole` 輸出時, 自動登入功能執行.
+  * [x] 協助 `Shelly` 處理 `3TG8-P` `power sequence` 訊號線焊接.
+  * [x] 架設 `Portwell` 測試平台.
+  * [x] 與 `EU-YingXiang` 討論 `Portwell` 平台相關操作, 以及後續處理相關問題.
+  * [x] 參加 `Computex` 展覽.
+
+# 2024-06-10
+* 協助 `EU` 撰寫 `B&R` `FA` report, 並提供 report.
+* 協助 `Jay` 處理 `Linux` 透過 `concole` 輸出時, 自動登入功能執行.
+* 協助 `Shelly` 處理 `3TG8-P` `power sequence` 訊號線焊接.
+* 架設 `Portwell` 測試平台.
+* 與 `EU-YingXiang` 討論 `Portwell` 平台相關操作, 以及後續處理相關問題.
+* 參加 `Computex` 展覽.
+* TODO
+  * [x] 端午節放假.
+
+# 2024-06-11
+* 端午節放假.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `EU` 提供 `3TE6` `DLMC` tool & `FW` bin file.
+  * [x] 協助 `EU-Jason` 處理於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+  * [x] 協助 `Shelly` 準備 `ubuntu` OS disk, 並查找 `3TE7` disk 毀損問題.
+  * [x] 將 `3TE7` 送至 `RMA` 更換 `Power IC` `U21`.
+  * [x] 資材盤點.
+
+# 2024-06-12
+* 參與 `FAE` 週會.
+* 協助 `EU` 提供 `3TE6` `DLMC` tool & `FW` bin file.
+* 協助 `EU-Jason` 處理於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+* 協助 `Shelly` 準備 `ubuntu` OS disk, 並查找 `3TE7` disk 毀損問題.
+* 將 `3TE7` 送至 `RMA` 更換 `Power IC` `U21`.
+* 資材盤點.
+* TODO
+  * [x] 至 `RMA` 取回更換 `Power IC` `U21` 之 `3TE7`.
+  * [x] 與 `Neosys` 人員討論目前客訴處理相關進度.
+  * [x] 協助 `EU-YingXiang` 人員操作 `ssh` copy file.
+  * [x] 協助 `EU` 觀看 `FEB240607007` `3TG6-P` 客退異常品.
+  * [x] 協助 `Jay` 測試 `3`pcs `SATADOM`.
+
+# 2024-06-13
+* 至 `RMA` 取回更換 `Power IC` `U21` 之 `3TE7`.
+* 與 `Neosys` 人員討論目前客訴處理相關進度.
+* 協助 `EU-YingXiang` 人員操作 `ssh` copy file.
+* 協助 `EU` 觀看 `FEB240607007` `3TG6-P` 客退異常品.
+* 協助 `Jay` 測試 `3`pcs `SATADOM`, 發現其中 `1`pcs 於測試過程中發生異常, 會再做進一步分析.
+* TODO
+  * [x] 協助 `Shelly` 焊接 `3TG8-P` `power sequence` 訊號線.
+  * [x] 協助 `Shelly` 操作示波器錄製 `power sequence`.
+  * [x] 參與 `EU-FAE` 週會.  
+  * [x] 針對 `SATADOM` `1`pcs 進行進一步分析.
+  * [x] 申請更換料件.
+  * [x] 焊接舊版開卡版相關零件( `USB` port  & `power on/off` 開關).
+  * [x] 與 `FW-RD Jason` 討論 `FEB240607007` `3TG6-P` 客退異常品 `UART` log.
+
+# 2024-06-14
+* 協助 `Shelly` 焊接 `3TG8-P` `power sequence` 訊號線.
+* 協助 `Shelly` 操作示波器錄製 `power sequence`.
+* 參與 `EU-FAE` 週會.  
+* 針對 `SATADOM` `1`pcs 進行進一步分析.
+* 焊接舊版開卡版相關零件( `USB` port  & `power on/off` 開關), 後續發現開關有異常.
+* 與 `FW-RD Jason` 討論 `FEB240607007` `3TG6-P` 客退異常品 `UART` log.
+* 申請更換料件.
+* TODO
+  * [x] 協助 `Danny` 處理 `3TG6-P` `ReMP` 問題.
+  * [x] 參與 `EU` & `FW-RD` 討論 `KEBA` 後續處理.
+  * [x] 焊接舊版開卡版相關零件( `power on/off` 開關).
+  * [x] 架設 `KEBA` 測試環境.
