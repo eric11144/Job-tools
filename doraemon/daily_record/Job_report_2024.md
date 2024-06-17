@@ -1685,3 +1685,20 @@
   * [x] 參與 `EU` & `FW-RD` 討論 `KEBA` 後續處理.
   * [x] 焊接舊版開卡版相關零件( `power on/off` 開關).
   * [x] 架設 `KEBA` 測試環境.
+  * [x] 回覆 `Boeing` 關於 `3TG6-P` 降 `Gen` 相關可能問題.
+
+# 2024-06-17
+* 協助 `Danny` 處理 `3TG6-P` `ReMP` 問題.
+* 參與 `EU` & `FW-RD` 討論 `KEBA` 後續處理.
+* 焊接舊版開卡版相關零件( `power on/off` 開關).
+* 架設 `KEBA` 測試環境.
+* 回覆 `Boeing` 關於 `3TG6-P` 降 `Gen` 相關可能問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 架設 `KEBA` 測試環境, 並將 `device` 重新開卡( `20230809_S23809i` ).
+    * [x] `S42` -> 保留 `2GB`.
+    * [x] `S80` -> 保留 `500MB`.
+  * [x] 協助 `Shelly` 焊接 `3TG8-P` `power sequence` 訊號線.
+  * [x] 協助 `Kenzi` 觀看 `U.2` `4TG2-P` 認碟問題.
+  * [x] 協助 `Sales-Vincent` 觀看 `3TG6-P` 無法認碟問題.
+  * [ ] 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
