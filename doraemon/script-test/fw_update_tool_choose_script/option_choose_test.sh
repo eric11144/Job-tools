@@ -2,7 +2,7 @@
 
 func() {
     echo "Usage:"
-    echo "option_choose_test.sh [-h123] [<device>] [<filename>]"
+    echo "option_choose_test.sh [-h] [<option>] [<device>] [<filename>]"
     echo "Description:"
     echo "-1                   Use hdparm tool."
     echo "-2                   Use nvme-cli tool."
@@ -11,9 +11,10 @@ func() {
     echo "device               Which device need to DLMC."
     echo "FW name              Choose the FW bin file."
     echo "Hdparm Example:      ./option_choose_test.sh -1 /dev/sdx abc.bin"
-    echo "NVME Example:        ./option_choose_test.sh -2 /dev/sdx abc.bin"
-    echo "DLMC Example:        ./option_choose_test.sh -3 /dev/sdx abc.bin"
-    echo "iSMART Example:      ./option_choose_test.sh -4 /dev/sdx"
+    echo "NVME Example:        ./option_choose_test.sh -2 /dev/nvmex abc.bin"
+    echo "DLMC Example:        ./option_choose_test.sh -3 /dev/sdx abc.bin or /dev/nvmex abc.bin"
+    echo "iSMART Example:      ./option_choose_test.sh -4 /dev/sdx or /dev/nvmex"
+    echo "x x is the code corresponding to the disk, please look up the corresponding code and fill it in. abc is the FW bin file name, please enter the corresponding FW bin file name."
     exit -1
 }
 
