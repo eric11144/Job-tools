@@ -1,0 +1,31 @@
+---
+- name: Disable internal time sync
+  command: timedatectl set-ntp off
+
+- name: mkdir /etc/chameleon-datetime
+  file:
+    path: /etc/chameleon-datetime
+    state: directory
+    recurse: yes
+
+- name: Copy files
+  copy:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+  with_items:
+  - src: '{{ role_path }}/files/usr/local/bin/ntpdate-hwclock-writeback.sh'
+    dest: /usr/local/bin/ntpdate-hwclock-writeback.sh
+
+  - src: '{{ role_path }}/files/etc/chameleon-datetime/ntp.yml'
+    dest: /etc/chameleon-datetime/ntp.yml
+
+- name: Copy /usr/local/bin/ntpdate-hwclock-writeback.sh - chmod
+  file:
+    path: /usr/local/bin/ntpdate-hwclock-writeback.sh
+    mode: 0755
+
+- name: Setup cron
+  cron:
+    name: ntpdate-hwclock-writeback
+    minute: '20'
+    job: '/usr/local/bin/ntpdate-hwclock-writeback.sh >> /var/log/ntpdate-hwclock-writeback.log'

@@ -1,0 +1,11 @@
+---
+ansible_become: yes
+ansible_become_pass: ubuntu
+ansible_connection: ssh
+ansible_port: 22
+ansible_python_interpreter: /usr/bin/python3
+ansible_ssh_extra_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+ansible_ssh_pass: ubuntu
+ansible_user: ubuntu
+
+FILE_PATH: /home/ubuntu/

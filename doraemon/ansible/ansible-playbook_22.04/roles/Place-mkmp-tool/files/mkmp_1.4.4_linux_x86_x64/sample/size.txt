@@ -1,0 +1,6 @@
+64	-----	Q2TNCGAC.bin
+128	-----	Q2TNCGBC.bin
+256	66B00	Q2TNCGFC.bin
+256	A6B00	Q2TNCGDC.bin
+512	-----	Q2TNCGHC.bin
+1024	-----	Q2TNCGPC.bin

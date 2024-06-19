@@ -1,0 +1,4 @@
+---
+- name: Remove not required deb packages
+  apt:
+    autoremove: yes
