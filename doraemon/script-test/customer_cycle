@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# Script to generate files of 300 bytes every second for a minute. Repeat for 180 minutes
+# then trigger a shutdown or powercycle. Simulating custimer usage that has caused an M.2 to
+# die. This may need to run for several months!!
+
+CYCLE_FILE="/media/customer_cycle_"
+TC_STATE="/media/customer_state.txt"
+SERVER="192.168.1.107"
+TEST_MINS=180
+
+CMAX=60
+FILE_SIZE=300
+
+cycle_count=0
+minute_count=0
+
+# On every boot repeat the following
+while [ $minute_count -lt $TEST_MINS ]
+do
+    cycle=0
+    echo "Mins running: $minute_count"
+    rm -f ${CYCLE_FILE}*
+
+    while [ $cycle -lt $CMAX ]
+    do
+        echo "Cycle: $cycle"
+
+        dd if=/dev/urandom of=${CYCLE_FILE}${cycle} bs=1 count=$FILE_SIZE > /dev/null 2>&1
+
+        cycle=$(( $cycle + 1 ))
+        sleep 1
+    done
+
+    minute_count=$(( $minute_count + 1 ))
+    rm -f ${CYCLE_FILE}*
+
+done
+
+# Decide whether to trigger a 'safe' (i.e wait for system to shut down) or 'harsh' (immediate)
+# powercycle. Every 10 'safe', trigger a 'harsh' one
+
+if [ ! -f $TC_STATE ]
+then
+    echo "Create file"
+    echo "REBOOT_STATE=0" > $TC_STATE
+fi
+
+. $TC_STATE
+
+if [ $REBOOT_STATE -gt 10 ]
+then
+    REBOOT_STATE=0
+    echo "REBOOT_STATE=$REBOOT_STATE" > $TC_STATE
+    sync
+    echo "Would Powercycle..."
+    # Insert whatever to trigger harsh shutdown
+    ssh $SERVER touch /root/customer_cycle/customer_cycletype_harsh
+else
+    REBOOT_STATE=$(( $REBOOT_STATE + 1 ))
+    echo "REBOOT_STATE=$REBOOT_STATE" > $TC_STATE
+    sync
+    echo "Would clean shutdown..."
+    # Insert whatever to trigger safe/clean shutdown
+    ssh $SERVER touch /root/customer_cycle/customer_cycletype_clean
+    /usr/sbin/poweroff
+fi

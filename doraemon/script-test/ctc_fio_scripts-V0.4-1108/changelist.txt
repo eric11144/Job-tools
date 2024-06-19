@@ -1,0 +1,2 @@
+11/07/2023
+1. set up a new method - multi nvme ssds fio test with binding cpus automatically

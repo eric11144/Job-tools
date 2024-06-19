@@ -1701,4 +1701,49 @@
   * [x] 協助 `Shelly` 焊接 `3TG8-P` `power sequence` 訊號線.
   * [x] 協助 `Kenzi` 觀看 `U.2` `4TG2-P` 認碟問題.
   * [x] 協助 `Sales-Vincent` 觀看 `3TG6-P` 無法認碟問題.
-  * [ ] 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+  * [x] 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+
+# 2024-06-18
+* 參與 `FAE-team2` 週會.
+* 架設 `KEBA` 測試環境, 並將 `device` 重新開卡( `20230809_S23809i` ).
+  * `S42` -> 保留 `2GB`.
+  * `S80` -> 保留 `500MB`.
+* 協助 `Shelly` 焊接 `3TG8-P` `power sequence` 訊號線.
+* 協助 `Kenzi` 觀看 `U.2` `4TG2-P` 認碟問題.
+* 協助 `Sales-Vincent` 觀看 `3TG6-P` 無法認碟問題.
+* 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 觀看 `KEBA` `2`pcs 測試狀況.
+    * [x] `S42` -> 保留 `2GB`.
+    * [x] `S80` -> 保留 `500MB`.
+  * [x] 協助 `Shelly` 焊接 `3TG8-P` `Reset` 電容 `0201` `0.22uF`.
+  * [x] 與 `EU` 討論 `KEBA` 測試結果.
+  * [x] 修改 `ansible` 相關套件.
+  * [x] 整理相關 `test shell script`.
+  * [x] 協助 `EU` 準備 `3TE6` `auto run` `DLMC` tool.
+  * [x] 協助 `EU` 處理 `ARM` 平台執行 `iSMART` 相關 `toolchain`.
+
+# 2024-06-19
+* 參與 `FAE` 週會.
+* 觀看 `KEBA` `2`pcs 測試狀況.
+  * `S42` -> 保留 `2GB`.
+  * `S80` -> 保留 `500MB`.
+* 協助 `Shelly` 焊接 `3TG8-P` `Reset` 電容 `0201` `0.22uF`.
+* 與 `EU` 討論 `KEBA` 測試結果.
+* 修改 `ansible` 相關套件.
+* 整理相關 `test shell script`.
+* 協助 `EU` 準備 `3TE6` `auto run` `DLMC` tool.
+* 協助 `EU` 處理 `ARM` 平台執行 `iSMART` 相關 `toolchain`.
+* TODO
+  * [x] 與 `SW-Allen` 討論 `ARM` 平台執行 `iSMART` 相關 `toolchain` 流程.
+  * [x] 觀看 `KEBA` `2`pcs 測試狀況.
+    * [x] `S42` -> 保留 `2GB`.
+    * [x] `S80` -> 保留 `500MB`.
+  * [x] 更改 `KEBA` `2`pcs `free space` 容量.
+    * [x] `S42` -> 不保留.
+    * [x] `S80` -> 主系統( `15GB` ), `free space` -> `24`GB.
+  * [x] 協助處理 `3`pcs `SATADOM` 客訴品轉至 `RMA`.
+  * [x] 協助 `Shelly` 處理 `Reset` 增加電容相關問題.
+  * [x] 協助 `EU` 準備 `3TE6` `auto run` `DLMC` tool.
+
