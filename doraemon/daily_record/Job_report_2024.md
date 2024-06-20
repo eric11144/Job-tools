@@ -1747,3 +1747,24 @@
   * [x] 協助 `Shelly` 處理 `Reset` 增加電容相關問題.
   * [x] 協助 `EU` 準備 `3TE6` `auto run` `DLMC` tool.
 
+# 2024-06-20
+* 與 `SW-Allen` 討論 `ARM` 平台執行 `iSMART` 相關 `toolchain` 流程.
+* 觀看 `KEBA` `2`pcs 測試狀況.
+  * `S42` -> 保留 `2GB`.
+  * `S80` -> 保留 `500MB`.
+* 更改 `KEBA` `2`pcs `free space` 容量.
+  * `S42` -> 不保留.
+  * `S80` -> 主系統( `15GB` ), `free space` -> `24`GB.
+* 協助處理 `3`pcs `SATADOM` 客訴品轉至 `RMA`.
+* 協助 `Shelly` 處理 `Reset` 增加電容相關問題.
+* 協助 `EU` 準備 `3TE6` `auto run` `DLMC` tool.
+* TODO
+  * [x] 參與 `EU` 週會.
+  * [x] 整理 `FA` case 相關進度於 `eFAE` 系統.
+  * [x] 協助 `Sales-Jolie` 處理 `QNAP` 顯示 `model name` 錯誤問題.
+  * [x] 提供 `3TE6` `auto run DLMC tool` image 給 `EU`.
+  * [x] 協助 `Danny` 處理 `USB` 破殼問題.
+  * [x] 觀看 `KEBA` `2`pcs 測試狀況.
+  * [x] 協助 `Kenzi` 處理 `3TG6-P` `RAID` 執行 `FIO` 測試環境問題.
+  * [x] 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+
