@@ -1768,3 +1768,49 @@
   * [x] 協助 `Kenzi` 處理 `3TG6-P` `RAID` 執行 `FIO` 測試環境問題.
   * [x] 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
 
+# 2024-06-21
+* 參與 `EU` 週會.
+* 整理 `FA` case 相關進度於 `eFAE` 系統.
+* 協助 `Sales-Jolie` 處理 `QNAP` 顯示 `model name` 錯誤問題.
+* 提供 `3TE6` `auto run DLMC tool` image 給 `EU`.
+* 協助 `Danny` 處理 `USB` 破殼問題.
+* 觀看 `KEBA` `2`pcs 測試狀況.
+* 協助 `Kenzi` 處理 `3TG6-P` `RAID` 執行 `FIO` 測試環境問題.
+* 協助 `EU` 觀看於 `bios` `UEFI` mode 中, 執行 `warm` boot 相關測試程式.
+* TODO
+  * [x] 協助 `SW-RD` 處理 `iSMART` 於 `ARM` 平台執行相關開發修改.
+  * [x] 協助 `Sales-Jolie` 處理 `QNAP` `Model name` 相關修改.
+  * [x] 觀看 `KEBA` `2`pcs 測試狀況.
+  * [x] 協助 `Kenzi` 處理 `3TG6-P` `RAID` 執行 `FIO` 測試環境問題.
+  * [x] 架設 `Portwell` 測試環境.
+
+# 2024-06-24
+* 協助 `SW-RD` 處理 `iSMART` 於 `ARM` 平台執行相關開發修改.
+* 協助 `Sales-Jolie` 處理 `QNAP` `Model name` 相關修改.
+* 觀看 `KEBA` `2`pcs 測試狀況.
+* 協助 `Kenzi` 處理 `3TG6-P` `RAID` 執行 `FIO` 測試環境問題.
+* 架設 `Portwell` 測試環境, 並觀察認碟狀況.
+* TODO
+  * [x] 與 `EU-FAE` & `FW-RD` 討論 `KEBA` 測試狀況.
+  * [x] 與 `EU-FAE` 討論 `Portwell` 測試狀況.
+  * [x] 協助 `Shelly` 處理 `SATA analyzer` 相關操作.
+  * [x] 協助 `Sales-Eric` 處理 `QNAP` 相關開卡設定.
+  * [x] 協助 `Shelly` 觀看 `Korea` 關於 `ubuntu 16.04` 認碟相關問題.
+
+# 2024-06-25
+* 與 `EU-FAE` & `FW-RD` 討論 `KEBA` 測試狀況.
+* 與 `EU-FAE` 討論 `Portwell` 測試狀況, 發現 `50017` 有看到三種狀態, 後續討論後, 加測 `50010` & 客戶送回之平台(有 `device` ).
+  * 可識別.
+  * 進入 `loader mode`.
+  * 完全無法識別.
+* 協助 `Shelly` 處理 `SATA analyzer` 相關操作.
+* 協助 `Sales-Eric` 處理 `QNAP` 相關開卡設定.
+* 協助 `Shelly` 觀看 `Korea` 關於 `ubuntu 16.04` 認碟相關問題.
+* TODO
+  * [x] 測試 `Portwell`  `50010` & 客戶送回之平台(有 `device` ) `cold boot` `15` 次認碟狀況.
+  * [x] 與 `EU-FAE` 討論 `ACTORY SYSTEMES` `3TG6-P` 後續處理狀況.
+  * [x] 錄製 `ACTORY SYSTEMES` `3TG6-P` 相關 `UART` log.
+  * [x] 撰寫戰績表.
+  * [x] 與 `SMI` 討論 `Portwell` `50017` 相關異常狀況處理.
+  * [x] 出差至 `Moxa` 觀看 `杜拜` `RAID` 掉碟相關問題.
+
