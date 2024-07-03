@@ -1814,3 +1814,131 @@
   * [x] 與 `SMI` 討論 `Portwell` `50017` 相關異常狀況處理.
   * [x] 出差至 `Moxa` 觀看 `杜拜` `RAID` 掉碟相關問題.
 
+# 2024-06-26
+* 測試 `Portwell`  `50010` & 客戶送回之平台(有 `device` ) `cold boot` `15` 次認碟狀況.
+* 與 `EU-FAE` 討論 `ACTORY SYSTEMES` `3TG6-P` 後續處理狀況.
+* 錄製 `ACTORY SYSTEMES` `3TG6-P` 相關 `UART` log.
+* 撰寫戰績表.
+* 與 `SMI` 討論 `Portwell` `50017` 相關異常狀況處理.
+* 出差至 `Moxa` 觀看 `杜拜` `RAID` 掉碟相關問題.
+* TODO
+  * [x] 參與 `FAE` 月會.
+  * [x] 參與 `FAE` 半年會.
+  * [x] 協助 `EU` 測試 `DEM24-A28DD1KCCDF` `FW` bin file.
+  * [x] 與 `Neousys` 人員討論 `FEB240415007` 處理進度.
+  * [x] 與 `EU-FAE` 討論 `FEB240415007` 平台處理進度.
+  * [x] 撰寫 `戰績表`.
+
+# 2024-06-27
+* 參與 `FAE` 月會.
+* 參與 `FAE` 半年會.
+* 協助 `EU` 測試 `DEM24-A28DD1KCCDF` `FW` bin file.
+* 與 `Neousys` 人員討論 `FEB240415007` 處理進度.
+* 與 `EU-FAE` 討論 `FEB240415007` 平台處理進度.
+* 撰寫 `戰績表`.
+* TODO
+  * [x] 協助 `Shelly` 處理 `Windows XP` 安裝.
+  * [x] 協助處理 `Windows XP` 壓縮使用之容量.
+  * [x] 協助 `Sales-Deirdre` 歸還 `FEB240422010` 客訴品.
+  * [x] 協助 `Sales-Nancy` 了解 `4TG2-P` `DLMC` 所需之 `FW` bin file.
+  * [x] 與 `EU-FAE` 討論 `nvme-cli` 執行 `DLMC` 相關參數下法.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 與 `EU-FAE` 討論 `Portwell` 後續測試實驗.
+
+# 2024-06-28
+* 協助 `Shelly` 處理 `Windows XP` 安裝.
+* 協助處理 `Windows XP` 壓縮使用之容量.
+* 協助 `Sales-Deirdre` 歸還 `FEB240422010` 客訴品.
+* 協助 `Sales-Nancy` 了解 `4TG2-P` `DLMC` 所需之 `FW` bin file.
+* 與 `EU-FAE` 討論 `nvme-cli` 執行 `DLMC` 相關參數下法.
+* 參與 `EU-FAE` 週會.
+* 與 `EU-FAE` 討論 `Portwell` 後續測試實驗.
+  * 針對 `4`pcs 之 `controller` & `Flash` `X-Ray`.
+  * 將 `50017` 進行 `Re-MP`.
+  * 其餘 `3`pcs 於客戶平台進行各 `50` 次 `cold boot`.
+* TODO
+  * [x] 協助 `EU-FAE` 架設 `Windows 7` 測試 `OSR` 功能.
+  * [x] 參與 `EU` `OSR` 討論會議.
+  * [x] 將 `4`pcs 送至 `RMA` 照 `controller` & `Flash` `X-Ray`.
+  * [x] 與 `FW-RD Mike` 討論 `SATA 3TG6-P` 異常現象處理狀況.
+  * [x] 與 `EU-FAE` sync `Neousys` 平台測試結果.
+  * [x] 協助 `FW-RD Allen` 架設 `Borch` `3SE3` 測試環境.
+  * [x] 更新 `eFAE` 客訴案進度.
+
+# 2024-07-01
+* 協助 `EU-FAE` 架設 `Windows 7` 測試 `OSR` 功能.
+* 參與 `EU` `OSR` 討論會議.
+* 將 `4`pcs 送至 `RMA` 照 `controller` & `Flash` `X-Ray`.
+* 與 `FW-RD Mike` 討論 `SATA 3TG6-P` 異常現象處理狀況.
+* 與 `EU-FAE` sync `Neousys` 平台測試結果.
+* 協助 `FW-RD Allen` 架設 `Borch` `3SE3` 測試環境.
+* 更新 `eFAE` 客訴案進度.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Shelly` 處理 `印表機` 相關設定.
+  * [x] 與 `Neousys` 人員 sync `FEB240415007` 處理進度.
+  * [x] 測試 `50017` `Re-MP` 後續狀況.
+  * [x] 協助 `Kiwi` 回覆 `SSD` 容量顯示相關問題.
+  * [x] 測試 `Portwell` `3`pcs 於客戶平台進行各 `50` 次 `cold boot`.
+  * [x] 更新 `eFAE` 客訴案進度.
+
+# 2024-07-02
+* 參與 `FAE-team2` 週會.
+* 協助 `Shelly` 處理 `印表機` 相關設定.
+* 與 `Neousys` 人員 sync `FEB240415007` 處理進度.
+* 測試 `50017` `Re-MP` 後續狀況, 後續發生 `SATA link` drop & `Loader mode` 異常.
+* 協助 `Kiwi` 回覆 `SSD` 容量顯示相關問題.
+* 測試 `Portwell` `3`pcs 於客戶平台進行各 `50` 次 `cold boot`, 目前只測試 `2`pcs 大約 `30`次.
+* 更新 `eFAE` 客訴案進度.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `SW-RD` 討論 `OSR` 相關測試手法, 並提供平台.
+  * [x] 整理 `Portwell` `5`pcs 相關異常現象於表格中.
+  * [x] 將 `50017` 送至 `RMA` 更換 `controller` & `Remount` Flash.
+  * [x] 測試 `Portwell` `3`pcs 於客戶平台進行各 `50` 次 `cold boot`, 並將相關資訊提供.
+  * [x] 協助 `FW-RD Allen` 觀看 `Borch` `3SE3` 測試狀況.
+  * [x] 更新 `OSR` 目前測試狀況於 `EU-FAE`.
+  * [x] 更新 `eFAE` 客訴案進度.
+  * [x] 協助 `Shelly` 提供 `Windows LTSC 2019` image.
+  * [x] 協助詢問 `Steatite Limited` 關於 `time sync` 相關問題.
+
+# 2024-07-03
+* 參與 `FAE` 週會.
+* 與 `SW-RD` 討論 `OSR` 相關測試手法, 並提供平台.
+* 整理 `Portwell` `5`pcs 相關異常現象於表格中.
+* 將 `50017` 送至 `RMA` 更換 `controller` & `Remount` Flash.
+* 測試 `Portwell` `3`pcs 於客戶平台進行各 `50` 次 `cold boot`, 並將相關資訊提供.
+* 協助 `FW-RD Allen` 觀看 `Borch` `3SE3` 測試狀況.
+* 更新 `OSR` 目前測試狀況於 `EU-FAE`.
+* 更新 `eFAE` 客訴案進度.
+* 協助 `Shelly` 提供 `Windows LTSC 2019` image.
+* 協助詢問 `Steatite Limited` 關於 `time sync` 相關問題.
+* TODO
+  * [x] 至 `RMA` 取回 `50017` 並執行 `Re-MP`.
+  * [x] 協助 `FW-RD Allen` 觀看 `Borch` `3SE3` 測試狀況.
+  * [x] 與 `EU-FAE` sync `Borch` 測試狀況.
+  * [x] 協助 `SW-RD` 於 `Windows 7` 平台開啟 `ubuntu` os.
+  * [x] 與 `EU-FAE` sync `Neousys` 平台測試結果.
+  * [x] 協助 `Vincent` 處理 `SSD` format 為 `ext3`.
+  * [x] 協助 `PM-Kevin` 回覆 `PCIe` clock 相關問題.
+  * [x] 協助 `EVA` 將 `mSATA 3ME4` 送至 `RMA`.
+  * [x] 協助 `Danny` 觀看 `USB` 隨機不認碟客訴案相關問題.
+  * [x] 申請領取 `Portwell` & `Astute Electronics` 相關樣品.
+
+# 2024-07-04
+* 至 `RMA` 取回 `50017` 並執行 `Re-MP`, 後續發現 `channel 0` `Flash` 有異常, 後續做回烘之後即正常.
+  * 執行 `BurninTest`, 並觀察是否有 `Later bad`.
+* 協助 `FW-RD Allen` 觀看 `Borch` `3SE3` 測試狀況.
+* 與 `EU-FAE` sync `Borch` 測試狀況.
+* 協助 `SW-RD` 於 `Windows 7` 平台開啟 `ubuntu` os.
+* 與 `EU-FAE` sync `Neousys` 平台測試結果.
+* 協助 `Vincent` 處理 `SSD` format 為 `ext3`.
+* 協助 `PM-Kevin` 回覆 `PCIe` clock 相關問題.
+* 協助 `EVA` 將 `mSATA 3ME4` 送至 `RMA`.
+* 協助 `Danny` 觀看 `USB` 隨機不認碟客訴案相關問題.
+* 申請領取 `Portwell` & `Astute Electronics` 相關樣品.
+* TODO
+  * [ ] 參與 `EU-FAE` 週會.
+  * [ ] 協助 `Kiwi` 處理 `漢翔` `EDC USB` 開卡設定.
+  * [ ] 觀看 `50017` 執行 `BurninTest`, 是否有相關異常 & `Later bad`.
+
