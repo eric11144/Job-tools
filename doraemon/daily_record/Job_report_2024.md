@@ -1938,7 +1938,52 @@
 * 協助 `Danny` 觀看 `USB` 隨機不認碟客訴案相關問題.
 * 申請領取 `Portwell` & `Astute Electronics` 相關樣品.
 * TODO
-  * [ ] 參與 `EU-FAE` 週會.
-  * [ ] 協助 `Kiwi` 處理 `漢翔` `EDC USB` 開卡設定.
-  * [ ] 觀看 `50017` 執行 `BurninTest`, 是否有相關異常 & `Later bad`.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Kiwi` 處理 `漢翔` `EDC USB` 開卡設定.
+  * [x] 觀看 `50017` 執行 `BurninTest`, 是否有相關異常 & `Later bad`.
+  * [x] 協助 `SW RD` 測試 `Windows 7` 是否能於 `Z370-P` 或是其他較新主機板安裝.
+  * [x] 嘗試安裝 `Windows 7` 缺少之 `driver`.
+  * [x] 協助 `SW RD` 測試於 `MSI` `H55M-P31` 安裝 `ubuntu` os.
+
+# 2024-07-05
+* 參與 `EU-FAE` 週會.
+* 協助 `Kiwi` 處理 `漢翔` `EDC USB` 開卡設定, 修改對應欄位後, 將 device 寄回給客戶.
+* 觀看 `50017` 執行 `BurninTest`, 是否有相關異常 & `Later bad`, 確認無 `Later bad`.
+* 協助 `SW RD` 測試 `Windows 7` 是否能於 `Z370-P` 或是其他較新主機板安裝.
+* 嘗試安裝 `Windows 7` 缺少之 `driver`, `USB control` 的部份還是無法成功.
+* 協助 `SW RD` 測試於 `MSI` `H55M-P31` 安裝 `ubuntu` os, 後續將 `ubuntu 14.04` 安裝於 `MBR` usb 即可安裝.
+* TODO
+  * [x] 與 `EU` 人員討論 `windows 7` 無法執行 `innoOSR` 相關測試進度.
+  * [x] 嘗試安裝 `Windows 7` 缺少之 `driver`.
+  * [x] 與 `SW RD` 討論 `windows 7` 無法執行 `innoOSR` 相關測試進度.
+  * [x] 協助 `FW RD` 架設 `3SE3` `ULink` 測試環境.
+  * [x] 協助 `PM-Jack` 提供 `EU` `B&R` `Flash` 異常相關資訊.
+  * [x] 觀看 `50017` 執行 `BurninTest` 相關狀況.
+
+# 2024-07-08
+* 與 `EU` 人員討論 `windows 7` 無法執行 `innoOSR` 相關測試進度.
+* 嘗試安裝 `Windows 7` 缺少之 `driver`.
+* 與 `SW RD` 討論 `windows 7` 無法執行 `innoOSR` 相關測試進度, 後續 `SW RD` 告知 `Z370-P` 可執行 `innoOSR`.
+* 協助 `FW RD` 架設 `3SE3` `ULink` 測試環境.
+* 協助 `PM-Jack` 提供 `EU` `B&R` `Flash` 異常相關資訊.
+* 觀看 `50017` 執行 `BurninTest` 相關狀況.
+* TODO
+  * [x] 協助 `Vincent` 提供 `S23703i` bin file.
+  * [x] 協助 `SW RD` 測試 `Z370-P` 執行 `innoOSR`.
+  * [x] 協助 `Shelly` 觀看 `Moxa` 平台認碟相關問題.
+  * [x] 協助 `SW RD` 安裝 `Windows 7` 測試環境.
+  * [x] 協助處理 `Steatite Limited` 關於 `time sync` 相關問題.
+  * [x] 架設 `Curtisswright` 測試 `3TG6-P` `r/w` 環境.
+
+# 2024-07-09
+* 協助 `Vincent` 提供 `S23703i` bin file.
+* 協助 `SW RD` 測試 `Z370-P` 執行 `innoOSR`, 確定無法正常操作, 並將狀況回報.
+* 協助 `Shelly` 觀看 `Moxa` 平台認碟相關問題.
+* 協助 `SW RD` 安裝 `Windows 7` 測試環境.
+* 協助處理 `Steatite Limited` 關於 `time sync` 相關問題.
+* 架設 `Curtisswright` 測試 `3TG6-P` `r/w` 環境, 並無看到速度過慢, 以及降 `Gen` 問題.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況.
+  * [ ] 處理 `Factory system` 退回之 `3TG6-P` device 進行 `Re-MP`.
 
