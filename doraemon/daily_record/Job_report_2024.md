@@ -1983,7 +1983,25 @@
 * 協助處理 `Steatite Limited` 關於 `time sync` 相關問題.
 * 架設 `Curtisswright` 測試 `3TG6-P` `r/w` 環境, 並無看到速度過慢, 以及降 `Gen` 問題.
 * TODO
-  * [ ] 參與 `FAE` 週會.
+  * [x] 參與 `FAE` 週會.
+  * [x] 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況.
+  * [x] 處理 `Factory system` 退回之 `3TG6-P` device 進行 `Re-MP`.
+  * [x] 協助 `Kiwi` & `Jay` 架設測試平台( `Windows 10` ).
+  * [x] 觀看 `Z170` 主機板運作狀況.
+  * [x] 針對 `Factory system` `FEB240607007` `3TG6-P` 客退品進行 `ReMP`, 再執行 `BurninTest`.
+  * [x] 與 `EU-FAE`  sync `FA` case 相關進度.
+
+# 2024-07-10
+* 參與 `FAE` 週會.
+* 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況.
+* 處理 `Factory system` 退回之 `3TG6-P` device 進行 `Re-MP`.
+* 協助 `Kiwi` & `Jay` 架設測試平台( `Windows 10` ).
+* 觀看 `Z170` 主機板運作狀況, 後續發現 `PW SW` 有異常, 無法正常開機.
+* 針對 `Factory system` `FEB240607007` `3TG6-P` 客退品進行 `ReMP`( `Update to A23A20` ), 再執行 `BurninTest`, 測試 `5min` 發生掉碟異常, 並將 `log` 提供給 `FW RD`.
+* 與 `EU-FAE`  sync `FA` case 相關進度.
+* TODO
+  * [x] 針對 `Factory system` `FEB240607007` `3TG6-P` 客退品進行 `controller` 回烘, 再進行 `ReMP`.
   * [ ] 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況.
-  * [ ] 處理 `Factory system` 退回之 `3TG6-P` device 進行 `Re-MP`.
+  * [ ] 製作 `UART` 細針.
+  * [ ] 協助 `Shelly` 觀看 `Moxa` `3TE7` 高溫無法認碟問題.
 
