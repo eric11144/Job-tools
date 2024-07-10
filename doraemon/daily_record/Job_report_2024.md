@@ -2001,7 +2001,19 @@
 * 與 `EU-FAE`  sync `FA` case 相關進度.
 * TODO
   * [x] 針對 `Factory system` `FEB240607007` `3TG6-P` 客退品進行 `controller` 回烘, 再進行 `ReMP`.
-  * [ ] 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況.
-  * [ ] 製作 `UART` 細針.
-  * [ ] 協助 `Shelly` 觀看 `Moxa` `3TE7` 高溫無法認碟問題.
+  * [x] 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況, 並架設其環境.
+  * [x] 協助 `Jay` 觀看 `Elog dump` 相關 `script` 問題.
+  * [x] 協助 `Shelly` 觀看 `Moxa` `3TE7` 高溫無法認碟問題.
+  * [x] 協助新人學習主機板相關知識.
+
+# 2024-07-11
+* 針對 `Factory system` `FEB240607007` `3TG6-P` 客退品進行 `controller` 回烘, 再進行 `ReMP`.
+* 觀看 `US` 客戶平台發生 `3TG6-P` 無法認碟狀況, 並架設其環境, 後續因插槽裝反, 以及 `FW` version 不對, 花費時間重置, 並安裝 `Ubuntu 22.04`.
+* 協助 `Jay` 觀看 `Elog dump` 相關 `script` 問題.
+* 協助 `Shelly` 觀看 `Moxa` `3TE7` 高溫無法認碟問題.
+* 協助新人學習主機板相關知識.
+* 協助 `Sales-Vincent` 處理 `3IE7` `DLMC` tool 相關問題.
+* TODO
+  * [ ] 觀看 `US` 客戶平台發生 `3TG6-P` `power on/off` 無法認碟狀況.
+  * [ ] 參與 `EU-FAE` 週會.
 
