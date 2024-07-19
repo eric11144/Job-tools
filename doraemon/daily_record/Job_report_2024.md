@@ -2014,6 +2014,109 @@
 * 協助新人學習主機板相關知識.
 * 協助 `Sales-Vincent` 處理 `3IE7` `DLMC` tool 相關問題.
 * TODO
-  * [ ] 觀看 `US` 客戶平台發生 `3TG6-P` `power on/off` 無法認碟狀況.
-  * [ ] 參與 `EU-FAE` 週會.
+  * [x] 觀看 `US` 客戶平台發生 `3TG6-P` `power on/off` 無法認碟狀況.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Leo` 觀看 `cmake` 相關執行問題.
+  * [x] 整理產生 `SLC Later bad` 之 `device` `SMART` 資訊. 
+  * [x] 架設 `Windows 7` 執行 `innoOSR` 相關環境.
+  * [x] 查找 `Windows 7` 相關 `driver`.
 
+# 2024-07-12
+* 觀看 `US` 客戶平台發生 `3TG6-P` `power on/off` 無法認碟狀況, 後續有看異常現象, 並將 `UART` log 提供.
+* 參與 `EU-FAE` 週會.
+* 協助 `Leo` 觀看 `cmake` 相關執行問題.
+* 整理產生 `SLC Later bad` 之 `device` `SMART` 資訊. 
+* 架設 `Windows 7` 執行 `innoOSR` 相關環境.
+* 查找 `Windows 7` 相關 `driver`.
+* TODO
+  * [x] 整理產生 `SLC Later bad` 之 `device` `SMART` 資訊.
+  * [x] 與 `Kerry` 討論 `FA` case.
+  * [x] 處理 `Windows 7` 測試平台之相關 `Memory`.
+  * [x] 與 `SW RD` 測試 `innoOSR`.
+  * [x] 錄製執行 `innoOSR` 過程之 `UART` log.
+  * [x] 查找 `Windows 7` 相關 `driver`.
+  * [x] 前往 `EP` 辦公室測試 `Z370` 執行 `innoOSR` 狀況.
+
+# 2024-07-15
+* 整理產生 `SLC Later bad` 之 `device` `SMART` 資訊.
+* 與 `Kerry` 討論 `FA` case.
+* 處理 `Windows 7` 測試平台之相關 `Memory`.
+* 與 `SW RD` 測試 `innoOSR`, 需要將平台之 `Marvell ATA` driver 安裝, 執行過程中, 發生 `innoOSR` clean command 卡住, 需 `timeout` 才可以後續執行.
+* 錄製執行 `innoOSR` 過程之 `UART` log.
+* 查找 `Windows 7` 相關 `driver`.
+* 前往 `EP` 辦公室測試 `Z370` 執行 `innoOSR` 狀況, 後續發生閃退之相關問題, 也無法在平台安裝 `Windows 7`, 後續會透過其他平台安裝再做相關測試.
+* 將 
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 查找 `Windows 7` 相關 `driver`.
+  * [x] 與 `EU-FAE` 討論 `Windows 7` 測試 `innoOSR` 相關流程, 以及結果.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題.
+
+# 2024-07-16
+* 參與 `FAE-team2` 週會.
+* 查找 `Windows 7` 相關 `driver`.
+* 與 `EU-FAE` 討論 `Windows 7` 測試 `innoOSR` 相關流程, 以及結果.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 與 `EU-FAE` 討論 `Windows 7` 測試 `innoOSR` 相關流程, 以及結果.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題, 後續與 `FW RD` 討論後, 取得 `5`版 `PHY` bin file, 會再針對這 `5` 版做相關測試.
+  * [x] 回覆 `candtsolution` `AnNan` 關於 `US` `3TG6-P` `Linux` 測試重開機相關結果.
+  * [x] 協助 `Jay` 準備 `5`pcs `M.2 to SATA` 轉板.
+  * [x] 測試 `Windows 7` 相關 `driver`.
+  * [x] 協助詢問 `EU` `FA` case 有關於 `電容` 後續相關處理.
+
+# 2024-07-17
+* 參與 `FAE` 週會.
+* 與 `EU-FAE` 討論 `Windows 7` 測試 `innoOSR` 相關流程, 以及結果.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題, 後續與 `FW RD` 討論後, 取得 `5`版 `PHY` bin file, 會再針對這 `5` 版做相關測試.
+* 回覆 `candtsolution` `AnNan` 關於 `US` `3TG6-P` `Linux` 測試重開機相關結果.
+* 協助 `Jay` 準備 `5`pcs `M.2 to SATA` 轉板.
+* 測試 `Windows 7` 相關 `driver`.
+* 協助詢問 `EU` `FA` case 有關於 `電容` 後續相關處理.
+* TODO
+  * [x] 協助 `C.C.` & `PM Jack` 提供關於 `Extra computer` `FA` case 相關問題.
+  * [x] 協助 `EU-FAE` 回報 `Avnet` 相關測試結果.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( `5`版 `PHY` ).
+  * [x] 測試 `Windows 7` 相關 `driver`.
+  * [x] 協助 `Kiwi` 架設 `FIO` 測試 `3MG2-P` device.
+  * [x] 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+  * [x] 協助 `Davis` 測試 `innoOSR` `mode 1`功能於 `Z370` 平台.
+
+# 2024-07-18
+* 協助 `C.C.` & `PM Jack` 提供關於 `Extra computer` `FA` case 相關問題.
+* 協助 `EU-FAE` 回報 `Avnet` 相關測試結果.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( `5`版 `PHY` ), 發現其中 `2` 組有異常.
+* 測試 `Windows 7` 相關 `driver`, 後續發現 `USB` driver 正常, 以及 `innoOSR` 可正常使用於 `MSI` `H55MA-E43` 平台.
+* 協助 `Kiwi` 架設 `FIO` 測試 `3MG2-P` device.
+* 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+* 協助 `Davis` 測試 `innoOSR` `mode 1`功能於 `Z370` 平台.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( `5`版 `PHY` ), 並撰寫 `reboot` 自動程式.
+  * [x] 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+  * [x] 協助 `Jay` 錄製 `3MG2-P` 透過 `hdparm` 操作, 並錄製 `SATA analyzer`.
+  * [x] 回報 `EU` 關於 `Avnet` 搭配 `FW: S24624` 測試相關結果.
+  * [x] 協助 `EU-FAE` 準備 `3TG6-P PCIe` 相關 `MP-tool`.
+  * [x] 與 `curtisswright` 人員討論 `3TG6-P` 寫入相關測試流程.
+
+# 2024-07-19
+* 參與 `EU-FAE` 週會.
+* 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( `5`版 `PHY` ), 並撰寫 `reboot` 自動程式.
+  * `EMPH9_AMP15` -> 可認碟, 機率性發生 `COMMON RESET Fail`.
+  * `EMPH9_AMP19` -> 可認碟, 機率性發生 `COMMON RESET Fail`.
+  * `EMPH15_AMP12` -> 隨機不認碟, 並無法開進系統.
+  * `EMPH15_AMP15` -> 隨機不認碟, 並無法開進系統.
+  * `EMPH15_AMP19` -> 完全不認碟, 並無法開進系統.
+* 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+* 協助 `Jay` 錄製 `3MG2-P` 透過 `hdparm` 操作, 並錄製 `SATA analyzer`.
+* 回報 `EU` 關於 `Avnet` 搭配 `FW: S24624` 測試相關結果.
+* 協助 `EU-FAE` 準備 `3TG6-P PCIe` 相關 `MP-tool`.
+* 與 `curtisswright` 人員討論 `3TG6-P` 寫入相關測試流程.
+* TODO
+  * [x] 協助 `EU` 觀看 `Windows 7` 相關 `driver`.
+  * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 降 `Gen2` & 調整 `PHY` ).
+  * [x] 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
