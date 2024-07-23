@@ -2120,3 +2120,24 @@
   * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
   * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 降 `Gen2` & 調整 `PHY` ).
   * [x] 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+
+# 2024-07-22
+* 協助 `EU` 觀看 `Windows 7` 相關 `driver`.
+* 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 降 `Gen2` & 調整 `PHY` ).
+* 協助 `Hank` 處理 `3TE7` 拷貝 `Cirrus` `image` 相關開機問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 回報 `3SE3` `ULink` 測試狀況於 `EU-FAE`.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device.
+
+# 2024-07-23
+* 參與 `FAE-team2` 週會.
+* 回報 `3SE3` `ULink` 測試狀況於 `EU-FAE`.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ), 皆有異常.
+* 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device, 皆無問題.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` )
+  * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device( `Second` ).
