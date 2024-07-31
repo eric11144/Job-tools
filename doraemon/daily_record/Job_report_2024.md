@@ -2139,5 +2139,52 @@
 * 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device, 皆無問題.
 * TODO
   * [x] 參與 `FAE` 週會.
-  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` )
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
   * [x] 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device( `Second` ).
+
+# 2024-07-24
+* 參與 `FAE` 週會.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+* 協助 `Kiwi` 觀看 `FIO` 測試 `3MG2-P` device( `Second` ).
+* TODO
+  * [x] 休假.
+
+# 2024-07-25
+* 休假.
+* TODO
+  * [x] 休假.
+
+# 2024-07-26
+* 休假.
+* TODO
+  * [x] 休假.
+
+# 2024-07-29
+* 休假.
+* TODO
+  * [x] 休假.
+
+# 2024-07-30
+* 休假.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助觀看 `FEB240621010` `6`pcs `LBB` 過高異常狀況.
+  * [x] 協助測試 `DGM28-C12DC1KCBEF` `FW` update tool ( `C22822` -> `C22822E` ), 並提供相關 `bin file` & `結果圖`.
+  * [x] 詢問客戶關於 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
+  * [x] 協助測試 `Curtisswright` `3TG6-P` `R/W` 後, 開機過慢問題.
+  * [x] 更新 `Nexcom` `EU` 目前測試結果, 已經相關狀況.
+  * [x] 回報測試 `US` `3TG6-P` `Linux` 重開機測試結果( 調整 `PHY` )於客戶.
+
+# 2024-07-31
+* 參與 `FAE` 週會.
+* 協助觀看 `FEB240621010` `6`pcs `LBB` 過高異常狀況.
+* 協助測試 `DGM28-C12DC1KCBEF` `FW` update tool ( `C22822` -> `C22822E` ), 並提供相關 `bin file` & `結果圖`.
+* 詢問客戶關於 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
+* 協助測試 `Curtisswright` `3TG6-P` `R/W` 後, 開機過慢問題.
+* 更新 `Nexcom` `EU` 目前測試結果, 已經相關狀況.
+* 回報測試 `US` `3TG6-P` `Linux` 重開機測試結果( 調整 `PHY` )於客戶.
+* TODO
+  * [x] 更新 `FEB240621010` 狀況.
+  * [ ] 測試 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
+  * [x] 協助測試 `Curtisswright` `3TG6-P` `R/W` 異常斷電相關結果, 並錄製影片.
+  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
