@@ -2185,6 +2185,74 @@
 * 回報測試 `US` `3TG6-P` `Linux` 重開機測試結果( 調整 `PHY` )於客戶.
 * TODO
   * [x] 更新 `FEB240621010` 狀況.
-  * [ ] 測試 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
+  * [x] 測試 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
   * [x] 協助測試 `Curtisswright` `3TG6-P` `R/W` 異常斷電相關結果, 並錄製影片.
-  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 與 `Jacky` 討論組內後續組織架構.
+
+# 2024-08-01
+* 更新 `FEB240621010` 狀況.
+* 測試 `FED240724001` `3TG8-P` `LED` 異常相關狀況.
+* 協助測試 `Curtisswright` `3TG6-P` `R/W` 異常斷電相關結果, 並錄製影片.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+* 與 `Jacky` 討論組內後續組織架構.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 前往 `SMT` 拿取 `9`pcs `X-Ray` 結果( `FEC240625009` & `FEB240621010` ).
+  * [x] 協助測試 `Curtisswright` `3TG6-P` `R/W` 異常斷電相關結果, 並提供 `PCN` 文件.
+  * [x] 討論 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 測試 `FEC240625009` `3` pcs `iCF 4000`.
+  * [x] 測試 `FEB240621010` `6` pcs `CFast 3SE`.
+
+# 2024-08-02
+* 參與 `EU-FAE` 週會.
+* 前往 `SMT` 拿取 `9`pcs `X-Ray` 結果( `FEC240625009` & `FEB240621010` ).
+* 協助測試 `Curtisswright` `3TG6-P` `R/W` 異常斷電相關結果, 並提供 `PCN` 文件.
+* 討論 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ), 後續平台 `power` IC 燒毀, 無法進行後續測試.
+* 測試 `FEC240625009` `3` pcs `iCF 4000`.
+* 測試 `FEB240621010` `6` pcs `CFast 3SE`.
+* TODO
+  * [x] 將 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
+  * [x] 測試 `FEC240625009` `3` pcs `iCF 4000`.
+  * [x] 測試 `FEB240621010` `6` pcs `CFast 3SE`.
+  * [x] 協助 `EU` 提供 `iCF 4000` `windows` & `Linux` 之 `iSMART`.
+  * [x] 協助 `Danny` 測試 `3TG8-P` `AIDA 64`.
+  * [x] 參與 `FAE` 後續組織架構會議.
+
+# 2024-08-05
+* 將 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
+* 測試 `FEC240625009` `3` pcs `iCF 4000`.
+  * `1`pcs 無法進行 `r/w`.
+  * `2`pcs 無法被辨識, 透過拆殼量測相關電路, 並未發生短路現象.
+* 測試 `FEB240621010` `6` pcs `CFast 3SE`.
+  * `YCA12005200180083`: `Power On Hours 3600, Later Bad Block 0`.
+  * `YCA12310310200154`: `Power On Hours 4, Later Bad Block 2`.
+  * `YCA12310310200175`: `Power On Hours 16, Later Bad Block 260`.
+  * `YCA12310310200176`: `Power On Hours 3, Later Bad Block 13`.
+  * `YCA12310310200178`: `Power On Hours 47, Later Bad Block 75`.
+  * `YCA12310310200209`: `Power On Hours 44, Later Bad Block 90`.
+* 協助 `EU` 提供 `iCF 4000` `windows` & `Linux` 之 `iSMART`.
+* 協助 `Danny` 測試 `3TG8-P` `AIDA 64`.
+* 參與 `FAE` 後續組織架構會議.
+* TODO
+  * [x] 參與 `FAE` 後續組織架構會議.
+  * [x] 更新 `FEB240621010` 測試狀況.
+  * [x] 寄送 `FEC240625009` `3` pcs `iCF 4000` 於 `Hyperstone` 分析.
+  * [x] 協助測試 `FED240724001` `3TG8-P` `2`pcs 同時放入系統 `LED` 相關顯示問題.
+
+# 2024-08-06
+* 參與 `FAE` 後續組織架構會議.
+* 更新 `FEB240621010` 測試狀況.
+  * 針對 `YCA12310310200175` & `YCA12310310200178` 做相關實驗.
+    * `YCA12310310200178` : `burnintest` `8hr`  -> `LBB` `75` -> `132`.
+  * 透過 `FW` 將 `LBB` 調整為 `65` 個, 再刷回原 `FW`, 進行 `burnintest`0
+    * `YCA12310310200175` : `burnintest` `18hr` -> `LBB` `65` -> `66`.
+    * `YCA12310310200178` : `burnintest` `68hr` -> `LBB` `65` -> `61`.
+  * `YCA12310310200175` 在實驗過程中, `connector` 損壞, 暫無法繼續實驗.
+  * 後續會使用 `YCA12310310200176` 做相關測試, 觀看 `LBB` 是否會大量增加.
+* 寄送 `FEC240625009` `3` pcs `iCF 4000` 於 `Hyperstone` 分析.
+* 協助測試 `FED240724001` `3TG8-P` `2`pcs 同時放入系統 `LED` 相關顯示問題, 並未看到相關問題.
+* TODO
+  * [ ] 參與 `FAE` 週會.
+  * [ ] 更新 `FEB240621010` 測試狀況.
+
