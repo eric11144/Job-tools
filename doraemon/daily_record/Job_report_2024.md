@@ -2212,7 +2212,7 @@
 * 測試 `FEC240625009` `3` pcs `iCF 4000`.
 * 測試 `FEB240621010` `6` pcs `CFast 3SE`.
 * TODO
-  * [x] 將 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
+  * [x] 將 `FSA240806004` `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
   * [x] 測試 `FEC240625009` `3` pcs `iCF 4000`.
   * [x] 測試 `FEB240621010` `6` pcs `CFast 3SE`.
   * [x] 協助 `EU` 提供 `iCF 4000` `windows` & `Linux` 之 `iSMART`.
@@ -2220,7 +2220,7 @@
   * [x] 參與 `FAE` 後續組織架構會議.
 
 # 2024-08-05
-* 將 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
+* 將 `FSA240806004` `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ) 平台寄回原廠.
 * 測試 `FEC240625009` `3` pcs `iCF 4000`.
   * `1`pcs 無法進行 `r/w`.
   * `2`pcs 無法被辨識, 透過拆殼量測相關電路, 並未發生短路現象.
@@ -2253,6 +2253,75 @@
 * 寄送 `FEC240625009` `3` pcs `iCF 4000` 於 `Hyperstone` 分析.
 * 協助測試 `FED240724001` `3TG8-P` `2`pcs 同時放入系統 `LED` 相關顯示問題, 並未看到相關問題.
 * TODO
-  * [ ] 參與 `FAE` 週會.
-  * [ ] 更新 `FEB240621010` 測試狀況.
+  * [x] 參與 `FAE` 週會.
+  * [x] 更新 `FEB240621010` 測試狀況.
+  * [x] 協助 `EU-FAE` 回覆 `3TG8-P` 無法認碟相關問題.
+  * [x] 測試 `Curtiss Wright` `3TG6-P` 基於 `A23A20` 新增建表加速機制.
+  * [x] 協助 `US-FAE` 處理 `Digi-key Corporation` `3TE7` 相關客訴問題.
 
+# 2024-08-07
+* 參與 `FAE` 週會.
+* 更新 `FEB240621010` 測試狀況.
+* 協助 `EU-FAE` 回覆 `3TG8-P` 無法認碟相關問題.
+* 測試 `Curtiss Wright` `3TG6-P` 基於 `A23A20` 新增建表加速機制.
+* 協助 `US-FAE` 處理 `Digi-key Corporation` `3TE7` 相關客訴問題.
+* TODO
+  * [x] 申請名片.
+  * [x] 提供 `Hyperstone` 關於 `Re-MP` 相關 `DD.txt`.
+  * [x] 協助 `PM-George` 回覆 `FSA240806004` 客訴相關進度.
+  * [x] 協助 `FED240724001` 測試以及提供測試結果( `3TG8-P` `LED` 顯示相關問題 ).
+  * [x] 與 `Sales-Joan` & `FW-RD` 討論關於 `Curtiss Wright` `3TG6-P` 後續更新相關問題.
+  * [x] 協助觀看 `FA240801002` `OnLogic` `mSATA 3ME4` 安裝完系統後, 進入 `loader mode` 問題.
+  * [x] 協助 `Sales-Joan` 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠.
+
+# 2024-08-08
+* 申請名片.
+* 提供 `Hyperstone` 關於 `Re-MP` 相關 `DD.txt`.
+* 協助 `PM-George` 回覆 `FSA240806004` 客訴相關進度.
+* 協助測試以及提供測試結果( `3TG8-P` `LED` 顯示相關問題 ).
+* 與 `Sales-Joan` & `FW-RD` 討論關於 `Curtiss Wright` `3TG6-P` 後續更新相關問題.
+* 協助觀看 `FA240801002` `OnLogic` `mSATA 3ME4` 安裝完系統後, 進入 `loader mode` 問題, 並錄製相關 `UART log` 於 `FW-RD` 分析.
+* 協助 `Sales-Joan` 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 參與 `Curtiss Wright` 討論會議.
+  * [x] 整理 `Curtiss Wright` 相關測試數據, 以及撰寫 `SSD` 與 `Computer` 連接相關關係圖.
+  * [x] 協助 `Curtiss Wright` 測試寫入 `120GB` 資料, 進行異常上斷電開機時間.
+  * [x] 提供 `Digi-key Corporation` 客訴品寄回相關資訊.
+  * [x] 與 `EU-Sales` sync 後續 `FAE` 組織架構調整.
+  * [x] 與 `Sales-Joan` & `FW-RD` 討論 `Curtiss Wright` `FW` 更新相關流程, 以及可能性(`A19307` -> `A23A20F`).
+  * [x] 與 `EU-FAE` & `PM` 討論 `FED240724001` 硬體相關問題.
+  * [x] 詢問 `FW-RD` 關於 `3SE` `LBB` 減少相關機制.
+
+# 2024-08-09
+* 參與 `EU-FAE` 週會.
+* 參與 `Curtiss Wright` 討論會議.
+* 整理 `Curtiss Wright` 相關測試數據, 以及撰寫 `SSD` 與 `Computer` 連接相關關係圖.
+* 協助 `Curtiss Wright` 測試寫入 `120GB` 資料, 進行異常上斷電開機時間.
+* 提供 `Digi-key Corporation` 客訴品寄回相關資訊.
+* 與 `EU-Sales` sync 後續 `FAE` 組織架構調整.
+* 與 `Sales-Joan` & `FW-RD` 討論 `Curtiss Wright` `FW` 更新相關流程, 以及可能性(`A19307` -> `A23A20F`).
+* 與 `EU-FAE` & `PM` 討論 `FED240724001` 硬體相關問題.
+* 詢問 `FW-RD` 關於 `3SE` `LBB` 減少相關機制.
+* TODO
+  * [x] 參與 `3TE7` `PCN` 討論會議.
+  * [x] 整理 `Curtiss Wright` 測試寫入 `120GB` 資料, 進行異常上斷電開機時間, 並將結果提供.
+  * [x] 協助 `FW-RD` 針對 `B&R` `Spezial` `YCA12310310200178` `LBB` 減少之行為觀察(透過 `write code` 更新 `debug FW`), 並協助錄製 `UART log`.
+  * [x] 與 `EU-FAE` sync `FED240724001` 樣品借出相關狀況.
+  * [x] 與 `FW-RD` 討論 `Curtiss Wright` `3TG6-P` 後續 `DLMC` 相關資訊.
+  * [x] 提供 `FA240801002` `OnLogic` `mSATA 3ME4` 透過 `write code` 更新 `debug` `FW`, 並提供相關 `UART log` & `device`.
+  * [x] 更新 `TTS` 客訴案相關進度.
+  * [x] 觀看 `HMI` 退回之 `M.2 S42 3TE7` 異常狀況.
+
+# 2024-08-12
+* 參與 `3TE7` `PCN` 討論會議.
+* 整理 `Curtiss Wright` 測試寫入 `120GB` 資料, 進行異常上斷電開機時間, 並將結果提供.
+* 協助 `FW-RD` 針對 `B&R` `Spezial` `YCA12310310200178` `LBB` 減少之行為觀察(透過 `write code` 更新 `debug FW`), 並協助錄製 `UART log`.
+* 與 `EU-FAE` sync `FED240724001` 樣品借出相關狀況.
+* 與 `FW-RD` 討論 `Curtiss Wright` `3TG6-P` 後續 `DLMC` 相關資訊.
+* 提供 `FA240801002` `OnLogic` `mSATA 3ME4` 透過 `write code` 更新 `debug` `FW`, 並提供相關 `UART log` & `device`.
+* 更新 `TTS` 客訴案相關進度.
+* 觀看 `HMI` 退回之 `M.2 S42 3TE7` 異常狀況.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠.
