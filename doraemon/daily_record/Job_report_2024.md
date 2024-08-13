@@ -2323,5 +2323,45 @@
 * 更新 `TTS` 客訴案相關進度.
 * 觀看 `HMI` 退回之 `M.2 S42 3TE7` 異常狀況.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠.
+  * [x] 協助測試 `Curtiss Wright` `3TG6-P` 透過 `MView` 進行 `Re-MP` 更新.
+  * [x] 與 `FW-RD` 討論 `FA240801002` `OnLogic` `mSATA 3ME4` 異常狀況( `L1` ).
+  * [x] 協助 `EU-FAE` 提供 `DGS25-01TM71KCAQL-26` 開卡包.
+  * [x] 協助 `Kiwi` 將 `B&R` `Spezial` `YCA12310310200178` & `YCA12310310200176` 送至 `Chamber` `85˚C` 烘烤 `3`days.
+  * [x] 與 `Jackie` & `Miller` 討論組織架構.
+  * [x] 測試 `HMI` `3IE7` `Burnintest` 復現異常狀況. 
+
+# 2024-08-13
+* 參與 `FAE-team2` 週會.
+* 觀看 `HMI` 寄回之平台, 並透過其他方式去除客戶封膠, 目前等待客戶是否同意破壞 `PCB`.
+* 協助測試 `Curtiss Wright` `3TG6-P` 透過 `MView` 進行 `Re-MP` 更新, 確定沒問題.
+* 與 `FW-RD` 討論 `FA240801002` `OnLogic` `mSATA 3ME4` 異常狀況( `L1` ), 並將狀況回報給 `Sales-Joanne`.
+* 協助 `EU-FAE` 提供 `DGS25-01TM71KCAQL-26` 開卡包.
+* 協助 `Kiwi` 將 `B&R` `Spezial` `YCA12310310200178` & `YCA12310310200176` 送至 `Chamber` `85˚C` 烘烤 `3`days.
+* 與 `Jackie` & `Miller` 討論組織架構.
+* 測試 `HMI` `3IE7` `Burnintest` 復現異常狀況.
+* TODO
+  * [x] 參與 `FAE` 週會.
+  * [x] 協助 `Sales-Jolie` 觀看 `聖捷思` `3TG6-P` 異常狀況.
+  * [x] 協助 `Sales-Joan` 提供 `iOPAL` 相關文件.
+  * [x] 與 `Mike` 討論 `聖捷思` `3TG6-P` 異常狀況.
+  * [x] 協助 `Sales-Joan` 提供 `Curtiss Wright` `3TG6-P` `1`pcs 更新 `FW` 至 `A23A20F`, 並提供相關 `UART` 線材.
+  * [x] 協助 `Sales-Jessica` 提供 `B&R` 相關客訴品.
+  * [x] 與 `PM-Cindy` 討論 `Curtiss Wright` 客訴案狀況.
+  * [x] 協助 `Sales-Joan` 提供 `Curtiss Wright` `DLMC` & `正常/異常上斷電` 流程.
+  * [x] 詢問 `Hyperstone` 關於 `iCF 9000` 測試相關狀況.
+
+# 2024-08-14
+* 參與 `FAE` 週會.
+* 協助 `Sales-Jolie` 觀看 `聖捷思` `3TG6-P` 異常狀況.
+* 協助 `Sales-Joan` 提供 `iOPAL` 相關文件.
+* 與 `Mike` 討論 `聖捷思` `3TG6-P` 異常狀況.
+* 協助 `Sales-Joan` 提供 `Curtiss Wright` `3TG6-P` `1`pcs 更新 `FW` 至 `A23A20F`, 並提供相關 `UART` 線材.
+* 協助 `Sales-Jessica` 提供 `B&R` 相關客訴品.
+* 與 `PM-Cindy` 討論 `Curtiss Wright` 客訴案狀況.
+* 協助 `Sales-Joan` 提供 `Curtiss Wright` `DLMC` & `正常/異常上斷電` 流程.
+* 詢問 `Hyperstone` 關於 `iCF 9000` 測試相關狀況.
+* TODO
+  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機測試結果( 調整 `PHY` )於客戶.
+
