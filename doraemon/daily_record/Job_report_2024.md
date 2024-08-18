@@ -2363,5 +2363,70 @@
 * 協助 `Sales-Joan` 提供 `Curtiss Wright` `DLMC` & `正常/異常上斷電` 流程.
 * 詢問 `Hyperstone` 關於 `iCF 9000` 測試相關狀況.
 * TODO
-  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機測試結果( 調整 `PHY` )於客戶.
+  * [x] 協助 `Sales-Jessica` 提供 `B&R` 相關客訴品.
+  * [x] 協助 `Sales-Joan` 提供 `Curtiss Wright` 客訴品所需之 `DLMC tool` & `SOP`.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 撰寫 `聖結思` `3TG6-P` `bad queue` `FA` report.
+  * [x] 處理識別證照片問題.
 
+# 2024-08-15
+* 協助 `Sales-Jessica` 提供 `B&R` 相關客訴品.
+* 協助 `Sales-Joan` 提供 `Curtiss Wright` 客訴品所需之 `DLMC tool` & `SOP`.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 撰寫 `聖結思` `3TG6-P` `bad queue` `FA` report.
+* 處理識別證照片問題.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 與 `Kerry` & `Shelly` 討論 `Curtiss Wright` 客訴品所需之 `DLMC tool` & `SOP`.
+  * [x] 詢問 `SW-RD` 關於 `iCF 4000` `iSMART` 於 `Windows` & `Linux` 取值相關問題.
+  * [x] 協助詢問 `Boeing` `3TG6-P` `A20218_200904` -> `A23A30` 流程可行性.
+  * [x] 協助測試 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol).
+
+# 2024-08-16
+* 參與 `EU-FAE` 週會.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 與 `Kerry` & `Shelly` 討論 `Curtiss Wright` 客訴品所需之 `DLMC tool` & `SOP`.
+* 詢問 `SW-RD` 關於 `iCF 4000` `iSMART` 於 `Windows` & `Linux` 取值相關問題.
+  * 後續發現為 `Linux` 針對相關欄位取值有異常, 後續會再做相關調整.
+* 協助詢問 `Boeing` `3TG6-P` `A20218_200904` -> `A23A30` 流程可行性.
+  * 不能套用 `Curtiss Wright` 的方式, 需透過 `MView` load `FW` bin file 來做更新, 但如 `UART` 訊號不穩, 就會造成更新失敗.
+* 協助測試 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol).
+  * 結果比上一版 `FW` 多了 `5~6` sec.
+  * 後續會加測 `OS` `upgrade` & `Re-MP` device 至 `A23A20F`(不透過 `DLMC`).
+* TODO
+  * [x] 參與 `team build` `All hands`.
+  * [x] 協助測試 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol).
+    * [x] `OS` `upgrade`.
+    * [x] `Re-MP` device 至 `A23A20F_0815`.
+  * [x] 與 `Sales-Louis` 討論 `Boeing` 後續更新流程.
+  * [x] 與 `EU Sales` & `EU PM` 討論 `Boeing` 後續更新流程.
+  * [x] 與 `PM-Cindy` & `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815` 測試結果.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 協助回覆 `Curtiss Wright` 詢問之 `DLMC` 後, `LBB` 相關顯示問題.
+  * [x] 測試 `B&R` `Spezial` `YCA12310310200178` & `YCA12310310200176` 送至 `Chamber` `85˚C` 烘烤 `3`days 狀況.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 撰寫 `All hadns` 相關 `New`, `Continue` & `Stop` 相關紙條.
+
+# 2024-08-19
+* 參與 `team build` `All hands`.
+* 協助測試 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol).
+  * `OS` `upgrade` -> 比前一版 `FW` 多 `6s`.
+  * `Re-MP` device 至 `A23A20F_0815` -> 比前一版 `FW` 多 `6s`.
+* 與 `Sales-Louis` 討論 `Boeing` 後續更新流程
+  * 需提供平台給客戶.
+* 與 `EU Sales` & `EU PM` 討論 `Boeing` 後續更新流程
+  * 需提供平台給客戶.
+* 與 `PM-Cindy` & `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815` 測試結果.
+  * 說法會導向平台 `CPU` 不同, 導致處理時間不相同.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+* 協助回覆 `Curtiss Wright` 詢問之 `DLMC` 後, `LBB` 相關顯示問題.
+* 測試 `B&R` `Spezial` `YCA12310310200178` & `YCA12310310200176` 送至 `Chamber` `85˚C` 烘烤 `3`days 狀況.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 撰寫 `All hadns` 相關 `New`, `Continue` & `Stop` 相關紙條.
+* TODO
+  * [ ] 與 `Sales-Louis` 討論 `Boeing` 後續更新流程.
+  * [ ] 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).

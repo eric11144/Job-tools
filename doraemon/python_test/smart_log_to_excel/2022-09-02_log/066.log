@@ -1,0 +1,227 @@
+SMART Ver 6.1.00 LIB V6.1.0
+------------------------------------------------------------
+OS:	Microsoft Windows 10 專業版 64 位元
+CPU:	Intel(R) Core(TM) i3-10100 CPU @ 3.60GHz
+	CPU Cores : 8
+	L2 Cache : 1024 KB
+	L3 Cache : 6144 KB
+Motherboard:	Manufacture : ASRock
+	Model Name : B460M Pro4
+	SN : M80-E2003002002
+BIOS:	Manufacture : American Megatrends Inc.
+	BIOS Ver : ALASKA - 1072009
+Memory:	Capacity : 8 GB
+	Slot 0, Manufacture : 86F1, Location : ChannelA-DIMM0, 8 GB, 2400 MHz, 1.20 V
+Display:	Intel(R) UHD Graphics 630
+Network Card 1:	Intel(R) Ethernet Connection (12) I219-V
+MACAddress:	A8-A1-59-82-43-AB
+IPAddress:	172.16.49.119
+IPMask:	255.255.255.0
+Gateway:	172.16.49.254
+
+------------------------------------------------------------
+Slot: 1
+Part Number: i-DIMM
+Manufacturer: InnoDisk Corporation
+DRAM Type: DDR4
+Data Rate: 2400 MT/s
+Data Rate: 2 GB
+DIMM Type: non-ECC UDIMM
+Operating Temp: N/A*
+CAS Latency: 17.0
+IC Configureation: 512Mb x 8
+IC Brand: Innodisk
+Serial Number: 0001000A
+Week / Year: 23 / 18
+Thermal Sensor: No
+IC Grade: Original Grade (IC P/N visible on IC)
+Anti-sulfuration: Yes
+30弮" Golden Finger: No
+Write Protection: Unenabled
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	YCA12101200130795   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	99.87%
+PE Cycle:	3000
+AVG. Erase:	4
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	4030	1200BE64BE0F0000000000
+0C	Power Cycle Count	33	1200210021000000000000
+A3	Total Bad Block Count	6	1200060006000000000000
+A5	Max Erase Count	7	1200070007000000000000
+A7	Avg Erase Count	4	1200040004000000000000
+A9	Device Life	100	0000646464000000000000
+AA	Spare Block Count	254	13006464FE000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	29	12001D001D000000000000
+C2	Temperature	28	02001C641C000B0046031C
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	1165	120064648D040000000000
+F2	Total LBAs Read	280	1200646418010000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	YCA12101200130869   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	99.60%
+PE Cycle:	3000
+AVG. Erase:	12
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	7401	1200E964E91C0000000000
+0C	Power Cycle Count	95	12005F005F000000000000
+A3	Total Bad Block Count	36	1200240024000000000000
+A5	Max Erase Count	100	1200640064000000000000
+A7	Avg Erase Count	12	12000C000C000000000000
+A9	Device Life	100	0000646464000000000000
+AA	Spare Block Count	224	13006464E0000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	87	1200570057000000000000
+C2	Temperature	27	02001B641B0012003E031B
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	4696	1200646458120000000000
+F2	Total LBAs Read	2510	12006464CE090000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	Y5342008260030555   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	98.97%
+PE Cycle:	3000
+AVG. Erase:	31
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	11411	12009364932C0000000000
+0C	Power Cycle Count	205	1200CD00CD000000000000
+A3	Total Bad Block Count	7	1200070007000000000000
+A5	Max Erase Count	473	1200D900D9010000000000
+A7	Avg Erase Count	31	12001F001F000000000000
+A9	Device Life	99	0000646463000000000000
+AA	Spare Block Count	253	13006464FD000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	202	1200CA00CA000000000000
+C2	Temperature	25	02001964190014003F0319
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	13431	1200646477340000000000
+F2	Total LBAs Read	6661	12006464051A0000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	YCA12101200130969   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	99.17%
+PE Cycle:	3000
+AVG. Erase:	25
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	7602	1200B264B21D0000000000
+0C	Power Cycle Count	175	1200AF00AF000000000000
+A3	Total Bad Block Count	69	1200450045000000000000
+A5	Max Erase Count	251	1200FB00FB000000000000
+A7	Avg Erase Count	25	1200190019000000000000
+A9	Device Life	100	0000646464000000000000
+AA	Spare Block Count	191	13006464BF000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	172	1200AC00AC000000000000
+C2	Temperature	25	02001964190013003F0319
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	10623	120064647F290000000000
+F2	Total LBAs Read	5747	1200646473160000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	YCA12101200130312   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	99.57%
+PE Cycle:	3000
+AVG. Erase:	13
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	1970	1200B264B2070000000000
+0C	Power Cycle Count	174	1200AE00AE000000000000
+A3	Total Bad Block Count	7	1200070007000000000000
+A5	Max Erase Count	105	1200690069000000000000
+A7	Avg Erase Count	13	12000D000D000000000000
+A9	Device Life	100	0000646464000000000000
+AA	Spare Block Count	253	13006464FD000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	170	1200AA00AA000000000000
+C2	Temperature	24	02001864180010003F0318
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	6857	12006464C91A0000000000
+F2	Total LBAs Read	5445	1200646445150000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
+------------------------------------------------------------
+Model Name:	M.2 (S42) 3TE7                          
+Serial Number:	YCA12101200130741   
+FW Version:	S19C04B 
+Capacity:	55.90 GB
+Health:	99.50%
+PE Cycle:	3000
+AVG. Erase:	15
+05	Later Bad	0	1200646400000000000000
+09	Power On Hours	3974	12008664860F0000000000
+0C	Power Cycle Count	124	12007C007C000000000000
+A3	Total Bad Block Count	15	12000F000F000000000000
+A5	Max Erase Count	254	1200FE00FE000000000000
+A7	Avg Erase Count	15	12000F000F000000000000
+A9	Device Life	100	0000646464000000000000
+AA	Spare Block Count	245	13006464F5000000000000
+AB	Program Fail Count	0	1200006400000000000000
+AC	Erase Fail Count	0	1200006400000000000000
+C0	Abnormal power cycle count	121	1200790079000000000000
+C2	Temperature	24	0200186418000600480318
+E5	Flash ID	0	00006464983C98B3767200
+EB	Later Bad Block Read	0	0200000000000000000000
+EB	Later Bad Block Write	0	0200000000000000000000
+EB	Later Bad Block Erase	0	0200000000000000000000
+F1	Total LBAs Written	6748	120064645C1A0000000000
+F2	Total LBAs Read	3405	120064644D0D0000000000
+Sequential Read	0%	0
+Random Read	0%	0
+Sequential Write	0%	0
+Random Write	0%	0
+
