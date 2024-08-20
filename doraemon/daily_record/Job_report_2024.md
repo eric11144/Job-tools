@@ -2425,8 +2425,46 @@
 * 測試 `iSMART` log 轉換成 `Excel` 程式.
 * 撰寫 `All hadns` 相關 `New`, `Continue` & `Stop` 相關紙條.
 * TODO
-  * [ ] 與 `Sales-Louis` 討論 `Boeing` 後續更新流程.
-  * [ ] 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
-  * [ ] 參與 `FAE-team2` 週會.
+  * [x] 與 `Sales-Louis` 討論 `Boeing` 後續更新流程.
+  * [x] 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+  * [x] 詢問 `EU-FAE` 關於 `Neousys` 相關測試進度.
+  * [x] 與 `EU-FAE` 討論 `FSA240501003` 狀況.
+
+# 2024-08-20
+* 與 `Sales-Louis` 討論 `Boeing` 後續更新流程.
+* 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
+* 參與 `FAE-team2` 週會.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+* 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+* 詢問 `EU-FAE` 關於 `Neousys` 相關測試進度.
+* 與 `EU-FAE` 討論 `FSA240501003` 狀況.
+* TODO
+  * [x] 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+  * [x] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
+  * [x] 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
+  * [x] 協助 `FSA240807006` 回覆客戶相關詢問.
+  * [x] 準備 `FSA240807006` 相關 `DLMC` tool & `FW` bin file.
+  * [x] 與 `Sales-Jolie` sync `3TG6-P` `Bad queue` 相關狀況.
+  * [x] 修改 `Curtiss Wright` `DLMC` SOP 文件.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 協助回覆 `Spezial` 關於 `LBB` 處理進度.
+
+# 2024-08-21
+* 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+* 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ), 調整 `66` 組 `PHY`, 皆無法解決異常, 已建議客戶更換產品.
+* 與 `Sales-Joan` 討論 `Curtiss Wright` `A23A20F_0815`(Add `PFU` `bad queue` sol) 結果.
+  * 目前不管 `A23A20F`, `A23A20F_0815`, 於 `Fedora` 開機時間均為 `32s`. 
+* 協助 `FSA240807006` 回覆客戶相關詢問.
+* 準備 `FSA240807006` 相關 `DLMC` tool & `FW` bin file.
+* 與 `Sales-Jolie` sync `3TG6-P` `Bad queue` 相關狀況.
+* 修改 `Curtiss Wright` `DLMC` SOP 文件.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 協助回覆 `Spezial` 關於 `LBB` 處理進度.
+* TODO 
+  * [ ] 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
   * [ ] 測試 `iSMART` log 轉換成 `Excel` 程式.
-  * [ ] 測試 `US` `3TG6-P` `Linux` 重開機問題( 調整 `PHY` ).
