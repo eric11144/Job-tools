@@ -3,7 +3,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 # 定義log文件路徑
-folder_path = './2022-09-02_log/'
+folder_path = './test_log/'
 
 def get_log_and_txt_files(folder_path):
     # 取得資料夾內所有 .log 或 .txt 檔案
@@ -13,6 +13,7 @@ def process_log_and_group_to_json_with_custom_tab_split(log_files):
     grouped_data = []
     current_group = {}
     group_number = 1
+    lookup_table = {}
 
     excluded_keys = ["Ver", "OS", "DRAM Type"]
 
@@ -26,9 +27,10 @@ def process_log_and_group_to_json_with_custom_tab_split(log_files):
                 if line == '------------------------------------------------------------':
                     if current_group:
                         # 檢查是否存在排除的欄位，如果有則不加入結果中
-                        if not any(key in current_group for key in excluded_keys):
-                            grouped_data.append({"Group": group_number, **current_group})
-                            group_number += 1
+                        if not any("INTEL" in value.upper() or "WDC" in value.upper() for value in current_group.values()):
+                            if not any(key in current_group for key in excluded_keys):
+                                grouped_data.append({"Group": group_number, **current_group})
+                                group_number += 1
                         current_group = {}
                     continue
 
@@ -37,21 +39,24 @@ def process_log_and_group_to_json_with_custom_tab_split(log_files):
                     current_group[key.strip()] = value.strip()
                 else:
                     parts = line.split('\t')
-                    if len(parts[0]) == 2:
-                        # 當第一組資料長度為二時，將其與下一組資料合併為欄位，第三組為數值
-                        key = parts[0].strip() + " " + parts[1].strip()
-                        # value = file.readline().strip().split('\t')[-2].strip()
-                        value = parts[2].strip()
-                        current_group[key] = value
+                    if len(parts[0]) == 2 and parts[0] != "--":
+                        key = parts[0].strip()
+                        if key in lookup_table:
+                            current_group[lookup_table[key]] = parts[2].strip()
+                        else:
+                            lookup_table[key] = parts[1].strip()
+                            current_group[lookup_table[key]] = parts[2].strip()
+
                     elif len(parts[0]) >= 3 and len(parts[0]) < 26:
                         # 否則，第一組資料為欄位，第二組為數值
                         key = parts[0].strip()
-                        value = parts[2].strip()
-                        current_group[key] = value
+                        value = parts[2].strip()   
+                        current_group[key] = value                     
 
             # Add the last group if it exists and doesn't have excluded fields
             if current_group and not any(key in current_group for key in excluded_keys):
                 grouped_data.append({"Group": group_number, **current_group})
+                group_number += 1
 
     return grouped_data
 
