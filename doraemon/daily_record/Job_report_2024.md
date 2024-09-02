@@ -2466,5 +2466,173 @@
 * 測試 `iSMART` log 轉換成 `Excel` 程式.
 * 協助回覆 `Spezial` 關於 `LBB` 處理進度.
 * TODO 
-  * [ ] 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
-  * [ ] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+  * [x] 測試 `iSMART` log 轉換成 `Excel` 程式.
+  * [x] 協助 `Sales-Joan` & `PM-Cindy` 討論 `3TG6-P` `LBB` 開卡後續狀況.
+  * [x] 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `Sales-Joan` 提供 `3TG6-P` `UART cable` 串接方式.
+
+# 2024-08-22
+* 協助 `Eva` 測試 `iEi` `LBB` 過多問題.
+* 測試 `iSMART` log 轉換成 `Excel` 程式.
+* 協助 `Sales-Joan` & `PM-Cindy` 討論 `3TG6-P` `LBB` 開卡後續狀況.
+* 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `Sales-Joan` 提供 `3TG6-P` `UART cable` 串接方式.
+* TODO
+  * [x] 協助 `Sales-Vincent` 測試 `M.2 PCIe 3TG6-P` reboot 不認碟相關問題.
+  * [x] 協助 `EU-FAE` 詢問 `SW-RD` 關於 `Linux` 讀取 `iCF 4000` `iSMART` 有誤之修改細節.
+  * [x] 與 `EU-FAE` 討論 `iCF 4000` 修正 `iSMART` 相關狀況.
+  * [x] 協助測試 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 整理測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `Sales-Joan` 處理 `RAID` 讀取 `iSMART` 資訊.
+  * [x] 協助 `US-PM` 提供 `3TG8-P` 相關測試結果 `Candtsolution` .
+
+# 2024-08-23
+* 協助 `Sales-Vincent` 測試 `M.2 PCIe 3TG6-P` reboot 不認碟相關問題.
+* 協助 `EU-FAE` 詢問 `SW-RD` 關於 `Linux` 讀取 `iCF 4000` `iSMART` 有誤之修改細節.
+* 與 `EU-FAE` 討論 `iCF 4000` 修正 `iSMART` 相關狀況.
+* 協助測試 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常.
+* 參與 `EU-FAE` 週會.
+* 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 整理測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `Sales-Joan` 處理 `RAID` 讀取 `iSMART` 資訊.
+* 協助 `US-PM` 提供 `3TG8-P` 相關測試結果 `Candtsolution` .
+* TODO
+  * [x] 協助關閉實驗相關設備.
+  * [x] 與 `EU-FAE` 討論 `3TG8-P` `2`pcs 同時放入 `SATA tray` 供電問題.
+  * [x] 協助測試 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常.
+  * [x] 協助 `EU-FAE` 借出 `8`pcs `M.2 PCIe 3TG6-P` 樣品.
+  * [x] 協助新人處理 `3ME4` `UART` 線焊接.
+  * [x] 觀看 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常, 其中 `1`pcs 短路問題.
+
+# 2024-08-26
+* 協助關閉實驗相關設備.
+* 與 `EU-FAE` 討論 `3TG8-P` `2`pcs 同時放入 `SATA tray` 供電問題.
+* 協助測試 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常.
+* 協助 `EU-FAE` 借出 `8`pcs `M.2 PCIe 3TG6-P` 樣品.
+* 協助新人處理 `3ME4` `UART` 線焊接.
+* 觀看 `3TG8-P` `2`pcs 同時放入 `SATA tray` 相關 `LED` 顯示異常, 其中 `1`pcs 短路問題, 後續發現為 `Power IC` 異常.
+* TODO
+  * [x] 協助 `Shelly` 查找產品 `PCN`.
+  * [x] 協助 `Sales-Joan` 測試 `3MG2-P` `M161225` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `PM-Jack` 測試 `3IE3` `AES` 功能.
+  * [x] 測試 `3TG8-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示問題.
+  * [x] 測試 `3TG6-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示狀況.
+
+# 2024-08-27
+* 協助 `Shelly` 查找產品 `PCN`.
+* 協助 `Sales-Joan` 測試 `3MG2-P` `M161225` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `PM-Jack` 測試 `3IE3` `AES` 功能.
+* 測試 `3TG8-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示問題.
+* 測試 `3TG6-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示狀況.
+* TODO
+  * [x] 討論 `升等請客` 內容.
+  * [x] 統計相關人數.
+  * [x] 參與部門月會.
+  * [x] 協助 `Sales-Jolie` 處理 `聖捷思` `2`pcs 開卡, 並做相關測試.
+  * [x] 參與 `海洋清潔` 說明會.
+  * [x] 協助 `Sales-Joan` 測試 `3MG2-P` `M161225` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `PM-Jack` 測試 `3IE3` `AES` 功能.
+  * [x] 將 `HMI` `3IE3` 送至 `RMA` 更換 `Flash`.
+  * [x] 詢問 `HW-RD` 關於 `3TG8-P` `DAS` `LED` 訊號量測問題.
+
+# 2024-08-28
+* 討論 `升等請客` 內容.
+* 統計相關人數.
+* 參與部門月會.
+* 協助 `Sales-Jolie` 處理 `聖捷思` `2`pcs 開卡, 並做相關測試.
+* 參與 `海洋清潔` 說明會.
+* 協助 `Sales-Joan` 測試 `3MG2-P` `M161225` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `Sales-Joan` 測試 `3TG6-P` `A23A20` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `PM-Jack` 測試 `3IE3` `AES` 功能.
+* 將 `HMI` `3IE3` 送至 `RMA` 更換 `Flash`.
+* 詢問 `HW-RD` 關於 `3TG8-P` `DAS` `LED` 訊號量測問題.
+* TODO
+  * [x] 協助 `EU-FAE` 處理 `SATADOM` 進入 `Loader` mode 問題( 送至 `SMT` 照 `controller` `X-Ray` ).
+  * [x] 協助 `US-PM` 提供 `3TG8-P` `ERC` 相關資訊.
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助 `Sales-Louis` 回覆 `Boeing` 相關問題.
+  * [x] 協助 `Sales-Sylvia` 回覆 `Boeing` `Re-MP` 相關問題.
+  * [x] 協助 `Sales-Joan` 處理 `HMI` `3IE3`.
+  * [x] 測試 `Sales-Sylvain` 提供之 `AES tool`.
+  * [x] 協助 `Sales-Jolie` 將 `聖捷思` `2`pcs 送至 `RMA`.
+  * [x] 測試 `3TG8-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示問題.
+
+# 2024-08-29
+* 協助 `EU-FAE` 處理 `SATADOM` 進入 `Loader` mode 問題( 送至 `SMT` 照 `controller` `X-Ray` ).
+* 協助 `US-PM` 提供 `3TG8-P` `ERC` 相關資訊.
+* 參與 `FAE` 月會.
+* 協助 `Sales-Louis` 回覆 `Boeing` 相關問題.
+* 協助 `Sales-Sylvia` 回覆 `Boeing` `Re-MP` 相關問題.
+* 協助 `Sales-Joan` 處理 `HMI` `3IE3`, 將 `Flash` 更換至新品後, 發現 `Avg.erase count` 過高 (`583099`), 導致 `Disk` 使用異常.
+* 測試 `Sales-Sylvain` 提供之 `AES tool`.
+* 測試 `3TG8-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示問題.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Sales-Louis` 討論 `Boeing` `3TG6-P` `PCN` 內容.
+  * [x] 提供測試 `Sales-Sylvain` 提供之 `AES tool` 相關流程以及結果.
+  * [x] 將 `Candtsolution` 平台寄回.
+  * [x] 與 `EU-FAE` 討論 `3TG8-P` & `3TG6-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示狀況.
+  * [x] 與 `PM-Jack` 討論 `AES` tool 相關測試流程.
+  * [x] 協助 `Sales-Jamie` 追蹤 `Nexcom` 後續測試狀況.
+  * [x] 協助 `PM` 提供 `Spezial` `LBB` 客戶目前狀況.
+  * [x] 協助 `Sales-Joanne` 觀看 `OnLogic` `3TE6` `4`pcs 異常狀況.
+
+# 2024-08-30
+* 參與 `EU-FAE` 週會.
+* 協助 `Sales-Louis` 討論 `Boeing` `3TG6-P` `PCN` 內容.
+* 提供測試 `Sales-Sylvain` 提供之 `AES tool` 相關流程以及結果.
+* 將 `Candtsolution` 平台寄回.
+* 與 `EU-FAE` 討論 `3TG8-P` & `3TG6-P` `2`pcs 於 `CRU` SATA tray `LED` 顯示狀況.
+* 與 `PM-Jack` 討論 `AES` tool 相關測試流程.
+* 協助 `Sales-Jamie` 追蹤 `Nexcom` 後續測試狀況.
+* 協助 `PM` 提供 `Spezial` `LBB` 客戶目前狀況.
+* 協助 `Sales-Joanne` 觀看 `OnLogic` `3TE6` `4`pcs 異常狀況.
+* TODO
+  * [x] 詢問 `FW-RD` & `Celia` & `PE` 關於 `Boeing` `Re-MP` 平台.
+  * [x] 協助 `Sales-Louis` 處理 `Boeing` `Re-MP` 平台 & `PCN` 內容.
+  * [x] 與 `Kerry` 討論 `3TG6-P` 關於 `read retry` 優化相關 `PCN` 內容.
+  * [x] 協助 `Sales-Joanne` 提供 `OnLogic` `3TE6` `4`pcs 健康度顯示問題.
+  * [x] 與 `FW-RD` 討論 `3TE6` 相關 `TLC & SLC` 身份判別問題, `UNC` 相關異常產生狀況.
+  * [x] 撰寫 `OnLogic` `3TE6` `4`pcs `FA` report.
+  * [x] 協助 `Joan` 測試 `HMI` 更新 `3IE3` `write` 流程.
+  * [x] 參與 `3TG8-P` `ECR` 討論會議.
+
+# 2024-09-02
+* 詢問 `FW-RD` & `Celia` & `PE` 關於 `Boeing` `Re-MP` 平台.
+* 協助 `Sales-Louis` 處理 `Boeing` `Re-MP` 平台 & `PCN` 內容.
+* 與 `Kerry` 討論 `3TG6-P` 關於 `read retry` 優化相關 `PCN` 內容.
+* 協助 `Sales-Joanne` 提供 `OnLogic` `3TE6` `4`pcs 健康度顯示問題.
+* 與 `FW-RD` 討論 `3TE6` 相關 `TLC & SLC` 身份判別問題, `UNC` 相關異常產生狀況.
+* 撰寫 `OnLogic` `3TE6` `4`pcs `FA` report.
+* 協助 `Joan` 測試 `HMI` 更新 `3IE3` `write` 流程.
+* 參與 `3TG8-P` `ECR` 討論會議.
+* TODO
+  * [x] 更換實驗室平台.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` `3IE7` 於 `85˚C` 無法認碟相關實驗( `熱風槍` & `Chamber` ).
+  * [x] 與 `Kiwi` 討論 `OnLogic` `3TE6` `4`pcs `FA` report.
+  * [x] 修改 `OnLogic` `3TE6` `4`pcs `FA` report, 並提供給 `Sales-Joanne`.
+  * [x] 協助 `Sales-Joanne` 提供 `3ME4` `FW` 更新 `tool` & `SOP`( `L17606` -> `L23B03M`).
+  * [x] 協助回覆 `Spezial` 相關測試狀況.
+  * [x] 協助 `PM-Cindy` 回覆 `Boeing` 案件處理相關流程.
+  * [x] 提供 `EU-FAE` 關於 `M.2 PCIe 3TG6-P` `8`pcs `DLMC` 相關結果.
+  * [x] 提供 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+  * [x] 協助 `Shelly` 觀看 `3MG2-P` 無法錄製 `UART` log 相關問題.
+
+# 2024-09-03
+* 更換實驗室平台.
+* 協助 `Sales-Joan` 測試 `HMI` `3IE7` 於 `85˚C` 無法認碟相關實驗( `熱風槍` & `Chamber` ).
+* 與 `Kiwi` 討論 `OnLogic` `3TE6` `4`pcs `FA` report.
+* 修改 `OnLogic` `3TE6` `4`pcs `FA` report, 並提供給 `Sales-Joanne`.
+* 協助 `Sales-Joanne` 提供 `3ME4` `FW` 更新 `tool` & `SOP`( `L17606` -> `L23B03M`).
+* 協助回覆 `Spezial` 相關測試狀況.
+* 協助 `PM-Cindy` 回覆 `Boeing` 案件處理相關流程.
+* 提供 `EU-FAE` 關於 `M.2 PCIe 3TG6-P` `8`pcs `DLMC` 相關結果.
+* 提供 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
+* 協助 `Shelly` 觀看 `3MG2-P` 無法錄製 `UART` log 相關問題, 後續發現為 `Flash ID` 異常.
+* TODO
+  * [ ] 撰寫 `HMI` `3IE3` & `3IE7` `10`pcs `FA` report.
+
