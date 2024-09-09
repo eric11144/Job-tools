@@ -2634,5 +2634,72 @@
 * 提供 `Sales-Joan` 測試 `3TG6-P` `A23A20F` `60GB` & `120GB` 資料寫入後, 開機時間.
 * 協助 `Shelly` 觀看 `3MG2-P` 無法錄製 `UART` log 相關問題, 後續發現為 `Flash ID` 異常.
 * TODO
-  * [ ] 撰寫 `HMI` `3IE3` & `3IE7` `10`pcs `FA` report.
+  * [x] 撰寫 `HMI` `3IE3` & `3IE7` `10`pcs `FA` report.
+  * [x] 協助 `Sales-Joanne` 處理 `OnLogic` `3ME4` `Loader mode` 問題.
+  * [x] 與 `FW-RD` & `Kerry` 討論 `3TE6` `V22620N1` -> `V23701` 相關更新內容.
+  * [x] 協助 `Sales-Joanne` 提供 `3ME4` & `3TE6` 相關 `FW` update tool.
+  * [x] 協助 `Shelly` 處理 `Red hat 7.6` 環境架設.
+  * [x] 提供 `HMI` 分析相關素材於 `Sales-Joan`.
+  * [x] 協助 `EU-FAE` 處理 `FEC240702005` `SATADOM` `Controller` 相關 `X-Ray`.
 
+# 2024-09-04
+* 撰寫 `HMI` `3IE3` & `3IE7` `10`pcs `FA` report.
+* 協助 `Sales-Joanne` 處理 `OnLogic` `3ME4` `Loader mode` 問題.
+* 與 `FW-RD` & `Kerry` 討論 `3TE6` `V22620N1` -> `V23701` 相關更新內容.
+* 協助 `Sales-Joanne` 提供 `3ME4` & `3TE6` 相關 `FW` update tool.
+* 協助 `Shelly` 處理 `Red hat 7.6` 環境架設.
+* 提供 `HMI` 分析相關素材於 `Sales-Joan`.
+* 協助 `EU-FAE` 處理 `FEC240702005` `SATADOM 3ME3` `Controller` 相關 `X-Ray`.
+* TODO
+  * [x] 申請 `Boeing` 測試樣品.
+  * [x] 詢問 `EU-Sales` 關於 `Boeing` 更新相關需求.
+  * [x] 處理 `M.2 3TE7` 樣品無法辨識相關問題.
+  * [x] 觀看 `B&R` `3MG2-P` `1`pcs 客訴品.
+  * [x] 協助 `Shelly` 處理 `Red hat 7.6` 環境架設.
+
+# 2024-09-05
+* 申請 `Boeing` 測試樣品.
+* TODO
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 參與 `HMI` 討論會議.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` `M.2 3IE7` & `mSATA 3IE7` 高溫異常斷電認碟測試.
+  * [x] 協助 `Sales-Joan` 撰寫 `HMI` 分析結果報告.
+  * [x] 處理 `Boeing` `Re-MP` tool 需求規劃.
+  * [x] 與 `FW-RD` 相關人員討論 `Boeing` `Re-MP` tool 需求規劃.
+  * [x] 提供 `Joanne` 關於 `OnLogic` 第二片退回分析結果.
+  * [x] 與 `Kiwi` 討論關於 `3IE7` 是否有溫度與電流相關變化的實驗數據.
+
+# 2024-09-06
+* 參與 `EU-FAE` 週會.
+* 參與 `HMI` 討論會議.
+* 協助 `Sales-Joan` 測試 `HMI` `M.2 3IE7` & `mSATA 3IE7` 高溫異常斷電認碟測試.
+* 協助 `Sales-Joan` 撰寫 `HMI` 分析結果報告.
+* 處理 `Boeing` `Re-MP` tool 需求規劃.
+* 與 `FW-RD` 相關人員討論 `Boeing` `Re-MP` tool 需求規劃.
+* 提供 `Joanne` 關於 `OnLogic` 第二片退回分析結果.
+* 與 `Kiwi` 討論關於 `3IE7` 是否有溫度與電流相關變化的實驗數據.
+* TODO
+  * [x] 協助 `Shelly` 處理 `3MG2-P` 開卡.
+  * [x] 參與淨灘會議.
+  * [x] 查找電源供應器電流調整方式.
+  * [x] 詢問 `EP-Peiwen` 關於 `Boeing` 出貨相關設定 `Re-MP` tool 查詢方式.
+  * [x] 詢問 `Sales-Joan` 關於 `HMI` 平台電源供應 `Spec`.
+  * [x] 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+  * [x] 協助 `Sales-Louis` 提供 `Boeing` 出貨相關工單, 以便後續處理 `Re-MP` tool 修改.
+  * [x] 與 `EU-FAE` 討論客訴案相關進度.
+  * [x] 拍攝 `SATA AES` tool 相關設定操作流程影片.
+
+# 2024-09-09
+* 協助 `Shelly` 處理 `3MG2-P` 開卡.
+* 參與淨灘會議.
+* 查找電源供應器電流調整方式.
+* 詢問 `EP-Peiwen` 關於 `Boeing` 出貨相關設定 `Re-MP` tool 查詢方式.
+* 詢問 `Sales-Joan` 關於 `HMI` 平台電源供應 `Spec`.
+* 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+* 協助 `Sales-Louis` 提供 `Boeing` 出貨相關工單, 以便後續處理 `Re-MP` tool 修改.
+* 與 `EU-FAE` 討論客訴案相關進度.
+* 拍攝 `SATA AES` tool 相關設定操作流程影片.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [ ] 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+  * [ ] 處理 `EU-FAE` `SATADOM 3ME3` 客訴品.
