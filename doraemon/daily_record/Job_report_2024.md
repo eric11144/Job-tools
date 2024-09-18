@@ -2787,7 +2787,8 @@
       * [x] 測試 `12V 3A`.
       * [x] 測試 `12V 18A`.
     * [x] 領取 `HMI` 測試之 `mSATA` `device`.
-    * [x] 歸還 `Device`.
+  * [x] 歸還 `Device`.
+  * [x] 協助 `Kerry` 測試 `4TG2-P` 於 `Gigabyte` `Z590` 透過 `iSMART` 執行 `WP` 功能.
 
 # 2024-09-17
 * 參與 `Team2` 週會.
@@ -2800,6 +2801,7 @@
     * 測試 `12V 18A`.
   * 領取 `HMI` 測試之 `mSATA` `device`.
   * 歸還 `Device`.
+  * 協助 `Kerry` 測試 `4TG2-P` 於 `Gigabyte` `Z590` 透過 `iSMART` 執行 `WP` 功能.
 * TODO
   * [x] 中秋節放假.
 
