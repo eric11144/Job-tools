@@ -2695,11 +2695,118 @@
 * 查找電源供應器電流調整方式.
 * 詢問 `EP-Peiwen` 關於 `Boeing` 出貨相關設定 `Re-MP` tool 查詢方式.
 * 詢問 `Sales-Joan` 關於 `HMI` 平台電源供應 `Spec`.
-* 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+* 處理 `B&R` `3MG2-P` `1`pcs 客訴品, 後續推斷為 `controller` 相關異常, 會先送至 `RMA` `Re-mount`.
 * 協助 `Sales-Louis` 提供 `Boeing` 出貨相關工單, 以便後續處理 `Re-MP` tool 修改.
 * 與 `EU-FAE` 討論客訴案相關進度.
 * 拍攝 `SATA AES` tool 相關設定操作流程影片.
 * TODO
   * [x] 參與 `FAE-team2` 週會.
-  * [ ] 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
-  * [ ] 處理 `EU-FAE` `SATADOM 3ME3` 客訴品.
+  * [x] 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+  * [x] 處理 `EU-FAE` `SATADOM 3ME3` 客訴品.
+  * [x] 與 `PM-Jack` 討論 `Simms` 高溫 `FW` 更新問題.
+  * [x] 送至 `RMA` `Re-mount` `controller`.
+  * [x] 處理 `Ericssion` `EDC` `USB` 客訴品, 送至 `SMT` 照 `X-ray`.
+
+# 2024-09-10
+* 參與 `FAE-team2` 週會.
+* 處理 `B&R` `3MG2-P` `1`pcs 客訴品.
+* 處理 `EU-FAE` `SATADOM 3ME3` 客訴品.
+* 與 `PM-Jack` 討論 `Simms` 高溫 `FW` 更新問題.
+* 送至 `RMA` `Re-mount` `controller`.
+* 處理 `Ericssion` `EDC` `USB` 客訴品, 送至 `SMT` 照 `X-ray`.
+* TODO
+  * [x] 協助 `Sales-Joanne` 提供 `OnLogic` `3ME4` `FA` report.
+  * [x] 至 `RMA` 取回 `B&R` 維修之 `3MV2-P`.
+  * [x] 測試 `B&R` `3MV2-P`.
+  * [x] 至 `SMT` 取回 `Ericssion` `EDC` `USB` 客訴品.
+  * [x] 協助 `EU-FAE` 提供 `FEB240621010` 相關資訊.
+  * [x] 與 `Sales-Louis` 討論關於 `Boeing` `MP tool` 相關問題.
+
+# 2024-09-11
+* 協助 `Sales-Joanne` 提供 `OnLogic` `3ME4` `FA` report.
+* 至 `RMA` 取回 `B&R` 維修之 `3MV2-P`.
+* 測試 `B&R` `3MV2-P`.
+* 至 `SMT` 取回 `Ericssion` `EDC` `USB` 客訴品.
+* 協助 `EU-FAE` 提供 `FEB240621010` 相關資訊.
+* 與 `Sales-Louis` 討論關於 `Boeing` `MP tool` 相關問題.
+* TODO
+  * [x] 協助 `EU-Sales` sync `Ericssion` `EDC` `USB` 相關後續處理.
+  * [x] 提供 `Boeing` 所使用之 `FW` version 於 `FW-RD`.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題.
+  * [x] 與 `Kenzi` 討論 `Ericssion` 客訴案相關結果處理流程.
+  * [x] 協助 `Shelly` 回覆 `innoOSR` 相關問題.
+  * [x] 與 `FW-RD` 討論 `HMI` `3IE7` 於高溫運行相關 `UART` log.
+
+# 2024-09-12
+* 協助 `EU-Sales` sync `Ericssion` `EDC` `USB` 相關後續處理.
+* 提供 `Boeing` 所使用之 `FW` version 於 `FW-RD`.
+* 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題, 測試 `12V 3A`, `12V 4.6A`, `12V 18A`.
+* 與 `Kenzi` 討論 `Ericssion` 客訴案相關結果處理流程.
+* 協助 `Shelly` 回覆 `innoOSR` 相關問題.
+* 與 `FW-RD` 討論 `HMI` `3IE7` 於高溫運行相關 `UART` log.
+* TODO
+  * [x] 協助 `Kenzi` 處理 `Ericssion` `EDC` `USB` 客訴流程.
+  * [x] 參與 `EU-FAE` 週會.
+  * [x] 協助 `Sales-Joan` 準備相關 `HMI` 測試資料.
+  * [x] 參與 `HMI` 討論會議.
+  * [x] 轉交 `AES` `SATADOM` 於 `Sales-Deirdre`.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題.
+  * [x] 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+
+# 2024-09-13
+* 協助 `Kenzi` 處理 `Ericssion` `EDC` `USB` 客訴流程.
+* 參與 `EU-FAE` 週會.
+* 協助 `Sales-Joan` 準備相關 `HMI` 測試資料.
+* 參與 `HMI` 討論會議.
+* 轉交 `AES` `SATADOM` 於 `Sales-Deirdre`.
+* 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+* TODO
+  * [x] 提供 `B0021811230110003` `3ME3` 相關資訊於 `EU-FAE`.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題( `3TG6-P`, `3TG8-P` ).
+  * [x] 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+  * [x] 協助 `Sales-Joan` 回覆 `HMI` 客戶關於 `DLMC` 相關注意事項.
+  * [x] 協助 `Joanne` 處理 `OnLogic` `3ME3` `FW` version 進版.
+  * [x] 協助 `EU-FAE` 整理 `Spezial` 相關分析流程表格.
+  * [x] 協助 `Joan` 準備 `UART` cable 以及操作手冊.
+
+# 2024-09-16
+* 提供 `B0021811230110003` `3ME3` 相關資訊於 `EU-FAE`.
+* 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題( `3TG6-P`, `3TG8-P` ).
+* 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+* 協助 `Sales-Joan` 回覆 `HMI` 客戶關於 `DLMC` 相關注意事項.
+* 協助 `Joanne` 處理 `OnLogic` `3ME3` `FW` version 進版.
+* 協助 `EU-FAE` 整理 `Spezial` 相關分析流程表格.
+* 協助 `Joan` 準備 `UART` cable 以及操作手冊.
+* TODO
+  * [x] 參與 `Team2` 週會.
+  * [x] 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題( `3TG6-P`, `3TG8-P` ).
+    * [x] 準備客戶原 `OS`.
+      * [x] 測試 `12V 3A`.
+      * [x] 測試 `12V 18A`.
+    * [x] 一般 `WIndows 10`.
+      * [x] 測試 `12V 3A`.
+      * [x] 測試 `12V 18A`.
+    * [x] 領取 `HMI` 測試之 `mSATA` `device`.
+    * [x] 歸還 `Device`.
+
+# 2024-09-17
+* 參與 `Team2` 週會.
+* 協助 `Sales-Joan` 測試 `HMI` 平台高溫開機問題( `3TG6-P`, `3TG8-P` ).
+  * 準備客戶原 `OS`, 後續發現一直出現系統毀損訊息, 嘗試幾種方式去 `reset`, 皆無法還原, 推斷與 `power` 無關.
+    * 測試 `12V 3A`.
+    * 測試 `12V 18A`.
+  * 一般 `WIndows 10`, 嘗試於 `SATA` `3TG6-P` & `3TG8-P` 做相關測試, 但無法透過 `USB` 安裝 `OS`, 後續會領取對應之 `Device`.
+    * 測試 `12V 3A`.
+    * 測試 `12V 18A`.
+  * 領取 `HMI` 測試之 `mSATA` `device`.
+  * 歸還 `Device`.
+* TODO
+  * [x] 中秋節放假.
+
+# 2024-09-18
+* 中秋節放假.
+* TODO
+  * [x] 整理客訴相關 `Email`.
+  * [x] 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+  * [x] 與 `FW-RD` 討論 `HMI` `loader mode` 相關 `UART` log.
+
