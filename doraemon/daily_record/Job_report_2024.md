@@ -2811,4 +2811,104 @@
   * [x] 整理客訴相關 `Email`.
   * [x] 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
   * [x] 與 `FW-RD` 討論 `HMI` `loader mode` 相關 `UART` log.
+  * [x] 協助 `Jay` 提供 `Bad Queue` 相關報告.
+  * [x] 與 `Sales-Joanne` 討論 `OnLogic` 後續 `RMA` 處理.
+  * [x] 與 `US-Josh` 討論關於 `Digi-Key` 客訴後續處理.
+
+# 2024-09-19
+* 整理客訴相關 `Email`.
+* 協助 `Kenzi` 準備 `Ericssion` 相關測試結果檔案.
+* 與 `FW-RD` 討論 `HMI` `loader mode` 相關 `UART` log.
+* 協助 `Jay` 提供 `Bad Queue` 相關報告.
+* 與 `Sales-Joanne` 討論 `OnLogic` 後續 `RMA` 處理.
+* 與 `US-Josh` 討論關於 `Digi-Key` 客訴後續處理.
+* TODO
+  * [x] 協助 `EU` 觀看 `B&R` `3MV2-P` 相關電性量測.
+  * [x] 與 `SMI` 討論關於 `3MV2-P` `UART` 出現 `RebuildAllMap` 相關異常.
+  * [x] 協助 `Kenzi` 提供 `eUSB 3SE3` `9`pin 位置圖.
+  * [x] 與 `Jackie` 討論 `EU` 客訴相關處理分工.
+  * [x] 協助 `Team1` 補充 `Spezial` `LBB` 相關處理流程, 以及 `Summary` `root cause`.
+
+# 2024-09-20
+* 協助 `EU` 觀看 `B&R` `3MV2-P` 相關電性量測, 後續發現為 `U29` `Power IC` 異常( `1.8V` 輸出異常 `2.8V` ).
+* 與 `SMI` 討論關於 `3MV2-P` `UART` 出現 `RebuildAllMap` 相關異常.
+* 協助 `Kenzi` 提供 `eUSB 3SE3` `9`pin 位置圖.
+* 與 `Jackie` 討論 `EU` 客訴相關處理分工.
+* 協助 `Team1` 補充 `Spezial` `LBB` 相關處理流程, 以及 `Summary` `root cause`.
+* TODO
+  * [x] 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+  * [x] 協助 `FW-RD Allen` 架設 `3ME3` `BORCH` 測試.
+    * [x] Setting `Power supply relay`.
+    * [x] 自動重啟 `BurninTest`.
+    * [x] 自動重起 `sdstress`.
+    * [x] 安裝 `os` 環境, 並更新相關 `Driver`.
+  * [x] 協助 `Shelly` 錄製影片.
+  * [x] 量測 `ECRIN SYSTEMS` `FED240724001` `SATA Tray` 相關顯示狀況.
+
+# 2024-09-21
+* 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+* 協助 `FW-RD Allen` 架設 `3ME3` `BORCH` 測試, 後續因網路問題, 只先將測試流程架設完成, 尚未搭配 `Power supply relay`.
+  * Setting `Power supply relay`.
+  * 自動重啟 `BurninTest`.
+  * 自動重起 `sdstress`.
+  * 安裝 `os` 環境, 並更新相關 `Driver`.
+* 協助 `Shelly` 錄製影片.
+* 量測 `ECRIN SYSTEMS` `FED240724001` `SATA Tray` 相關顯示狀況.
+* TODO
+  * [x] 淨灘.
+
+# 2024-09-23
+* 淨灘.
+* TODO
+  * [x] 協助 `FW-RD Allen` 架設 `3ME3` `BORCH` 測試.
+    * [x] Setting `Power supply relay`.
+    * [x] 自動關機時間.
+  * [x] 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+  * [x] 協助 `Kenzi` 處理 `eUSB 3SE3` `FA` report.
+  * [x] 與 `Sales-Louis` 討論 `Boeing` 目前處理狀況.
+  * [x] 協助 `Sales-Amanda` 提供 `FEA240308001` `3TG6-P` 降 `Gen` 相關狀況.
+  * [x] 協助 `Team1` 統計 `EU` `Spezial` `LBB` 出貨 `Fail` 率.
+  * [x] 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+
+# 2024-09-24
+* 協助 `FW-RD Allen` 架設 `3ME3` `BORCH` 測試.
+  * Setting `Power supply relay`.
+  * 自動關機時間.
+* 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+* 協助 `Kenzi` 處理 `eUSB 3SE3` `FA` report.
+* 與 `Sales-Louis` 討論 `Boeing` 目前處理狀況.
+* 協助 `Sales-Amanda` 提供 `FEA240308001` `3TG6-P` 降 `Gen` 相關狀況.
+* 協助 `Team1` 統計 `EU` `Spezial` `LBB` 出貨 `Fail` 率.
+* TODO
+  * [x] 協助 `Kenzi` 處理 `eUSB 3SE3` `FA` report.
+  * [x] 與 `FW-RD` 討論 `OnLogic` 後續狀況.
+  * [x] 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+  * [x] 詢問 `EP` & `DRAM` 人員關於 `EU` 客訴案相關處理.
+  * [x] 協助 `FW-RD Allen` 處理 `3ME3` `BORCH` 測試, 調整 `sleeper` 時間.
+  * [x] 與 `EU-FAE` 討論目前客訴案處理狀況.
+
+# 2024-09-25
+* 協助 `Kenzi` 處理 `eUSB 3SE3` `FA` report.
+* 與 `FW-RD` 討論 `OnLogic` 後續狀況.
+* 整理去年一月至今, 所有 `EU` 處理相關客訴內容.
+* 詢問 `EP` & `DRAM` 人員關於 `EU` 客訴案相關處理.
+* 協助 `FW-RD Allen` 處理 `3ME3` `BORCH` 測試, 調整 `sleeper` 時間.
+* 與 `EU-FAE` 討論目前客訴案處理狀況.
+* TODO
+  * [x] 協助 `William` 處理 `1.8" 3MG2-P` 資料寫入相關問題.
+    * [x] 撰寫資料產生&比較相關問題.
+  * [x] 更換 `B&R` `3MV2-P` `U29` `Power IC`.
+  * [x] 協助 `Danny` 處理 `4TS2-P` `DLMC` 可行性.
+  * [x] 觀看 `HMI` 新寄送回來之平台異常狀況.
+
+# 2024-09-26
+* 協助 `William` 處理 `1.8" 3MG2-P` 資料寫入相關問題.
+  * 撰寫資料產生&比較相關問題.
+* 更換 `B&R` `3MV2-P` `U29` `Power IC`.
+* 協助 `Danny` 處理 `4TS2-P` `DLMC` 可行性.
+* 觀看 `HMI` 新寄送回來之平台異常狀況.
+* TODO
+  * [x] 協助 `EP-Peiwen` 處理 `eUSB` `Ext3` 格式處理.
+  * [ ] 撰寫 `B&R` `FA` report.
+  * [ ] 整理相關客訴進度, 並更新至 `Github`.
 
