@@ -2906,9 +2906,67 @@
   * 撰寫資料產生&比較相關問題.
 * 更換 `B&R` `3MV2-P` `U29` `Power IC`.
 * 協助 `Danny` 處理 `4TS2-P` `DLMC` 可行性.
-* 觀看 `HMI` 新寄送回來之平台異常狀況.
+* 觀看 `HMI` 新寄送回來之平台異常狀況, 發現 `Device` 短路以及發燙.
 * TODO
   * [x] 協助 `EP-Peiwen` 處理 `eUSB` `Ext3` 格式處理.
-  * [ ] 撰寫 `B&R` `FA` report.
-  * [ ] 整理相關客訴進度, 並更新至 `Github`.
+  * [x] 撰寫 `B&R` `FA` report.
+  * [x] 整理相關客訴進度, 並更新至 `Github`.
+  * [x] 協助 `Danny` 測試 `4TG2-P` `F23209` -> `F23918`.
+
+# 2024-09-27
+* 協助 `EP-Peiwen` 處理 `eUSB` `Ext3` 格式處理.
+* 撰寫 `B&R` `FA` report.
+* 整理相關客訴進度, 並更新至 `Github`.
+* 協助 `Danny` 測試 `4TG2-P` `F23209` -> `F23918`.
+* TODO
+  * [x] Team Build.
+
+# 2024-09-30
+* Team Build.
+* TODO
+  * [x] 參與 `FAE Team2` 週會.
+  * [x] 測試 `Samsung 870` `2`pcs 競品於 `SATA Tray` `DAS` `LED` 閃爍狀況.
+    * [x] 量測客戶 `SATA Tray` `DAS` `LED` 訊號.
+  * [x] 協助 `FW-RD Allen` 處理 `3ME3` `BORCH` 測試.
+  * [x] 與 `EU-FAE` sync `SATA Tray` `DAS` `LED` 測試狀況.
+  * [x] 觀看 `HMI` 新寄送回來之平台異常狀況.
+  * [x] 協助 `HMI` 測試其他 `Form factor` 於高溫 `60˚C` 進行 `reboot` 相關狀況.
+    * [x] `mSATA 3IE7` `BiSC5`.
+    * [x] `mSATA 3MG2-P`.
+
+# 2024-10-01
+* 參與 `FAE Team2` 週會.
+* 測試 `Samsung 870` `2`pcs 競品於 `SATA Tray` `DAS` `LED` 閃爍狀況.
+  * 量測客戶 `SATA Tray` `DAS` `LED` 訊號.
+* 協助 `FW-RD Allen` 處理 `3ME3` `BORCH` 測試.
+* 與 `EU-FAE` sync `SATA Tray` `DAS` `LED` 測試狀況.
+* 觀看 `HMI` 新寄送回來之平台異常狀況, 第一次有認到 `disk`, 後續清除客戶 `UART` 訊號線後, 發現 `Flash` 無法抓取, 進入 `loader mode`.
+* 協助 `HMI` 測試其他 `Form factor` 於高溫 `60˚C` 進行 `reboot` 相關狀況, 測試各 `30`次, 皆無異常.
+  * `mSATA 3IE7` `BiSC5`.
+  * `mSATA 3MG2-P`.
+* TODO
+  * [x] 與 `HW-RD` 討論 `SATA Tray` `DAS` `LED` 訊號.
+  * [x] 協助 `William` 處理 `compare` 文件內容 `script`.
+  * [x] 提供 `HMI` 第二批寄回分析狀況.
+
+# 2024-10-02
+* 與 `HW-RD` 討論 `SATA Tray` `DAS` `LED` 訊號.
+* 協助 `William` 處理 `compare` 文件內容 `script`.
+* 提供 `HMI` 第二批寄回分析狀況.
+* TODO
+  * [x] 颱風天放假.
+
+# 2024-10-03
+* 颱風天放假.
+* TODO
+  * [x] 颱風天放假.
+
+# 2024-10-03
+* 颱風天放假.
+* TODO
+  * [x] 詢問 `SMI` 關於 `SATA Tray` `LED` 顯示問題.
+  * [x] 與 `Sales-Joan` 討論 `HMI` 回覆進度內容.
+  * [x] 與 `EU-FAE` sync `FA` case 狀況.
+  * [x] 協助 `Sales-Jamie` 處理 `Relab AB` `Neousys` 後續狀況.
+  * [x] 測試 `SATA Tray` `DAS` `LED` 訊號.
 
