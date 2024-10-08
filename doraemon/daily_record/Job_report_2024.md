@@ -2961,7 +2961,7 @@
 * TODO
   * [x] 颱風天放假.
 
-# 2024-10-03
+# 2024-10-04
 * 颱風天放假.
 * TODO
   * [x] 詢問 `SMI` 關於 `SATA Tray` `LED` 顯示問題.
@@ -2969,4 +2969,48 @@
   * [x] 與 `EU-FAE` sync `FA` case 狀況.
   * [x] 協助 `Sales-Jamie` 處理 `Relab AB` `Neousys` 後續狀況.
   * [x] 測試 `SATA Tray` `DAS` `LED` 訊號.
+  * [x] 與 `FW-RD` 討論 `Borch` 測試進度, 並提供給 `EU` 相關人員.
+
+# 2024-10-07
+* 詢問 `SMI` 關於 `SATA Tray` `LED` 顯示問題.
+* 與 `Sales-Joan` 討論 `HMI` 回覆進度內容, 後續發現接上 `UART` 時, 會造成 `device` 進入 `loader mode`.
+* 與 `EU-FAE` sync `FA` case 狀況.
+* 協助 `Sales-Jamie` 處理 `Relab AB` `Neousys` 後續狀況.
+* 測試 `SATA Tray` `DAS` `LED` 訊號.
+* 與 `FW-RD` 討論 `Borch` 測試進度, 並提供給 `EU` 相關人員.
+* TODO
+  * [x] 測試 `HMI` 客退 `3IE7` sample.
+  * [x] 轉交 `FEB240607007` `3TG6-P` 於 `Sales-Deirdre`.
+  * [x] 與 `SMI-Michael` 討論 `3TG8-P` `DAS LED` 相關測試狀況.
+  * [x] 協助觀看 `Nexcom` 客退品 `SATADOM 3ME4` 不認碟狀況.
+  * [x] 整理並回覆 `3TG8-P` `DAS LED` 相關測試狀況.
+  * [x] 領取 `Nexcom` & `鑫創` 相關替換料件.
+
+# 2024-10-08
+* 測試 `HMI` 客退 `3IE7` sample, 後續發現 `1.8V`, `1.1V` `Power IC` 有異常, 導致 `device` 無法正常運行.
+* 轉交 `FEB240607007` `3TG6-P` 於 `Sales-Deirdre`.
+* 與 `SMI-Michael` 討論 `3TG8-P` `DAS LED` 相關測試狀況.
+* 協助觀看 `Nexcom` 客退品 `SATADOM 3ME4` 不認碟狀況, 後續發現為 `U3` `Power IC` 異常.
+* 整理並回覆 `3TG8-P` `DAS LED` 相關測試狀況.
+* 領取 `Nexcom` & `鑫創` 相關替換料件.
+* TODO
+  * [x] 依照 `HW-RD` 建議將 `3TG8-P` `DAS LED` 相關電阻拆除( `R17`, `R21`, `D3` ).
+  * [x] 查找 `3TG8-P` `3.3V` & `1.2V` `Power IC` 線路.
+  * [x] 協助 `EU-FAE` 回覆關於 `eFAE` 系統查詢 `SLC`, `MLC`, `TLC` 統計功能.
+  * [x] 準備 `Aetina` `4TG2-P` 錄製 `UART` & `ELog` 相關工具.
+  * [x] 領取 `Simms International`, `Thales` 相關替換料件.
+
+# 2024-10-09
+* 依照 `HW-RD` 建議將 `3TG8-P` `DAS LED` 相關電阻拆除( `R17`, `R21`, `D3` ).
+  * 單獨測試修改 `device`: `DAS LED` 無法閃爍.
+  * 同時放入 `2` device( `A`: 電阻修改, `B`: 電阻無修改 )
+    * 針對 `A` 進行 `read/write` 測試: `DAS LED` 無法閃爍.
+    * 針對 `B` 進行 `read/write` 測試: `DAS LED` 閃爍.
+* 查找 `3TG8-P` `3.3V` & `1.2V` `Power IC` 線路.
+* 協助 `EU-FAE` 回覆關於 `eFAE` 系統查詢 `SLC`, `MLC`, `TLC` 統計功能.
+* 準備 `Aetina` `4TG2-P` 錄製 `UART` & `ELog` 相關工具.
+* 領取 `Simms International`, `Thales` 相關替換料件.
+* TODO
+  * [ ] 前往 `Aetina` 錄製 `4TG2-P` `UART` & `ELog`.
+  * [ ] 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 閃爍問題.
 
