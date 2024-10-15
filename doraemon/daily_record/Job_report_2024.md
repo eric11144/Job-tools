@@ -3011,6 +3011,64 @@
 * 準備 `Aetina` `4TG2-P` 錄製 `UART` & `ELog` 相關工具.
 * 領取 `Simms International`, `Thales` 相關替換料件.
 * TODO
-  * [ ] 前往 `Aetina` 錄製 `4TG2-P` `UART` & `ELog`.
-  * [ ] 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 閃爍問題.
+  * [x] 前往 `Aetina` 錄製 `4TG2-P` `UART` & `ELog`.
+  * [x] 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 閃爍問題.
+  * [x] 下午休假.
 
+# 2024-10-10
+* 前往 `Aetina` 錄製 `4TG2-P` `UART` & `ELog`.
+* 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 閃爍問題.
+* 下午休假.
+* TODO
+  * [x] 國慶日放假.
+
+# 2024-10-11
+* 國慶日放假.
+* TODO
+  * [x] 協助東哥觀看 `DRAM` 從 `I3C` 切換至 `I2C` 相關驗證操作.
+  * [x] 參與 `DRAM` `浪潮` 相關討論會議.
+  * [x] 前往 `MIS` 借取 `Notebook`.
+  * [x] 與 `FW-RD` 討論 `Aetina` 異常狀況.
+  * [x] 透過新 `FW` `E24605B` 將 `disk` 更新後, 架設 `Aetina` 測試環境驗證.
+
+# 2024-10-14
+* 協助東哥觀看 `DRAM` 從 `I3C` 切換至 `I2C` 相關驗證操作.
+* 參與 `DRAM` `浪潮` 相關討論會議.
+* 前往 `MIS` 借取 `Notebook`.
+* 與 `FW-RD` 討論 `Aetina` 異常狀況.
+* 透過新 `FW` `E24605B` 將 `disk` 更新後, 架設 `Aetina` 測試環境驗證.
+* TODO
+  * [x] 參與 `FAE-team2` 會議.
+  * [x] 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+  * [x] 測試 `新漢` `SATADOM` `3ME4`.
+  * [x] 測試 `鑫創電子` `SATADOM` `3ME3`.
+  * [x] 與 `EU-FAE` 討論 `LBB 過高` 客訴案, 以及 `3TG8-P` `DAS LED` 顯示客訴案.
+
+# 2024-10-15
+* 參與 `FAE-team2` 會議.
+* 與 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+* 測試 `新漢` `SATADOM` `3ME4`.
+  * 後續發現 `+5V` 電路異常, 經過查找為 `C20` 短路.
+* 測試 `鑫創電子` `SATADOM` `3ME3`, 經過測試皆可正常認碟, 並將 `device` 轉交於 `Danny`.
+* 與 `EU-FAE` 討論 `LBB 過高` 客訴案, 以及 `3TG8-P` `DAS LED` 顯示客訴案.
+* TODO
+  * [x] 協助 `William` 修改 `file_cmp` 相關 `script`.
+    * [x] 新增 `iSMART` `Temp` 資訊於 `log`.
+    * [x] 透過 `for loop` 產生 `1~1023` 數字, 並以 `4K` 寫入資料進行比較.
+  * [x] 協助觀看 `台塑勝高` `3TG6-P` copy fail 問題.
+  * [x] 準備 `NB` 雙系統.
+  * [x] 與 `EU-FAE` 討論 `LBB 過多` `FA report`.
+  * [x] 與 `Sales-Joan` 討論 `HMI` 相關客訴狀況.
+
+# 2024-10-16
+* 協助 `William` 修改 `file_cmp` 相關 `script`.
+  * 新增 `iSMART` `Temp` 資訊於 `log`.
+  * 透過 `for loop` 產生 `1~1023` 數字, 並以 `4K` 寫入資料進行比較.
+* 協助觀看 `台塑勝高` `3TG6-P` copy fail 問題.
+* 準備 `NB` 雙系統, 並錄製 `copy machine` 相關 `log`.
+* 與 `EU-FAE` 討論 `LBB 過多` `FA report`.
+* 與 `Sales-Joan` 討論 `HMI` 相關客訴狀況.
+* TODO
+  * [ ] 修改 `file_cmp` 相關 `script`.
+  * [ ] 觀看 `台塑勝高` `3TG6-P` copy fail 問題.
+  * [ ] 參與 `HMI` 客訴討論會議.
