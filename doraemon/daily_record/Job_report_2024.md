@@ -3069,6 +3069,26 @@
 * 與 `EU-FAE` 討論 `LBB 過多` `FA report`.
 * 與 `Sales-Joan` 討論 `HMI` 相關客訴狀況.
 * TODO
+  * [x] 修改 `file_cmp` 相關 `script`.
+  * [x] 觀看 `台塑勝高` `3TG6-P` copy fail 問題.
+  * [x] 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+    * [x] 針對 `D3` 短路做實驗.
+    * [x] 更換 `device` `2TB` 進行初步電阻修改.
+  * [x] 參與 `HMI` 客訴討論會議.
+  * [x] 協助 `Aetina` 人員測試 `Old FW` & 遠端協助 `JP` 人員更新 `FW`.
+
+# 2024-10-17
+* 修改 `file_cmp` 相關 `script`.
+* 觀看 `台塑勝高` `3TG6-P` copy fail 問題.
+* 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+  * 針對 `D3` 短路做實驗.
+    * 單一讀寫, 正常閃爍.
+    * 同時插入, 單獨讀寫, 正常閃爍.
+  * 更換 `device` `2TB` 進行初步電阻修改.
+    * 同時插入, 單獨讀寫, 無法閃爍.
+* 參與 `HMI` 客訴討論會議, 後續會協助加測實驗.
+* 協助 `Aetina` 人員測試 `Old FW` & 遠端協助 `JP` 人員更新 `FW`.
+* TODO
+  * [ ] 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
   * [ ] 修改 `file_cmp` 相關 `script`.
-  * [ ] 觀看 `台塑勝高` `3TG6-P` copy fail 問題.
-  * [ ] 參與 `HMI` 客訴討論會議.
+
