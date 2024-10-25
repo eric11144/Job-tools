@@ -3089,6 +3089,87 @@
 * 參與 `HMI` 客訴討論會議, 後續會協助加測實驗.
 * 協助 `Aetina` 人員測試 `Old FW` & 遠端協助 `JP` 人員更新 `FW`.
 * TODO
-  * [ ] 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
-  * [ ] 修改 `file_cmp` 相關 `script`.
+  * [x] 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+  * [x] 修改 `file_cmp` 相關 `script`.
+  * [x] 協助 `Aetina` 人員提供 `FW PCN`.
+  * [x] 轉交 `Hanel` 平台於 `Sales-Deirdre`.
+
+# 2024-10-18
+* 測試 `HW-RD` 討論 `3TG8-P` `DAS LED` 顯示問題.
+* 修改 `file_cmp` 相關 `script`, 並提供給 `William`.
+* 協助 `Aetina` 人員提供 `FW PCN`.
+* 轉交 `Hanel` 平台於 `Sales-Deirdre`.
+* TODO
+  * [x] 與 `Sales-James`, `Sales-Jamie`, `FAE-team1` 人員討論 `Recab AB` 客訴案中間處理.
+  * [x] 與 `Sales-Louis` 討論 `Boeing` 目前 `MP-tool` 進度.
+  * [x] 協助 `Sales-Joan` 申請 `HMI` 樣品申請.
+  * [x] 協助 `William` 測試 `file_cmp` 相關 `script`.
+  * [x] 與 `EU-FAE` 討論 `Ericssion` `eUSB` `FA report`.
+  * [x] 與 `SMI` 相關人員討論 `DAS LED` 相關處理方向.
+
+# 2024-10-21
+* 與 `Sales-James`, `Sales-Jamie`, `FAE-team1` 人員討論 `Recab AB` 客訴案中間處理.
+* 與 `Sales-Louis` 討論 `Boeing` 目前 `MP-tool` 進度.
+* 協助 `Sales-Joan` 申請 `HMI` 樣品申請.
+* 協助 `William` 測試 `file_cmp` 相關 `script`.
+* 與 `EU-FAE` 討論 `Ericssion` `eUSB` `FA report`.
+* 與 `SMI` 相關人員討論 `DAS LED` 相關處理方向, 後續會請 `SMI` `HW RD` 協助觀看.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 與 `Jackie` 討論 `AI` 課程.
+  * [x] 與 `Eva`, `Danny` 討論 `Recab AB` 相關流程處理時間軸.
+  * [x] 與 `EU-FAE` 討論 `3TG8-P` `DAS LED` 顯示異常處理進度.
+  * [x] 撰寫 `HMI` 相關分析進度 `PPT`.
+
+# 2024-10-22
+* 參與 `FAE-team2` 週會.
+* 與 `Jackie` 討論 `AI` 課程.
+* 與 `Eva`, `Danny` 討論 `Recab AB` 相關流程處理時間軸.
+* 與 `EU-FAE` 討論 `3TG8-P` `DAS LED` 顯示異常處理進度.
+* 撰寫 `HMI` 相關分析進度 `PPT`.
+* TODO
+  * [x] 針對 `HMI` 新品測試 `60˚C` 進行 `reboot` 測試.
+  * [x] 撰寫 `HMI` 相關分析進度 `PPT`.
+  * [x] 與 `EU-Sales` 討論 `Spezial` `FA` report 內容.
+  * [x] 與 `EU-FAE` 討論 `Recab AB` 當初分析狀況.
+  * [x] 與 `HR` 討論組織架構狀況.
+  * [x] 將 `HMI` 客退 `Flash` 換送至 `RMA`, 更換至新 `PCB` 上測試.
+
+# 2024-10-23
+* 針對 `HMI` 新品測試 `60˚C` 進行 `reboot` 測試.
+* 撰寫 `HMI` 相關分析進度 `PPT`.
+* 與 `EU-Sales` 討論 `Spezial` `FA` report 內容.
+* 與 `EU-FAE` 討論 `Recab AB` 當初分析狀況.
+* 與 `HR` 討論組織架構狀況.
+* 將 `HMI` 客退 `Flash` 換送至 `RMA`, 更換至新 `PCB` 上測試, 後續發生 `Flash type` 上錯, 會再請 `RMA` 協助更換.
+* TODO
+  * [x] 轉交 `SATA Tray` 於 `SMI` 人員做後續相關分析.
+  * [x] 測試 `HMI` 客退 `Flash` 換至新 `PCB` 後, 於 `60˚C` `chamber` 進行 `reboot` 測試.
+  * [x] 撰寫 `HMI` 相關分析進度 `PPT`.
+  * [x] 協助 `Sales-Joan` 參與 `HMI` 相關討論會議.
+  * [x] 參與 `AI應用與技術介紹會議`.
+
+# 2024-10-24
+* 轉交 `SATA Tray` 於 `SMI` 人員做後續相關分析.
+* 測試 `HMI` 客退 `Flash` 換至新 `PCB` 後, 於 `60˚C` `chamber` 進行 `reboot` 測試.
+* 撰寫 `HMI` 相關分析進度 `PPT`.
+* 協助 `Sales-Joan` 參與 `HMI` 相關討論會議.
+* 參與 `AI應用與技術介紹會議`.
+* TODO
+  * [x] 將 `HMI` 客訴品送至 `SMT` 照 `controller` & `Flash` `X-ray`.
+  * [x] 與 `Sales-Joan` 討論 `HMI` 開案相關問題.
+  * [x] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+  * [x] 整理客訴案相關進度.
+
+# 2024-10-25
+* 將 `HMI` 客訴品送至 `SMT` 照 `controller` & `Flash` `X-ray`.
+* 與 `Sales-Joan` 討論 `HMI` 開案相關問題.
+* 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+* 整理客訴案相關進度.
+* TODO
+  * [x] 協助 `Susan` 觀看 `Sales-Joan` 客訴案.
+  * [x] 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示相關問題.
+  * [x] 協助 `William` 架設 `3TG6-P` `車子影像錄製` 環境.
+  * [x] 參與 `FAE-team2` 會議.
+  * [x] 協助 `Kenzi` 處理 `Aetina` 平台執行 `Burnintest` 問題.
 
