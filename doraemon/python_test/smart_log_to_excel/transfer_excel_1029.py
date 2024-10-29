@@ -3,7 +3,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 # 定義log文件路徑
-folder_path = './test_log/'
+folder_path = './2022-09-02_log/'
 
 def get_log_and_txt_files(folder_path):
     # 取得資料夾內所有 .log 或 .txt 檔案
