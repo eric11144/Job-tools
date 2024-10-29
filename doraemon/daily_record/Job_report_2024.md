@@ -3173,3 +3173,35 @@
   * [x] 參與 `FAE-team2` 會議.
   * [x] 協助 `Kenzi` 處理 `Aetina` 平台執行 `Burnintest` 問題.
 
+# 2024-10-28
+* 協助 `Susan` 觀看 `Sales-Joan` 客訴案.
+* 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示相關問題.
+* 協助 `William` 架設 `3TG6-P` `車子影像錄製` 環境.
+* 參與 `FAE-team2` 會議.
+* 協助 `Kenzi` 處理 `Aetina` 平台執行 `Burnintest` 問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助查找 `HMI` 客退品 `device` 相關問題.
+  * [x] 與 `PM-Jack` 討論 `HMI` `device` `B86` & `B88` pcb 不同問題.
+  * [x] 協助處理 `Aristocrat` 歸還借出相關事物.
+  * [x] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+  * [x] 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示問題處理進度.
+  * [x] 協助 `Kiwi` 架測 `3MG2-P` `4`pcs (透過 `FIO`).
+
+# 2024-10-29
+* 參與 `FAE-team2` 週會.
+* 協助查找 `HMI` 客退品 `device` 相關問題.
+  * 後續發現 `U38` & `U39` 零件放反, 更換後集正常.
+  * 開卡過程發現 `Flash` `CH1` `CE1` 無法抓取, 後續會將 `controller` 更換 & `Flash` remount.
+* 與 `PM-Jack` 討論 `HMI` `device` `B86` & `B88` pcb 不同問題.
+  * 主要是 `Power IC` 缺料, 所以有做相關的更動.
+  * 原 `Power IC` 為 `Richtek`( `3` 電壓共用 `1` 種 `Power IC` ), 後續更改為 `Torex`( `3` 電壓需拆成 `3` 種 `Power IC` )
+* 協助處理 `Aristocrat` 歸還借出相關事物.
+* 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+* 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示問題處理進度, 據了解, 目前尚未開始分析問題, 後續有提供 `4`pin `Power` 線材.
+* 協助 `Kiwi` 架測 `3MG2-P` `4`pcs (透過 `FIO` 進行 `read / write`).
+* TODO
+  * [ ] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+  * [x] 協助 `Kiwi` 提供 `3MG2-P` `4`pcs (透過 `FIO` 進行 `read / write`) `iSMART`.
+  * [ ] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+
