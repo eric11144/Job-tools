@@ -3201,7 +3201,39 @@
 * 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示問題處理進度, 據了解, 目前尚未開始分析問題, 後續有提供 `4`pin `Power` 線材.
 * 協助 `Kiwi` 架測 `3MG2-P` `4`pcs (透過 `FIO` 進行 `read / write`).
 * TODO
-  * [ ] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+  * [x] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
   * [x] 協助 `Kiwi` 提供 `3MG2-P` `4`pcs (透過 `FIO` 進行 `read / write`) `iSMART`.
+  * [x] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+  * [x] 查找 `HMI` `3IE3` 異常問題.
+  * [x] 與 `PM-Jack` & `HW-RD` 討論 `3IE7` `B86` & `B88` 差異, 以及 `Power IC` 位置.
+  * [x] 參與 `AI` 內部訓練課程.
+
+# 2024-10-30
+* 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+* 協助 `Kiwi` 提供 `3MG2-P` `4`pcs (透過 `FIO` 進行 `read / write`) `iSMART`.
+* 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+* 查找 `HMI` `3IE3` 異常問題, 後續發現為 `C83` & `C84` 電容短路.
+* 與 `PM-Jack` & `HW-RD` 討論 `3IE7` `B86` & `B88` 差異, 以及 `Power IC` 位置.
+* 參與 `AI` 內部訓練課程.
+* TODO
+  * [x] 參與 `Team build` 會議.
+  * [x] 更換 `HMI` `3IE3` `C83` & `C84` 電容.
+  * [x] 更新 `eFAE` 客訴案件進度.
+  * [x] 協助 `shelly` 處理 `3ME4` 經由 `iometer` 掉速問題. 
+  * [x] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+  * [x] 測試 `HMI` `3IE7` 維修品.
+  * [x] 與 `Sales-Joan` sync `HMI` 測試結果.
+
+# 2024-10-31
+* 參與 `Team build` 會議.
+* 更換 `HMI` `3IE3` `C83` & `C84` 電容, 後續確定為 `C84` 造成異常.
+* 更新 `eFAE` 客訴案件進度.
+* 協助 `shelly` 處理 `3ME4` 經由 `iometer` 掉速問題. 
+* 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+* 測試 `HMI` `3IE7` 維修品, 更新 `controller` & `remount Flash` 後, 可正常認碟, 但連接速度很慢, 後續將 `golden finger` 清潔後, 認碟狀況較穩定.
+* 與 `Sales-Joan` sync `HMI` 測試結果.
+* TODO
+  * [ ] 測試  `HMI` `3IE7` 維修品.
+  * [ ] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
   * [ ] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
 
