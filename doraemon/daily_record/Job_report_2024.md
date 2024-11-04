@@ -3233,7 +3233,32 @@
 * 測試 `HMI` `3IE7` 維修品, 更新 `controller` & `remount Flash` 後, 可正常認碟, 但連接速度很慢, 後續將 `golden finger` 清潔後, 認碟狀況較穩定.
 * 與 `Sales-Joan` sync `HMI` 測試結果.
 * TODO
-  * [ ] 測試  `HMI` `3IE7` 維修品.
-  * [ ] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
-  * [ ] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+  * [x] 颱風天放假.
+
+# 2024-11-01
+* 颱風天放假.
+* TODO
+  * [x] 測試 `Boeing` `One click` `FW Update` tool.
+  * [x] 協助 `JP` 測試 `QT` 測試項目.
+    * [x] `Windows 10` `RANDOM 4k write` iometer.
+    * [x] `Linux` `FIO` `SEQ 16M`
+  * [x] 測試  `HMI` `3IE7` 維修品.
+  * [x] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況.
+  * [x] 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+
+# 2024-11-04
+* 測試 `Boeing` `One click` `FW Update` tool.
+* 協助 `JP` `FJ240723008` 測試 `QT` 測試項目.
+  * `Windows 10` `RANDOM 4k write` iometer.
+  * `Linux` `FIO` `SEQ 16M`
+* 測試  `HMI` `3IE7` 維修品, `rebooter` `100` cycle -> pass.
+* 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況, 將 `FW` 更改成 `A23A20`, 執行 `3:12` 時, 就會發生 `Fail`.
+* 撰寫 `iSMART` `Linux` `GUI` 界面開發.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況(將 `device` 配置 `partition`).
+  * [x] 協助提供 `JP` `FJ240723008` 測試 `QT` 測試項目 `UART` log.
+  * [x] 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示相關問題.
+  * [x] 協助 `Shelly` 架設 `Linux` `Burnintest` 環境.
+  * [ ] 測試 `HMI` `3IE7` `Power Sequence`.
 
