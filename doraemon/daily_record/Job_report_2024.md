@@ -3260,5 +3260,57 @@
   * [x] 協助提供 `JP` `FJ240723008` 測試 `QT` 測試項目 `UART` log.
   * [x] 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示相關問題.
   * [x] 協助 `Shelly` 架設 `Linux` `Burnintest` 環境.
-  * [ ] 測試 `HMI` `3IE7` `Power Sequence`.
+  * [x] 測試 `HMI` `3IE7` `Power Sequence`.
+
+# 2024-11-05
+* 參與 `FAE-team2` 週會.
+* 協助 `William` 觀察 `威盛 ` `3TG6-P` `車子影像錄製` 測試狀況(將 `device` 配置 `partition`).
+* 協助提供 `JP` `FJ240723008` 測試 `QT` 測試項目 `UART` log.
+* 詢問 `SMI` 關於 `SATA Tray` `DAS LED` 顯示相關問題.
+* 協助 `Shelly` 架設 `Linux` `Burnintest` 環境.
+* 測試 `HMI` `3IE7` `Power Sequence`.
+* TODO
+  * [x] 協助 `JP` `FJ240723008` 測試 `QT` 測試項目 `UART` log.
+    * [x] 架設 `SATA Trace`.
+    * [x] `iometer` test.
+    * [x] 查找 `device` 無 `UART` log 問題.
+  * [x] 協助 `Kiwi` 歸還 `US` `3TG6-P`.
+  * [x] 與 `EU-FAE` sync 客訴案進度.
+    * [x] `FEB240422003` / `FEB240523003` - `Portwell`.
+    * [x] `FED240724001` `3TG8-P` `LED` 顯示問題.
+  * [x] 協助 `Danny` 提供 `SATADOM` 線路圖.
+  * [x] 協助 `Kenzi` 觀看 `Aetina` 平台執行 `burnintest` 問題.
+  * [x] 測試 `Boeing` `One-click-FW-update` tool.
+
+# 2024-11-06
+* 協助 `JP` `FJ240723008` 測試 `QT` 測試項目 `UART` log.
+  * 架設 `SATA Trace`.
+  * `iometer` test.
+  * 查找 `device` 無 `UART` log 問題.
+* 協助 `Kiwi` 歸還 `US` `3TG6-P`.
+* 與 `EU-FAE` sync 客訴案進度.
+  * `FEB240422003` / `FEB240523003` - `Portwell`.
+  * `FED240724001` `3TG8-P` `LED` 顯示問題.
+* 協助 `Danny` 提供 `SATADOM` 線路圖.
+* 協助 `Kenzi` 觀看 `Aetina` 平台執行 `burnintest` 問題.
+* 測試 `Boeing` `One-click-FW-update` tool.
+* TODO
+  * [x] 協助提供 `3`套 `Portwell` 平台 & `5`pcs device 歸還.
+  * [x] 提供 `Boeing` `One-click-FW-update` tool & 平台.
+  * [x] 協助 `FW-RD` 處理 `JP` `FJ240723008` 測試 `QT` 測試.
+    * [x] `OS` : `  Windows 10 IOT`.
+    * [x] `2`pcs 透過 `intel software raid` 設定 `raid 0`.
+  * [x] 協助 `William` 提供 `威盛` 高溫測試結果.
+  * [x] 協助 `Alan` 處理 `iSMART` 顯示 `CRC Error` 問題.
+
+# 2024-11-07
+* 協助提供 `3`套 `Portwell` 平台 & `5`pcs device 歸還.
+* 提供 `Boeing` `One-click-FW-update` tool & 平台.
+* 協助 `FW-RD` 處理 `JP` `FJ240723008` 測試 `QT` 測試.
+  * `OS` : `  Windows 10 IOT`.
+  * `2`pcs 透過 `intel software raid` 設定 `raid 0`.
+* 協助 `William` 提供 `威盛` 高溫測試結果.
+* 協助 `Alan` 處理 `iSMART` 顯示 `CRC Error` 問題.
+* TODO
+  * [ ] 持續架設 `JP` `FJ240723008` 測試 `QT` 測試.
 
