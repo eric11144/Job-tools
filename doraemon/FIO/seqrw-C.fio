@@ -1,0 +1,12 @@
+; Sequential write Test for vibration
+[global]
+ioengine=libaio
+direct=1
+bs=512K
+runtime=300
+loops=2
+time_based
+size=7Gb
+[/home/ubuntu/test2]
+rw=rw
+

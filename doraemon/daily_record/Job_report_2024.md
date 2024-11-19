@@ -3298,7 +3298,7 @@
   * [x] 協助提供 `3`套 `Portwell` 平台 & `5`pcs device 歸還.
   * [x] 提供 `Boeing` `One-click-FW-update` tool & 平台.
   * [x] 協助 `FW-RD` 處理 `JP` `FJ240723008` 測試 `QT` 測試.
-    * [x] `OS` : `  Windows 10 IOT`.
+    * [x] `OS` : `Windows 10 IOT`.
     * [x] `2`pcs 透過 `intel software raid` 設定 `raid 0`.
   * [x] 協助 `William` 提供 `威盛` 高溫測試結果.
   * [x] 協助 `Alan` 處理 `iSMART` 顯示 `CRC Error` 問題.
@@ -3307,10 +3307,144 @@
 * 協助提供 `3`套 `Portwell` 平台 & `5`pcs device 歸還.
 * 提供 `Boeing` `One-click-FW-update` tool & 平台.
 * 協助 `FW-RD` 處理 `JP` `FJ240723008` 測試 `QT` 測試.
-  * `OS` : `  Windows 10 IOT`.
+  * `OS` : `Windows 10 IOT`.
   * `2`pcs 透過 `intel software raid` 設定 `raid 0`.
 * 協助 `William` 提供 `威盛` 高溫測試結果.
 * 協助 `Alan` 處理 `iSMART` 顯示 `CRC Error` 問題.
 * TODO
-  * [ ] 持續架設 `JP` `FJ240723008` 測試 `QT` 測試.
+  * [x] 持續架設 `JP` `FJ240723008` 測試 `QT` 測試.
+  * [x] 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助 `Shelly` 處理 `Korea` case 說法問題.
+  * [x] 撰寫 `FEA241024008` `HMI` `3IE7` `FA` report.
 
+# 2024-11-08
+* 持續架設 `JP` `FJ240723008` 測試 `QT` 測試.
+* 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助 `Shelly` 處理 `Korea` case 說法問題.
+* TODO
+  * [x] 協助 `Sales-Joan` 提供 `Curtiss Wright` 進版 `FW`.
+  * [x] 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 持續架設 `JP` `FJ240723008` 測試 `QT` 測試.
+  * [x] 協助處理 `EU` FA case approve 相關問題.
+
+# 2024-11-11
+* 協助 `Sales-Joan` 提供 `Curtiss Wright` 進版 `FW`.
+* 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助處理 `EU` FA case approve 相關問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Kenzi` 提供 `eFAE` 系統遇到相關問題.
+  * [x] 架設 `JP` `FJ240723008` 測試 `Flush command`( `FW`: `S24B11` ).
+  * [x] 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助處理 `EU` FA case approve 相關問題.
+
+# 2024-11-12
+* 參與 `FAE-team2` 週會.
+* 協助 `Kenzi` 提供 `eFAE` 系統遇到相關問題.
+* 架設 `JP` `FJ240723008` 測試 `Flush command`( `FW`: `S24B11` ).
+* 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* TODO
+  * [x] 取回 `Hyperstone` 送修 `device`.
+  * [x] 協助 `Kiwi` 提供維修品於 `Hyperstone` FAE.
+  * [x] 協助新人 `Susan` 處理 `FEA241018002`.
+  * [x] 協助 `FW RD` 處理 `JP` `FJ240723008` `FW` 更新, 並測試 `Flush command`.
+  * [x] 協助 `FW-RD` 觀看 `SIL4SystemsCHMMStressTestv2.1.out` 無法於 `Linux` 執行相關問題.
+  * [x] 與 `FAE-team1` 人員討論 `FA` case 結案問題.
+  * [x] 協助 `EU-FAE` 驗證 `PCIe 3TG6-P` `DLMC` 流程. 
+
+# 2024-11-13
+* 取回 `Hyperstone` 送修 `device`.
+* 協助 `Kiwi` 提供維修品於 `Hyperstone` FAE.
+* 協助新人 `Susan` 處理 `FEA241018002`.
+* 協助 `FW RD` 處理 `JP` `FJ240723008` `FW` 更新, 並測試 `Flush command`.
+* 協助 `FW-RD` 觀看 `SIL4SystemsCHMMStressTestv2.1.out` 無法於 `Linux` 執行相關問題.
+* 與 `FAE-team1` 人員討論 `FA` case 結案問題.
+* 協助 `EU-FAE` 驗證 `PCIe 3TG6-P` `DLMC` 流程.
+* TODO
+  * [x] 協助 `William` 處理 `FTD240925002-威盛` 鏡頭成像問題.
+  * [x] 盤點手邊設備財產.
+  * [x] 協助 `FW RD` 處理 `JP` `FJ240723008` `FW` 更新( `S24B13` ), 並測試 `Flush command`.
+  * [x] 回報 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助 `Shelly` 量測 `3TE7` `Reset` 電容容值.
+
+# 2024-11-14
+* 協助 `William` 處理 `FTD240925002-威盛` 鏡頭成像問題.
+* 盤點手邊設備財產.
+* 協助 `FW RD` 處理 `JP` `FJ240723008` `FW` 更新( `S24B13` ), 並測試 `Flush command`.
+* 回報 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助 `Shelly` 量測 `3TE7` `Reset` 電容容值.
+* TODO
+  * [x] 盤點手邊設備財產.
+  * [x] 協助 `William` 處理 `China-FAE` 執行 `shell script` 相關問題.
+  * [x] 協助 `Danny` 觀看 `EU` `FEC240905012` `3MG2-P` 認不到碟問題.
+  * [x] 詢問 `Kerry` 關於 `EU` `FEC240905012` `3MG2-P` 觀看 `Later bad` 相關操作.
+  * [x] 與 `EU FAE` 討論 `FEC240905012` `3MG2-P` 認不到碟問題.
+  * [x] 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助 `Nick` 提供 `JP` `FJ240723008``OEC` 測試 `Flush command` 相關資訊.
+
+# 2024-11-15
+* 盤點手邊設備財產.
+* 協助 `William` 處理 `China-FAE` 執行 `shell script` 相關問題.
+* 協助 `Danny` 觀看 `EU` `FEC240905012` `3MG2-P` 認不到碟問題.
+* 詢問 `Kerry` 關於 `EU` `FEC240905012` `3MG2-P` 觀看 `Later bad` 相關操作.
+* 與 `EU FAE` 討論 `FEC240905012` `3MG2-P` 認不到碟問題.
+* 協助追蹤 `SMI` FAE 處理 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助 `Nick` 提供 `JP` `FJ240723008``OEC` 測試 `Flush command` 相關資訊.
+* TODO
+  * [x] 與 `Danny` 討論 `EU` `FEC240905012` `3MG2-P` `RMA` 觀看 `soldering ball` 問題.
+  * [x] 與 `RMA` 討論 `EU` `FEC240905012` `3MG2-P` `Flash 3` `X-ray` 觀看 `soldering ball` 問題.
+  * [x] 請 `Celia` 協助轉傳設備財產.
+  * [x] 協助 `William` 準備 `3ME3` `FIO` 全碟寫入相關測試.
+
+# 2024-11-18
+* 與 `Danny` 討論 `EU` `FEC240905012` `3MG2-P` `RMA` 觀看 `soldering ball` 問題.
+* 與 `RMA` 討論 `EU` `FEC240905012` `3MG2-P` `Flash 3` `X-ray` 觀看 `soldering ball` 問題.
+* 請 `Celia` 協助轉傳設備財產.
+* 協助 `William` 準備 `3ME3` `FIO` 全碟寫入相關測試.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 前往 `RMA` 取回 `EU` `FEC240905012` `3MG2-P` 客退品.
+  * [x] 協助 `Jessie` 處理實驗室設備檢查表單填寫.
+  * [x] 與 `EU-FAE` 討論 `FA` case 處理狀況.
+    * [x] `FEC240905012`.
+    * [x] `FED240724001`.
+  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助 `William` 測試 `3ME3` `FIO` 全碟寫入相關測試, 以及準備 `image`.
+
+# 2024-11-19
+* 參與 `FAE-team2` 週會.
+* 前往 `RMA` 取回 `EU` `FEC240905012` `3MG2-P` 客退品.
+* 協助 `Jessie` 處理實驗室設備檢查表單填寫.
+* 與 `EU-FAE` 討論 `FA` case 處理狀況.
+  * `FEC240905012`.
+  * `FEC240905012`.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助 `William` 測試 `3ME3` `FIO` 全碟寫入相關測試, 以及準備 `image`, 並提供相關 `tool`.
+* TODO
+  * [x] 觀看 `FEA241106007` `Simms International` `3TE7` 無法 `copy image` 問題.
+  * [x] 觀看 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
+  * [x] 與 `FW RD` & `Kiwi` & `Kerry` 討論 `ASSERT: M(3)F(14)L(5242)` 相關問題.
+  * [x] 與 `PM-Mickey` 討論 `3TG8-P` 目前 `FW` version.
+  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 與 `Jackie` & `EU-FAE` 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 回報 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 與 `EU-FAE` 討論 `FA` case 處理進度.
+  * [x] 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
+  * [x] 協助 `William` 測試 `3ME3` `FIO` 全碟寫入相關測試.
+
+# 2024-11-20
+* 觀看 `FEA241106007` `Simms International` `3TE7` 無法 `copy image` 問題.
+* 觀看 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
+* 與 `FW RD` & `Kiwi` & `Kerry` 討論 `ASSERT: M(3)F(14)L(5242)` 相關問題.
+* 與 `PM-Mickey` 討論 `3TG8-P` 目前 `FW` version.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 與 `Jackie` & `EU-FAE` 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 回報 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 與 `EU-FAE` 討論 `FA` case 處理進度.
+* 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
+* 協助 `William` 測試 `3ME3` `FIO` 全碟寫入相關測試.
+* TODO
+  * [ ] 撰寫 `FEA241106007` `Simms International` `3TE7` `FA` report.
+  * [ ] 處理 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
+  * [ ] 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
+  * [ ] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
