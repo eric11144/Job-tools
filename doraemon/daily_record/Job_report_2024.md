@@ -3444,7 +3444,105 @@
 * 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
 * 協助 `William` 測試 `3ME3` `FIO` 全碟寫入相關測試.
 * TODO
-  * [ ] 撰寫 `FEA241106007` `Simms International` `3TE7` `FA` report.
-  * [ ] 處理 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
-  * [ ] 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
-  * [ ] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 撰寫 `FEA241106007` `Simms International` `3TE7` `FA` report.
+  * [x] 處理 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
+  * [x] 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
+  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 協助 `EU-Sales` 提供 `FEB240821006` `DVS25-A28D81BWH88` 歸還.
+  * [x] 與 `Jackie` 討論 `EU` 對於 `FED240724001` `3TG8-P` `LED` 相關提問.
+  * [x] 協助 `Jay` 測試 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V`.
+  * [x] 與 `Kiwi` 討論 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V` 相關問題.
+  * [x] 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0326A0` & `FWX0423A0` 差異.
+
+# 2024-11-21
+* 撰寫 `FEA241106007` `Simms International` `3TE7` `FA` report.
+* 處理 `FEA241106008` `Simms International` `3TE6` 無法認碟問題.
+* 測試 `EU` `FEC240905012` `3MG2-P` 進行重開卡.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 協助 `EU-Sales` 提供 `FEB240821006` `DVS25-A28D81BWH88` 歸還.
+* 與 `Jackie` 討論 `EU` 對於 `FED240724001` `3TG8-P` `LED` 相關提問.
+* 協助 `Jay` 測試 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V`.
+* 與 `Kiwi` 討論 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V` 相關問題.
+* 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0326A0` & `FWX0423A0` 差異.
+* TODO
+  * [x] 協助 `Nick` 測試 `ASK` `FJ241017008` `3TE7` 進行 `FW` `write code` `S24306`.
+  * [x] 觀看 `EU` `winsys` `18 pcs` 客退品.
+  * [x] 與 `SMI` FAE 討論 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 與 `EU-FAE` 討論 `FA` case 處理進度.
+  * [x] 協助 `Jay` 測試 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V`.
+  * [x] 提供 `FEA241106007` `Simms International` `3TE7` `FA` report.
+
+# 2024-11-22
+* 協助 `Nick` 測試 `ASK` `FJ241017008` `3TE7` 進行 `FW` `write code` `S24306`.
+* 觀看 `EU` `winsys` `18 pcs` 客退品.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 與 `EU-FAE` 討論 `FA` case 處理進度.
+* 協助 `Jay` 測試 `3IE4` 將 `U2` 取下後, 針對此處供電 `1.2V`.
+* 提供 `FEA241106007` `Simms International` `3TE7` `FA` report.
+* TODO
+  * [x] 參與勝利聚餐.
+  * [x] 協助 `Kenzi` 提供 `Hyperstone` 聯絡方式.
+  * [x] 與 `Jackie` 討論 `PM` 對於 `FED240724001` `3TG8-P` `LED` 相關回答.
+  * [x] 協助 `Danny` 提供 `開卡版` `FW` 更新 tool.
+  * [x] 與 `EU-FAE` 討論 `FEC240905012` `3MG2-P` `Flash id table` 測試狀況.
+  * [x] 協助 `Shelly` 焊接 `3TG8-P` `Power Sequence` 訊號線.
+
+# 2024-11-25
+* 參與勝利聚餐.
+* 協助 `Kenzi` 提供 `Hyperstone` 聯絡方式.
+* 與 `Jackie` 討論 `PM` 對於 `FED240724001` `3TG8-P` `LED` 相關回答.
+* 協助 `Danny` 提供 `開卡版` `FW` 更新 tool.
+* 與 `EU-FAE` 討論 `FEC240905012` `3MG2-P` `Flash id table` 測試狀況.
+* 協助 `Shelly` 焊接 `3TG8-P` `Power Sequence` 訊號線.
+* TODO
+  * [x] 與 `Kiwi` 討論 `FEC240905012` `3MG2-P` `Flash` 料件問題.
+  * [x] 協助 `FW-RD Allen` 更新 `FJ240723008` `NEC` `RAID 0` 客退品 `FW`, 並協助架設環境.
+  * [x] 協助 `Sales-Joan` 觀看 `HMI` `9 pcs` 客退品.
+  * [x] 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0424A0` `FW` 外顯命名方式.
+  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 提供 `EU` 關於 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
+    * [x] `Windows 10`.
+    * [x] `Ubuntu 22.04`. 
+  * [x] 協助驗證 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
+  * [x] 申請替換料件.
+
+# 2024-11-26
+* 與 `Kiwi` 討論 `FEC240905012` `3MG2-P` `Flash` 料件問題.
+* 協助 `FW-RD Allen` 更新 `FJ240723008` `NEC` `RAID 0` 客退品 `FW`, 並協助架設環境.
+* 協助 `Sales-Joan` 觀看 `HMI` `9 pcs` 客退品.
+* 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0424A0` `FW` 外顯命名方式.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 提供 `EU` 關於 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
+  * `Windows 10`.
+  * `Ubuntu 22.04`. 
+* 協助驗證 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
+* 申請替換料件.
+* 協助 `Sales-Joan` 追蹤 `FEA241106008` `3TE6` `ASSERT` 分析狀況.
+* TODO
+  * [x] 與 `FW-RD Adson` 討論 `FEA241106008` `3TE6` `ASSERT` 後續處理.
+  * [x] 詢問客戶關於 `FEA241106008` `3TE6` `ASSERT` 是否可以做相關破壞性實驗.
+  * [x] 協助詢問 `EU-FAE` 關於 `winsys` 客訴案狀況.
+  * [x] 協助 `Sales-Joan` 提供 `FEA241106007` `3TE7` `DLMC` tool.
+  * [x] 取得 `FEC240905012` `3MG2-P` 替換 `Flash 4` device, 並進行相關測試.
+  * [x] 協助 `Shelly` 測試 `3TE7` 於 `Ubuntu` 執行 `benchmark` & `Windows 10` 執行 `AIDA 64`.
+  * [x] 協助回覆 `EU-Sales` 關於 `3TG8-P` `LED` `FWX0424A0` 相關問題.
+  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 驗證結果提供.
+  * [x] 更新 `FA` case 處理進度.
+
+# 2024-11-27
+* 與 `FW-RD Adson` 討論 `FEA241106008` `3TE6` `ASSERT` 後續處理.
+* 詢問客戶關於 `FEA241106008` `3TE6` `ASSERT` 是否可以做相關破壞性實驗.
+* 協助詢問 `EU-FAE` 關於 `winsys` 客訴案狀況.
+* 協助 `Sales-Joan` 提供 `FEA241106007` `3TE7` `DLMC` tool.
+* 取得 `FEC240905012` `3MG2-P` 替換 `Flash 4` device, 並進行相關測試.
+* 協助 `Shelly` 測試 `3TE7` 於 `Ubuntu` 執行 `benchmark` & `Windows 10` 執行 `AIDA 64`.
+* 協助回覆 `EU-Sales` 關於 `3TG8-P` `LED` `FWX0424A0` 相關問題.
+* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 驗證結果提供.
+* 更新 `FA` case 處理進度.
+* TODO
+  * [ ] 協助測試 `FEA241106008` `3TE6` `ASSERT` 問題複製.
+    * [ ] Install `Windows 10`.
+    * [ ] `Abnormal power cycling` test.
+  * [ ] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+  * [ ] 驗證 `3TG8-P` `LED` 於 `SATA tray` 顯示狀況.
+  * [ ] 觀看 `FEC240905012` `3MG2-P` 替換 `Flash 4` device 執行 `Burnintest` 狀況.
