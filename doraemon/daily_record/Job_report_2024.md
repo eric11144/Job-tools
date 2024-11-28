@@ -3498,12 +3498,12 @@
   * [x] 與 `Kiwi` 討論 `FEC240905012` `3MG2-P` `Flash` 料件問題.
   * [x] 協助 `FW-RD Allen` 更新 `FJ240723008` `NEC` `RAID 0` 客退品 `FW`, 並協助架設環境.
   * [x] 協助 `Sales-Joan` 觀看 `HMI` `9 pcs` 客退品.
-  * [x] 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0424A0` `FW` 外顯命名方式.
-  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
-  * [x] 提供 `EU` 關於 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
+  * [x] 與 `PM` 討論 `FED240724001` `3TG8-P` `LED` 關於 `FWX0424A0` `FW` 外顯命名方式.
+  * [x] 與 `SMI` FAE 討論 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+  * [x] 提供 `EU` 關於 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
     * [x] `Windows 10`.
     * [x] `Ubuntu 22.04`. 
-  * [x] 協助驗證 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
+  * [x] 協助驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
   * [x] 申請替換料件.
 
 # 2024-11-26
@@ -3511,11 +3511,11 @@
 * 協助 `FW-RD Allen` 更新 `FJ240723008` `NEC` `RAID 0` 客退品 `FW`, 並協助架設環境.
 * 協助 `Sales-Joan` 觀看 `HMI` `9 pcs` 客退品.
 * 與 `PM` 討論 `3TG8-P` `LED` 關於 `FWX0424A0` `FW` 外顯命名方式.
-* 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
-* 提供 `EU` 關於 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
+* 與 `SMI` FAE 討論 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示問題進度.
+* 提供 `EU` 關於 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` bin file & update tool.
   * `Windows 10`.
   * `Ubuntu 22.04`. 
-* 協助驗證 `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
+* 協助驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 新版 `FW` 更新流程.
 * 申請替換料件.
 * 協助 `Sales-Joan` 追蹤 `FEA241106008` `3TE6` `ASSERT` 分析狀況.
 * TODO
@@ -3526,7 +3526,7 @@
   * [x] 取得 `FEC240905012` `3MG2-P` 替換 `Flash 4` device, 並進行相關測試.
   * [x] 協助 `Shelly` 測試 `3TE7` 於 `Ubuntu` 執行 `benchmark` & `Windows 10` 執行 `AIDA 64`.
   * [x] 協助回覆 `EU-Sales` 關於 `3TG8-P` `LED` `FWX0424A0` 相關問題.
-  * [x] 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 驗證結果提供.
+  * [x] 與 `SMI` FAE 討論 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 驗證結果提供.
   * [x] 更新 `FA` case 處理進度.
 
 # 2024-11-27
@@ -3536,13 +3536,50 @@
 * 協助 `Sales-Joan` 提供 `FEA241106007` `3TE7` `DLMC` tool.
 * 取得 `FEC240905012` `3MG2-P` 替換 `Flash 4` device, 並進行相關測試.
 * 協助 `Shelly` 測試 `3TE7` 於 `Ubuntu` 執行 `benchmark` & `Windows 10` 執行 `AIDA 64`.
-* 協助回覆 `EU-Sales` 關於 `3TG8-P` `LED` `FWX0424A0` 相關問題.
+* 協助回覆 `EU-Sales` 關於 `FED240724001` `3TG8-P` `LED` `FWX0424A0` 相關問題.
 * 與 `SMI` FAE 討論 `3TG8-P` `LED` 於 `SATA tray` 驗證結果提供.
 * 更新 `FA` case 處理進度.
 * TODO
-  * [ ] 協助測試 `FEA241106008` `3TE6` `ASSERT` 問題複製.
-    * [ ] Install `Windows 10`.
-    * [ ] `Abnormal power cycling` test.
+  * [x] 協助測試 `FEA241106008` `3TE6` `ASSERT` 問題複製.
+    * [x] Install `Windows 10`.
+    * [x] `Abnormal power cycling` test.
+  * [x] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+  * [x] 驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示狀況.
+  * [x] 觀看 `FEC240905012` `3MG2-P` 替換 `Flash 4` device 執行 `Burnintest` 狀況.
+  * [x] 協助 `EU` 提供 `FED240724001` `3TG8-P` 更新 `bin file`( `W13T4B` ).
+  * [x] 與 `EU-Sales Sylvain` sync `FED240724001` `3TG8-P` 測試狀況.
+  * [x] 與 `Sales-Joan` sync `FEA241106008` `3TE6` `ASSERT` 目前狀況.
+  * [x] 更新 `eFAE` case 狀況.
+
+# 2024-11-28
+* 協助測試 `FEA241106008` `3TE6` `ASSERT` 問題複製.
+  * Install `Windows 10`.
+  * `Abnormal power cycling` test.
+* 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+* 驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示狀況, 測試正常, 但觀察到 `R17` & `R21` 電阻被拔除.
+* 觀看 `FEC240905012` `3MG2-P` 替換 `Flash 4` device 執行 `Burnintest` 狀況, 目前測試 `24` hr 沒異常.
+* 協助 `EU` 提供 `FED240724001` `3TG8-P` 更新 `bin file`( `W13T4B` ).
+* 與 `EU-Sales Sylvain` sync `FED240724001` `3TG8-P` 測試狀況.
+* 與 `Sales-Joan` sync `FEA241106008` `3TE6` `ASSERT` 目前狀況.
+* 更新 `eFAE` case 狀況.
+* TODO
+  * [x] 驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示狀況( `2`pcs 無拔除 `R17` & `R21` ).
+  * [x] 協助 `EU` 提供 `DLMC` tool & SOP.
+  * [x] 與 `Sales-Joan` sync `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 更新 `eFAE` case 狀況.
+  * [x] 與 `EU` 討論 `KEBA` 後續處理.
+  * [x] 與 `PM-Mickey` 討論 `FED240724001` `3TG8-P` `BOM` 修改問題.
   * [ ] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
-  * [ ] 驗證 `3TG8-P` `LED` 於 `SATA tray` 顯示狀況.
-  * [ ] 觀看 `FEC240905012` `3MG2-P` 替換 `Flash 4` device 執行 `Burnintest` 狀況.
+
+# 2024-11-29
+* 驗證 `FED240724001` `3TG8-P` `LED` 於 `SATA tray` 顯示狀況( `2`pcs 無拔除 `R17` & `R21` ).
+* 協助 `EU` 提供 `DLMC` tool & SOP.
+* 與 `Sales-Joan` sync `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 更新 `eFAE` case 狀況.
+* 與 `EU` 討論 `KEBA` 後續處理.
+* 與 `PM-Mickey` 討論 `FED240724001` `3TG8-P` `BOM` 修改問題.
+* TODO
+  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [ ] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+
