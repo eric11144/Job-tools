@@ -3580,6 +3580,39 @@
 * 與 `EU` 討論 `KEBA` 後續處理.
 * 與 `PM-Mickey` 討論 `FED240724001` `3TG8-P` `BOM` 修改問題.
 * TODO
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+  * [x] 協助 `Aetina` 轉交 `4TG2-P` 於 `Team1`.
+  * [x] 協助 `Team1` 觀看 `Debian 11` `Server` 平台 `Offline` 安裝套件, 以及上網問題.
+  * [x] 協助 `FW-RD Allen` 處理 `Debian 11` `Server` 平台相關操作.
+  * [x] 提供 `Winsys` 相關 `RAW data` 於 `FW-RD` check `SMART` 是否有異常.
+  * [x] 協助 `FW-RD Allen` 提供 `FEC240418006` `CFast 3IE7` `20GB` & `40GB` `Re-MP` tool.
+
+# 2024-12-02
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+* 協助 `Aetina` 轉交 `4TG2-P` 於 `Team1`.
+* 協助 `Team1` 觀看 `Debian 11` `Server` 平台 `Offline` 安裝套件, 以及上網問題.
+* 提供 `Winsys` 相關 `RAW data` 於 `FW-RD` check `SMART` 是否有異常.
+* 協助 `FW-RD Allen` 提供 `FEC240418006` `CFast 3IE7` `20GB` & `40GB` `Re-MP` tool.
+* TODO
+  * [x] 協助 `Team1` 觀看 `Debian 11` `Server` 平台 `Offline` 安裝套件, 以及上網問題.
+  * [x] 協助 `Louis` 處理 `Boeing` `Re-MP` 平台相關問題.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 協助 `Sales-Joan` 提供 `FEA241106008` `3TE6` 測試狀況 `iSMART` 結果圖.
+  * [x] 提供 `Winsys` 相關 `RAW data` 於 `FW-RD` check `SMART` 是否有異常.
+  * [x] 協助 `Shelly` 觀看 `1.8" SSD 3MG2-P` `1.2V` 相關量測問題.
+  * [x] 協助 `EU` 提供 `FED240724001` `3TG8-P` `LED` 測試驗證影片.
+
+# 2024-12-03
+* 協助 `Team1` 觀看 `Debian 11` `Server` 平台 `Offline` 安裝套件, 以及上網問題.
+* 協助 `Louis` 處理 `Boeing` `Re-MP` 平台相關問題.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 協助 `Sales-Joan` 提供 `FEA241106008` `3TE6` 測試狀況 `iSMART` 結果圖.
+* 提供 `Winsys` 相關 `RAW data` 於 `FW-RD` check `SMART` 是否有異常.
+* 協助 `Shelly` 觀看 `1.8" SSD 3MG2-P` `1.2V` 相關量測問題.
+* 協助 `EU` 提供 `FED240724001` `3TG8-P` `LED` 測試驗證影片.
+* TODO
   * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 觀看 `HMI` `9pcs` 其中 `1pcs` 進入 `loader mode` 異常狀況.
+  * [ ] 觀看 `HMI` `9pcs` 異常狀況.
 
