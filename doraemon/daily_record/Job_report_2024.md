@@ -3613,6 +3613,40 @@
 * 協助 `Shelly` 觀看 `1.8" SSD 3MG2-P` `1.2V` 相關量測問題.
 * 協助 `EU` 提供 `FED240724001` `3TG8-P` `LED` 測試驗證影片.
 * TODO
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` `9pcs` 異常狀況.
+  * [x] 協助 `Sales-Amanda` 處理 `SLC` driver 問題.
+  * [x] 協助 `Danny` 提供 `CFast 3SE3`.
+  * [x] 協助 `Eva` 提供 `Debian 11` `FIO` 相關安裝套件.
+  * [x] 與 `PM-Mickey` sync `FED240724001` `3TG8-P` `LED` `BOM` 調整問題.
+  * [x] 與 `EU-Sales Sylvain` 討論 `FED240724001` `3TG8-P` & `FED241119008` `3IE7` 客訴處理狀況.
+
+# 2024-12-04
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `FEA241113004` `HMI` `9`pcs 異常狀況.
+* 協助 `Sales-Amanda` 處理 `SLC` driver 問題.
+* 協助 `Danny` 提供 `CFast 3SE3`.
+* 協助 `Eva` 提供 `Debian 11` `FIO` 相關安裝套件.
+* 與 `PM-Mickey` sync `FED240724001` `3TG8-P` `LED` `BOM` 調整問題.
+* 與 `EU-Sales Sylvain` 討論 `FED240724001` `3TG8-P` & `FED241119008` `3IE7` 客訴處理狀況.
+* TODO
+  * [x] 詢問 `FW-RD` 關於 `FEA241113004` `HMI` `UNC` 相關問題.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 整理 `FED241119008` `Winsys` `3IE7` `18`pcs `iSMART`.
+  * [x] 協助 `FW-RD` 架設 `ASK` `RAID 0` 環境.
+  * [x] 盤點設備財產.
+  * [x] 與 `Sales-Joan` 討論 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況, 並提供相關量測數據.
+  * [x] 協助搬運示波器.
+
+# 2024-12-05
+* 詢問 `FW-RD` 關於 `FEA241113004` `HMI` `UNC` 相關問題.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 整理 `FED241119008` `Winsys` `3IE7` `18`pcs `iSMART`.
+* 協助 `FW-RD` 架設 `ASK` `RAID 0` 環境.
+* 盤點設備財產.
+* 與 `Sales-Joan` 討論 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況, 並提供相關量測數據.
+* 協助搬運示波器.
+* TODO
   * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 觀看 `HMI` `9pcs` 異常狀況.
+  * [ ] 更換 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller`.
 
