@@ -3647,6 +3647,158 @@
 * 與 `Sales-Joan` 討論 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況, 並提供相關量測數據.
 * 協助搬運示波器.
 * TODO
-  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 更換 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller`.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 更換 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller`.
+  * [x] 參與 `FAE` 月會.
+  * [x] 協助處理實驗室網路問題.
+  * [x] 撰寫 `Winsys` `8D` report.
+  * [x] 與 `EU-Sales Sylvain` 討論 `Winsys` `device` 相關資訊處理方式.
 
+# 2024-12-06
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 更換 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller`.
+* 參與 `FAE` 月會.
+* 協助處理實驗室網路問題.
+* 撰寫 `Winsys` `8D` report.
+* 與 `EU-Sales Sylvain` 討論 `Winsys` `device` 相關資訊處理方式.
+* TODO
+  * [x] 參與 `OnLogic` 客訴討論會議.
+  * [x] 詢問 `FW RD` 關於 `3ME4` 針對 `L17606` 進行異常斷電 `GC` table rebuild 修改行為.
+  * [x] 將 `FEC240625009` device 轉送至 `RMA`.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Sales-Kevin` 提供 `DEE4X-16GD53BW1SC` `EDC` `input` `Voltage` 相關限制.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 撰寫 `HMI` `FA` report.
+  * [x] 更新 `eFAE` 系統上 `FA` case 處理進度.
+
+# 2024-12-09
+* 參與 `OnLogic` 客訴討論會議.
+* 詢問 `FW RD` 關於 `3ME4` 針對 `L17606` 進行異常斷電 `GC` table rebuild 修改行為.
+* 將 `FEC240625009` device 轉送至 `RMA`.
+* 參與 `FAE-team2` 週會.
+* 協助 `Sales-Kevin` 提供 `DEE4X-16GD53BW1SC` `EDC` `input` `Voltage` 相關限制.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 撰寫 `HMI` `FA` report.
+* 更新 `eFAE` 系統上 `FA` case 處理進度.
+* TODO
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 協助 `EU-Sales` 錄製 `FED240724001` `3TG8-P` `LED` 拆卸 `SATA tray` 訊號線後, `DAS LED` 閃爍行為影片.
+  * [x] 將 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller` ＆ `Flash` 送至 `SMT` 照 `X-ray`.
+  * [x] 更換 `FEA241113004` `HMI` `3pcs` `U39` `Power IC`.
+  * [x] 更新 `eFAE` 系統處理狀況.
+
+# 2024-12-10
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 協助 `EU-Sales` 錄製 `FED240724001` `3TG8-P` `LED` 拆卸 `SATA tray` 訊號線後, `DAS LED` 閃爍行為影片.
+* 將 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 異常之 `controller` ＆ `Flash` 送至 `SMT` 照 `X-ray`.
+* 更換 `FEA241113004` `HMI` `3pcs` `U39` `Power IC`.
+* 更新 `eFAE` 系統處理狀況.
+* TODO
+  * [x] 與 `SMI FAE` 討論 `FED240724001` `3TG8-P` `LED` 驗證狀況.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 更新 `eFAE` 系統處理狀況.
+  * [x] 觀看 `FEA241113004` `HMI` 3pcs 狀況.
+  * [x] 撰寫 `FEA241113004` `HMI` `FA` report.
+
+# 2024-12-11
+* 與 `SMI FAE` 討論 `FED240724001` `3TG8-P` `LED` 驗證狀況.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 更新 `eFAE` 系統處理狀況.
+* 觀看 `FEA241113004` `HMI` 3pcs 狀況.
+  * `20179` -> `Channel 2` `Flash` 異常.
+  * `20171` -> `Channel 3` `Flash` 異常.
+  * `20109` -> `Channel 2` & `Channel 3` `Flash` 異常.
+* 撰寫 `FEA241113004` `HMI` `FA` report.
+* TODO
+  * [x] 與 `Sales-Alan` 討論 `FIO` 測試 `script`.
+  * [x] 詢問 `FW-RD` 關於 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 更換 `controller` 後, `UART` log 顯示 timeout assert 狀況.
+  * [x] 協助 `EU-Sales Sylvain` 準備 `FED240724001` `3TG8-P` `LED` `4pcs` device, 並送至 `EU`.
+  * [x] 撰寫 `FEA241113004` `HMI` `FA` report, 並提供給 `Sales-Joan`.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+
+# 2024-12-12
+* 與 `Sales-Alan` 討論 `FIO` 測試 `script`.
+* 詢問 `FW-RD` 關於 `FEA241113004` `HMI` `1`pcs 發生 `UNC` 更換 `controller` 後, `UART` log 顯示 timeout assert 狀況.
+* 協助 `EU-Sales Sylvain` 準備 `FED240724001` `3TG8-P` `LED` `4pcs` device, 並送至 `EU`.
+* 撰寫 `FEA241113004` `HMI` `FA` report.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* TODO
+  * [x] 討論 `Viasat` `3TG6-P Speed Issue`.
+  * [x] 詢問 `FW RD` 關於 `3TG6-P` `GC` 相關觸發條件.
+  * [x] 協助 `EU-Sales` 確認 `FED240724001` `3TG8-P` `BOM` 調整項目.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 領取實驗室隔熱手套.
+
+# 2024-12-13
+* 討論 `Viasat` `3TG6-P Speed Issue`.
+* 詢問 `FW RD` 關於 `3TG6-P` `GC` 相關觸發條件.
+* 協助 `EU-Sales` 確認 `FED240724001` `3TG8-P` `BOM` 調整項目.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 領取實驗室隔熱手套.
+* TODO
+  * [x] 協助 `PM-Mickey` 撰寫 `FED240724001` `3TG8-P` `FW` release 內容.
+  * [x] 提供 `FED240724001` `3TG8-P` `FW` release 內容於 `FW Thomas`.
+  * [x] 與 `Sales-Louis` 討論 `Boeing` 平台型號測試.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 撰寫個人績效內容.
+  * [x] 協助處理實驗室網路功能.
+  * [x] 協助 `Sales-Joan` 提供 `QE` 相關操作流程.
+  * [x] 協助 `Sales-Joan` 回覆 `FEA241106008` `3TE6` `Re-MP` 原因.
+  * [x] 協助 `Sales-Sylvain` 回覆 `FED240724001` `3TG8-P` 電阻調整相關問題.
+  * [x] 處理 `Sales-Amanda` `FEA241203002` `3SE4` 於客戶平台發生 `read/write command error`.
+
+# 2024-12-16
+* 協助 `PM-Mickey` 撰寫 `FED240724001` `3TG8-P` `FW` release 內容.
+* 提供 `FED240724001` `3TG8-P` `FW` release 內容於 `FW Thomas`.
+* 與 `Sales-Louis` 討論 `Boeing` 平台型號測試.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況, 後續有看到異常狀況, 但無法透過 `write code` 方式確認, 最後將 device 進行 `Re-MP`, 再進行異常斷電測試.
+* 撰寫個人績效內容.
+* 協助處理實驗室網路功能.
+* 協助 `Sales-Joan` 提供 `QE` 相關操作流程.
+* 協助 `Sales-Joan` 回覆 `FEA241106008` `3TE6` `Re-MP` 原因.
+* 協助 `Sales-Sylvain` 回覆 `FED240724001` `3TG8-P` 電阻調整相關問題.
+* 處理 `Sales-Amanda` `FEA241203002` `3SE4` 於客戶平台發生 `read/write command error`.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 與 `Sales-Joan` sync `FA` case 處理狀況.
+  * [x] 協助 `Nick` 提供 `test_compare_and_record_result` `script`.
+  * [x] 協助 `Kenzi` 回覆 `FEC240625009` 相關問題.
+  * [x] 與 `FW-RD Adson` 討論 `FEA241106008` `3TE6` `ASSERT` `FW` 更新.
+  * [x] 撰寫 `FAE` 月會分享 report( `3TG6-P Astute Electronics - Boot time too long issue` ).
+  * [x] 處理 `Sales-Amanda` `FEA241203002` `3SE4` 於客戶平台發生 `read/write command error`.
+
+# 2024-12-17
+* 參與 `FAE-team2` 週會.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 與 `Sales-Joan` sync `FA` case 處理狀況.
+* 協助 `Nick` 提供 `test_compare_and_record_result` `script`.
+* 協助 `Kenzi` 回覆 `FEC240625009` 相關問題.
+* 與 `FW-RD Adson` 討論 `FEA241106008` `3TE6` `ASSERT` `FW` 更新.
+* 撰寫 `FAE` 月會分享 report( `3TG6-P Astute Electronics - Boot time too long issue` ).
+* 處理 `Sales-Amanda` `FEA241203002` `3SE4` 於客戶平台發生 `read/write command error`.
+  * 提供 `dmesg` log, `UART` log.
+  * 提供相關細節於 `FW RD`.
+* TODO
+  * [x] 協助 `FW RD` 詢問 `FEA241203002` `3SE4` 相關平台細節.
+  * [x] 參與 `4IE3` `FW` release 會議.
+  * [x] 撰寫 `FAE` 月會分享 report( `3TG6-P Astute Electronics - Boot time too long issue` ).
+  * [x] 協助 `Danny` 提供 `FEC240905012` 相關測試資訊.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 撰寫 `apt-rdepends` 自動下載相關 `package` `script`.
+  * [x] 協助 `Nick` 解說 `test_compare_and_record_result` `script` 運行.
+
+# 2024-12-18
+* 協助 `FW RD` 詢問 `FEA241203002` `3SE4` 相關平台細節.
+  * 客戶舊平台發生 `read/write command error`( 之前是發生降 `Gen` 問題 ).
+  * 客戶新平台發生降 `Gen` 問題.
+* 參與 `4IE3` `FW` release 會議.
+* 撰寫 `FAE` 月會分享 report( `3TG6-P Astute Electronics - Boot time too long issue` ).
+* 協助 `Danny` 提供 `FEC240905012` 相關測試資訊.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 撰寫 `apt-rdepends` 自動下載相關 `package` `script`.
+* 協助 `Nick` 解說 `test_compare_and_record_result` `script` 運行.
+* TODO
+  * [ ] 更新 `FEA241203002` `3SE4` `FW`, 並測試相關平台.
+  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [ ] 參與 `FAE` 月會.
