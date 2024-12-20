@@ -3799,6 +3799,45 @@
 * 撰寫 `apt-rdepends` 自動下載相關 `package` `script`.
 * 協助 `Nick` 解說 `test_compare_and_record_result` `script` 運行.
 * TODO
-  * [ ] 更新 `FEA241203002` `3SE4` `FW`, 並測試相關平台.
+  * [x] 更新 `FEA241203002` `3SE4` `FW`, 並測試相關平台.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 參與 `FAE` 月會.
+  * [x] 財產盤點.
+  * [x] 參與績效面談.
+  * [x] 與 `EU-Sylvain` 討論 `FED240724001` `3TG8-P` 電阻調整狀況.
+  * [x] 架設 `HMI` 高溫測試環境.
+  * [x] 協助 `Sales-Joan` 提供 `S80` `3TG6-P` `MView` 相關 tool.
+
+# 2024-12-19
+* 更新 `FEA241203002` `3SE4` `FW`, 並測試相關平台.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 參與 `FAE` 月會.
+* 財產盤點.
+* 參與績效面談.
+* 與 `EU-Sylvain` 討論 `FED240724001` `3TG8-P` 電阻調整狀況.
+* 架設 `HMI` 高溫測試環境, 第一片測試發現進入 `loader mode`, rebooter 約在 `500`次左右發生.
+* 協助 `Sales-Joan` 提供 `S80` `3TG6-P` `MView` 相關 tool.
+* TODO
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` tool.
+  * [x] 協助 `Sales-Joan` 提供 `S80` `3TG6-P` `MView` 之 `token-key`.
+  * [x] 與 `EU-Sylvain` 討論 `FED240724001` `3TG8-P` 電阻調整狀況.
+  * [x] 查找 `FED240724001` `3TG8-P` 出貨 `BOM` 表差異.
+  * [x] 更新 `EU1` `FA case` 相關測試進度.
+  * [x] 焊接 `HMI` 進入 `loader mode` 之 device `1.8V` & `1.1V` 訊號線.
+  * [x] 安排 `HMI` 第二片進行高溫測試.
+
+# 2024-12-20
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` tool.
+* 協助 `Sales-Joan` 提供 `S80` `3TG6-P` `MView` 之 `token-key`.
+* 與 `EU-Sylvain` 討論 `FED240724001` `3TG8-P` 電阻調整狀況.
+* 查找 `FED240724001` `3TG8-P` 出貨 `BOM` 表差異.
+* 更新 `EU1` `FA case` 相關測試進度.
+* 焊接 `HMI` 進入 `loader mode` 之 device `1.8V` & `1.1V` 訊號線.
+* 安排 `HMI` 第二片進行高溫測試.
+* TODO
+  * [ ] 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` 異常現象.
   * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 參與 `FAE` 月會.
+  * [ ] 觀看 `HMI` 第二片進行高溫測試狀況.
+
