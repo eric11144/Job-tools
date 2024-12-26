@@ -3837,7 +3837,83 @@
 * 焊接 `HMI` 進入 `loader mode` 之 device `1.8V` & `1.1V` 訊號線.
 * 安排 `HMI` 第二片進行高溫測試.
 * TODO
-  * [ ] 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` 異常現象.
-  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 觀看 `HMI` 第二片進行高溫測試狀況.
+  * [x] 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 第2片進行高溫測試狀況.
+  * [x] 與 `PM-George` 討論 `Aristocrat` `4IE3` `DLMC` SOP.
+  * [x] 詢問 `MIS-Mickey` 關於 `Intel Core i3-8100H` 使用之主機板.
+  * [x] 詢問 `PM-Mickey` 討論 `Aristocrat` `4IE3` `FW` 外顯問題.
 
+# 2024-12-23
+* 協助 `Sales-Joanne` 處理 `Aristocrat` `4IE3` `DLMC` 異常現象.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` 第2片進行高溫測試狀況.
+* 與 `PM-George` 討論 `Aristocrat` `4IE3` `DLMC` SOP.
+* 詢問 `MIS-Mickey` 關於 `Intel Core i3-8100H` 使用之主機板.
+* 詢問 `PM-Mickey` 討論 `Aristocrat` `4IE3` `FW` 外顯問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 處理 `Aristocrat` `4IE3` `DLMC` 異常現象.
+    * [x] 測試 `Windows 10` `22H2`.
+      * [x] `OS disk`.
+      * [x] `data disk`.
+    * [x] 測試 `Ubuntu 22.04`.
+      * [x] `OS disk`.
+      * [x] `data disk`.
+  * [x] 與 `SW-大A` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 第3片 & 第4片進行高溫測試狀況.
+  * [x] 測試 `FEA241203002` `3SE4` `12`組 `PHY` bin file 於新平台.
+
+# 2024-12-24
+* 參與 `FAE-team2` 週會.
+* 處理 `Aristocrat` `4IE3` `DLMC` 異常現象, 後續有發生異常現象, 並將其結果整理.
+  * 測試 `Windows 10` `22H2`.
+    * `OS disk`.
+    * `data disk`.
+  * 測試 `Ubuntu 22.04`.
+    * `OS disk`.
+    * `data disk`.
+* 與 `SW-大A` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` 第3片 & 第4片進行高溫測試狀況.
+* 測試 `FEA241203002` `3SE4` `12`組 `PHY` bin file 於新平台.
+* TODO
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 第5片進行高溫測試狀況.
+  * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+  * [x] 協助 `智愛` 人員處理 `CANBUS` 客訴案.
+  * [x] 測試 `FEA241203002` `3SE4` `12`組 `PHY` bin file 於新平台.
+  * [x] 協助發放 `EU1` 下午茶.
+  * [x] 協助 `Kerry` 製作 `Ubuntu 22.04 server` image USB.'
+  * [x] 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` 測試狀況.
+
+# 2024-12-25
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` 第5片進行高溫測試狀況.
+* 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+* 協助 `智愛` 人員處理 `CANBUS` 客訴案.
+* 測試 `FEA241203002` `3SE4` `12`組 `PHY` bin file 於新平台.
+* 協助發放 `EU1` 下午茶.
+* 協助 `Kerry` 製作 `Ubuntu 22.04 server` image USB.'
+* 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` 測試狀況.
+* TODO
+  * [x] 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` 測試狀況.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+  * [x] 參與 `FAE` team 茶會.
+
+# 2024-12-26
+* 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` 測試狀況.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+* 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+  * 後續發現有異常的 `bin file` 是透過 `3TE7` 外顯修改工具造成的異常.
+  * 另外造成同樣異常的現象, 有可能是 `FW` 組態錯誤( ex: `80GB` device 使用到 `320GB` FW bin file ).
+  * 確定不會去外借客戶平台測試.
+* 參與 `FAE` team 茶會.
+* TODO
+  * [ ] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [ ] 觀看 `HMI` 第5片進行高溫測試狀況.
