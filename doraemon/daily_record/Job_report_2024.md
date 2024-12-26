@@ -3903,6 +3903,7 @@
   * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
   * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
   * [x] 參與 `FAE` team 茶會.
+  * [x] 協助發放聖誕襪子.
 
 # 2024-12-26
 * 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` 測試狀況.
@@ -3913,7 +3914,10 @@
   * 另外造成同樣異常的現象, 有可能是 `FW` 組態錯誤( ex: `80GB` device 使用到 `320GB` FW bin file ).
   * 確定不會去外借客戶平台測試.
 * 參與 `FAE` team 茶會.
+* 協助發放聖誕襪子.
 * TODO
   * [ ] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+    * [ ] `Windows 10` `1709`.
+    * [ ] `Windows 10` `1809`.
   * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
   * [ ] 觀看 `HMI` 第5片進行高溫測試狀況.
