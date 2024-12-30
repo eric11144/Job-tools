@@ -3916,8 +3916,61 @@
 * 參與 `FAE` team 茶會.
 * 協助發放聖誕襪子.
 * TODO
-  * [ ] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
-    * [ ] `Windows 10` `1709`.
-    * [ ] `Windows 10` `1809`.
+  * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+    * [x] `Windows 10` `1709`.
+    * [x] `Windows 10` `1809`.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 第 `5` 片進行高溫測試狀況.
+  * [x] 協助 `FW-RD Allen` 觀看 `Debian 6` 架設問題.
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
+
+# 2024-12-27
+* 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * `Windows 10` `1709`, 當 `data disk` 會出現掉碟問題.
+  * `Windows 10` `1809`.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` 第 `5` 片進行高溫測試狀況.
+* 協助 `FW-RD Allen` 觀看 `Debian 6` 架設問題.
+* 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
+* TODO
+  * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+    * [x] `Windows 10` `1809`.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 第 `6` 片進行高溫測試狀況.
+  * [x] 協助 `FW-RD Allen` 安裝 `Debian 6`.
+  * [x] 與 `Sales-Joan` 討論目前 `FA` case 測試狀況.
+  * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+
+# 2024-12-30
+* 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+  * `Windows 10` `1809`.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況, 皆無異常.
+* 觀看 `HMI` 第 `6` 片進行高溫測試狀況, 後續觀看沒問題, 再將原無異常 `2pcs` `device` 放入 `chamber` 重新測試.
+* 協助 `FW-RD Allen` 安裝 `Debian 6`.
+* 與 `Sales-Joan` 討論目前 `FA` case 測試狀況.
+* 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
+    * [x] `Windows 10` `1809`.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 無異常第 `1` pcs 進行高溫測試狀況.
+  * [x] 處理 `EIP` 無法登入問題.
+  * [x] 協助 `Rex` 提供讀卡機.
+  * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `UART` 訊號線拉出位置.
+  * [x] 協助 `Shelly` 觀看平台問題.
+
+# 2024-12-31
+* 參與 `FAE-team2` 週會.
+* 測試 `Aristocrat` `4IE3` `DLMC` 異常現象, 並整理測試結果.
+  * `Windows 10` `1809`.
+* 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+* 觀看 `HMI` 無異常第 `1`pcs 進行高溫測試狀況.
+* 處理 `EIP` 無法登入問題.
+* 協助 `Rex` 提供讀卡機.
+* 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `UART` 訊號線拉出位置.
+* 協助 `Shelly` 觀看平台問題.
+* TODO
+  * [ ] 觀看 `HMI` 無異常第 `2` pcs 進行高溫測試狀況.
   * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
-  * [ ] 觀看 `HMI` 第5片進行高溫測試狀況.
+
