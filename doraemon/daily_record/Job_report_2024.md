@@ -3940,6 +3940,7 @@
   * [x] 協助 `FW-RD Allen` 安裝 `Debian 6`.
   * [x] 與 `Sales-Joan` 討論目前 `FA` case 測試狀況.
   * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
 
 # 2024-12-30
 * 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
@@ -3949,6 +3950,7 @@
 * 協助 `FW-RD Allen` 安裝 `Debian 6`.
 * 與 `Sales-Joan` 討論目前 `FA` case 測試狀況.
 * 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `DLMC` 異常現象產生.
+* 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
 * TODO
   * [x] 參與 `FAE-team2` 週會.
   * [x] 測試 `Aristocrat` `4IE3` `DLMC` 異常現象.
@@ -3959,6 +3961,7 @@
   * [x] 協助 `Rex` 提供讀卡機.
   * [x] 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `UART` 訊號線拉出位置.
   * [x] 協助 `Shelly` 觀看平台問題.
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
 
 # 2024-12-31
 * 參與 `FAE-team2` 週會.
@@ -3970,7 +3973,12 @@
 * 協助 `Rex` 提供讀卡機.
 * 與 `FW-RD Jonny` 討論 `Aristocrat` `4IE3` `UART` 訊號線拉出位置.
 * 協助 `Shelly` 觀看平台問題.
+* 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
 * TODO
-  * [ ] 觀看 `HMI` 無異常第 `2` pcs 進行高溫測試狀況.
-  * [ ] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 觀看 `HMI` 無異常第 `2` pcs 進行高溫測試狀況.
+  * [x] 觀看 `FEA241106008` `3TE6` `ASSERT` 問題複製狀況.
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `12組` PHY.
+  * [x] 協助 `Sales-Vanessa` 觀看 `DHS25-40GDK1KCCDL-AE20` partition 切割類型.
+  * [x] 協助 `環工-Jessie` 處理 `Chamber` 檢查表.
+  * [x] 更新 `eFAE` system.
 
