@@ -55,21 +55,97 @@
   * [x] 協助 `Sales-Joan` 測試 `FEA241212005` `Astute Electronics` `3TG6-P` `DLMC`.
     * [x] 測試 `A20716` -> `A23A20`.
     * [x] `Re-MP` `FW` 至 `A23A20`.
-  * [x] 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` phy 參數測試結果.
+  * [x] 與 `FW-RD Weiting` 討論 `FEA241203002` `GURU` `3SE4` phy 參數測試結果.
   * [x] 撰寫 `Linux` 教學檔案.
 
 # 2025-01-08
-* 測試 `FEA241203002` `3SE4` 於新平台測試 `12組` PHY.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `12組` PHY.
   * 新舊平台 `SATA` 轉板互換.
   * 測試 `Wistron` phy.
 * 協助 `Sales-Joan` 測試 `FEA241212005` `Astute Electronics` `3TG6-P` `DLMC`.
   * 測試 `A20716` -> `A23A20`, 更新後會發生 `I/O` error.
   * `Re-MP` `FW` 至 `A23A20`.
-* 與 `FW-RD Weiting` 討論 `FEA241203002` `3SE4` phy 參數測試結果, 明顯 `Wistron` phy 較慢發生異常, 後續會提供其他組 phy 測試.
+* 與 `FW-RD Weiting` 討論 `FEA241203002` `GURU` `3SE4` phy 參數測試結果, 明顯 `Wistron` phy 較慢發生異常, 後續會提供其他組 phy 測試.
 * 撰寫 `Linux` 教學檔案.
 * TODO
-  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `8組` PHY.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
   * [x] 協助 `Shelly` 讀取 `mSATA 3ME3` partition 於 `ubuntu 22.04`.
   * [x] 重新架設 `ubuntu 22.04` 環境.
   * [x] 協助 `Sales-Joan` 提供 `read-retry` 相關說明, 以及 `read-retry` 發生相關狀況.
+  * [x] 撰寫 `Linux` 教學檔案.
+
+# 2025-01-09
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Shelly` 讀取 `mSATA 3ME3` partition 於 `ubuntu 22.04`.
+* 重新架設 `ubuntu 22.04` 環境.
+* 協助 `Sales-Joan` 提供 `read-retry` 相關說明, 以及 `read-retry` 發生相關狀況.
+* 撰寫 `Linux` 教學檔案.
+* TODO
+  * [x] 與 `Sales-Amanda` 討論 `FEA241203002` `GURU` `3SE4` 測試狀況.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Aristocrat` `4IE3` `PCN` 修改內容說明.
+  * [x] 參與 `Aristocrat` `4IE3` `PCN` 討論會議.
+  * [x] 與 `FW-RD Johnny` 討論 `4IE3` `PCN` 修改內容.
+  * [x] 協助 `Sales-Joan` 提供 `read-retry` 相關說明.
+
+# 2025-01-10
+* 與 `Sales-Amanda` 討論 `FEA241203002` `GURU` `3SE4` 測試狀況.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Aristocrat` `4IE3` `PCN` 修改內容說明.
+* 參與 `Aristocrat` `4IE3` `PCN` 討論會議.
+* 與 `FW-RD Johnny` 討論 `4IE3` `PCN` 修改內容.
+* 協助 `Sales-Joan` 提供 `read-retry` 相關說明.
+* TODO
+  * [x] 與 `FW-RD Johnny` 討論 `4IE3` `PCN` 修改內容.
+  * [x] 撰寫 `Aristocrat` `4IE3` `PCN` 修改內容說明.
+  * [x] 撰寫 `Aristocrat` `4IE3` `PCN` 講稿.
+  * [x] 協助 `Sales-Joan` 處理 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` 相關問題.
+    * [x] 提供 `read retry` & `bad queue` 造成的相關原因整理.
+  * [x] 與 `FW-RD` 討論 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` `UART` log.
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Sales-Louis` 討論 `Boeing` `DGS25-02TM72EWAQF-P272BOE1` 平台使用相關問題.
+    * [x] `OS` disk 外露問題.
+    * [x] `OS` language 設定問題.
+    * [x] `UART` 訊號線相關問題.
+  * [x] 與 `Jackie` 討論 `FEB240422003` `Portwell` `BCA12308230450047` 相關分析流程.
+  * [x] 與 `FW-RD` 討論 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` `2`pcs `UART` log 內容.
+
+# 2025-01-13
+* 與 `FW-RD Johnny` 討論 `4IE3` `PCN` 修改內容.
+* 撰寫 `Aristocrat` `4IE3` `PCN` 修改內容說明.
+* 撰寫 `Aristocrat` `4IE3` `PCN` 講稿.
+* 協助 `Sales-Joan` 處理 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` 相關問題.
+  * 提供 `read retry` & `bad queue` 造成的相關原因整理.
+* 與 `FW-RD` 討論 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` `UART` log.
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Sales-Louis` 討論 `Boeing` `DGS25-02TM72EWAQF-P272BOE1` 平台使用相關問題.
+  * `OS` disk 外露問題.
+  * `OS` language 設定問題.
+  * `UART` 訊號線相關問題.
+* 與 `Jackie` 討論 `FEB240422003` `Portwell` `BCA12308230450047` 相關分析流程.
+* 與 `FW-RD` 討論 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `performance drop` `2`pcs `UART` log 內容.
+  * `1`pcs 為 `bad queue`.
+  * `1`pcs 為 `read retry`, 如需要相關細節, 需要客戶提供 `sl` & `el` 相關 log.
+* TODO
+  * [x] 參與 `Aristocrat` `4IE3` `PCN` 說明會議.
+  * [x] 參與 `FAE-team2` 討論會議.
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+    * [x] 目前測試第 `4` 組 `phy`.
+  * [x] 提供 `Aristocrat` `4IE3` `PCN` 說明簡報於 `Sales-Joanne`.
+  * [x] 協助 `Sales-Louis` 討論 `Boeing` `OS` language 設定問題.
+  * [x] 協助 `Henry` 處理印表機相關問題.
+  * [x] 整理 `eFAE` case 處理相關進度.
+
+# 2025-01-14
+* 參與 `Aristocrat` `4IE3` `PCN` 說明會議.
+* 參與 `FAE-team2` 討論會議.
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * 目前測試第 `4` 組 `phy`.
+* 提供 `Aristocrat` `4IE3` `PCN` 說明簡報於 `Sales-Joanne`.
+* 協助 `Sales-Louis` 討論 `Boeing` `OS` language 設定問題.
+* 協助 `Henry` 處理印表機相關問題.
+* 整理 `eFAE` case 處理相關進度.
+* TODO
+  * [ ] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
   * [ ] 撰寫 `Linux` 教學檔案.
+
