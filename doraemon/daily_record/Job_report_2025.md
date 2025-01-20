@@ -146,6 +146,69 @@
 * 協助 `Henry` 處理印表機相關問題.
 * 整理 `eFAE` case 處理相關進度.
 * TODO
-  * [ ] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
-  * [ ] 撰寫 `Linux` 教學檔案.
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 教學檔案.
+  * [x] 與 `Sales-Alan` & `Sales-Louis` 討論 `Boeing` 後續相關處理.
+  * [x] 協助 `Sales-Vincent` 查詢 `3MG2-P` 發生異常之 `Flash` `date code`.
+  * [x] 協助 `Sales-Joan` 回覆客人相關問題.
 
+# 2025-01-15
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 教學檔案.
+* 與 `Sales-Alan` & `Sales-Louis` 討論 `Boeing` 後續相關處理.
+* 協助 `Sales-Vincent` 查詢 `3MG2-P` 發生異常之 `Flash` `date code`.
+* 協助 `Sales-Joan` 回覆客人相關問題.
+* TODO
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Sales-Joan` 回覆關於 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `2pcs` 異常問題.
+  * [x] 協助 `Sales-Amanda` 關於 `3TE7` `S22801 -> S24306` `PCN` 修改內容.
+  * [x] 回覆 `Sales-Joan` 關於 `M.2 (S80) 3TG6-P` `FW` 命名方式.
+  * [x] 與 `FW-RD` 討論 `FEA241203002` `3SE4` `PHY` 測試狀況.
+
+# 2025-01-16
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Sales-Joan` 回覆關於 `FEA241212005` `Astute Electronics` `M.2 (S80) 3TG6-P` `2pcs` 異常問題.
+* 協助 `Sales-Amanda` 關於 `3TE7` `S22801 -> S24306` `PCN` 修改內容.
+* 回覆 `Sales-Joan` 關於 `M.2 (S80) 3TG6-P` `FW` 命名方式.
+* 與 `FW-RD` 討論 `FEA241203002` `3SE4` `PHY` 測試狀況.
+* TODO
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `William` 處理 `USB` 開通相關問題.
+  * [x] 協助 `Sales-Joan` 回覆關於 `3TE6` `FW` 進版問題.
+  * [x] 與 `Sales-Jessica` 討論 `EU` 相關 case 進度.
+  * [x] 協助 `Shelly` 參與 `AAEON` `4TG2-P` 異常討論會議.
+
+# 2025-01-17
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `William` 處理 `USB` 開通相關問題.
+* 協助 `Sales-Joan` 回覆關於 `3TE6` `FW` 進版問題.
+* 與 `Sales-Jessica` 討論 `EU` 相關 case 進度.
+* 協助 `Shelly` 參與 `AAEON` `4TG2-P` 異常討論會議.
+* TODO
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Sales-Joan` 處理 `Nano SSD` `3ME3` `GPIO 16` 無法 `low power detect` 問題.
+  * [x] 與 `PM-Jack` 索取 `Nano SSD` `3ME3` `iSMART` `attribute`.
+  * [x] 請教 `Jay` & `Kerry` 關於 `Nano SSD` `3ME3` `GPIO` 相關應用.
+  * [x] 與 `Jessie` 討論實驗室相關注意事項.
+
+# 2025-01-20
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Sales-Joan` 處理 `Nano SSD` `3ME3` `GPIO 16` 無法 `low power detect` 問題.
+* 與 `PM-Jack` 索取 `Nano SSD` `3ME3` `iSMART` `attribute`.
+* 請教 `Jay` & `Kerry` 關於 `Nano SSD` `3ME3` `GPIO` 相關應用.
+* 與 `Jessie` 討論實驗室相關注意事項.
+* TODO
+  * [x] 參與 `FAE-team2` 討論會議.
+  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 與 `Sales-Joan` 討論 `Nano SSD` `3ME3` `GPIO 16` 無法 `low power detect` 問題.
+  * [x] 參與 `AAEON` `4TG2-P` 異常討論會前會議( 與 `PM-Cindy` & `FW-RD` ).
+  * [x] 參與 `AAEON` `4TG2-P` 異常討論會議( 與終端客戶 ).
+
+# 2025-01-21
+* 參與 `FAE-team2` 討論會議.
+* 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+* 與 `Sales-Joan` 討論 `Nano SSD` `3ME3` `GPIO 16` 無法 `low power detect` 問題.
+* 參與 `AAEON` `4TG2-P` 異常討論會前會議( 與 `PM-Cindy` & `FW-RD` ).
+* 參與 `AAEON` `4TG2-P` 異常討論會議( 與終端客戶 ).
+* TODO
+  * [ ] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
