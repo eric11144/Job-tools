@@ -223,8 +223,39 @@
 * 協助 `Shelly` 處理 `AAEON` `4TG2-P` 異常狀況.
 * 撰寫 `Linux` 教學檔案.
 * TODO
-  * [x] 測試 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
   * [x] 與 `Jessie` 討論實驗室相關注意事項.
   * [x] 協助 `Shelly` 處理 `AAEON` `4TG2-P` 異常狀況.
   * [x] 協助 `Shelly` 測試 `HPA` 操作.
   * [x] 撰寫 `Linux` 教學檔案.
+  * [x] 協助 `FW RD` 提供 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY 結果.
+
+# 2025-01-23
+* 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+  * `0868` -> `27h` pass.
+* 與 `Jessie` 討論實驗室相關注意事項.
+* 協助 `Shelly` 處理 `AAEON` `4TG2-P` 異常狀況.
+* 協助 `Shelly` 測試 `HPA` 操作.
+* 撰寫 `Linux` 教學檔案.
+* 協助 `FW RD` 提供 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY 結果.
+* TODO
+  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+    * [x] `086A`.
+  * [x] 協助 `Sales-Joan` 處理 `FA` case, 以及客人回覆進度. 
+    * [x] 提供 `FEA240220006` `3MG2-P` device, 並 `Re-MP`.
+    * [x] 提供 `3TE6` device.
+    * [x] 協助提供 `nanoSSD 3ME3` `DLMC tool` & `bin file`.
+  * [x] 詢問 `FW RD` 關於 `nanoSSD 3ME3` `bin file` & `PCN` 內容.
+
+# 2025-01-24
+* 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+  * `086A`.
+* 協助 `Sales-Joan` 處理 `FA` case, 以及客人回覆進度. 
+  * 提供 `FEA240220006` `3MG2-P` device, 並 `Re-MP`.
+  * 提供 `3TE6` device.
+  * 協助提供 `nanoSSD 3ME3` `DLMC tool` & `bin file`.
+* 詢問 `FW RD` 關於 `nanoSSD 3ME3` `bin file` & `PCN` 內容.
+* TODO
+  * [ ] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+  * [ ] 整理 `nanoSSD 3ME3` `PCN` 內容.
+
