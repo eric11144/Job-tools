@@ -228,18 +228,18 @@
   * [x] 協助 `Shelly` 處理 `AAEON` `4TG2-P` 異常狀況.
   * [x] 協助 `Shelly` 測試 `HPA` 操作.
   * [x] 撰寫 `Linux` 教學檔案.
-  * [x] 協助 `FW RD` 提供 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY 結果.
+  * [x] 協助 `FW RD` 提供 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY 結果.
 
 # 2025-01-23
-* 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
   * `0868` -> `27h` pass.
 * 與 `Jessie` 討論實驗室相關注意事項.
 * 協助 `Shelly` 處理 `AAEON` `4TG2-P` 異常狀況.
 * 協助 `Shelly` 測試 `HPA` 操作.
 * 撰寫 `Linux` 教學檔案.
-* 協助 `FW RD` 提供 `FEA241203002` `3SE4` 於新平台測試 `6組` PHY 結果.
+* 協助 `FW RD` 提供 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY 結果.
 * TODO
-  * [x] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
     * [x] `086A`.
   * [x] 協助 `Sales-Joan` 處理 `FA` case, 以及客人回覆進度. 
     * [x] 提供 `FEA240220006` `3MG2-P` device, 並 `Re-MP`.
@@ -248,7 +248,7 @@
   * [x] 詢問 `FW RD` 關於 `nanoSSD 3ME3` `bin file` & `PCN` 內容.
 
 # 2025-01-24
-* 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
   * `086A`.
 * 協助 `Sales-Joan` 處理 `FA` case, 以及客人回覆進度. 
   * 提供 `FEA240220006` `3MG2-P` device, 並 `Re-MP`.
@@ -256,6 +256,68 @@
   * 協助提供 `nanoSSD 3ME3` `DLMC tool` & `bin file`.
 * 詢問 `FW RD` 關於 `nanoSSD 3ME3` `bin file` & `PCN` 內容.
 * TODO
-  * [ ] 測試 `FEA241203002` `3SE4` 於舊平台測試 `6組` PHY.
-  * [ ] 整理 `nanoSSD 3ME3` `PCN` 內容.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 整理 `nanoSSD 3ME3` `PCN` 內容.
+  * [x] 參與尾牙中獎請客攤.
+  * [x] 協助 `Sales-Amanda` 提供 `FEA241203002` `GURU` 兩版 `FW`.
 
+# 2025-02-03
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 整理 `nanoSSD 3ME3` `PCN` 內容.
+* 參與尾牙中獎請客攤.
+* 協助 `Sales-Amanda` 提供 `FEA241203002` `GURU` 兩版 `FW`.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 協助 `EU` 將 `FEC240702005 ` `2pcs` `SATADOM` 轉至 `RMA`.
+  * [x] 整理 `eFAE` case 相關處理進度.
+  * [x] 與 `EU` 討論 `FED240724001` 結案相關內容.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `Shelly` 處理 `4TG2-P` `rebooter` 相關測試, 以及撈取相關 `elog` & `iSMART`.
+
+# 2025-02-04
+* 測試 `FEA241203002` `GURU` `3SE4`於舊平台測試 `6組` PHY.
+* 協助 `EU` 將 `FEC240702005 ` `2pcs` `SATADOM` 轉至 `RMA`.
+* 整理 `eFAE` case 相關處理進度.
+* 與 `EU` 討論 `FED240724001` 結案相關內容.
+* 參與 `FAE-team2` 週會.
+* 協助 `Shelly` 處理 `4TG2-P` `rebooter` 相關測試, 以及撈取相關 `elog` & `iSMART`.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 協助 `Shelly` 處理 `XRYEO` 整合 `iSMART` tool 相關問題.
+  * [x] 與 `Sales-Deirdre` 討論 `3TG8-P` 歸還問題.
+  * [x] 協助 `Kenzi` 觀看 `ubuntu` 操作 `gparted` 相關問題.
+  * [x] 協助 `Susan` 操作 `iSMART` log 透過 `python` 轉換成 excel.
+  * [x] 與 `FW RD` 討論 `FEA241203002` `GURU` `3SE4` 測試以及處理狀況.
+  * [x] 協助 `Shelly` 觀看測試平台異常狀況.
+
+# 2025-02-05
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 協助 `Shelly` 處理 `XRYEO` 整合 `iSMART` tool 相關問題.
+* 與 `Sales-Deirdre` 討論 `3TG8-P` 歸還問題.
+* 協助 `Kenzi` 觀看 `ubuntu` 操作 `gparted` 相關問題.
+* 協助 `Susan` 操作 `iSMART` log 透過 `python` 轉換成 excel.
+* 與 `FW RD` 討論 `FEA241203002` `GURU` `3SE4` 測試以及處理狀況.
+* 協助 `Shelly` 觀看測試平台異常狀況.
+  * 平台 `1` 發線 `3.3V` 輸出問題, 更換 `Power supply` 可正常開機.
+  * 平台 `2` 發現 `DRAM` 異常, 導致無法正常開機, 不斷在重啟.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 與 `Sales-Amanda` & `FW RD` 討論 `FEA241203002` `GURU` `3SE4` 提供之 `FW` bin file 相關注意事項.
+  * [x] 與 `Sales-Joan` & `PM George` 討論 `Simms` 使用 `NANO SSD` 相關問題.
+  * [x] 與 `FW RD` & `HW RD` 討論 `NANO SSD` 使用 `thermal sensor` 相關問題.
+  * [x] 與 `Sales-Joan` & `PM Jack` 討論 `Viasat` 發生 `3TG6-P` `read retry` 復現方式.
+  * [x] 與 `PM-Jack` 討論老化實驗相關計算方式.
+  * [x] 與 `Sales-Joan` & `PM Jack` 討論 `HMI` `BiCS4` & `BiCS5` 使用之 `U39` `Power IC` 差異, 以及老化相關問題.
+  * [x] 協助 `Shelly` 查找 `4TG2-P` 發生 `3.3V` 異常狀況.
+
+# 2025-02-06
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 與 `Sales-Amanda` & `FW RD` 討論 `FEA241203002` `GURU` `3SE4` 提供之 `FW` bin file 相關注意事項.
+* 與 `Sales-Joan` & `PM George` 討論 `Simms` 使用 `NANO SSD` 相關問題.
+* 與 `FW RD` & `HW RD` 討論 `NANO SSD` 使用 `thermal sensor` 相關問題.
+* 與 `Sales-Joan` & `PM Jack` 討論 `Viasat` 發生 `3TG6-P` `read retry` 復現方式.
+* 與 `PM-Jack` 討論老化實驗相關計算方式.
+* 與 `Sales-Joan` & `PM Jack` 討論 `HMI` `BiCS4` & `BiCS5` 使用之 `U39` `Power IC` 差異, 以及老化相關問題.
+* 協助 `Shelly` 查找 `4TG2-P` 發生 `3.3V` 異常狀況.
+* TODO
+  * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
