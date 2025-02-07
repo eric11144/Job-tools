@@ -320,4 +320,24 @@
 * 與 `Sales-Joan` & `PM Jack` 討論 `HMI` `BiCS4` & `BiCS5` 使用之 `U39` `Power IC` 差異, 以及老化相關問題.
 * 協助 `Shelly` 查找 `4TG2-P` 發生 `3.3V` 異常狀況.
 * TODO
-  * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 與 `Sales-Joan` 討論 `Simms` 使用 `NANO SSD` 相關 `PCN` 內容.
+  * [x] 與 `Sales-Joan` 討論 `HMI` 高溫造成零件老化相關問題.
+  * [x] 協助 `PM-Jack` 尋找關於 `Winsys` 樣品. 
+  * [x] 協助 `Sales-Alan` 處理 `Boeing` `Windows 7` 語言顯示問題.
+  * [x] 架設 `Windows 7` 環境, 並搜尋 `English` 語言顯示套件與切換方法.
+  * [x] 協助 `Shelly` 測試客戶 `OS` restart 相關問題.
+
+# 2025-02-07
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 與 `Sales-Joan` 討論 `Simms` 使用 `NANO SSD` 相關 `PCN` 內容.
+* 與 `Sales-Joan` 討論 `HMI` 高溫造成零件老化相關問題.
+* 協助 `PM-Jack` 尋找關於 `Winsys` 樣品. 
+* 協助 `Sales-Alan` 處理 `Boeing` `Windows 7` 語言顯示問題.
+* 架設 `Windows 7` 環境, 並搜尋 `English` 語言顯示套件與切換方法.
+* 協助 `Shelly` 測試客戶 `OS` restart 相關問題.
+* TODO
+  * [x] 清潔實驗室 `Chamber` 水箱.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 協助 `Shelly` 測試客戶 `OS` disk 透過 `dd` copy 相關時間.
+
