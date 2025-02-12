@@ -340,4 +340,66 @@
   * [x] 清潔實驗室 `Chamber` 水箱.
   * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
   * [x] 協助 `Shelly` 測試客戶 `OS` disk 透過 `dd` copy 相關時間.
+  * [x] 協助 `Sales-Alan` 確認 `Boeing` 外殼寄送內容.
+  * [x] 與 `EU-Sales` 討論 `3TG8-P` `DAS LED` 樣品寄回處理.
 
+# 2025-02-08
+* 清潔實驗室 `Chamber` 水箱.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 協助 `Shelly` 測試客戶 `OS` disk 透過 `dd` copy 相關時間.
+* 協助 `Sales-Alan` 確認 `Boeing` 外殼寄送內容.
+* 與 `EU-Sales` 討論 `3TG8-P` `DAS LED` 樣品寄回處理.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+  * [x] 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+  * [ ] 協助 `Susan` 量測 `ICC` `3MG2-P` `pad` 訊號.
+
+# 2025-02-10
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+* 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+* 協助 `Susan` 量測 `ICC` `3MG2-P` `pad` 訊號.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+  * [x] 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+  * [x] 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+  * [x] 與 `SMI-FAE` 討論 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+  * [x] 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+
+# 2025-02-11
+* 參與 `FAE-team2` 週會.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+* 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+* 與 `SMI-FAE` 討論 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+  * [x] 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+  * [x] 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+  * [x] 與 `PM-Jack` 討論 `FEA250117006` `nanoSSD` `3ME3` `PCN` 修改之內容.
+  * [x] 與 `Sales-Joanne` 討論 `FA250107001` `OnLogic` `7pcs` 分析狀況.
+  * [x] 參與 `FEA250117006` `nanoSSD` `3ME3` 客戶討論會議.
+  * [x] 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+
+# 2025-02-12
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+* 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+* 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
+* 與 `PM-Jack` 討論 `FEA250117006` `nanoSSD` `3ME3` `PCN` 修改之內容.
+* 與 `Sales-Joanne` 討論 `FA250107001` `OnLogic` `7pcs` 分析狀況.
+* 與 `FEA250117006` `nanoSSD` `3ME3` 客戶討論會議.
+* 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+* TODO
+  * [x] 參與 `Embedded System Architecture Training` 內訊課程.
+  * [x] 與 `SMI-FAE` 討論 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+  * [x] 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+  * [x] 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
