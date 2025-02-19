@@ -353,7 +353,7 @@
   * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
   * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
   * [x] 協助 `FW RD` 錄製 `FA250107001` `OnLogic` `4pcs` 速度慢之問題, 以及 `1pcs` 無法認碟.
-  * [ ] 協助 `Susan` 量測 `ICC` `3MG2-P` `pad` 訊號.
+  * [x] 協助 `Susan` 量測 `ICC` `3MG2-P` `pad` 訊號.
 
 # 2025-02-10
 * 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
@@ -400,6 +400,89 @@
   * [x] 參與 `Embedded System Architecture Training` 內訊課程.
   * [x] 與 `SMI-FAE` 討論 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
   * [x] 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
-  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `6組` PHY.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
   * [x] 處理 `FA250107001` `OnLogic` `7pcs` 問題.
   * [x] 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+
+# 2025-02-13
+* 參與 `Embedded System Architecture Training` 內訊課程.
+* 與 `SMI-FAE` 討論 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* 協助處理 `Autocon` 透過 `S42 3TE7` 安裝 `Ubuntu OS` 重啟相關問題.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+* 處理 `FA250107001` `OnLogic` `7pcs` 問題.
+* 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+  * [x] 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+  * [x] 協助 `Sales-Joan` 回覆 `3TE6` `V22620` DLMC `V23701` 相關問題.
+  * [x] 撰寫 `FA250107001` `OnLogic` `7pcs` `FA` report.
+
+# 2025-02-14
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+* 處理 `FEA250203002` `Simms` `3MR2-P` `loader mode` 問題.
+* 協助 `Sales-Joan` 回覆 `3TE6` `V22620` DLMC `V23701` 相關問題.
+* 撰寫 `FA250107001` `OnLogic` `7pcs` `FA` report.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+  * [x] 協助 `PM-Kevin` 處理 `4TG2-P` 降 `Gen3` 相關問題.
+  * [x] 撰寫 `FA250107001` `OnLogic` `7pcs` `FA` report.
+  * [x] 參與 `SPMS-Software Package Management Service` 討論會議.
+  * [x] 參與 `Aristocrat` `4IE3` `Connector` 電壓問題.
+  * [x] 協助 `EU Sales-Jessica` 關於寄送 device 至 `china` 相關問題.
+
+# 2025-02-17
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+* 協助 `PM-Kevin` 處理 `4TG2-P` 降 `Gen3` 相關問題.
+* 撰寫 `FA250107001` `OnLogic` `7pcs` `FA` report.
+* 參與 `SPMS-Software Package Management Service` 討論會議.
+* 參與 `Aristocrat` `4IE3` `Connector` 電壓問題.
+* 協助 `EU Sales-Jessica` 關於寄送 device 至 `china` 相關問題.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `EU Sales-Jessica` 關於寄送 device 至 `china` 相關對應窗口.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 協助 `Alan` 觀看平台透過 `EP SATA 擴充卡` 相關認碟問題.
+  * [x] 填寫 `健康調查` 系統.
+
+# 2025-02-18
+* 參與 `FAE-team2` 週會.
+* 協助 `EU Sales-Jessica` 關於寄送 device 至 `china` 相關對應窗口.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 協助 `Alan` 觀看平台透過 `EP SATA 擴充卡` 相關認碟問題.
+* 填寫 `健康調查` 系統.
+* TODO
+  * [x] 協助 `Alan` 觀看平台透過 `EP SATA 擴充卡` 高溫 `Burnintest` 相關問題.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+  * [x] 撰寫 `FEA250203002` `Simms` `3MR2-P` `FA` report.
+  * [x] 與 `FW RD Weiting` sync `OnLogic` `7pcs` 測試狀況.
+  * [x] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+
+# 2025-02-19
+* 協助 `Alan` 觀看平台透過 `EP SATA 擴充卡` 高溫 `Burnintest` 相關問題.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
+* 撰寫 `FEA250203002` `Simms` `3MR2-P` `FA` report.
+* 與 `FW RD Weiting` sync `OnLogic` `7pcs` 測試狀況.
+* 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+* TODO
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 更新 `eFAE` case 相關進度.
+  * [x] 協助 `Shelly` 處理 `U.1 4TS2-P` `iometer` & `AIDA 64` 相關測試.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `0868` PHY `168hr`.
+  * [x] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+  * [x] 提供 `Sales Joan` `FEA250203002` `Simms` `3MR2-P` `FA` report.
+
+# 2025-02-20
+* 撰寫 `Linux` 操作教育訓練文件.
+* 更新 `eFAE` case 相關進度.
+* 協助 `Shelly` 處理 `U.1 4TS2-P` `iometer` & `AIDA 64` 相關測試.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `0868` PHY `168hr`.
+* 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+* 提供 `Sales Joan` `FEA250203002` `Simms` `3MR2-P` `FA` report.
+* TODO
+  * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [ ] 撰寫 `Linux` 操作教育訓練文件.
+  * [ ] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
