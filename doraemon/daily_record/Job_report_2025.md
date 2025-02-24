@@ -458,7 +458,7 @@
   * [x] 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
   * [x] 撰寫 `FEA250203002` `Simms` `3MR2-P` `FA` report.
   * [x] 與 `FW RD Weiting` sync `OnLogic` `7pcs` 測試狀況.
-  * [x] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+  * [x] 協助 `Danny` 觀看 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` `FIO test script` 於 `Windows` 平台報錯相關問題.
 
 # 2025-02-19
 * 協助 `Alan` 觀看平台透過 `EP SATA 擴充卡` 高溫 `Burnintest` 相關問題.
@@ -466,13 +466,13 @@
 * 測試 `FEA241203002` `GURU` `3SE4` 於舊平台測試 `0868` PHY `168hr`.
 * 撰寫 `FEA250203002` `Simms` `3MR2-P` `FA` report.
 * 與 `FW RD Weiting` sync `OnLogic` `7pcs` 測試狀況.
-* 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+* 協助 `Danny` 觀看 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` `FIO test script` 於 `Windows` 平台報錯相關問題.
 * TODO
   * [x] 撰寫 `Linux` 操作教育訓練文件.
   * [x] 更新 `eFAE` case 相關進度.
   * [x] 協助 `Shelly` 處理 `U.1 4TS2-P` `iometer` & `AIDA 64` 相關測試.
   * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `0868` PHY `168hr`.
-  * [x] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+  * [x] 協助 `Danny` 觀看 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` `FIO test script` 於 `Windows` 平台報錯相關問題.
   * [x] 提供 `Sales Joan` `FEA250203002` `Simms` `3MR2-P` `FA` report.
 
 # 2025-02-20
@@ -480,9 +480,55 @@
 * 更新 `eFAE` case 相關進度.
 * 協助 `Shelly` 處理 `U.1 4TS2-P` `iometer` & `AIDA 64` 相關測試.
 * 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `0868` PHY `168hr`.
-* 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+* 協助 `Danny` 觀看 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` `FIO test script` 於 `Windows` 平台報錯相關問題.
 * 提供 `Sales Joan` `FEA250203002` `Simms` `3MR2-P` `FA` report.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+  * [x] 於 `FEA241203002` `GURU` `3SE4` 新平台架設 `Windows 10` 量測 `SATA eye`.
+  * [x] 與 `EU-Sales` 討論 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` 測試狀況.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+
+# 2025-02-21
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
+* 於 `FEA241203002` `GURU` `3SE4` 新平台架設 `Windows 10` 量測 `SATA eye`, 因客戶平台是 `11代` `CPU`, 需搭配對應 `CPU` 型號以及 `tool`, 故無法量測.
+* 與 `EU-Sales` 討論 `FEA250115006` `Dynamic Disk mit E1.S 4TG2-P` 測試狀況.
+* 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+* TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 更新 `Weekly hot issue case`.
+  * [x] 與 `FW RD` 討論 `FEA241203002` `GURU` `3SE4` `PHY` 後續測試.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+  * [x] 協助 `Shelly` 轉送 `3MG2-P` 至 `RMA` 印製產品標籤.
+  * [x] 協助 `Shelly` 於 `Windows 11` 測試 `innoOSR`.
+
+# 2025-02-24
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 更新 `Weekly hot issue case`.
+* 與 `FW RD` 討論 `FEA241203002` `GURU` `3SE4` `PHY` 後續測試.
+* 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+* 協助 `Shelly` 轉送 `3MG2-P` 至 `RMA` 印製產品標籤.
+* 協助 `Shelly` 於 `Windows 11` 測試 `innoOSR`.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 更新 `Weekly hot issue case`.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 更新 `FEA241203002` `GURU` `3SE4` 測試狀況.
+
+# 2025-02-25
+* 參與 `FAE-team2` 週會.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 更新 `Weekly hot issue case`.
+* 協助 `Susan` 處理 `FEA250212003` `Simms` `nanoSSD` `WP` 後 `無法認碟` 相關問題.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 更新 `FEA241203002` `GURU` `3SE4` 測試狀況.
 * TODO
   * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
   * [ ] 撰寫 `Linux` 操作教育訓練文件.
-  * [ ] 協助 `Danny` 觀看 `FIO test script` 於 `Windows` 平台報錯相關問題.
