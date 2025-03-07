@@ -530,5 +530,129 @@
 * 撰寫 `Linux` 操作教育訓練文件.
 * 更新 `FEA241203002` `GURU` `3SE4` 測試狀況.
 * TODO
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 討論 `IPA` support 相關事項.
+  * [x] 參與 `研發中心` 月會.
+  * [x] 協助 `EU-Sales` 提供 `FEC240702005` `SATA-DOM` `FA` report.
+  * [x] 協助撈取 `FEA250226002` `33`pcs `iSMART` 以及相關狀態檢查.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` 掉資料相關回覆. 
+  * [x] 更新 `eFAE` 系統相關處理進度.
+
+# 2025-02-26
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 討論 `IPA` support 相關事項.
+* 參與 `研發中心` 月會.
+* 協助 `EU-Sales` 提供 `FEC240702005` `SATA-DOM` `FA` report.
+* 協助撈取 `FEA250226002` `33`pcs `iSMART` 以及相關狀態檢查.
+* 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` 掉資料相關回覆. 
+* 更新 `eFAE` 系統相關處理進度.
+* TODO
+  * [x] 參與 `GTS GAI` 討論會議.
+  * [x] 協助 `Sales-Joan` 處理 `RDS` `3TE6` `UART` log 相關異常.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 協助撈取 `FEA250226002` `33`pcs `iSMART` 以及相關狀態檢查.
+  * [x] 提供 `FEA250226002` `33`pcs `iSMART` `excel` 於 `FW RD` 分析.
+  * [x] 轉送 `33`pcs `3TE6` 於 `Sales-Joan`.
+  * [x] 協助觀看 `FEA250117006` `nanoSSD 3ME3` 客戶線路設計. 
+  * [x] 更新 `eFAE` 系統相關處理進度.
+  * [x] 協助 `Jay` 裝箱 `6` 台測試機台.
+
+# 2025-02-27
+* 參與 `GTS GAI` 討論會議.
+* 協助 `Sales-Joan` 處理 `RDS` `3TE6` `UART` log 相關異常.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 協助撈取 `FEA250226002` `33`pcs `iSMART` 以及相關狀態檢查.
+* 提供 `FEA250226002` `33`pcs `iSMART` `excel` 於 `FW RD` 分析.
+* 轉送 `33`pcs `3TE6` 於 `Sales-Joan`.
+* 協助觀看 `FEA250117006` `nanoSSD 3ME3` 客戶線路設計. 
+* 更新 `eFAE` 系統相關處理進度.
+* 協助 `Jay` 裝箱 `6` 台測試機台.
+* TODO
+  * [x] 協助 `EU-Sales` 觀看 `ssd fehler vianode` 相關異常.
+  * [x] 請假.
+
+# 2025-02-28
+* 請假.
+* TODO
+  * [x] 請假.
+
+# 2025-03-03
+* 請假.
+* TODO
+  * [x] 請假.
+
+
+# 2025-03-04
+* 請假.
+* TODO
+  * [x] 請假.
+
+# 2025-03-05
+* 請假.
+* TODO
+  * [x] 參與 `FAE-team2` `Qucik talk`.
+  * [x] 更新 `eFAE` 系統相關處理進度.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Sales-Joan` 轉送 `FEA250203002` `3MV2-P` 至 `RMA`.
+  * [x] 協助詢問 `RDS` 客戶 `DEM24-A28DD1KCADF-JCS` 更新至 `V23701` 相關狀況.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` `WL` 相關回覆. 
+
+# 2025-03-06
+* 參與 `FAE-team2` `Qucik talk`.
+* 更新 `eFAE` 系統相關處理進度.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Sales-Joan` 轉送 `FEA250203002` `3MV2-P` 至 `RMA`.
+* 協助詢問 `RDS` 客戶 `DEM24-A28DD1KCADF-JCS` 更新至 `V23701` 相關狀況.
+* 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` `WL` 相關回覆. 
+* TODO
+  * [x] 更新 `hot issue`.
+  * [x] 更新 `eFAE` 系統相關處理進度.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 與 `FW RD-Weiting` 討論 `FA250107001` `OnLogic` `3ME4` `Assert` 相關流程, 以及修正方式. 
+  * [x] 與 `Kerry` 討論 `3TG6-P` `UART` log 關於 `FW version` & `Flash ID`.
+  * [x] 與 `PM-George` 討論 `FED240724001` `3TG8-P` `DAS LED` 相關 `PCN`.
+  * [x] 協助 `Sales-Joan` 確認 `SMI` `controller` 對調相關問題.
+  * [x] 參與 `eFAE` case review 討論會議.
+  * [x] 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` `WL` 相關回覆. 
+  * [x] 整理 `S17411 -> S23A06` 修改之 `release note`.
+
+# 2025-03-07
+* 更新 `hot issue`.
+* 更新 `eFAE` 系統相關處理進度.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 與 `FW RD-Weiting` 討論 `FA250107001` `OnLogic` `3ME4` `Assert` 相關流程, 以及修正方式. 
+* 與 `Kerry` 討論 `3TG6-P` `UART` log 關於 `FW version` & `Flash ID`.
+* 與 `PM-George` 討論 `FED240724001` `3TG8-P` `DAS LED` 相關 `PCN`.
+* 協助 `Sales-Joan` 確認 `SMI` `controller` 對調相關問題.
+* 參與 `eFAE` case review 討論會議.
+* 協助 `Susan` 處理 `FEA250212003` `nanoSSD 3ME3` `WL` 相關回覆. 
+* 整理 `S17411 -> S23A06` 修改之 `release note`.
+* TODO
+  * [x] 更新 `eFAE` 系統相關處理進度.
+  * [x] 準備 `3TG6-P` `MView` 相關使用文件.
+  * [x] 協助 `Sales-Joan` 處理 `CurtissWright` `3TG6-P` `A23A20F` 無法正常運行相關問題.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Susan` 與 `FW-RD Allen` 討論 `FEA250212003` `nanoSSD 3ME3` `WL` & `abnormal power cycle` 相關運行流程.
+  * [x] 協助 `Susan` 回覆 `FEA250212003` `nanoSSD 3ME3` 相關問題.
+  * [x] 參與 `GTS` 內部英文學習會議.
+  * [x] 協助 `PM-Cindy` 測試 `3TE8`.
+  * [x] 協助 `Shelly` 觀看 `iSMART` 串接 `C#` 相關應用.
+
+# 2025-03-10
+* 更新 `eFAE` 系統相關處理進度.
+* 準備 `3TG6-P` `MView` 相關使用文件.
+* 協助 `Sales-Joan` 處理 `CurtissWright` `3TG6-P` `A23A20F` 無法正常運行相關問題.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Susan` 與 `FW-RD Allen` 討論 `FEA250212003` `nanoSSD 3ME3` `WL` & `abnormal power cycle` 相關運行流程.
+* 協助 `Susan` 回覆 `FEA250212003` `nanoSSD 3ME3` 相關問題.
+* 參與 `GTS` 內部英文學習會議.
+* 協助 `PM-Cindy` 測試 `3TE8`.
+* 協助 `Shelly` 觀看 `iSMART` 串接 `C#` 相關應用.
+* TODO
+  * [ ] 參與 `FAE-team2` 週會.
+  * [ ] 協助 `PM-Cindy` 測試 `3TE8`.
   * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
-  * [ ] 撰寫 `Linux` 操作教育訓練文件.
