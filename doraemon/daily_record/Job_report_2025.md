@@ -653,6 +653,56 @@
 * 協助 `PM-Cindy` 測試 `3TE8`.
 * 協助 `Shelly` 觀看 `iSMART` 串接 `C#` 相關應用.
 * TODO
-  * [ ] 參與 `FAE-team2` 週會.
-  * [ ] 協助 `PM-Cindy` 測試 `3TE8`.
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 協助 `PM-Cindy` 測試 `3TE8`.
+    * [x] `OS disk`:
+      * [x] `CDM` `Normal mode`.
+      * [x] `CDM` `NVMe mode`. 
+      * [x] `Passmark`.
+    * [x] `Data disk`:
+      * [x] `CDM` `Normal mode`.
+      * [x] `CDM` `NVMe mode`. 
+      * [x] `AIDA 64` `Linear write`.
+      * [x] `AIDA 64` `Linear read`.
+      * [x] `Passmark`.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Sales-Joan` 詢問關於 `MB991K-B` `LED` 顯示異常問題.
+  * [x] 詢問 `FW RD-Sid` 關於 `4TS2-P` 透過 `DLMC` 更新 `FW` 不需 `reboot` 相關流程.
+
+# 2025-03-11
+* 參與 `FAE-team2` 週會.
+* 協助 `PM-Cindy` 測試 `3TE8`.
+  * `OS disk`:
+    * `CDM` `Normal mode`.
+    * `CDM` `NVMe mode`. 
+    * `Passmark`.
+  * `Data disk`:
+    * `CDM` `Normal mode`.
+    * `CDM` `NVMe mode`. 
+    * `AIDA 64` `Linear write`.
+    * `AIDA 64` `Linear read`.
+    * `Passmark`.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Sales-Joan` 詢問關於 `MB991K-B` `LED` 顯示異常問題.
+* 詢問 `FW RD-Sid` 關於 `4TS2-P` 透過 `DLMC` 更新 `FW` 不需 `reboot` 相關流程.
+* TODO
+  * [x] 協助 `Jay` 紀錄 `優達` `3IE4` `40`pcs elog.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 更新 `OnLogic` 後續相關分析進度於 `Weekly hot issue`.
+  * [x] 與 `FW RD` & `Sales` 討論 `OnLogic` 後續相關分析.
+  * [x] 與 `HR` 討論 `久任關懷` 面談.
+  * [x] 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `WP` & `iSMART` 資料相關問題回覆.
+  * [x] 撰寫 `3` 月月會分享內容.
+
+# 2025-03-12
+* 協助 `Jay` 紀錄 `優達` `3IE4` `40`pcs elog.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 更新 `OnLogic` 後續相關分析進度於 `Weekly hot issue`.
+* 與 `FW RD` & `Sales` 討論 `OnLogic` 後續相關分析.
+* 與 `HR` 討論 `久任關懷` 面談.
+* 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `WP` & `iSMART` 資料相關問題回覆.
+* 撰寫 `3` 月月會分享內容.
+* TODO
+  * [ ] 撰寫 `3` 月月會分享內容.
   * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+
