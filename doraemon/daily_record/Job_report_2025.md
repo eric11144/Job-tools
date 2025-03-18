@@ -703,6 +703,95 @@
 * 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `WP` & `iSMART` 資料相關問題回覆.
 * 撰寫 `3` 月月會分享內容.
 * TODO
-  * [ ] 撰寫 `3` 月月會分享內容.
+  * [x] 撰寫 `3` 月月會分享內容.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 詢問 `ICY DOCK` 轉接盒借取.
+  * [x] 參與 `GTS GAI` 討論會議.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 更新 `eFAE` system.
+  * [x] 協助 `Susan` 觀看 `ICC` `3MG2-P` `Flash ID` 異常問題, 並送至 `RMA` 取下異常 `Flash`.
+  * [x] 協助處理 `Westek` `3MG2-P` `ICY DOCK` 轉接盒 `LED` 顯示問題.
+
+# 2025-03-13
+* 撰寫 `3` 月月會分享內容.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 詢問 `ICY DOCK` 轉接盒借取.
+* 參與 `GTS GAI` 討論會議.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 更新 `eFAE` system.
+* 協助 `Susan` 觀看 `ICC` `3MG2-P` `Flash ID` 異常問題, 並送至 `RMA` 取下異常 `Flash`.
+* 協助處理 `Westek` `3MG2-P` `ICY DOCK` 轉接盒 `LED` 顯示問題.
+* TODO
+  * [x] 協助 `Susan` 觀看 `ICC` `3MG2-P` `Flash ID` 異常問題.
+  * [x] 協助 `EU` 查找 `4TG2-P` `E22C23` -> `E23919` `FW` 修改內容.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `LPD` 相關問題.
+  * [x] 撰寫 `3` 月月會分享內容.
+  * [x] 撰寫個人績效內容.
+
+# 2025-03-14
+* 協助 `Susan` 觀看 `ICC` `3MG2-P` `Flash ID` 異常問題.
+* 協助 `EU` 查找 `4TG2-P` `E22C23` -> `E23919` `FW` 修改內容.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3`.
+* 撰寫 `3` 月月會分享內容.
+* 撰寫個人績效內容.
+* TODO
+  * [x] 升級 `Microsoft` 軟體.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 撰寫 `3` 月月會分享內容.
+  * [x] 更新 `eFAE` system.
+  * [x] 協助處理組內團購項目.
+  * [x] 協助 `Shelly` 架設並測試 `3ME3` `2pcs` `BurninTest`.
+  * [x] 撰寫個人績效內容.
+
+# 2025-03-17
+* 升級 `Microsoft` 軟體.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 撰寫 `3` 月月會分享內容.
+* 更新 `eFAE` system.
+* 協助處理組內團購項目.
+* 協助 `Shelly` 架設並測試 `3ME3` `2pcs` `BurninTest`.
+* 撰寫個人績效內容.
+* TODO
+  * [x] 參與 `FAE-team2` 週會.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 撰寫 `3` 月月會分享內容.
+  * [x] 協助 `EU` 處理 `FEC231207007` `Hohe` `27pcs` 轉至 `RMA`.
+  * [x] 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `LPD` 相關問題.
+  * [x] 更新 `OnLogic` `3ME4` `Assert` 於 `Weekly hot issue`.
+  * [x] 更新 `eFAE` system.
+
+# 2025-03-18
+* 參與 `FAE-team2` 週會.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 撰寫 `3` 月月會分享內容.
+* 協助 `EU` 處理 `FEC231207007` `Hohe` `27pcs` 轉至 `RMA`.
+* 協助 `Susan` 處理 `Simms International` `nanoSSD` `3ME3` `LPD` 相關問題.
+* 更新 `OnLogic` `3ME4` `Assert` 於 `Weekly hot issue`.
+* 更新 `eFAE` system.
+* TODO
+  * [x] 協助 `Sales-Joanne` 處理 `OnLogic` `3ME4` `7pcs` 歸還給客戶.
+  * [x] 與 `FW-RD` & `Kiwi` 討論 `OnLogic` `3ME4` `Assert` 後續處理.
+  * [x] 協助 `EU` 於 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot`.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 協助 `EU` 回覆關於 `FEC231207007` `Hohe` `27pcs` 長時間為送至 `RMA` 問題.
+
+# 2025-03-19
+* 協助 `Sales-Joanne` 處理 `OnLogic` `3ME4` `7pcs` 歸還給客戶.
+* 與 `FW-RD` & `Kiwi` 討論 `OnLogic` `3ME4` `Assert` 後續處理.
+* 協助 `EU` 於 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot`.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 協助 `EU` 回覆關於 `FEC231207007` `Hohe` `27pcs` 長時間為送至 `RMA` 問題.
+* TODO
+  * [ ] 觀看 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot` 狀況.
   * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [ ] 撰寫 `Linux` 操作教育訓練文件.
+  * [ ] 觀看 `3` 月月會分享內容.
 
