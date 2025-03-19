@@ -790,8 +790,26 @@
 * 撰寫 `Linux` 操作教育訓練文件.
 * 協助 `EU` 回覆關於 `FEC231207007` `Hohe` `27pcs` 長時間為送至 `RMA` 問題.
 * TODO
-  * [ ] 觀看 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot` 狀況.
-  * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
-  * [ ] 撰寫 `Linux` 操作教育訓練文件.
-  * [ ] 觀看 `3` 月月會分享內容.
+  * [x] 觀看 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot` 狀況.
+  * [x] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [x] 撰寫 `Linux` 操作教育訓練文件.
+  * [x] 觀看 `3` 月月會分享內容.
+  * [x] 參與 `GTS` 月會.
+  * [x] 協助 `Sales-Joan` 回覆關於 `FEA241106008` `3TE6` `Assert` 相關問題.
+  * [x] 與 `FW-RD` 討論 `FEA241106008` `3TE6` `Assert` 相關問題.
+  * [x] 協助 `Susan` 回覆關於 `FEA250212003` `nanoSSD` `LPD` 啟動相關問題.
+  * [x] 協助 `Sales-Joan` 處理 `Westek` `3MG2-P` `DAS LED` 於 `轉接盒` `ICY DOCK MB991IK-B` 顯示問題.
 
+# 2025-03-20
+* 觀看 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot` 狀況.
+* 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+* 撰寫 `Linux` 操作教育訓練文件.
+* 觀看 `3` 月月會分享內容.
+* 參與 `GTS` 月會.
+* 協助 `Sales-Joan` 回覆關於 `FEA241106008` `3TE6` `Assert` 相關問題.
+* 與 `FW-RD` 討論 `FEA241106008` `3TE6` `Assert` 相關問題.
+* 協助 `Susan` 回覆關於 `FEA250212003` `nanoSSD` `LPD` 啟動相關問題.
+* 協助 `Sales-Joan` 處理 `Westek` `3MG2-P` `DAS LED` 於 `轉接盒` `ICY DOCK MB991IK-B` 顯示問題.
+* TODO
+  * [ ] 測試 `FEA241203002` `GURU` `3SE4` 於新平台測試 `6組` PHY.
+  * [ ] 觀看 `Supermicro` `X13SAE-F` 測試 `4TG2-P` `E23919_1215` `Warm boot` 狀況.
